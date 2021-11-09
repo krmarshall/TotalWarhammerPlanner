@@ -1,8 +1,7 @@
-import factionFlags from '../assets/img/flags/factionFlags';
-import { FactionNames } from '../types/enums/FactionEnums';
+import factions from '../data/factions';
 
 const FactionSelector = () => {
-  const factionKeys = Object.keys(factionFlags);
+  const factionKeys = Object.keys(factions);
 
   const horizontalScroll = (event: React.WheelEvent) => {
     const container = document.getElementById('horScrollContainer');
@@ -25,20 +24,19 @@ const FactionSelector = () => {
         }}
         id="horScrollContainer"
       >
-        {factionKeys.map((faction) => {
+        {factionKeys.map((factionKey) => {
+          const faction = factions[factionKey as keyof typeof factions];
           return (
             <li
-              key={faction}
+              key={faction.name}
               className="flex-none flex-col m-1 p-2 border border-gray-400 rounded-lg hover:bg-gray-500"
             >
-              <h5 className="text-center text-gray-200 mb-1">
-                {FactionNames[faction as keyof typeof FactionNames]}
-              </h5>
+              <h5 className="text-center text-gray-200 mb-1">{faction.name}</h5>
               <div className="flex flex-row justify-center">
                 <img
                   className="w-24"
-                  src={factionFlags[faction as keyof typeof factionFlags]}
-                  alt={`${faction} icon`}
+                  src={faction.icon}
+                  alt={`${faction.name} icon`}
                 />
               </div>
             </li>
