@@ -2,8 +2,9 @@ import factionFlags from '../../assets/img/flags/factionFlags';
 import beastmenPortraits from '../../assets/img/portraits/beastmen/beastmenPortraits';
 import spellLoreIcons from '../../assets/img/portraits/spell_lore_icons/spellLoreIcons';
 import { FactionNames } from '../../types/enums/FactionEnums';
+import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
-const beastmen = {
+const beastmen: FactionInterface = {
   name: FactionNames.beastmen,
   icon: factionFlags.beastmen,
   lords: {

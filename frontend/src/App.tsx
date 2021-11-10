@@ -4,8 +4,8 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="bg-gray-700 w-screen h-screen px-24 py-12">
-      <div className="bg-gray-600 w-full h-full border border-gray-400 rounded-md px-6 py-6">
+    <div className="bg-gray-800 w-screen h-screen px-24 py-12">
+      <div className="bg-gray-700 w-full h-full border border-gray-500 rounded-md px-6 py-6">
         <Router>
           <Switch>
             <Route exact path="/">
