@@ -21,9 +21,10 @@ const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelecto
   };
 
   return (
-    <div>
+    <div className="flex flex-col">
+      <h1 className="text-center text-2xl mb-2 text-gray-200">Factions</h1>
       <ul
-        className="flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+        className="m-auto flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
         onWheel={(event) => {
           horizontalScroll(event);
         }}

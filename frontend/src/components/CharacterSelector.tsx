@@ -24,8 +24,18 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
     setHeroKeys(Object.keys(factionData.heroes));
   }, [factionData]);
 
-  const horizontalScroll = (event: React.WheelEvent) => {
-    const container = document.getElementById('horScrollContainerLord');
+  const horizontalScroll = (event: React.WheelEvent, scrollItem: number) => {
+    event.stopPropagation();
+    event.preventDefault();
+    const containerLord = document.getElementById('horScrollContainerLord');
+    const containerHero = document.getElementById('horScrollContainerHero');
+    let container;
+    if (scrollItem === 0) {
+      container = containerLord;
+    } else if (scrollItem === 1) {
+      container = containerHero;
+    }
+
     let containerScrollPosition = container?.scrollLeft;
     if (!containerScrollPosition) {
       containerScrollPosition = 0;
@@ -37,12 +47,12 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col">
       <h2 className="text-center text-2xl m-2 text-gray-200">Lords</h2>
       <ul
-        className="flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+        className="m-auto flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
         onWheel={(event) => {
-          horizontalScroll(event);
+          horizontalScroll(event, 0);
         }}
         id="horScrollContainerLord"
       >
@@ -71,6 +81,36 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
       </ul>
 
       <h2 className="text-center text-2xl m-2 text-gray-200">Heroes</h2>
+      <ul
+        className="m-auto flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+        onWheel={(event) => {
+          horizontalScroll(event, 1);
+        }}
+        id="horScrollContainerHero"
+      >
+        {heroKeys.map((heroKey) => {
+          const hero = factionData.heroes[heroKey];
+
+          return (
+            <li
+              key={heroKey}
+              className="w-32 flex-none flex-col m-1 py-2 px-1 border border-gray-500 rounded-lg hover:bg-gray-600"
+            >
+              <h5 className="text-center text-gray-200 mb-1">{hero?.name}</h5>
+              <div className="flex flex-row justify-center relative">
+                <img className="w-16" src={hero?.icon} alt={`${hero?.name} icon`} />
+                {hero?.spellLoreIcon && (
+                  <img
+                    className="w-12 h-12 absolute bottom-0 inset-x-9"
+                    src={hero?.spellLoreIcon}
+                    alt={`${hero?.spellLoreIcon} icon`}
+                  />
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
