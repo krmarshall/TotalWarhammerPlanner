@@ -5,7 +5,7 @@ import FactionSelector from '../components/FactionSelector';
 const Home = () => {
   const [selectedFaction, setSelectedFaction] = useState('beastmen');
   return (
-    <div>
+    <div className="grid auto-rows-min justify-items-stretch">
       <FactionSelector selectedFaction={selectedFaction} setSelectedFaction={setSelectedFaction} />
 
       <CharacterSelector selectedFaction={selectedFaction} />
