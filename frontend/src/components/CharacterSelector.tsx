@@ -37,8 +37,8 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                 key={lordKey}
                 className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500 hover:bg-gray-600"
               >
-                <div className="flex flex-row justify-center" style={{ minHeight: '4.7rem' }}>
-                  <h5 className="w-32 text-center text-xl text-gray-200 mb-1">{lord?.name}</h5>
+                <div className="flex flex-row justify-center" style={{ minHeight: '3.7rem' }}>
+                  <h5 className="w-36 text-center text-xl text-gray-200 mb-1">{lord?.name}</h5>
                 </div>
 
                 <div className="flex flex-row justify-center relative">
@@ -67,7 +67,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                 key={heroKey}
                 className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500  hover:bg-gray-600"
               >
-                <h5 style={{ minHeight: '4.7rem' }} className="w-32 text-center text-xl text-gray-200 mb-1">
+                <h5 style={{ minHeight: '3.7rem' }} className="w-36 text-center text-xl text-gray-200 mb-1">
                   {hero?.name}
                 </h5>
                 <div className="flex flex-row justify-center relative">
