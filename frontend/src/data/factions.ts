@@ -17,7 +17,6 @@ import wood_elves from './factions/wood_elves';
 const factions = {
   beastmen,
   bretonnia,
-  chaos,
   dark_elves,
   dwarfs,
   empire,
@@ -29,6 +28,7 @@ const factions = {
   tomb_kings,
   vampire_coast,
   vampire_counts,
+  chaos,
   wood_elves,
 };
 

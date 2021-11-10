@@ -24,54 +24,28 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
     setHeroKeys(Object.keys(factionData.heroes));
   }, [factionData]);
 
-  const horizontalScroll = (event: React.WheelEvent, scrollItem: number) => {
-    const containerLord = document.getElementById('horScrollContainerLord');
-    const containerHero = document.getElementById('horScrollContainerHero');
-    let container;
-    if (scrollItem === 0) {
-      container = containerLord;
-    } else if (scrollItem === 1) {
-      container = containerHero;
-    }
-
-    let containerScrollPosition = container?.scrollLeft;
-    if (!containerScrollPosition) {
-      containerScrollPosition = 0;
-    }
-    container?.scrollTo({
-      top: 0,
-      left: containerScrollPosition + event.deltaY,
-    });
-  };
-
   return (
     <Fragment>
       <div className="justify-self-center">
-        <h2 className="text-center text-2xl m-2 text-gray-200">Lords</h2>
-        <ul
-          className="flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
-          onWheel={(event) => {
-            horizontalScroll(event, 0);
-          }}
-          id="horScrollContainerLord"
-        >
+        <h2 className="text-center text-4xl m-2 text-gray-200">Lords</h2>
+        <ul className="flex flex-row flex-wrap justify-center">
           {lordKeys.map((lordKey) => {
             const lord = factionData.lords[lordKey];
 
             return (
               <li
                 key={lordKey}
-                className="flex-none flex-col mx-1 p-1 pb-0 border border-gray-500 rounded-lg hover:bg-gray-600"
+                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500 hover:bg-gray-600"
               >
-                <div style={{ maxWidth: '9rem', minHeight: '26%' }} className="flex flex-row justify-center">
-                  <h5 className="text-center text-gray-200 mb-1">{lord?.name}</h5>
+                <div className="flex flex-row justify-center" style={{ minHeight: '4.7rem' }}>
+                  <h5 className="w-32 text-center text-xl text-gray-200 mb-1">{lord?.name}</h5>
                 </div>
 
-                <div className=" flex flex-row justify-center relative">
-                  <img className="w-16 mb-2 mx-8" src={lord?.icon} alt={`${lord?.name} icon`} />
+                <div className="flex flex-row justify-center relative">
+                  <img className="w-16 mb-2" src={lord?.icon} alt={`${lord?.name} icon`} />
                   {lord?.spellLoreIcon && (
                     <img
-                      className="w-12 h-12 absolute bottom-0"
+                      className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5"
                       src={lord?.spellLoreIcon}
                       alt={`${lord?.spellLoreIcon} icon`}
                     />
@@ -83,30 +57,24 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
         </ul>
       </div>
       <div className="justify-self-center">
-        <h2 className="text-center text-2xl m-2 text-gray-200">Heroes</h2>
-        <ul
-          className="flex flex-row pb-3 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
-          onWheel={(event) => {
-            horizontalScroll(event, 1);
-          }}
-          id="horScrollContainerHero"
-        >
+        <h2 className="text-center text-4xl m-2 text-gray-200">Heroes</h2>
+        <ul className="flex flex-row flex-wrap justify-center">
           {heroKeys.map((heroKey) => {
             const hero = factionData.heroes[heroKey];
 
             return (
               <li
                 key={heroKey}
-                className="flex-none flex-col m-1 py-2 px-1 border border-gray-500 rounded-lg hover:bg-gray-600"
+                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500  hover:bg-gray-600"
               >
-                <h5 style={{ maxWidth: '9rem', minHeight: '26%' }} className="text-center text-gray-200 mb-1">
+                <h5 style={{ minHeight: '4.7rem' }} className="w-32 text-center text-xl text-gray-200 mb-1">
                   {hero?.name}
                 </h5>
                 <div className="flex flex-row justify-center relative">
-                  <img className="w-16 mx-8" src={hero?.icon} alt={`${hero?.name} icon`} />
+                  <img className="w-16 mb-2" src={hero?.icon} alt={`${hero?.name} icon`} />
                   {hero?.spellLoreIcon && (
                     <img
-                      className="w-12 h-12 absolute bottom-0"
+                      className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5"
                       src={hero?.spellLoreIcon}
                       alt={`${hero?.spellLoreIcon} icon`}
                     />

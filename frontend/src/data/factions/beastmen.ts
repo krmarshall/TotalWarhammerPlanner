@@ -24,6 +24,10 @@ const beastmen: FactionInterface = {
       name: 'Taurox Wants Wheaties',
       icon: beastmenPortraits.taurox,
     },
+    beastlord: {
+      name: 'Beastlord',
+      icon: beastmenPortraits.beastlord,
+    },
     greatBrayShamanBeasts: {
       name: 'Great Bray Shaman (Beasts)',
       icon: beastmenPortraits.greatBrayShaman,
@@ -43,10 +47,6 @@ const beastmen: FactionInterface = {
       name: 'Great Bray Shaman (Wild)',
       icon: beastmenPortraits.greatBrayShaman,
       spellLoreIcon: spellLoreIcons.wild,
-    },
-    beastlord: {
-      name: 'Beastlord',
-      icon: beastmenPortraits.beastlord,
     },
   },
   heroes: {
