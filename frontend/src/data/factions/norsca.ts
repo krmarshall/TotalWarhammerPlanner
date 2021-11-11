@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const norsca: FactionInterface = {
+  implemented: false,
   name: FactionNames.norsca,
   icon: factionFlags.norsca,
   lords: {

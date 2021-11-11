@@ -24,6 +24,17 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
     setHeroKeys(Object.keys(factionData.heroes));
   }, [factionData]);
 
+  // To Do: Set up notifications without using alert
+  const handleCharacterSelect = (characterKey: string, characterImplemented: boolean) => {
+    if (!characterImplemented) {
+      alert(
+        'This character is not currently implemented, please select a character that is not transparent. \n -Sorry'
+      );
+    } else {
+      console.log(characterKey);
+    }
+  };
+
   return (
     <Fragment>
       <div className="justify-self-center">
@@ -32,17 +43,33 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
           {lordKeys.map((lordKey) => {
             const lord = factionData.lords[lordKey];
 
+            let liClassName = 'flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500 hover:bg-gray-600';
+
+            if (!lord?.implemented) {
+              liClassName += ' opacity-50';
+            }
+
             return (
               <li
                 key={lordKey}
-                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500 hover:bg-gray-600"
+                className={liClassName}
+                onClick={() => {
+                  handleCharacterSelect(lordKey, lord?.implemented);
+                }}
               >
                 <div className="flex flex-row justify-center" style={{ minHeight: '3.7rem' }}>
                   <h5 className="w-36 text-center text-xl text-gray-200 mb-1">{lord?.name}</h5>
                 </div>
 
                 <div className="flex flex-row justify-center relative">
-                  <img className="w-16 mb-2" draggable={false} src={lord?.icon} alt={`${lord?.name} icon`} />
+                  <img
+                    className="w-16 mb-2"
+                    draggable={false}
+                    src={lord?.icon}
+                    alt={`${lord?.name} icon`}
+                    height="64"
+                    width="139"
+                  />
                   {lord?.spellLoreIcon && (
                     <img
                       className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5"
@@ -63,16 +90,32 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
           {heroKeys.map((heroKey) => {
             const hero = factionData.heroes[heroKey];
 
+            let liClassName = 'flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500  hover:bg-gray-600';
+
+            if (!hero?.implemented) {
+              liClassName += ' opacity-50';
+            }
+
             return (
               <li
                 key={heroKey}
-                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500  hover:bg-gray-600"
+                className={liClassName}
+                onClick={() => {
+                  handleCharacterSelect(heroKey, hero?.implemented);
+                }}
               >
                 <h5 style={{ minHeight: '3.7rem' }} className="w-36 text-center text-xl text-gray-200 mb-1">
                   {hero?.name}
                 </h5>
                 <div className="flex flex-row justify-center relative">
-                  <img className="w-16 mb-2" draggable={false} src={hero?.icon} alt={`${hero?.name} icon`} />
+                  <img
+                    className="w-16 mb-2"
+                    draggable={false}
+                    src={hero?.icon}
+                    alt={`${hero?.name} icon`}
+                    height="64"
+                    width="139"
+                  />
                   {hero?.spellLoreIcon && (
                     <img
                       className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5"

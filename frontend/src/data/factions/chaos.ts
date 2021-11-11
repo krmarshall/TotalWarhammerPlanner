@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const chaos: FactionInterface = {
+  implemented: false,
   name: FactionNames.chaos,
   icon: factionFlags.chaos,
   lords: {

@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const tomb_kings: FactionInterface = {
+  implemented: false,
   name: FactionNames.tomb_kings,
   icon: factionFlags.tomb_kings,
   lords: {

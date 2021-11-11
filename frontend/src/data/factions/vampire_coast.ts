@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const vampire_coast: FactionInterface = {
+  implemented: false,
   name: FactionNames.vampire_coast,
   icon: factionFlags.vampire_coast,
   lords: {

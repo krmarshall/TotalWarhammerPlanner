@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const bretonnia: FactionInterface = {
+  implemented: false,
   name: FactionNames.bretonnia,
   icon: factionFlags.bretonnia,
   lords: {

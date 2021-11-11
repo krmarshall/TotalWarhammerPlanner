@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const lizardmen: FactionInterface = {
+  implemented: false,
   name: FactionNames.lizardmen,
   icon: factionFlags.lizardmen,
   lords: {
@@ -24,6 +25,7 @@ const lizardmen: FactionInterface = {
       icon: lizardmenPortraits.tehenhauin,
     },
     tiktaqto: {
+      implemented: false,
       name: "Tiktaq'to",
       icon: lizardmenPortraits.tiktaqto,
     },

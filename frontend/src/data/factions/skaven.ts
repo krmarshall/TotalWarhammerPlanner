@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const skaven: FactionInterface = {
+  implemented: false,
   name: FactionNames.skaven,
   icon: factionFlags.skaven,
   lords: {

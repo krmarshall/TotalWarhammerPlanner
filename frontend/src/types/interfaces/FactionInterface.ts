@@ -6,6 +6,7 @@ interface CharacterInterface {
 }
 
 interface FactionInterface {
+  implemented: boolean;
   name: string;
   icon: string;
   lords: {

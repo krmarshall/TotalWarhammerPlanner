@@ -4,6 +4,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const dwarfs: FactionInterface = {
+  implemented: false,
   name: FactionNames.dwarfs,
   icon: factionFlags.dwarfs,
   lords: {

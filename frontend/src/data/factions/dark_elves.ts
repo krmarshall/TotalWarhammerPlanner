@@ -5,6 +5,7 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const dark_elves: FactionInterface = {
+  implemented: false,
   name: FactionNames.dark_elves,
   icon: factionFlags.dark_elves,
   lords: {

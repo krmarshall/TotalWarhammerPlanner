@@ -5,11 +5,12 @@ import { FactionNames } from '../../types/enums/FactionEnums';
 import { FactionInterface } from '../../types/interfaces/FactionInterface';
 
 const beastmen: FactionInterface = {
+  implemented: true,
   name: FactionNames.beastmen,
   icon: factionFlags.beastmen,
   lords: {
     khazrak: {
-      implemented: false,
+      implemented: true,
       name: 'Khazrak the One-Eye',
       icon: beastmenPortraits.khazrak,
     },
