@@ -9,41 +9,50 @@ const chaos: FactionInterface = {
   icon: factionFlags.chaos,
   lords: {
     archaon: {
+      implemented: false,
       name: 'Archaon the Everchosen',
       icon: chaosPortraits.archaon,
     },
     kholek: {
+      implemented: false,
       name: 'Kholek Suneater',
       icon: chaosPortraits.kholek,
     },
     sigvald: {
+      implemented: false,
       name: 'Prince Sigvald the Magnificent',
       icon: chaosPortraits.sigvald,
     },
     sarthorael: {
+      implemented: false,
       name: 'Sarthorael the Everwatcher',
       icon: chaosPortraits.sarthorael,
     },
     chaosLord: {
+      implemented: false,
       name: 'Chaos Lord',
       icon: chaosPortraits.chaosLord,
     },
     chaosSorcererLordDeath: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Death)',
       icon: chaosPortraits.chaosSorcererLord,
       spellLoreIcon: spellLoreIcons.death,
     },
     chaosSorcererLordFire: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Fire)',
       icon: chaosPortraits.chaosSorcererLord,
       spellLoreIcon: spellLoreIcons.fire,
     },
     chaosSorcererLordMetal: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Metal)',
       icon: chaosPortraits.chaosSorcererLord,
       spellLoreIcon: spellLoreIcons.metal,
     },
     chaosSorcererLordShadows: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Shadows)',
       icon: chaosPortraits.chaosSorcererLord,
       spellLoreIcon: spellLoreIcons.shadows,
@@ -51,25 +60,30 @@ const chaos: FactionInterface = {
   },
   heroes: {
     exaltedHero: {
+      implemented: false,
       name: 'Exalted Hero',
       icon: chaosPortraits.exaltedHero,
     },
     chaosSorcererDeath: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Death)',
       icon: chaosPortraits.chaosSorcerer,
       spellLoreIcon: spellLoreIcons.death,
     },
     chaosSorcererFire: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Fire)',
       icon: chaosPortraits.chaosSorcerer,
       spellLoreIcon: spellLoreIcons.fire,
     },
     chaosSorcererMetal: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Metal)',
       icon: chaosPortraits.chaosSorcerer,
       spellLoreIcon: spellLoreIcons.metal,
     },
     chaosSorcererShadows: {
+      implemented: false,
       name: 'Chaos Sorcerer Lord (Shadows)',
       icon: chaosPortraits.chaosSorcerer,
       spellLoreIcon: spellLoreIcons.shadows,

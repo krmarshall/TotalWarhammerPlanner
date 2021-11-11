@@ -4,7 +4,7 @@ import wurrzag from './grn_ch_wurrzag_0.webp';
 import skarsnik from './grn_ch_skarsnik_0.webp';
 import grom from './grn_grom_the_paunch_0.webp';
 import orcWarboss from './grn_orc_warbosses_campaign_02_0.webp';
-import goblinWarboss from './grn_night_goblin_warboss_campaign_01_0.webp';
+import nightGoblinWarboss from './grn_night_goblin_warboss_campaign_01_0.webp';
 import goblinGreatShaman from './grn_goblin_great_shaman_campaign_01_0.webp';
 
 import goblinBigBoss from './grn_goblin_bigboss_campaign_01_0.webp';
@@ -21,7 +21,7 @@ const greenskinsPortraits = {
   skarsnik,
   grom,
   orcWarboss,
-  goblinWarboss,
+  nightGoblinWarboss,
   goblinGreatShaman,
 
   goblinBigBoss,

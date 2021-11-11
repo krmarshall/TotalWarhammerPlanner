@@ -1,4 +1,5 @@
 interface CharacterInterface {
+  implemented: boolean;
   name: string;
   icon: string;
   spellLoreIcon?: string;

@@ -12,7 +12,7 @@ import branchwraith from './wef_branchwraith_0.webp';
 import waystalker from './wef_waystalkers_campaign_01_0.webp';
 import gladeCaptain from './wef_glade_captain_campaign_03_0.webp';
 
-import ancientTreemanCoeddil from './wef_ancient_treeman_coeddil_0.webp';
+import coeddil from './wef_ancient_treeman_coeddil_0.webp';
 import ancientTreemanMalicious from './wef_ancient_treeman_malicious_0.webp';
 import branchwraithMalicious from './wef_branchwraith_malicious_0.webp';
 
@@ -31,7 +31,7 @@ const woodElvesPortraits = {
   waystalker,
   gladeCaptain,
 
-  ancientTreemanCoeddil,
+  coeddil,
   ancientTreemanMalicious,
   branchwraithMalicious,
 };

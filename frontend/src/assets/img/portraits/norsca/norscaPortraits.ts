@@ -1,7 +1,7 @@
 import wulfrik from './nor_cha_wulfrik_0.webp';
 import throgg from './nor_cha_throgg_0.webp';
 import azrik from './chs_lord_of_change_0.webp';
-import marauderChieftain from './chs_lord_of_change_0.webp';
+import marauderChieftain from './nor_marauder_chieftain_campaign_03_0.webp';
 
 import kihar from './nor_chaos_sorcerer_0.webp';
 import skinWolf from './nor_cha_skin_wolf_werekin_campaign_02_0.webp';

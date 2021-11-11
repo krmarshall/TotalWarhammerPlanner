@@ -8,7 +8,7 @@ import highMagicWElf from './wh2_dlc16_lore_passive_ancients_protection.webp';
 import life from './wh_dlc05_spell_life_life_bloom.webp';
 import light from './wh_main_lore_passive_exorcism.webp';
 import metal from './wh_main_lore_passive_metalshifting.webp';
-import nehekara from './wh2_dlc09_lore_nehekhara.webp';
+import nehekhara from './wh2_dlc09_lore_nehekhara.webp';
 import shadows from './wh_dlc05_lore_passive_smoke_and_mirrors.webp';
 import bigWagh from './wh_main_lore_passive_power_of_da_waaagh.webp';
 import deep from './wh2_dlc11_lore_deeps.webp';
@@ -30,7 +30,7 @@ const spellLoreIcons = {
   life,
   light,
   metal,
-  nehekara,
+  nehekhara,
   shadows,
   bigWagh,
   deep,

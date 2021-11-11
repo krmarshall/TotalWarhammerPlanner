@@ -8,7 +8,7 @@ import oxyotl from './lzd_oxyotl_0.webp';
 import saurusOldBlood from './lzd_lord_saurus_old_blood_campaign_01_0.webp';
 import slannMagePriest from './lzd_slann_campaign_04_0.webp';
 import redCrestedSkink from './lzd_skink_chief_red_crested_campaign_02_0.webp';
-import krozigorAncient from './lzd_kroxigor_ancient_campaign_02_0.webp';
+import kroxigorAncient from './lzd_kroxigor_ancient_campaign_02_0.webp';
 
 import kroak from './lzd_lord_kroak_0.webp';
 import saurusScarVeteran from './lzd_hero_saurus_scar_veteran_campaign_01_0.webp';
@@ -27,7 +27,7 @@ const lizardmenPortraits = {
   saurusOldBlood,
   slannMagePriest,
   redCrestedSkink,
-  krozigorAncient,
+  kroxigorAncient,
 
   kroak,
   saurusScarVeteran,

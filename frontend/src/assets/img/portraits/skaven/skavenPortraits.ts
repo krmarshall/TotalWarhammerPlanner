@@ -14,7 +14,7 @@ import plaguePriest from './skv_plague_priest_campaign_01_0.webp';
 import ghoritch from './skv_ghoritch_0.webp';
 import packmaster from './skv_packmaster_campaign_02_0.webp';
 
-import chieftan from './skv_chieftain_campaign_01_0.webp';
+import chieftain from './skv_chieftain_campaign_01_0.webp';
 
 const skavenPortraits = {
   queek,
@@ -33,7 +33,7 @@ const skavenPortraits = {
   ghoritch,
   packmaster,
 
-  chieftan,
+  chieftain,
 };
 
 export default skavenPortraits;
