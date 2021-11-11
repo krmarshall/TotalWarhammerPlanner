@@ -7,12 +7,12 @@ import rakarth from './def_rakarth_0.webp';
 import dreadlordXbow from './def_dreadlord_campaign_02_0.webp';
 import dreadlordShield from './def_dreadlord_female_campaign_03_0.webp';
 import beastmaster from './def_beastmaster_campaign_02_0.webp';
-import supremeSorcereress from './def_supreme_sorceress_campaign_01_0.webp';
+import supremeSorceress from './def_supreme_sorceress_campaign_01_0.webp';
 
 import deathHag from './def_death_hag_campaign_01_0.webp';
 import assassin from './def_assassin_campaign_04_0.webp';
 import master from './def_master_campaign_02_0.webp';
-import sorcereress from './def_sorceress_campaign_03_0.webp';
+import sorceress from './def_sorceress_campaign_03_0.webp';
 
 const darkElvesPortraits = {
   malekith,
@@ -24,12 +24,12 @@ const darkElvesPortraits = {
   dreadlordXbow,
   dreadlordShield,
   beastmaster,
-  supremeSorcereress,
+  supremeSorceress,
 
   deathHag,
   assassin,
   master,
-  sorcereress,
+  sorceress,
 };
 
 export default darkElvesPortraits;

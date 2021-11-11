@@ -16,7 +16,7 @@ const vampireCoastPortraits = {
   cylostra,
   vampireFleetAdmiralFem,
   vampireFleetAdmiralMale,
-  
+
   gunneryWight,
   mourngulHaunter,
   vampireFleetCaptain,

@@ -4,7 +4,7 @@ import belegar from './dwf_ch_belegar_ironhammer_0.webp';
 import grombrindal from './dwf_ch_grombrindal_0.webp';
 import thorek from './dwf_thorek_0.webp';
 import lord from './dwf_lord_campaign_01_0.webp';
-import runeLord from './dwf_ch_runelord_campaign_03_0.webp';
+import runelord from './dwf_ch_runelord_campaign_03_0.webp';
 
 import dramar from './dwf_master_engineer_ghost_01_0.webp';
 import throni from './dwf_runesmith_ghost_01_0.webp';
@@ -21,7 +21,7 @@ const dwarfPortraits = {
   grombrindal,
   thorek,
   lord,
-  runeLord,
+  runelord,
 
   dramar,
   throni,
