@@ -29,7 +29,7 @@ const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelecto
             >
               <h5 className="text-center text-gray-200 text-xl mb-1">{faction.name}</h5>
               <div className="flex flex-row justify-center">
-                <img className="w-24" src={faction.icon} alt={`${faction.name} icon`} />
+                <img className="w-24" draggable={false} src={faction.icon} alt={`${faction.name} icon`} />
               </div>
             </li>
           );

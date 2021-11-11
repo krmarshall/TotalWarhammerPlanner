@@ -42,10 +42,11 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                 </div>
 
                 <div className="flex flex-row justify-center relative">
-                  <img className="w-16 mb-2" src={lord?.icon} alt={`${lord?.name} icon`} />
+                  <img className="w-16 mb-2" draggable={false} src={lord?.icon} alt={`${lord?.name} icon`} />
                   {lord?.spellLoreIcon && (
                     <img
                       className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5"
+                      draggable={false}
                       src={lord?.spellLoreIcon}
                       alt={`${lord?.spellLoreIcon} icon`}
                     />
@@ -71,10 +72,11 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                   {hero?.name}
                 </h5>
                 <div className="flex flex-row justify-center relative">
-                  <img className="w-16 mb-2" src={hero?.icon} alt={`${hero?.name} icon`} />
+                  <img className="w-16 mb-2" draggable={false} src={hero?.icon} alt={`${hero?.name} icon`} />
                   {hero?.spellLoreIcon && (
                     <img
                       className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5"
+                      draggable={false}
                       src={hero?.spellLoreIcon}
                       alt={`${hero?.spellLoreIcon} icon`}
                     />
