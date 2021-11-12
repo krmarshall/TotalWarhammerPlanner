@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
+import api from '../api/api';
 import factions from '../data/factions';
 
 interface CharacterSelectorProps {
@@ -31,7 +32,14 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
         'This character is not currently implemented, please select a character that is not transparent. \n -Sorry'
       );
     } else {
-      console.log(characterKey);
+      api
+        .getCharacterSkillTree(characterKey)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
 
