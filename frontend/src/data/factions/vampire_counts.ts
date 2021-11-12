@@ -14,11 +14,6 @@ const vampire_counts: FactionInterface = {
       name: 'Mannlet von Carstein',
       icon: vampireCountsPortraits.mannfred,
     },
-    heinrich: {
-      implemented: false,
-      name: 'Heinrich Kemmler',
-      icon: vampireCountsPortraits.heinrich,
-    },
     helman: {
       implemented: false,
       name: 'Helman Ghorst',
@@ -33,6 +28,11 @@ const vampire_counts: FactionInterface = {
       implemented: false,
       name: 'Isabella von Carstein',
       icon: vampireCountsPortraits.isabella,
+    },
+    heinrich: {
+      implemented: false,
+      name: 'Heinrich Kemmler',
+      icon: vampireCountsPortraits.heinrich,
     },
     redDuke: {
       implemented: false,

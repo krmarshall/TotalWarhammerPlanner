@@ -29,15 +29,15 @@ const lizardmen: FactionInterface = {
       name: "Tiktaq'to",
       icon: lizardmenPortraits.tiktaqto,
     },
+    nakai: {
+      implemented: false,
+      name: 'Nakai the Wanderer',
+      icon: lizardmenPortraits.nakai,
+    },
     gorRok: {
       implemented: false,
       name: 'Gor-Rok',
       icon: lizardmenPortraits.gorRok,
-    },
-    nakai: {
-      implemented: false,
-      name: 'Nakai',
-      icon: lizardmenPortraits.nakai,
     },
     oxyotl: {
       implemented: false,

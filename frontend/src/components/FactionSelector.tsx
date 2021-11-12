@@ -11,7 +11,7 @@ const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelecto
   return (
     <div className="justify-self-center">
       <h1 className="text-center text-4xl mb-2 text-gray-200">Factions</h1>
-      <ul className="flex flex-row flex-wrap justify-center">
+      <ul className="flex flex-row flex-wrap justify-center select-none">
         {factionKeys.map((factionKey) => {
           const faction = factions[factionKey as keyof typeof factions];
 

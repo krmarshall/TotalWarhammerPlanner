@@ -13,20 +13,20 @@ const dwarfs: FactionInterface = {
       name: 'Thorgrim Grudgebearer',
       icon: dwarfPortraits.thorgrim,
     },
-    ungrim: {
+    grombrindal: {
       implemented: false,
-      name: 'Ungrim Ironfist',
-      icon: dwarfPortraits.ungrim,
+      name: 'Grombrindal - The White Dwarf',
+      icon: dwarfPortraits.grombrindal,
     },
     belegar: {
       implemented: false,
       name: 'Belegar Ironhammer',
       icon: dwarfPortraits.belegar,
     },
-    grombrindal: {
+    ungrim: {
       implemented: false,
-      name: 'Grombrindal - The White Dwarf',
-      icon: dwarfPortraits.grombrindal,
+      name: 'Ungrim Ironfist',
+      icon: dwarfPortraits.ungrim,
     },
     thorek: {
       implemented: false,

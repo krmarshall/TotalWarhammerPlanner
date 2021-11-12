@@ -9,6 +9,11 @@ const bretonnia: FactionInterface = {
   name: FactionNames.bretonnia,
   icon: factionFlags.bretonnia,
   lords: {
+    louen: {
+      implemented: false,
+      name: 'Louen Leoncoeur',
+      icon: bretonniaPortraits.louen,
+    },
     alberic: {
       implemented: false,
       name: 'Alberic de Bordeleaux',
@@ -16,13 +21,8 @@ const bretonnia: FactionInterface = {
     },
     fayEnchantress: {
       implemented: false,
-      name: 'Fay Enchantress',
+      name: 'The Fay Enchantress',
       icon: bretonniaPortraits.fayEnchantress,
-    },
-    louen: {
-      implemented: false,
-      name: 'King Louen Leoncoeur',
-      icon: bretonniaPortraits.louen,
     },
     repanse: {
       implemented: false,

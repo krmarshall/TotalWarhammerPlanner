@@ -14,20 +14,20 @@ const tomb_kings: FactionInterface = {
       name: 'Settra the Imperishable',
       icon: tombKingPortraits.settra,
     },
-    arkhan: {
+    khatep: {
       implemented: false,
-      name: 'Arkhan the Black',
-      icon: tombKingPortraits.arkhan,
+      name: 'Grand Hierophant Khatep',
+      icon: tombKingPortraits.khatep,
     },
     khalida: {
       implemented: false,
       name: 'High Queen Khalida',
       icon: tombKingPortraits.khalida,
     },
-    khatep: {
+    arkhan: {
       implemented: false,
-      name: 'Grand Hierophant Khatep',
-      icon: tombKingPortraits.khatep,
+      name: 'Arkhan the Black',
+      icon: tombKingPortraits.arkhan,
     },
     tombKing: {
       implemented: false,

@@ -14,25 +14,25 @@ const empire: FactionInterface = {
       name: 'Karl Franz - Prince AND Emperor',
       icon: empirePortraits.karl,
     },
-    gelt: {
-      implemented: false,
-      name: 'Balthasar Gelt',
-      icon: empirePortraits.gelt,
-    },
     volkmar: {
       implemented: false,
       name: 'Volkmar the Grim',
       icon: empirePortraits.volkmar,
     },
-    todbringer: {
+    gelt: {
       implemented: false,
-      name: 'Boris Bodbringer',
-      icon: empirePortraits.todbringer,
+      name: 'Balthasar Gelt',
+      icon: empirePortraits.gelt,
     },
     markus: {
       implemented: false,
       name: 'Markus Wulfhart',
       icon: empirePortraits.markus,
+    },
+    todbringer: {
+      implemented: false,
+      name: 'Boris Bodbringer',
+      icon: empirePortraits.todbringer,
     },
     general: {
       implemented: false,

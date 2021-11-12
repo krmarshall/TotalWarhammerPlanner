@@ -14,25 +14,25 @@ const greenskins: FactionInterface = {
       name: 'Grimgor Ironhide',
       icon: greenskinsPortraits.grimgor,
     },
-    azhag: {
-      implemented: false,
-      name: 'Azhag the Slaughterer',
-      icon: greenskinsPortraits.azhag,
-    },
-    wurrzag: {
-      implemented: false,
-      name: 'Wurrzag',
-      icon: greenskinsPortraits.wurrzag,
-    },
     skarsnik: {
       implemented: false,
       name: 'Skarsnik',
       icon: greenskinsPortraits.skarsnik,
     },
+    wurrzag: {
+      implemented: false,
+      name: 'Wurrzag Da Great Green Prophet',
+      icon: greenskinsPortraits.wurrzag,
+    },
     grom: {
       implemented: false,
       name: 'Grom the Paunch',
       icon: greenskinsPortraits.grom,
+    },
+    azhag: {
+      implemented: false,
+      name: 'Azhag the Slaughterer',
+      icon: greenskinsPortraits.azhag,
     },
     orcWarboss: {
       implemented: false,

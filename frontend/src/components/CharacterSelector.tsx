@@ -39,7 +39,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
     <Fragment>
       <div className="justify-self-center">
         <h2 className="text-center text-4xl m-2 text-gray-200">Lords</h2>
-        <ul className="flex flex-row flex-wrap justify-center">
+        <ul className="flex flex-row flex-wrap justify-center select-none">
           {lordKeys.map((lordKey) => {
             const lord = factionData.lords[lordKey];
 
@@ -86,7 +86,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
       </div>
       <div className="justify-self-center">
         <h2 className="text-center text-4xl m-2 text-gray-200">Heroes</h2>
-        <ul className="flex flex-row flex-wrap justify-center">
+        <ul className="flex flex-row flex-wrap justify-center select-none">
           {heroKeys.map((heroKey) => {
             const hero = factionData.heroes[heroKey];
 

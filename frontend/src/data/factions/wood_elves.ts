@@ -9,25 +9,25 @@ const wood_elves: FactionInterface = {
   name: FactionNames.wood_elves,
   icon: factionFlags.wood_elves,
   lords: {
-    drycha: {
+    orion: {
       implemented: false,
-      name: 'Drycha',
-      icon: woodElvesPortraits.drycha,
+      name: 'Orion',
+      icon: woodElvesPortraits.orion,
     },
     durthu: {
       implemented: false,
       name: 'Durthu',
       icon: woodElvesPortraits.durthu,
     },
-    orion: {
-      implemented: false,
-      name: 'Orion',
-      icon: woodElvesPortraits.orion,
-    },
     sisters: {
       implemented: false,
-      name: 'Sister of Twilight',
+      name: 'Sisters of Twilight',
       icon: woodElvesPortraits.sisters,
+    },
+    drycha: {
+      implemented: false,
+      name: 'Drycha',
+      icon: woodElvesPortraits.drycha,
     },
     gladeLord: {
       implemented: false,
