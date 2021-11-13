@@ -4,20 +4,43 @@ interface SkillEffectInterface {
 }
 
 interface SkillRankInterface {
-  skillEffects: Array<SkillEffectInterface>;
+  rank1: Array<SkillEffectInterface>;
+  rank2?: Array<SkillEffectInterface>;
+  rank3?: Array<SkillEffectInterface>;
+}
+
+interface ExtraTooltipInterface {
+  title: string;
+  subTitle: string;
+  windsCost?: number;
+  cooldown?: number;
+  type?: string;
+  duration?: string;
+  target?: string;
+  activeIf?: string;
+  cannotUseIf?: string;
+  cannotTargetIf?: string;
+  projectileRange: string;
+  effectRange?: number;
+  effects?: Array<SkillEffectInterface>;
 }
 
 interface SkillInterface {
   name: string;
   icon: string;
-  description: string;
-  ranks: Array<SkillRankInterface>;
+  description?: string;
+  ranks: SkillRankInterface;
 
+  requiresSkill?: string;
+  requiresLevel?: number;
+
+  boxed?: boolean;
   requiresXPoints?: number;
   inLastYSkills?: number;
 
-  requiresLevel?: number;
-  blocksSkills?: Array<SkillInterface>;
+  blocksSkills?: Array<string>;
+
+  extraTooltip?: ExtraTooltipInterface;
 }
 
 export default SkillInterface;
