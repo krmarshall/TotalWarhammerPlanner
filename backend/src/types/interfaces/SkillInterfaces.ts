@@ -1,6 +1,7 @@
 interface SkillEffectInterface {
   icon: string;
   description: string;
+  goodEffect: boolean;
 }
 
 interface SkillRankInterface {
