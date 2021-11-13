@@ -3,12 +3,15 @@ import cors from 'cors';
 import path from 'path';
 import helmet from 'helmet';
 import apiListener from './api';
+import imageTestListener from './imageTest';
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(helmet());
+
+app.get('/api/imagetest/', imageTestListener);
 
 // Serve rest api
 app.get('/api/:characterKey', apiListener);

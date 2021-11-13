@@ -1,5 +1,6 @@
 interface SkillEffectInterface {
   icon: string;
+  iconType: string;
   description: string;
   goodEffect: boolean;
 }
@@ -29,6 +30,7 @@ interface ExtraTooltipInterface {
 interface SkillInterface {
   name: string;
   icon: string;
+  iconType: string;
   description?: string;
   ranks: SkillRankInterface;
 

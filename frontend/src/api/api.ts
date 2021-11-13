@@ -22,6 +22,27 @@ const api = {
         return error;
       });
   },
+  imageTest: (): Promise<any> => {
+    return fetch(`${path}/imageTest/`, {
+      method: 'GET',
+      mode: 'cors',
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          throw new Error(response.statusText);
+        }
+      })
+      .then((resJson) => {
+        console.log(`Then ${resJson}`);
+        return resJson;
+      })
+      .catch((error) => {
+        console.log(`Catch ${error}`);
+        return error;
+      });
+  },
 };
 
 export default api;
