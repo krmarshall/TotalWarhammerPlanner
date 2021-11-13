@@ -1,0 +1,11 @@
+import express, { Response } from 'express';
+
+const setDefaultCacheControl = (res: Response, path: string) => {
+  if (express.static.mime.lookup(path) === 'text/html') {
+    res.setHeader('Cache-Control', 'public, max-age=0');
+  } else if (express.static.mime.lookup(path) === 'application/javascript') {
+    res.setHeader('Cache-Control', 'public, max-age=0');
+  }
+};
+
+export default setDefaultCacheControl;

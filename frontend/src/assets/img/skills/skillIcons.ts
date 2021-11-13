@@ -1,7 +1,7 @@
-const battleIcons = import('./battle/battleIcons');
-const campaignIcons = import('./campaign/campaignIcons');
-const characterIcons = import('./character/characterIcons');
-const mountIcons = import('./mounts/mountIcons');
+import battleIcons from './battle/battleIcons';
+import campaignIcons from './campaign/campaignIcons';
+import characterIcons from './character/characterIcons';
+import mountIcons from './mounts/mountIcons';
 
 const skillIcons = {
   battleIcons,
