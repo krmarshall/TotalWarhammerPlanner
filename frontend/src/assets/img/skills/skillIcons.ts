@@ -1,7 +1,13 @@
-import bluelineIcons from './blueline/blueline';
+import battleIcons from './battle/battleIcons';
+import campaignIcons from './campaign/campaignIcons';
+import characterIcons from './character/characterIcons';
+import mountIcons from './mounts/mountIcons';
 
 const skillIcons = {
-  bluelineIcons,
+  battleIcons,
+  campaignIcons,
+  characterIcons,
+  mountIcons,
 };
 
 export default skillIcons;
