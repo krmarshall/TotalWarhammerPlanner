@@ -1,13 +1,15 @@
-import battleIcons from './battle/battleIcons';
-import campaignIcons from './campaign/campaignIcons';
-import characterIcons from './character/characterIcons';
-import mountIcons from './mounts/mountIcons';
+import battle from './battle';
+import campaign from './campaign';
+import character from './character';
+import mount from './mounts';
+import spell from './spells';
 
 const skillIcons = {
-  battleIcons,
-  campaignIcons,
-  characterIcons,
-  mountIcons,
+  battle,
+  campaign,
+  character,
+  mount,
+  spell,
 };
 
 export default skillIcons;

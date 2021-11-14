@@ -29,7 +29,7 @@ import untainted from './campaign_untainted.webp';
 import vampiricCorruption from './campaign_vampiric_corruption.webp';
 import woundTime from './campaign_wound_time.webp';
 
-const campaignIcons = {
+const campaign = {
   agent,
   ambush,
   army,
@@ -62,4 +62,4 @@ const campaignIcons = {
   woundTime,
 };
 
-export default campaignIcons;
+export default campaign;

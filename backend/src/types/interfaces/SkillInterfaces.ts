@@ -31,6 +31,7 @@ interface SkillInterface {
   name: string;
   icon: string;
   iconType: string;
+  iconSpellLore?: string;
   description?: string;
   ranks: SkillRankInterface;
 

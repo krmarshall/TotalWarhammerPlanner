@@ -79,7 +79,7 @@ import whiteLionChariot from './mount_white_lion_chariot.webp';
 import wyvern from './mount_wyvern.webp';
 import zombieDragon from './mount_zombie_dragon.webp';
 
-const mountIcons = {
+const mount = {
   ancientStegadon,
   anvilOfDoom,
   arachnarokSpider,
@@ -161,4 +161,4 @@ const mountIcons = {
   zombieDragon,
 };
 
-export default mountIcons;
+export default mount;

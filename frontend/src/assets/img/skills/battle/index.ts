@@ -13,7 +13,7 @@ import rangedDamage from './battle_ranged_damage.webp';
 import speed from './battle_speed.webp';
 import wardSave from './battle_ward_save.webp';
 
-const battleIcons = {
+const battle = {
   ammo,
   armour,
   attack,
@@ -30,4 +30,4 @@ const battleIcons = {
   wardSave,
 };
 
-export default battleIcons;
+export default battle;

@@ -7,8 +7,9 @@ const About = () => {
   const buttonHandler = () => {
     api.imageTest().then((res) => {
       console.log(res);
+      console.log(skillIcons);
       // @ts-expect-error 7053
-      const temp = skillIcons[`${res.iconType}Icons`][res.icon];
+      const temp = skillIcons[`${res.iconType}`][res.icon];
       setImgSrc(temp);
     });
   };

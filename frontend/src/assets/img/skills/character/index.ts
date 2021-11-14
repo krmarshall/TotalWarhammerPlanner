@@ -51,7 +51,7 @@ import enchantedItem from './item_enchanted_item.webp';
 import talismanItem from './item_talisman.webp';
 import weaponItem from './item_weapon.webp';
 
-const characterIcons = {
+const character = {
   agent,
   ambush,
   ammo,
@@ -106,4 +106,4 @@ const characterIcons = {
   weaponItem,
 };
 
-export default characterIcons;
+export default character;
