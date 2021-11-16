@@ -35,7 +35,7 @@ const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelecto
                 setSelectedFaction(factionKey);
               }}
             >
-              <h5 className="text-center text-gray-200 text-xl mb-1">{faction.name}</h5>
+              <h2 className="text-center text-gray-200 text-xl mb-1">{faction.name}</h2>
               <div className="flex flex-row justify-center">
                 <img
                   className="w-24"

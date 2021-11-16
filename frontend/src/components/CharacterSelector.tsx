@@ -46,7 +46,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
   return (
     <Fragment>
       <div className="justify-self-center">
-        <h2 className="text-center text-4xl m-2 text-gray-200">Lords</h2>
+        <h1 className="text-center text-4xl m-2 text-gray-200">Lords</h1>
         <ul className="flex flex-row flex-wrap justify-center select-none">
           {lordKeys.map((lordKey) => {
             const lord = factionData.lords[lordKey];
@@ -66,7 +66,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                 }}
               >
                 <div className="flex flex-row justify-center" style={{ minHeight: '3.7rem' }}>
-                  <h5 className="w-36 text-center text-xl text-gray-200 mb-1">{lord?.name}</h5>
+                  <h2 className="w-36 text-center text-xl text-gray-200 mb-1">{lord?.name}</h2>
                 </div>
 
                 <div className="flex flex-row justify-center relative">
@@ -75,8 +75,8 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                     draggable={false}
                     src={lord?.icon}
                     alt={`${lord?.name} icon`}
-                    height="64"
-                    width="139"
+                    height="139"
+                    width="64"
                   />
                   {lord?.spellLoreIcon && (
                     <img
@@ -93,7 +93,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
         </ul>
       </div>
       <div className="justify-self-center">
-        <h2 className="text-center text-4xl m-2 text-gray-200">Heroes</h2>
+        <h1 className="text-center text-4xl m-2 text-gray-200">Heroes</h1>
         <ul className="flex flex-row flex-wrap justify-center select-none">
           {heroKeys.map((heroKey) => {
             const hero = factionData.heroes[heroKey];
@@ -112,17 +112,17 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
                   handleCharacterSelect(heroKey, hero?.implemented);
                 }}
               >
-                <h5 style={{ minHeight: '3.7rem' }} className="w-36 text-center text-xl text-gray-200 mb-1">
+                <h2 style={{ minHeight: '3.7rem' }} className="w-36 text-center text-xl text-gray-200 mb-1">
                   {hero?.name}
-                </h5>
+                </h2>
                 <div className="flex flex-row justify-center relative">
                   <img
                     className="w-16 mb-2"
                     draggable={false}
                     src={hero?.icon}
                     alt={`${hero?.name} icon`}
-                    height="64"
-                    width="139"
+                    height="139"
+                    width="64"
                   />
                   {hero?.spellLoreIcon && (
                     <img
