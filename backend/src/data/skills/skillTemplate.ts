@@ -2,7 +2,7 @@
 
 
 
-import { SkillTypes } from '@projectEnums/SkillEnums';
+import { SkillTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const : SkillInterface = {

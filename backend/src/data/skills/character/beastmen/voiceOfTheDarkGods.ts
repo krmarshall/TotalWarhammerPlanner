@@ -1,4 +1,4 @@
-import { BattleSkills, CharacterSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import { BattleSkills, CharacterSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const voiceOfTheDarkGods: SkillInterface = {

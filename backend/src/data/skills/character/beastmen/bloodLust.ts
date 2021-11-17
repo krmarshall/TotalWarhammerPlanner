@@ -1,4 +1,4 @@
-import { AbilitySkills, MiscSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import { AbilitySkills, MiscSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const bloodLust: SkillInterface = {

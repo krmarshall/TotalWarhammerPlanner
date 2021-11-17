@@ -1,4 +1,4 @@
-import { BattleSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import { BattleSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const fuelledByBlood: SkillInterface = {

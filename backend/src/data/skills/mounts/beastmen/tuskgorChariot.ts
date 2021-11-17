@@ -1,4 +1,4 @@
-import { MountSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import { MountSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const tuskgorChariot: SkillInterface = {
