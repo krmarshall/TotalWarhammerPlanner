@@ -2,8 +2,8 @@
 
 
 
-import { SkillTypes } from '../../../../types/enums/SkillEnums';
-import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
+import { SkillTypes } from '@projectEnums/SkillEnums';
+import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const : SkillInterface = {
   name: '',

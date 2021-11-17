@@ -1,5 +1,5 @@
-import { CharacterSkills, MiscSkills, SkillTypes } from '../../../../types/enums/SkillEnums';
-import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
+import { CharacterSkills, MiscSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const shadowHide: SkillInterface = {
   name: 'Shadow Hide',

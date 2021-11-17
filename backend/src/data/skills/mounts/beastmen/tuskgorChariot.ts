@@ -1,5 +1,5 @@
-import { MountSkills, SkillTypes } from '../../../../types/enums/SkillEnums';
-import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
+import { MountSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const tuskgorChariot: SkillInterface = {
   name: 'Tuskgor Chariot',

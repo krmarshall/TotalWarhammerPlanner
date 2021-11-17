@@ -1,5 +1,5 @@
-import { AbilitySkills, MiscSkills, SkillTypes } from '../../../../types/enums/SkillEnums';
-import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
+import { AbilitySkills, MiscSkills, SkillTypes } from '@projectEnums/SkillEnums';
+import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const bloodLust: SkillInterface = {
   name: 'Blood Lust',
