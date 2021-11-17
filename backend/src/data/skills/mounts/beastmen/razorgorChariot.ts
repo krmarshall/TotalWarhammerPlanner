@@ -1,18 +1,18 @@
 import { MountSkills, SkillTypes } from '../../../../types/enums/SkillEnums';
 import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
-const tuskgorChariot: SkillInterface = {
-  name: 'Tuskgor Chariot',
-  icon: MountSkills.tuskgorChariot,
+const razorgorChariot: SkillInterface = {
+  name: 'Razorgor Chariot',
+  icon: MountSkills.razorgorChariot,
   iconType: SkillTypes.mount,
   ranks: {
     rank1: {
-      requiresLevel: 8,
+      requiresLevel: 12,
       skillEffects: [
         {
-          icon: MountSkills.tuskgorChariot,
+          icon: MountSkills.razorgorChariot,
           iconType: SkillTypes.mount,
-          description: 'Mount: Tuskgor Chariot',
+          description: 'Mount: Razorgor Chariot',
           goodEffect: true,
         },
       ],
@@ -20,4 +20,4 @@ const tuskgorChariot: SkillInterface = {
   },
 };
 
-export default tuskgorChariot;
+export default razorgorChariot;

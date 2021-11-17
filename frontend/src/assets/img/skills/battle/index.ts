@@ -11,6 +11,7 @@ import morale from './battle_morale.webp';
 import range from './battle_range.webp';
 import rangedDamage from './battle_ranged_damage.webp';
 import speed from './battle_speed.webp';
+import vigour from './vigour.webp';
 import wardSave from './battle_ward_save.webp';
 
 const battle = {
@@ -27,6 +28,7 @@ const battle = {
   range,
   rangedDamage,
   speed,
+  vigour,
   wardSave,
 };
 
