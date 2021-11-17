@@ -24,6 +24,7 @@ enum BattleSkillIcons {
   speed = 'speed',
   vigour = 'vigour',
   wardSave = 'wardSave',
+  baseDamage = 'baseDamage',
 }
 
 enum CampaignSkillIcons {
@@ -57,6 +58,9 @@ enum CampaignSkillIcons {
   untainted = 'untainted',
   vampiricCorruption = 'vampiricCorruption',
   woundTime = 'woundTime',
+  income = 'income',
+  incomeVampires = 'incomeVampires',
+  incomeChaos = 'incomeChaos',
 }
 
 enum CharacterSkillIcons {
@@ -112,6 +116,7 @@ enum CharacterSkillIcons {
   enchantedItem = 'enchantedItem',
   talismanItem = 'talismanItem',
   weaponItem = 'weaponItem',
+  baseDamage = 'baseDamage',
 }
 
 enum MountSkillIcons {
@@ -201,6 +206,7 @@ enum AbilitySkillIcons {
   callOfViolence = 'callOfViolence',
   bloodLust = 'bloodLust',
   deadlyOnslaught = 'deadlyOnslaught',
+  scourge = 'scourge',
 }
 
 enum MiscSkillIcons {
@@ -214,6 +220,13 @@ enum MiscSkillIcons {
   resistanceMissile = 'resistanceMissile',
   resistancePhysical = 'resistancePhysical',
   resistanceWard = 'resistanceWard',
+  discouraged = 'discouraged',
+  defensiveAura = 'defensiveAura',
+  offensiveAura = 'offensiveAura',
+  itemPassiveArcane = 'itemPassiveArcane',
+  itemPassiveArmour = 'itemPassiveArmour',
+  itemPassiveTalisman = 'itemPassiveTalisman',
+  itemPassiveWeapon = 'itemPassiveWeapon',
 }
 
 export {

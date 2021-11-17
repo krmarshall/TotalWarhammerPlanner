@@ -8,6 +8,13 @@ import resistanceMagic from './resistance_magic.webp';
 import resistanceMissile from './resistance_missile.webp';
 import resistancePhysical from './resistance_physical.webp';
 import resistanceWard from './resistance_ward_save.webp';
+import discouraged from './discouraged.webp';
+import defensiveAura from './wh_dlc03_hero_passive_defensive_aura.webp';
+import offensiveAura from './wh_dlc03_hero_passive_offensive_aura.webp';
+import itemPassiveArcane from './wh_magic_item_passive_arcane.webp';
+import itemPassiveArmour from './wh_magic_item_passive_armour.webp';
+import itemPassiveTalisman from './wh_magic_item_passive_talisman.webp';
+import itemPassiveWeapon from './wh_magic_item_passive_weapon.webp';
 
 const misc = {
   causesFear,
@@ -20,6 +27,13 @@ const misc = {
   resistanceMissile,
   resistancePhysical,
   resistanceWard,
+  discouraged,
+  defensiveAura,
+  offensiveAura,
+  itemPassiveArcane,
+  itemPassiveArmour,
+  itemPassiveTalisman,
+  itemPassiveWeapon,
 };
 
 export default misc;

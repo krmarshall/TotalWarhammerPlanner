@@ -13,6 +13,7 @@ import rangedDamage from './battle_ranged_damage.webp';
 import speed from './battle_speed.webp';
 import vigour from './vigour.webp';
 import wardSave from './battle_ward_save.webp';
+import baseDamage from './icon_stat_damage_base_force.webp';
 
 const battle = {
   ammo,
@@ -30,6 +31,7 @@ const battle = {
   speed,
   vigour,
   wardSave,
+  baseDamage,
 };
 
 export default battle;

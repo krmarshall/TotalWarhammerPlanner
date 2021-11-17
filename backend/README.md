@@ -1,7 +1,7 @@
 # Backend
 
 ## Folder Structure
-./dist/ - (Gitignored) When backend is started typsecript builds the standard js to be run by node here. 
+./dist/ - (Gitignored) When backend is started typescript builds the standard js to be run by node here. 
 ./public/ - (Gitignored) Where the frontend builds itself to be served by the backend.
 ./src/ - All the typescript project source
 
@@ -11,7 +11,7 @@ The backend server has 2 main responsibilities, we are serving the static fronte
 ## Data Structures
 
 ### Character Data / Skill Trees
-Within the ./src/data/factions/ folder each factions lords and heroes skill trees are stored. The interface for these skill trees is described in ./src/types/interfaces/
+Within the ./src/data/*Faction*/characters/ folder each factions lords and heroes skill trees are stored. The interface for these skill trees is described in ./src/types/interfaces/
 
 TODO: CREATE THE CHARACTER INTERFACE
 

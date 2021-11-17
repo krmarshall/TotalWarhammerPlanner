@@ -28,6 +28,9 @@ import turns from './campaign_turns.webp';
 import untainted from './campaign_untainted.webp';
 import vampiricCorruption from './campaign_vampiric_corruption.webp';
 import woundTime from './campaign_wound_time.webp';
+import income from './income.webp';
+import incomeVampires from './incomeVC.webp';
+import incomeChaos from './incomeChaos.webp';
 
 const campaign = {
   agent,
@@ -60,6 +63,9 @@ const campaign = {
   untainted,
   vampiricCorruption,
   woundTime,
+  income,
+  incomeVampires,
+  incomeChaos,
 };
 
 export default campaign;

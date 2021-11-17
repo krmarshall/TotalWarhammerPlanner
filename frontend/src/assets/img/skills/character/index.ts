@@ -50,6 +50,7 @@ import armourItem from './item_armour.webp';
 import enchantedItem from './item_enchanted_item.webp';
 import talismanItem from './item_talisman.webp';
 import weaponItem from './item_weapon.webp';
+import baseDamage from './icon_stat_damage_base_character.webp';
 
 const character = {
   agent,
@@ -104,6 +105,7 @@ const character = {
   enchantedItem,
   talismanItem,
   weaponItem,
+  baseDamage,
 };
 
 export default character;

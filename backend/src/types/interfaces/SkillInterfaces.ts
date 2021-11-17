@@ -41,6 +41,7 @@ interface ExtraTooltipInterface {
 
 // Besides the above skill ranks and tooltips, each skill also has restrictions for when it can be selected.
 interface SkillInterface {
+  // General Skill Info
   name: string;
   icon: string;
   iconType: string;
@@ -48,15 +49,18 @@ interface SkillInterface {
   description?: string;
   ranks: SkillRankInterface;
 
+  // Selection Conditions
   requiresSkill?: string;
-
-  boxed?: boolean;
   requiresXPoints?: number;
   inLastYSkills?: number;
-
   blocksSkills?: Array<string>;
 
+  // Extra Info and Styling Details
   extraTooltip?: ExtraTooltipInterface;
+
+  boxed?: boolean;
+  beforeArrow?: boolean;
+  afterArrow?: boolean;
 }
 
 export default SkillInterface;
