@@ -1,17 +1,17 @@
-import { AbilitySkills, MiscSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
+import { AbilitySkillIcons, MiscSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const bloodLust: SkillInterface = {
   name: 'Blood Lust',
-  icon: AbilitySkills.bloodLust,
-  iconType: SkillTypes.abilities,
+  icon: AbilitySkillIcons.bloodLust,
+  iconType: SkillIconTypes.abilities,
   ranks: {
     rank1: {
       requiresLevel: 8,
       skillEffects: [
         {
-          icon: AbilitySkills.bloodLust,
-          iconType: SkillTypes.abilities,
+          icon: AbilitySkillIcons.bloodLust,
+          iconType: SkillIconTypes.abilities,
           description: 'Ability: "Blood Lust"',
           goodEffect: true,
         },
@@ -27,8 +27,8 @@ const bloodLust: SkillInterface = {
     cooldown: 60,
     effects: [
       {
-        icon: MiscSkills.modifierArmourPiercing,
-        iconType: SkillTypes.misc,
+        icon: MiscSkillIcons.modifierArmourPiercing,
+        iconType: SkillIconTypes.misc,
         description: 'Armour-Piercing Weapon Damage',
         goodEffect: true,
       },

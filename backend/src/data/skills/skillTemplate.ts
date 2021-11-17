@@ -2,19 +2,19 @@
 
 
 
-import { SkillTypes } from '@projectEnums/SkillIconEnums';
+import { SkillIconTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const : SkillInterface = {
   name: '',
   icon: ,
-  iconType: SkillTypes,
+  iconType: SkillIconTypes,
   ranks: {
     rank1: {
       skillEffects: [
         {
           icon: ,
-          iconType: SkillTypes,
+          iconType: SkillIconTypes,
           description: '',
           goodEffect: true,
         },

@@ -1,4 +1,4 @@
-enum SkillTypes {
+enum SkillIconTypes {
   battle = 'battle',
   campaign = 'campaign',
   character = 'character',
@@ -8,7 +8,7 @@ enum SkillTypes {
   misc = 'misc',
 }
 
-enum BattleSkills {
+enum BattleSkillIcons {
   ammo = 'ammo',
   armour = 'armour',
   attack = 'attack',
@@ -26,7 +26,7 @@ enum BattleSkills {
   wardSave = 'wardSave',
 }
 
-enum CampaignSkills {
+enum CampaignSkillIcons {
   agent = 'agent',
   ambush = 'ambush',
   army = 'army',
@@ -59,7 +59,7 @@ enum CampaignSkills {
   woundTime = 'woundTime',
 }
 
-enum CharacterSkills {
+enum CharacterSkillIcons {
   agent = 'agent',
   ambush = 'ambush',
   ammo = 'ammo',
@@ -114,7 +114,7 @@ enum CharacterSkills {
   weaponItem = 'weaponItem',
 }
 
-enum MountSkills {
+enum MountSkillIcons {
   ancientStegadon = 'ancientStegadon',
   anvilOfDoom = 'anvilOfDoom',
   arachnarokSpider = 'arachnarokSpider',
@@ -196,14 +196,14 @@ enum MountSkills {
   zombieDragon = 'zombieDragon',
 }
 
-enum AbilitySkills {
+enum AbilitySkillIcons {
   apocalypticVision = 'apocalypticVision',
   callOfViolence = 'callOfViolence',
   bloodLust = 'bloodLust',
   deadlyOnslaught = 'deadlyOnslaught',
 }
 
-enum MiscSkills {
+enum MiscSkillIcons {
   causesFear = 'causesFear',
   causesTerror = 'causesTerror',
   immuneToPsychology = 'immuneToPsychology',
@@ -216,4 +216,12 @@ enum MiscSkills {
   resistanceWard = 'resistanceWard',
 }
 
-export { SkillTypes, BattleSkills, CampaignSkills, CharacterSkills, MountSkills, AbilitySkills, MiscSkills };
+export {
+  SkillIconTypes,
+  BattleSkillIcons,
+  CampaignSkillIcons,
+  CharacterSkillIcons,
+  MountSkillIcons,
+  AbilitySkillIcons,
+  MiscSkillIcons,
+};

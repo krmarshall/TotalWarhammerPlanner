@@ -1,17 +1,17 @@
-import { BattleSkills, CharacterSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
+import { BattleSkillIcons, CharacterSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const voiceOfTheDarkGods: SkillInterface = {
   name: 'Voice of the Dark Gods',
-  icon: BattleSkills.generalAbility,
-  iconType: SkillTypes.battle,
+  icon: BattleSkillIcons.generalAbility,
+  iconType: SkillIconTypes.battle,
   ranks: {
     rank1: {
       requiresLevel: 5,
       skillEffects: [
         {
-          icon: CharacterSkills.generalAbility,
-          iconType: SkillTypes.character,
+          icon: CharacterSkillIcons.generalAbility,
+          iconType: SkillIconTypes.character,
           description: 'Leadership aura size: +25%',
           goodEffect: true,
         },
@@ -21,20 +21,20 @@ const voiceOfTheDarkGods: SkillInterface = {
       requiresLevel: 5,
       skillEffects: [
         {
-          icon: CharacterSkills.generalAbility,
-          iconType: SkillTypes.character,
+          icon: CharacterSkillIcons.generalAbility,
+          iconType: SkillIconTypes.character,
           description: 'Leadership aura size: +25%',
           goodEffect: true,
         },
         {
-          icon: CharacterSkills.morale,
-          iconType: SkillTypes.character,
+          icon: CharacterSkillIcons.morale,
+          iconType: SkillIconTypes.character,
           description: "Character's aura leadership effect: +5",
           goodEffect: true,
         },
         {
-          icon: CharacterSkills.morale,
-          iconType: SkillTypes.character,
+          icon: CharacterSkillIcons.morale,
+          iconType: SkillIconTypes.character,
           description: 'Leadership: +5',
           goodEffect: true,
         },

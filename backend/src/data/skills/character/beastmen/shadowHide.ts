@@ -1,17 +1,17 @@
-import { CharacterSkills, MiscSkills, SkillTypes } from '@projectEnums/SkillIconEnums';
+import { CharacterSkillIcons, MiscSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
 const shadowHide: SkillInterface = {
   name: 'Shadow Hide',
-  icon: CharacterSkills.wardSave,
-  iconType: SkillTypes.character,
+  icon: CharacterSkillIcons.wardSave,
+  iconType: SkillIconTypes.character,
   ranks: {
     rank1: {
       requiresLevel: 10,
       skillEffects: [
         {
-          icon: MiscSkills.resistanceMissile,
-          iconType: SkillTypes.misc,
+          icon: MiscSkillIcons.resistanceMissile,
+          iconType: SkillIconTypes.misc,
           description: 'Missile resistance: 10%',
           goodEffect: true,
         },

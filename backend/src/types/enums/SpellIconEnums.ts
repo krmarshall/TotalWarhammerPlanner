@@ -1,4 +1,4 @@
-enum SpellTypes {
+enum SpellIconTypes {
   beasts = 'beasts',
   bigWagh = 'bigWagh',
   dark = 'dark',
@@ -21,7 +21,7 @@ enum SpellTypes {
   wild = 'wild',
 }
 
-enum BeastsSpells {
+enum BeastsSpellIcons {
   wildHeart = 'wildHeart',
   flockOfDoom = 'flockOfDoom',
   pannsImpenetrablePelt = 'pannsImpenetrablePelt',
@@ -31,7 +31,7 @@ enum BeastsSpells {
   wyssansWildform = 'wyssansWildform',
 }
 
-enum BigWaghSpells {
+enum BigWaghSpellIcons {
   powerOfDaWagh = 'powerOfDaWagh',
   brainBursta = 'brainBursta',
   eadbutt = 'eadbutt',
@@ -41,7 +41,7 @@ enum BigWaghSpells {
   gazeOfMork = 'gazeOfMork',
 }
 
-enum DarkSpells {
+enum DarkSpellIcons {
   spitefulConjuration = 'spitefulConjuration',
   bladewind = 'bladewind',
   chillwind = 'chillwind',
@@ -51,7 +51,7 @@ enum DarkSpells {
   wordOfPain = 'wordOfPain',
 }
 
-enum DeathSpells {
+enum DeathSpellIcons {
   lifeLeech = 'lifeLeech',
   aspectOfTheDreadknight = 'aspectOfTheDreadknight',
   doomAndDarkness = 'doomAndDarkness',
@@ -61,7 +61,7 @@ enum DeathSpells {
   thePurpleSunOfXereus = 'thePurpleSunOfXereus',
 }
 
-enum DeepSpells {
+enum DeepSpellIcons {
   loreOfDeeps = 'loreOfDeeps',
   denizensOfTheDeep = 'denizensOfTheDeep',
   fogOfTheDamned = 'fogOfTheDamned',
@@ -71,7 +71,7 @@ enum DeepSpells {
   tidecall = 'tidecall',
 }
 
-enum FireSpells {
+enum FireSpellIcons {
   kindleflame = 'kindleflame',
   cascadingFireCloak = 'cascadingFireCloak',
   fireball = 'fireball',
@@ -81,7 +81,7 @@ enum FireSpells {
   theBurningHead = 'theBurningHead',
 }
 
-enum HeavensSpells {
+enum HeavensSpellIcons {
   roilingSkies = 'roilingSkies',
   chainLightning = 'chainLightning',
   cometOfCasandora = 'cometOfCasandora',
@@ -91,7 +91,7 @@ enum HeavensSpells {
   windBlast = 'windBlast',
 }
 
-enum HighMagicSpells {
+enum HighMagicSpellIcons {
   ancientsProtection = 'ancientsProtection',
   shieldOfSaphery = 'shieldOfSaphery',
   apotheosis = 'apotheosis',
@@ -102,7 +102,7 @@ enum HighMagicSpells {
   tempest = 'tempest',
 }
 
-enum LifeSpells {
+enum LifeSpellIcons {
   lifeBloom = 'lifeBloom',
   awakeningOfTheWood = 'awakeningOfTheWood',
   earthBlood = 'earthBlood',
@@ -112,7 +112,7 @@ enum LifeSpells {
   theDwellersBelow = 'theDwellersBelow',
 }
 
-enum LightSpells {
+enum LightSpellIcons {
   exorcism = 'exorcism',
   banishment = 'banishment',
   bironasTimewarp = 'bironasTimewarp',
@@ -122,7 +122,7 @@ enum LightSpells {
   shemsBurningGaze = 'shemsBurningGaze',
 }
 
-enum LilWaghSpells {
+enum LilWaghSpellIcons {
   sneakyStealin = 'sneakyStealin',
   curseOfDaBadMoon = 'curseOfDaBadMoon',
   gorkllFixIt = 'gorkllFixIt',
@@ -132,7 +132,7 @@ enum LilWaghSpells {
   vindictiveGlare = 'vindictiveGlare',
 }
 
-enum MetalSpells {
+enum MetalSpellIcons {
   metalshifting = 'metalshifting',
   finalTransmutation = 'finalTransmutation',
   gehennasGoldenHounds = 'gehennasGoldenHounds',
@@ -142,7 +142,7 @@ enum MetalSpells {
   transmutationOfLead = 'transmutationOfLead',
 }
 
-enum NehekharaSpells {
+enum NehekharaSpellIcons {
   loreNehekhara = 'loreNehekhara',
   djafsIncantationOfCursedBlades = 'djafsIncantationOfCursedBlades',
   nerusIncantationOfProtection = 'nerusIncantationOfProtection',
@@ -152,7 +152,7 @@ enum NehekharaSpells {
   usiriansIncantationOfVengeance = 'usiriansIncantationOfVengeance',
 }
 
-enum PlagueSpells {
+enum PlagueSpellIcons {
   plagueRash = 'plagueRash',
   blessWithFilth = 'blessWithFilth',
   pestilentBirth = 'pestilentBirth',
@@ -163,7 +163,7 @@ enum PlagueSpells {
   wither = 'wither',
 }
 
-enum RuinSpells {
+enum RuinSpellIcons {
   muskOfFear = 'muskOfFear',
   cracksCall = 'cracksCall',
   deathFrenzy = 'deathFrenzy',
@@ -174,7 +174,7 @@ enum RuinSpells {
   warpLightning = 'warpLightning',
 }
 
-enum RuneSpells {
+enum RuneSpellIcons {
   courage = 'courage',
   negation = 'negation',
   oathAndSteel = 'oathAndSteel',
@@ -191,7 +191,7 @@ enum RuneSpells {
   speed = 'speed',
 }
 
-enum ShadowsSpells {
+enum ShadowsSpellIcons {
   smokeAndMirrors = 'smokeAndMirrors',
   melkothsMystifyingMiasma = 'melkothsMystifyingMiasma',
   okkamsMindrazor = 'okkamsMindrazor',
@@ -201,7 +201,7 @@ enum ShadowsSpells {
   theWithering = 'theWithering',
 }
 
-enum StealthSpells {
+enum StealthSpellIcons {
   toxicRain = 'toxicRain',
   warpStars = 'warpStars',
   skitterleap = 'skitterleap',
@@ -211,7 +211,7 @@ enum StealthSpells {
   blackWhirlwind = 'blackWhirlwind',
 }
 
-enum VampiresSpells {
+enum VampiresSpellIcons {
   theCurseOfUndeath = 'theCurseOfUndeath',
   raiseDeadStrigoi = 'raiseDeadStrigoi',
   raiseDeadGhorst = 'raiseDeadGhorst',
@@ -223,7 +223,7 @@ enum VampiresSpells {
   windOfDeath = 'windOfDeath',
 }
 
-enum WildSpells {
+enum WildSpellIcons {
   bestialSurge = 'bestialSurge',
   brayScream = 'brayScream',
   devolve = 'devolve',
@@ -234,25 +234,25 @@ enum WildSpells {
 }
 
 export {
-  SpellTypes,
-  BeastsSpells,
-  BigWaghSpells,
-  DarkSpells,
-  DeathSpells,
-  DeepSpells,
-  FireSpells,
-  HeavensSpells,
-  HighMagicSpells,
-  LifeSpells,
-  LightSpells,
-  LilWaghSpells,
-  MetalSpells,
-  NehekharaSpells,
-  PlagueSpells,
-  RuinSpells,
-  RuneSpells,
-  ShadowsSpells,
-  StealthSpells,
-  VampiresSpells,
-  WildSpells,
+  SpellIconTypes,
+  BeastsSpellIcons,
+  BigWaghSpellIcons,
+  DarkSpellIcons,
+  DeathSpellIcons,
+  DeepSpellIcons,
+  FireSpellIcons,
+  HeavensSpellIcons,
+  HighMagicSpellIcons,
+  LifeSpellIcons,
+  LightSpellIcons,
+  LilWaghSpellIcons,
+  MetalSpellIcons,
+  NehekharaSpellIcons,
+  PlagueSpellIcons,
+  RuinSpellIcons,
+  RuneSpellIcons,
+  ShadowsSpellIcons,
+  StealthSpellIcons,
+  VampiresSpellIcons,
+  WildSpellIcons,
 };
