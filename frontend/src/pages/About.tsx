@@ -5,13 +5,18 @@ import skillIcons from '../assets/img/skills/skillIcons';
 const About = () => {
   const [imgSrc, setImgSrc] = useState('');
   const buttonHandler = () => {
-    api.imageTest().then((res) => {
-      console.log(res);
-      console.log(skillIcons);
-      // @ts-expect-error 7053
-      const temp = skillIcons[`${res.iconType}`][res.icon];
-      setImgSrc(temp);
-    });
+    api
+      .imageTest()
+      .then((res) => {
+        console.log(res);
+        console.log(skillIcons);
+        // @ts-expect-error 7053
+        const temp = skillIcons[`${res.iconType}`][res.icon];
+        setImgSrc(temp);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div>

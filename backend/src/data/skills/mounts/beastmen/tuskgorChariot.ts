@@ -2,8 +2,8 @@ import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const tuskgorChariot: SkillInterface = {
   name: 'Tuskgor Chariot',
-  icon: '',
-  iconType: '',
+  icon: 'tuskgorChariot',
+  iconType: 'mounts',
   ranks: {
     rank1: [
       {
