@@ -59,8 +59,7 @@ interface SkillInterface {
   extraTooltip?: ExtraTooltipInterface;
 
   boxed?: boolean;
-  beforeArrow?: boolean;
-  afterArrow?: boolean;
+  rightArrow?: boolean;
 }
 
 export default SkillInterface;

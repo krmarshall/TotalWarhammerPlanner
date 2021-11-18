@@ -19,7 +19,7 @@ const : SkillInterface = {
           goodEffect: true,
         },
       ],
-    }
+    },
   },
 };
 

@@ -25,6 +25,8 @@ enum BattleSkillIcons {
   vigour = 'vigour',
   wardSave = 'wardSave',
   baseDamage = 'baseDamage',
+  bonusVsInfantry = 'bonusVsInfantry',
+  bonusVsLarge = 'bonusVsLarge',
 }
 
 enum CampaignSkillIcons {
@@ -227,6 +229,8 @@ enum MiscSkillIcons {
   itemPassiveArmour = 'itemPassiveArmour',
   itemPassiveTalisman = 'itemPassiveTalisman',
   itemPassiveWeapon = 'itemPassiveWeapon',
+  stalk = 'stalk',
+  strider = 'strider',
 }
 
 export {

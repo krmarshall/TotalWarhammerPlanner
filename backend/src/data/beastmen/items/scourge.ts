@@ -86,8 +86,8 @@ const scourge: SkillInterface = {
         description: '+25% Base Weapon Damage',
         goodEffect: true,
       },
-    ]
-  }
+    ],
+  },
 };
 
 export default scourge;

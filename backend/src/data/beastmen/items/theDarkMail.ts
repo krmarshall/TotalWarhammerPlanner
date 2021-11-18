@@ -50,8 +50,8 @@ const theDarkMail: SkillInterface = {
         description: '+20% Damage Resistance',
         goodEffect: true,
       },
-    ]
-  }
+    ],
+  },
 };
 
 export default theDarkMail;
