@@ -10,7 +10,7 @@ import lightningStrike from '../../skills/campaign/lightningStrike';
 import ruination from '../../skills/campaign/ruination';
 import unholyResilience from '../../skills/campaign/unholyResilience';
 
-const beastmenSharedCampaign = [
+const beastmenSharedCampaign = {
   gargantuanHooves,
   feastingUponMan,
   blessedByEvil,
@@ -22,6 +22,6 @@ const beastmenSharedCampaign = [
   gatheringOfBeasts,
   foulPremonition,
   childrenOfChaos,
-];
+};
 
 export default beastmenSharedCampaign;

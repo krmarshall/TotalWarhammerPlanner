@@ -1,8 +1,8 @@
 const path = import.meta.env.DEV ? 'http://localhost:5000/api' : 'http://localhost:5000/api';
 
 const api = {
-  getCharacterSkillTree: (characterKey: string): Promise<any> => {
-    return fetch(`${path}/${characterKey}`, {
+  getCharacterSkillTree: (factionKey: string, characterKey: string): Promise<any> => {
+    return fetch(`${path}/${factionKey}.${characterKey}`, {
       method: 'GET',
       mode: 'cors',
     })
@@ -13,14 +13,7 @@ const api = {
           throw new Error(response.statusText);
         }
       })
-      .then((resJson) => {
-        console.log(`Then ${resJson}`);
-        return resJson;
-      })
-      .catch((error) => {
-        console.log(`Catch ${error}`);
-        return error;
-      });
+      .catch((err) => err);
   },
   imageTest: (): Promise<any> => {
     return fetch(`${path}/imageTest/`, {

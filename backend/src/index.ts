@@ -14,15 +14,14 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(helmet());
+app.use(compression());
 
 app.get('/api/imagetest/', imageTestListener);
 
 // Serve rest api
-app.get('/api/:characterKey', apiListener);
+app.get('/api/:factionKey.:characterKey', apiListener);
 
 // Serve static front end HTML/JS/Images
-app.use(compression());
-
 app.use(
   express.static('public', {
     maxAge: '1m',

@@ -56,8 +56,6 @@ const furyOfTheHerd: SkillInterface = {
       ],
     },
   },
-
-  requiresSkill: 'presenceOfMorrslieb',
 };
 
 export default furyOfTheHerd;

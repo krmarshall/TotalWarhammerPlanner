@@ -33,7 +33,7 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
       );
     } else {
       api
-        .getCharacterSkillTree(characterKey)
+        .getCharacterSkillTree(selectedFaction, characterKey)
         .then((response) => {
           console.log(response);
         })

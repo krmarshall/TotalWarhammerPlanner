@@ -6,7 +6,7 @@ import voiceOfTheDarkGods from '../../skills/character/voiceOfTheDarkGods';
 import razorgorChariot from '../../skills/mount/razorgorChariot';
 import tuskgorChariot from '../../skills/mount/tuskgorChariot';
 
-const khazrakMount = [
+const khazrakMount = {
   tuskgorChariot,
   razorgorChariot,
   fuelledByBlood,
@@ -14,6 +14,6 @@ const khazrakMount = [
   bloodLust,
   uncannySenses,
   shadowHide,
-];
+};
 
 export default khazrakMount;

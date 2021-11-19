@@ -12,7 +12,7 @@ import mageHunter from '../../skills/battle/mageHunter';
 import presenceOfMorrslieb from '../../skills/battle/presenceOfMorrslieb';
 import unrelentingSavagery from '../../skills/battle/unrelentingSavagery';
 
-const beastmenSharedBattle = [
+const beastmenSharedBattle = {
   presenceOfMorrslieb,
   furyOfTheHerd,
   leaderOfTheRaucousHost,
@@ -26,6 +26,6 @@ const beastmenSharedBattle = [
   bestialButchers,
   mageHunter,
   apocalypticVision,
-];
+};
 
 export default beastmenSharedBattle;

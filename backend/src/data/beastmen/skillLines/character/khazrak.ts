@@ -9,7 +9,7 @@ import manBane from '../../skills/character/manBane';
 import runeOfTheTrueBeast from '../../skills/character/runeOfTheTrueBeast';
 import slugSkin from '../../skills/character/slugSkin';
 
-const khazrakCharacter = [
+const khazrakCharacter = {
   bestialCunning,
   underhoof,
   hordesOfTheDrakwald,
@@ -20,6 +20,6 @@ const khazrakCharacter = [
   crownOfHorns,
   runeOfTheTrueBeast,
   slugSkin,
-];
+};
 
 export default khazrakCharacter;

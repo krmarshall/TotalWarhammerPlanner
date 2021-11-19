@@ -10,7 +10,7 @@ import savageBeast from '../../skills/character/savageBeast';
 import thickSkinned from '../../skills/character/thickSkinned';
 import unnaturalThirst from '../../skills/character/unnaturalThirst';
 
-const beastmenSharedCharacter = [
+const beastmenSharedCharacter = {
   primevalRage,
   devastatingCharge,
   thickSkinned,
@@ -22,6 +22,6 @@ const beastmenSharedCharacter = [
   indomitable,
   prizedHorns,
   deadlyOnslaught,
-];
+};
 
 export default beastmenSharedCharacter;
