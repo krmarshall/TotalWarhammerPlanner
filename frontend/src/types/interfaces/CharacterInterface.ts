@@ -5,6 +5,7 @@ interface SkillLineInterface {
 }
 
 interface CharacterInterface {
+  name: string;
   skillTree: Array<SkillLineInterface>;
   items: Array<SkillInterface>;
 }

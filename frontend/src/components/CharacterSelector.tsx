@@ -1,4 +1,5 @@
 import { Fragment, useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import api from '../api/api';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import factions from '../data/factions';
@@ -6,6 +7,7 @@ import factions from '../data/factions';
 const CharacterSelector = () => {
   const { state, dispatch } = useContext(AppContext);
   const { selectedFaction } = state;
+  const history = useHistory();
   // Set the current faction data from the selected faction
   const [factionData, setFactionData] = useState(factions[selectedFaction as keyof typeof factions]);
 
@@ -35,6 +37,7 @@ const CharacterSelector = () => {
         .getCharacterSkillTree(selectedFaction, characterKey)
         .then((response) => {
           dispatch({ type: AppContextActions.changeCharacterData, payload: response });
+          history.push(`/planner/${selectedFaction}/${characterKey}/`);
         })
         .catch((error) => {
           console.log(error);

@@ -8,13 +8,14 @@ import beastmenSharedCharacter from '../skillLines/character/shared';
 import khazrakMount from '../skillLines/mount/khazrak';
 
 const khazrak: CharacterInterface = {
+  name: 'Khazrak the One-Eye',
   skillTree: [
     khazrakMount,
     khazrakCharacter,
     beastmenSharedCharacter,
-    null,
+    {},
     beastmenSharedBattle,
-    null,
+    {},
     beastmenSharedCampaign,
   ],
   items: [scourge, theDarkMail],
