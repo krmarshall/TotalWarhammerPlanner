@@ -1,5 +1,5 @@
-import { BattleSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import { BattleSkillIcons, SkillIconTypes } from '../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const leaderOfTheRaucousHost: SkillInterface = {
   name: 'Leader of the Raucous Host',

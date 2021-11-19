@@ -1,5 +1,5 @@
-import { CampaignSkillIcons, MiscSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import { CampaignSkillIcons, MiscSkillIcons, SkillIconTypes } from '../../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../../types/interfaces/SkillInterfaces';
 
 const manslayer: SkillInterface = {
   name: 'Manslayer',

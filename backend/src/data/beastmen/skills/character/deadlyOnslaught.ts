@@ -1,5 +1,10 @@
-import { AbilitySkillIcons, CharacterSkillIcons, MiscSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import {
+  AbilitySkillIcons,
+  CharacterSkillIcons,
+  MiscSkillIcons,
+  SkillIconTypes,
+} from '../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const deadlyOnslaught: SkillInterface = {
   name: 'Deadly Onslaught',

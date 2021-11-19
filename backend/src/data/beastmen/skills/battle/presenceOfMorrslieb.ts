@@ -1,5 +1,5 @@
-import { BattleSkillIcons, CharacterSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import { BattleSkillIcons, CharacterSkillIcons, SkillIconTypes } from '../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const presenceOfMorrslieb: SkillInterface = {
   name: 'Presence of Morrslieb',

@@ -1,5 +1,5 @@
-import { CharacterSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import { CharacterSkillIcons, SkillIconTypes } from '../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const banquetOfFlesh: SkillInterface = {
   name: 'Banquet of Flesh',

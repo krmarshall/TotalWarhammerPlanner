@@ -1,5 +1,5 @@
-import { MountSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import { MountSkillIcons, SkillIconTypes } from '../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const razorgorChariot: SkillInterface = {
   name: 'Razorgor Chariot',

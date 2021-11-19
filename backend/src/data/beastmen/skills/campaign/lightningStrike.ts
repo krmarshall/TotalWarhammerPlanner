@@ -1,5 +1,5 @@
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
-import lightningStrikeGeneric from 'src/data/z_shared/skills/lightningStikeGeneric';
+import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
+import lightningStrikeGeneric from '../../../z_shared/skills/lightningStikeGeneric';
 
 const lightningStrike: SkillInterface = {
   ...lightningStrikeGeneric,

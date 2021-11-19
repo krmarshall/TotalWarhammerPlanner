@@ -3,8 +3,8 @@ import {
   CampaignSkillIcons,
   CharacterSkillIcons,
   SkillIconTypes,
-} from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+} from '../../../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../../../types/interfaces/SkillInterfaces';
 
 const bestialCunning: SkillInterface = {
   name: 'Bestial Cunning',

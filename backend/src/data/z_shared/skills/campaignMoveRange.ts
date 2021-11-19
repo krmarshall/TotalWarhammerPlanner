@@ -1,5 +1,5 @@
-import { CampaignSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
-import SkillInterface from '@projectInterfaces/SkillInterfaces';
+import { CampaignSkillIcons, SkillIconTypes } from '../../../types/enums/SkillIconEnums';
+import SkillInterface from '../../../types/interfaces/SkillInterfaces';
 
 const campaignMoveRange: SkillInterface = {
   name: 'Campaign Move Range Generic',

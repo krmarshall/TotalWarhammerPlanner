@@ -1,4 +1,4 @@
-import CharacterInterface from '@projectInterfaces/CharacterInterface';
+import CharacterInterface from '../../../types/interfaces/CharacterInterface';
 import scourge from '../items/scourge';
 import theDarkMail from '../items/theDarkMail';
 import beastmenSharedBattle from '../skillLines/battle/shared';
