@@ -33,4 +33,5 @@ app.get('*', (req, res) => {
 });
 app.listen(port, () => {
   console.log(`Server is up at port ${port}`);
+  console.log(`Environment ${process.env.NODE_ENV}`);
 });
