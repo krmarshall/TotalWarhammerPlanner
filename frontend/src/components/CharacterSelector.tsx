@@ -1,12 +1,11 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useContext, useEffect, useState } from 'react';
 import api from '../api/api';
+import { AppContext, AppContextActions } from '../contexts/AppContext';
 import factions from '../data/factions';
 
-interface CharacterSelectorProps {
-  selectedFaction: string;
-}
-
-const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
+const CharacterSelector = () => {
+  const { state, dispatch } = useContext(AppContext);
+  const { selectedFaction } = state;
   // Set the current faction data from the selected faction
   const [factionData, setFactionData] = useState(factions[selectedFaction as keyof typeof factions]);
 
@@ -35,10 +34,11 @@ const CharacterSelector = ({ selectedFaction }: CharacterSelectorProps) => {
       api
         .getCharacterSkillTree(selectedFaction, characterKey)
         .then((response) => {
-          console.log(response);
+          dispatch({ type: AppContextActions.changeCharacterData, payload: response });
         })
         .catch((error) => {
           console.log(error);
+          dispatch({ type: AppContextActions.changeCharacterData, payload: null });
         });
     }
   };

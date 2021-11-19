@@ -17,4 +17,4 @@ interface FactionInterface {
   };
 }
 
-export type { FactionInterface, CharacterInterface };
+export type { FactionInterface };

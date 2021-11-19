@@ -1,11 +1,9 @@
+import { useContext } from 'react';
+import { AppContext, AppContextActions } from '../contexts/AppContext';
 import factions from '../data/factions';
 
-interface FactionSelectorProps {
-  selectedFaction: string;
-  setSelectedFaction: CallableFunction;
-}
-
-const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelectorProps) => {
+const FactionSelector = () => {
+  const { state, dispatch } = useContext(AppContext);
   const factionKeys = Object.keys(factions);
 
   return (
@@ -21,7 +19,7 @@ const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelecto
             liClassName += ' opacity-50';
           }
 
-          if (factionKey === selectedFaction) {
+          if (factionKey === state.selectedFaction) {
             liClassName += ' bg-gray-600 hover:bg-gray-500';
           } else {
             liClassName += ' hover:bg-gray-600';
@@ -32,7 +30,7 @@ const FactionSelector = ({ selectedFaction, setSelectedFaction }: FactionSelecto
               key={faction.name}
               className={liClassName}
               onClick={() => {
-                setSelectedFaction(factionKey);
+                dispatch({ type: AppContextActions.changeFaction, payload: factionKey });
               }}
             >
               <h2 className="text-center text-gray-200 text-xl mb-1">{faction.name}</h2>
