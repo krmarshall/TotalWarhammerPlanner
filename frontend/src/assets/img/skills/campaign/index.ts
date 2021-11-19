@@ -31,6 +31,7 @@ import woundTime from './campaign_wound_time.webp';
 import income from './income.webp';
 import incomeVampires from './incomeVC.webp';
 import incomeChaos from './incomeChaos.webp';
+import bestialRage from './bestial_rage.webp';
 
 const campaign = {
   agent,
@@ -66,6 +67,7 @@ const campaign = {
   income,
   incomeVampires,
   incomeChaos,
+  bestialRage,
 };
 
 export default campaign;

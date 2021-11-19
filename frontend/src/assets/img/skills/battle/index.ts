@@ -16,6 +16,7 @@ import wardSave from './battle_ward_save.webp';
 import baseDamage from './icon_stat_damage_base_force.webp';
 import bonusVsInfantry from './bonus_vs_small.webp';
 import bonusVsLarge from './bonus_vs_large.webp';
+import reload from './icon_stat_reload_time_force.webp';
 
 const battle = {
   ammo,
@@ -36,6 +37,7 @@ const battle = {
   baseDamage,
   bonusVsInfantry,
   bonusVsLarge,
+  reload,
 };
 
 export default battle;

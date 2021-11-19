@@ -1,20 +1,19 @@
 import { BattleSkillIcons, SkillIconTypes } from '@projectEnums/SkillIconEnums';
 import SkillInterface from '@projectInterfaces/SkillInterfaces';
 
-const furyOfTheHerd: SkillInterface = {
-  name: 'Fury of the Herd',
-  icon: BattleSkillIcons.morale,
+const hoofedHeavyweights: SkillInterface = {
+  name: 'Hoofed Heavyweights',
+  icon: BattleSkillIcons.defence,
   iconType: SkillIconTypes.battle,
-  boxed: true,
   requiresSkill: 'presenceOfMorrslieb',
+  boxed: true,
   ranks: {
     rank1: {
       skillEffects: [
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description:
-            'Melee defence: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+          description: 'Melee defence: +4 for Minotaurs units \n (Lords army)',
           goodEffect: true,
         },
       ],
@@ -22,17 +21,15 @@ const furyOfTheHerd: SkillInterface = {
     rank2: {
       skillEffects: [
         {
-          icon: BattleSkillIcons.morale,
+          icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description:
-            'Leadership: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+          description: 'Melee attack: +4 for Minotaurs units \n (Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description:
-            'Melee defence: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+          description: 'Melee defence: +6 for Minotaurs units \n (Lords army)',
           goodEffect: true,
         },
       ],
@@ -40,24 +37,20 @@ const furyOfTheHerd: SkillInterface = {
     rank3: {
       skillEffects: [
         {
-          icon: BattleSkillIcons.morale,
+          icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description:
-            'Leadership: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+          description: 'Melee attack: +8 for Minotaurs units \n (Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description:
-            'Melee defence: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+          description: 'Melee defence: +8 for Minotaurs units \n (Lords army)',
           goodEffect: true,
         },
       ],
     },
   },
-
-  requiresSkill: 'presenceOfMorrslieb',
 };
 
-export default furyOfTheHerd;
+export default hoofedHeavyweights;

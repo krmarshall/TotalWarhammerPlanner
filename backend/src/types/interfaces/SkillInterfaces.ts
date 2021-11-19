@@ -35,7 +35,7 @@ interface ExtraTooltipInterface {
   cannotUseIf?: string;
   cannotTargetIf?: string;
   projectileRange?: string;
-  effectRange?: number;
+  effectRange?: string;
   effects?: Array<SkillEffectInterface>;
 }
 

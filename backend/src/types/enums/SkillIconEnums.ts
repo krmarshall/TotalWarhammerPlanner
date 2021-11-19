@@ -27,6 +27,7 @@ enum BattleSkillIcons {
   baseDamage = 'baseDamage',
   bonusVsInfantry = 'bonusVsInfantry',
   bonusVsLarge = 'bonusVsLarge',
+  reload = 'reload',
 }
 
 enum CampaignSkillIcons {
@@ -63,6 +64,7 @@ enum CampaignSkillIcons {
   income = 'income',
   incomeVampires = 'incomeVampires',
   incomeChaos = 'incomeChaos',
+  bestialRage = 'bestialRage',
 }
 
 enum CharacterSkillIcons {
@@ -119,6 +121,7 @@ enum CharacterSkillIcons {
   talismanItem = 'talismanItem',
   weaponItem = 'weaponItem',
   baseDamage = 'baseDamage',
+  reload = 'reload',
 }
 
 enum MountSkillIcons {
