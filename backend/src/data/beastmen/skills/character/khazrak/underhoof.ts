@@ -13,7 +13,7 @@ const underhoof: SkillInterface = {
         {
           icon: CampaignSkillIcons.subterranean,
           iconType: SkillIconTypes.campaign,
-          description: 'Reinforcement range: +50% \n (all characters)',
+          description: 'Reinforcement range: +50%\n(all characters)',
           goodEffect: true,
         },
         {

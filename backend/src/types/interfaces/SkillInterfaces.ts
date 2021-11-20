@@ -6,20 +6,16 @@ interface SkillEffectInterface {
   goodEffect: boolean;
 }
 
-// Each skill can have up to 3 ranks that each have different skill effects.
 interface SkillRankInterface {
-  rank1: {
-    requiresLevel?: number;
-    skillEffects: Array<SkillEffectInterface>;
-  };
-  rank2?: {
-    requiresLevel?: number;
-    skillEffects: Array<SkillEffectInterface>;
-  };
-  rank3?: {
-    requiresLevel?: number;
-    skillEffects: Array<SkillEffectInterface>;
-  };
+  requiresLevel?: number;
+  skillEffects: Array<SkillEffectInterface>;
+}
+
+// Each skill can have up to 3 ranks that each have different skill effects.
+interface SkillRanksInterface {
+  rank1: SkillRankInterface;
+  rank2?: SkillRankInterface;
+  rank3?: SkillRankInterface;
 }
 
 // Some skills such as spells and abilities have an extra tooltip that provide a bunch of information about what that spell/ability does.
@@ -47,7 +43,7 @@ interface SkillInterface {
   iconType: string;
   iconSpellLore?: string;
   description?: string;
-  ranks: SkillRankInterface;
+  ranks: SkillRanksInterface;
 
   // Selection Conditions
   requiresSkill?: string;
@@ -63,3 +59,4 @@ interface SkillInterface {
 }
 
 export default SkillInterface;
+export type { SkillRankInterface, SkillEffectInterface };

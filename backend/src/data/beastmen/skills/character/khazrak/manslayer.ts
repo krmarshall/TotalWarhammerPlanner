@@ -26,7 +26,7 @@ const manslayer: SkillInterface = {
         {
           icon: MiscSkillIcons.causesFear,
           iconType: SkillIconTypes.misc,
-          description: 'Attribute: Causes Fear when fighting against Men \n (Lords army)',
+          description: 'Attribute: Causes Fear when fighting against Men\n(Lords army)',
           goodEffect: true,
         },
         {

@@ -13,7 +13,7 @@ const beastlordsLash: SkillInterface = {
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
-          description: 'Charge bonus: +6 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords army)',
+          description: 'Charge bonus: +6 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -23,13 +23,13 @@ const beastlordsLash: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +4 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords army)',
+          description: 'Melee attack: +4 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
-          description: 'Charge bonus: +9 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords army)',
+          description: 'Charge bonus: +9 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -39,13 +39,13 @@ const beastlordsLash: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +8 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords army)',
+          description: 'Melee attack: +8 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
-          description: 'Charge bonus: +12 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords army)',
+          description: 'Charge bonus: +12 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords army)',
           goodEffect: true,
         },
       ],

@@ -13,7 +13,7 @@ const feastingUponMan: SkillInterface = {
         {
           icon: CampaignSkillIcons.income,
           iconType: SkillIconTypes.campaign,
-          description: 'Income from raiding: +3% \n (Lords army)',
+          description: 'Income from raiding: +3%\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -29,7 +29,7 @@ const feastingUponMan: SkillInterface = {
         {
           icon: CampaignSkillIcons.income,
           iconType: SkillIconTypes.campaign,
-          description: 'Income from raiding: +8% \n (Lords army)',
+          description: 'Income from raiding: +8%\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -45,7 +45,7 @@ const feastingUponMan: SkillInterface = {
         {
           icon: CampaignSkillIcons.income,
           iconType: SkillIconTypes.campaign,
-          description: 'Income from raiding: +15% \n (Lords army)',
+          description: 'Income from raiding: +15%\n(Lords army)',
           goodEffect: true,
         },
       ],

@@ -14,7 +14,7 @@ const furyOfTheHerd: SkillInterface = {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
           description:
-            'Melee defence: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+            'Melee defence: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -25,14 +25,14 @@ const furyOfTheHerd: SkillInterface = {
           icon: BattleSkillIcons.morale,
           iconType: SkillIconTypes.battle,
           description:
-            'Leadership: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+            'Leadership: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
           description:
-            'Melee defence: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+            'Melee defence: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -43,14 +43,14 @@ const furyOfTheHerd: SkillInterface = {
           icon: BattleSkillIcons.morale,
           iconType: SkillIconTypes.battle,
           description:
-            'Leadership: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+            'Leadership: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
           description:
-            'Melee defence: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units \n(Lords army)',
+            'Melee defence: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n(Lords army)',
           goodEffect: true,
         },
       ],

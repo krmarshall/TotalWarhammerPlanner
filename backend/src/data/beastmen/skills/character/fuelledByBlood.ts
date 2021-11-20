@@ -12,13 +12,13 @@ const fuelledByBlood: SkillInterface = {
         {
           icon: BattleSkillIcons.vigour,
           iconType: SkillIconTypes.battle,
-          description: 'Vigour loss reduction: -25% \n (Lords army)',
+          description: 'Vigour loss reduction: -25%\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.speed,
           iconType: SkillIconTypes.battle,
-          description: 'Speed: +5% for all units \n (Lords army)',
+          description: 'Speed: +5% for all units\n(Lords army)',
           goodEffect: true,
         },
       ],

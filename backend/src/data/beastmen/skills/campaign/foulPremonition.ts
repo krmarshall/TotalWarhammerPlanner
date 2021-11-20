@@ -20,13 +20,13 @@ const foulPremonition: SkillInterface = {
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush success chance: +3% \n (Lords army)',
+          description: 'Ambush success chance: +3%\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush defence chance: +10% \n (Lords army)',
+          description: 'Ambush defence chance: +10%\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -42,13 +42,13 @@ const foulPremonition: SkillInterface = {
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush success chance: +6% \n (Lords army)',
+          description: 'Ambush success chance: +6%\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush defence chance: +15% \n (Lords army)',
+          description: 'Ambush defence chance: +15%\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -64,13 +64,13 @@ const foulPremonition: SkillInterface = {
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush success chance: +10% \n (Lords army)',
+          description: 'Ambush success chance: +10%\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush defence chance: +25% \n (Lords army)',
+          description: 'Ambush defence chance: +25%\n(Lords army)',
           goodEffect: true,
         },
       ],

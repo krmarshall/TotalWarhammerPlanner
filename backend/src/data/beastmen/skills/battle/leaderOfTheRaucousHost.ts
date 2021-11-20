@@ -14,7 +14,7 @@ const leaderOfTheRaucousHost: SkillInterface = {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
           description:
-            'Charge bonus: +6 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Charge bonus: +6 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -25,21 +25,21 @@ const leaderOfTheRaucousHost: SkillInterface = {
           icon: BattleSkillIcons.speed,
           iconType: SkillIconTypes.battle,
           description:
-            'Speed: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Speed: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.damage,
           iconType: SkillIconTypes.battle,
           description:
-            'Weapon strength: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Weapon strength: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
           description:
-            'Charge bonus: +9 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Charge bonus: +9 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -50,21 +50,21 @@ const leaderOfTheRaucousHost: SkillInterface = {
           icon: BattleSkillIcons.speed,
           iconType: SkillIconTypes.battle,
           description:
-            'Speed: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Speed: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.damage,
           iconType: SkillIconTypes.battle,
           description:
-            'Weapon strength: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Weapon strength: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
           description:
-            'Charge bonus: +12 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units \n (Lords army)',
+            'Charge bonus: +12 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n(Lords army)',
           goodEffect: true,
         },
       ],

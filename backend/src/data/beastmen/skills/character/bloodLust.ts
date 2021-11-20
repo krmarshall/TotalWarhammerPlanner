@@ -23,7 +23,7 @@ const bloodLust: SkillInterface = {
     subTitle: 'Character ability',
     type: 'Augment',
     duration: '33 seconds',
-    target: 'Self, Ally \n 100m',
+    target: 'Self, Ally\n100m',
     cooldown: 60,
     effects: [
       {

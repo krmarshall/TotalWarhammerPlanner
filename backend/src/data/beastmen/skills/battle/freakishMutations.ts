@@ -14,7 +14,7 @@ const freakishMutations: SkillInterface = {
         {
           icon: BattleSkillIcons.damage,
           iconType: SkillIconTypes.battle,
-          description: 'Weapon strength: +6% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units \n (Lords army)',
+          description: 'Weapon strength: +6% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -24,13 +24,13 @@ const freakishMutations: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units \n (Lords army)',
+          description: 'Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.damage,
           iconType: SkillIconTypes.battle,
-          description: 'Weapon strength: +9% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units \n (Lords army)',
+          description: 'Weapon strength: +9% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -40,13 +40,13 @@ const freakishMutations: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +8 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units \n (Lords army)',
+          description: 'Melee attack: +8 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.damage,
           iconType: SkillIconTypes.battle,
-          description: 'Weapon strength: +12% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units \n (Lords army)',
+          description: 'Weapon strength: +12% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n(Lords army)',
           goodEffect: true,
         },
       ],

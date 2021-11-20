@@ -14,7 +14,7 @@ const apocalypticVision: SkillInterface = {
           icon: AbilitySkillIcons.callOfViolence,
           iconType: SkillIconTypes.abilities,
           description: 'Replaces: "Call of Violence"',
-          goodEffect: true,
+          goodEffect: false,
         },
         {
           icon: AbilitySkillIcons.apocalypticVision,
@@ -29,9 +29,9 @@ const apocalypticVision: SkillInterface = {
     title: 'Apocalyptic Vision',
     subTitle: 'Character ability',
     cooldown: 90,
-    type: 'Augment (Area) \n Instantly affects targets in area',
+    type: 'Augment (Area)\nInstantly affects targets in area',
     duration: '18 seconds',
-    target: 'Self \n Affects allies in range',
+    target: 'Self\nAffects allies in range',
     effectRange: '40m',
     effects: [
       {

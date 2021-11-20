@@ -14,7 +14,7 @@ const unholyResilience: SkillInterface = {
         {
           icon: CampaignSkillIcons.replenishment,
           iconType: SkillIconTypes.campaign,
-          description: 'Casualty replenishment rate: +30% for Lords \n (Lords army)',
+          description: 'Casualty replenishment rate: +30% for Lords\n(Lords army)',
           goodEffect: true,
         },
         {

@@ -30,7 +30,7 @@ const CharacterSelector = () => {
   const handleCharacterSelect = (characterKey: string, characterImplemented: boolean) => {
     if (!characterImplemented) {
       alert(
-        'This character is not currently implemented, please select a character that is not transparent. \n -Sorry'
+        'This character is not currently implemented, please select a character that is not transparent.\n-Sorry'
       );
     } else {
       api

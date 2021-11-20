@@ -15,21 +15,21 @@ const mageHunter: SkillInterface = {
           icon: BattleSkillIcons.reload,
           iconType: SkillIconTypes.battle,
           description:
-            'Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Rank 7 and above) \n (Lords army)',
+            'Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.rangedDamage,
           iconType: SkillIconTypes.battle,
           description:
-            'Missile strength: +12% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Rank 7 and above) \n (Lords army)',
+            'Missile strength: +12% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: MiscSkillIcons.resistanceMagic,
-          iconType: SkillIconTypes.battle,
+          iconType: SkillIconTypes.misc,
           description:
-            'Magic resistance: 15% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Rank 7 and above) \n (Lords army)',
+            'Magic resistance: 15% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
       ],

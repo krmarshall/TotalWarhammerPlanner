@@ -12,7 +12,7 @@ const slugSkin: SkillInterface = {
         {
           icon: MiscSkillIcons.resistanceMissile,
           iconType: SkillIconTypes.misc,
-          description: 'Missile resistance: 10% \n (Lords army)',
+          description: 'Missile resistance: 10%\n(Lords army)',
           goodEffect: true,
         },
       ],

@@ -18,19 +18,19 @@ const bestialCunning: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +4 during ambushes \n (Lords Army)',
+          description: 'Melee attack: +4 during ambushes\n(Lords Army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description: 'Melee defence: +4 during ambushes \n (Lords Army)',
+          description: 'Melee defence: +4 during ambushes\n(Lords Army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.ambush,
           iconType: SkillIconTypes.campaign,
-          description: 'Ambush success chance: +15% \n (Lords Army)',
+          description: 'Ambush success chance: +15%\n(Lords Army)',
           goodEffect: true,
         },
       ],

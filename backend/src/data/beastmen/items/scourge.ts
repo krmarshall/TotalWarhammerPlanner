@@ -36,7 +36,7 @@ const scourge: SkillInterface = {
         {
           icon: CampaignSkillIcons.chaosCorruption,
           iconType: SkillIconTypes.campaign,
-          description: 'Chaos corruption: +5 \n (local province)',
+          description: 'Chaos corruption: +5\n(local province)',
           goodEffect: true,
         },
         {

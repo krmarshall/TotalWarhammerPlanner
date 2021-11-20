@@ -24,9 +24,9 @@ const callOfViolence: SkillInterface = {
     title: 'Call of Violence',
     subTitle: 'Character ability',
     cooldown: 60,
-    type: 'Augment (Area) \n Only acts on targets when in area',
+    type: 'Augment (Area)\nOnly acts on targets when in area',
     duration: '14 seconds',
-    target: 'Self \n Affects allies in range',
+    target: 'Self\nAffects allies in range',
     effectRange: '40m',
     effects: [
       {

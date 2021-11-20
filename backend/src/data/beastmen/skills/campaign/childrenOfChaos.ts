@@ -13,7 +13,7 @@ const childrenOfChaos: SkillInterface = {
         {
           icon: CampaignSkillIcons.bestialRage,
           iconType: SkillIconTypes.campaign,
-          description: 'Bestial rage: +1 \n (Lords army)',
+          description: 'Bestial rage: +1\n(Lords army)',
           goodEffect: true,
         },
         {

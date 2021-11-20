@@ -14,21 +14,21 @@ const creaturesOfTheHerd: SkillInterface = {
           icon: MiscSkillIcons.resistanceMissile,
           iconType: SkillIconTypes.misc,
           description:
-            'Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units \n (Rank 7 and above) \n (Lords army)',
+            'Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.speed,
           iconType: SkillIconTypes.battle,
           description:
-            'Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units \n (Rank 7 and above) \n (Lords army)',
+            'Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
           description:
-            'Charge bonus: +12 for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units \n (Rank 7 and above) \n (Lords army)',
+            'Charge bonus: +12 for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
       ],

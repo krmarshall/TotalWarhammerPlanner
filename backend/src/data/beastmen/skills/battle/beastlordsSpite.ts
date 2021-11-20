@@ -13,7 +13,7 @@ const beastlordsSpite: SkillInterface = {
         {
           icon: BattleSkillIcons.ammo,
           iconType: SkillIconTypes.battle,
-          description: 'Ammunition: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+          description: 'Ammunition: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -23,20 +23,20 @@ const beastlordsSpite: SkillInterface = {
         {
           icon: BattleSkillIcons.speed,
           iconType: SkillIconTypes.battle,
-          description: 'Speed: +6% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+          description: 'Speed: +6% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.ammo,
           iconType: SkillIconTypes.battle,
-          description: 'Ammunition: +15% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+          description: 'Ammunition: +15% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.reload,
           iconType: SkillIconTypes.battle,
           description:
-            'Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+            'Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -46,20 +46,20 @@ const beastlordsSpite: SkillInterface = {
         {
           icon: BattleSkillIcons.speed,
           iconType: SkillIconTypes.battle,
-          description: 'Speed: +12% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+          description: 'Speed: +12% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.ammo,
           iconType: SkillIconTypes.battle,
-          description: 'Ammunition: +20% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+          description: 'Ammunition: +20% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.reload,
           iconType: SkillIconTypes.battle,
           description:
-            'Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units \n (Lords army)',
+            'Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n(Lords army)',
           goodEffect: true,
         },
       ],

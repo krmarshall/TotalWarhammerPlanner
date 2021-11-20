@@ -19,7 +19,7 @@ const corruption: SkillInterface = {
         {
           icon: CampaignSkillIcons.chaosCorruption,
           iconType: SkillIconTypes.campaign,
-          description: 'Chaos corruption: +1 \n (local province)',
+          description: 'Chaos corruption: +1\n(local province)',
           goodEffect: true,
         },
       ],
@@ -35,7 +35,7 @@ const corruption: SkillInterface = {
         {
           icon: CampaignSkillIcons.chaosCorruption,
           iconType: SkillIconTypes.campaign,
-          description: 'Chaos corruption: +2 \n (local province)',
+          description: 'Chaos corruption: +2\n(local province)',
           goodEffect: true,
         },
       ],
@@ -51,7 +51,7 @@ const corruption: SkillInterface = {
         {
           icon: CampaignSkillIcons.chaosCorruption,
           iconType: SkillIconTypes.campaign,
-          description: 'Chaos corruption: +4 \n (local province)',
+          description: 'Chaos corruption: +4\n(local province)',
           goodEffect: true,
         },
       ],

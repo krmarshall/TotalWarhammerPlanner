@@ -13,13 +13,13 @@ const darkApothecary: SkillInterface = {
         {
           icon: CampaignSkillIcons.disaster,
           iconType: SkillIconTypes.campaign,
-          description: 'Attrition: -10% casualties suffered from all attrition \n (Lords army)',
+          description: 'Attrition: -10% casualties suffered from all attrition\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.replenishment,
           iconType: SkillIconTypes.campaign,
-          description: 'Casualty replenishment rate: +2% \n (Lords army)',
+          description: 'Casualty replenishment rate: +2%\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -29,13 +29,13 @@ const darkApothecary: SkillInterface = {
         {
           icon: CampaignSkillIcons.disaster,
           iconType: SkillIconTypes.campaign,
-          description: 'Attrition: -20% casualties suffered from all attrition \n (Lords army)',
+          description: 'Attrition: -20% casualties suffered from all attrition\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.replenishment,
           iconType: SkillIconTypes.campaign,
-          description: 'Casualty replenishment rate: +4% \n (Lords army)',
+          description: 'Casualty replenishment rate: +4%\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -45,13 +45,13 @@ const darkApothecary: SkillInterface = {
         {
           icon: CampaignSkillIcons.disaster,
           iconType: SkillIconTypes.campaign,
-          description: 'Attrition: -30% casualties suffered from all attrition \n (Lords army)',
+          description: 'Attrition: -30% casualties suffered from all attrition\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: CampaignSkillIcons.replenishment,
           iconType: SkillIconTypes.campaign,
-          description: 'Casualty replenishment rate: +6% \n (Lords army)',
+          description: 'Casualty replenishment rate: +6%\n(Lords army)',
           goodEffect: true,
         },
       ],

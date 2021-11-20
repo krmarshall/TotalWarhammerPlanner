@@ -14,21 +14,21 @@ const unrelentingSavagery: SkillInterface = {
           icon: MiscSkillIcons.resistancePhysical,
           iconType: SkillIconTypes.misc,
           description:
-            'Physical resistance: 15% for Ungor Spearmen Herd, Ungor Herd, and Bestigor Herd units \n (Rank 7 and above) \n (Lords army)',
+            'Physical resistance: 15% for Ungor Spearmen Herd, Ungor Herd, and Bestigor Herd units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
           description:
-            'Melee attack: +5 for Ungor Spearmen Herd, Ungor Herd, and Bestigor Herd units \n (Rank 7 and above) \n (Lords army)',
+            'Melee attack: +5 for Ungor Spearmen Herd, Ungor Herd, and Bestigor Herd units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
           description:
-            'Melee defence: +5 for Ungor Spearmen Herd, Ungor Herd, and Bestigor Herd units \n (Rank 7 and above) \n (Lords army)',
+            'Melee defence: +5 for Ungor Spearmen Herd, Ungor Herd, and Bestigor Herd units\n(Rank 7 and above)\n(Lords army)',
           goodEffect: true,
         },
       ],

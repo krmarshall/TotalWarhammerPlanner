@@ -12,7 +12,7 @@ const crownOfHorns: SkillInterface = {
         {
           icon: BattleSkillIcons.damage,
           iconType: SkillIconTypes.battle,
-          description: 'Weapon strength: +10% \n (Lords army)',
+          description: 'Weapon strength: +10%\n(Lords army)',
           goodEffect: true,
         },
       ],

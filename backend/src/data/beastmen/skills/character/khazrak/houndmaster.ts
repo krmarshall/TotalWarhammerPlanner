@@ -13,13 +13,13 @@ const houndmaster: SkillInterface = {
         {
           icon: BattleSkillIcons.charge,
           iconType: SkillIconTypes.battle,
-          description: 'Charge bonus: +10 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords Army)',
+          description: 'Charge bonus: +10 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords Army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.bonusVsInfantry,
           iconType: SkillIconTypes.battle,
-          description: 'Bonus vs Infantry: +10 for Chaos Warhounds, Razorgor Herd, and Harpies units \n (Lords Army)',
+          description: 'Bonus vs Infantry: +10 for Chaos Warhounds, Razorgor Herd, and Harpies units\n(Lords Army)',
           goodEffect: true,
         },
       ],

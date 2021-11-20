@@ -9,3 +9,23 @@
     font-display: swap;
   }
 }
+
+@layer utilities {
+  input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #48bb78;
+  }
+
+  .tooltip {
+    @apply invisible absolute bottom-32 left-32;
+  }
+
+  .has-tooltip {
+    @apply not-italic;
+  }
+  
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50
+  }
+  
+}

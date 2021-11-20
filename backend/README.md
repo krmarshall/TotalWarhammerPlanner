@@ -2,7 +2,9 @@
 
 ## Folder Structure
 ./dist/ - (Gitignored) When backend is started typescript builds the standard js to be run by node here. 
+
 ./public/ - (Gitignored) Where the frontend builds itself to be served by the backend.
+
 ./src/ - All the typescript project source
 
 ## What is the Backend Doing?

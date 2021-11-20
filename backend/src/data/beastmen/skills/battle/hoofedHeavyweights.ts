@@ -13,7 +13,7 @@ const hoofedHeavyweights: SkillInterface = {
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description: 'Melee defence: +4 for Minotaurs units \n (Lords army)',
+          description: 'Melee defence: +4 for Minotaurs units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -23,13 +23,13 @@ const hoofedHeavyweights: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +4 for Minotaurs units \n (Lords army)',
+          description: 'Melee attack: +4 for Minotaurs units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description: 'Melee defence: +6 for Minotaurs units \n (Lords army)',
+          description: 'Melee defence: +6 for Minotaurs units\n(Lords army)',
           goodEffect: true,
         },
       ],
@@ -39,13 +39,13 @@ const hoofedHeavyweights: SkillInterface = {
         {
           icon: BattleSkillIcons.attack,
           iconType: SkillIconTypes.battle,
-          description: 'Melee attack: +8 for Minotaurs units \n (Lords army)',
+          description: 'Melee attack: +8 for Minotaurs units\n(Lords army)',
           goodEffect: true,
         },
         {
           icon: BattleSkillIcons.defence,
           iconType: SkillIconTypes.battle,
-          description: 'Melee defence: +8 for Minotaurs units \n (Lords army)',
+          description: 'Melee defence: +8 for Minotaurs units\n(Lords army)',
           goodEffect: true,
         },
       ],

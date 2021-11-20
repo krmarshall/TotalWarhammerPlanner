@@ -2,6 +2,7 @@
 
 ## Folder Structure
 ../backend/public/ - (Gitignored) Where the frontend builds itself to be served by the backend.
+
 ./src/ - All the React/Typescript project source.
 
 ## What is the Frontend Doing?
