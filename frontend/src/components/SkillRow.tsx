@@ -13,11 +13,21 @@ const SkillRow = ({ skillLine, yIndex }: SkillRowPropsInterface) => {
   return (
     <tr className="flex flex-row">
       {skillKeys.length === 0 ? (
-        <td className="h-20"></td>
+        <td className="h-16"></td>
       ) : (
         skillKeys.map((skillKey, index) => {
           const skill = skillLine[skillKey];
-          return <SkillCell key={skillKey} skill={skill} yIndex={yIndex} xIndex={index} />;
+          const nextSkill = skillLine[skillKeys[index + 1]];
+          const prevSkill = skillLine[skillKeys[index - 1]];
+          let boxedType = 'none';
+          if (skill.boxed && !prevSkill?.boxed) {
+            boxedType = 'start';
+          } else if (skill.boxed && prevSkill?.boxed && nextSkill?.boxed) {
+            boxedType = 'center';
+          } else if (skill.boxed && !nextSkill.boxed) {
+            boxedType = 'end';
+          }
+          return <SkillCell key={skillKey} skill={skill} yIndex={yIndex} xIndex={index} boxedType={boxedType} />;
         })
       )}
     </tr>

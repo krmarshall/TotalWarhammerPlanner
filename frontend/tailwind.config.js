@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         CaslonAntique: 'CaslonAntique',
       },
+      spacing: {
+        18: '4.5rem',
+      },
     },
   },
   variants: {
