@@ -1,17 +1,30 @@
+import { MouseEvent, useContext } from 'react';
 import skillIcons from '../assets/img/skills/skillIcons';
+import { AppContext, AppContextActions } from '../contexts/AppContext';
+import { skillIncreaseIsValid } from '../sharedFunctions/SkillClickVerification';
+import BuildInterface from '../types/interfaces/BuildInterface';
 import SkillInterface from '../types/interfaces/SkillInterfaces';
 import SkillTooltip from './SkillTooltip';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
+  skillKey: string;
   yIndex: number;
   xIndex: number;
   boxedType: string;
 }
 
-const SkillCell = ({ skill, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
+const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
+  const { state, dispatch } = useContext(AppContext);
+  const { characterBuild } = state;
+  const thisSkillsCurrentPoints = characterBuild?.buildData[yIndex][xIndex] as number;
   const rankKeys = Object.keys(skill.ranks);
-  let tdClassName = 'flex flex-row w-max h-full my-1 border hover:bg-gray-600 select-none';
+
+  let tdClassName = 'flex flex-row w-max h-full my-1 border hover:bg-gray-500 select-none';
+
+  if (thisSkillsCurrentPoints > 0) {
+    tdClassName += ' bg-gray-600';
+  }
 
   switch (boxedType) {
     case 'start': {
@@ -35,8 +48,54 @@ const SkillCell = ({ skill, yIndex, xIndex, boxedType }: SkillCellPropsInterface
     }
   }
 
+  const skillClickHandler = (event: MouseEvent) => {
+    console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
+    // 0 = LMB, 2 = RMB
+    if (event.button === 0) {
+      if (!skillIncreaseIsValid(characterBuild, skill, yIndex, xIndex, thisSkillsCurrentPoints, skillKey)) {
+        return;
+      }
+      // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
+      if (thisSkillsCurrentPoints === 0) {
+        characterBuild?.selectedSkills.push(skillKey);
+        if (skill.blocksSkills) {
+          skill.blocksSkills.map((blockedSkill) => {
+            characterBuild?.blockedSkills.push(blockedSkill);
+          });
+        }
+      }
+      // Add skill point to build array
+      // Add 1 to character rank
+      const newCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
+      newCharacterBuild.buildData[yIndex][xIndex] += 1;
+      newCharacterBuild.rank += 1;
+      dispatch({
+        type: AppContextActions.changeCharacterBuild,
+        payload: { characterBuild: newCharacterBuild as BuildInterface },
+      });
+    } else if (event.button === 2) {
+      // Check if skill has lower rank than already selected
+      if (thisSkillsCurrentPoints === 0) {
+        console.log('Cannot remove unselected skill.');
+        return;
+      }
+      // Check removing skill wont invalidate other skills.
+      // Remove Skill Point from build array
+      // If skill was entirely removed delete from characterBuild.selectedSkills and blockedSkills references if needed
+      // Remove 1 from character rank
+    }
+  };
+
   return (
-    <td className={tdClassName}>
+    <td
+      className={tdClassName}
+      onMouseDown={(event: MouseEvent) => {
+        skillClickHandler(event);
+      }}
+      onContextMenu={(event) => {
+        event.preventDefault();
+      }}
+    >
       <img // @ts-expect-error 7053
         src={skillIcons[skill.iconType][skill.icon]}
         className="w-16 h-16"
@@ -49,12 +108,20 @@ const SkillCell = ({ skill, yIndex, xIndex, boxedType }: SkillCellPropsInterface
         <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
       </div>
       <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
-        {rankKeys.map((rankKey) => {
-          return <SkillTooltip key={rankKey} skill={skill} rankKey={rankKey} />;
+        {rankKeys.map((rankKey, index) => {
+          return (
+            <SkillTooltip
+              key={rankKey}
+              index={index}
+              skill={skill}
+              rankKey={rankKey}
+              thisSkillsCurrentPoints={thisSkillsCurrentPoints}
+            />
+          );
         })}
       </div>
-      <div className="flex flex-col justify-center">
-        {skill.rightArrow && <p className="w-12 text-center text-4xl text-gray-200">→</p>}
+      <div className="w-10 flex flex-col justify-center">
+        {skill.rightArrow && <p className="text-center text-4xl text-gray-200">→</p>}
       </div>
     </td>
   );

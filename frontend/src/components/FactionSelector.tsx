@@ -30,7 +30,7 @@ const FactionSelector = () => {
               key={faction.name}
               className={liClassName}
               onClick={() => {
-                dispatch({ type: AppContextActions.changeFaction, payload: factionKey });
+                dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: factionKey } });
               }}
             >
               <h2 className="text-center text-gray-200 text-xl mb-1">{faction.name}</h2>

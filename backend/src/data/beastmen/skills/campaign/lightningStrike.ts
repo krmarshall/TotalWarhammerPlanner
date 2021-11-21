@@ -3,6 +3,7 @@ import lightningStrikeGeneric from '../../../z_shared/skills/lightningStikeGener
 
 const lightningStrike: SkillInterface = {
   ...lightningStrikeGeneric,
+  name: 'Lightning Strike',
   requiresSkill: 'unholyResilience',
 };
 

@@ -27,7 +27,16 @@ const SkillRow = ({ skillLine, yIndex }: SkillRowPropsInterface) => {
           } else if (skill.boxed && !nextSkill.boxed) {
             boxedType = 'end';
           }
-          return <SkillCell key={skillKey} skill={skill} yIndex={yIndex} xIndex={index} boxedType={boxedType} />;
+          return (
+            <SkillCell
+              key={skillKey}
+              skillKey={skillKey}
+              skill={skill}
+              yIndex={yIndex}
+              xIndex={index}
+              boxedType={boxedType}
+            />
+          );
         })
       )}
     </tr>

@@ -4,23 +4,31 @@ import SkillExtraTooltip from './SkillExtraTooltip';
 
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;
+  index: number;
   rankKey: string;
+  thisSkillsCurrentPoints: number;
 }
 
-const SkillTooltip = ({ skill, rankKey }: SkillTooltipPropInterface) => {
+const SkillTooltip = ({ skill, index, rankKey, thisSkillsCurrentPoints }: SkillTooltipPropInterface) => {
   let pClassName = 'w-4 text-center has-tooltip';
+  const selected = thisSkillsCurrentPoints >= index + 1 ? true : false;
 
-  // Check if this skill rank has been selected
-  // eslint-disable-next-line no-constant-condition
-  if (false) {
+  if (selected) {
     pClassName += ' text-gray-50';
   } else {
     pClassName += ' text-gray-400';
   }
+
+  const camelCaseToTitle = (text: string) => {
+    const result = text.replace(/([A-Z])/g, ' $1');
+    const finalResult = result.charAt(0).toUpperCase() + result.slice(1);
+    return finalResult;
+  };
+
   return (
     <div className={pClassName}>
       O
-      <span className="tooltip text-center">
+      <span className="tooltip text-center max-w-lg">
         <div className="p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
           <h3 className="text-gray-50 text-xl">{skill?.name}</h3>
           {skill?.ranks[rankKey as keyof typeof skill.ranks]?.requiresLevel && (
@@ -34,7 +42,9 @@ const SkillTooltip = ({ skill, rankKey }: SkillTooltipPropInterface) => {
             </p>
           )}
           {skill?.requiresSkill && (
-            <p className="text-red-500 text-lg">Available after unlocking &quot;{skill?.requiresSkill}&quot;</p>
+            <p className="text-red-500 text-lg">
+              Available after unlocking &quot;{camelCaseToTitle(skill?.requiresSkill)}&quot;
+            </p>
           )}
           <div>
             {skill?.ranks[rankKey as keyof typeof skill.ranks]?.skillEffects.map((skillEffect, index) => {

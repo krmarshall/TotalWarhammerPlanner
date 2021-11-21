@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import api from '../api/api';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import factions from '../data/factions';
+import { createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
 
 const CharacterSelector = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -29,19 +30,19 @@ const CharacterSelector = () => {
   // To Do: Set up notifications without using alert
   const handleCharacterSelect = (characterKey: string, characterImplemented: boolean) => {
     if (!characterImplemented) {
-      alert(
-        'This character is not currently implemented, please select a character that is not transparent.\n-Sorry'
-      );
+      alert('This character is not currently implemented, please select a character that is not transparent.\n-Sorry');
     } else {
       api
         .getCharacterSkillTree(selectedFaction, characterKey)
         .then((response) => {
-          dispatch({ type: AppContextActions.changeCharacterData, payload: response });
+          dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
+          const emptyCharacterBuild = createEmptyCharacterBuild(response, selectedFaction, characterKey);
+          dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
           history.push(`/planner/${selectedFaction}/${characterKey}/`);
         })
         .catch((error) => {
           console.log(error);
-          dispatch({ type: AppContextActions.changeCharacterData, payload: null });
+          dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
         });
     }
   };

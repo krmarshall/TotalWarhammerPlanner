@@ -3,6 +3,8 @@ import { useParams } from 'react-router';
 import api from '../api/api';
 import SkillRow from '../components/SkillRow';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
+import { createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
+import CharacterInterface from '../types/interfaces/CharacterInterface';
 
 interface PlannerParamsInterface {
   faction: string;
@@ -12,18 +14,21 @@ interface PlannerParamsInterface {
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
+  const { characterBuild } = state;
   const { faction, character, code } = useParams<PlannerParamsInterface>();
 
   useEffect(() => {
     if (state.characterData === null) {
       api
         .getCharacterSkillTree(faction, character)
-        .then((response) => {
-          dispatch({ type: AppContextActions.changeCharacterData, payload: response });
+        .then((response: CharacterInterface) => {
+          dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
+          const emptyCharacterBuild = createEmptyCharacterBuild(response, faction, character);
+          dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
         })
         .catch((error) => {
           console.log(error);
-          dispatch({ type: AppContextActions.changeCharacterData, payload: null });
+          dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
         });
     }
   }, [state.characterData]);
@@ -48,7 +53,15 @@ const Planner = () => {
         </div>
       ) : (
         <Fragment>
-          <h1 className="text-center text-4xl m-2 text-gray-200">{state.characterData.name}</h1>
+          <div className="flex flex-row flex-nowrap">
+            <h1 className="flex-grow text-center text-4xl m-2 text-gray-200">{state.characterData.name}</h1>
+            {characterBuild?.rank && characterBuild.rank <= 40 ? (
+              <p className="text-center my-auto text-gray-200 text-lg">Rank: {characterBuild?.rank}</p>
+            ) : (
+              <p className="text-center my-auto text-red-500 text-lg">Rank: {characterBuild?.rank}</p>
+            )}
+          </div>
+
           <div
             className="pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"

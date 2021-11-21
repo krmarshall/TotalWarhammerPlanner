@@ -1,46 +1,61 @@
 import { createContext, useReducer } from 'react';
+import BuildInterface from '../types/interfaces/BuildInterface';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 
 interface ContextStateInterface {
   selectedFaction: string;
   characterData: CharacterInterface | null;
+  characterBuild: BuildInterface | null;
 }
 
 const initialState: ContextStateInterface = {
   selectedFaction: 'beastmen',
   characterData: null,
+  characterBuild: null,
 };
 
 interface ActionInterface {
   type: string;
-  payload: string | CharacterInterface | null;
+  payload: {
+    selectedFaction?: string;
+    characterData?: CharacterInterface | null;
+    characterBuild?: BuildInterface | null;
+  };
 }
 
 enum AppContextActions {
   changeFaction = 'changeFaction',
   changeCharacterData = 'changeCharacterData',
+  changeCharacterBuild = 'changeCharacterBuild',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
   switch (action.type) {
     case AppContextActions.changeFaction: {
       const newState = { ...state };
-      if (typeof action.payload === 'string') {
-        newState.selectedFaction = action.payload;
-        return newState;
-      } else {
+      if (action.payload.selectedFaction === undefined) {
         return state;
       }
+      newState.selectedFaction = action.payload.selectedFaction;
+      return newState;
     }
 
     case AppContextActions.changeCharacterData: {
       const newState = { ...state };
-      if (typeof action.payload !== 'string') {
-        newState.characterData = action.payload;
-        return newState;
-      } else {
+      if (action.payload.characterData === undefined) {
         return state;
       }
+      newState.characterData = action.payload.characterData;
+      return newState;
+    }
+
+    case AppContextActions.changeCharacterBuild: {
+      const newState = { ...state };
+      if (action.payload.characterBuild === undefined) {
+        return state;
+      }
+      newState.characterBuild = action.payload.characterBuild;
+      return newState;
     }
 
     default: {
