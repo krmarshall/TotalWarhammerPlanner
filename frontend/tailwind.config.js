@@ -13,7 +13,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      filter: ['hover'],
+      grayscale: ['hover'],
+    },
   },
   plugins: [require('tailwind-scrollbar')],
 };

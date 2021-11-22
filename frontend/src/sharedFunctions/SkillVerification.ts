@@ -1,4 +1,5 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
+import CharacterInterface from '../types/interfaces/CharacterInterface';
 import SkillInterface, { SkillRankInterface } from '../types/interfaces/SkillInterfaces';
 
 const isRequiredLevel = (characterBuild: BuildInterface | null, skillCheckRank: SkillRankInterface | undefined) => {
@@ -132,4 +133,33 @@ const skillIncreaseIsValid = (
   return true;
 };
 
-export { skillIsValid, skillIncreaseIsValid };
+const isValidSkillTree = (characterBuild: BuildInterface, characterData: CharacterInterface) => {
+  const skillBuildArray = characterBuild?.buildData;
+  // Should probably size this dynamically
+  const skillKeyArray = [...Array(7)].map(() => Array(20).fill(''));
+  const skillDataArray = characterData.skillTree.map((skillLine, yIndex) => {
+    const skillKeys = Object.keys(skillLine);
+    return skillKeys.map((skillKey, xIndex) => {
+      const skill = skillLine[skillKey];
+      skillKeyArray[yIndex][xIndex] = skillKey;
+      return skill;
+    });
+  });
+
+  let valid = true;
+  for (let y = 0; y < skillBuildArray?.length && valid; y++) {
+    if (skillBuildArray[y].length === 0) {
+      continue;
+    }
+    for (let x = 0; x < skillBuildArray[y].length && valid; x++) {
+      if (skillBuildArray[y][x] > 0) {
+        if (!skillIsValid(characterBuild, skillDataArray[y][x], y, x, skillBuildArray[y][x], skillKeyArray[y][x])) {
+          valid = false;
+        }
+      }
+    }
+  }
+  return valid;
+};
+
+export { skillIsValid, skillIncreaseIsValid, isValidSkillTree };

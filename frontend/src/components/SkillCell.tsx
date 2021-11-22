@@ -1,8 +1,9 @@
-import { MouseEvent, useContext } from 'react';
+import { MouseEvent, useContext, useEffect, useState } from 'react';
 import skillIcons from '../assets/img/skills/skillIcons';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
-import { skillIncreaseIsValid } from '../sharedFunctions/SkillClickVerification';
+import { isValidSkillTree, skillIncreaseIsValid } from '../sharedFunctions/SkillVerification';
 import BuildInterface from '../types/interfaces/BuildInterface';
+import CharacterInterface from '../types/interfaces/CharacterInterface';
 import SkillInterface from '../types/interfaces/SkillInterfaces';
 import SkillTooltip from './SkillTooltip';
 
@@ -17,13 +18,30 @@ interface SkillCellPropsInterface {
 const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild } = state;
+  const [selectable, setSelectable] = useState(false);
   const thisSkillsCurrentPoints = characterBuild?.buildData[yIndex][xIndex] as number;
   const rankKeys = Object.keys(skill.ranks);
+
+  useEffect(() => {
+    const newSelectable = skillIncreaseIsValid(
+      characterBuild,
+      skill,
+      yIndex,
+      xIndex,
+      thisSkillsCurrentPoints,
+      skillKey
+    );
+    setSelectable(newSelectable);
+  }, [characterBuild?.buildData]);
 
   let tdClassName = 'flex flex-row w-max h-full my-1 border hover:bg-gray-500 select-none';
 
   if (thisSkillsCurrentPoints > 0) {
     tdClassName += ' bg-gray-600';
+  } else if (selectable) {
+    tdClassName += ' ';
+  } else {
+    tdClassName += ' filter grayscale hover:filter-none hover:grayscale-0';
   }
 
   switch (boxedType) {
@@ -69,6 +87,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       const newCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
       newCharacterBuild.buildData[yIndex][xIndex] += 1;
       newCharacterBuild.rank += 1;
+
       dispatch({
         type: AppContextActions.changeCharacterBuild,
         payload: { characterBuild: newCharacterBuild as BuildInterface },
@@ -80,9 +99,39 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         return;
       }
       // Check removing skill wont invalidate other skills.
-      // Remove Skill Point from build array
+      const testCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
+      testCharacterBuild.buildData[yIndex][xIndex] -= 1;
+
       // If skill was entirely removed delete from characterBuild.selectedSkills and blockedSkills references if needed
-      // Remove 1 from character rank
+      if (testCharacterBuild.buildData[yIndex][xIndex] === 0) {
+        const selectedSkillIndex = testCharacterBuild.selectedSkills.indexOf(skillKey);
+        testCharacterBuild.selectedSkills.splice(selectedSkillIndex, 1);
+
+        if (skill.blocksSkills) {
+          skill.blocksSkills.map((blockedSkill) => {
+            const blockedSkillIndex = testCharacterBuild.blockedSkills.indexOf(blockedSkill);
+            testCharacterBuild.blockedSkills.splice(blockedSkillIndex, 1);
+          });
+        }
+      }
+
+      // Remove 2 from character rank to check rank requirements on other skills
+      testCharacterBuild.rank -= 2;
+
+      if (!isValidSkillTree(testCharacterBuild, state.characterData as CharacterInterface)) {
+        console.log('This skill has dependencies.');
+        return;
+      }
+
+      // Add back the extra rank we took off to verify the skill tree
+      testCharacterBuild.rank += 1;
+      // Remove Skill Point from build array
+      const newCharacterBuild: BuildInterface = testCharacterBuild;
+
+      dispatch({
+        type: AppContextActions.changeCharacterBuild,
+        payload: { characterBuild: newCharacterBuild as BuildInterface },
+      });
     }
   };
 

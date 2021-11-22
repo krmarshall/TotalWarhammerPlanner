@@ -10,13 +10,13 @@ interface SkillTooltipPropInterface {
 }
 
 const SkillTooltip = ({ skill, index, rankKey, thisSkillsCurrentPoints }: SkillTooltipPropInterface) => {
-  let pClassName = 'w-4 text-center has-tooltip';
+  let containerClassName = 'w-4 text-center has-tooltip';
   const selected = thisSkillsCurrentPoints >= index + 1 ? true : false;
 
   if (selected) {
-    pClassName += ' text-gray-50';
+    containerClassName += ' text-gray-50';
   } else {
-    pClassName += ' text-gray-400';
+    containerClassName += ' text-gray-400';
   }
 
   const camelCaseToTitle = (text: string) => {
@@ -26,7 +26,7 @@ const SkillTooltip = ({ skill, index, rankKey, thisSkillsCurrentPoints }: SkillT
   };
 
   return (
-    <div className={pClassName}>
+    <div className={containerClassName}>
       O
       <span className="tooltip text-center max-w-lg">
         <div className="p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
