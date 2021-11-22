@@ -41,6 +41,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   } else if (selectable) {
     tdClassName += ' ';
   } else {
+    // Filter/Grayscale on the tooltip breaks position, and cant override parent filter/grayscale, so on hover remove parents filter/gscale, hacky but works
     tdClassName += ' filter grayscale hover:filter-none hover:grayscale-0';
   }
 

@@ -79,11 +79,11 @@ const skillIsValid = (
   skill: SkillInterface,
   yIndex: number,
   xIndex: number,
-  thisSkillArrayLocation: number,
+  thisSkillsCurrentPoints: number,
   skillKey: string
 ) => {
   // Check Required Level
-  if (!isRequiredLevel(characterBuild, skill.ranks[`rank${thisSkillArrayLocation}` as keyof typeof skill.ranks])) {
+  if (!isRequiredLevel(characterBuild, skill.ranks[`rank${thisSkillsCurrentPoints}` as keyof typeof skill.ranks])) {
     return false;
   }
   // Check Required Skills
@@ -106,16 +106,16 @@ const skillIncreaseIsValid = (
   skill: SkillInterface,
   yIndex: number,
   xIndex: number,
-  thisSkillArrayLocation: number,
+  thisSkillsCurrentPoints: number,
   skillKey: string
 ) => {
   // Check if skill has higher rank than already selected
-  if (!skill.ranks[`rank${thisSkillArrayLocation + 1}` as keyof typeof skill.ranks]) {
+  if (!skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]) {
     console.log('Higher skill rank does not exist.');
     return false;
   }
   // Check Required Level
-  if (!isRequiredLevel(characterBuild, skill.ranks[`rank${thisSkillArrayLocation + 1}` as keyof typeof skill.ranks])) {
+  if (!isRequiredLevel(characterBuild, skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks])) {
     return false;
   }
   // Check Required Skills
