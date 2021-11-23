@@ -113,15 +113,17 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
-  let tdClassName = 'flex flex-row w-max h-full my-1 border hover:bg-gray-500 select-none';
+  let tdClassName = 'flex flex-row w-max h-full my-1 border  select-none';
+  let divClassName = 'flex flex-row rounded-lg';
 
   if (thisSkillsCurrentPoints > 0) {
-    tdClassName += ' bg-gray-600';
+    divClassName += ' bg-gray-600 hover:bg-gray-500';
   } else if (selectable) {
-    tdClassName += ' ';
+    divClassName += ' hover:bg-gray-600';
   } else {
     // Filter/Grayscale on the tooltip breaks position, and cant override parent filter/grayscale, so on hover remove parents filter/gscale, hacky but works
-    tdClassName += ' filter grayscale hover:filter-none hover:grayscale-0';
+    divClassName +=
+      ' hover:bg-gray-600 opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
   }
 
   switch (boxedType) {
@@ -156,34 +158,37 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         event.preventDefault();
       }}
     >
-      <div className="flex flex-row has-tooltip">
-        <img // @ts-expect-error 7053
-          src={skillIcons[skill.iconType][skill.icon]}
-          className="w-16 h-16"
-          draggable={false}
-          alt="skillIcon"
-          width="64"
-          height="64"
-        />
-        <div className="flex flex-col justify-center m-auto">
-          <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+      <div className={divClassName}>
+        <div className="flex flex-row has-tooltip">
+          <img // @ts-expect-error 7053
+            src={skillIcons[skill.iconType][skill.icon]}
+            className="w-16 h-16"
+            draggable={false}
+            alt="skillIcon"
+            width="64"
+            height="64"
+          />
+          <div className="flex flex-col justify-center m-auto">
+            <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+          </div>
+          <SkillTooltip skill={skill} rankKey={previewRankKey} />
         </div>
-        <SkillTooltip skill={skill} rankKey={previewRankKey} />
+
+        <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
+          {rankKeys.map((rankKey, index) => {
+            return (
+              <SkillPointSelector
+                key={rankKey}
+                index={index}
+                skill={skill}
+                rankKey={rankKey}
+                thisSkillsCurrentPoints={thisSkillsCurrentPoints}
+              />
+            );
+          })}
+        </div>
       </div>
 
-      <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
-        {rankKeys.map((rankKey, index) => {
-          return (
-            <SkillPointSelector
-              key={rankKey}
-              index={index}
-              skill={skill}
-              rankKey={rankKey}
-              thisSkillsCurrentPoints={thisSkillsCurrentPoints}
-            />
-          );
-        })}
-      </div>
       <div className="w-10 flex flex-col justify-center">
         {skill.rightArrow && <p className="text-center text-4xl text-gray-200">→</p>}
       </div>

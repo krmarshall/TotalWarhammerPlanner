@@ -1,6 +1,7 @@
 import { Fragment, useContext, useEffect } from 'react';
 import { useParams } from 'react-router';
 import api from '../api/api';
+import BuildStorage from '../components/BuildStorage';
 import CharacterItems from '../components/CharacterItems';
 import SkillRow from '../components/SkillRow';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
@@ -94,7 +95,10 @@ const Planner = () => {
               </tbody>
             </table>
           </div>
-          <CharacterItems />
+          <div className="flex flex-row place-content-between">
+            <CharacterItems />
+            <BuildStorage />
+          </div>
         </Fragment>
       )}
     </Fragment>

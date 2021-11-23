@@ -8,7 +8,7 @@ interface SkillCellPropsInterface {
 
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
   return (
-    <td className="flex flex-row w-max h-full m-1 rounded hover:bg-gray-500 select-none">
+    <div className="flex flex-row w-max h-full m-1 rounded-lg hover:bg-gray-600 select-none">
       <div className="flex flex-row has-tooltip">
         <img // @ts-expect-error 7053
           src={skillIcons[item.iconType][item.icon]}
@@ -23,7 +23,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         </div>
         <SkillTooltip skill={item} rankKey="rank1" />
       </div>
-    </td>
+    </div>
   );
 };
 
