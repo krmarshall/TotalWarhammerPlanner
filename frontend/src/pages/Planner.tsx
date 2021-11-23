@@ -45,6 +45,14 @@ const Planner = () => {
     });
   };
 
+  const resetButtonHandler = () => {
+    if (!state.characterData) {
+      return;
+    }
+    const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, faction, character);
+    dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
+  };
+
   return (
     <Fragment>
       {state.characterData === null ? (
@@ -54,14 +62,21 @@ const Planner = () => {
       ) : (
         <Fragment>
           <div className="flex flex-row flex-nowrap">
+            <div className="invisible w-28">Spacer</div>
             <h1 className="flex-grow text-center text-4xl m-2 text-gray-200">{state.characterData.name}</h1>
+            <button
+              className="text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl"
+              onClick={resetButtonHandler}
+            >
+              Reset
+            </button>
             {characterBuild?.rank && characterBuild.rank <= 40 ? (
-              <p className="text-center my-auto text-gray-200 text-lg">Rank: {characterBuild?.rank}</p>
+              <p className="text-center my-auto text-gray-200 text-2xl">Rank: {characterBuild?.rank}</p>
             ) : (
-              <p className="text-center my-auto text-red-500 text-lg">Rank: {characterBuild?.rank}</p>
+              <p className="text-center my-auto text-red-500 text-2xl">Rank: {characterBuild?.rank}</p>
             )}
           </div>
-
+          <hr />
           <div
             className="pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"

@@ -5,6 +5,7 @@ import { isValidSkillTree, skillIncreaseIsValid } from '../sharedFunctions/Skill
 import BuildInterface from '../types/interfaces/BuildInterface';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 import SkillInterface from '../types/interfaces/SkillInterfaces';
+import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
 
 interface SkillCellPropsInterface {
@@ -19,6 +20,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild } = state;
   const [selectable, setSelectable] = useState(false);
+  const [previewRankKey, setPreviewRankKey] = useState('rank1');
   const thisSkillsCurrentPoints = characterBuild?.buildData[yIndex][xIndex] as number;
   const rankKeys = Object.keys(skill.ranks);
 
@@ -33,39 +35,6 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     );
     setSelectable(newSelectable);
   }, [characterBuild?.buildData]);
-
-  let tdClassName = 'flex flex-row w-max h-full my-1 border hover:bg-gray-500 select-none';
-
-  if (thisSkillsCurrentPoints > 0) {
-    tdClassName += ' bg-gray-600';
-  } else if (selectable) {
-    tdClassName += ' ';
-  } else {
-    // Filter/Grayscale on the tooltip breaks position, and cant override parent filter/grayscale, so on hover remove parents filter/gscale, hacky but works
-    tdClassName += ' filter grayscale hover:filter-none hover:grayscale-0';
-  }
-
-  switch (boxedType) {
-    case 'start': {
-      tdClassName += ' border-gray-400 border-r-0 rounded-l';
-      break;
-    }
-    case 'center': {
-      tdClassName += ' border-gray-400 border-l-0 border-r-0';
-      break;
-    }
-    case 'end': {
-      tdClassName += ' border-gray-400 border-l-0 rounded-r';
-      break;
-    }
-    case 'none': {
-      tdClassName += ' border-gray-700 rounded';
-      break;
-    }
-    default: {
-      break;
-    }
-  }
 
   const skillClickHandler = (event: MouseEvent) => {
     console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
@@ -136,6 +105,47 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
+  let tdClassName = 'flex flex-row w-max h-full my-1 border hover:bg-gray-500 select-none';
+
+  if (thisSkillsCurrentPoints > 0) {
+    tdClassName += ' bg-gray-600';
+  } else if (selectable) {
+    tdClassName += ' ';
+  } else {
+    // Filter/Grayscale on the tooltip breaks position, and cant override parent filter/grayscale, so on hover remove parents filter/gscale, hacky but works
+    tdClassName += ' filter grayscale hover:filter-none hover:grayscale-0';
+  }
+
+  switch (boxedType) {
+    case 'start': {
+      tdClassName += ' border-gray-400 border-r-0 rounded-l';
+      break;
+    }
+    case 'center': {
+      tdClassName += ' border-gray-400 border-l-0 border-r-0';
+      break;
+    }
+    case 'end': {
+      tdClassName += ' border-gray-400 border-l-0 rounded-r';
+      break;
+    }
+    case 'none': {
+      tdClassName += ' border-gray-700 rounded';
+      break;
+    }
+    default: {
+      break;
+    }
+  }
+
+  useEffect(() => {
+    if (skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]) {
+      setPreviewRankKey(`rank${thisSkillsCurrentPoints + 1}`);
+    } else {
+      setPreviewRankKey(`rank${thisSkillsCurrentPoints}`);
+    }
+  }, [thisSkillsCurrentPoints]);
+
   return (
     <td
       className={tdClassName}
@@ -146,21 +156,25 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         event.preventDefault();
       }}
     >
-      <img // @ts-expect-error 7053
-        src={skillIcons[skill.iconType][skill.icon]}
-        className="w-16 h-16"
-        draggable={false}
-        alt="skillIcon"
-        width="64"
-        height="64"
-      />
-      <div className="flex flex-col justify-center m-auto">
-        <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+      <div className="flex flex-row has-tooltip">
+        <img // @ts-expect-error 7053
+          src={skillIcons[skill.iconType][skill.icon]}
+          className="w-16 h-16"
+          draggable={false}
+          alt="skillIcon"
+          width="64"
+          height="64"
+        />
+        <div className="flex flex-col justify-center m-auto">
+          <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+        </div>
+        <SkillTooltip skill={skill} rankKey={previewRankKey} />
       </div>
+
       <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
         {rankKeys.map((rankKey, index) => {
           return (
-            <SkillTooltip
+            <SkillPointSelector
               key={rankKey}
               index={index}
               skill={skill}
