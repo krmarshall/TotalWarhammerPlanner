@@ -1,6 +1,7 @@
 import { Fragment, useContext, useEffect } from 'react';
 import { useParams } from 'react-router';
 import api from '../api/api';
+import CharacterItems from '../components/CharacterItems';
 import SkillRow from '../components/SkillRow';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
@@ -93,6 +94,7 @@ const Planner = () => {
               </tbody>
             </table>
           </div>
+          <CharacterItems />
         </Fragment>
       )}
     </Fragment>

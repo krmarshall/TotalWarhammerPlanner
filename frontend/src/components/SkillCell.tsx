@@ -36,6 +36,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     setSelectable(newSelectable);
   }, [characterBuild?.buildData]);
 
+  useEffect(() => {
+    if (skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]) {
+      setPreviewRankKey(`rank${thisSkillsCurrentPoints + 1}`);
+    } else {
+      setPreviewRankKey(`rank${thisSkillsCurrentPoints}`);
+    }
+  }, [thisSkillsCurrentPoints]);
+
   const skillClickHandler = (event: MouseEvent) => {
     console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
     // 0 = LMB, 2 = RMB
@@ -137,14 +145,6 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       break;
     }
   }
-
-  useEffect(() => {
-    if (skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]) {
-      setPreviewRankKey(`rank${thisSkillsCurrentPoints + 1}`);
-    } else {
-      setPreviewRankKey(`rank${thisSkillsCurrentPoints}`);
-    }
-  }, [thisSkillsCurrentPoints]);
 
   return (
     <td
