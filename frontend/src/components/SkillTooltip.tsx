@@ -1,3 +1,4 @@
+import { camelCaseToTitle } from '../sharedFunctions/sharedFunctions';
 import SkillInterface from '../types/interfaces/SkillInterfaces';
 import SkillEffect from './SkillEffect';
 import SkillExtraTooltip from './SkillExtraTooltip';
@@ -8,12 +9,6 @@ interface SkillTooltipPropInterface {
 }
 
 const SkillTooltip = ({ skill, rankKey }: SkillTooltipPropInterface) => {
-  const camelCaseToTitle = (text: string) => {
-    const result = text.replace(/([A-Z])/g, ' $1');
-    const finalResult = result.charAt(0).toUpperCase() + result.slice(1);
-    return finalResult;
-  };
-
   return (
     <span className="tooltip text-center max-w-lg">
       <div className="p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">

@@ -1,6 +1,8 @@
+import { toast } from 'react-hot-toast';
 import BuildInterface from '../types/interfaces/BuildInterface';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 import SkillInterface, { SkillRankInterface } from '../types/interfaces/SkillInterfaces';
+import { camelCaseToTitle } from './sharedFunctions';
 
 const isRequiredLevel = (characterBuild: BuildInterface | null, skillCheckRank: SkillRankInterface | undefined) => {
   if (!skillCheckRank?.requiresLevel) {
@@ -8,13 +10,11 @@ const isRequiredLevel = (characterBuild: BuildInterface | null, skillCheckRank: 
   }
   if (characterBuild?.rank) {
     if (characterBuild?.rank < skillCheckRank?.requiresLevel) {
-      console.log(`Requires rank ${skillCheckRank?.requiresLevel}`);
       return false;
     } else {
       return true;
     }
   }
-  console.log('isNotRequiredLevel Fallthrough');
   return false;
 };
 
@@ -26,11 +26,9 @@ const hasRequiredSkill = (skill: SkillInterface, characterBuild: BuildInterface 
     if (characterBuild?.selectedSkills.includes(skill.requiresSkill)) {
       return true;
     } else {
-      console.log(`Requires skill ${skill.requiresSkill}`);
       return false;
     }
   }
-  console.log('missingRequiredSkill Fallthrough');
   return false;
 };
 
@@ -45,7 +43,6 @@ const skillIsBlocked = (skillKey: string, characterBuild: BuildInterface | null)
       return false;
     }
   }
-  console.log('skillIsBlocked Fallthrough');
   return true;
 };
 
@@ -66,11 +63,9 @@ const missingRequiredPoints = (
     if (totalPoints >= skill.requiresXPoints) {
       return false;
     } else {
-      console.log(`Requires ${skill.requiresXPoints - totalPoints} more points`);
       return true;
     }
   }
-  console.log('missingRequiredPoints Fallthrough');
   return true;
 };
 
@@ -107,27 +102,44 @@ const skillIncreaseIsValid = (
   yIndex: number,
   xIndex: number,
   thisSkillsCurrentPoints: number,
-  skillKey: string
+  skillKey: string,
+  printError: boolean
 ) => {
   // Check if skill has higher rank than already selected
   if (!skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]) {
-    console.log('Higher skill rank does not exist.');
+    if (printError) {
+      toast.error('A higher skill rank does not exist.');
+    }
     return false;
   }
   // Check Required Level
   if (!isRequiredLevel(characterBuild, skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks])) {
+    if (printError) {
+      toast.error(
+        `Requires rank ${skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]?.requiresLevel}`
+      );
+    }
     return false;
   }
   // Check Required Skills
   if (!hasRequiredSkill(skill, characterBuild)) {
+    if (printError) {
+      toast.error(`Requires skill ${camelCaseToTitle(skill.requiresSkill as string)}`);
+    }
     return false;
   }
   // Check Blocked skills
   if (skillIsBlocked(skillKey, characterBuild)) {
+    if (printError) {
+      toast.error(`Skill is blocked by another skill.`);
+    }
     return false;
   }
   // Check x points in last y skills
   if (missingRequiredPoints(characterBuild, yIndex, xIndex, skill)) {
+    if (printError) {
+      toast.error(`Requires ${skill?.requiresXPoints} points in the last ${skill?.inLastYSkills} skills.`);
+    }
     return false;
   }
   return true;
@@ -153,7 +165,9 @@ const isValidSkillTree = (characterBuild: BuildInterface, characterData: Charact
     }
     for (let x = 0; x < skillBuildArray[y].length && valid; x++) {
       if (skillBuildArray[y][x] > 0) {
-        if (!skillIsValid(characterBuild, skillDataArray[y][x], y, x, skillBuildArray[y][x], skillKeyArray[y][x])) {
+        if (
+          !skillIsValid(characterBuild, skillDataArray[y][x], y, x, skillBuildArray[y][x], skillKeyArray[y][x], false)
+        ) {
           valid = false;
         }
       }

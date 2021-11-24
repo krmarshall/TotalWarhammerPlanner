@@ -1,5 +1,6 @@
 import { Fragment, useContext, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { toast } from 'react-hot-toast';
+import { useParams } from 'react-router-dom';
 import api from '../api/api';
 import BuildStorage from '../components/BuildStorage';
 import CharacterItems from '../components/CharacterItems';
@@ -28,8 +29,8 @@ const Planner = () => {
           const emptyCharacterBuild = createEmptyCharacterBuild(response, faction, character);
           dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          toast.error('Error retrieving character data from server.');
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
         });
     }
@@ -79,9 +80,8 @@ const Planner = () => {
               <p className="text-center my-auto text-red-500 text-2xl">Rank: {characterBuild?.rank}</p>
             )}
           </div>
-          <hr />
           <div
-            className="pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+            className="pb-2 shadow-lg border border-gray-500 rounded overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"
             onWheel={(event) => {
               horizontalScroll(event);
@@ -90,13 +90,13 @@ const Planner = () => {
             <table className="table-fixed">
               <thead></thead>
               <tbody className="flex flex-col flex-nowrap">
-                {state.characterData.skillTree.map((skillLine, index) => {
+                {state.characterData?.skillTree?.map((skillLine, index) => {
                   return <SkillRow key={index} skillLine={skillLine} yIndex={index} />;
                 })}
               </tbody>
             </table>
           </div>
-          <div className="flex flex-row place-content-between">
+          <div className="flex flex-row place-content-between mt-4">
             <CharacterItems />
             <BuildStorage />
           </div>

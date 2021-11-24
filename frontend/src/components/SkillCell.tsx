@@ -1,4 +1,5 @@
 import { MouseEvent, useContext, useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import skillIcons from '../assets/img/skills/skillIcons';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { isValidSkillTree, skillIncreaseIsValid } from '../sharedFunctions/SkillVerification';
@@ -31,7 +32,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       yIndex,
       xIndex,
       thisSkillsCurrentPoints,
-      skillKey
+      skillKey,
+      false
     );
     setSelectable(newSelectable);
   }, [characterBuild?.buildData]);
@@ -48,7 +50,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
     // 0 = LMB, 2 = RMB
     if (event.button === 0) {
-      if (!skillIncreaseIsValid(characterBuild, skill, yIndex, xIndex, thisSkillsCurrentPoints, skillKey)) {
+      if (!skillIncreaseIsValid(characterBuild, skill, yIndex, xIndex, thisSkillsCurrentPoints, skillKey, true)) {
         return;
       }
       // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
@@ -73,7 +75,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     } else if (event.button === 2) {
       // Check if skill has lower rank than already selected
       if (thisSkillsCurrentPoints === 0) {
-        console.log('Cannot remove unselected skill.');
+        toast.error('Cannot remove unselected skill.');
         return;
       }
       // Check removing skill wont invalidate other skills.
@@ -97,7 +99,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       testCharacterBuild.rank -= 2;
 
       if (!isValidSkillTree(testCharacterBuild, state.characterData as CharacterInterface)) {
-        console.log('This skill has dependencies.');
+        toast.error('This skill has dependencies.');
         return;
       }
 

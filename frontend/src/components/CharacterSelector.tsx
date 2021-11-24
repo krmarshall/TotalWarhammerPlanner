@@ -1,4 +1,5 @@
 import { Fragment, useContext, useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { useHistory } from 'react-router';
 import api from '../api/api';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
@@ -27,10 +28,9 @@ const CharacterSelector = () => {
     setHeroKeys(Object.keys(factionData.heroes));
   }, [factionData]);
 
-  // To Do: Set up notifications without using alert
   const handleCharacterSelect = (characterKey: string, characterImplemented: boolean) => {
     if (!characterImplemented) {
-      alert('This character is not currently implemented, please select a character that is not transparent.\n-Sorry');
+      toast.error('This character is not currently implemented. Sorry!');
     } else {
       api
         .getCharacterSkillTree(selectedFaction, characterKey)
@@ -40,8 +40,8 @@ const CharacterSelector = () => {
           dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
           history.push(`/planner/${selectedFaction}/${characterKey}/`);
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          toast.error('Error retrieving character data from server.');
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
         });
     }

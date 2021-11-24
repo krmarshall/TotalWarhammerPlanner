@@ -20,6 +20,7 @@ const BuildStorage = () => {
 
   const saveClickHandler = () => {
     saveBuildToStorage(state, dispatch, buildNameInput);
+    setBuildNameInput('');
   };
 
   const deleteClickHandler = (buildName: string, event: MouseEvent) => {
@@ -33,16 +34,19 @@ const BuildStorage = () => {
   };
 
   return (
-    <div className="rounded h-auto w-auto flex flex-row">
+    <div
+      className="h-auto w-auto flex flex-row place-content-between shadow-lg border border-gray-500 rounded"
+      style={{ minWidth: '24rem' }}
+    >
       <div className="flex flex-col justify-center">
         <h2 className="text-center text-3xl m-2 text-gray-200">Builds: </h2>
       </div>
-      <ul className="h-20 pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+      <ul className="h-20 flex-grow pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         {state.localStorageBuildKeys.map((buildKey, index) => {
           return (
             <li
               key={index}
-              className="bg-gray-600 hover:bg-gray-500 rounded p-0.5 pl-2 my-1 flex flex-row cursor-pointer"
+              className="bg-gray-600 hover:bg-gray-500 rounded p-0.5 pl-2 my-1 flex flex-row place-content-between cursor-pointer"
               onClick={() => {
                 setBuildHandler(buildKey);
               }}
@@ -71,6 +75,11 @@ const BuildStorage = () => {
           value={buildNameInput}
           onChange={(event) => {
             setBuildNameInput(event.target.value);
+          }}
+          onKeyUp={(event) => {
+            if (event.key === 'Enter') {
+              saveClickHandler();
+            }
           }}
           className="w-32 rounded m-1 px-1 text-xl text-center focus:outline-none placeholder-opacity-50 placeholder-black bg-gray-400"
         />
