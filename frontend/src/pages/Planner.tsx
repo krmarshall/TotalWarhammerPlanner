@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect } from 'react';
+import { Fragment, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 import api from '../api/api';
@@ -7,6 +7,7 @@ import CharacterItems from '../components/CharacterItems';
 import SkillRow from '../components/SkillRow';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
+import { convertBuildToCode, convertCodeToBuild, createCharacterBuildFromArray } from '../sharedFunctions/urlFunctions';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 
 interface PlannerParamsInterface {
@@ -19,6 +20,8 @@ const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild } = state;
   const { faction, character, code } = useParams<PlannerParamsInterface>();
+
+  const [urlLoaded, setUrlLoaded] = useState(false);
 
   useEffect(() => {
     if (state.characterData === null) {
@@ -35,6 +38,19 @@ const Planner = () => {
         });
     }
   }, [state.characterData]);
+
+  useEffect(() => {
+    if (!code || !state.characterData) {
+      return;
+    }
+    if (urlLoaded) {
+      return;
+    }
+    const importBuild = convertCodeToBuild(code);
+    const newCharacterBuild = createCharacterBuildFromArray(importBuild, state.characterData, faction, character);
+    dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
+    setUrlLoaded(true);
+  }, [code, state.characterData]);
 
   const horizontalScroll = (event: React.WheelEvent) => {
     const container = document.getElementById('horScrollContainer');
@@ -56,6 +72,22 @@ const Planner = () => {
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
   };
 
+  const shareButtonHandler = () => {
+    if (!characterBuild) {
+      return;
+    }
+    const buildLink = convertBuildToCode(characterBuild);
+
+    navigator.clipboard
+      .writeText(buildLink)
+      .then(() => {
+        toast.success('Build copied to clipboard!');
+      })
+      .catch(() => {
+        toast.error('Error copying build to the clipboard...');
+      });
+  };
+
   return (
     <Fragment>
       {state.characterData === null ? (
@@ -68,6 +100,12 @@ const Planner = () => {
           <div className="flex flex-row flex-nowrap">
             <div className="invisible w-28">Spacer</div>
             <h1 className="flex-grow text-center text-4xl m-2 text-gray-200">{state.characterData.name}</h1>
+            <button
+              className="text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl"
+              onClick={shareButtonHandler}
+            >
+              Share
+            </button>
             <button
               className="text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl"
               onClick={resetButtonHandler}

@@ -165,9 +165,7 @@ const isValidSkillTree = (characterBuild: BuildInterface, characterData: Charact
     }
     for (let x = 0; x < skillBuildArray[y].length && valid; x++) {
       if (skillBuildArray[y][x] > 0) {
-        if (
-          !skillIsValid(characterBuild, skillDataArray[y][x], y, x, skillBuildArray[y][x], skillKeyArray[y][x], false)
-        ) {
+        if (!skillIsValid(characterBuild, skillDataArray[y][x], y, x, skillBuildArray[y][x], skillKeyArray[y][x])) {
           valid = false;
         }
       }
