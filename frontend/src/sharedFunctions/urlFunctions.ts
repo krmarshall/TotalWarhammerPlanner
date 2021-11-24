@@ -2,9 +2,9 @@ import BuildInterface from '../types/interfaces/BuildInterface';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 
 const baseURL = import.meta.env.DEV ? 'http://localhost:3000/planner/' : 'http://localhost:5000/planner/';
-// 0-Z means base32 decoded to a number between 0 and 31
+// 0-v means base32 decoded to a number between 0 and 31
 // Url format http://localhost:3000/planner/<faction>/<character>/...
-// [0-9 = # Of Skill Rows, y].([0-Z = # of skills in next row, x][0-3 = Skill points in skill] * x). * y
+// [0-9 = # Of Skill Rows, y]([0-v = # of skills in next row, x][0-3 = Skill points in skill] * x) * y
 const convertBuildToCode = (characterBuild: BuildInterface) => {
   const buildData = [...characterBuild.buildData];
   let encodedString = '';
