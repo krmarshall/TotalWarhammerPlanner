@@ -58,8 +58,9 @@ const Planner = () => {
   return (
     <Fragment>
       {state.characterData === null ? (
-        <div>
+        <div className="flex flex-col place-items-center">
           <p className="text-center text-4xl text-gray-200">Loading Character Data...</p>
+          <div className="lds-dual-ring"></div>
         </div>
       ) : (
         <Fragment>

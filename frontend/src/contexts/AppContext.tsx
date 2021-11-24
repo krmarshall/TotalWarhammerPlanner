@@ -20,8 +20,8 @@ interface ActionInterface {
   type: string;
   payload: {
     selectedFaction?: string;
-    characterData?: CharacterInterface;
-    characterBuild?: BuildInterface;
+    characterData?: CharacterInterface | null;
+    characterBuild?: BuildInterface | null;
     localStorageBuildKeys?: Array<string>;
   };
 }
