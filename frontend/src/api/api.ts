@@ -4,7 +4,6 @@ const api = {
   getCharacterSkillTree: (factionKey: string, characterKey: string): Promise<any> => {
     return fetch(`${path}/${factionKey}.${characterKey}`, {
       method: 'GET',
-      mode: 'cors',
     })
       .then((response) => {
         if (response.status === 200) {

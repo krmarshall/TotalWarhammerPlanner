@@ -5,18 +5,25 @@ import helmet from 'helmet';
 import compression from 'compression';
 
 import apiListener from './api';
-import imageTestListener from './imageTest';
 
 import setCustomCacheControl from './setCustomCacheControl';
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+const origin =
+  process.env.NODE_ENV === 'production'
+    ? 'https://totalwarhammerplanner.ca'
+    : ['http://localhost:5000', 'http://localhost:3000'];
+
+app.use(
+  cors({
+    origin: origin,
+  })
+);
+
 app.use(helmet());
 app.use(compression());
-
-app.get('/api/imagetest/', imageTestListener);
 
 // Serve rest api
 app.get('/api/:factionKey.:characterKey', apiListener);
