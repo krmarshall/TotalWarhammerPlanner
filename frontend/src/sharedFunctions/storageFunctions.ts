@@ -1,5 +1,6 @@
 import { ActionInterface, AppContextActions, ContextStateInterface } from '../contexts/AppContext';
 import StorageInterface from '../types/interfaces/StorageInterface';
+import { createCharacterBuildFromArray } from './sharedFunctions';
 
 const initializeBuildsFromStorage = (state: ContextStateInterface, dispatch: (action: ActionInterface) => void) => {
   const storageBuilds: StorageInterface = loadBuildsFromStorage(state);
@@ -21,7 +22,7 @@ const saveBuildToStorage = (
   if (!state.characterBuild) {
     return;
   }
-  storageBuilds[buildName] = state.characterBuild;
+  storageBuilds[buildName] = state.characterBuild.buildData;
 
   localStorage.setItem(
     `${state.characterBuild?.faction}${state.characterBuild?.character}`,
@@ -54,14 +55,17 @@ const deleteBuildFromStorage = (
 const setActiveBuildFromStorage = (
   state: ContextStateInterface,
   dispatch: (action: ActionInterface) => void,
-  buildName: string
+  buildName: string,
+  faction: string,
+  character: string
 ) => {
   const storageBuilds: StorageInterface = loadBuildsFromStorage(state);
   const loadBuild = storageBuilds[buildName];
-  if (loadBuild === undefined) {
+  if (loadBuild === undefined || state.characterData === null) {
     return;
   }
-  dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: loadBuild } });
+  const newCharacterBuild = createCharacterBuildFromArray(loadBuild, state.characterData, faction, character);
+  dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
 };
 
 const loadBuildsFromStorage = (state: ContextStateInterface) => {

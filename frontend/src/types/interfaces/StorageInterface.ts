@@ -1,7 +1,5 @@
-import BuildInterface from './BuildInterface';
-
 interface StorageInterface {
-  [key: string]: BuildInterface;
+  [key: string]: Array<Array<number>>;
 }
 
 export default StorageInterface;

@@ -22,6 +22,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const { characterBuild } = state;
   const [selectable, setSelectable] = useState(false);
   const [previewRankKey, setPreviewRankKey] = useState('rank1');
+  const [blocked, setBlocked] = useState(false);
   const thisSkillsCurrentPoints = characterBuild?.buildData[yIndex][xIndex] as number;
   const rankKeys = Object.keys(skill.ranks);
 
@@ -45,6 +46,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       setPreviewRankKey(`rank${thisSkillsCurrentPoints}`);
     }
   }, [thisSkillsCurrentPoints]);
+
+  useEffect(() => {
+    if (characterBuild?.blockedSkills.includes(skillKey)) {
+      setBlocked(true);
+    } else {
+      setBlocked(false);
+    }
+  }, [characterBuild?.blockedSkills]);
 
   const skillClickHandler = (event: MouseEvent) => {
     console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
@@ -115,7 +124,6 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
-  let tdClassName = 'flex flex-row w-max h-full my-1 border  select-none';
   let divClassName = 'flex flex-row rounded-lg';
 
   if (thisSkillsCurrentPoints > 0) {
@@ -127,6 +135,12 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     divClassName +=
       ' hover:bg-gray-600 opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
   }
+
+  if (blocked) {
+    divClassName += ' line-through';
+  }
+
+  let tdClassName = 'flex flex-row w-max h-full my-1 border select-none';
 
   switch (boxedType) {
     case 'start': {
@@ -173,7 +187,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
           <div className="flex flex-col justify-center m-auto">
             <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
           </div>
-          <SkillTooltip skill={skill} rankKey={previewRankKey} />
+          <SkillTooltip skill={skill} rankKey={previewRankKey} blocked={blocked} />
         </div>
 
         <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
@@ -185,6 +199,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
                 skill={skill}
                 rankKey={rankKey}
                 thisSkillsCurrentPoints={thisSkillsCurrentPoints}
+                blocked={blocked}
               />
             );
           })}

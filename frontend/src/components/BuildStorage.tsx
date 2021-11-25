@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState, MouseEvent } from 'react';
+import { useParams } from 'react-router-dom';
 import { AppContext } from '../contexts/AppContext';
 import {
   deleteBuildFromStorage,
@@ -7,9 +8,16 @@ import {
   setActiveBuildFromStorage,
 } from '../sharedFunctions/storageFunctions';
 
+interface PlannerParamsInterface {
+  faction: string;
+  character: string;
+  code?: string;
+}
+
 const BuildStorage = () => {
   const [buildNameInput, setBuildNameInput] = useState('');
   const { state, dispatch } = useContext(AppContext);
+  const { faction, character } = useParams<PlannerParamsInterface>();
 
   useEffect(() => {
     if (!state.characterBuild?.character) {
@@ -30,7 +38,7 @@ const BuildStorage = () => {
   };
 
   const setBuildHandler = (buildName: string) => {
-    setActiveBuildFromStorage(state, dispatch, buildName);
+    setActiveBuildFromStorage(state, dispatch, buildName, faction, character);
   };
 
   return (

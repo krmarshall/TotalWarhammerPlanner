@@ -6,6 +6,7 @@ const manBane: SkillInterface = {
   icon: CharacterSkillIcons.attack,
   iconType: SkillIconTypes.character,
   rightArrow: true,
+  blocksSkills: ['runeOfTheTrueBeast'],
   ranks: {
     rank1: {
       requiresLevel: 5,

@@ -6,9 +6,16 @@ interface SkillPointSelectorPropInterface {
   index: number;
   rankKey: string;
   thisSkillsCurrentPoints: number;
+  blocked: boolean;
 }
 
-const SkillPointSelector = ({ skill, index, rankKey, thisSkillsCurrentPoints }: SkillPointSelectorPropInterface) => {
+const SkillPointSelector = ({
+  skill,
+  index,
+  rankKey,
+  thisSkillsCurrentPoints,
+  blocked,
+}: SkillPointSelectorPropInterface) => {
   let containerClassName = 'w-4 text-center has-tooltip';
   const selected = thisSkillsCurrentPoints >= index + 1 ? true : false;
 
@@ -21,7 +28,7 @@ const SkillPointSelector = ({ skill, index, rankKey, thisSkillsCurrentPoints }: 
   return (
     <div className={containerClassName}>
       O
-      <SkillTooltip skill={skill} rankKey={rankKey} />
+      <SkillTooltip skill={skill} rankKey={rankKey} blocked={blocked} />
     </div>
   );
 };

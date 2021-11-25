@@ -6,8 +6,8 @@ import BuildStorage from '../components/BuildStorage';
 import CharacterItems from '../components/CharacterItems';
 import SkillRow from '../components/SkillRow';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
-import { createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
-import { convertBuildToCode, convertCodeToBuild, createCharacterBuildFromArray } from '../sharedFunctions/urlFunctions';
+import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
+import { convertBuildToCode, convertCodeToBuild } from '../sharedFunctions/urlFunctions';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 
 interface PlannerParamsInterface {

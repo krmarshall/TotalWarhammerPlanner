@@ -6,9 +6,10 @@ import SkillExtraTooltip from './SkillExtraTooltip';
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;
   rankKey: string;
+  blocked: boolean;
 }
 
-const SkillTooltip = ({ skill, rankKey }: SkillTooltipPropInterface) => {
+const SkillTooltip = ({ skill, rankKey, blocked }: SkillTooltipPropInterface) => {
   return (
     <span className="tooltip text-center max-w-lg">
       <div className="p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
@@ -28,6 +29,7 @@ const SkillTooltip = ({ skill, rankKey }: SkillTooltipPropInterface) => {
             Available after unlocking &quot;{camelCaseToTitle(skill?.requiresSkill)}&quot;
           </p>
         )}
+        {blocked && <p className="text-red-500 text-lg">Skill has been blocked by another skill.</p>}
         <div>
           {skill?.ranks[rankKey as keyof typeof skill.ranks]?.skillEffects.map((skillEffect, index) => {
             return <SkillEffect key={index} skillEffect={skillEffect} />;

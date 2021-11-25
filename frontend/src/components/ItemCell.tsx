@@ -21,7 +21,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         <div className="flex flex-col justify-center m-auto">
           <h2 className="w-32 text-center text-xl text-gray-200">{item.name}</h2>
         </div>
-        <SkillTooltip skill={item} rankKey="rank1" />
+        <SkillTooltip skill={item} rankKey="rank1" blocked={false} />
       </div>
     </div>
   );

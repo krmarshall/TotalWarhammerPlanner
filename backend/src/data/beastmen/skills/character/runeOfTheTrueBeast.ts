@@ -6,6 +6,7 @@ const runeOfTheTrueBeast: SkillInterface = {
   icon: CharacterSkillIcons.defence,
   iconType: SkillIconTypes.character,
   rightArrow: true,
+  blocksSkills: ['manBane'],
   ranks: {
     rank1: {
       requiresLevel: 5,
