@@ -14,9 +14,11 @@ import offensiveAura from './wh_dlc03_hero_passive_offensive_aura.webp';
 import itemPassiveArcane from './wh_magic_item_passive_arcane.webp';
 import itemPassiveArmour from './wh_magic_item_passive_armour.webp';
 import itemPassiveTalisman from './wh_magic_item_passive_talisman.webp';
+import itemPassiveEnchanted from './wh_magic_item_passive_enchanted.webp';
 import itemPassiveWeapon from './wh_magic_item_passive_weapon.webp';
 import stalk from './stalk.webp';
 import strider from './strider.webp';
+import winds from './winds_ui_replenish_battle_ph.webp';
 
 const misc = {
   causesFear,
@@ -35,9 +37,11 @@ const misc = {
   itemPassiveArcane,
   itemPassiveArmour,
   itemPassiveTalisman,
+  itemPassiveEnchanted,
   itemPassiveWeapon,
   stalk,
   strider,
+  winds,
 };
 
 export default misc;

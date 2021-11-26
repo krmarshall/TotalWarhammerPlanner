@@ -1,8 +1,8 @@
 import { CampaignSkillIcons, SkillIconTypes } from '../../../types/enums/SkillIconEnums';
 import SkillInterface from '../../../types/interfaces/SkillInterfaces';
 
-const lightningStrikeGeneric: SkillInterface = {
-  name: 'Lightning Strike Generic',
+const lightningStrikeShared: SkillInterface = {
+  name: 'Lightning Strike Shared',
   icon: CampaignSkillIcons.subterfuge,
   iconType: SkillIconTypes.campaign,
   boxed: true,
@@ -20,4 +20,4 @@ const lightningStrikeGeneric: SkillInterface = {
   },
 };
 
-export default lightningStrikeGeneric;
+export default lightningStrikeShared;

@@ -32,6 +32,7 @@ import income from './income.webp';
 import incomeVampires from './incomeVC.webp';
 import incomeChaos from './incomeChaos.webp';
 import bestialRage from './bestial_rage.webp';
+import unitCapacity from './unit_capacity.webp';
 
 const campaign = {
   agent,
@@ -68,6 +69,7 @@ const campaign = {
   incomeVampires,
   incomeChaos,
   bestialRage,
+  unitCapacity,
 };
 
 export default campaign;

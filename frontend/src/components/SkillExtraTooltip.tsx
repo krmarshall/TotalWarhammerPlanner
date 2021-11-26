@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { ExtraTooltipInterface } from '../types/interfaces/SkillInterfaces';
 import cooldownImg from '../assets/img/other/icon_cooldown_26.webp';
 import windsImg from '../assets/img/other/winds_ui_replenish_battle_ph.webp';
+import chargesImg from '../assets/img/other/icon_uses.webp';
 import SkillEffect from './SkillEffect';
 
 interface SkillExtraTooltipPropInterface {
@@ -13,6 +14,14 @@ const SkillExtraTooltip = ({ extraTooltip }: SkillExtraTooltipPropInterface) => 
     <Fragment>
       <div className="flex flex-row ml-4">
         <h3 className="flex-grow text-left text-xl">{extraTooltip.title}</h3>
+        {extraTooltip.charges && (
+          <div className="flex flex-row">
+            <img className="w-6 h-6" src={chargesImg} alt="charges icon" width="24" height="24" />
+            <div className="ml-1 flex flex-col justify-center">
+              <p className="text-center">{extraTooltip.charges}</p>
+            </div>
+          </div>
+        )}
         {extraTooltip.windsCost && (
           <div className="flex flex-row">
             <img className="w-6 h-6" src={windsImg} alt="winds icon" width="24" height="24" />

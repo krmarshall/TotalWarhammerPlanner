@@ -1,8 +1,8 @@
 import { CampaignSkillIcons, SkillIconTypes } from '../../../types/enums/SkillIconEnums';
 import SkillInterface from '../../../types/interfaces/SkillInterfaces';
 
-const campaignMoveRange: SkillInterface = {
-  name: 'Campaign Move Range Generic',
+const campaignMoveRangeShared: SkillInterface = {
+  name: 'Campaign Move Range Shared',
   icon: CampaignSkillIcons.movement,
   iconType: SkillIconTypes.campaign,
   rightArrow: true,
@@ -20,4 +20,4 @@ const campaignMoveRange: SkillInterface = {
   },
 };
 
-export default campaignMoveRange;
+export default campaignMoveRangeShared;

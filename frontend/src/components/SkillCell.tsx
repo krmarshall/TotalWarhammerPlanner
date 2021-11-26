@@ -176,14 +176,26 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     >
       <div className={divClassName}>
         <div className="flex flex-row has-tooltip">
-          <img // @ts-expect-error 7053
-            src={skillIcons[skill.iconType][skill.icon]}
-            className="w-16 h-16"
-            draggable={false}
-            alt="skillIcon"
-            width="64"
-            height="64"
-          />
+          {skill.iconSpellLore ? (
+            <img // @ts-expect-error 7053
+              src={skillIcons[skill.iconType][skill.iconSpellLore][skill.icon]}
+              className="w-16 h-16"
+              draggable={false}
+              alt="skillIcon"
+              width="64"
+              height="64"
+            />
+          ) : (
+            <img // @ts-expect-error 7053
+              src={skillIcons[skill.iconType][skill.icon]}
+              className="w-16 h-16"
+              draggable={false}
+              alt="skillIcon"
+              width="64"
+              height="64"
+            />
+          )}
+
           <div className="flex flex-col justify-center m-auto">
             <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
           </div>

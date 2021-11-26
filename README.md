@@ -20,3 +20,4 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 ## Known Issues
 - Reinforcement Range icon is unknown, subbed with subterranean icon.
 - Yellow background strider icon is unknown, subbed with normal strider icon.
+- Hero action cost / Building cost icon is unkown, subbed with military spending icon.

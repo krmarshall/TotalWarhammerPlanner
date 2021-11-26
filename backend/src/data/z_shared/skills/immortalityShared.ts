@@ -1,7 +1,7 @@
 import { CampaignSkillIcons, CharacterSkillIcons, SkillIconTypes } from '../../../types/enums/SkillIconEnums';
 import SkillInterface from '../../../types/interfaces/SkillInterfaces';
 
-const immortality: SkillInterface = {
+const immortalityShared: SkillInterface = {
   name: 'Immortality',
   icon: CharacterSkillIcons.woundTime,
   iconType: SkillIconTypes.character,
@@ -20,4 +20,4 @@ const immortality: SkillInterface = {
   },
 };
 
-export default immortality;
+export default immortalityShared;

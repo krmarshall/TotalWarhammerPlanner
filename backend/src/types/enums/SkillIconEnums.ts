@@ -65,6 +65,7 @@ enum CampaignSkillIcons {
   incomeVampires = 'incomeVampires',
   incomeChaos = 'incomeChaos',
   bestialRage = 'bestialRage',
+  unitCapacity = 'unitCapacity',
 }
 
 enum CharacterSkillIcons {
@@ -212,6 +213,8 @@ enum AbilitySkillIcons {
   bloodLust = 'bloodLust',
   deadlyOnslaught = 'deadlyOnslaught',
   scourge = 'scourge',
+  greaterArcaneConduit = 'greaterArcaneConduit',
+  somethingWickedThisWayComes = 'somethingWickedThisWayComes',
 }
 
 enum MiscSkillIcons {
@@ -231,9 +234,11 @@ enum MiscSkillIcons {
   itemPassiveArcane = 'itemPassiveArcane',
   itemPassiveArmour = 'itemPassiveArmour',
   itemPassiveTalisman = 'itemPassiveTalisman',
+  itemPassiveEnchanted = 'itemPassiveEnchanted',
   itemPassiveWeapon = 'itemPassiveWeapon',
   stalk = 'stalk',
   strider = 'strider',
+  winds = 'winds',
 }
 
 export {

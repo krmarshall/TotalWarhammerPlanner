@@ -15,7 +15,7 @@ const beastmen: FactionInterface = {
       icon: beastmenPortraits.khazrak,
     },
     malagor: {
-      implemented: false,
+      implemented: true,
       name: 'Malagor the Dark Omen',
       icon: beastmenPortraits.malagor,
     },

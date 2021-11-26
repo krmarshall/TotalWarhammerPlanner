@@ -1,7 +1,8 @@
 // Each skill rank can have multiple effects, such as increasing the melee defence of units, as well as their leadership.
 interface SkillEffectInterface {
-  icon: string;
-  iconType: string;
+  icon?: string;
+  iconSpellLore?: string;
+  iconType?: string;
   description: string;
   goodEffect: boolean;
 }
@@ -24,6 +25,7 @@ interface ExtraTooltipInterface {
   subTitle?: string;
   windsCost?: number;
   cooldown?: number;
+  charges?: number;
   type?: string;
   duration?: string;
   target?: string;
@@ -59,4 +61,4 @@ interface SkillInterface {
 }
 
 export default SkillInterface;
-export type { SkillRankInterface, SkillEffectInterface };
+export type { SkillRankInterface, SkillEffectInterface, ExtraTooltipInterface };

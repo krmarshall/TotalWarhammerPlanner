@@ -1,7 +1,7 @@
 import { CharacterSkillIcons, MiscSkillIcons, SkillIconTypes } from '../../../types/enums/SkillIconEnums';
 import SkillInterface from '../../../types/interfaces/SkillInterfaces';
 
-const magicResistance: SkillInterface = {
+const missileResistanceShared: SkillInterface = {
   name: 'Missile Resistance Generic',
   icon: CharacterSkillIcons.wardSave,
   iconType: SkillIconTypes.character,
@@ -9,9 +9,9 @@ const magicResistance: SkillInterface = {
     rank1: {
       skillEffects: [
         {
-          icon: MiscSkillIcons.resistanceMagic,
+          icon: MiscSkillIcons.resistanceMissile,
           iconType: SkillIconTypes.misc,
-          description: 'Magic resistance: 10%',
+          description: 'Missile resistance: 10%',
           goodEffect: true,
         },
       ],
@@ -19,4 +19,4 @@ const magicResistance: SkillInterface = {
   },
 };
 
-export default magicResistance;
+export default missileResistanceShared;

@@ -1,21 +1,13 @@
-import { CharacterSkillIcons, MiscSkillIcons, SkillIconTypes } from '../../../../types/enums/SkillIconEnums';
+import magicResistanceShared from '../../../z_shared/skills/magicResistanceShared';
 import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
 
 const uncannySenses: SkillInterface = {
+  ...magicResistanceShared,
   name: 'Uncanny Senses',
-  icon: CharacterSkillIcons.wardSave,
-  iconType: SkillIconTypes.character,
   ranks: {
     rank1: {
+      ...magicResistanceShared.ranks.rank1,
       requiresLevel: 10,
-      skillEffects: [
-        {
-          icon: MiscSkillIcons.resistanceMagic,
-          iconType: SkillIconTypes.misc,
-          description: 'Magic resistance: 10%',
-          goodEffect: true,
-        },
-      ],
     },
   },
 };

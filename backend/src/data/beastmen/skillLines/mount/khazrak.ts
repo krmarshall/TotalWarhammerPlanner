@@ -1,4 +1,4 @@
-import bloodLust from '../../skills/character/bloodLust';
+import bloodLust from '../../skills/abilities/bloodLust';
 import fuelledByBlood from '../../skills/character/fuelledByBlood';
 import shadowHide from '../../skills/character/shadowHide';
 import uncannySenses from '../../skills/character/uncannySenses';

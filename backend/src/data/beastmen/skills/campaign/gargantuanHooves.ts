@@ -1,8 +1,8 @@
 import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
-import campaignMoveRange from '../../../z_shared/skills/campaignMoveRange';
+import campaignMoveRangeShared from '../../../z_shared/skills/campaignMoveRangeShared';
 
 const gargantuanHooves: SkillInterface = {
-  ...campaignMoveRange,
+  ...campaignMoveRangeShared,
   name: 'Gargantuan Hooves',
 };
 

@@ -1,8 +1,8 @@
 import SkillInterface from '../../../../types/interfaces/SkillInterfaces';
-import lightningStrikeGeneric from '../../../z_shared/skills/lightningStikeGeneric';
+import lightningStrikeShared from '../../../z_shared/skills/lightningStrikeShared';
 
 const lightningStrike: SkillInterface = {
-  ...lightningStrikeGeneric,
+  ...lightningStrikeShared,
   name: 'Lightning Strike',
   requiresSkill: 'unholyResilience',
 };
