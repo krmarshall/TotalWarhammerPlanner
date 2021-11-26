@@ -1,6 +1,8 @@
+import { toast } from 'react-hot-toast';
 import { ActionInterface, AppContextActions, ContextStateInterface } from '../contexts/AppContext';
 import StorageInterface from '../types/interfaces/StorageInterface';
-import { createCharacterBuildFromArray } from './sharedFunctions';
+import { createCharacterBuildFromArray, createEmptyCharacterBuild } from './sharedFunctions';
+import { isValidSkillTree } from './SkillVerification';
 
 const initializeBuildsFromStorage = (state: ContextStateInterface, dispatch: (action: ActionInterface) => void) => {
   const storageBuilds: StorageInterface = loadBuildsFromStorage(state);
@@ -65,6 +67,14 @@ const setActiveBuildFromStorage = (
     return;
   }
   const newCharacterBuild = createCharacterBuildFromArray(loadBuild, state.characterData, faction, character);
+  if (!isValidSkillTree(newCharacterBuild, state.characterData)) {
+    toast.error(
+      'The build you are trying to load is invalid, an update or bugfix to the character tree may have caused the build to be invalid. Sorry!'
+    );
+    const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, faction, character);
+    dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
+    return;
+  }
   dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
 };
 

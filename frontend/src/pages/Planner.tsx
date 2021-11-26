@@ -7,6 +7,7 @@ import CharacterItems from '../components/CharacterItems';
 import SkillRow from '../components/SkillRow';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
+import { isValidSkillTree } from '../sharedFunctions/SkillVerification';
 import { convertBuildToCode, convertCodeToBuild } from '../sharedFunctions/urlFunctions';
 import CharacterInterface from '../types/interfaces/CharacterInterface';
 
@@ -48,6 +49,14 @@ const Planner = () => {
     }
     const importBuild = convertCodeToBuild(code);
     const newCharacterBuild = createCharacterBuildFromArray(importBuild, state.characterData, faction, character);
+    if (!isValidSkillTree(newCharacterBuild, state.characterData)) {
+      toast.error(
+        'The build you are trying to load is invalid, an update or bugfix to the character tree may have caused the build to be invalid. Sorry!'
+      );
+      const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, faction, character);
+      dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
+      return;
+    }
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
     setUrlLoaded(true);
   }, [code, state.characterData]);
