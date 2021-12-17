@@ -43,7 +43,7 @@ const BuildStorage = () => {
 
   return (
     <div
-      className="h-auto w-auto flex flex-row place-content-between shadow-lg border border-gray-500 rounded"
+      className="h-auto w-auto flex flex-row place-content-between shadow-lg border border-gray-500 rounded select-none"
       style={{ minWidth: '24rem' }}
     >
       <div className="flex flex-col justify-center">

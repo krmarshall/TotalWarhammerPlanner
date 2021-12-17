@@ -58,7 +58,7 @@ const missingRequiredPoints = (
   if (characterBuild?.buildData && skill.inLastYSkills) {
     let totalPoints = 0;
     for (let i = skill.inLastYSkills; i > 0; i--) {
-      totalPoints += characterBuild.buildData[yIndex][xIndex - i];
+      totalPoints += characterBuild.buildData?.[yIndex]?.[xIndex - i];
     }
     if (totalPoints >= skill.requiresXPoints) {
       return false;
@@ -145,6 +145,7 @@ const skillIncreaseIsValid = (
   return true;
 };
 
+// Something wonky with this when checking old saved builds that are now invalid?
 const isValidSkillTree = (characterBuild: BuildInterface, characterData: CharacterInterface) => {
   const skillBuildArray = characterBuild?.buildData;
   // Should probably size this dynamically

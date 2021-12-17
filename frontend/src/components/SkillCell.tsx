@@ -23,7 +23,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const [selectable, setSelectable] = useState(false);
   const [previewRankKey, setPreviewRankKey] = useState('rank1');
   const [blocked, setBlocked] = useState(false);
-  const thisSkillsCurrentPoints = characterBuild?.buildData[yIndex][xIndex] as number;
+  const thisSkillsCurrentPoints = characterBuild?.buildData?.[yIndex]?.[xIndex] as number;
   const rankKeys = Object.keys(skill.ranks);
 
   useEffect(() => {
