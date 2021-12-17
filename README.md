@@ -1,5 +1,7 @@
 # TotalWarhammerPlanner
 
+Most of the actual development is done, just need to style the front end a bit better, add some form of limiter to the rest api, and set up all of the character skills and data (loooong part). Should also set up unit/integration tests for the rest api. I was mostly working on this because the server warhammercalc.com gets its character data from is always down, but it seems with TW3 coming out they are working on that site again so putting this project on hold.
+
 Project is split into two main parts.
 
 ## Frontend
