@@ -1,0 +1,3359 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_generic_01",
+        "image_path": "mount_warhorse.png",
+        "is_background_skill": false,
+        "name": "Warhorse",
+        "description": "A general's horse can be his most trusted and daring companion. Just don't name him Daisy.",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Mount: Warhorse",
+                "key": "wh_main_effect_enable_mount_warhorse",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_warhorse",
+        "tier": 0,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_generic_02",
+        "image_path": "mount_war_bear.png",
+        "is_background_skill": false,
+        "name": "War Bear",
+        "description": "Loyal, fierce, powerful and surprisingly fast – a War Bar is a symbol of Kislev itself.",
+        "levels": [
+          {
+            "unlocked_at_rank": 11,
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Mount: War Bear",
+                "key": "wh3_main_effect_enable_mount_warbear",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_war_bear",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_generic_03",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Ursun's Protection",
+        "description": "Naught can penetrate the swirling mists of ice and sleet that churn around those afforded Father Bear's protection.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 280,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 10%",
+                "key": "wh_main_effect_character_stat_missile_resistance",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_all_unique_missile_resist",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_fireball",
+        "image_path": "wh_main_spell_fire_fireball.png",
+        "is_background_skill": false,
+        "name": "Arcane Vassal",
+        "description": " ",
+        "levels": [
+          {
+            "unlocked_at_rank": 18,
+            "effects": [
+              {
+                "icon": "magic_character.png",
+                "priority": 291,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Bound spell: \"Fireball\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_bound_fireball",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_bound_fireball",
+                      "icon_name": "wh_main_spell_fire_fireball",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_magic_missile",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missile.png",
+                        "description": "Magic Missile"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Fireball",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_and_flaming_medium",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes moderate magical & fire damage"
+                        },
+                        {
+                          "key": "wh_main_projectile_powerful_explosion",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Powerful explosion"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_projectile_effective_long_range",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Effective at long range"
+                        },
+                        {
+                          "key": "wh3_main_projectile_requires_line_of_sight",
+                          "sort_order": 215,
+                          "effect_state": "negative",
+                          "description": "Requires line of sight to the target"
+                        }
+                      ],
+                      "num_uses": 4,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 300,
+                      "unique_id": "1795",
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_bound_fireball",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_main_skill_lzd_skink_priest_arcane_vassal",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_orthodox_religion",
+        "image_path": "character_construction.png",
+        "is_background_skill": false,
+        "name": "Orthodoxy in Action",
+        "description": "The Grand Orthodoxy shall see Kislev rise again, mighty and without peer, with Ruin defeated and destroyed utterly.",
+        "levels": [
+          {
+            "unlocked_at_rank": 20,
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Construction cost: +300% for Hallowed Wood buildings",
+                "key": "wh3_main_effect_building_construction_cost_mod_ksl_hallowed_wood",
+                "value": 300,
+                "effect_scope": "character_to_region_own_factionwide"
+              },
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Construction cost: -20% for Orthodoxy buildings",
+                "key": "wh3_main_effect_building_construction_cost_mod_ksl_religion",
+                "value": -20,
+                "effect_scope": "character_to_region_own_factionwide"
+              },
+              {
+                "icon": "income.png",
+                "priority": 162,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Income from all buildings: +10%",
+                "key": "wh_main_effect_economy_gdp_mod_all",
+                "value": 10,
+                "effect_scope": "faction_to_region_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_orthodox_religion",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_01",
+        "image_path": "character_replenishment.png",
+        "is_background_skill": false,
+        "name": "For the People",
+        "description": "If Kislev and its people are to endure then they must fight to the death, lest the foe take all for which they have strived.",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +6%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "morale.png",
+                "priority": 410,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership: +2",
+                "key": "wh_main_effect_force_stat_leadership",
+                "value": 2,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_01",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_02",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "A Strong Man",
+        "description": "What the peasants really want, whether they know so or not, is a strong man; a man with will of iron so strong that death itself runs in his wake.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "wound_time.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Wound recovery time: -2",
+                "key": "wh_main_effect_character_wound_recovery_time_mod",
+                "value": -2,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_02",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_unique_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_03",
+        "image_path": "wh3_main_lord_passive_blaze_of_devotion.png",
+        "is_background_skill": false,
+        "name": "Fiery Devotion",
+        "description": "Faith in oneself and one's cause are at least as important as martial skill, if not more so.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "devotion_bundle.png",
+                "priority": 3,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Devotion gained from successful Hero actions: +20%",
+                "key": "wh3_main_effect_pooled_resource_ksl_devotion_hero_actions_mod",
+                "value": 20,
+                "effect_scope": "character_to_faction"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Blaze of Devotion\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_blaze_of_devotion",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_lord_passive_blaze_of_devotion",
+                      "icon_name": "wh3_main_lord_passive_blaze_of_devotion",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Blaze of Devotion",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "1466905724",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "imbue_ignition": 10,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+5 Melee Attack"
+                            },
+                            {
+                              "value": 4,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+4 Leadership"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_blaze_of_devotion",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_03",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_unique_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_04",
+        "image_path": "character_experience.png",
+        "is_background_skill": false,
+        "name": "Promote the Pious",
+        "description": "Those among the faithful who show talent and promise soon find themselves raised up within Grand Orthodoxy to inspire and lead others.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "devotion.png",
+                "priority": 3,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Devotion generated: 2 per turn",
+                "key": "wh3_main_effect_ksl_devotion_gain_characters",
+                "value": 2,
+                "effect_scope": "character_to_faction_unseen"
+              },
+              {
+                "icon": "patriarch.png",
+                "priority": 104,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero recruit rank: +2 for Patriarchs",
+                "key": "wh3_main_effect_agent_recruitment_xp_ksl_patriarch",
+                "value": 2,
+                "effect_scope": "character_to_province_own"
+              },
+              {
+                "icon": "treasury.png",
+                "priority": 105,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Hero recruitment cost: -30%",
+                "key": "wh_main_effect_agent_recruitment_cost_mod",
+                "value": -30,
+                "effect_scope": "character_to_province_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_04",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_unique_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_05",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Howling Rage",
+        "description": "There's nothing quite like a pious Kislevite man scorned, especially one whose rage is stoked by the finest kvas.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +10",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +15%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 15,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_05",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_unique_01"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_unique_06",
+        "image_path": "character_army.png",
+        "is_background_skill": false,
+        "name": "Firebrand",
+        "description": "The power to rouse the rabble to terrific violence in a heartbeat is not to be underestimated.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -50%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -50,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "army.png",
+                "priority": 270,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Local recruitment capacity: +2",
+                "key": "wh_main_effect_unit_recruitment_points",
+                "value": 2,
+                "effect_scope": "force_to_province_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_kostaltyn_unique_06",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_unique_02",
+          "wh3_main_skill_node_ksl_kostaltyn_unique_03",
+          "wh3_main_skill_node_ksl_kostaltyn_unique_04",
+          "wh3_main_skill_node_ksl_kostaltyn_unique_05"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_01",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Icon of Strength",
+        "description": "Frail as they may seem, there is no doubt the Gods guide the Patriarch's arm, and lend him their strength in defence of the Motherland.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_patriarch_self_01",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_02",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Impassioned",
+        "description": "There is nothing but utter belief. There is no reasoning with this one.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_impassioned",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_03",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Wild-Eyed",
+        "description": "\"Don't look into their eyes, there is only death there!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 4,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +9",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 9,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_wild-eyed",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_04",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Conviction",
+        "description": "Such is this one's conviction that others have no choice but to believe.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Leadership: +4",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 4,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Leadership: +9",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 9,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_conviction",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_05",
+        "image_path": "character_general_ability.png",
+        "is_background_skill": false,
+        "name": "Soothsaying",
+        "description": "Speaking words of power or faith can alter perceptions on the battlefield.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +20%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 20,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +40%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 40,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_soothsaying",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_01"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_06",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Blessing Discs",
+        "description": "Kostaltyn’s flat metal discs, inscribed with Ursun’s runes and icons, inspire even greater deeds when awarded to the worthy.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_patriarch_self_06",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_02",
+          "wh3_main_skill_node_ksl_kostaltyn_self_03",
+          "wh3_main_skill_node_ksl_kostaltyn_self_04",
+          "wh3_main_skill_node_ksl_kostaltyn_self_05"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_07",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Tenacity",
+        "description": "This one will not go down easily - it will be necessary to break both the will and the body first.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_tenacity",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_08",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Devastating Charge",
+        "description": "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +15",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 15,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 30,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_devastating_charge",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_09",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Scarred Veteran",
+        "description": "The scars on this storied warrior reveal a veteran of many battles, a being not easy to kill and one worthy of respect and fear.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+        "tier": 8,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_10",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Fervour",
+        "description": "This one fights with a fervour to be both admired and despised.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_fervour",
+        "tier": 9,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_06"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_self_11",
+        "image_path": "wh3_main_character_passive_enduring_devotion.png",
+        "is_background_skill": false,
+        "name": "Enduring Devotion",
+        "description": "The longer you believe, the more intense that faith becomes. When your belief is total, there is nothing that you cannot achieve.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Enduring Devotion\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_enduring_devotion",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_passive_enduring_devotion",
+                      "icon_name": "wh3_main_character_passive_enduring_devotion",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Enduring Devotion",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "1111919495",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "positive"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+5 Melee Defence"
+                            },
+                            {
+                              "value": 4,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+4 Leadership"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_enduring_devotion",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_patriarch_self_11",
+        "tier": 10,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_self_07",
+          "wh3_main_skill_node_ksl_kostaltyn_self_08",
+          "wh3_main_skill_node_ksl_kostaltyn_self_09",
+          "wh3_main_skill_node_ksl_kostaltyn_self_10"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_01",
+        "image_path": "wh3_main_character_abilities_ursuns_roar.png",
+        "is_background_skill": false,
+        "name": "Ursun's Roar",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 2,
+            "effects": [
+              {
+                "icon": "magic_cooldown_character.png",
+                "priority": 303,
+                "category": "both",
+                "is_positive_value_good": false,
+                "description": "Cooldown: -25% to \"Ursun's Roar\"",
+                "key": "wh3_main_effect_ability_cooldown_ursuns_roar",
+                "value": -25,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_dignitary_unique_patriarch_ursuns_roar",
+        "tier": 0,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_02",
+        "image_path": "wh3_main_character_abilities_dazs_song_of_winter_sunlight.png",
+        "is_background_skill": false,
+        "name": "Dazh's Song of Winter Sunlight",
+        "description": "\"Death is like a winter chill; No door can keep it from us; And summer yet may bloom againThough ice be all upon us.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Dazh's Song of Winter Sunlight\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_dazs_song_of_sunlight",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_abilities_dazs_song_of_winter_sunlight",
+                      "icon_name": "wh3_main_character_abilities_dazs_song_of_winter_sunlight",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Dazh's Song of Winter Sunlight",
+                      "active_time": 10,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "16537784",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 10,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_dazs_song_of_sunlight",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_salyaks_lullaby",
+              "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_battle_hymn"
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Dazh's Song of Winter Sunlight\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_dazs_song_of_sunlight",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_abilities_dazs_song_of_winter_sunlight",
+                      "icon_name": "wh3_main_character_abilities_dazs_song_of_winter_sunlight",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Dazh's Song of Winter Sunlight",
+                      "active_time": 10,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "16537784",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 10,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_dazs_song_of_sunlight",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "magic_cooldown_character.png",
+                "priority": 303,
+                "category": "both",
+                "is_positive_value_good": false,
+                "description": "Cooldown: -25% to \"Dazh's Song of Winter Sunlight\"",
+                "key": "wh3_main_effect_ability_cooldown_dazs_song_of_sunlight",
+                "value": -25,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_dignitary_unique_patriarch_dazs_song_of_winter_sunlight",
+        "tier": 1,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_01"
+        ]
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_03",
+        "image_path": "wh3_main_character_abilities_tors_battle_hymn.png",
+        "is_background_skill": false,
+        "name": "Tor's Battle Hymn",
+        "description": "",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Tor's Battle Hymn\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_tors_battle_hymn",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_abilities_tors_battle_hymn",
+                      "icon_name": "wh3_main_character_abilities_tors_battle_hymn",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Tor's Battle Hymn",
+                      "active_time": 25,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "1641841943",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 40,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+40 Melee Attack"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_tors_battle_hymn",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_main_skill_ksl_dignitary_unique_patriarch_dazs_song_of_winter_sunlight",
+              "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_salyaks_lullaby"
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Tor's Battle Hymn\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_tors_battle_hymn",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_abilities_tors_battle_hymn",
+                      "icon_name": "wh3_main_character_abilities_tors_battle_hymn",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Tor's Battle Hymn",
+                      "active_time": 25,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "1641841943",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 40,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+40 Melee Attack"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_tors_battle_hymn",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "magic_cooldown_character.png",
+                "priority": 303,
+                "category": "both",
+                "is_positive_value_good": false,
+                "description": "Cooldown: -25% to \"Tor's Battle Hymn\"",
+                "key": "wh3_main_effect_ability_cooldown_tors_battle_hymn",
+                "value": -25,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_battle_hymn",
+        "tier": 2,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_01"
+        ]
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_04",
+        "image_path": "wh3_main_character_abilities_salyaks_lullaby.png",
+        "is_background_skill": false,
+        "name": "Salyak's Lullaby",
+        "description": "",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Salyak's Lullaby\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_salyaks_lullaby",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_abilities_salyaks_lullaby",
+                      "icon_name": "wh3_main_character_abilities_salyaks_lullaby",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Salyak's Lullaby",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_replenish",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Replenishes hit points of combatants"
+                        }
+                      ],
+                      "num_uses": 3,
+                      "active_time": 15,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "1337066241",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 15,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_salyaks_lullaby",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_main_skill_ksl_dignitary_unique_patriarch_dazs_song_of_winter_sunlight",
+              "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_battle_hymn"
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Salyak's Lullaby\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_salyaks_lullaby",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_abilities_salyaks_lullaby",
+                      "icon_name": "wh3_main_character_abilities_salyaks_lullaby",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Salyak's Lullaby",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_replenish",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Replenishes hit points of combatants"
+                        }
+                      ],
+                      "num_uses": 3,
+                      "active_time": 15,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "1337066241",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 15,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_salyaks_lullaby",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "magic_cooldown_character.png",
+                "priority": 303,
+                "category": "both",
+                "is_positive_value_good": false,
+                "description": "Cooldown: -25% to \"Salyak's Lullaby\"",
+                "key": "wh3_main_effect_ability_cooldown_salyaks_lullaby",
+                "value": -25,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_dignitary_unique_patriarch_tors_salyaks_lullaby",
+        "tier": 3,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_battle_prayers_01"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_0",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Inspiring Presence",
+        "description": "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 10,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_all_lord_battle_inspiring_presence",
+        "tier": 0,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_1_1",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Firing Drills",
+        "description": "\"Again, again, again! We'll practice this until your fingers bleed!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +2 for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_kossars_streltsi",
+                "value": 2,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +3% for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_kossars_strelsi",
+                "value": 3,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4 for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_kossars_streltsi",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +6% for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_kossars_strelsi",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_kossars_streltsi",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +9% for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_kossars_strelsi",
+                "value": 9,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_kossars_streltsi",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_1_3",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Best of the Court",
+        "description": "\"There's ice in the veins of the mighty Guards of Kislev, or so the rumour goes…\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +2 for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_tsar_guard",
+                "value": 2,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +2 for Tzar Guard and Ice Guard units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_tsar_guard_ice_guard",
+                "value": 2,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +4% for Ice Guard units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_ice_guard",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_tsar_guard",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4 for Tzar Guard and Ice Guard units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_tsar_guard_ice_guard",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Ice Guard units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_ice_guard",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_tsar_guard",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Tzar Guard and Ice Guard units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_tsar_guard_ice_guard",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Ice Guard units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_ice_guard",
+                "value": 8,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_elite_infantry",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_1_4",
+        "image_path": "battle_charge.png",
+        "is_background_skill": false,
+        "name": "Relentless Chargers",
+        "description": "The thunderous pounding of Kislevite hooves can be heard for leagues around, even muffled by the crunch of fresh snow.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Speed: +4% for Horse Archers, Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_speed_ksl_heavy_cavalry",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12% for Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_charge_bonus_pct_ksl_heavy_cavalry",
+                "value": 12,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +4% for Horse Archers units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_horse_archers",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Speed: +8% for Horse Archers, Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_speed_ksl_heavy_cavalry",
+                "value": 8,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12% for Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_charge_bonus_pct_ksl_heavy_cavalry",
+                "value": 12,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Horse Archers units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_horse_archers",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Speed: +12% for Horse Archers, Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_speed_ksl_heavy_cavalry",
+                "value": 12,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +18% for Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_charge_bonus_pct_ksl_heavy_cavalry",
+                "value": 18,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Horse Archers units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_horse_archers",
+                "value": 8,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_heavy_cavalry",
+        "tier": 3,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_1_5",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Creatures of the Land",
+        "description": "The beasts that roam the forests of Kislev are somehow even more lethal than the land they inhabit.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_war_bear_elemental_bear_leopard",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +4% for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_monsters",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_war_bear_elemental_bear_leopard",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +8% for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_monsters",
+                "value": 8,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_war_bear_elemental_bear_leopard",
+                "value": 8,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12% for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_monsters",
+                "value": 12,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_monsters",
+        "tier": 4,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_1_6",
+        "image_path": "battle_armour.png",
+        "is_background_skill": false,
+        "name": "Skilled Craftsmen",
+        "description": "Kislevite craftsmen toil night and day, tinkering with contraptions to help repel the forces of Chaos.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour: +8 for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_armour_ksl_war_machines",
+                "value": 8,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ammunition: +5% for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_war_machines",
+                "value": 5,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour: +10 for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_armour_ksl_war_machines",
+                "value": 10,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10% for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_war_machines",
+                "value": 10,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_armour_ksl_war_machines",
+                "value": 12,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_war_machines",
+                "value": 20,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_war_machines",
+        "tier": 5,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_0"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_2",
+        "image_path": "wh_main_character_abilities_rally.png",
+        "is_background_skill": false,
+        "name": "Rally!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Rally!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_rally",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_rally",
+                      "icon_name": "wh_main_character_abilities_rally",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rally!",
+                      "active_time": 14,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "2076",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 14,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 16,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+16 Leadership"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_rally",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_all_lord_battle_rally",
+        "tier": 6,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 6,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_1_1",
+          "wh3_main_skill_node_ksl_kostaltyn_army_1_3",
+          "wh3_main_skill_node_ksl_kostaltyn_army_1_4",
+          "wh3_main_skill_node_ksl_kostaltyn_army_1_5",
+          "wh3_main_skill_node_ksl_kostaltyn_army_1_6"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_3_1",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Skirmisher Traditions",
+        "description": "The warriors of the north carry conflict in their blood, a legacy left by the Khan-Kings and Khan-Queens of old.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 432,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Kossars, Armoured Kossars, Streltsi and Ice Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_kossars_streltsi_ice_guard_rank7",
+                "value": 5,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 512,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ammunition: +15% for Kossars, Armoured Kossars, Streltsi and Ice Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_kossars_streltsi_ice_guard_rank7",
+                "value": 15,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for Kossars, Armoured Kossars, Streltsi and Ice Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_resistance_ksl_kossars_streltsi_ice_guard_rank7",
+                "value": 15,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_kossars_streltsi_ice_guard_rank_7",
+        "tier": 7,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_3_2",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Horsemasters",
+        "description": "Descended of the proud horse-warriors of the Gospodar, all Kislevites are born to the saddle like their ancestors before them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 422,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Speed: +10% for Kossovite Dervishes, Horse Archers, Winged Lancers, and Gryphon Legion units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_speed_ksl_horse_cavalry_rank7",
+                "value": 10,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "charge.png",
+                "priority": 502,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Kossovite Dervishes, Horse Archers, Winged Lancers, and Gryphon Legion units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_charge_bonus_add_ksl_horse_cavalry_rank7",
+                "value": 12,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for Kossovite Dervishes, Horse Archers, Winged Lancers, and Gryphon Legion units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_resistance_ksl_horse_cavalry_rank7",
+                "value": 15,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_cavalry_rank_7",
+        "tier": 8,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_3_3",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Ursun's Favoured",
+        "description": "\"Ursun is with us, brothers! None can stand against the beasts of the Bear-God!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 402,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour: +10 for War Bear Riders, Elemental Bear, Snow Leopard and Tzar Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_armour_ksl_bears_leopards_tsar_guard_rank7",
+                "value": 10,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "defence.png",
+                "priority": 452,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for War Bear Riders, Elemental Bears, Snow Leopard and Tzar Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_bears_leopards_tsar_guard_rank7",
+                "value": 5,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 582,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 15% for War Bear Riders, Elemental Bears, Snow Leopard and Tzar Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_magic_resistance_ksl_bears_leopards_tsar_guard_rank7",
+                "value": 15,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_bears_tsar_guard_rank_7",
+        "tier": 9,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_3_4",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Battle Engineers",
+        "description": "The workshops of the north are always busy, their engineers working tirelessly in the pursuit of battle excellence.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 512,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for War Sleds and Little Grom units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_artillery_sleds_rank7",
+                "value": 20,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 562,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for War Sleds and Little Grom units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_artillery_sleds_rank7",
+                "value": 10,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for War Sleds and Little Grom units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_resistance_ksl_artillery_sleds_rank7",
+                "value": 15,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_war_machines_rank_7",
+        "tier": 10,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_2"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_army_4",
+        "image_path": "wh_main_character_abilities_stand_your_ground.png",
+        "is_background_skill": false,
+        "name": "Stand Your Ground!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Stand Your Ground!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_stand_your_ground",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_stand_your_ground",
+                      "icon_name": "wh_main_character_abilities_stand_your_ground",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Stand Your Ground!",
+                      "active_time": 18,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "2094",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 18,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 24,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+24 Melee Defence"
+                            },
+                            {
+                              "value": 16,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+16 Leadership"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_stand_your_ground",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 305,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_all_lord_battle_stand_your_ground",
+        "tier": 11,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_army_3_1",
+          "wh3_main_skill_node_ksl_kostaltyn_army_3_2",
+          "wh3_main_skill_node_ksl_kostaltyn_army_3_3",
+          "wh3_main_skill_node_ksl_kostaltyn_army_3_4"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_0",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "Route Marcher",
+        "description": "Those who know the land and its secrets will travel faster and further than the foes who don't.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_all_lord_campaign_route_marcher",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_1_1",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Iron Disciplinarian",
+        "description": "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Control: +1",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1,
+                "effect_scope": "character_to_province_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Control: +2",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2,
+                "effect_scope": "character_to_province_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Control: +3",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 3,
+                "effect_scope": "character_to_province_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_iron_disciplinarian",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_1_2",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Leader of Renown",
+        "description": "Revered by the Warrior Priests, such a celebrated leader will inspire many new recruits.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -5%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -5,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -10%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -10,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -15%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -15,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_leader_of_renown",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_1_3",
+        "image_path": "campaign_disaster.png",
+        "is_background_skill": false,
+        "name": "Reassuring Presence",
+        "description": "The presence of this Lord ensures a measure of calm, reducing panic and desertion amongst followers.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Attrition: -10% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -10,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Attrition: -20% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -20,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Attrition: -30% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -30,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_lord_all_campaign_reassuring_presence",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_1_4",
+        "image_path": "campaign_untainted.png",
+        "is_background_skill": false,
+        "name": "Fervent",
+        "description": "Through our acts, the gods will cleanse the lands.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Corruption: -1",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -1,
+                "effect_scope": "character_to_province_any"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Corruption: -2",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -2,
+                "effect_scope": "character_to_province_any"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Corruption: -3",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -3,
+                "effect_scope": "character_to_province_any"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_fervent",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_0"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_2",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Draftmaster",
+        "description": "Someone has to ensure the numbers and quality of recruits remain high.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "army.png",
+                "priority": 270,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Local recruitment capacity: +1",
+                "key": "wh_main_effect_unit_recruitment_points",
+                "value": 1,
+                "effect_scope": "force_to_province_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_main_skill_def_campaign_draftmaster",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_1_1",
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_1_2",
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_1_3",
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_1_4"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_3_1",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Lightning Strike",
+        "description": "\"The time to strike is now!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +25%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 25,
+                "effect_scope": "general_to_force_own_unseen"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50,
+                "effect_scope": "general_to_force_own_unseen"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Enables lightning strike battles when reinforcements are present",
+                "key": "wh_main_effect_conquest_enable_night_battles",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50,
+                "effect_scope": "general_to_force_own_unseen"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_all_lord_campaign_lightning_strike",
+        "tier": 6,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_3_2",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Quartermaster",
+        "description": "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Upkeep: -3%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -3,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Upkeep: -6%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -6,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Upkeep: -9%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -9,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_quartermaster",
+        "tier": 7,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_3_3",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Logistician",
+        "description": "Proficient with figures, this Lord, or his subordinates, can keep his army fulfilled, even in dire circumstances.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +2%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 2,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +4%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 4,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +6%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_logistician",
+        "tier": 8,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_3_4",
+        "image_path": "campaign_ambush.png",
+        "is_background_skill": false,
+        "name": "Alert",
+        "description": "Countless conflicts and a keen sense of awareness have made this Lord difficult to entrap.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +6%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 6,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterranean.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +5%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +16%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 16,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterranean.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +30%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 30,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh_main_skill_all_lord_campaign_alert",
+        "tier": 9,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_2"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_campaign_4",
+        "image_path": "campaign_agent.png",
+        "is_background_skill": false,
+        "name": "Renowned & Feared",
+        "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8,
+                "effect_scope": "general_to_force_own"
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh2_main_skill_ll_self_defense",
+        "tier": 10,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_3_1",
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_3_2",
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_3_3",
+          "wh3_main_skill_node_ksl_kostaltyn_campaign_3_4"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_kostaltyn_innate_01",
+        "image_path": "trait_kislev.png",
+        "is_background_skill": true,
+        "name": "Supreme Patriarch",
+        "description": "\"If you love the Bear you will happily die rather than be taken!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Wound recovery time: -2",
+                "key": "wh_main_effect_character_wound_recovery_time_mod",
+                "value": -2,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Frenzy\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_frenzy",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_unit_passive_frenzy",
+                      "icon_name": "wh_main_unit_passive_frenzy",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Frenzy",
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "2491",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "positive"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.1 Charge Bonus"
+                            },
+                            {
+                              "value": 8,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+8 Melee Attack"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.1 Armour-Piercing Weapon Damage"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Weapon Damage"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_frenzy",
+                "value": 1,
+                "effect_scope": "general_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_kostaltyn",
+        "character_skill_key": "wh3_main_skill_innate_ksl_kostaltyn",
+        "tier": 0,
+        "indent": 6,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ]
+  ],
+  "key": "ksl_kostaltyn"
+}

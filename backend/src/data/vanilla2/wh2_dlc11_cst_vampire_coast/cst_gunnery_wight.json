@@ -1,0 +1,2271 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh2_dlc11_skill_cst_misc_gunnery_wight_00",
+        "image_path": "mount_promethean.png",
+        "is_background_skill": false,
+        "name": "Rotting Promethean",
+        "description": "The unnatural speed and brutality of a reanimated Promethean makes it the ideal mount for any Undead, battle-mongering pirate.",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Mount: Rotting Promethean",
+                "key": "wh2_dlc11_enable_mount_rotting_promethean",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_mount_gunnery_wight",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_misc_gunnery_wight_01",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Lucky Charm",
+        "description": "\"It's a rabbit's foot. A rabbit. No… Oh never mind - it brings me luck. It does! Trust me!\"",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15%",
+                "key": "wh_main_effect_character_stat_mod_ward_save_missile",
+                "value": 15,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_misc_1",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_misc_gunnery_wight_02",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Tenacity",
+        "description": "You'd better kill this one or they'll keep coming back until one of you is dead. Even then, there's no guarantee it'll be over!",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 8,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_misc_2",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_misc_gunnery_wight_03",
+        "image_path": "character_wound_time.png",
+        "is_background_skill": false,
+        "name": "Immortality",
+        "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
+        "levels": [
+          {
+            "unlocked_at_rank": 20,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 1,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "When normally killed in action, this Hero will be wounded instead",
+                "key": "wh2_main_effect_grant_immortality_hero",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_immortality_hero",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_support_00",
+        "image_path": "wh2_dlc11_character_abilities_cackle_fruit.png",
+        "is_background_skill": false,
+        "name": "Cackle Fruit",
+        "description": "Being shot at whilst covered in a foul, sticky mess is no picnic.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Cackle Fruit\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc11_effect_ability_enable_cackle_fruit",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc11_character_abilities_cackle_fruit",
+                      "icon_name": "wh2_dlc11_character_abilities_cackle_fruit",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_magic_missile",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missile.png",
+                        "description": "Magic Missile"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Cackle Fruit",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_projectile_powerful_explosion",
+                          "sort_order": 105,
+                          "description": "➕ Powerful explosion"
+                        },
+                        {
+                          "key": "wh2_dlc11_slow_effect_dummy",
+                          "sort_order": 600,
+                          "description": " - 48%  speed"
+                        }
+                      ],
+                      "num_uses": 3,
+                      "recharge_time": 90,
+                      "wind_up_time": 0.4,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 70,
+                      "unique_id": "1225489071",
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_dlc11_effect_ability_enable_cackle_fruit",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_support_0_cackle_fruit",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_support_01",
+        "image_path": "wh2_dlc11_character_abilities_ballistic_enchantment.png",
+        "is_background_skill": false,
+        "name": "Enchanted Ballistics",
+        "description": "Assuming you get it right and your shot doesn't turn to flowers on impact, these little extras tend to bring advantage.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Enchanted Ballistics\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc11_effect_ability_enable_ballistic_enchantment",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc11_character_abilities_ballistic_enchantment",
+                      "icon_name": "wh2_dlc11_character_abilities_ballistic_enchantment",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Enchanted Ballistics",
+                      "active_time": 32,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "993304577",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 32,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 60,
+                              "stat": "stat_accuracy",
+                              "how": "add",
+                              "description": "+60 Accuracy"
+                            },
+                            {
+                              "value": 20,
+                              "stat": "stat_reloading",
+                              "how": "add",
+                              "description": "+20 Reload Skill"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc11_effect_ability_enable_ballistic_enchantment",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_support_1",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_support_00"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_support_02",
+        "image_path": "character_cooldown.png",
+        "is_background_skill": false,
+        "name": "Powder Keg",
+        "description": "\"If all else fails, shoot it squarely and dive into the drink!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "category": "battle",
+                "is_positive_value_good": false,
+                "description": "Cooldown: -15% to \"More Powder!\"",
+                "key": "wh2_dlc11_effect_ability_cooldown_more_powder",
+                "value": -15,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 705,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability number of uses: +1 for \"More Powder!\"",
+                "key": "wh2_dlc11_effect_ability_uses_more_powder",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_support_2",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_support_00"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_support_03",
+        "image_path": "wh2_dlc11_hero_passive_dead_eyes.png",
+        "is_background_skill": false,
+        "name": "Dead Eyes",
+        "description": "…literally, though they never miss.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Dead Eyes\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc11_effect_ability_enable_dead_eyes",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc11_hero_passive_dead_eyes",
+                      "icon_name": "wh2_dlc11_hero_passive_dead_eyes",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Dead Eyes",
+                      "passive": true,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "unique_id": "447636956",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_missile_damage_ap",
+                              "how": "mult",
+                              "description": "x1.1 Armour-Piercing Missile Damage"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_missile_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Missile Damage"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc11_effect_ability_enable_dead_eyes",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_support_3",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_support_00"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_support_04",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Shark Bait",
+        "description": "…because once they're in the water, you want your targets to stay there… forever.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 4,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 8,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 8,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 12,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_support_4",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_support_00"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_support_05",
+        "image_path": "character_cooldown.png",
+        "is_background_skill": false,
+        "name": "Utility Belt",
+        "description": "Keep your tools on you at all times - you never know when you'll need them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "category": "battle",
+                "is_positive_value_good": false,
+                "description": "Cooldown: -15% to \"Cackle Fruit\" and \"Pyromaniac\"",
+                "key": "wh2_dlc11_cst_cooldown_all_grenades",
+                "value": -15,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 705,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability number of uses: +1 for \"Cackle Fruit\" and \"Pyromaniac\"",
+                "key": "wh2_dlc11_cst_number_of_uses_all_grenades",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_support_5_utility_belt",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_support_01",
+          "wh2_dlc11_skill_cst_gunnery_wight_support_02",
+          "wh2_dlc11_skill_cst_gunnery_wight_support_03",
+          "wh2_dlc11_skill_cst_gunnery_wight_support_04"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_ranged_00",
+        "image_path": "character_ammo.png",
+        "is_background_skill": false,
+        "name": "Always Ready",
+        "description": "Death is always just a shot away.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ammo_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ammunition: +8%",
+                "key": "wh_main_effect_character_stat_mod_ammunition",
+                "value": 8,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Speed: +8%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 8,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_ranged_0",
+        "tier": 1,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_ranged_01",
+        "image_path": "character_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Blacker Powder",
+        "description": "\"It's got a few secret ingredients. No, I won't tell you what they are, but the results will speak for themselves.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6%",
+                "key": "wh_main_effect_character_stat_mod_missile_damage",
+                "value": 6,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +9%",
+                "key": "wh_main_effect_character_stat_mod_missile_damage",
+                "value": 9,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Missile strength: +12%",
+                "key": "wh_main_effect_character_stat_mod_missile_damage",
+                "value": 12,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_ranged_1",
+        "tier": 2,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_00"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_ranged_02",
+        "image_path": "character_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Powder Monkey",
+        "description": "\"Get more ammo up here, NOW!!!!!!!!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "icon_stat_reload_time_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +6%",
+                "key": "wh_main_effect_character_stat_mod_missile_attack_rate",
+                "value": 6,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "icon_stat_reload_time_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +9%",
+                "key": "wh_main_effect_character_stat_mod_missile_attack_rate",
+                "value": 9,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "icon_stat_reload_time_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +12%",
+                "key": "wh_main_effect_character_stat_mod_missile_attack_rate",
+                "value": 12,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_ranged_2",
+        "tier": 3,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_00"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_ranged_03",
+        "image_path": "character_ammo.png",
+        "is_background_skill": false,
+        "name": "Blunderbuss",
+        "description": "\"The recoil's a nightmare, but you can't deny the end result!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ammo_character.png",
+                "priority": 1,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "\"Blunderbuss Shot\" ammunition (increased number of projectiles)",
+                "key": "wh2_dlc11_projectile_replacement_gunnery_wight_multi_shot",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "accuracy_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Range: -20%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": -20,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo_character.png",
+                "priority": 1,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "\"Blunderbuss Shot\" ammunition (increased number of projectiles)",
+                "key": "wh2_dlc11_projectile_replacement_gunnery_wight_multi_shot",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "accuracy_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Range: -10%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": -10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo_character.png",
+                "priority": 1,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "\"Blunderbuss Shot\" ammunition (increased number of projectiles)",
+                "key": "wh2_dlc11_projectile_replacement_gunnery_wight_multi_shot",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_ranged_3",
+        "tier": 4,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_00"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_ranged_04",
+        "image_path": "character_range.png",
+        "is_background_skill": false,
+        "name": "Gunsight",
+        "description": "A clever arrangement of lenses makes the target seem just that bit closer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "accuracy_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Range: +10%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "armour_piercing_character.png",
+                "priority": 56,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour-piercing missile damage: +14%",
+                "key": "wh2_main_effect_character_stat_mod_ap_damage_missile",
+                "value": 14,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "accuracy_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Range: +10%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "armour_piercing_character.png",
+                "priority": 56,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour-piercing missile damage: +28%",
+                "key": "wh2_main_effect_character_stat_mod_ap_damage_missile",
+                "value": 28,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "accuracy_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Range: +10%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "armour_piercing_character.png",
+                "priority": 56,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour-piercing missile damage: +40%",
+                "key": "wh2_main_effect_character_stat_mod_ap_damage_missile",
+                "value": 40,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_ranged_4",
+        "tier": 5,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_00"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc11_skill_cst_gunnery_wight_ranged_05",
+        "image_path": "wh2_dlc11_character_abilities_pyromaniac.png",
+        "is_background_skill": false,
+        "name": "Pyromaniac",
+        "description": "Some beings just want to see the world burn.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "category": "both",
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Bomb-Throw\"",
+                "key": "wh2_dlc11_ability_disable_throw_bombs",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Pyromaniac\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc11_effect_ability_enable_pyromaniac",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc11_character_abilities_pyromaniac",
+                      "icon_name": "wh2_dlc11_character_abilities_pyromaniac",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_magic_missile",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missile.png",
+                        "description": "Magic Missile"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Pyromaniac",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_main_projectile_powerful_explosion",
+                          "sort_order": 105,
+                          "description": "➕ Powerful explosion"
+                        }
+                      ],
+                      "num_uses": 3,
+                      "recharge_time": 90,
+                      "wind_up_time": 0.4,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 70,
+                      "unique_id": "383294491",
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_dlc11_effect_ability_enable_pyromaniac",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_cst_gunnery_wight_5_pyromaniac",
+        "tier": 6,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_01",
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_02",
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_03",
+          "wh2_dlc11_skill_cst_gunnery_wight_ranged_04"
+        ]
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh2_dlc11_skill_node_cst_fleet_gunnery_wight_campaign_01",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "{{tr:agent_action_name_training}}",
+        "description": "This champion extols discipline and fear away from the battlefield as much as on it.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 5",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 10",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 25",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 25,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_training",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_cst_fleet_gunnery_wight_campaign_02",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "{{tr:agent_action_name_boost_income}}",
+        "description": "Such magic-users may be wise and able to offer sage advice, especially if they have scried the region.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
+                "value": -2,
+                "effect_scope": "character_to_region_enemy_provincewide"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
+                "value": 2,
+                "effect_scope": "character_to_region_own_provincewide"
+              },
+              {
+                "icon": "income.png",
+                "priority": 8,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Boost Income action: Income is modified by an additional 2%",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_buff",
+                "value": 2,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
+                "value": -4,
+                "effect_scope": "character_to_region_enemy_provincewide"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
+                "value": 4,
+                "effect_scope": "character_to_region_own_provincewide"
+              },
+              {
+                "icon": "income.png",
+                "priority": 8,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Boost Income action: Income is modified by an additional 4%",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_buff",
+                "value": 4,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
+                "value": -6,
+                "effect_scope": "character_to_region_enemy_provincewide"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
+                "value": 6,
+                "effect_scope": "character_to_region_own_provincewide"
+              },
+              {
+                "icon": "income.png",
+                "priority": 8,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Boost Income action: Income is modified by an additional 6%",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_buff",
+                "value": 6,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_hero_passive_boost_income",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_cst_fleet_gunnery_wight_campaign_03",
+        "image_path": "campaign_technology.png",
+        "is_background_skill": false,
+        "name": "{{tr:agent_action_name_steal_technology}}",
+        "description": "Oft-times, though you may have much, what you want the most is what your rivals have; such envy focuses the mind and creativity.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "technology.png",
+                "priority": 9,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Steal Technology action: Research rate is increased by an additional 3%",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_steal_technology_buff",
+                "value": 3,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "technology.png",
+                "priority": 9,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Steal Technology action: Research rate is increased by an additional 6%",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_steal_technology_buff",
+                "value": 6,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "technology.png",
+                "priority": 9,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Steal Technology action: Research rate is increased by an additional 10%",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_steal_technology_buff",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_settlement_steal_technology",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_cst_fleet_gunnery_wight_campaign_04",
+        "image_path": "campaign_wound_time.png",
+        "is_background_skill": false,
+        "name": "{{tr:agent_action_name_wound}}",
+        "description": "Such a champion will not bend or break, but slay in their Lord's name.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 4% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 4,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 10% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 18% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 18,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_agent_wound",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_cst_fleet_gunnery_wight_campaign_05",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "{{tr:agent_action_name_block_army}}",
+        "description": "To sow discord and confuse the enemy, sending them down the wrong route or befuddling their senses.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 11,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Block Army action: Movement range is modified by an additional -3%",
+                "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+                "value": -3,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 11,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Block Army action: Movement range is modified by an additional -8%",
+                "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+                "value": -8,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 11,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Block Army action: Movement range is modified by an additional -15%",
+                "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+                "value": -15,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_army_block_army",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_cst_fleet_gunnery_wight_campaign_06",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Specialist",
+        "description": "An expert in their craft, this Hero knows all the mistakes that can be made and how to best avoid making them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -10%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -10,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +1%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -20%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -20,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +3%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 3,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -40%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -40,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +6%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 6,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_all_hero_reduce_action_cost",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_00",
+        "image_path": "trait_vampire_counts.png",
+        "is_background_skill": true,
+        "name": "Dark Majesty",
+        "description": "\"Glory in your dark majesty, my lord.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 5,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +25%",
+                "key": "wh_main_effect_character_stat_mod_personal_aura_size",
+                "value": 25,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 6,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +3",
+                "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect",
+                "value": 3,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_vmp_dark_majesty",
+        "tier": 0,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_01",
+        "image_path": "trait_vampire_counts.png",
+        "is_background_skill": true,
+        "name": "Devious ",
+        "description": "Vampires and their liche-servants are devious creatures; manipulative with many mortal servants in their thrall.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -10%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -10,
+                "effect_scope": "character_to_character_provincewide"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +5%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 5,
+                "effect_scope": "character_to_character_provincewide"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_vmp_devious",
+        "tier": 1,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_02",
+        "image_path": "trait_vampire_counts.png",
+        "is_background_skill": true,
+        "name": "Dread Incarnate",
+        "description": "\"They will tremble, my lord, oh, they will fear!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 61,
+                "category": "battle",
+                "is_positive_value_good": false,
+                "description": "Enemy leadership: -4",
+                "key": "wh_main_effect_force_army_battle_enemy_unit_morale",
+                "value": -4,
+                "effect_scope": "character_to_force_enemy_provincewide"
+              },
+              {
+                "icon": "attribute_causes_terror.png",
+                "priority": 620,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Attribute: Causes Terror",
+                "key": "wh_main_effect_unit_enable_attribute_terror",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_vmp_dread_incarnate",
+        "tier": 2,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_03",
+        "image_path": "trait_vampire_counts.png",
+        "is_background_skill": true,
+        "name": "Lore Keeper ",
+        "description": "Once forbidden knowledge is acquired, Necromancers and Vampires will jealously guard it from rivals' eyes.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": false,
+                "description": "Construction cost: -10% for all buildings",
+                "key": "wh_main_effect_building_construction_cost_mod",
+                "value": -10,
+                "effect_scope": "character_to_region_own"
+              },
+              {
+                "icon": "technology.png",
+                "priority": 998,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Research rate: +10%",
+                "key": "wh_dlc03_effect_technology_research_points",
+                "value": 10,
+                "effect_scope": "character_to_faction"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_vmp_lore_keeper",
+        "tier": 3,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_04",
+        "image_path": "trait_vampire_counts.png",
+        "is_background_skill": true,
+        "name": "Master of the Black Arts ",
+        "description": "A master indeed - to rival the Great Necromancer himself?",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Spell: \"Spirit Leech\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc09_effect_magic_death_enable_spirit_leech_bound",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc09_spell_death_spirit_leech_bound",
+                      "icon_name": "wh_main_spell_death_spirit_leech",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Spirit Leech",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_multiple",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs multiple combatants"
+                        }
+                      ],
+                      "num_uses": 1,
+                      "active_time": 13,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "unique_id": "485114562",
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 13,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc09_effect_magic_death_enable_spirit_leech_bound",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 100,
+                "category": "battle",
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -10% for all spellcasters",
+                "key": "wh2_main_effect_force_stat_mod_miscast_chance",
+                "value": -10,
+                "effect_scope": "character_to_character_regionwide_local_region"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_vmp_master_of_the_black_arts",
+        "tier": 4,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_05",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Fleet-Footed",
+        "description": "Being fleet of foot is useful in a fight… or when trying to get away afterwards!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Speed: +20%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 20,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "attribute_ignore_forest_penalties.png",
+                "priority": 620,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Attribute: Strider",
+                "key": "wh_main_effect_unit_enable_attribute_strider",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_fleet_footed",
+        "tier": 5,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_06",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Cunning",
+        "description": "Deceit is a perfectly acceptable means of attack.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "phase_posion.png",
+                "priority": 61,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Enables poison attacks",
+                "key": "wh_main_effect_character_stat_enable_poison_attacks",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Ambush success chance: +10%",
+                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+                "value": 10,
+                "effect_scope": "region_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_cunning",
+        "tier": 6,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_07",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Determined",
+        "description": "Having a modicum of resolve is useful in a world that continually tests it.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership: +3",
+                "key": "wh_main_effect_character_stat_mod_morale",
+                "value": 3,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "attribute_immune_to_psychology.png",
+                "priority": 620,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Attribute: Immune to Psychology",
+                "key": "wh_main_effect_unit_enable_attribute_immune_to_psychology",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_determined",
+        "tier": 7,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_08",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Confident",
+        "description": "Self-belief is a fine thing when not misplaced.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 102,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership: +4",
+                "key": "wh_main_effect_force_unit_stat_morale",
+                "value": 4,
+                "effect_scope": "character_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_confident",
+        "tier": 8,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_09",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Disciplined",
+        "description": "Always in control, this one leaves no stone unturned and nothing to chance.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 102,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Leadership: +2",
+                "key": "wh_main_effect_force_unit_stat_morale",
+                "value": 2,
+                "effect_scope": "character_to_force_own"
+              },
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee attack: +2",
+                "key": "wh_main_effect_force_unit_stat_melee_attack",
+                "value": 2,
+                "effect_scope": "character_to_force_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_disciplined",
+        "tier": 9,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_10",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Perceptive",
+        "description": "Although actually reading minds is not in their skillset, this one has extraordinary insight into the motives of others.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Magic item drop chance: +15%",
+                "key": "wh_main_effect_character_mod_ancillary_drop",
+                "value": 15,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Campaign line of sight: +10%",
+                "key": "wh_main_effect_agent_field_line_of_sight_mod",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_perceptive",
+        "tier": 10,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_11",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Aggressive",
+        "description": "If you're gonna die, you may as well die with your boots on.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +8",
+                "key": "wh_main_effect_character_stat_mod_charge_add",
+                "value": 8,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_mod_melee_damage",
+                "value": 10,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_aggressive",
+        "tier": 11,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_12",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Tough",
+        "description": "Rugged, resistant, and almost unbreakable, this being can and will take on all comers.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Armour: +25",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 25,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_tough",
+        "tier": 12,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_13",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Knowledgeable",
+        "description": "What this being doesn't know probably isn't worth knowing, so deep is their interest in the world and its ways.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic.png",
+                "priority": 15,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve: +5",
+                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character",
+                "value": 5,
+                "effect_scope": "character_to_force_own_factionwide"
+              },
+              {
+                "icon": "magic.png",
+                "priority": 15,
+                "category": "battle",
+                "is_positive_value_good": false,
+                "description": "Enemy Winds of Magic power reserve: -5",
+                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character_enemy",
+                "value": -5,
+                "effect_scope": "general_to_force_enemy_regionwide"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_knowledgeable",
+        "tier": 13,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh2_dlc11_skill_node_set_cst_gunnery_wight_innate_14",
+        "image_path": "trait_personality.png",
+        "is_background_skill": true,
+        "name": "Intelligent",
+        "description": "Sharp minds make sharp blades sharper still.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +5% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 5,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +10%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 10,
+                "effect_scope": "character_to_force_own_unseen"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_main_skill_innate_all_intelligent",
+        "tier": 14,
+        "indent": 6,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc11_skill_dummy_agent_actions_gunnery_wight",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Actions [HIDDEN]",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 0,
+                "category": "battle",
+                "is_positive_value_good": true,
+                "description": "Ability: \"Bombs-Throw\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc11_ability_enable_throw_bombs_hidden",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc11_hero_abilities_bomb_throw",
+                      "icon_name": "wh2_dlc11_hero_abilities_bomb_throw",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_magic_missile",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missile.png",
+                        "description": "Magic Missile"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Bomb-Throw",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        }
+                      ],
+                      "num_uses": 4,
+                      "recharge_time": 60,
+                      "wind_up_time": 0.4,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 70,
+                      "unique_id": "856791542",
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_dlc11_ability_enable_throw_bombs_hidden",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_dlc11_effect_agent_action_enable_engineer_assist_province_treasure",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_dlc11_effect_agent_action_enable_engineer_hinder_province_treasure",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_dlc11_effect_agent_action_enable_engineer_hinder_settlement_treasure_hunt",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_dlc12_agent_action_engineer_discover_under_empire",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_agent_action_engineer_assist_army_training",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_enable_engineer_hinder_agent_wound",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_enable_engineer_hinder_army_block_army",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_enable_engineer_hinder_settlement_steal_technology",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_enable_engineer_passive_boost_income",
+                "value": 1,
+                "effect_scope": "character_to_character_own"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
+                "value": -5,
+                "effect_scope": "character_to_region_enemy_provincewide"
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "category": "campaign",
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
+                "value": 5,
+                "effect_scope": "character_to_region_own_provincewide"
+              }
+            ]
+          }
+        ],
+        "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_gunnery_wight",
+        "character_skill_key": "wh2_dlc11_skill_dummy_agent_actions_gunnery_wight",
+        "tier": 0,
+        "indent": 8,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ]
+  ],
+  "key": "cst_gunnery_wight"
+}
