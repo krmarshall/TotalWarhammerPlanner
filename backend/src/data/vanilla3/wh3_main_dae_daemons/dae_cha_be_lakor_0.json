@@ -216,91 +216,6 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Blade of Shadow\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh3_main_effect_passive_ability_enable_blade_of_shadows",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh3_main_weapon_passive_blade_of_shadows",
-                      "icon_name": "wh_magic_item_passive_weapon",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Blade of Shadow",
-                      "ui_effects": [
-                        {
-                          "key": "wh3_main_ability_intensity_kills",
-                          "sort_order": 1,
-                          "effect_state": "positive",
-                          "description": "Effect intensity increases with each kill made by the unit."
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 40,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+40 Melee Attack"
-                            },
-                            {
-                              "value": 2,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x2 Armour-Piercing Weapon Damage"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh3_main_effect_passive_ability_enable_blade_of_shadows",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh3_main_lord_passive_lord_of_torment",
-        "tier": 5,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh3_main_skill_node_dae_be_lakor_generic_0",
-        "image_path": "wh3_main_lord_passive_whispers_in_the_darkness.png",
-        "is_background_skill": false,
-        "name": "Whispers in the Darkness",
-        "description": "Daemon-Whisperer, Puppet Master… but you, you may call me… a God.",
-        "levels": [
-          {
-            "unlocked_at_rank": 14,
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 300,
-                "is_positive_value_good": true,
                 "description": "Ability: \"Lord of Torment\"",
                 "related_abilities": [
                   {
@@ -322,7 +237,7 @@
                           "key": "wh3_main_ability_intensity_enemy_low_morale_nearby",
                           "sort_order": 1,
                           "effect_state": "positive",
-                          "description": "Effect intensity increases by each enemy unit in range with morale wavering or lower."
+                          "description": "Effect intensity increases by each enemy unit in range with leadership wavering or lower."
                         },
                         {
                           "key": "wh2_main_ability_range_30m",
@@ -359,6 +274,84 @@
                   }
                 ],
                 "key": "wh3_main_effect_passive_ability_enable_lord_of_torment",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_lord_passive_lord_of_torment",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_dae_be_lakor_generic_0",
+        "image_path": "wh3_main_lord_passive_whispers_in_the_darkness.png",
+        "is_background_skill": false,
+        "name": "Whispers in the Darkness",
+        "description": "Daemon-Whisperer, Puppet Master… but you, you may call me… a God.",
+        "levels": [
+          {
+            "unlocked_at_rank": 14,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Whispers in the Darkness\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_passive_ability_enable_whispers_in_the_darkness",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_lord_passive_whispers_in_the_darkness",
+                      "icon_name": "wh3_main_lord_passive_whispers_in_the_darkness",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Whispers in the Darkness",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "negative"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": -8,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "-8 Leadership"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_passive_ability_enable_whispers_in_the_darkness",
                 "value": 1
               }
             ]
@@ -3963,7 +3956,80 @@
         ]
       }
     ],
-    []
+    [
+      {
+        "key": "wh3_main_skill_node_dae_be_lakor_innate_01",
+        "image_path": "trait_daemons.png",
+        "is_background_skill": true,
+        "name": "Prince of Nightmares",
+        "description": "\"One by one, I will kill the Gods and harvest their strength.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Shadow Shroud\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_shadow_shroud",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_lord_abilities_shadow_shroud",
+                      "icon_name": "wh3_main_lord_abilities_shadow_shroud",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_ward_save",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_ward_save.png",
+                        "description": "Ward Save"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Shadow Shroud",
+                      "active_time": 33,
+                      "recharge_time": 120,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 33,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 40,
+                              "stat": "stat_resistance_all",
+                              "how": "add",
+                              "description": "+40 Damage Resistance "
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_shadow_shroud",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_innate_dae_belakor",
+        "tier": 0,
+        "indent": 6,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ]
   ],
   "key": "dae_cha_be_lakor_0"
 }
