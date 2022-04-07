@@ -14,7 +14,7 @@ beforeAll(() => {
   initializeData();
 });
 
-describe('Character API tests', () => {
+describe('Basic character API tests', () => {
   test('Basic example Malagor', async () => {
     const response = await request.get('/api/vanilla2.wh_dlc03_bst_beastmen.bst_malagor');
     expect(response.status).toBe(200);
@@ -40,35 +40,37 @@ describe('Character API tests', () => {
   });
 });
 
-const gameList = [
-  { charList: vanilla2Characters, name: 'vanilla2' },
-  { charList: sfo2Characters, name: 'sfo2' },
-  { charList: vanilla3Characters, name: 'vanilla3' },
-];
+describe('Bulk character API test', () => {
+  const gameList = [
+    { charList: vanilla2Characters, name: 'vanilla2' },
+    { charList: sfo2Characters, name: 'sfo2' },
+    { charList: vanilla3Characters, name: 'vanilla3' },
+  ];
 
-gameList.forEach((game) => {
-  const characterPathList = glob.sync(`./src/data/${game.name}/**/*.json`);
-  const characterList = characterPathList.map((characterPath) => path.basename(characterPath, '.json'));
-  const testedChars = [];
+  gameList.forEach((game) => {
+    const characterPathList = glob.sync(`./src/data/${game.name}/**/*.json`);
+    const characterList = characterPathList.map((characterPath) => path.basename(characterPath, '.json'));
+    const testedChars = [];
 
-  const factionKeys = Object.keys(game.charList);
-  factionKeys.forEach((factionKey) => {
-    const characterKeys = Object.keys(game.charList[factionKey]);
-    characterKeys.forEach((characterKey) => {
-      test(`${factionKey} - ${characterKey}`, async () => {
-        const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
-        const response = await request.get(`/api/${game.name}.${strippedFactionKey}.${characterKey}`);
-        expect(response.status).toBe(200);
-        expect(response.body).toHaveProperty('key', characterKey);
-        expect(response.body).toHaveProperty('skillTree');
-        testedChars.push(characterKey);
+    const factionKeys = Object.keys(game.charList);
+    factionKeys.forEach((factionKey) => {
+      const characterKeys = Object.keys(game.charList[factionKey]);
+      characterKeys.forEach((characterKey) => {
+        test(`${factionKey} - ${characterKey}`, async () => {
+          const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
+          const response = await request.get(`/api/${game.name}.${strippedFactionKey}.${characterKey}`);
+          expect(response.status).toBe(200);
+          expect(response.body).toHaveProperty('key', characterKey);
+          expect(response.body).toHaveProperty('skillTree');
+          testedChars.push(characterKey);
+        });
       });
     });
-  });
 
-  test(`All ${game.name} characters were served`, () => {
-    testedChars.sort();
-    characterList.sort();
-    expect(testedChars).toEqual(characterList);
+    test(`All ${game.name} characters were served`, () => {
+      testedChars.sort();
+      characterList.sort();
+      expect(testedChars).toEqual(characterList);
+    });
   });
 });
