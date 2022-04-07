@@ -12,7 +12,7 @@ const GameSelector = () => {
       <ul className="flex flex-row flex-wrap justify-center select-none">
         {gameKeys.map((gameKey) => {
           const game = gameData[gameKey as keyof typeof gameData];
-          let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg rounded-lg';
+          let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
 
           if (gameKey === state.selectedGame) {
             liClassName += ' bg-gray-600 hover:bg-gray-500';

@@ -3,6 +3,7 @@ import vanilla2Characters from './vanilla2Characters';
 const vanilla3Characters = {
   ...vanilla2Characters,
 
+  // Chieftain spelled properly in 3
   wh_dlc08_nor_norsca_lords: {
     nor_arzik: {
       name: 'Azrik the Maze Keeper',
@@ -18,6 +19,7 @@ const vanilla3Characters = {
     },
   },
 
+  // No Black Ark Blessed Dread
   wh2_main_def_dark_elves_lords: {
     def_crone: {
       name: 'Crone Hellebron',
@@ -74,18 +76,22 @@ const vanilla3Characters = {
   wh3_main_cth_cathay_lords: {
     cth_dragon_blooded_shugengan_yang: {
       name: 'Dragon-Blooded Shugengan Lord (Yang)',
+      spellLore: 'yang',
     },
     cth_dragon_blooded_shugengan_yin: {
       name: 'Dragon-Blooded Shugengan Lord (Yin)',
+      spellLore: 'yin',
     },
     cth_lord_caravan_master: {
       name: 'Caravan Master',
     },
     cth_lord_magistrate_yang: {
       name: 'Lord Magistrate (Yang)',
+      spellLore: 'yang',
     },
     cth_lord_magistrate_yin: {
       name: 'Lord Magistrate (Yin)',
+      spellLore: 'yin',
     },
     cth_miao_ying: {
       name: 'Miao Ying???',
@@ -114,21 +120,27 @@ const vanilla3Characters = {
     },
     nur_herald_of_nurgle_death: {
       name: 'Herald of Nurgle (Death)',
+      spellLore: 'death',
     },
     nur_herald_of_nurgle_nurgle: {
       name: 'Herald of Nurgle (Nurgle)',
+      spellLore: 'nurgle',
     },
     sla_herald_of_slaanesh_shadow: {
       name: 'Herald of Slaanesh (Shadow)',
+      spellLore: 'shadow',
     },
     sla_herald_of_slaanesh_slaanesh: {
       name: 'Herald of Slaanesh (Slaanesh)',
+      spellLore: 'slaanesh',
     },
     tze_herald_of_tzeentch_metal: {
       name: 'Herald of Tzeentch (Metal)',
+      spellLore: 'metal',
     },
     tze_herald_of_tzeentch_tzeentch: {
       name: 'Herald of Tzeentch (Tzeentch)',
+      spellLore: 'tzeentch',
     },
   },
   wh3_main_dae_daemons_heroes: {
@@ -137,21 +149,27 @@ const vanilla3Characters = {
     },
     nur_plagueridden_death: {
       name: 'Plagueridden (Death)',
+      spellLore: 'death',
     },
     nur_plagueridden_nurgle: {
       name: 'Plagueridden (Nurgle)',
+      spellLore: 'nurgle',
     },
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
+      spellLore: 'shadow',
     },
     sla_alluress_slaanesh: {
       name: 'Alluress (Slaanesh)',
+      spellLore: 'slaanesh',
     },
     tze_iridescent_horror_metal: {
       name: 'Iridescent Horror (Metal)',
+      spellLore: 'metal',
     },
     tze_iridescent_horror_tzeentch: {
       name: 'Iridescent Horror (Tzeentch)',
+      spellLore: 'tzeentch',
     },
   },
   wh3_main_kho_khorne_lords: {
@@ -185,9 +203,11 @@ const vanilla3Characters = {
     },
     ksl_ice_witch_ice: {
       name: 'Ice Witch (Ice)',
+      spellLore: 'ice',
     },
     ksl_ice_witch_tempest: {
       name: 'Ice Witch (Tempest)',
+      spellLore: 'tempest',
     },
     ksl_katarin: {
       name: 'Tzarina Katarin???',
@@ -199,9 +219,11 @@ const vanilla3Characters = {
   wh3_main_ksl_kislev_heroes: {
     ksl_frost_maiden_ice: {
       name: 'Frost Maiden (Ice)',
+      spellLore: 'ice',
     },
     ksl_frost_maiden_tempest: {
       name: 'Frost Maiden (Tempest)',
+      spellLore: 'tempest',
     },
     ksl_patriarch: {
       name: 'Patriarch',
@@ -210,15 +232,19 @@ const vanilla3Characters = {
   wh3_main_nur_nurgle_lords: {
     nur_exalted_great_unclean_one_death: {
       name: 'Exalted Great Unclean One (Death)',
+      spellLore: 'death',
     },
     nur_exalted_great_unclean_one_nurgle: {
       name: 'Exalted Great Unclean One (Nurgle)',
+      spellLore: 'nurgle',
     },
     nur_herald_of_nurgle_death: {
       name: 'Herald of Nurgle (Death)',
+      spellLore: 'death',
     },
     nur_herald_of_nurgle_nurgle: {
       name: 'Herald of Nurgle (Nurgle)',
+      spellLore: 'nurgle',
     },
     nur_kugath: {
       name: "Ku'gath Plaguefather???",
@@ -233,9 +259,11 @@ const vanilla3Characters = {
     },
     nur_plagueridden_death: {
       name: 'Plagueridden (Death)',
+      spellLore: 'death',
     },
     nur_plagueridden_nurgle: {
       name: 'Plagueridden (Nurgle)',
+      spellLore: 'nurgle',
     },
   },
   wh3_main_ogr_ogre_kingdoms_lords: {
@@ -247,9 +275,11 @@ const vanilla3Characters = {
     },
     ogr_slaughtermaster_beasts: {
       name: 'Slaughtermaster (Beasts)',
+      spellLore: 'beasts',
     },
     ogr_slaughtermaster_great_maw: {
       name: 'Slaughtermaster (Great Maw)',
+      spellLore: 'greatMaw',
     },
     ogr_tyrant: {
       name: 'Tyrant',
@@ -258,9 +288,11 @@ const vanilla3Characters = {
   wh3_main_ogr_ogre_kingdoms_heroes: {
     ogr_butcher_beasts: {
       name: 'Butcher (Beasts)',
+      spellLore: 'beasts',
     },
     ogr_butcher_great_maw: {
       name: 'Butcher (Great Maw)',
+      spellLore: 'greatMaw',
     },
     ogr_firebelly: {
       name: 'Firebelly',
@@ -272,15 +304,19 @@ const vanilla3Characters = {
   wh3_main_sla_slaanesh_lords: {
     sla_exalted_keeper_of_secrets_shadow: {
       name: 'Exalted Keeper of Secrets (Shadow)',
+      spellLore: 'shadow',
     },
     sla_exalted_keeper_of_secrets_slaanesh: {
       name: 'Exalted Keeper of Secrets (Slaanesh)',
+      spellLore: 'slaanesh',
     },
     sla_herald_of_slaanesh_shadow: {
       name: 'Herald of Slaanesh (Shadow)',
+      spellLore: 'shadow',
     },
     sla_herald_of_slaanesh_slaanesh: {
       name: 'Herald of Slaanesh (Slaanesh)',
+      spellLore: 'slaanesh',
     },
     sla_nkari: {
       name: "N'Kari???",
@@ -289,9 +325,11 @@ const vanilla3Characters = {
   wh3_main_sla_slaanesh_heroes: {
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
+      spellLore: 'shadow',
     },
     sla_alluress_slaanesh: {
       name: 'Alluress (Slaanesh)',
+      spellLore: 'slaanesh',
     },
     sla_cultist: {
       name: 'Cultist of Slaanesh',
@@ -300,15 +338,19 @@ const vanilla3Characters = {
   wh3_main_tze_tzeentch_lords: {
     tze_exalted_lord_of_change_metal: {
       name: 'Exalted Lord of Change (Metal)',
+      spellLore: 'metal',
     },
     tze_exalted_lord_of_change_tzeentch: {
       name: 'Exalted Lord of Change (Tzeentch)',
+      spellLore: 'tzeentch',
     },
     tze_herald_of_tzeentch_metal: {
       name: 'Herald of Tzeentch (Metal)',
+      spellLore: 'metal',
     },
     tze_herald_of_tzeentch_tzeentch: {
       name: 'Herald of Tzeentch (Tzeentch)',
+      spellLore: 'tzeentch',
     },
     tze_kairos: {
       name: 'Kairos Fateweaver???',
@@ -320,9 +362,11 @@ const vanilla3Characters = {
     },
     tze_iridescent_horror_metal: {
       name: 'Iridescent Horror (Metal)',
+      spellLore: 'metal',
     },
     tze_iridescent_horror_tzeentch: {
       name: 'Iridescent Horror (Tzeentch)',
+      spellLore: 'tzeentch',
     },
   },
 };

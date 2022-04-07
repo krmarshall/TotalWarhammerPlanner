@@ -18,7 +18,7 @@ const FactionSelector = () => {
         {currentGameFactions?.map((factionKey) => {
           // @ts-expect-error ts(7053)
           const factionName = gameData[state.selectedGame].factions[factionKey];
-          let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg rounded-lg';
+          let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
 
           if (factionKey === state.selectedFaction) {
             liClassName += ' bg-gray-600 hover:bg-gray-500';

@@ -15,7 +15,13 @@ const App = () => {
           position="bottom-center"
           toastOptions={{
             duration: 2500,
-            style: { background: '#4b5563', color: '#e5e7eb', fontSize: 'x-large', userSelect: 'none' },
+            style: {
+              background: '#4b5563',
+              color: '#e5e7eb',
+              fontSize: 'x-large',
+              userSelect: 'none',
+              border: '1px solid rgb(107 114 128)',
+            },
           }}
         />
         <div className="bg-gray-700 w-full h-full border border-gray-500 rounded-md px-6 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">

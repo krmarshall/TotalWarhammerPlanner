@@ -52,7 +52,7 @@ const CharacterSelector = () => {
       {
         loading: 'Loading',
         success: 'Success',
-        error: 'Could not load character from server.',
+        error: 'Could not fetch character',
       },
       { loading: { duration: 5000 } }
     );
@@ -79,7 +79,7 @@ const CharacterSelector = () => {
             return (
               <li
                 key={lordKey}
-                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500 hover:bg-gray-600"
+                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500 hover:bg-gray-600"
                 onClick={() => {
                   handleCharacterSelect(lordKey);
                 }}
@@ -129,7 +129,7 @@ const CharacterSelector = () => {
             return (
               <li
                 key={heroKey}
-                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg border-gray-500  hover:bg-gray-600"
+                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500  hover:bg-gray-600"
                 onClick={() => {
                   handleCharacterSelect(heroKey);
                 }}
