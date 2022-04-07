@@ -10,12 +10,17 @@ import setCustomCacheControl from './setCustomCacheControl';
 import { initializeData, bulkData } from './initializeData';
 
 const app = express();
-const port = process.env.PORT || 5000;
 
 const origin =
   process.env.NODE_ENV === 'production'
     ? 'https://totalwarhammerplanner.ca'
     : ['http://localhost:5000', 'http://localhost:3000'];
+
+initializeData();
+writeFileSync('./bulkDataDebug.json', JSON.stringify(bulkData, null, 0));
+const { size } = statSync('./bulkDataDebug.json');
+console.log(`${Math.floor(size / (1024 * 1024))}mb of skill trees loaded`);
+rmSync('./bulkDataDebug.json');
 
 app.use(
   cors({
@@ -38,13 +43,5 @@ app.use(
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
 });
-app.listen(port, () => {
-  initializeData();
-  writeFileSync('./bulkDataDebug.json', JSON.stringify(bulkData, null, 0));
-  const { size } = statSync('./bulkDataDebug.json');
-  console.log(`${Math.floor(size / (1024 * 1024))}mb of skill trees loaded`);
-  rmSync('./bulkDataDebug.json');
 
-  console.log(`Server is up at port ${port}`);
-  console.log(`Environment ${process.env.NODE_ENV}`);
-});
+export default app;
