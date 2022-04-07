@@ -1,5 +1,8 @@
-import app from '../src/app';
 import supertest from 'supertest';
+import glob from 'glob';
+import path from 'path';
+
+import app from '../src/app';
 import { initializeData, bulkData } from '../src/initializeData';
 import vanilla2Characters from '../../frontend/src/data/vanilla2Characters';
 import sfo2Characters from '../../frontend/src/data/sfo2Characters';
@@ -37,53 +40,35 @@ describe('Character API tests', () => {
   });
 });
 
-describe('Frontend vanilla2 list tests', () => {
-  const game = 'vanilla2';
-  const factionKeys = Object.keys(vanilla2Characters);
+const gameList = [
+  { charList: vanilla2Characters, name: 'vanilla2' },
+  { charList: sfo2Characters, name: 'sfo2' },
+  { charList: vanilla3Characters, name: 'vanilla3' },
+];
+
+gameList.forEach((game) => {
+  const characterPathList = glob.sync(`./src/data/${game.name}/**/*.json`);
+  const characterList = characterPathList.map((characterPath) => path.basename(characterPath, '.json'));
+  const testedChars = [];
+
+  const factionKeys = Object.keys(game.charList);
   factionKeys.forEach((factionKey) => {
-    const characterKeys = Object.keys(vanilla2Characters[factionKey]);
+    const characterKeys = Object.keys(game.charList[factionKey]);
     characterKeys.forEach((characterKey) => {
       test(`${factionKey} - ${characterKey}`, async () => {
         const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
-        const response = await request.get(`/api/${game}.${strippedFactionKey}.${characterKey}`);
+        const response = await request.get(`/api/${game.name}.${strippedFactionKey}.${characterKey}`);
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('key', characterKey);
         expect(response.body).toHaveProperty('skillTree');
+        testedChars.push(characterKey);
       });
     });
   });
-});
 
-describe('Frontend sfo2 list tests', () => {
-  const game = 'sfo2';
-  const factionKeys = Object.keys(sfo2Characters);
-  factionKeys.forEach((factionKey) => {
-    const characterKeys = Object.keys(sfo2Characters[factionKey]);
-    characterKeys.forEach((characterKey) => {
-      test(`${factionKey} - ${characterKey}`, async () => {
-        const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
-        const response = await request.get(`/api/${game}.${strippedFactionKey}.${characterKey}`);
-        expect(response.status).toBe(200);
-        expect(response.body).toHaveProperty('key', characterKey);
-        expect(response.body).toHaveProperty('skillTree');
-      });
-    });
-  });
-});
-
-describe('Frontend vanilla3 list tests', () => {
-  const game = 'vanilla3';
-  const factionKeys = Object.keys(vanilla3Characters);
-  factionKeys.forEach((factionKey) => {
-    const characterKeys = Object.keys(vanilla3Characters[factionKey]);
-    characterKeys.forEach((characterKey) => {
-      test(`${factionKey} - ${characterKey}`, async () => {
-        const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
-        const response = await request.get(`/api/${game}.${strippedFactionKey}.${characterKey}`);
-        expect(response.status).toBe(200);
-        expect(response.body).toHaveProperty('key', characterKey);
-        expect(response.body).toHaveProperty('skillTree');
-      });
-    });
+  test(`All ${game.name} characters were served`, () => {
+    testedChars.sort();
+    characterList.sort();
+    expect(testedChars).toEqual(characterList);
   });
 });

@@ -1,3 +1,4 @@
+import sfoTmpArchLiche from './tmb_cha_arch_liche_1.webp';
 import sfoBrtLost from './brt_cha_lost_1.webp';
 import sfoChsBloodthirster from './chs_cha_bloodthirster.webp';
 import sfoDefManticore from './def_cha_manticore_0.webp';
@@ -16,6 +17,7 @@ import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 
 const sfo2CharacterImgs = {
   ...vanilla2CharacterImgs,
+  tmb_cha_arch_liche: sfoTmpArchLiche,
   brt_cha_lost: sfoBrtLost,
   chs_cha_bloodthirster: sfoChsBloodthirster,
   def_fleetmaster: sfoDefManticore,

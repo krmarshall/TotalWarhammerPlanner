@@ -343,9 +343,6 @@ const vanilla2Characters = {
     lzd_red_crested_skink_chief: {
       name: 'Red Crested Skink Chief',
     },
-    lzd_red_crested_skink_chief_legendary: {
-      name: 'Legendary Red Crested Skink Chief',
-    },
     lzd_tehenhauin: {
       name: 'Tehenhauin',
     },
@@ -393,17 +390,6 @@ const vanilla2Characters = {
   wh2_main_lzd_lizardmen_heroes: {
     lzd_lord_kroak: {
       name: 'Lord Kroak',
-    },
-    lzd_tlaqua_skink_chief: {
-      name: 'Skink Chief',
-    },
-    lzd_tlaqua_skink_priest_beasts: {
-      name: 'Skink Priest (Beasts)',
-      spellLore: 'beasts',
-    },
-    lzd_tlaqua_skink_priest_heavens: {
-      name: 'Skink Priest (Heavens)',
-      spellLore: 'heavens',
     },
     lzd_skink_oracle: {
       name: 'Skink Oracle',

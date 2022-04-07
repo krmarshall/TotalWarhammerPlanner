@@ -3,6 +3,12 @@ import vanilla2Characters from './vanilla2Characters';
 const sfo2Characters = {
   ...vanilla2Characters,
 
+  wh2_dlc09_tmb_tomb_kings_lords: {
+    ...vanilla2Characters.wh2_dlc09_tmb_tomb_kings_lords,
+    tmb_cha_arch_liche: {
+      name: 'Liche High Priest',
+    },
+  },
   wh2_main_def_dark_elves_heroes: {
     ...vanilla2Characters.wh2_main_def_dark_elves_heroes,
     def_fleetmaster: {

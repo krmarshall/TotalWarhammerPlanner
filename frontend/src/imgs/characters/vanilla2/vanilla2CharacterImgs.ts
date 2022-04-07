@@ -312,7 +312,6 @@ const vanilla2CharacterImgs = {
   hef_shadow_walker: shadowWalker,
 
   lzd_red_crested_skink_chief: redCrestedSkinkChief,
-  lzd_red_crested_skink_chief_legendary: redCrestedSkinkChief,
   lzd_tehenhauin: tehenhauin,
   lzd_tiktaqto: tiktaqto,
   ancient_kroxigor: kroxigorAncient,
@@ -328,9 +327,6 @@ const vanilla2CharacterImgs = {
   lzd_slann_mage_priest_life: slann,
 
   lzd_lord_kroak: lordKroak,
-  lzd_tlaqua_skink_chief: skinkChief,
-  lzd_tlaqua_skink_priest_beasts: skinkPriest,
-  lzd_tlaqua_skink_priest_heavens: skinkPriest,
   lzd_skink_oracle: skinkOracle,
   lzd_saurus_scar_veteran: saurusScarVeteran,
   lzd_skink_chief: skinkChief,
