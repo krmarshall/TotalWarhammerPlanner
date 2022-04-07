@@ -5,7 +5,7 @@ const sfo2Characters = {
 
   wh2_main_def_dark_elves_heroes: {
     ...vanilla2Characters.wh2_main_def_dark_elves_heroes,
-    def_cha_manticore_0: {
+    def_fleetmaster: {
       name: 'Black Ark Reaver',
     },
   },
