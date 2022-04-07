@@ -46,7 +46,8 @@ describe('Frontend vanilla2 list tests', () => {
         const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
         const response = await request.get(`/api/${game}.${strippedFactionKey}.${characterKey}`);
         expect(response.status).toBe(200);
-        expect(response.body).toEqual(bulkData[game][strippedFactionKey][characterKey]);
+        expect(response.body).toHaveProperty('key', characterKey);
+        expect(response.body).toHaveProperty('skillTree');
       });
     });
   });
@@ -62,7 +63,8 @@ describe('Frontend sfo2 list tests', () => {
         const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
         const response = await request.get(`/api/${game}.${strippedFactionKey}.${characterKey}`);
         expect(response.status).toBe(200);
-        expect(response.body).toEqual(bulkData[game][strippedFactionKey][characterKey]);
+        expect(response.body).toHaveProperty('key', characterKey);
+        expect(response.body).toHaveProperty('skillTree');
       });
     });
   });
