@@ -18,7 +18,7 @@ const sfo2CharacterImgs = {
   ...vanilla2CharacterImgs,
   brt_cha_lost: sfoBrtLost,
   chs_cha_bloodthirster: sfoChsBloodthirster,
-  def_cha_manticore_0: sfoDefManticore,
+  def_fleetmaster: sfoDefManticore,
   dwf_cha_slayer: sfoDwfSlayer,
   emp_cha_grandmaster: sfoEmpGrandmaster,
   grn_cha_savageboss: sfoGrnSavageBoss,

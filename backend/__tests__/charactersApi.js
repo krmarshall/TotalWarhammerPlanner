@@ -3,6 +3,7 @@ import supertest from 'supertest';
 import { initializeData, bulkData } from '../src/initializeData';
 import vanilla2Characters from '../../frontend/src/data/vanilla2Characters';
 import sfo2Characters from '../../frontend/src/data/sfo2Characters';
+import vanilla3Characters from '../../frontend/src/data/vanilla3Characters';
 
 const request = supertest(app);
 
@@ -58,6 +59,23 @@ describe('Frontend sfo2 list tests', () => {
   const factionKeys = Object.keys(sfo2Characters);
   factionKeys.forEach((factionKey) => {
     const characterKeys = Object.keys(sfo2Characters[factionKey]);
+    characterKeys.forEach((characterKey) => {
+      test(`${factionKey} - ${characterKey}`, async () => {
+        const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
+        const response = await request.get(`/api/${game}.${strippedFactionKey}.${characterKey}`);
+        expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty('key', characterKey);
+        expect(response.body).toHaveProperty('skillTree');
+      });
+    });
+  });
+});
+
+describe('Frontend vanilla3 list tests', () => {
+  const game = 'vanilla3';
+  const factionKeys = Object.keys(vanilla3Characters);
+  factionKeys.forEach((factionKey) => {
+    const characterKeys = Object.keys(vanilla3Characters[factionKey]);
     characterKeys.forEach((characterKey) => {
       test(`${factionKey} - ${characterKey}`, async () => {
         const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');

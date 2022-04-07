@@ -122,7 +122,7 @@ const vanilla3Characters = {
     },
   },
   wh2_main_def_dark_elves_lords: {
-    def_crone_hellebron: {
+    def_crone: {
       name: 'Crone Hellebron',
     },
     def_supreme_sorceress_beasts: {
@@ -146,7 +146,7 @@ const vanilla3Characters = {
     def_high_beastmaster: {
       name: 'High Beastmaster',
     },
-    def_malus_darkblade: {
+    def_malus: {
       name: 'Malus Darkblade',
     },
     def_black_ark: {
@@ -351,7 +351,7 @@ const vanilla3Characters = {
     lzd_tlaqua_skink_priest_heavens: {
       name: 'Skink Priest (Heavens)',
     },
-    lzd_skink_oracle_troglodon: {
+    lzd_skink_oracle: {
       name: 'Skink Oracle',
     },
     lzd_saurus_scar_veteran: {
@@ -588,7 +588,7 @@ const vanilla3Characters = {
     nur_cultist: {
       name: 'Cultist of Nurgle',
     },
-    nur_cultist_plague_ritual: {
+    nur_plague_cultist: {
       name: 'Plague Cultist',
     },
     nur_plagueridden_death: {
@@ -689,7 +689,7 @@ const vanilla3Characters = {
     bst_doombull: {
       name: 'Doombull',
     },
-    bst_great_bray_shaman_beasts: {
+    bst_great_bray_shaman_beast: {
       name: 'Great Bray-Shaman (Beasts)',
     },
     bst_great_bray_shaman_death: {
@@ -721,7 +721,7 @@ const vanilla3Characters = {
     bst_wargor: {
       name: 'Wargor',
     },
-    bst_bray_shaman_beasts: {
+    bst_bray_shaman_beast: {
       name: 'Bray-Shaman (Beasts)',
     },
     bst_bray_shaman_death: {
@@ -866,7 +866,7 @@ const vanilla3Characters = {
     brt_fay_enchantress: {
       name: 'The Fay Enchantress',
     },
-    brt_prophetess_beasts: {
+    brt_prophetess_beast: {
       name: 'Prophetess (Beasts)',
     },
     brt_prophetess_heavens: {
@@ -878,7 +878,7 @@ const vanilla3Characters = {
     brt_lord: {
       name: 'Lord',
     },
-    brt_louen_leoncouer: {
+    brt_louen: {
       name: 'Louen Leoncoeur',
     },
   },
@@ -898,7 +898,7 @@ const vanilla3Characters = {
     brt_paladin: {
       name: 'Paladin',
     },
-    brt_damsel_heavens: {
+    brt_damsel: {
       name: 'Damsel (Heavens)',
     },
   },
@@ -909,7 +909,7 @@ const vanilla3Characters = {
     chs_archaon: {
       name: 'Archaon the Everchosen',
     },
-    chs_kholek_suneater: {
+    chs_kholek: {
       name: 'Kholek Suneater',
     },
     chs_lord: {
@@ -918,7 +918,7 @@ const vanilla3Characters = {
     chs_lord_of_change: {
       name: 'Sarthorael the Everwatcher',
     },
-    chs_prince_sigvald: {
+    chs_sigvald: {
       name: 'Prince Sigvald the Magnificent',
     },
     chs_sorcerer_lord_death: {
@@ -935,7 +935,7 @@ const vanilla3Characters = {
     chs_exalted_hero: {
       name: 'Exalted Hero',
     },
-    chs_chaos_sorcerer_shadow: {
+    chs_sorcerer_shadow: {
       name: 'Chaos Sorcerer (Shadows)',
     },
     chs_chaos_sorcerer_death: {
@@ -961,10 +961,10 @@ const vanilla3Characters = {
     dwf_lord: {
       name: 'Lord',
     },
-    dwf_thorgrim_grudgebearer: {
+    dwf_thorgrim: {
       name: 'Thorgrim Grudgebearer',
     },
-    dwf_ungrim_ironfist: {
+    dwf_ungrim: {
       name: 'Ungrim Ironfist',
     },
     dwf_grombrindal: {
@@ -1010,10 +1010,10 @@ const vanilla3Characters = {
     emp_volkmar: {
       name: 'Volkmar the Grim',
     },
-    emp_balthasar_gelt: {
+    emp_balthasar: {
       name: 'Balthasar Gelt',
     },
-    emp_lord: {
+    emp_general: {
       name: 'General of the Empire',
     },
     emp_karl_franz: {
@@ -1135,7 +1135,7 @@ const vanilla3Characters = {
     vmp_strigoi_ghoul_king: {
       name: 'Strigoi Ghoul King',
     },
-    vmp_vlad_con_carstein: {
+    vmp_vlad_von_carstein: {
       name: 'Vlad von Carstein',
     },
     vmp_red_duke: {

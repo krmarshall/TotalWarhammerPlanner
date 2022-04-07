@@ -41,12 +41,14 @@ import hunter from './ogr_hunter_campaign_01_0.webp';
 import skrag from './ogr_skrag_0.webp';
 import slaughtermaster from './ogr_slaughtermaster_campaign_01_0.webp';
 import tyrant from './ogr_tyrant_campaign_01_0.webp';
+import norMarauderChieftain from '../vanilla2/nor_marauder_chieftain_campaign_01_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 
 const vanilla3CharacterImgs = {
   ...vanilla2CharacterImgs,
+  nor_marauder_chieftain: norMarauderChieftain,
   cth_dragon_blooded_shugengan_yang: shugengan,
   cth_dragon_blooded_shugengan_yin: shugengan,
   cth_lord_caravan_master: placeholder,
@@ -98,7 +100,7 @@ const vanilla3CharacterImgs = {
   nur_kugath: kugath,
 
   nur_cultist: cultistOfNurgle,
-  nur_cultist_plague_ritual: cultistOfNurgle,
+  nur_plague_cultist: cultistOfNurgle,
 
   ogr_greasus_goldtooth: greasus,
   ogr_skrag_the_slaughterer: skrag,
