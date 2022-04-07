@@ -210,8 +210,8 @@ export enum WoodElvesHeroes {
   'wef_spellsinger_life' = 'Spellsinger (Life)',
   'wef_spellsinger_shadow' = 'Spellsinger (Shadows)',
   'wef_waystalker' = 'Waystalker',
-  'wef_ariel' = 'Avatar of Isha',
-  'wef_coeddil' = 'Maddened Ancient',
+  'wef_ariel' = 'Ariel',
+  'wef_coeddil' = 'Coeddil',
   'wef_cha_shadowdancer' = 'Shadowdancer',
 }
 export enum NorscaLords {

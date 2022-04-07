@@ -1,4 +1,4 @@
-const factionNames2 = {
+const factions2 = {
   wh_dlc03_bst_beastmen: 'Beastmen',
   wh_main_brt_bretonnia: 'Brettonia',
   wh2_main_def_dark_elves: 'Dark Elves',
@@ -16,7 +16,7 @@ const factionNames2 = {
   wh_dlc05_wef_wood_elves: 'Wood Elves',
 };
 
-const factionNames3 = {
+const factions3 = {
   wh_dlc03_bst_beastmen: 'Beastmen',
   wh_main_brt_bretonnia: 'Brettonia',
   wh2_main_def_dark_elves: 'Dark Elves',
@@ -42,4 +42,4 @@ const factionNames3 = {
   wh_dlc05_wef_wood_elves: 'Wood Elves',
 };
 
-export { factionNames2, factionNames3 };
+export { factions2, factions3 };

@@ -5,19 +5,19 @@ import factionImages from '../imgs/factions/factionImages';
 
 const FactionSelector = () => {
   const { state, dispatch } = useContext(AppContext);
-  const [currentGameFactions, setCurrentGameFactions] = useState(Object.keys(gameData['vanilla2'].factionNames));
+  const [currentGameFactions, setCurrentGameFactions] = useState(Object.keys(gameData['vanilla2'].factions));
 
   useEffect(() => {
-    setCurrentGameFactions(Object.keys(gameData[state.selectedGame as keyof typeof gameData].factionNames));
+    setCurrentGameFactions(Object.keys(gameData[state.selectedGame as keyof typeof gameData].factions));
   }, [state.selectedGame]);
 
   return (
     <div className="justify-self-center">
-      <h1 className="text-center text-4xl mb-2 text-gray-200">Factions</h1>
+      <h1 className="text-center text-4xl m-2 text-gray-200">Factions</h1>
       <ul className="flex flex-row flex-wrap justify-center select-none">
         {currentGameFactions?.map((factionKey) => {
           // @ts-expect-error ts(7053)
-          const factionName = gameData[state.selectedGame].factionNames[factionKey];
+          const factionName = gameData[state.selectedGame].factions[factionKey];
           let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg rounded-lg';
 
           if (factionKey === state.selectedFaction) {

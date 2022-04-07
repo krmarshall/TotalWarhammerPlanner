@@ -1,16 +1,19 @@
 import { createContext, useReducer } from 'react';
+import BuildInterface from '../types/interfaces/BuildInterface';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
 interface ContextStateInterface {
   selectedGame: string;
   selectedFaction: string;
   characterData: CharacterInterface | null;
+  characterBuild: BuildInterface | null;
 }
 
 const initialState: ContextStateInterface = {
   selectedGame: 'vanilla2',
-  selectedFaction: 'beastmen',
+  selectedFaction: 'wh_dlc03_bst_beastmen',
   characterData: null,
+  characterBuild: null,
 };
 
 interface ActionInterface {
@@ -19,6 +22,7 @@ interface ActionInterface {
     selectedGame?: string;
     selectedFaction?: string;
     characterData?: CharacterInterface | null;
+    characterBuild?: BuildInterface | null;
   };
 }
 
@@ -26,6 +30,7 @@ enum AppContextActions {
   changeGame = 'changeGame',
   changeFaction = 'changeFaction',
   changeCharacterData = 'changeCharacterData',
+  changeCharacterBuild = 'changeCharacterBuild',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -54,6 +59,15 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.characterData = action.payload.characterData;
+      return newState;
+    }
+
+    case AppContextActions.changeCharacterBuild: {
+      const newState = { ...state };
+      if (action.payload.characterBuild === undefined) {
+        return state;
+      }
+      newState.characterBuild = action.payload.characterBuild;
       return newState;
     }
 
