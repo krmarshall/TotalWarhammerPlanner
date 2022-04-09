@@ -5220,5 +5220,231 @@
       }
     ]
   ],
-  "key": "hef_eltharion"
+  "key": "hef_eltharion",
+  "items": [
+    {
+      "key": "wh2_dlc15_anc_armour_helm_of_yvresse",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +25",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "morale_character.png",
+          "priority": 110,
+          "is_positive_value_good": true,
+          "description": "Leadership: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_leadership"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 606,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Helm of Yvresse\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_helm_of_yvresse",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_item_abilities_helm_of_yvresse",
+                "icon_name": "wh2_dlc15_item_abilities_helm_of_yvresse",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Helm of Yvresse",
+                "ui_effects": [
+                  {
+                    "key": "wh2_dlc12_refuse_to_die",
+                    "sort_order": 101,
+                    "effect_state": "positive",
+                    "description": "Entities cannot die while ability is active"
+                  }
+                ],
+                "active_time": 17,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": true,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 50,
+                "target_self": true,
+                "phases": [
+                  {
+                    "duration": 17,
+                    "effect_type": "positive",
+                    "unbreakable": true,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_helm_of_yvresse"
+        }
+      ],
+      "name": "Helm of Yvresse",
+      "description": "The ceremonial crown of he who protects Yvresse’s ancient metropolis is an inspirational symbol of dogged determination.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    },
+    {
+      "key": "wh2_dlc15_anc_talisman_talisman_of_hoeth",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "magic_character.png",
+          "priority": 1,
+          "is_positive_value_good": true,
+          "description": "Enables advanced High Magic",
+          "value": 1,
+          "key": "wh2_dlc15_effect_talisman_of_hoeth"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 8,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -20%",
+          "value": -20,
+          "key": "wh_main_effect_character_stat_mod_miscast_chance"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Hand of Glory\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_hand_of_glory"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Hand of Glory Upgraded\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_hand_of_glory_upgraded"
+        }
+      ],
+      "name": "Talisman of Hoeth",
+      "description": "This finely wrought medallion allows its wearer a measure of the original Warden's magical knowledge to aid in the guardianship of Yvresse. ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_dlc15_anc_weapon_fangsword_of_eltharion",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "siege_attack.png",
+          "priority": 102,
+          "is_positive_value_good": false,
+          "description": "[needs replacing] Enemy siege holdout time: -4 (minimum 1 turn)",
+          "value": -4,
+          "key": "wh_main_effect_force_army_campaign_siege_attack_holdout_time"
+        },
+        {
+          "icon": "battle_movement_character.png",
+          "priority": 120,
+          "is_positive_value_good": true,
+          "description": "Speed: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_speed"
+        },
+        {
+          "icon": "bonus_vs_small_character.png",
+          "priority": 180,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Infantry: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_bonus_vs_infantry"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 606,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Fangsword of Eltharion\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_fangsword_of_eltharion",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_weapon_abilities_fangsword_of_eltharion",
+                "icon_name": "wh2_dlc15_weapon_abilities_fangsword_of_eltharion",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Fangsword of Eltharion",
+                "active_time": 31,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 31,
+                    "effect_type": "positive",
+                    "imbue_magical": true,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 1.3,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.3 Armour-Piercing Weapon Damage"
+                      },
+                      {
+                        "value": 40,
+                        "stat": "stat_resistance_physical",
+                        "how": "add",
+                        "description": "+40 Physical Resistance"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_fangsword_of_eltharion"
+        }
+      ],
+      "name": "Fangsword of Eltharion",
+      "description": "This rune-encrusted longsword has been passed down through Eltharion’s family for generations, bestowing unto him the zeal of his forefathers.",
+      "unlocked_at_rank": 17,
+      "instant": false
+    }
+  ]
 }

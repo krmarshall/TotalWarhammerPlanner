@@ -2554,5 +2554,134 @@
       }
     ]
   ],
-  "key": "def_lokhir"
+  "key": "def_lokhir",
+  "items": [
+    {
+      "key": "wh2_dlc11_anc_weapon_red_blades",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 108,
+          "is_positive_value_good": true,
+          "description": "Income from sacking settlements: +20%",
+          "value": 20,
+          "key": "wh_main_effect_force_all_campaign_sacking_income"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "phase_sunder_armour.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables sundering attacks",
+          "value": 1,
+          "key": "wh2_dlc10_effect_character_stat_enable_sundering_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        }
+      ],
+      "name": "Red Blades",
+      "description": "These blades gain their red hue from both the Indan Bloodsteel from which they are forged and the viscera which so often covers them.",
+      "unlocked_at_rank": 3,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_armour_helm_of_the_kraken",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +15",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Helm of the Kraken\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc11_effect_ability_enable_helm_of_the_kraken",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc11_item_passive_helm_of_the_kraken",
+                "icon_name": "wh2_dlc11_item_passive_helm_of_the_kraken",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Helm of the Kraken",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Replenishes hit points of combatants"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "+10 Melee Defence"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc11_effect_ability_enable_helm_of_the_kraken"
+        },
+        {
+          "icon": "attribute_causes_terror.png",
+          "priority": 320,
+          "is_positive_value_good": true,
+          "description": "Attribute: Causes Terror",
+          "value": 1,
+          "key": "wh_main_effect_attribute_enable_causes_terror"
+        }
+      ],
+      "name": "Helm of the Kraken",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

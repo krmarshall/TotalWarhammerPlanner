@@ -4851,5 +4851,188 @@
       }
     ]
   ],
-  "key": "hef_teclis"
+  "key": "hef_teclis",
+  "items": [
+    {
+      "key": "wh2_main_anc_armour_war_crown_of_saphery",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "wizard.png",
+          "priority": 3,
+          "is_positive_value_good": true,
+          "description": "Unlocks Hero recruitment: Mage",
+          "value": 1,
+          "key": "wh2_main_effect_agent_enable_recruitment_wizard_hef"
+        },
+        {
+          "icon": "magic_campaign.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Winds of Magic power reserve change: +18% when increasing",
+          "value": 18,
+          "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+        },
+        {
+          "icon": "wizard.png",
+          "priority": 102,
+          "is_positive_value_good": true,
+          "description": "Hero capacity: +1 for Mages",
+          "value": 1,
+          "key": "wh2_main_effect_agent_cap_increase_hef_mage"
+        },
+        {
+          "icon": "wizard.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +2 for Mages",
+          "value": 2,
+          "key": "wh2_main_effect_agent_recruitment_xp_hef_mage"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "magic_cooldown_character.png",
+          "priority": 293,
+          "is_positive_value_good": false,
+          "description": "Cooldown: -30% to spells",
+          "value": -30,
+          "key": "wh2_main_effect_ability_cooldown_spells"
+        }
+      ],
+      "name": "War Crown of Saphery",
+      "description": "Seldom seen outside the walls of the White Tower, the War Crown was given to Teclis by the former High Loremaster and holds great power.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_sword_of_teclis",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "military_spending.png",
+          "priority": 70,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -5%",
+          "value": -5,
+          "key": "wh_main_effect_force_all_campaign_upkeep"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +40",
+          "value": 40,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "resistance_missile.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Missile resistance: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_missile_resistance"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -3 for \"Chain Lightning\"",
+          "value": -3,
+          "key": "wh2_main_effect_ability_wom_cost_chain_lightning"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Sword of Teclis\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_sword_of_teclis",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_abilities_sword_of_teclis",
+                "icon_name": "wh2_main_weapon_abilities_sword_of_teclis",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Sword of Teclis",
+                "active_time": 30,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 30,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 40,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+40 Melee Attack"
+                      },
+                      {
+                        "value": 1.8,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.8 Armour-Piercing Weapon Damage"
+                      },
+                      {
+                        "value": 1.8,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.8 Base Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_sword_of_teclis"
+        }
+      ],
+      "name": "Sword of Teclis",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

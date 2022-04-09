@@ -2550,5 +2550,116 @@
       }
     ]
   ],
-  "key": "chs_kholek"
+  "key": "chs_kholek",
+  "items": [
+    {
+      "key": "wh_main_anc_weapon_starcrusher",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "replenishment.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Casualty replenishment rate: +3%",
+          "value": 3,
+          "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +16",
+          "value": 16,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +12%",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Starcrusher\"",
+          "related_abilities": [
+            {
+              "effect": "wh_main_effect_ability_enable_starcrusher",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc01_weapon_abilities_starcrusher",
+                "icon_name": "wh_dlc01_weapon_abilities_starcrusher",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Starcrusher",
+                "active_time": 43,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 43,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 1.5,
+                        "stat": "scalar_splash_attack_power",
+                        "how": "mult",
+                        "description": "x1.5 Splash Attack Power"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_main_effect_ability_enable_starcrusher"
+        },
+        {
+          "icon": "armour_piercing.png",
+          "priority": 470,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +50",
+          "value": 50,
+          "key": "wh_main_effect_force_stat_ap_damage"
+        }
+      ],
+      "name": "Starcrusher",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

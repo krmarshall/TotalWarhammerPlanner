@@ -2464,5 +2464,117 @@
       }
     ]
   ],
-  "key": "nakai"
+  "key": "nakai",
+  "items": [
+    {
+      "key": "wh2_dlc13_anc_enchanted_item_golden_tributes",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Golden Tributes\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc13_effect_ability_enable_golden_tributes",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc13_item_passive_golden_tributes",
+                "icon_name": "wh2_dlc13_item_passive_golden_tributes",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Golden Tributes",
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "attributes": [
+                      {
+                        "key": "fatigue_immune",
+                        "description": " Perfect Vigour",
+                        "attribute_type": "positive"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc13_effect_ability_enable_golden_tributes"
+        }
+      ],
+      "name": "Golden Tributes",
+      "description": "Every trinket adorning the Wanderer’s massive, battle-scarred body is a testament to the countless battles that he has fought.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_dlc13_talisman_the_ogham_shard",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "replenishment.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Casualty replenishment rate: +3%",
+          "value": 3,
+          "key": "wh_main_effect_force_all_campaign_replenishment_rate"
+        },
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -3",
+          "value": -3,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        }
+      ],
+      "name": "The Ogham Shard",
+      "description": "The shard is a fractured piece of one of the original Ogham Waystones, whose mystical properties may keep Chaos at bay.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

@@ -2619,5 +2619,122 @@
       }
     ]
   ],
-  "key": "kho_skarbrand"
+  "key": "kho_skarbrand",
+  "items": [
+    {
+      "key": "wh3_main_anc_weapon_slaughter_and_carnage",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "corruption_khorne.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Khorne corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_khorne_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +100",
+          "value": 100,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Slaughter & Carnage\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_slaughter_and_carnage",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_weapon_passive_slaughter_and_carnage",
+                "icon_name": "wh_magic_item_passive_weapon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Slaughter & Carnage",
+                "ui_effects": [
+                  {
+                    "key": "wh3_main_ability_intensity_kills",
+                    "sort_order": 1,
+                    "effect_state": "positive",
+                    "description": "Effect intensity increases with each kill made by the unit."
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 2,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x2 Armour-Piercing Weapon Damage"
+                      },
+                      {
+                        "value": 2,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x2 Base Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_slaughter_and_carnage"
+        }
+      ],
+      "name": "Slaughter & Carnage",
+      "description": "Each of these Daemonic axes contains a Bloodthirster's savage spirit, lending fury to Skarbrand's strikes.",
+      "unlocked_at_rank": 10,
+      "instant": false
+    }
+  ]
 }

@@ -4778,5 +4778,340 @@
       }
     ]
   ],
-  "key": "def_malekith"
+  "key": "def_malekith",
+  "items": [
+    {
+      "key": "wh2_main_anc_arcane_item_circlet_of_iron",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +5%",
+          "value": 5,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Power of Darkness\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_power_of_darkness"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": true,
+          "description": "Spell number of uses: +2 for \"Power of Darkness\"",
+          "value": 2,
+          "key": "wh2_main_effect_ability_uses_power_of_darkness"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Circlet of Iron\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_circlet_of_iron",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_passive_circlet_of_iron",
+                "icon_name": "wh2_main_item_passive_circlet_of_iron",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Circlet of Iron",
+                "passive": true,
+                "effect_range": -1,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 2,
+                        "stat": "scalar_miscast_chance",
+                        "how": "mult",
+                        "description": "x2Miscast Chance"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_circlet_of_iron"
+        }
+      ],
+      "name": "Circlet of Iron",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_armour_armour_of_midnight",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -2",
+          "value": -2,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        }
+      ],
+      "name": "Armour of Midnight",
+      "description": "Malekith's rune-armour is forged from the hardest meteoric iron and protects against any mortal weapon.",
+      "unlocked_at_rank": 4,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_enchanted_item_supreme_spellshield",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +8",
+          "value": 8,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Doombolt\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_doombolt"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Doombolt Upgraded\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_doombolt_upgraded"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Supreme Spellshield\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_supreme_spellshield",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_passive_supreme_spellshield",
+                "icon_name": "wh2_main_item_passive_supreme_spellshield",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_hex_of_the_winds",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_hex_of_the_winds.png",
+                  "description": "Hex of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Supreme Spellshield",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_increases_with_enemies_in_range",
+                    "sort_order": 0,
+                    "effect_state": "negative",
+                    "description": "Effect increases proportional to the number of enemy units in range"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "mana_regen_mod": -0.1,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_supreme_spellshield"
+        }
+      ],
+      "name": "Supreme Spellshield",
+      "description": " ",
+      "unlocked_at_rank": 17,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_destroyer",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Post battle chance of stealing a magic item: +50%",
+          "value": 50,
+          "key": "wh_main_effect_character_mod_ancillary_steal"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "discouraged.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Attacks cause \"Discouraged\" effect, reducing leadership",
+          "value": 1,
+          "key": "wh2_main_effect_character_stat_enable_discourage_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +12%",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Destroyer\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_destroyer",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_passive_destroyer",
+                "icon_name": "wh2_main_weapon_passive_destroyer",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Destroyer",
+                "active_time": 15,
+                "recharge_time": 45,
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "negative",
+                    "ability_recharge_change": 15,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_destroyer"
+        }
+      ],
+      "name": "Destroyer",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

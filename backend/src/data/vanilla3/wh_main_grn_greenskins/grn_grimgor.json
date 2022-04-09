@@ -2602,5 +2602,241 @@
       }
     ]
   ],
-  "key": "grn_grimgor"
+  "key": "grn_grimgor",
+  "items": [
+    {
+      "key": "wh_main_anc_armour_blood-forged_armour",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Blood-Forged Armour\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_blood_forged_armour",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_item_abilities_blood_forged_armour",
+                "icon_name": "wh2_dlc15_item_abilities_blood_forged_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_explosion",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_explosion.png",
+                  "description": "Explosion"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Blood-Forged Armour",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_spell_friendly_fire_explosion",
+                    "sort_order": 101,
+                    "effect_state": "positive",
+                    "description": "Explosion does not affect friendly troops"
+                  },
+                  {
+                    "key": "wh_main_all_poor_vs_large",
+                    "sort_order": 206,
+                    "effect_state": "negative",
+                    "description": "Poor against large combatants"
+                  }
+                ],
+                "active_time": 12,
+                "recharge_time": 30,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 12,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 30,
+                        "stat": "stat_armour",
+                        "how": "add",
+                        "description": "+30 Armour"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_blood_forged_armour"
+        }
+      ],
+      "name": "Blood-Forged Armour",
+      "description": "After being forged under Red Eye Mountain, this armour was cooled with the blood of Dwarf Runesmiths.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    },
+    {
+      "key": "wh_main_anc_weapon_gitsnik",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "bonus_vs_large_character.png",
+          "priority": 190,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Large: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_bonus_vs_large"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Gitsnik\"",
+          "related_abilities": [
+            {
+              "effect": "wh_main_effect_ability_enable_gitsnik",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_main_weapon_abilities_gitsnik",
+                "icon_name": "wh_main_weapon_abilities_gitsnik",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Gitsnik",
+                "active_time": 33,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 33,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 24,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+24 Melee Attack"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_main_effect_ability_enable_gitsnik"
+        }
+      ],
+      "name": "Gitsnik",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

@@ -2750,5 +2750,199 @@
       }
     ]
   ],
-  "key": "skv_queek_headtaker"
+  "key": "skv_queek_headtaker",
+  "items": [
+    {
+      "key": "wh2_main_anc_armour_warp_shard_armour",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "corruption_skaven.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Skaven corruption: +3",
+          "value": 3,
+          "key": "wh3_main_effect_corruption_skaven_characters"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Warp-Shard Armour\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_warp_shard_armour",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_passive_warp_shard_armour",
+                "icon_name": "wh2_main_item_passive_warp_shard_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Warp-Shard Armour",
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": -23,
+                        "stat": "stat_armour",
+                        "how": "add",
+                        "description": "-23 Armour"
+                      },
+                      {
+                        "value": -5,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-5 Melee Defence"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_warp_shard_armour"
+        }
+      ],
+      "name": "Warp-Shard Armour",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_dwarf_gouger",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 161,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +20% when fighting against Dwarfs",
+          "value": 20,
+          "key": "wh2_main_effect_character_stat_weapon_strength_vs_dwarfs"
+        },
+        {
+          "icon": "bonus_vs_small_character.png",
+          "priority": 180,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Infantry: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_bonus_vs_infantry"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Dwarf Gouger\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_dwarf_gouger",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_abilities_dwarf_gouger",
+                "icon_name": "wh2_main_weapon_abilities_dwarf_gouger",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Dwarf Gouger",
+                "active_time": 36,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 36,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 24,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+24 Melee Attack"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_dwarf_gouger"
+        }
+      ],
+      "name": "Dwarf Gouger",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

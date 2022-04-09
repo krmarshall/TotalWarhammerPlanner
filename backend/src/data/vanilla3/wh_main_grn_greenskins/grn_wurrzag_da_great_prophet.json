@@ -3628,5 +3628,308 @@
       }
     ]
   ],
-  "key": "grn_wurrzag_da_great_prophet"
+  "key": "grn_wurrzag_da_great_prophet",
+  "items": [
+    {
+      "key": "wh_dlc06_anc_arcane_item_squiggly_beast",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "wizard.png",
+          "priority": 102,
+          "is_positive_value_good": true,
+          "description": "Hero capacity: +1 for Shamans",
+          "value": 1,
+          "key": "wh_main_effect_agent_cap_increase_wizard_orc_shaman"
+        },
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "wizard.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +5 for Shamans",
+          "value": 5,
+          "key": "wh_main_effect_agent_recruitment_xp_wizard_greenskins"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Squiggly Beast\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc06_effect_ability_enable_squiggly_beast",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc06_item_passive_squiggly_beast",
+                "icon_name": "wh_magic_item_passive_arcane",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment_of_the_winds",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment_of_the_winds.png",
+                  "description": "Augment of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Squiggly Beast",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "mana_regen_mod": 0.6,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc06_effect_ability_enable_squiggly_beast"
+        }
+      ],
+      "name": "Squiggly Beast",
+      "description": "Once a Shaman, now a beast transformed by Wurrzag and retained as an example of Da Great Green Prophet's might.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    },
+    {
+      "key": "wh_dlc06_anc_enchanted_item_baleful_mask",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "military_spending.png",
+          "priority": 70,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_upkeep"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -20%",
+          "value": -20,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +8",
+          "value": 8,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 291,
+          "is_positive_value_good": true,
+          "description": "Bound spell: \"Vindictive Glare\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc06_effect_ability_enable_bound_vindictive_glare",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc06_spell_bound_vindictive_glare",
+                "icon_name": "wh_main_spell_lil_waaagh_vindictive_glare",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Vindictive Glare",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_moderate",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes moderate magical damage"
+                  },
+                  {
+                    "key": "wh_main_all_good_vs_large",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against large combatants"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single combatant"
+                  }
+                ],
+                "num_uses": 4,
+                "recharge_time": 60,
+                "wind_up_time": 1,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 250,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc06_effect_ability_enable_bound_vindictive_glare"
+        }
+      ],
+      "name": "Baleful Mask",
+      "description": "This gnarled and fearsome visor is riddled with eerie power which emanates from its bored-out eye sockets.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh_dlc06_anc_weapon_bonewood_staff",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +5%",
+          "value": 5,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 298,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -20%",
+          "value": -20,
+          "key": "wh_main_effect_character_stat_miscast"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Bonewood Staff\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc06_effect_ability_enable_bonewood_staff",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc06_weapon_passive_bonewood_staff",
+                "icon_name": "wh_magic_item_passive_weapon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Bonewood Staff",
+                "ui_effects": [
+                  {
+                    "key": "wh_dlc05_spell_trigger_when_casting",
+                    "sort_order": 1,
+                    "effect_state": "positive",
+                    "description": "Triggers when casting spell"
+                  }
+                ],
+                "active_time": 17,
+                "passive": true,
+                "effect_range": -1,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 17,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 1.2,
+                        "stat": "stat_charge_bonus",
+                        "how": "mult",
+                        "description": "x1.2 Charge Bonus"
+                      },
+                      {
+                        "value": 12,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+12 Melee Attack"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc06_effect_ability_enable_bonewood_staff"
+        }
+      ],
+      "name": "Bonewood Staff",
+      "description": "Covered in magical glyphs, this staff protects Wurrzag from the many magical machinations ranged against him.",
+      "unlocked_at_rank": 17,
+      "instant": false
+    }
+  ]
 }

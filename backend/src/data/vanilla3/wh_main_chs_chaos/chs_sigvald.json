@@ -2450,5 +2450,166 @@
       }
     ]
   ],
-  "key": "chs_sigvald"
+  "key": "chs_sigvald",
+  "items": [
+    {
+      "key": "wh_main_anc_armour_auric_armour",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Auric Armour\"",
+          "related_abilities": [
+            {
+              "effect": "wh_main_effect_ability_enable_auric_armour",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc01_weapon_passive_auric_armour",
+                "icon_name": "wh_dlc01_weapon_passive_auric_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Auric Armour",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Replenishes hit points of combatants"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_main_effect_ability_enable_auric_armour"
+        }
+      ],
+      "name": "Auric Armour",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    },
+    {
+      "key": "wh_main_anc_weapon_sliverslash",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "corruption_chaos.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Chaos Undivided corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_chaos_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +8",
+          "value": 8,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +8%",
+          "value": 8,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        }
+      ],
+      "name": "Sliverslash",
+      "description": "It is said Prince Sigvald’s ornate sword is forged from a sliver of Slaanesh’s own blade.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

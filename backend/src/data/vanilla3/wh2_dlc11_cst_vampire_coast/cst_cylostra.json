@@ -4409,5 +4409,95 @@
       }
     ]
   ],
-  "key": "cst_cylostra"
+  "key": "cst_cylostra",
+  "items": [
+    {
+      "key": "wh2_dlc11_anc_arcane_item_the_bordeleaux_flabellum",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +2",
+          "value": 2,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +40%",
+          "value": 40,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "corruption_vampiric.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Vampiric corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_vampiric_characters"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 298,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_character_stat_miscast"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"The Bordeleaux Flabellum\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc11_effect_ability_enable_the_bordeleaux_flabellum",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc11_item_passive_the_bordeleaux_flabellum",
+                "icon_name": "wh_magic_item_passive_arcane",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment_of_the_winds",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment_of_the_winds.png",
+                  "description": "Augment of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Bordeleaux Flabellum",
+                "active_time": 15,
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "positive",
+                    "ability_recharge_change": -10,
+                    "mana_regen_mod": 0.4,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc11_effect_ability_enable_the_bordeleaux_flabellum"
+        }
+      ],
+      "name": "The Bordeleaux Flabellum",
+      "description": "This enchanted fan keeps Cylostra cool when the heat is on, improving the recharge of her abilities and reducing their cooldown times.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

@@ -4584,5 +4584,102 @@
       }
     ]
   ],
-  "key": "vmp_isabella_von_carstein"
+  "key": "vmp_isabella_von_carstein",
+  "items": [
+    {
+      "key": "wh_pro02_anc_enchanted_item_blood_chalice_of_bathori",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "replenishment.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Casualty replenishment rate: +5%",
+          "value": 5,
+          "key": "wh_main_effect_force_all_campaign_replenishment_rate"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Blood Chalice of Bathori\"",
+          "related_abilities": [
+            {
+              "effect": "wh_pro02_effect_ability_enable_blood_chalice_of_bathori",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_pro02_item_abilities_blood_chalice_of_bathori",
+                "icon_name": "wh_pro02_item_blood_chalice_of_bathori",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Blood Chalice of Bathori",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish_high",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Greatly replenishes hit points of combatants"
+                  }
+                ],
+                "active_time": 26,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": true,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 60,
+                "target_self": true,
+                "phases": [
+                  {
+                    "duration": 26,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_pro02_effect_ability_enable_blood_chalice_of_bathori"
+        }
+      ],
+      "name": "Blood Chalice of Bathori",
+      "description": "The life essence of many wretched, innocent smallfolk ensures that those who drink from this cursed cup thrive with newfound power.",
+      "unlocked_at_rank": 8,
+      "instant": false
+    }
+  ]
 }

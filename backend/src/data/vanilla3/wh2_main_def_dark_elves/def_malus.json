@@ -2657,5 +2657,100 @@
       }
     ]
   ],
-  "key": "def_malus"
+  "key": "def_malus",
+  "items": [
+    {
+      "key": "wh2_dlc14_anc_weapon_warpsword_of_khaine",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "icon_effects_ambush.png",
+          "priority": 110,
+          "is_positive_value_good": true,
+          "description": "Ambush defence chance: +40%",
+          "value": 40,
+          "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"The Warpsword of Khaine\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc14_effect_ability_enable_warpsword_of_khaine",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc14_weapon_passive_warpsword_of_khaine",
+                "icon_name": "wh_magic_item_passive_weapon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Warpsword of Khaine",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Replenishes hit points of combatants"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 5,
+                        "stat": "stat_resistance_all",
+                        "how": "add",
+                        "description": "+5 Damage Resistance "
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc14_effect_ability_enable_warpsword_of_khaine"
+        }
+      ],
+      "name": "The Warpsword of Khaine",
+      "description": "\"The Time of Blood is at hand!\"",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

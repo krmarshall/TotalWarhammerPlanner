@@ -3878,5 +3878,114 @@
       }
     ]
   ],
-  "key": "vmp_helman_ghorst"
+  "key": "vmp_helman_ghorst",
+  "items": [
+    {
+      "key": "wh_dlc04_anc_arcane_item_the_liber_noctus",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "corruption_vampiric.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Vampiric corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_vampiric_characters"
+        },
+        {
+          "icon": "wizard.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +5 for Necromancers",
+          "value": 5,
+          "key": "wh_main_effect_agent_recruitment_xp_wizard_vampire_counts"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -4 for \"Wind of Death\"",
+          "value": -4,
+          "key": "wh2_main_effect_ability_wom_cost_wind_of_death"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -4 for \"Wind of Death Upgraded\"",
+          "value": -4,
+          "key": "wh2_main_effect_ability_wom_cost_wind_of_death_upgraded"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Liber Noctus\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc04_effect_ability_enable_the_liber_noctus",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc04_item_abilities_the_liber_noctus",
+                "icon_name": "wh_dlc04_item_abilities_the_liber_noctus",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Liber Noctus",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_direct_damage_self",
+                    "sort_order": 201,
+                    "effect_state": "negative",
+                    "description": "Causes damage to self"
+                  }
+                ],
+                "num_uses": 2,
+                "active_time": 33,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 33,
+                    "effect_type": "positive",
+                    "ability_recharge_change": -30,
+                    "mana_regen_mod": 2.4,
+                    "mana_max_depletion_mod": 0.3,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc04_effect_ability_enable_the_liber_noctus"
+        }
+      ],
+      "name": "The Liber Noctus",
+      "description": "This decrepit tome bristles with dark secrets and eldritch powers. Reading from it summons dark thoughts and grim deeds. ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

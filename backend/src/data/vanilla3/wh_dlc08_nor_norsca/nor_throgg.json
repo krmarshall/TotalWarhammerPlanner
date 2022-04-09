@@ -2557,5 +2557,101 @@
       }
     ]
   ],
-  "key": "nor_throgg"
+  "key": "nor_throgg",
+  "items": [
+    {
+      "key": "wh_dlc08_anc_enchanted_item_wintertooth_crown",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "subterranean.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
+          "value": 10,
+          "key": "wh_main_effect_general_mod_tunnel_interception_chance"
+        },
+        {
+          "icon": "corruption_chaos.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Chaos Undivided corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_chaos_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Wintertooth Crown\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc08_effect_ability_enable_wintertooth_crown",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc08_item_abilities_the_wintertooth_crown",
+                "icon_name": "wh_dlc08_item_abilities_the_wintertooth_crown",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Wintertooth Crown",
+                "active_time": 24,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 24,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "attributes": [
+                      {
+                        "key": "unbreakable",
+                        "description": " Unbreakable",
+                        "attribute_type": "positive"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc08_effect_ability_enable_wintertooth_crown"
+        }
+      ],
+      "name": "The Wintertooth Crown",
+      "description": "Whether by the crown's own properties, or by the grace of the Dark Gods, all things bestial and savage obey the wearer.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

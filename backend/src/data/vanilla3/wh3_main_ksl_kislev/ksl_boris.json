@@ -2584,5 +2584,216 @@
       }
     ]
   ],
-  "key": "ksl_boris"
+  "key": "ksl_boris",
+  "items": [
+    {
+      "key": "wh3_main_anc_armour_armour_of_ursun",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +8",
+          "value": 8,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Armour of Ursun\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_armour_of_ursun",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_item_passive_armour_of_ursun",
+                "icon_name": "wh_magic_item_passive_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Armour of Ursun",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 12,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+12 Melee Attack"
+                      },
+                      {
+                        "value": 1.2,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.2 Armour-Piercing Weapon Damage"
+                      },
+                      {
+                        "value": 1.2,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.2 Base Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_armour_of_ursun"
+        }
+      ],
+      "name": "Armour of Ursun",
+      "description": "This suit of ancient scale carries with it the blessing of the Bear-God, allowing the wearer to shrug off blows that would fell an ox and fortifying their strength.",
+      "unlocked_at_rank": 10,
+      "instant": true
+    },
+    {
+      "key": "wh3_main_anc_weapon_shard_blade",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "bonus_vs_large_character.png",
+          "priority": 190,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Large: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_bonus_vs_large"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Shard Blade\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_shard_blade",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_weapon_abilities_shard_blade",
+                "icon_name": "wh3_main_weapon_abilities_shard_blade",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_direct_damage",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_direct_damage.png",
+                  "description": "Direct Damage (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Shard Blade",
+                "num_uses": 2,
+                "active_time": 15,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 15,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 0.6,
+                        "stat": "scalar_speed",
+                        "how": "mult",
+                        "description": "x0.6 Speed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_shard_blade"
+        }
+      ],
+      "name": "Shard Blade",
+      "description": "Its blade crafted from the Norscan glaciers and magically bound to remain forever frozen, when this mighty polearm strikes, the foe’s blood turns to ice.",
+      "unlocked_at_rank": 7,
+      "instant": true
+    }
+  ]
 }

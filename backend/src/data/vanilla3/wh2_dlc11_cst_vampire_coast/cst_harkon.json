@@ -2885,5 +2885,79 @@
       }
     ]
   ],
-  "key": "cst_harkon"
+  "key": "cst_harkon",
+  "items": [
+    {
+      "key": "wh2_dlc11_anc_enchanted_item_slann_gold",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Slann Gold\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc11_effect_ability_enable_slann_gold",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc11_item_abilities_slann_gold",
+                "icon_name": "wh2_dlc11_item_abilities_cube_of_draining",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_hex_of_the_winds",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_hex_of_the_winds.png",
+                  "description": "Hex of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Slann Gold",
+                "active_time": 55,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 200,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 55,
+                    "effect_type": "negative",
+                    "mana_regen_mod": -0.8,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc11_effect_ability_enable_slann_gold"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 1000,
+          "is_positive_value_good": false,
+          "description": "Raise dead cost: -50%",
+          "value": -50,
+          "key": "wh_main_effect_raise_dead_recruitment_cost_mod"
+        }
+      ],
+      "name": "Slann Gold",
+      "description": "It is well known that Lustrian gold is enchanted with all manner of esoteric properties; Harkon thinks it will restore his fractured mind! ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

@@ -4331,5 +4331,259 @@
       }
     ]
   ],
-  "key": "skv_lord_skrolk"
+  "key": "skv_lord_skrolk",
+  "items": [
+    {
+      "key": "wh2_main_anc_arcane_item_the_liber_bubonicus",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "wizard.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +4 for Plague Priests",
+          "value": 4,
+          "key": "wh2_main_effect_agent_recruitment_xp_skv_plague_priest"
+        },
+        {
+          "icon": "corruption_skaven.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Skaven corruption: +3",
+          "value": 3,
+          "key": "wh3_main_effect_corruption_skaven_characters"
+        },
+        {
+          "icon": "effect_rite.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Rite cost: -25% for The Pestilent Scheme",
+          "value": -25,
+          "key": "wh2_main_faction_trait_ritual_cost_skrolk"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Plague\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_plague"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Plague Upgraded\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_plague_upgraded"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Liber Bubonicus\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_the_liber_bubonicus",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_abilities_the_liber_bubonicus",
+                "icon_name": "wh2_main_item_abilities_the_liber_bubonicus",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_direct_damage",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_direct_damage.png",
+                  "description": "Direct Damage"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Liber Bubonicus",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_direct_damage",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes damage to combatants"
+                  },
+                  {
+                    "key": "wh_dlc08_direct_damage_character_unit",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Strong vs character"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single combatant"
+                  },
+                  {
+                    "key": "wh_main_all_weak_against_multiple",
+                    "sort_order": 203,
+                    "effect_state": "negative",
+                    "description": "Weak vs multiple combatants"
+                  }
+                ],
+                "num_uses": 2,
+                "active_time": 15,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 100,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_the_liber_bubonicus"
+        }
+      ],
+      "name": "The Liber Bubonicus",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_rod_of_corruption",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "wizard.png",
+          "priority": 102,
+          "is_positive_value_good": true,
+          "description": "Hero capacity: +1 for Plague Priests",
+          "value": 1,
+          "key": "wh2_main_effect_agent_cap_increase_skv_plague_priest"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Wither\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_wither"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Wither Upgraded\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_wither_upgraded"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Rod of Corruption\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_rod_of_corruption",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_abilities_rod_of_corruption",
+                "icon_name": "wh2_main_item_abilities_rod_of_corruption",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_direct_damage",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_direct_damage.png",
+                  "description": "Direct Damage (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Rod of Corruption",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_direct_damage",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes damage to combatants"
+                  },
+                  {
+                    "key": "wh_dlc08_direct_damage_medium_unit",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Strong vs 25 men unit or above"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_multiple",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs multiple combatants"
+                  },
+                  {
+                    "key": "wh_main_all_weak_against_single",
+                    "sort_order": 203,
+                    "effect_state": "negative",
+                    "description": "Weak vs a single combatant"
+                  }
+                ],
+                "num_uses": 3,
+                "active_time": 11,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 35,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 11,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_rod_of_corruption"
+        }
+      ],
+      "name": "Rod of Corruption",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

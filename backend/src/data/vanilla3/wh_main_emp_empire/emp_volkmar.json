@@ -2791,5 +2791,166 @@
       }
     ]
   ],
-  "key": "emp_volkmar"
+  "key": "emp_volkmar",
+  "items": [
+    {
+      "key": "wh_dlc04_anc_talisman_jade_griffon",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "warrior_priest.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +5 for Warrior Priests",
+          "value": 5,
+          "key": "wh_main_effect_agent_recruitment_xp_dignitary_empire"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Jade Griffon\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc04_effect_ability_enable_jade_griffon",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc04_item_passive_jade_griffon",
+                "icon_name": "wh_magic_item_passive_talisman",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Jade Griffon",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Replenishes hit points of combatants"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc04_effect_ability_enable_jade_griffon"
+        }
+      ],
+      "name": "Jade Griffon",
+      "description": "This small idol shimmers with an eerie green light, bestowing unnatural regenerative powers upon the wearer.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh_dlc04_anc_weapon_staff_of_command",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +12%",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "morale_character.png",
+          "priority": 260,
+          "is_positive_value_good": true,
+          "description": "Character's aura leadership effect: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_aura_leadership_effect"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 260,
+          "is_positive_value_good": true,
+          "description": "Leadership aura size: +35%",
+          "value": 35,
+          "key": "wh_main_effect_character_stat_leadership_aura_size"
+        }
+      ],
+      "name": "Staff of Command",
+      "description": "This stave is imbued with the right to lead, so that power and authority pervades its holder.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

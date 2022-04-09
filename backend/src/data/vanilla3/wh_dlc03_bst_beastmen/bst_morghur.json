@@ -2900,5 +2900,107 @@
       }
     ]
   ],
-  "key": "bst_morghur"
+  "key": "bst_morghur",
+  "items": [
+    {
+      "key": "wh_main_anc_weapon_stave_of_ruinous_corruption",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "unit_capacity.png",
+          "priority": 5,
+          "is_positive_value_good": true,
+          "description": "Unit capacity: +2\\\\nChaos Spawn",
+          "value": 2,
+          "key": "wh2_dlc17_effect_unit_cap_bst_chaos_spawn"
+        },
+        {
+          "icon": "corruption_chaos.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Chaos Undivided corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_chaos_characters"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Stave of Ruinous Corruption\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc05_effect_ability_enable_stave_of_ruinous_corruption",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc05_weapon_abilities_stave_of_ruinous_corruption",
+                "icon_name": "wh_dlc05_weapon_abilities_stave_of_ruinous_corruption",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_summon_unit",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Summon Unit"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Stave of Ruinous Corruption",
+                "ui_effects": [
+                  {
+                    "key": "wh_dlc01_all_summon_spawn",
+                    "sort_order": 103,
+                    "effect_state": "positive",
+                    "description": "Summons a unit of Chaos Spawn"
+                  },
+                  {
+                    "key": "wh_dlc04_all_summon_melee_expert",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good at melee combat"
+                  },
+                  {
+                    "key": "wh_main_all_direct_damage_unbinding",
+                    "sort_order": 203,
+                    "effect_state": "negative",
+                    "description": "Summoned units degrade over time"
+                  }
+                ],
+                "num_uses": 1,
+                "active_time": 1,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": true,
+                "target_intercept_range": 50,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc05_effect_ability_enable_stave_of_ruinous_corruption"
+        }
+      ],
+      "name": "Stave of Ruinous Corruption",
+      "description": "Imbued with the quiddity of Ruin, Morghur's gnarled staff summons deadly Chaos Spawn to do his bidding on the battlefield.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

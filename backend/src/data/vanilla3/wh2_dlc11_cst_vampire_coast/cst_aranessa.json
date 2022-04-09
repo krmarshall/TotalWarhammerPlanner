@@ -2726,5 +2726,98 @@
       }
     ]
   ],
-  "key": "cst_aranessa"
+  "key": "cst_aranessa",
+  "items": [
+    {
+      "key": "wh2_dlc11_anc_weapon_krakens_bane",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from raiding: +25%",
+          "value": 25,
+          "key": "wh_main_effect_force_all_campaign_raid_income"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Krakens' Bane\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc11_effect_ability_enable_krakens_bane",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc11_weapon_passive_krakens_bane",
+                "icon_name": "wh_magic_item_passive_weapon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Krakens' Bane",
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 8,
+                        "stat": "stat_bonus_vs_large",
+                        "how": "add",
+                        "description": "+8 Bonus vs. Large"
+                      },
+                      {
+                        "value": 5,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+5 Melee Attack"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc11_effect_ability_enable_krakens_bane"
+        }
+      ],
+      "name": "Krakens' Bane",
+      "description": "So named for its ability, in the right hands, to bring down one of the most - if not *the* most - savage sea monsters in existence.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

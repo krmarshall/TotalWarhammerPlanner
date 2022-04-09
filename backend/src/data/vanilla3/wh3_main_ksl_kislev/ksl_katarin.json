@@ -4467,5 +4467,205 @@
       }
     ]
   ],
-  "key": "ksl_katarin"
+  "key": "ksl_katarin",
+  "items": [
+    {
+      "key": "wh3_main_anc_armour_the_crystal_cloak",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Crystal Cloak\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_the_crystal_cloak",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_item_passive_crystal_cloak",
+                "icon_name": "wh_magic_item_passive_enchanted",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Crystal Cloak",
+                "active_time": 31,
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 31,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 20,
+                        "stat": "stat_resistance_all",
+                        "how": "add",
+                        "description": "+20 Damage Resistance "
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_the_crystal_cloak"
+        }
+      ],
+      "name": "The Crystal Cloak",
+      "description": "Made for the Khan-queens in ages past, this swirling mist of ice and crystals surrounds the Tzarina, protecting her from harm.",
+      "unlocked_at_rank": 10,
+      "instant": false
+    },
+    {
+      "key": "wh3_main_anc_weapon_frost_fang",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "military_spending.png",
+          "priority": 70,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -5%",
+          "value": -5,
+          "key": "wh_main_effect_force_all_campaign_upkeep"
+        },
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Frost Fang\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_frost_fang",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_weapon_abilities_frost_fang",
+                "icon_name": "wh3_main_weapon_abilities_frost_fang",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_explosion",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_explosion.png",
+                  "description": "Explosion"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Frost Fang",
+                "num_uses": 2,
+                "active_time": 5,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": true,
+                "target_intercept_range": 200,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_frost_fang"
+        }
+      ],
+      "name": "Frost Fang",
+      "description": "A single blow landed with this truly deadly magic sword is enough to fell even mighty beasts.",
+      "unlocked_at_rank": 7,
+      "instant": true
+    }
+  ]
 }

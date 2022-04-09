@@ -2982,5 +2982,104 @@
       }
     ]
   ],
-  "key": "tmb_khalida"
+  "key": "tmb_khalida",
+  "items": [
+    {
+      "key": "wh2_dlc09_anc_weapon_the_venom_staff",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +40",
+          "value": 40,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Venom Staff\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc09_effect_ability_enable_venom_staff",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc09_weapon_abilities_venom_staff",
+                "icon_name": "wh2_dlc09_weapon_abilities_venom_staff",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Venom Staff",
+                "ui_effects": [
+                  {
+                    "key": "wh_dlc06_projectile_shrapnels",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Shoots shrapnel on impact"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_units",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs multiple units"
+                  },
+                  {
+                    "key": "wh_main_projectile_effective_long_range",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Effective at long range"
+                  },
+                  {
+                    "key": "wh_main_all_weak_against_single",
+                    "sort_order": 203,
+                    "effect_state": "negative",
+                    "description": "Weak vs a single combatant"
+                  }
+                ],
+                "num_uses": 2,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 200,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc09_effect_ability_enable_venom_staff"
+        }
+      ],
+      "name": "The Venom Staff",
+      "description": "Fashioned into the shape of a striking asp, the staff writhes and spits with the spiteful anger of Asaph, Goddess of Vengeance.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

@@ -2191,5 +2191,312 @@
       }
     ]
   ],
-  "key": "dwf_grombrindal"
+  "key": "dwf_grombrindal",
+  "items": [
+    {
+      "key": "wh_pro01_anc_armour_armour_of_glimril_scales",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +8",
+          "value": 8,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ward_save"
+        }
+      ],
+      "name": "Armour of Glimril Scales",
+      "description": "Replicated by Runesmiths from a single scale wedged between the teeth of a slain Chaos Lord at the pivotal Battle of Thraag, the White Dwarf's armour is able to deflect even the hardest blows.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh_pro01_anc_enchanted_item_rune_helm_of_zhufbar",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "subterranean.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
+          "value": 10,
+          "key": "wh_main_effect_general_mod_tunnel_interception_chance"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Rune Helm of Zhufbar\"",
+          "related_abilities": [
+            {
+              "effect": "wh_pro01_effect_ability_enable_rune_helm_of_zhufbar",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_pro01_item_passive_rune_helm_of_zhufbar",
+                "icon_name": "wh_magic_item_passive_enchanted",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Rune Helm of Zhufbar",
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 12,
+                        "stat": "stat_morale",
+                        "how": "add",
+                        "description": "+12 Leadership"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_pro01_effect_ability_enable_rune_helm_of_zhufbar"
+        }
+      ],
+      "name": "Rune Helm of Zhufbar",
+      "description": "Long thought lost to time and conflict, Grombrindal's awesome helm inspires already-courageous Dwarfen hearts to even greater acts of bravery.",
+      "unlocked_at_rank": 22,
+      "instant": false
+    },
+    {
+      "key": "wh_pro01_anc_talisman_cloak_of_valaya",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        }
+      ],
+      "name": "Cloak of Valaya",
+      "description": "Grombrindal's cloak was woven by Valaya herself as a token of the love she felt for the White Dwarf, as proven by the skill in needlework displayed.",
+      "unlocked_at_rank": 17,
+      "instant": false
+    },
+    {
+      "key": "wh_pro01_anc_weapon_the_rune_axe_of_grombrindal",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "military_spending.png",
+          "priority": 70,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -5%",
+          "value": -5,
+          "key": "wh_main_effect_force_all_campaign_upkeep"
+        },
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +13",
+          "value": 13,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Rune Axe of Grombrindal\"",
+          "related_abilities": [
+            {
+              "effect": "wh_pro01_effect_ability_enable_rune_axe_of_grombrindal",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_pro01_weapon_abilities_rune_axe_of_grombrindal",
+                "icon_name": "wh_pro01_weapon_abilities_rune_axe_of_grombrindal",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Rune Axe of Grombrindal",
+                "active_time": 26,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 26,
+                    "effect_type": "positive",
+                    "imbue_contact": "wh_dlc06_unit_contact_discouraged",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_pro01_effect_ability_enable_rune_axe_of_grombrindal"
+        }
+      ],
+      "name": "Rune Axe of Grombrindal",
+      "description": "Mentioned in several sagas and legends, could the White Dwarf's mighty weapon be the fabled rune axe wielded by Grimnir at the dawn of history?",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

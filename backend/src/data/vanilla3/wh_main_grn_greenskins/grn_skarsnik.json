@@ -2676,5 +2676,132 @@
       }
     ]
   ],
-  "key": "grn_skarsnik"
+  "key": "grn_skarsnik",
+  "items": [
+    {
+      "key": "wh_dlc06_anc_weapon_skarsniks_prodder",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Skarsnik's Prodder\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc06_effect_ability_enable_skarsniks_prodder",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc06_weapon_abilities_skarsniks_prodder",
+                "icon_name": "wh_dlc06_weapon_abilities_skarsniks_prodder",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Skarsnik's Prodder",
+                "ui_effects": [
+                  {
+                    "key": "wh_dlc06_projectile_shrapnels",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Shoots shrapnel on impact"
+                  },
+                  {
+                    "key": "wh_main_projectile_powerful_explosion",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Powerful explosion"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_multiple",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs multiple combatants"
+                  },
+                  {
+                    "key": "wh_main_projectile_effective_long_range",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Effective at long range"
+                  },
+                  {
+                    "key": "wh_main_all_weak_against_units",
+                    "sort_order": 203,
+                    "effect_state": "negative",
+                    "description": "Weak vs multiple units"
+                  },
+                  {
+                    "key": "wh3_main_projectile_requires_line_of_sight",
+                    "sort_order": 215,
+                    "effect_state": "negative",
+                    "description": "Requires line of sight to the target"
+                  }
+                ],
+                "num_uses": 2,
+                "recharge_time": 120,
+                "wind_up_time": 3,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 200,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc06_effect_ability_enable_skarsniks_prodder"
+        }
+      ],
+      "name": "Skarsnik's Prodder",
+      "description": "Skarsnik's pointed staff, pulsating with magical energy, channels the might of Gork (or Mork) to lance out with weird, terrifying power.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

@@ -2894,5 +2894,90 @@
       }
     ]
   ],
-  "key": "lzd_tiktaqto"
+  "key": "lzd_tiktaqto",
+  "items": [
+    {
+      "key": "wh2_dlc12_anc_enchanted_item_mask_of_heavens",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "campaign_movement.png",
+          "priority": 13,
+          "is_positive_value_good": true,
+          "description": "Campaign movement range: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_movement_range"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Mask of Heavens\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc12_effect_ability_enable_mask_of_heavens",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc12_item_passive_mask_of_heavens",
+                "icon_name": "wh_magic_item_passive_enchanted",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Mask of Heavens",
+                "passive": true,
+                "effect_range": 55,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 23,
+                        "stat": "stat_armour",
+                        "how": "add",
+                        "description": "+23 Armour"
+                      },
+                      {
+                        "value": 10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "+10 Melee Defence"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc12_effect_ability_enable_mask_of_heavens"
+        },
+        {
+          "icon": "attribute_fatigue_immune.png",
+          "priority": 320,
+          "is_positive_value_good": true,
+          "description": "Attribute: Perfect Vigour",
+          "value": 1,
+          "key": "wh2_dlc10_effect_attribute_enable_perfect_vigour"
+        }
+      ],
+      "name": "Mask of Heavens",
+      "description": "Its wearer will become one with the mighty Terradons, who will then move in tandem as a single, mighty consciousness.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

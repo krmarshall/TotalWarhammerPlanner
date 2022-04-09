@@ -4315,5 +4315,121 @@
       }
     ]
   ],
-  "key": "brt_fay_enchantress"
+  "key": "brt_fay_enchantress",
+  "items": [
+    {
+      "key": "wh2_dlc12_anc_arcane_item_brt_morgianas_mirror",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 30%",
+          "value": 30,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -15% for Lore of Life spells",
+          "value": -15,
+          "key": "wh2_dlc12_effect_ability_wom_cost_pct_life_spells"
+        }
+      ],
+      "name": "Morgiana's Mirror",
+      "description": "Through which the Lady's worldly representative peers directly into the hearts and minds of enemy Wizards, so she might prepare her defence.",
+      "unlocked_at_rank": 3,
+      "instant": false
+    },
+    {
+      "key": "wh_dlc07_anc_arcane_item_the_chalice_of_potions",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "wizard.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +5 for Damsels",
+          "value": 5,
+          "key": "wh_main_effect_agent_recruitment_xp_wizard_bretonnia"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Chalice of Potions\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc07_effect_ability_enable_the_chalice_of_potions",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc07_item_abilities_chalice_of_potions",
+                "icon_name": "wh_dlc07_item_abilities_chalice_of_potions",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_bombardment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_bombardment.png",
+                  "description": "Bombardment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Chalice of Potions",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_massive",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes massive magical damage"
+                  },
+                  {
+                    "key": "wh2_main_all_huge_static_aoe",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Huge explosion area"
+                  },
+                  {
+                    "key": "wh_main_bombardment_large_strike_aoe",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Large strike area"
+                  },
+                  {
+                    "key": "wh2_main_all_good_against_armour",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against armour"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_units",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs multiple units"
+                  }
+                ],
+                "num_uses": 2,
+                "active_time": 7,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": true,
+                "target_intercept_range": 200,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc07_effect_ability_enable_the_chalice_of_potions"
+        }
+      ],
+      "name": "The Chalice of Potions",
+      "description": "The pellet with the poison is in the vessel with the pestle; the chalice from the palace has the brew that is true…",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

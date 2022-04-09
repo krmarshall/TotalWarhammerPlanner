@@ -4899,5 +4899,337 @@
       }
     ]
   ],
-  "key": "def_morathi"
+  "key": "def_morathi",
+  "items": [
+    {
+      "key": "wh2_main_anc_arcane_item_wand_of_the_kharaidon",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +5%",
+          "value": 5,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "magic_campaign.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Winds of Magic power reserve change: +10% when increasing",
+          "value": 10,
+          "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+        },
+        {
+          "icon": "item_ability.png",
+          "priority": 291,
+          "is_positive_value_good": true,
+          "description": "Bound spell: \"Wand of the Kharaidon\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_bound_wand_of_the_kharaidon",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_spell_bound_wand_of_the_kharaidon",
+                "icon_name": "wh2_main_spell_dark_magic_doombolt",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_bombardment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_bombardment.png",
+                  "description": "Bombardment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Wand of the Kharaidon",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_major",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes major magical damage"
+                  },
+                  {
+                    "key": "wh2_main_bombardment_medium_strike_aoe",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Medium strike area"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single combatant"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_unit",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single unit"
+                  }
+                ],
+                "num_uses": 2,
+                "active_time": 7,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 200,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_bound_wand_of_the_kharaidon"
+        },
+        {
+          "icon": "magic_cooldown_character.png",
+          "priority": 293,
+          "is_positive_value_good": false,
+          "description": "Cooldown: -15% to spells",
+          "value": -15,
+          "key": "wh2_main_effect_ability_cooldown_spells"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Soulstealer\"",
+          "value": -2,
+          "key": "wh2_main_effect_ability_wom_cost_soulstealer"
+        }
+      ],
+      "name": "Wand of the Kharaidon",
+      "description": "A powerful item of dark sorcery, this wand unleashes the power of the fell Daemon Kharaidon on command.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_talisman_amber_amulet",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -3",
+          "value": -3,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "replenishment.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Casualty replenishment rate: +3%",
+          "value": 3,
+          "key": "wh_main_effect_force_all_campaign_replenishment_rate"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Regeneration\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_regeneration",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_main_unit_passive_regeneration",
+                "icon_name": "wh_main_unit_passive_regeneration",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Regeneration",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Replenishes hit points of combatants"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": -20,
+                        "stat": "stat_weakness_flame",
+                        "how": "add",
+                        "description": "-20Weakness to Fire Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_regeneration"
+        }
+      ],
+      "name": "Amber Amulet",
+      "description": "This enchanted talisman is carved from the heart of the largest black tree in the Petrified Forest.",
+      "unlocked_at_rank": 4,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_heartrender_and_the_darksword",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "corruption_chaos.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Chaos Undivided corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_chaos_characters"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "charge_character.png",
+          "priority": 200,
+          "is_positive_value_good": true,
+          "description": "Charge bonus: +30",
+          "value": 30,
+          "key": "wh_main_effect_character_stat_charge_bonus_add"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Heartrender & the Darksword\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_heartrender_and_the_darksword",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_passive_heartrender_and_the_darksword",
+                "icon_name": "wh2_main_weapon_passive_heartrender_and_the_darksword",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Heartrender & the Darksword",
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": -8,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "-8 Melee Attack"
+                      },
+                      {
+                        "value": -10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-10 Melee Defence"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_heartrender_and_the_darksword"
+        }
+      ],
+      "name": "Heartrender & the Darksword",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

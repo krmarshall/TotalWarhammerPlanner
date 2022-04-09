@@ -5270,5 +5270,193 @@
       }
     ]
   ],
-  "key": "tmb_settra"
+  "key": "tmb_settra",
+  "items": [
+    {
+      "key": "wh2_dlc09_anc_enchanted_item_the_crown_of_nehekhara",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "subterranean.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%",
+          "value": 20,
+          "key": "wh_main_effect_general_mod_tunnel_interception_chance"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"The Crown of Nehekhara\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc09_effect_ability_enable_crown_of_nehekhara",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc09_item_passive_crown_of_nehekhara",
+                "icon_name": "wh2_dlc09_item_passive_crown_of_nehekhara",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Crown of Nehekhara",
+                "passive": true,
+                "effect_range": 55,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 1.1,
+                        "stat": "stat_charge_bonus",
+                        "how": "mult",
+                        "description": "x1.1 Charge Bonus"
+                      },
+                      {
+                        "value": 1.1,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.1 Armour-Piercing Weapon Damage"
+                      },
+                      {
+                        "value": 1.1,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.1 Base Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc09_effect_ability_enable_crown_of_nehekhara"
+        }
+      ],
+      "name": "The Crown of Nehekhara",
+      "description": "Effectively several crowns in one, this regal headdress instils Settra's unyielding will within those nearby who serve him.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_dlc09_anc_weapon_the_blessed_blade_of_ptra",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Blessed Blade of Ptra\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc09_effect_ability_enable_blessed_blade_of_ptra",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc09_weapon_abilities_blessed_blade_of_ptra",
+                "icon_name": "wh2_dlc09_weapon_abilities_blessed_blade_of_ptra",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Blessed Blade of Ptra",
+                "active_time": 43,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 43,
+                    "effect_type": "positive",
+                    "imbue_ignition": 10,
+                    "imbue_contact": "wh_dlc06_unit_contact_blinded",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc09_effect_ability_enable_blessed_blade_of_ptra"
+        }
+      ],
+      "name": "The Blessed Blade of Ptra",
+      "description": "Blessed by the God of the Sun, the sword's white-hot edge is infused with the desert's baking heat, setting the air itself ablaze and blinding the foe.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }

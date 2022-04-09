@@ -5043,5 +5043,95 @@
       }
     ]
   ],
-  "key": "tze_kairos"
+  "key": "tze_kairos",
+  "items": [
+    {
+      "key": "wh3_main_anc_arcane_item_staff_of_tomorrow",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "tze_cultist.png",
+          "priority": 102,
+          "is_positive_value_good": true,
+          "description": "Hero capacity: +1 for Cultists",
+          "value": 1,
+          "key": "wh3_main_effect_agent_cap_increase_tze_cultist"
+        },
+        {
+          "icon": "tze_cultist.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +1 for Cultists",
+          "value": 1,
+          "key": "wh3_main_effect_agent_recruitment_xp_tze_cultist"
+        },
+        {
+          "icon": "corruption_tzeentch.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Tzeentch corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_tzeentch_characters"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 298,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_character_stat_miscast"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Staff of Tomorrow\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_staff_of_tomorrow",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_weapon_abilities_staff_of_tomorrow",
+                "icon_name": "wh3_main_weapon_abilities_staff_of_tomorrow",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Staff of Tomorrow",
+                "active_time": 29,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 29,
+                    "effect_type": "positive",
+                    "ability_recharge_change": -120,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_staff_of_tomorrow"
+        }
+      ],
+      "name": "Staff of Tomorrow ",
+      "description": "Kairos lives apart from the flow of time. Thus, he does not easily succumb to ill-fortune, for fate can easily be altered if one has the proper knowledge.",
+      "unlocked_at_rank": 10,
+      "instant": false
+    }
+  ]
 }

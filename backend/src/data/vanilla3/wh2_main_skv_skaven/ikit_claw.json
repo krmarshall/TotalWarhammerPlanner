@@ -4627,5 +4627,110 @@
       }
     ]
   ],
-  "key": "ikit_claw"
+  "key": "ikit_claw",
+  "items": [
+    {
+      "key": "wh2_dlc12_anc_weapon_storm_daemon",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +2",
+          "value": 2,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +25",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "bonus_vs_large_character.png",
+          "priority": 190,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Large: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_bonus_vs_large"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Storm Daemon\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc12_effect_ability_enable_storm_daemon",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc12_weapon_abilities_storm_daemon",
+                "icon_name": "wh2_dlc12_weapon_abilities_storm_daemon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Storm Daemon",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_major",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes major magical damage"
+                  },
+                  {
+                    "key": "wh2_main_all_good_against_armour",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against armour"
+                  },
+                  {
+                    "key": "wh_main_projectile_effective_all_ranges",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Effective at all ranges"
+                  },
+                  {
+                    "key": "wh_main_projectile_high_penetration",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good penetration"
+                  },
+                  {
+                    "key": "wh3_main_projectile_requires_line_of_sight",
+                    "sort_order": 215,
+                    "effect_state": "negative",
+                    "description": "Requires line of sight to the target"
+                  }
+                ],
+                "num_uses": 2,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 400,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc12_effect_ability_enable_storm_daemon"
+        }
+      ],
+      "name": "Storm Daemon",
+      "description": "A Warpstone-powered device, created by the Warlock Engineers, that crackles with barely-contained power.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

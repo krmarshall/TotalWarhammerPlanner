@@ -3094,5 +3094,185 @@
       }
     ]
   ],
-  "key": "lzd_kroq_gar"
+  "key": "lzd_kroq_gar",
+  "items": [
+    {
+      "key": "wh2_main_anc_enchanted_item_hand_of_gods",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +20%",
+          "value": 20,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +3",
+          "value": 3,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "item_ability.png",
+          "priority": 291,
+          "is_positive_value_good": true,
+          "description": "Bound spell: \"Hand of Gods\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_bound_hand_of_gods",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_spell_bound_hand_of_gods",
+                "icon_name": "wh_main_spell_light_shems_burning_gaze",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Hand of Gods",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_and_flaming_major",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes major magical & fire damage"
+                  },
+                  {
+                    "key": "wh2_main_all_good_against_armour",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against armour"
+                  },
+                  {
+                    "key": "wh_main_all_good_vs_large",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against large combatants"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single combatant"
+                  }
+                ],
+                "num_uses": 2,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 250,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_bound_hand_of_gods"
+        }
+      ],
+      "name": "Hand of Gods",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_revered_spear_of_tlanxla",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +7",
+          "value": 7,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "discouraged.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Attacks cause \"Discouraged\" effect, reducing leadership",
+          "value": 1,
+          "key": "wh2_main_effect_character_stat_enable_discourage_attacks"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +12%",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "bonus_vs_large_character.png",
+          "priority": 190,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Large: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_bonus_vs_large"
+        },
+        {
+          "icon": "charge_character.png",
+          "priority": 200,
+          "is_positive_value_good": true,
+          "description": "Charge bonus: +30",
+          "value": 30,
+          "key": "wh_main_effect_character_stat_charge_bonus_add"
+        }
+      ],
+      "name": "Revered Spear of Tlanxla",
+      "description": "An unspeakably powerful weapon once said to have been wielded by the warlike Old One deity, Tlanxla.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

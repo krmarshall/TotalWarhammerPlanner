@@ -4381,5 +4381,305 @@
       }
     ]
   ],
-  "key": "vmp_heinrich"
+  "key": "vmp_heinrich",
+  "items": [
+    {
+      "key": "wh_main_anc_arcane_item_skull_staff",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "corruption_vampiric.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Vampiric corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_vampiric_characters"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 294,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -1 for \"Vanhel's Danse Macabre\"",
+          "value": -1,
+          "key": "wh2_main_effect_ability_wom_cost_vanhels_danse_macabre"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 295,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -1 for \"Vanhel's Danse Macabre Upgraded\"",
+          "value": -1,
+          "key": "wh2_main_effect_ability_wom_cost_vanhels_danse_macabre_upgraded"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 298,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_character_stat_miscast"
+        }
+      ],
+      "name": "Skull Staff",
+      "description": "The jaws of the Skull Staff chatter and gnash, warning Kemmler of baleful magic in his vicinity.",
+      "unlocked_at_rank": 17,
+      "instant": false
+    },
+    {
+      "key": "wh_main_anc_enchanted_item_cloak_of_mists_and_shadows",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "icon_effects_ambush.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Ambush success chance: +15%",
+          "value": 15,
+          "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance"
+        },
+        {
+          "icon": "battle_movement_character.png",
+          "priority": 120,
+          "is_positive_value_good": true,
+          "description": "Speed: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_speed"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Cloak of Mists & Shadows\"",
+          "related_abilities": [
+            {
+              "effect": "wh_main_effect_ability_enable_cloak_of_mists_and_shadows",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_main_item_abilities_cloak_of_mists_and_shadows",
+                "icon_name": "wh_main_item_abilities_cloak_of_mists_and_shadows",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Cloak of Mists & Shadows",
+                "active_time": 29,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 29,
+                    "effect_type": "positive",
+                    "imbue_magical": true,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "attributes": [
+                      {
+                        "key": "strider",
+                        "description": " Strider",
+                        "attribute_type": "positive"
+                      }
+                    ],
+                    "stat_effects": [
+                      {
+                        "value": 75,
+                        "stat": "stat_resistance_physical",
+                        "how": "add",
+                        "description": "+75 Physical Resistance"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_main_effect_ability_enable_cloak_of_mists_and_shadows"
+        }
+      ],
+      "name": "Cloak of Mists & Shadows",
+      "description": " Kemmler is surrounded by a dark cloak that swirls and twists with a life of its own.",
+      "unlocked_at_rank": 12,
+      "instant": false
+    },
+    {
+      "key": "wh_main_anc_weapon_chaos_tomb_blade",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "replenishment.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Casualty replenishment rate: +3%",
+          "value": 3,
+          "key": "wh_main_effect_force_all_campaign_replenishment_rate"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Chaos Tomb Blade\"",
+          "related_abilities": [
+            {
+              "effect": "wh_main_effect_ability_enable_chaos_tomb_blade",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_main_weapon_passive_chaos_tomb_blade",
+                "icon_name": "wh_main_weapon_passive_chaos_tomb_blade",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_regeneration.png",
+                  "description": "Regeneration (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Chaos Tomb Blade",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Replenishes hit points of combatants"
+                  },
+                  {
+                    "key": "wh_main_all_resurrect",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Resurrects dead combatants"
+                  },
+                  {
+                    "key": "wh_main_all_resurrect_hp",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Heals injured before resurrecting"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 5,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+5 Melee Attack"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_main_effect_ability_enable_chaos_tomb_blade"
+        },
+        {
+          "icon": "attrition.png",
+          "priority": 800,
+          "is_positive_value_good": true,
+          "description": "Immune to Chaos Undivided corruption and Chaos Wastes attrition",
+          "value": 1,
+          "key": "wh2_dlc11_effect_attrition_immunity_chaos"
+        }
+      ],
+      "name": "Chaos Tomb Blade",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

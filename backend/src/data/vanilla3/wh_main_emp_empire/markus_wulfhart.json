@@ -2884,5 +2884,102 @@
       }
     ]
   ],
-  "key": "markus_wulfhart"
+  "key": "markus_wulfhart",
+  "items": [
+    {
+      "key": "wh2_dlc13_anc_weapon_amber_bow",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "ranged_damage_character.png",
+          "priority": 240,
+          "is_positive_value_good": true,
+          "description": "Missile strength: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_missile_damage"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Amber Bow\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc13_effect_ability_enable_amber_bow",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc13_weapon_abilities_amber_bow",
+                "icon_name": "wh2_dlc13_weapon_abilities_amber_bow",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Amber Bow",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_major",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes major magical damage"
+                  },
+                  {
+                    "key": "wh_main_all_good_vs_large",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against large combatants"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single combatant"
+                  },
+                  {
+                    "key": "wh_main_projectile_effective_long_range",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Effective at long range"
+                  },
+                  {
+                    "key": "wh3_main_projectile_requires_line_of_sight",
+                    "sort_order": 215,
+                    "effect_state": "negative",
+                    "description": "Requires line of sight to the target"
+                  }
+                ],
+                "num_uses": 2,
+                "recharge_time": 120,
+                "wind_up_time": 4.5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 250,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc13_effect_ability_enable_amber_bow"
+        }
+      ],
+      "name": "Amber Bow",
+      "description": "Carved from Drakwald Oak and enchanted by a powerful Amber Wizard, its shots are guided directly into the hearts of Wulfhart's enemies.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    }
+  ]
 }

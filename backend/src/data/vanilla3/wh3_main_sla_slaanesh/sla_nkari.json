@@ -4842,5 +4842,124 @@
       }
     ]
   ],
-  "key": "sla_nkari"
+  "key": "sla_nkari",
+  "items": [
+    {
+      "key": "wh3_main_anc_weapon_witstealer_sword",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "corruption_slaanesh.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Slaanesh corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_slaanesh_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magic_cooldown.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables draining attacks",
+          "value": 1,
+          "key": "wh3_main_item_effect_witstealer_sword"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Witstealer Sword\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_witstealer_sword",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_weapon_abilities_witstealer_sword",
+                "icon_name": "wh3_main_weapon_abilities_edge_of_desire",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Witstealer Sword",
+                "active_time": 17,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 17,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 2,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x2 Armour-Piercing Weapon Damage"
+                      },
+                      {
+                        "value": 2,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x2 Base Weapon Damage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_witstealer_sword"
+        }
+      ],
+      "name": "Witstealer Sword",
+      "description": "Forged in the molten heat of desire and cooled in a vat of Slaanesh's own blood, the Witstealer Sword was presented to the Arch-tempter by the Dark Prince himself.",
+      "unlocked_at_rank": 10,
+      "instant": false
+    }
+  ]
 }

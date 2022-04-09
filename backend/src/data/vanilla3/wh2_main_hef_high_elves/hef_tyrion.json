@@ -3105,5 +3105,273 @@
       }
     ]
   ],
-  "key": "hef_tyrion"
+  "key": "hef_tyrion",
+  "items": [
+    {
+      "key": "wh2_main_anc_armour_dragon_armour_of_aenarion",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +15",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "resistance_fire.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Fire resistance: 25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_fire_resistance"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_ward_save"
+        }
+      ],
+      "name": "Dragon Armour of Aenarion",
+      "description": "Forged in Vaul's Anvil, worn by Aenarion until his death, and only a few of Ulthuan's gloried heroes since.",
+      "unlocked_at_rank": 7,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_enchanted_item_heart_of_avelorn",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "morale_character.png",
+          "priority": 260,
+          "is_positive_value_good": true,
+          "description": "Character's aura leadership effect: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_aura_leadership_effect"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 260,
+          "is_positive_value_good": true,
+          "description": "Leadership aura size: +25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_leadership_aura_size"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 18%",
+          "value": 18,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Heart of Avelorn\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_heart_of_avelorn",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_passive_heart_of_averlorn",
+                "icon_name": "wh2_main_item_passive_heart_of_averlorn",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Heart of Avelorn",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_replenish_burst",
+                    "sort_order": 0,
+                    "effect_state": "positive",
+                    "description": "Burst of life-saving hit points"
+                  }
+                ],
+                "active_time": 1.1,
+                "recharge_time": 120,
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_heart_of_avelorn"
+        }
+      ],
+      "name": "Heart of Avelorn",
+      "description": " ",
+      "unlocked_at_rank": 17,
+      "instant": false
+    },
+    {
+      "key": "wh2_main_anc_weapon_sunfang",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "modifier_icon_flaming.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables flaming attacks",
+          "value": 1,
+          "key": "wh2_main_effect_character_stat_enable_flaming_attacks"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 170,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +30",
+          "value": 30,
+          "key": "wh_main_effect_character_stat_ap_damage"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Sunfang\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_sunfang",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_abilities_sunfang",
+                "icon_name": "wh2_main_weapon_abilities_sunfang",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_breath",
+                  "icon_path": "ui/battle ui/ability_icons/icon_spell_breath.png",
+                  "description": "Breath"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Sunfang",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_and_flaming_major",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes major magical & fire damage"
+                  },
+                  {
+                    "key": "wh_main_vortex_large_breath",
+                    "sort_order": 105,
+                    "effect_state": "positive",
+                    "description": "Expanding tear-shaped attack"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_units",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs multiple units"
+                  },
+                  {
+                    "key": "wh_main_all_weak_against_single",
+                    "sort_order": 203,
+                    "effect_state": "negative",
+                    "description": "Weak vs a single combatant"
+                  }
+                ],
+                "active_time": 17,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": true,
+                "target_intercept_range": 100,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_sunfang"
+        }
+      ],
+      "name": "Sunfang",
+      "description": " ",
+      "unlocked_at_rank": 12,
+      "instant": false
+    }
+  ]
 }
