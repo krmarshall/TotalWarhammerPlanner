@@ -2,15 +2,17 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AppProvider } from './contexts/AppContext';
+import Header from './components/Header';
 
 const Home = lazy(() => import('./pages/Home'));
 const Planner = lazy(() => import('./pages/Planner'));
 const About = lazy(() => import('./pages/About'));
+const Issues = lazy(() => import('./pages/Issues'));
 
 const App = () => {
   return (
     <AppProvider>
-      <div className="bg-gray-800 w-screen h-screen px-12 py-12 font-CaslonAntique">
+      <div className="bg-gray-800 w-screen h-screen px-8 font-CaslonAntique">
         <Toaster
           position="bottom-center"
           toastOptions={{
@@ -24,8 +26,9 @@ const App = () => {
             },
           }}
         />
-        <div className="bg-gray-700 w-full h-full border border-gray-500 rounded-md px-6 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-          <BrowserRouter>
+        <BrowserRouter>
+          <Header />
+          <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-4 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
             <Suspense
               fallback={
                 <div className="flex flex-col place-items-center">
@@ -38,10 +41,11 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/planner/:game/:faction/:character/:code?" element={<Planner />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/issues" element={<Issues />} />
               </Routes>
             </Suspense>
-          </BrowserRouter>
-        </div>
+          </div>
+        </BrowserRouter>
       </div>
     </AppProvider>
   );

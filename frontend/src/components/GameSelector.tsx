@@ -30,7 +30,7 @@ const GameSelector = () => {
               <h2 className="text-center text-gray-200 text-xl mb-1">{game.text}</h2>
               <div className="flex flex-row justify-center">
                 <img
-                  className="w-30"
+                  className="w-30 drop-shadow-[0_0_0.5rem_dimgray]"
                   draggable={false}
                   src={game.image}
                   alt={`${game.text} icon`}
