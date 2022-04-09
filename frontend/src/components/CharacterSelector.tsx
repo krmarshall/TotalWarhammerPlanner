@@ -90,7 +90,7 @@ const CharacterSelector = () => {
 
                 <div className="flex flex-row justify-center relative">
                   <img
-                    className="w-32 mb-2 drop-shadow-[0_0_0.25rem_dimgray]"
+                    className="w-32 mb-2 drop-shadow-[0_0_0.2rem_dimgray]"
                     draggable={false}
                     src={lordImage}
                     alt={`${lord?.name} icon`}
@@ -99,9 +99,10 @@ const CharacterSelector = () => {
                   />
                   {spellLore && (
                     <img
-                      className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5 drop-shadow-[0_0_0.5rem_teal]"
+                      style={{ filter: spellLore.shadow }}
+                      className={`w-12 h-12 absolute bottom-0 mb-2 ml-0.5`}
                       draggable={false}
-                      src={spellLore}
+                      src={spellLore.image}
                       alt={`${lord?.spellLore} icon`}
                     />
                   )}
@@ -139,7 +140,7 @@ const CharacterSelector = () => {
                 </h2>
                 <div className="flex flex-row justify-center relative">
                   <img
-                    className="w-32 mb-2 drop-shadow-[0_0_0.25rem_dimgray]"
+                    className="w-32 mb-2 drop-shadow-[0_0_0.2rem_dimgray]"
                     draggable={false}
                     src={heroImage}
                     alt={`${hero?.name} icon`}
@@ -148,9 +149,10 @@ const CharacterSelector = () => {
                   />
                   {spellLore && (
                     <img
-                      className="w-12 h-12 absolute bottom-0 mb-2 ml-0.5 drop-shadow-[0_0_0.5rem_teal]"
+                      style={{ filter: spellLore.shadow }}
+                      className={`w-12 h-12 absolute bottom-0 mb-2 ml-0.5`}
                       draggable={false}
-                      src={spellLore}
+                      src={spellLore.image}
                       alt={`${hero?.spellLore} icon`}
                     />
                   )}

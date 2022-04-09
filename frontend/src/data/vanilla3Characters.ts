@@ -128,7 +128,7 @@ const vanilla3Characters = {
     },
     sla_herald_of_slaanesh_shadow: {
       name: 'Herald of Slaanesh (Shadow)',
-      spellLore: 'shadow',
+      spellLore: 'shadows',
     },
     sla_herald_of_slaanesh_slaanesh: {
       name: 'Herald of Slaanesh (Slaanesh)',
@@ -157,7 +157,7 @@ const vanilla3Characters = {
     },
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
-      spellLore: 'shadow',
+      spellLore: 'shadows',
     },
     sla_alluress_slaanesh: {
       name: 'Alluress (Slaanesh)',
@@ -304,7 +304,7 @@ const vanilla3Characters = {
   wh3_main_sla_slaanesh_lords: {
     sla_exalted_keeper_of_secrets_shadow: {
       name: 'Exalted Keeper of Secrets (Shadow)',
-      spellLore: 'shadow',
+      spellLore: 'shadows',
     },
     sla_exalted_keeper_of_secrets_slaanesh: {
       name: 'Exalted Keeper of Secrets (Slaanesh)',
@@ -312,7 +312,7 @@ const vanilla3Characters = {
     },
     sla_herald_of_slaanesh_shadow: {
       name: 'Herald of Slaanesh (Shadow)',
-      spellLore: 'shadow',
+      spellLore: 'shadows',
     },
     sla_herald_of_slaanesh_slaanesh: {
       name: 'Herald of Slaanesh (Slaanesh)',
@@ -325,7 +325,7 @@ const vanilla3Characters = {
   wh3_main_sla_slaanesh_heroes: {
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
-      spellLore: 'shadow',
+      spellLore: 'shadows',
     },
     sla_alluress_slaanesh: {
       name: 'Alluress (Slaanesh)',
