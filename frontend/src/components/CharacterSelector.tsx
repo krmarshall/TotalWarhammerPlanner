@@ -6,6 +6,7 @@ import { AppContext, AppContextActions } from '../contexts/AppContext';
 import gameData from '../data/gameData';
 import spellLoreIcons from '../imgs/spellLoreIcons/spellLoreIcons';
 import { createEmptyCharacterBuild } from '../utils/sharedFunctions';
+import CharacterCell from './CharacterCell';
 
 const CharacterSelector = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -77,37 +78,13 @@ const CharacterSelector = () => {
               spellLore = spellLoreIcons[lord.spellLore as keyof typeof spellLoreIcons];
             }
             return (
-              <li
+              <CharacterCell
                 key={lordKey}
-                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500 hover:bg-gray-600"
-                onClick={() => {
-                  handleCharacterSelect(lordKey);
-                }}
-              >
-                <div className="flex flex-row justify-center" style={{ minHeight: '3.7rem' }}>
-                  <h2 className="w-36 text-center text-xl text-gray-200 mb-1">{lord?.name}</h2>
-                </div>
-
-                <div className="flex flex-row justify-center relative">
-                  <img
-                    className="w-32 mb-2 drop-shadow-[0_0_0.2rem_dimgray]"
-                    draggable={false}
-                    src={lordImage}
-                    alt={`${lord?.name} icon`}
-                    height="82"
-                    width="82"
-                  />
-                  {spellLore && (
-                    <img
-                      style={{ filter: spellLore.shadow }}
-                      className={`w-12 h-12 absolute bottom-0 mb-2 ml-0.5`}
-                      draggable={false}
-                      src={spellLore.image}
-                      alt={`${lord?.spellLore} icon`}
-                    />
-                  )}
-                </div>
-              </li>
+                char={lord}
+                charImage={lordImage}
+                spellLore={spellLore}
+                handleCharacterSelect={handleCharacterSelect}
+              />
             );
           })}
         </ul>
@@ -128,36 +105,13 @@ const CharacterSelector = () => {
               spellLore = spellLoreIcons[hero.spellLore as keyof typeof spellLoreIcons];
             }
             return (
-              <li
+              <CharacterCell
                 key={heroKey}
-                className="flex-col m-1 p-1 pb-0 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500  hover:bg-gray-600"
-                onClick={() => {
-                  handleCharacterSelect(heroKey);
-                }}
-              >
-                <h2 style={{ minHeight: '3.7rem' }} className="w-36 text-center text-xl text-gray-200 mb-1">
-                  {hero?.name}
-                </h2>
-                <div className="flex flex-row justify-center relative">
-                  <img
-                    className="w-32 mb-2 drop-shadow-[0_0_0.2rem_dimgray]"
-                    draggable={false}
-                    src={heroImage}
-                    alt={`${hero?.name} icon`}
-                    height="82"
-                    width="82"
-                  />
-                  {spellLore && (
-                    <img
-                      style={{ filter: spellLore.shadow }}
-                      className={`w-12 h-12 absolute bottom-0 mb-2 ml-0.5`}
-                      draggable={false}
-                      src={spellLore.image}
-                      alt={`${hero?.spellLore} icon`}
-                    />
-                  )}
-                </div>
-              </li>
+                char={hero}
+                charImage={heroImage}
+                spellLore={spellLore}
+                handleCharacterSelect={handleCharacterSelect}
+              />
             );
           })}
         </ul>

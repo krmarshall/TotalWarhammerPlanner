@@ -31,101 +31,101 @@ import greatMaw from './wh3_main_lore_passive_bloodgruel.webp';
 const spellLoreIcons = {
   light: {
     image: light,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #706842fd) drop-shadow(0.1rem 0.1rem 0.25rem #706842fd)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #706842fd) drop-shadow(0.1rem 0.1rem 0.25rem #706842fd)',
   },
-  fire: { image: fire, shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #9e3722) drop-shadow(0.1rem 0.1rem 0.25rem #9e3722)' },
+  fire: { image: fire, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #9e3722) drop-shadow(0.1rem 0.1rem 0.25rem #9e3722)' },
   death: {
     image: death,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #5a1551) drop-shadow(0.1rem 0.1rem 0.25rem #5a1551)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #5a1551) drop-shadow(0.1rem 0.1rem 0.25rem #5a1551)',
   },
   metal: {
     image: metal,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #6c3f27) drop-shadow(0.1rem 0.1rem 0.25rem #6c3f27)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #6c3f27) drop-shadow(0.1rem 0.1rem 0.25rem #6c3f27)',
   },
   heavens: {
     image: heavens,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #2e5e67) drop-shadow(0.1rem 0.1rem 0.25rem #2e5e67)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #2e5e67) drop-shadow(0.1rem 0.1rem 0.25rem #2e5e67)',
   },
   bigWagh: {
     image: bigWagh,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #4d1e0dfe) drop-shadow(0.1rem 0.1rem 0.25rem #4d1e0dfe)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #4d1e0dfe) drop-shadow(0.1rem 0.1rem 0.25rem #4d1e0dfe)',
   },
   lilWagh: {
     image: lilWagh,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #4d1e0dfe) drop-shadow(0.1rem 0.1rem 0.25rem #4d1e0dfe)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #4d1e0dfe) drop-shadow(0.1rem 0.1rem 0.25rem #4d1e0dfe)',
   },
   vampires: {
     image: vampires,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #5b191c) drop-shadow(0.1rem 0.1rem 0.25rem #5b191c)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #5b191c) drop-shadow(0.1rem 0.1rem 0.25rem #5b191c)',
   },
   beasts: {
     image: beasts,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #916c1e) drop-shadow(0.1rem 0.1rem 0.25rem #916c1e)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #916c1e) drop-shadow(0.1rem 0.1rem 0.25rem #916c1e)',
   },
-  wild: { image: wild, shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #3e664e) drop-shadow(0.1rem 0.1rem 0.25rem #3e664e)' },
+  wild: { image: wild, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #3e664e) drop-shadow(0.1rem 0.1rem 0.25rem #3e664e)' },
   shadows: {
     image: shadows,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #434673) drop-shadow(0.1rem 0.1rem 0.25rem #434673)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #434673) drop-shadow(0.1rem 0.1rem 0.25rem #434673)',
   },
-  life: { image: life, shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #4c571c) drop-shadow(0.1rem 0.1rem 0.25rem #4c571c)' },
+  life: { image: life, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #4c571c) drop-shadow(0.1rem 0.1rem 0.25rem #4c571c)' },
   skvPlague: {
     image: skvPlague,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #827921) drop-shadow(0.1rem 0.1rem 0.25rem #827921)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #827921) drop-shadow(0.1rem 0.1rem 0.25rem #827921)',
   },
-  ruin: { image: ruin, shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #52771d) drop-shadow(0.1rem 0.1rem 0.25rem #52771d)' },
+  ruin: { image: ruin, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #52771d) drop-shadow(0.1rem 0.1rem 0.25rem #52771d)' },
   stealth: {
     image: stealth,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #516022) drop-shadow(0.1rem 0.1rem 0.25rem #516022)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #516022) drop-shadow(0.1rem 0.1rem 0.25rem #516022)',
   },
-  high: { image: high, shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #1d5a76) drop-shadow(0.1rem 0.1rem 0.25rem #1d5a76)' },
+  high: { image: high, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #1d5a76) drop-shadow(0.1rem 0.1rem 0.25rem #1d5a76)' },
   wefHigh: {
     image: wefHigh,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #1b5265) drop-shadow(0.1rem 0.1rem 0.25rem #1b5265)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #1b5265) drop-shadow(0.1rem 0.1rem 0.25rem #1b5265)',
   },
-  dark: { image: dark, shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #3f1c65) drop-shadow(0.1rem 0.1rem 0.25rem #3f1c65)' },
+  dark: { image: dark, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #3f1c65) drop-shadow(0.1rem 0.1rem 0.25rem #3f1c65)' },
   nehekhara: {
     image: nehekhara,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #379583) drop-shadow(0.1rem 0.1rem 0.25rem #379583)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #379583) drop-shadow(0.1rem 0.1rem 0.25rem #379583)',
   },
   deeps: {
     image: deeps,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #1c6350) drop-shadow(0.1rem 0.1rem 0.25rem #1c6350)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #1c6350) drop-shadow(0.1rem 0.1rem 0.25rem #1c6350)',
   },
   runic: {
     image: runic,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #396173) drop-shadow(0.1rem 0.1rem 0.25rem #396173)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #396173) drop-shadow(0.1rem 0.1rem 0.25rem #396173)',
   },
   ice: {
     image: ice,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #15635efe) drop-shadow(0.1rem 0.1rem 0.25rem #15635efe)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #15635efe) drop-shadow(0.1rem 0.1rem 0.25rem #15635efe)',
   },
   tempest: {
     image: tempest,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #1e637d) drop-shadow(0.1rem 0.1rem 0.25rem #1e637d)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #1e637d) drop-shadow(0.1rem 0.1rem 0.25rem #1e637d)',
   },
   yin: {
     image: yin,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #791608fe) drop-shadow(0.1rem 0.1rem 0.25rem #791608fe)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #791608fe) drop-shadow(0.1rem 0.1rem 0.25rem #791608fe)',
   },
   yang: {
     image: yang,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #7d1206fe) drop-shadow(0.1rem 0.1rem 0.25rem #7d1206fe)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #7d1206fe) drop-shadow(0.1rem 0.1rem 0.25rem #7d1206fe)',
   },
   tzeentch: {
     image: tzeentch,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #08849c) drop-shadow(0.1rem 0.1rem 0.25rem #08849c)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #08849c) drop-shadow(0.1rem 0.1rem 0.25rem #08849c)',
   },
   nurgle: {
     image: nurgle,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #706a1c) drop-shadow(0.1rem 0.1rem 0.25rem #706a1c)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #706a1c) drop-shadow(0.1rem 0.1rem 0.25rem #706a1c)',
   },
   slaanesh: {
     image: slaanesh,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #8c2776) drop-shadow(0.1rem 0.1rem 0.25rem #8c2776)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #8c2776) drop-shadow(0.1rem 0.1rem 0.25rem #8c2776)',
   },
   greatMaw: {
     image: greatMaw,
-    shadow: 'drop-shadow(0.1rem 0.1rem 0.5rem #684717) drop-shadow(0.1rem 0.1rem 0.25rem #684717)',
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #684717) drop-shadow(0.1rem 0.1rem 0.25rem #684717)',
   },
 };
 
