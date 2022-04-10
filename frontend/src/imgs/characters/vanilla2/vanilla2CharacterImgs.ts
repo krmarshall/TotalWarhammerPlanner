@@ -470,6 +470,7 @@ const vanilla2CharacterImgs = {
   emp_balthasar: gelt,
   emp_general: empGeneral,
   emp_karl_franz: karlFranz,
+  emp_boris_todbringer: todbringer,
 
   emp_hunter_doctor_hertwig_van_hal: witchHunterHertwig,
   emp_hunter_jorek_grimm_0: masterEngineerJorek,
