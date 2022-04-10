@@ -1,5 +1,5 @@
 interface CharacterCellProps {
-  key: string;
+  charKey: string;
   char?: {
     name: string;
     spellLore: string;
@@ -12,12 +12,12 @@ interface CharacterCellProps {
   handleCharacterSelect: CallableFunction;
 }
 
-const CharacterCell = ({ key, char, charImage, spellLore, handleCharacterSelect }: CharacterCellProps) => {
+const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSelect }: CharacterCellProps) => {
   return (
     <li
-      key={key}
+      key={charKey}
       className="flex flex-col justify-around m-1 p-1 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500 hover:bg-gray-600"
-      onClick={() => handleCharacterSelect(key)}
+      onClick={() => handleCharacterSelect(charKey)}
     >
       <h2 className="w-36 text-center text-xl text-gray-200 mb-2">{char?.name}</h2>
       <div className="flex flex-row justify-center relative">

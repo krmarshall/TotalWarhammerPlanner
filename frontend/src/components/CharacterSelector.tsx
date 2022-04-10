@@ -80,6 +80,7 @@ const CharacterSelector = () => {
             return (
               <CharacterCell
                 key={lordKey}
+                charKey={lordKey}
                 char={lord}
                 charImage={lordImage}
                 spellLore={spellLore}
@@ -107,6 +108,7 @@ const CharacterSelector = () => {
             return (
               <CharacterCell
                 key={heroKey}
+                charKey={heroKey}
                 char={hero}
                 charImage={heroImage}
                 spellLore={spellLore}

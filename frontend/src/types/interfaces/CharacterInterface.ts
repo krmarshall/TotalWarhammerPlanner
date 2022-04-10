@@ -90,9 +90,20 @@ interface SkillInterface {
   levels?: Array<SkillLevelInterface>;
 }
 
+interface ItemInterface {
+  key: string;
+  type: string;
+  effects?: Array<SkillEffectInterface>;
+  name: string;
+  description: string;
+  unlocked_at_rank: number;
+  instant: boolean;
+}
+
 interface CharacterInterface {
   key: string;
   skillTree: Array<Array<SkillInterface>>;
+  items: Array<ItemInterface>;
 }
 
 export type { CharacterInterface, SkillInterface, SkillLevelInterface, SkillEffectInterface, AbilityInterface };

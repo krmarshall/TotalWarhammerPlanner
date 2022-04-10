@@ -1,0 +1,207 @@
+import { toast } from 'react-hot-toast';
+import BuildInterface from '../types/interfaces/BuildInterface';
+import { CharacterInterface, SkillLevelInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
+
+const isRequiredLevel = (characterBuild: BuildInterface | null, skillCheckRank: SkillLevelInterface | undefined) => {
+  if (!skillCheckRank?.unlocked_at_rank) {
+    return true;
+  }
+  if (characterBuild?.rank) {
+    if (characterBuild?.rank < skillCheckRank?.unlocked_at_rank) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  return false;
+};
+
+const hasRequiredSkill = (skill: SkillInterface, characterBuild: BuildInterface | null) => {
+  if (skill.parent_required === undefined) {
+    return true;
+  }
+  if (characterBuild?.selectedSkills) {
+    let includesParentRequired = false;
+    skill.parent_required?.forEach((parent) => {
+      if (characterBuild?.selectedSkills.includes(parent)) {
+        includesParentRequired = true;
+      }
+    });
+
+    return includesParentRequired;
+  }
+  return false;
+};
+
+const skillIsBlocked = (skillKey: string, characterBuild: BuildInterface | null) => {
+  if (characterBuild?.blockedSkills.length === 0) {
+    return false;
+  }
+  if (characterBuild?.blockedSkills) {
+    if (characterBuild.blockedSkills.includes(skillKey)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return true;
+};
+
+const missingRequiredPoints = (
+  characterData: CharacterInterface | null,
+  characterBuild: BuildInterface | null,
+  skill: SkillInterface
+) => {
+  if (skill.required_num_parents === 0) {
+    return false;
+  }
+  if (characterBuild?.buildData && skill.parent_subset_required) {
+    let spentPoints = 0;
+    skill.parent_subset_required.forEach((parentKey) => {
+      const parentSkill = findSkill(characterData, characterBuild, parentKey);
+      if (parentSkill === undefined) {
+        return true;
+      }
+      spentPoints += parentSkill.points;
+    });
+    if (spentPoints >= skill.required_num_parents) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  return true;
+};
+
+const findSkill = (
+  characterData: CharacterInterface | null,
+  characterBuild: BuildInterface | null,
+  skillKey: string
+) => {
+  let returnValue: undefined | { xIndex: number; yIndex: number; points: number };
+  characterData?.skillTree.forEach((row, yIndex) => {
+    row.forEach((skill, xIndex) => {
+      if (skill.character_skill_key === skillKey) {
+        returnValue = { xIndex, yIndex, points: characterBuild?.buildData[yIndex][xIndex] as number };
+      }
+    });
+  });
+  if (returnValue === undefined) {
+    console.log('Could not find skill in data tree');
+  }
+  return returnValue;
+};
+
+const skillIsValid = (
+  characterBuild: BuildInterface | null,
+  skill: SkillInterface,
+  thisSkillsCurrentPoints: number,
+  skillKey: string,
+  characterData: CharacterInterface | null
+) => {
+  // Check Required Level
+  if (!isRequiredLevel(characterBuild, skill?.levels?.[thisSkillsCurrentPoints - 1])) {
+    return false;
+  }
+  // Check Required Skills
+  if (!hasRequiredSkill(skill, characterBuild)) {
+    return false;
+  }
+  // Check Blocked skills
+  if (skillIsBlocked(skillKey, characterBuild)) {
+    return false;
+  }
+  // Check x points in last y skills
+  if (missingRequiredPoints(characterData, characterBuild, skill)) {
+    return false;
+  }
+  return true;
+};
+
+const skillIncreaseIsValid = (
+  characterBuild: BuildInterface | null,
+  characterData: CharacterInterface | null,
+  skill: SkillInterface,
+  thisSkillsCurrentPoints: number,
+  skillKey: string,
+  printError: boolean
+) => {
+  // Check if skill has higher rank than already selected
+  if (!skill.levels?.[thisSkillsCurrentPoints]) {
+    if (printError) {
+      toast.error('A higher skill rank does not exist.');
+    }
+    return false;
+  }
+  // Check Required Level
+  if (!isRequiredLevel(characterBuild, skill.levels?.[thisSkillsCurrentPoints])) {
+    if (printError) {
+      toast.error(`Requires rank ${skill.levels?.[thisSkillsCurrentPoints]?.unlocked_at_rank}`);
+    }
+    return false;
+  }
+  // Check Required Skills
+  if (!hasRequiredSkill(skill, characterBuild)) {
+    if (printError) {
+      const skillLocation = findSkill(characterData, characterBuild, skill?.parent_required?.[0] as string);
+      const skillName = characterData?.skillTree[skillLocation.yIndex][skillLocation.xIndex].name;
+      toast.error(`Requires ${skillName}`);
+    }
+    return false;
+  }
+  // Check Blocked skills
+  if (skillIsBlocked(skillKey, characterBuild)) {
+    if (printError) {
+      toast.error(`Skill is blocked by another skill.`);
+    }
+    return false;
+  }
+  // Check x points in last y skills
+  if (missingRequiredPoints(characterData, characterBuild, skill)) {
+    if (printError) {
+      toast.error(`Requires more points in required skills.`);
+    }
+    return false;
+  }
+  return true;
+};
+
+const isValidSkillTree = (characterBuild: BuildInterface, characterData: CharacterInterface) => {
+  const skillBuildArray = characterBuild?.buildData;
+  // Should probably size this dynamically
+  const skillKeyArray = [...Array(characterData.skillTree.length)].map(() => Array(35).fill(''));
+  const skillDataArray = characterData.skillTree.map((skillRow, yIndex) => {
+    return skillRow.map((skill, xIndex) => {
+      skillKeyArray[yIndex][xIndex] = skill.character_skill_key;
+      return skill;
+    });
+  });
+
+  let valid = true;
+  for (let y = 0; y < skillBuildArray?.length && valid; y++) {
+    if (skillBuildArray[y].length === 0) {
+      continue;
+    }
+    for (let x = 0; x < skillBuildArray[y].length && valid; x++) {
+      if (skillBuildArray[y][x] > 0) {
+        if (
+          !skillIsValid(characterBuild, skillDataArray[y][x], skillBuildArray[y][x], skillKeyArray[y][x], characterData)
+        ) {
+          valid = false;
+        }
+      }
+    }
+  }
+  return valid;
+};
+
+export {
+  isRequiredLevel,
+  hasRequiredSkill,
+  skillIsBlocked,
+  missingRequiredPoints,
+  findSkill,
+  skillIsValid,
+  skillIncreaseIsValid,
+  isValidSkillTree,
+};
