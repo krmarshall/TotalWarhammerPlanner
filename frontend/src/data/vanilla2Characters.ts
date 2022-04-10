@@ -854,6 +854,9 @@ const vanilla2Characters = {
     emp_karl_franz: {
       name: 'Karl Franz - Prince AND Emperor',
     },
+    emp_boris_todbringer: {
+      name: 'Boris Bodbringer',
+    },
   },
   wh_main_emp_empire_heroes: {
     emp_hunter_doctor_hertwig_van_hal: {
