@@ -13,8 +13,8 @@ const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
         <td className="h-16"></td>
       ) : (
         skillRow.map((skill, xIndex) => {
-          const nextSkill = skillRow[yIndex + 1];
-          const prevSkill = skillRow[yIndex - 1];
+          const nextSkill = skillRow[xIndex + 1];
+          const prevSkill = skillRow[xIndex - 1];
           let boxedType = 'none';
           if (skill.boxed && !prevSkill?.boxed) {
             boxedType = 'start';

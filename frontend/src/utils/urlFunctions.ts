@@ -1,4 +1,5 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
+import lzbase62 from 'lzbase62';
 
 const baseURL = import.meta.env.DEV ? 'http://localhost:3000/planner/' : 'http://localhost:5000/planner/';
 // 0-v means base32 decoded to a number between 0 and 31
@@ -6,12 +7,13 @@ const baseURL = import.meta.env.DEV ? 'http://localhost:3000/planner/' : 'http:/
 // [0-9 = # Of Skill Rows, y]([0-z = # of skills in next row, x][0-3 = Skill points in skill] * x) * y
 const convertBuildToCode = (characterBuild: BuildInterface) => {
   const buildData = [...characterBuild.buildData];
-  let encodedString = '';
-  encodedString += baseURL;
+  let stringBase = '';
+  stringBase += baseURL;
 
   // Add faction and character
-  encodedString += `${characterBuild.faction}/${characterBuild.character}/`;
+  stringBase += `${characterBuild.game}/${characterBuild.faction}/${characterBuild.character}/`;
 
+  let encodedString = '';
   // Encode # of skill rows
   encodedString += buildData.length;
 
@@ -22,10 +24,12 @@ const convertBuildToCode = (characterBuild: BuildInterface) => {
       encodedString += buildData[y][x];
     }
   }
-  return encodedString;
+  const compressedBuild = lzbase62.compress(encodedString);
+  return stringBase + compressedBuild;
 };
 
 const convertCodeToBuild = (code: string) => {
+  code = lzbase62.decompress(code);
   const yLengthString = code.slice(0, 1);
   const yLength = Number.parseInt(yLengthString);
   const build: Array<Array<number>> = new Array(yLength);
