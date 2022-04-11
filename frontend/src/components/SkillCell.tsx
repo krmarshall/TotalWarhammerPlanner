@@ -55,14 +55,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
     // 0 = LMB, 2 = RMB
     if (event.button === 0) {
-      if (!skillIncreaseIsValid(characterBuild, skill, yIndex, xIndex, thisSkillsCurrentPoints, skillKey, true)) {
+      if (!skillIncreaseIsValid(characterBuild, characterData, skill, thisSkillsCurrentPoints, skillKey, true)) {
         return;
       }
       // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
       if (thisSkillsCurrentPoints === 0) {
-        characterBuild?.selectedSkills.push(skillKey);
-        if (skill?.levels?.[1].blocks_character_skill_key) {
-          skill?.levels?.[1].blocks_character_skill_key.forEach((blockedSkill) => {
+        characterBuild?.selectedSkills.push(skill.key);
+        if (skill?.levels?.[0].blocks_character_skill_key) {
+          skill?.levels?.[0].blocks_character_skill_key.forEach((blockedSkill) => {
             characterBuild?.blockedSkills.push(blockedSkill);
           });
         }
@@ -96,7 +96,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
       // If skill was entirely removed delete from characterBuild.selectedSkills and blockedSkills references if needed
       if (testCharacterBuild.buildData[yIndex][xIndex] === 0) {
-        const selectedSkillIndex = testCharacterBuild.selectedSkills.indexOf(skillKey);
+        const selectedSkillIndex = testCharacterBuild.selectedSkills.indexOf(skill.key);
         testCharacterBuild.selectedSkills.splice(selectedSkillIndex, 1);
 
         let blocksSkill = false;

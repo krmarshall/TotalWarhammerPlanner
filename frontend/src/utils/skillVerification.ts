@@ -81,7 +81,7 @@ const findSkill = (
   let returnValue: undefined | { xIndex: number; yIndex: number; points: number };
   characterData?.skillTree.forEach((row, yIndex) => {
     row.forEach((skill, xIndex) => {
-      if (skill.character_skill_key === skillKey) {
+      if (skill.key === skillKey) {
         returnValue = { xIndex, yIndex, points: characterBuild?.buildData[yIndex][xIndex] as number };
       }
     });
@@ -144,7 +144,7 @@ const skillIncreaseIsValid = (
   if (!hasRequiredSkill(skill, characterBuild)) {
     if (printError) {
       const skillLocation = findSkill(characterData, characterBuild, skill?.parent_required?.[0] as string);
-      const skillName = characterData?.skillTree[skillLocation.yIndex][skillLocation.xIndex].name;
+      const skillName = characterData?.skillTree[skillLocation?.yIndex as number][skillLocation?.xIndex as number].name;
       toast.error(`Requires ${skillName}`);
     }
     return false;
