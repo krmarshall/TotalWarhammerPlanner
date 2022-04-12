@@ -138,7 +138,7 @@ const Planner = () => {
             )}
           </div>
           <div
-            className="pb-2 shadow-lg border border-gray-500 rounded overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+            className="pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"
             onWheel={(event) => {
               horizontalScroll(event);

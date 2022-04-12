@@ -4,8 +4,8 @@ import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { skillIncreaseIsValid, isValidSkillTree } from '../utils/skillVerification';
 import BuildInterface from '../types/interfaces/BuildInterface';
 import { CharacterInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
-// import SkillPointSelector from './SkillPointSelector';
-// import SkillTooltip from './SkillTooltip';
+import SkillPointSelector from './SkillPointSelector';
+import SkillTooltip from './SkillTooltip';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -19,9 +19,11 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild, characterData, selectedGame } = state;
   const [selectable, setSelectable] = useState(false);
-  const [previewRankKey, setPreviewRankKey] = useState(0);
+  const [previewSkillPoints, setPreviewSkillPoints] = useState(0);
   const [blocked, setBlocked] = useState(false);
-  const thisSkillsCurrentPoints = characterBuild?.buildData?.[yIndex]?.[xIndex] as number;
+  const [thisSkillsCurrentPoints, setThisSkillsCurrentPoints] = useState(
+    characterBuild?.buildData?.[yIndex]?.[xIndex] as number
+  );
 
   useEffect(() => {
     const newSelectable = skillIncreaseIsValid(
@@ -33,13 +35,18 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       false
     );
     setSelectable(newSelectable);
+    if (characterBuild?.buildData?.[yIndex]?.[xIndex] !== undefined) {
+      setThisSkillsCurrentPoints(characterBuild?.buildData?.[yIndex]?.[xIndex] as number);
+    } else {
+      setThisSkillsCurrentPoints(0);
+    }
   }, [characterBuild?.buildData]);
 
   useEffect(() => {
-    if (skill?.levels?.[thisSkillsCurrentPoints + 1]) {
-      setPreviewRankKey(thisSkillsCurrentPoints + 1);
+    if (skill?.levels?.[thisSkillsCurrentPoints]) {
+      setPreviewSkillPoints(thisSkillsCurrentPoints);
     } else {
-      setPreviewRankKey(thisSkillsCurrentPoints);
+      setPreviewSkillPoints(thisSkillsCurrentPoints - 1);
     }
   }, [thisSkillsCurrentPoints]);
 
@@ -200,22 +207,22 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
           <div className="flex flex-col justify-center m-auto">
             <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
           </div>
-          {/* <SkillTooltip skill={skill} rankKey={previewRankKey} blocked={blocked} /> */}
+          <SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />
         </div>
 
         <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
-          {/* {skill?.levels?.map((rankKey, index) => {
+          {skill?.levels?.map((rankKey, index) => {
             return (
               <SkillPointSelector
-                key={rankKey}
+                key={index}
                 index={index}
                 skill={skill}
-                rankKey={rankKey}
+                skillPoints={index}
                 thisSkillsCurrentPoints={thisSkillsCurrentPoints}
                 blocked={blocked}
               />
             );
-          })} */}
+          })}
         </div>
       </div>
 

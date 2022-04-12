@@ -11,7 +11,7 @@ const Header = () => {
     <div className="flex flex-row flex-nowrap relative">
       <div className="h-[10vh] text-slate-100 text-4xl flex m-auto cursor-pointer" onClick={() => navigateTo('/')}>
         <h1 className="m-auto">Warhammer</h1>
-        <img src={headerImg} alt="header diplomacy icon" />
+        <img src={headerImg} alt="header diplomacy icon" className="w-20 h-20 my-auto" />
         <h1 className="m-auto">Planner</h1>
       </div>
       <div className="absolute right-0 top-1/4 text-xl text-slate-50">
