@@ -4,6 +4,7 @@ import cooldownImg from '../imgs/other/icon_cooldown_26.webp';
 import windsImg from '../imgs/other/winds_ui_replenish_battle_ph.webp';
 import chargesImg from '../imgs/other/icon_uses.webp';
 import SkillEffect from './SkillEffect';
+import SkillPhase from './SkillPhase';
 
 interface SkillAbilityTooltipPropInterface {
   ability: AbilityInterface;
@@ -26,12 +27,19 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
   ) {
     doesTarget = true;
   }
+
+  let hasPhases = false;
+  unitAbility.phases?.forEach((phase) => {
+    if (phase.stat_effects || (phase.attributes !== undefined && phase.attributes.length > 0)) {
+      hasPhases = true;
+    }
+  });
   return (
     <Fragment>
       <div className="flex flex-row ml-4">
-        <h3 className="flex-grow text-left text-xl">{unitAbility.description}</h3>
+        <h3 className="flex-grow text-left text-2xl mr-2">{unitAbility.description}</h3>
         {unitAbility.num_uses !== undefined && unitAbility.num_uses > 0 && (
-          <div className="flex flex-row">
+          <div className="flex flex-row mr-2">
             <img className="w-6 h-6" src={chargesImg} alt="charges icon" width="24" height="24" />
             <div className="ml-1 flex flex-col justify-center">
               <p className="text-center">{unitAbility.num_uses}</p>
@@ -39,7 +47,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           </div>
         )}
         {unitAbility.mana_cost !== undefined && unitAbility.mana_cost > 0 && (
-          <div className="flex flex-row">
+          <div className="flex flex-row mr-2">
             <img className="w-6 h-6" src={windsImg} alt="winds icon" width="24" height="24" />
             <div className="ml-1 flex flex-col justify-center">
               <p className="text-center">{unitAbility.mana_cost}</p>
@@ -50,7 +58,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           <div className="flex flex-row">
             <img className="w-6 h-6" src={cooldownImg} alt="cooldown icon" width="24" height="24" />
             <div className="ml-1 flex flex-col justify-center">
-              <p className="text-center">{unitAbility.recharge_time}</p>
+              <p className="text-center">{unitAbility.recharge_time}s</p>
             </div>
           </div>
         )}
@@ -64,7 +72,13 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
       {unitAbility.active_time !== undefined && unitAbility.active_time > 0 && (
         <div className="flex flex-row">
           <h5 className="text-left w-20">Duration:</h5>
-          <p>{unitAbility.active_time}</p>
+          <p>{unitAbility.active_time}s</p>
+        </div>
+      )}
+      {unitAbility.wind_up_time !== undefined && unitAbility.wind_up_time > 0 && (
+        <div className="flex flex-row">
+          <h5 className="text-left w-20">Wind Up:</h5>
+          <p>{unitAbility.wind_up_time}s</p>
         </div>
       )}
       {doesTarget && (
@@ -73,18 +87,18 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           <p>{target}</p>
         </div>
       )}
-      {unitAbility.target_intercept_range && (
+      {unitAbility.target_intercept_range !== undefined && unitAbility.target_intercept_range > 0 && (
         <div className="flex flex-row">
           <h5 className="text-left w-20">Cast Range:</h5>
           <p>{unitAbility.target_intercept_range}</p>
         </div>
       )}
-      {/* {ability.effectRange && (
+      {unitAbility.effect_range !== undefined && unitAbility.effect_range > 0 && (
         <div className="flex flex-row">
           <h5 className="text-left w-20">Effect range:</h5>
-          <p>{ability.effectRange}</p>
+          <p>{unitAbility.effect_range}</p>
         </div>
-      )} */}
+      )}
       {unitAbility.ui_effects && (
         <div className="text-left">
           <h5 className="w-20">Effects:</h5>
@@ -100,16 +114,24 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           })}
         </div>
       )}
-      {/* {unitAbility.phases && (
+      {hasPhases && (
         <div className="flex flex-row">
-          <h5 className="text-left w-20">Effects:</h5>
+          <h5 className="text-left w-20">Phases:</h5>
           <div>
-            {ability.effects.map((skillEffect, index) => {
-              return <SkillEffect key={index} skillEffect={skillEffect} />;
+            {unitAbility?.phases?.map((phase, index) => {
+              let render = false;
+              if (phase.stat_effects || (phase.attributes !== undefined && phase.attributes.length > 0)) {
+                render = true;
+              }
+              if (render) {
+                return <SkillPhase key={index} phase={phase} />;
+              } else {
+                return <Fragment></Fragment>;
+              }
             })}
           </div>
         </div>
-      )} */}
+      )}
     </Fragment>
   );
 };

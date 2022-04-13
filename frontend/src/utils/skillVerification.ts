@@ -129,14 +129,16 @@ const skillIncreaseIsValid = (
   // Check if skill has higher rank than already selected
   if (!skill.levels?.[thisSkillsCurrentPoints]) {
     if (printError) {
-      toast.error('A higher skill rank does not exist.');
+      toast.error('A higher skill rank does not exist.', { id: `${skillKey} higher rank` });
     }
     return false;
   }
   // Check Required Level
   if (!isRequiredLevel(characterBuild, skill.levels?.[thisSkillsCurrentPoints])) {
     if (printError) {
-      toast.error(`Requires rank ${skill.levels?.[thisSkillsCurrentPoints]?.unlocked_at_rank}`);
+      toast.error(`Requires rank ${skill.levels?.[thisSkillsCurrentPoints]?.unlocked_at_rank}`, {
+        id: `${skillKey} requires rank`,
+      });
     }
     return false;
   }
@@ -145,21 +147,21 @@ const skillIncreaseIsValid = (
     if (printError) {
       const skillLocation = findSkill(characterData, characterBuild, skill?.parent_required?.[0] as string);
       const skillName = characterData?.skillTree[skillLocation?.yIndex as number][skillLocation?.xIndex as number].name;
-      toast.error(`Requires ${skillName}`);
+      toast.error(`Requires ${skillName}`, { id: `${skillKey} requires` });
     }
     return false;
   }
   // Check Blocked skills
   if (skillIsBlocked(skillKey, characterBuild)) {
     if (printError) {
-      toast.error(`Skill is blocked by another skill.`);
+      toast.error(`Skill is blocked by another skill.`, { id: `${skillKey} blocked` });
     }
     return false;
   }
   // Check x points in last y skills
   if (missingRequiredPoints(characterData, characterBuild, skill)) {
     if (printError) {
-      toast.error(`Requires more points in required skills.`);
+      toast.error(`Requires more points in required skills.`, { id: `${skillKey} more points` });
     }
     return false;
   }

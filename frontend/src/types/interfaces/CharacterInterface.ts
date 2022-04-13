@@ -1,3 +1,26 @@
+interface PhaseInterface {
+  duration: number;
+  effect_type: string;
+  recharge_time: number;
+  is_hidden_in_ui: boolean;
+  mana_max_depletion_mod?: number;
+  fatigue_change_ratio?: number;
+  mana_regen_mod?: number;
+  stat_effects?: Array<{
+    value: number;
+    stat: string;
+    how: string;
+    description: string;
+    icon: string;
+    sort_order: number;
+  }>;
+  attributes?: Array<{
+    key: string;
+    description: string;
+    attribute_type: string;
+  }>;
+}
+
 interface AbilityInterface {
   effect: string;
   bonus_value_id: string;
@@ -31,26 +54,7 @@ interface AbilityInterface {
     mana_cost?: number;
     miscast_chance?: number;
     num_uses?: number;
-    phases?: Array<{
-      duration: number;
-      effect_type: string;
-      recharge_time: number;
-      is_hidden_in_ui: boolean;
-      mana_max_depletion_mod?: number;
-      fatigue_change_ratio?: number;
-      mana_regen_mod?: number;
-      stat_effects?: Array<{
-        value: number;
-        stat: string;
-        how: string;
-        description: string;
-      }>;
-      attribute?: Array<{
-        key: string;
-        description: string;
-        attribute_type: string;
-      }>;
-    }>;
+    phases?: Array<PhaseInterface>;
   };
 }
 
@@ -106,4 +110,11 @@ interface CharacterInterface {
   items: Array<ItemInterface>;
 }
 
-export type { CharacterInterface, SkillInterface, SkillLevelInterface, SkillEffectInterface, AbilityInterface };
+export type {
+  CharacterInterface,
+  SkillInterface,
+  SkillLevelInterface,
+  SkillEffectInterface,
+  AbilityInterface,
+  PhaseInterface,
+};

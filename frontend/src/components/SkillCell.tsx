@@ -87,13 +87,13 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     } else if (event.button === 2) {
       // Check if skill has lower rank than already selected
       if (thisSkillsCurrentPoints === 0) {
-        toast.error('Cannot remove unselected skill.');
+        toast.error('Cannot remove unselected skill.', { id: `${skillKey} unselect` });
         return;
       }
 
       // Check skill doesn't start with more ranks than attempting
       if (thisSkillsCurrentPoints === skill.points_on_creation) {
-        toast.error('Cannot remove starting skill points.');
+        toast.error('Cannot remove starting skill points.', { id: `${skillKey} starting` });
         return;
       }
 
@@ -126,7 +126,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       testCharacterBuild.rank -= 2;
 
       if (!isValidSkillTree(testCharacterBuild, state.characterData as CharacterInterface)) {
-        toast.error('This skill has dependencies.');
+        toast.error('This skill has dependencies.', { id: `${skillKey} dependencies` });
         return;
       }
 

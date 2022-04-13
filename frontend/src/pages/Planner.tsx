@@ -92,10 +92,10 @@ const Planner = () => {
     navigator.clipboard
       .writeText(buildLink)
       .then(() => {
-        toast.success('Build copied to clipboard!');
+        toast.success('Build copied to clipboard!', { id: 'success clipboard' });
       })
       .catch(() => {
-        toast.error('Error copying build to the clipboard...');
+        toast.error('Error copying build to the clipboard...', { id: 'error clipboard' });
       });
   };
 
