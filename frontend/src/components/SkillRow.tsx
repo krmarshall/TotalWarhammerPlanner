@@ -1,24 +1,20 @@
-import SkillInterface from '../types/interfaces/SkillInterfaces';
+import { SkillInterface } from '../types/interfaces/CharacterInterface';
 import SkillCell from './SkillCell';
 
 interface SkillRowPropsInterface {
-  skillLine: {
-    [key: string]: SkillInterface;
-  };
+  skillRow: Array<SkillInterface>;
   yIndex: number;
 }
 
-const SkillRow = ({ skillLine, yIndex }: SkillRowPropsInterface) => {
-  const skillKeys = Object.keys(skillLine);
+const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
   return (
     <tr className="flex flex-row">
-      {skillKeys.length === 0 ? (
+      {skillRow.length === 0 ? (
         <td className="h-16"></td>
       ) : (
-        skillKeys.map((skillKey, index) => {
-          const skill = skillLine[skillKey];
-          const nextSkill = skillLine[skillKeys[index + 1]];
-          const prevSkill = skillLine[skillKeys[index - 1]];
+        skillRow.map((skill, xIndex) => {
+          const nextSkill = skillRow[xIndex + 1];
+          const prevSkill = skillRow[xIndex - 1];
           let boxedType = 'none';
           if (skill.boxed && !prevSkill?.boxed) {
             boxedType = 'start';
@@ -29,11 +25,11 @@ const SkillRow = ({ skillLine, yIndex }: SkillRowPropsInterface) => {
           }
           return (
             <SkillCell
-              key={skillKey}
-              skillKey={skillKey}
+              key={skill.character_skill_key}
+              skillKey={skill.character_skill_key}
               skill={skill}
               yIndex={yIndex}
-              xIndex={index}
+              xIndex={xIndex}
               boxedType={boxedType}
             />
           );

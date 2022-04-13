@@ -1,4 +1,5 @@
 interface BuildInterface {
+  game: string;
   faction: string;
   character: string;
   buildData: Array<Array<number>>;

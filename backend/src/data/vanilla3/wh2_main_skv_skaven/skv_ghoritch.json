@@ -1,0 +1,1915 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh2_dlc16_skill_node_set_skv_ghoritch_generic_1",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Sneaky",
+        "description": "Furtive, scheming, sly, cunning, underhand, devious, conniving, double-dealing, and sneaky - valuable traits if you wish to stay alive!",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 10%",
+                "key": "wh_main_effect_character_stat_missile_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_generic_missile_ward",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_skv_ghoritch_generic_2",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Tricksy",
+        "description": "All Skaven are unprincipled and untrustworthy by their foul natures. However, this is rarely a disadvantage in the face of the enemy.",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "resistance_magic.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 10%",
+                "key": "wh_main_effect_character_stat_magic_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_generic_magic_ward",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skv_ghoritch_nors_0",
+        "image_path": "wh2_main_character_abilities_frenzied_assault.png",
+        "is_background_skill": false,
+        "name": "Frenzied Assault",
+        "description": "Violence bordering on absolute delirium; 'berserk' doesn't even come close.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Vicious Assault III\"",
+                "key": "wh_dlc08_effect_ability_disable_vicious_assault_iii_hidden",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Frenzied Assault\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_frenzied_assault",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_hero_passive_frenzied_assault",
+                      "icon_name": "wh_dlc08_hero_passive_frenzied_assault",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Frenzied Assault",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.4,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.4 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 12,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+12 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_frenzied_assault",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_skin_wolf_werekin_battle_frenzied_assault",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_nors_1",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Arena Boss",
+        "description": "Ghoritch has always dominated Hell Pit’s blood-soaked arenas and now oversees his successors, keeping the other monsters fresh for war.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "growth_juice.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Growth Juice gained from battles: +5%",
+                "key": "wh2_dlc16_throt_flesh_lab_growth_vat_post_battle_income",
+                "value": 5
+              },
+              {
+                "icon": "experience.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1 for Monstrous Infantry and Monster units",
+                "key": "wh2_dlc16_recruit_xp_monster_units",
+                "value": 1
+              },
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for Monster units",
+                "key": "wh2_dlc09_effect_force_stat_melee_attack_monsters",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_unique_0",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_nors_0"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_nors_2",
+        "image_path": "wh2_main_character_abilities_warp_frenzy.png",
+        "is_background_skill": false,
+        "name": "Piston-Driven Claws",
+        "description": "Giant snipping blades driven by Warpstone-driven pistons replace the Rat Ogre claws of Ghoritch’s heavily modified host body.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Warp Frenzy\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc16_effect_ability_enable_warp_frenzy",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc16_hero_abilities_warp_frenzy",
+                      "icon_name": "wh2_dlc16_hero_abilities_warp_frenzy",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Warp Frenzy",
+                      "active_time": 29,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 24,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+24 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.3 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc16_effect_ability_enable_warp_frenzy",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_warp_frenzy",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_nors_1"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_nors_3",
+        "image_path": "wh2_main_character_abilities_rage.png",
+        "is_background_skill": false,
+        "name": "Norscan Fury",
+        "description": "You can take the Northman out of Chaos, but you can’t take Chaos out of the Northman.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Rage\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_rage",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_lord_passive_rage",
+                      "icon_name": "wh_dlc08_unit_passive_rage",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rage",
+                      "active_time": 135,
+                      "recharge_time": 45,
+                      "initial_recharge": 45,
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 45,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 8,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+8 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        },
+                        {
+                          "duration": 45,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 8,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+8 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": 10,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+10 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "ui/Battle UI/ability_icons/resistance_physical.png"
+                            }
+                          ]
+                        },
+                        {
+                          "duration": 45,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+5 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 8,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+8 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": 10,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+10 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "ui/Battle UI/ability_icons/resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_rage",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_berserk",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_nors_2"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skv_ghoritch_moudler_0",
+        "image_path": "character_public_order.png",
+        "is_background_skill": false,
+        "name": "Intact Mind",
+        "description": "A Berserker has a tad more cognitive ability than a Rat Ogre – the mind of the former at least allows one to be a semi-competent quartermaster!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +3",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 3
+              },
+              {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +150",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 150
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_guardin_0",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_moudler_1",
+        "image_path": "wh2_main_character_abilities_blood_shield.png",
+        "is_background_skill": false,
+        "name": "Trusted Chieftain",
+        "description": "As it turns out, leading a Norscan clan and commanding a pack of monsters are not that different from one another.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +30%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 30
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Blood Shield\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc16_effect_ability_enable_blood_shield",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc16_hero_passive_blood_shield",
+                      "icon_name": "wh2_dlc16_hero_passive_blood_shield",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Blood Shield",
+                      "passive": true,
+                      "effect_range": 55,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 15,
+                              "stat": "stat_resistance_magic",
+                              "how": "add",
+                              "description": "+15 Spell Resistance",
+                              "sort_order": 10,
+                              "icon": "ui/Battle UI/ability_icons/resistance_magic.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc16_effect_ability_enable_blood_shield",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_guardin_1",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_moudler_0"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_moudler_2",
+        "image_path": "wh2_dlc10_guardian.png",
+        "is_background_skill": false,
+        "name": "Throt’s Greatest Creation",
+        "description": "The Unclean one may be less than pleased about his masterwork’s meteoric rise, but the two share a flimsy alliance nonetheless.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "loyalty.png",
+                "priority": 99,
+                "is_positive_value_good": true,
+                "description": "Loyalty: +1 for new recruits",
+                "key": "wh2_main_effect_character_mod_loyalty_all",
+                "value": 1
+              },
+              {
+                "icon": "ranged_damage_character.png",
+                "priority": 240,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +10%",
+                "key": "wh_main_effect_character_stat_missile_damage",
+                "value": 10
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Guardian\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc10_effect_ability_enable_guardian",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc10_unit_passive_guardian",
+                      "icon_name": "wh2_dlc09_unit_passive_guardian",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_ward_save",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_ward_saves.png",
+                        "description": "Ward Save (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Guardian",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 15,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+15 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "ui/Battle UI/ability_icons/resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc10_effect_ability_enable_guardian",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_guardin_2",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_moudler_1"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_0",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Tail Weapon",
+        "description": "Whether by attachment or mutation, something nasty and spiky on your tail has got to bring no little advantage in battle.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +4%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 4
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_combat_tail_weapon",
+        "tier": 0,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_1",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Elusive",
+        "description": "\"Stay in one place, gods-damn you!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_elusive",
+        "tier": 1,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_2",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Thick-Skinned",
+        "description": "Creatures with tough hides or some kind of natural armour are tough nuts to crack - even a powerful attack may fall foul of their thick-skin.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +3",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +8",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +15",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_thick-skinned",
+        "tier": 2,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_3",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Blade Master",
+        "description": "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_blade_master",
+        "tier": 3,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_4",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Indomitable",
+        "description": "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +4",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +8",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +12",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_indomitable",
+        "tier": 4,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_0"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_5",
+        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "is_background_skill": false,
+        "name": "Foe-Seeker",
+        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Foe-Seeker\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_foe_seeker",
+                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Foe-Seeker",
+                      "active_time": 25,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "tier": 5,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skv_ghoritch_combat_1",
+          "wh2_dlc16_skv_ghoritch_combat_2",
+          "wh2_dlc16_skv_ghoritch_combat_3",
+          "wh2_dlc16_skv_ghoritch_combat_4"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_6",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Fervour",
+        "description": "This one fights with a fervour to be both admired and despised.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_dignitary_self_fervour",
+        "tier": 6,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_5"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_7",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Scarred Veteran",
+        "description": "The scars on this storied warrior reveal a veteran of many battles, a being not easy to kill and one worthy of respect and fear.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_scarred_veteran",
+        "tier": 7,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_5"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_8",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Blade Shield",
+        "description": "A blade that sings in defence will not let its wielder be penetrated.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_blade_shield",
+        "tier": 8,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_5"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_9",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Fleet-Footed",
+        "description": "Those who are fleet of foot can reach the enemy faster.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +3%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +8%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +15%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_fleet-footed",
+        "tier": 9,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skv_ghoritch_combat_5"
+        ],
+        "boxed": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_combat_10",
+        "image_path": "wh_main_character_abilities_deadly_onslaught.png",
+        "is_background_skill": false,
+        "name": "Deadly Onslaught",
+        "description": "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Deadly Onslaught\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_deadly_onslaught",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_deadly_onslaught",
+                      "icon_name": "wh_main_character_abilities_deadly_onslaught",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Deadly Onslaught",
+                      "active_time": 31,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 31,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.6,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.6 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.3 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_deadly_onslaught",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
+        "tier": 10,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skv_ghoritch_combat_6",
+          "wh2_dlc16_skv_ghoritch_combat_7",
+          "wh2_dlc16_skv_ghoritch_combat_8",
+          "wh2_dlc16_skv_ghoritch_combat_9"
+        ]
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_1",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Assassinate",
+        "description": "A skilled assassin is a cold-hearted killer and merciless murderer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Assassinate action: Additional 3% success chance",
+                "key": "wh2_main_effect_agent_action_hinder_agent_assassinate_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Assassinate action: Additional 8% success chance",
+                "key": "wh2_main_effect_agent_action_hinder_agent_assassinate_buff",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Assassinate action: Additional 15% success chance",
+                "key": "wh2_main_effect_agent_action_hinder_agent_assassinate_buff",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_agent_assassinate",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_2",
+        "image_path": "campaign_disaster.png",
+        "is_background_skill": false,
+        "name": "Assault Units",
+        "description": "Lying in wait, experienced and patient, striking when the foe least expects.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 3% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 8% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 15% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_army_assault_units",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_3",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Training",
+        "description": "This champion extols discipline and fear away from the battlefield as much as on it.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 5",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 10",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 25",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 25
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_training",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_4",
+        "image_path": "campaign_siege_defence.png",
+        "is_background_skill": false,
+        "name": "Assault Garrison",
+        "description": "\"If they know I'm coming then more's the better!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 5% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 15% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 30% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_settlement_assault_garrison",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_5",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Spread Control",
+        "description": "The sight of this warrior, their stature, import or infamy, can have a calming effect.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -2
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 2
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -3
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 3
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_passive_spread_public_order",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_6",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Specialist",
+        "description": "An expert in their craft, this Hero knows all the mistakes that can be made and how to best avoid making them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -10%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +1%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -20%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -20
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +3%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -40%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -40
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +6%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_reduce_action_cost",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skv_ghoritch_innate",
+        "image_path": "trait_skaven.png",
+        "is_background_skill": true,
+        "name": "Castellan of Hell Pit",
+        "description": "A unique combination of shrewd military intellect and raw brute strength has ascended Ghoritch to Clan Moulder’s most exalted military rank.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[HIDDEN] adds immortal",
+                "key": "wh2_dlc11_enable_immortal_hidden",
+                "value": 1
+              },
+              {
+                "icon": "charge.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +8",
+                "key": "wh2_dlc14_effect_force_charge_bonus_add",
+                "value": 8
+              },
+              {
+                "icon": "morale.png",
+                "priority": 410,
+                "is_positive_value_good": true,
+                "description": "Leadership: +5",
+                "key": "wh_main_effect_force_stat_leadership",
+                "value": 5
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Evisceration\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc16_effect_ability_enable_evisceration",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc16_hero_abilities_evisceration",
+                      "icon_name": "wh2_dlc16_hero_abilities_evisceration",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_vortex",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_vortex.png",
+                        "description": "Vortex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Evisceration",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_spell_stationary_aoe",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Huge, stationary area of effect"
+                        },
+                        {
+                          "key": "wh2_main_all_good_against_armour",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Good against armour"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_units",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs multiple units"
+                        }
+                      ],
+                      "active_time": 4,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 4,
+                          "effect_type": "negative",
+                          "cant_move": true,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc16_effect_ability_enable_evisceration",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skv_ghoritch_innate",
+        "tier": 0,
+        "indent": 6,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skv_ghoritch_campaign_actions_dummy",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Actions [HIDDEN]",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
+                "value": 1
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_dlc12_effect_agent_action_expand_under_empire_cost_mod_hidden",
+                "value": 100
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_dlc16_agent_actrion_champion_hinder_settlement_expand_underempire",
+                "value": 1
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_main_effect_agent_action_enable_champion_assist_army_training",
+                "value": 1
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_main_effect_agent_action_enable_champion_hinder_agent_assassinate",
+                "value": 1
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_main_effect_agent_action_enable_champion_hinder_army_assault_units",
+                "value": 1
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_assault_garrison",
+                "value": 1
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "",
+                "key": "wh2_main_effect_agent_action_enable_champion_passive_spread_public_order",
+                "value": 1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_dummy_agent_actions_ghoritch",
+        "tier": 0,
+        "indent": 8,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ]
+  ],
+  "key": "skv_ghoritch"
+}

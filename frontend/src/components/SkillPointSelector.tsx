@@ -1,10 +1,11 @@
-import SkillInterface from '../types/interfaces/SkillInterfaces';
+import { SkillInterface } from '../types/interfaces/CharacterInterface';
 import SkillTooltip from './SkillTooltip';
 
 interface SkillPointSelectorPropInterface {
+  key: number;
   skill: SkillInterface | undefined;
   index: number;
-  rankKey: string;
+  skillPoints: number;
   thisSkillsCurrentPoints: number;
   blocked: boolean;
 }
@@ -12,7 +13,7 @@ interface SkillPointSelectorPropInterface {
 const SkillPointSelector = ({
   skill,
   index,
-  rankKey,
+  skillPoints,
   thisSkillsCurrentPoints,
   blocked,
 }: SkillPointSelectorPropInterface) => {
@@ -28,7 +29,7 @@ const SkillPointSelector = ({
   return (
     <div className={containerClassName}>
       O
-      <SkillTooltip skill={skill} rankKey={rankKey} blocked={blocked} />
+      <SkillTooltip skill={skill} skillPoints={skillPoints} blocked={blocked} />
     </div>
   );
 };

@@ -1,40 +1,49 @@
-import { createContext, useReducer } from 'react';
+import { createContext, ReactElement, useReducer } from 'react';
 import BuildInterface from '../types/interfaces/BuildInterface';
-import CharacterInterface from '../types/interfaces/CharacterInterface';
+import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
 interface ContextStateInterface {
+  selectedGame: string;
   selectedFaction: string;
   characterData: CharacterInterface | null;
   characterBuild: BuildInterface | null;
-  localStorageBuildKeys: Array<string>;
 }
 
 const initialState: ContextStateInterface = {
-  selectedFaction: 'beastmen',
+  selectedGame: 'vanilla2',
+  selectedFaction: 'wh_dlc03_bst_beastmen',
   characterData: null,
   characterBuild: null,
-  localStorageBuildKeys: [],
 };
 
 interface ActionInterface {
   type: string;
   payload: {
+    selectedGame?: string;
     selectedFaction?: string;
     characterData?: CharacterInterface | null;
     characterBuild?: BuildInterface | null;
-    localStorageBuildKeys?: Array<string>;
   };
 }
 
 enum AppContextActions {
+  changeGame = 'changeGame',
   changeFaction = 'changeFaction',
   changeCharacterData = 'changeCharacterData',
   changeCharacterBuild = 'changeCharacterBuild',
-  changeLocalStorageBuildKeys = 'changeLocalStorageBuildKeys',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
   switch (action.type) {
+    case AppContextActions.changeGame: {
+      const newState = { ...state };
+      if (action.payload.selectedGame === undefined) {
+        return state;
+      }
+      newState.selectedGame = action.payload.selectedGame;
+      return newState;
+    }
+
     case AppContextActions.changeFaction: {
       const newState = { ...state };
       if (action.payload.selectedFaction === undefined) {
@@ -62,15 +71,6 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
       return newState;
     }
 
-    case AppContextActions.changeLocalStorageBuildKeys: {
-      const newState = { ...state };
-      if (action.payload.localStorageBuildKeys === undefined) {
-        return state;
-      }
-      newState.localStorageBuildKeys = action.payload.localStorageBuildKeys;
-      return newState;
-    }
-
     default: {
       return state;
     }
@@ -83,7 +83,11 @@ const AppContext = createContext<{ state: ContextStateInterface; dispatch: (acti
   dispatch: () => {},
 });
 
-const AppProvider: React.FC = ({ children }) => {
+interface InputProps {
+  children: ReactElement;
+}
+
+const AppProvider: React.FC<InputProps> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>;
 };

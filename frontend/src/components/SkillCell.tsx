@@ -1,11 +1,9 @@
 import { MouseEvent, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import skillIcons from '../assets/img/skills/skillIcons';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
-import { isValidSkillTree, skillIncreaseIsValid } from '../sharedFunctions/SkillVerification';
+import { skillIncreaseIsValid, isValidSkillTree } from '../utils/skillVerification';
 import BuildInterface from '../types/interfaces/BuildInterface';
-import CharacterInterface from '../types/interfaces/CharacterInterface';
-import SkillInterface from '../types/interfaces/SkillInterfaces';
+import { CharacterInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
 import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
 
@@ -19,31 +17,36 @@ interface SkillCellPropsInterface {
 
 const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild } = state;
+  const { characterBuild, characterData, selectedGame } = state;
   const [selectable, setSelectable] = useState(false);
-  const [previewRankKey, setPreviewRankKey] = useState('rank1');
+  const [previewSkillPoints, setPreviewSkillPoints] = useState(0);
   const [blocked, setBlocked] = useState(false);
-  const thisSkillsCurrentPoints = characterBuild?.buildData?.[yIndex]?.[xIndex] as number;
-  const rankKeys = Object.keys(skill.ranks);
+  const [thisSkillsCurrentPoints, setThisSkillsCurrentPoints] = useState(
+    characterBuild?.buildData?.[yIndex]?.[xIndex] as number
+  );
 
   useEffect(() => {
     const newSelectable = skillIncreaseIsValid(
       characterBuild,
+      characterData,
       skill,
-      yIndex,
-      xIndex,
       thisSkillsCurrentPoints,
       skillKey,
       false
     );
     setSelectable(newSelectable);
+    if (characterBuild?.buildData?.[yIndex]?.[xIndex] !== undefined) {
+      setThisSkillsCurrentPoints(characterBuild?.buildData?.[yIndex]?.[xIndex] as number);
+    } else {
+      setThisSkillsCurrentPoints(0);
+    }
   }, [characterBuild?.buildData]);
 
   useEffect(() => {
-    if (skill.ranks[`rank${thisSkillsCurrentPoints + 1}` as keyof typeof skill.ranks]) {
-      setPreviewRankKey(`rank${thisSkillsCurrentPoints + 1}`);
+    if (skill?.levels?.[thisSkillsCurrentPoints]) {
+      setPreviewSkillPoints(thisSkillsCurrentPoints);
     } else {
-      setPreviewRankKey(`rank${thisSkillsCurrentPoints}`);
+      setPreviewSkillPoints(thisSkillsCurrentPoints - 1);
     }
   }, [thisSkillsCurrentPoints]);
 
@@ -59,14 +62,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
     // 0 = LMB, 2 = RMB
     if (event.button === 0) {
-      if (!skillIncreaseIsValid(characterBuild, skill, yIndex, xIndex, thisSkillsCurrentPoints, skillKey, true)) {
+      if (!skillIncreaseIsValid(characterBuild, characterData, skill, thisSkillsCurrentPoints, skillKey, true)) {
         return;
       }
       // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
       if (thisSkillsCurrentPoints === 0) {
-        characterBuild?.selectedSkills.push(skillKey);
-        if (skill.blocksSkills) {
-          skill.blocksSkills.map((blockedSkill) => {
+        characterBuild?.selectedSkills.push(skill.key);
+        if (skill?.levels?.[0].blocks_character_skill_key) {
+          skill?.levels?.[0].blocks_character_skill_key.forEach((blockedSkill) => {
             characterBuild?.blockedSkills.push(blockedSkill);
           });
         }
@@ -84,20 +87,35 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     } else if (event.button === 2) {
       // Check if skill has lower rank than already selected
       if (thisSkillsCurrentPoints === 0) {
-        toast.error('Cannot remove unselected skill.');
+        toast.error('Cannot remove unselected skill.', { id: `${skillKey} unselect` });
         return;
       }
+
+      // Check skill doesn't start with more ranks than attempting
+      if (thisSkillsCurrentPoints === skill.points_on_creation) {
+        toast.error('Cannot remove starting skill points.', { id: `${skillKey} starting` });
+        return;
+      }
+
       // Check removing skill wont invalidate other skills.
       const testCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
       testCharacterBuild.buildData[yIndex][xIndex] -= 1;
 
       // If skill was entirely removed delete from characterBuild.selectedSkills and blockedSkills references if needed
       if (testCharacterBuild.buildData[yIndex][xIndex] === 0) {
-        const selectedSkillIndex = testCharacterBuild.selectedSkills.indexOf(skillKey);
+        const selectedSkillIndex = testCharacterBuild.selectedSkills.indexOf(skill.key);
         testCharacterBuild.selectedSkills.splice(selectedSkillIndex, 1);
 
-        if (skill.blocksSkills) {
-          skill.blocksSkills.map((blockedSkill) => {
+        let blocksSkill = false;
+        const blockedSkillKeys: Array<string> = [];
+        skill.levels?.forEach((level) => {
+          if (level.blocks_character_skill_key) {
+            blocksSkill = true;
+            blockedSkillKeys.push(...level.blocks_character_skill_key);
+          }
+        });
+        if (blocksSkill) {
+          blockedSkillKeys.map((blockedSkill) => {
             const blockedSkillIndex = testCharacterBuild.blockedSkills.indexOf(blockedSkill);
             testCharacterBuild.blockedSkills.splice(blockedSkillIndex, 1);
           });
@@ -108,7 +126,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       testCharacterBuild.rank -= 2;
 
       if (!isValidSkillTree(testCharacterBuild, state.characterData as CharacterInterface)) {
-        toast.error('This skill has dependencies.');
+        toast.error('This skill has dependencies.', { id: `${skillKey} dependencies` });
         return;
       }
 
@@ -164,6 +182,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }
 
+  const imagePath = skill.image_path.replace('.png', '.webp');
   return (
     <td
       className={tdClassName}
@@ -176,40 +195,29 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     >
       <div className={divClassName}>
         <div className="flex flex-row has-tooltip">
-          {skill.iconSpellLore ? (
-            <img // @ts-expect-error 7053
-              src={skillIcons[skill.iconType][skill.iconSpellLore][skill.icon]}
-              className="w-16 h-16"
-              draggable={false}
-              alt="skillIcon"
-              width="64"
-              height="64"
-            />
-          ) : (
-            <img // @ts-expect-error 7053
-              src={skillIcons[skill.iconType][skill.icon]}
-              className="w-16 h-16"
-              draggable={false}
-              alt="skillIcon"
-              width="64"
-              height="64"
-            />
-          )}
+          <img
+            src={`/imgs/${selectedGame}/campaign_ui/skills/${imagePath}`}
+            className="w-16 h-16"
+            draggable={false}
+            alt="skillIcon"
+            width="64"
+            height="64"
+          />
 
           <div className="flex flex-col justify-center m-auto">
             <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
           </div>
-          <SkillTooltip skill={skill} rankKey={previewRankKey} blocked={blocked} />
+          <SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />
         </div>
 
         <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
-          {rankKeys.map((rankKey, index) => {
+          {skill?.levels?.map((rankKey, index) => {
             return (
               <SkillPointSelector
-                key={rankKey}
+                key={index}
                 index={index}
                 skill={skill}
-                rankKey={rankKey}
+                skillPoints={index}
                 thisSkillsCurrentPoints={thisSkillsCurrentPoints}
                 blocked={blocked}
               />
@@ -219,7 +227,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       </div>
 
       <div className="w-10 flex flex-col justify-center">
-        {skill.rightArrow && <p className="text-center text-4xl text-gray-200">→</p>}
+        {skill?.right_arrow && <p className="text-center text-4xl text-gray-200">→</p>}
       </div>
     </td>
   );

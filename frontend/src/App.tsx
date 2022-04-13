@@ -1,24 +1,34 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { AppProvider } from './contexts/AppContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import { AppProvider } from './contexts/AppContext';
+import Header from './components/Header';
+
 const Home = lazy(() => import('./pages/Home'));
 const Planner = lazy(() => import('./pages/Planner'));
 const About = lazy(() => import('./pages/About'));
+const Issues = lazy(() => import('./pages/Issues'));
 
-function App() {
+const App = () => {
   return (
     <AppProvider>
-      <div className="bg-gray-800 w-screen h-screen px-20 py-12 font-CaslonAntique">
+      <div className="bg-gray-800 w-screen h-screen px-8 font-CaslonAntique">
         <Toaster
           position="bottom-center"
           toastOptions={{
             duration: 2500,
-            style: { background: '#4b5563', color: '#e5e7eb', fontSize: 'x-large', userSelect: 'none' },
+            style: {
+              background: '#4b5563',
+              color: '#e5e7eb',
+              fontSize: 'x-large',
+              userSelect: 'none',
+              border: '1px solid rgb(107 114 128)',
+            },
           }}
         />
-        <div className="bg-gray-700 w-full h-full border border-gray-500 rounded-md px-6 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-          <Router>
+        <BrowserRouter>
+          <Header />
+          <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
             <Suspense
               fallback={
                 <div className="flex flex-col place-items-center">
@@ -27,25 +37,26 @@ function App() {
                 </div>
               }
             >
-              <Switch>
-                <Route exact path="/">
-                  <Home />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="planner" element={<Planner />}>
+                  <Route path=":game" element={<Planner />}>
+                    <Route path=":faction" element={<Planner />}>
+                      <Route path=":character" element={<Planner />}>
+                        <Route path=":code" element={<Planner />} />
+                      </Route>
+                    </Route>
+                  </Route>
                 </Route>
-
-                <Route path="/planner/:faction/:character/:code?">
-                  <Planner />
-                </Route>
-
-                <Route path="/about">
-                  <About />
-                </Route>
-              </Switch>
+                <Route path="/about" element={<About />} />
+                <Route path="/issues" element={<Issues />} />
+              </Routes>
             </Suspense>
-          </Router>
-        </div>
+          </div>
+        </BrowserRouter>
       </div>
     </AppProvider>
   );
-}
+};
 
 export default App;

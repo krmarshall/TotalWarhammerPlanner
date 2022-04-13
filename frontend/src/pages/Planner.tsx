@@ -3,34 +3,33 @@ import { toast } from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 import api from '../api/api';
 import BuildStorage from '../components/BuildStorage';
-import CharacterItems from '../components/CharacterItems';
 import SkillRow from '../components/SkillRow';
+import CharacterItems from '../components/CharacterItems';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
-import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../sharedFunctions/sharedFunctions';
-import { isValidSkillTree } from '../sharedFunctions/SkillVerification';
-import { convertBuildToCode, convertCodeToBuild } from '../sharedFunctions/urlFunctions';
-import CharacterInterface from '../types/interfaces/CharacterInterface';
-
-interface PlannerParamsInterface {
-  faction: string;
-  character: string;
-  code?: string;
-}
+import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../utils/sharedFunctions';
+import { convertBuildToCode, convertCodeToBuild } from '../utils/urlFunctions';
+import { CharacterInterface } from '../types/interfaces/CharacterInterface';
+import gameData from '../data/gameData';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild } = state;
-  const { faction, character, code } = useParams<PlannerParamsInterface>();
+  const { game, faction, character, code } = useParams();
 
   const [urlLoaded, setUrlLoaded] = useState(false);
 
   useEffect(() => {
     if (state.characterData === null) {
       api
-        .getCharacterSkillTree(faction, character)
+        .getCharacterSkillTree(game as string, faction as string, character as string)
         .then((response: CharacterInterface) => {
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
-          const emptyCharacterBuild = createEmptyCharacterBuild(response, faction, character);
+          const emptyCharacterBuild = createEmptyCharacterBuild(
+            response,
+            game as string,
+            faction as string,
+            character as string
+          );
           dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
         })
         .catch(() => {
@@ -48,15 +47,13 @@ const Planner = () => {
       return;
     }
     const importBuild = convertCodeToBuild(code);
-    const newCharacterBuild = createCharacterBuildFromArray(importBuild, state.characterData, faction, character);
-    if (!isValidSkillTree(newCharacterBuild, state.characterData)) {
-      toast.error(
-        'The build you are trying to load is invalid, an update or bugfix to the character tree may have caused the build to be invalid. Sorry!'
-      );
-      const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, faction, character);
-      dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
-      return;
-    }
+    const newCharacterBuild = createCharacterBuildFromArray(
+      importBuild,
+      state.characterData,
+      game as string,
+      faction as string,
+      character as string
+    );
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
     setUrlLoaded(true);
   }, [code, state.characterData]);
@@ -77,7 +74,12 @@ const Planner = () => {
     if (!state.characterData) {
       return;
     }
-    const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, faction, character);
+    const emptyCharacterBuild = createEmptyCharacterBuild(
+      state.characterData,
+      game as string,
+      faction as string,
+      character as string
+    );
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
   };
 
@@ -90,12 +92,20 @@ const Planner = () => {
     navigator.clipboard
       .writeText(buildLink)
       .then(() => {
-        toast.success('Build copied to clipboard!');
+        toast.success('Build copied to clipboard!', { id: 'success clipboard' });
       })
       .catch(() => {
-        toast.error('Error copying build to the clipboard...');
+        toast.error('Error copying build to the clipboard...', { id: 'error clipboard' });
       });
   };
+
+  // @ts-expect-error ts(7053)
+  const lordName = gameData[game].characters[`${faction}_lords`]?.[character]?.name;
+  // @ts-expect-error ts(7053)
+  const heroName = gameData[game].characters[`${faction}_heroes`]?.[character]?.name;
+  const characterName = lordName === undefined ? heroName : lordName;
+
+  const rankLimit = game?.includes('2') ? 40 : 50;
 
   return (
     <Fragment>
@@ -108,7 +118,7 @@ const Planner = () => {
         <Fragment>
           <div className="flex flex-row flex-nowrap">
             <div className="invisible w-28">Spacer</div>
-            <h1 className="flex-grow text-center text-4xl m-2 text-gray-200">{state.characterData.name}</h1>
+            <h1 className="flex-grow text-center text-4xl m-2 text-gray-200">{characterName}</h1>
             <button
               className="select-none text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl"
               onClick={shareButtonHandler}
@@ -121,14 +131,14 @@ const Planner = () => {
             >
               Reset
             </button>
-            {characterBuild?.rank && characterBuild.rank <= 40 ? (
+            {characterBuild?.rank && characterBuild.rank <= rankLimit ? (
               <p className="select-none text-center my-auto text-gray-200 text-2xl">Rank: {characterBuild?.rank}</p>
             ) : (
               <p className="select-none text-center my-auto text-red-500 text-2xl">Rank: {characterBuild?.rank}</p>
             )}
           </div>
           <div
-            className="pb-2 shadow-lg border border-gray-500 rounded overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+            className="pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"
             onWheel={(event) => {
               horizontalScroll(event);
@@ -137,8 +147,8 @@ const Planner = () => {
             <table className="table-fixed">
               <thead></thead>
               <tbody className="flex flex-col flex-nowrap">
-                {state.characterData?.skillTree?.map((skillLine, index) => {
-                  return <SkillRow key={index} skillLine={skillLine} yIndex={index} />;
+                {state.characterData?.skillTree?.map((skillRow, index) => {
+                  return <SkillRow key={index} skillRow={skillRow} yIndex={index} />;
                 })}
               </tbody>
             </table>

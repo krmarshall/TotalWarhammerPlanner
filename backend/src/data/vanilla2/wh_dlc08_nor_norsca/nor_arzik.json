@@ -1,0 +1,1672 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_dummy_01",
+        "image_path": "item_weapon.png",
+        "is_background_skill": false,
+        "name": "[HIDDEN]",
+        "description": "[HIDDEN]",
+        "character_skill_key": "wh_dlc08_skill_arzik_dummy",
+        "tier": 0,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_arzik_hidden",
+        "image_path": "item_weapon.png",
+        "is_background_skill": false,
+        "name": "[HIDDEN]",
+        "description": "[HIDDEN]",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Enables lightning strike battles when reinforcements are present",
+                "key": "wh_main_effect_conquest_enable_night_battles",
+                "value": 1
+              },
+              {
+                "icon": "magic.png",
+                "priority": 15,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic starting amount: +30",
+                "key": "wh_main_effect_military_force_winds_of_magic_starting_mod",
+                "value": 30
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Magic resistance: 25% for Chaos Spawn units",
+                "key": "wh_dlc03_effect_force_ward_save_magic_spawn",
+                "value": 25
+              },
+              {
+                "icon": "defence.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_force_unit_stat_melee_defence",
+                "value": 8
+              },
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8",
+                "key": "wh_main_effect_force_unit_stat_melee_attack",
+                "value": 8
+              },
+              {
+                "icon": "battle_movement.png",
+                "priority": 115,
+                "is_positive_value_good": true,
+                "description": "Speed: +12% for all units",
+                "key": "wh_dlc03_effect_tech_movement_speed_all",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_arzik_hidden",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_hidden_quest_battle_specific",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "[HIDDEN]",
+        "description": "[HIDDEN]",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Favoured by the God\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_favoured_by_the_god",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_quest_passive_favoured_by_the_god",
+                      "icon_name": "wh_dlc08_quest_passive_favoured_by_the_god",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Favoured by the God",
+                      "num_uses": 1,
+                      "active_time": 240,
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 240,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 90,
+                              "stat": "stat_resistance_all",
+                              "how": "add",
+                              "description": "+90 Damage Resistance ",
+                              "sort_order": 10,
+                              "icon": "placeholder.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_favoured_by_the_god",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_quest_favored_by_the_god",
+        "tier": 8,
+        "indent": 0,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_01",
+        "image_path": "wh_main_spell_metal_searing_doom.png",
+        "is_background_skill": false,
+        "name": "Searing Doom",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Searing Doom\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_magic_metal_enable_searing_doom",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
+                      "type": {
+                        "key": "wh_type_bombardment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_bombardment.png",
+                        "description": "Bombardment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Searing Doom",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_moderate",
+                          "sort_order": 104,
+                          "description": "➕ Causes moderate magical damage"
+                        },
+                        {
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Medium strike area"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_unit",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single unit"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 9,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_magic_metal_enable_searing_doom",
+                "value": 1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Searing Doom Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_metal_enable_searing_doom_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
+                      "type": {
+                        "key": "wh_type_bombardment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_bombardment.png",
+                        "description": "Bombardment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Searing Doom",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_moderate",
+                          "sort_order": 104,
+                          "description": "➕ Causes moderate magical damage"
+                        },
+                        {
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Medium strike area"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_unit",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single unit"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 9,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": false
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_metal_enable_searing_doom_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
+                      "type": {
+                        "key": "wh_type_bombardment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_bombardment.png",
+                        "description": "Bombardment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Searing Doom",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_moderate",
+                          "sort_order": 104,
+                          "description": "➕ Causes moderate magical damage"
+                        },
+                        {
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Medium strike area"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_unit",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single unit"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 9,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_metal_enable_searing_doom_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Searing Doom\"",
+                "key": "wh_main_effect_magic_metal_cooldown_searing_doom",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -1 for \"Searing Doom\"",
+                "key": "wh2_main_effect_magic_metal_reduce_wom_cost_searing_doom",
+                "value": -1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Searing Doom Upgraded\"",
+                "key": "wh2_main_effect_magic_metal_reduce_wom_cost_searing_doom_upgraded",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Searing Doom Upgraded\"",
+                "key": "wh2_main_effect_magic_metal_miscast_reduction_searing_doom_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_all_magic_metal_01_searing_doom_arzik",
+        "tier": 0,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_02",
+        "image_path": "wh_main_spell_death_aspect_of_the_dreadknight.png",
+        "is_background_skill": false,
+        "name": "Aspect of the Dreadknight",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Aspect of the Dread Knight\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Aspect of the Dread Knight",
+                      "active_time": 16,
+                      "recharge_time": 29,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 4,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 16,
+                          "effect_type": "positive",
+                          "imbue_magical": true,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
+                              "key": "causes_terror",
+                              "description": "Can  Cause Terror",
+                              "attribute_type": "positive"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+                "value": 1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Aspect of the Dread Knight Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_death_enable_aspect_of_the_dreadknight_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Aspect of the Dread Knight",
+                      "active_time": 16,
+                      "recharge_time": 29,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 4,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 16,
+                          "effect_type": "positive",
+                          "imbue_magical": true,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
+                              "key": "causes_terror",
+                              "description": "Can  Cause Terror",
+                              "attribute_type": "positive"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_death_enable_aspect_of_the_dreadknight_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Aspect of the Dread Knight",
+                      "active_time": 16,
+                      "recharge_time": 29,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 4,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 16,
+                          "effect_type": "positive",
+                          "imbue_magical": true,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
+                              "key": "causes_terror",
+                              "description": "Can  Cause Terror",
+                              "attribute_type": "positive"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_death_enable_aspect_of_the_dreadknight_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Aspect of the Dread Knight\"",
+                "key": "wh_main_effect_magic_death_cooldown_aspect_of_the_dreadknight",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -1 for \"Aspect of the Dread Knight\"",
+                "key": "wh2_main_effect_magic_death_reduce_wom_cost_aspect_of_the_dreadknight",
+                "value": -1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Aspect of the Dread Knight Upgraded\"",
+                "key": "wh2_main_effect_magic_death_reduce_wom_cost_aspect_of_the_dreadknight_upgraded",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Aspect of the Dread Knight Upgraded\"",
+                "key": "wh2_main_effect_magic_death_miscast_reduction_aspect_of_the_dreadknight_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_all_magic_death_02_aspect_of_the_dreadknight_arzik",
+        "tier": 1,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_04",
+        "image_path": "wh_main_spell_metal_gehennas_golden_hounds.png",
+        "is_background_skill": false,
+        "name": "Gehenna's Golden Hounds",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Gehenna's Golden Hounds\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_magic_metal_enable_gehennas_golden_hounds",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_gehennas_golden_hounds",
+                      "icon_name": "wh_main_spell_metal_gehennas_golden_hounds",
+                      "overpower_option": "wh_main_spell_metal_gehennas_golden_hounds_upgraded",
+                      "type": {
+                        "key": "wh_type_vortex",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_vortex.png",
+                        "description": "Vortex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Gehenna's Golden Hounds",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_major",
+                          "sort_order": 104,
+                          "description": "➕ Causes major magical damage"
+                        },
+                        {
+                          "key": "wh2_main_spell_medium_vortex",
+                          "sort_order": 105,
+                          "description": "➕ Medium, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_units",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple units"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 13,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 150,
+                      "mana_cost": 8,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_magic_metal_enable_gehennas_golden_hounds",
+                "value": 1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Gehenna's Golden Hounds Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_metal_enable_gehennas_golden_hounds_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_gehennas_golden_hounds",
+                      "icon_name": "wh_main_spell_metal_gehennas_golden_hounds",
+                      "overpower_option": "wh_main_spell_metal_gehennas_golden_hounds_upgraded",
+                      "type": {
+                        "key": "wh_type_vortex",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_vortex.png",
+                        "description": "Vortex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Gehenna's Golden Hounds",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_major",
+                          "sort_order": 104,
+                          "description": "➕ Causes major magical damage"
+                        },
+                        {
+                          "key": "wh2_main_spell_medium_vortex",
+                          "sort_order": 105,
+                          "description": "➕ Medium, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_units",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple units"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 13,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 150,
+                      "mana_cost": 8,
+                      "target_self": false
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_metal_enable_gehennas_golden_hounds_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_gehennas_golden_hounds",
+                      "icon_name": "wh_main_spell_metal_gehennas_golden_hounds",
+                      "overpower_option": "wh_main_spell_metal_gehennas_golden_hounds_upgraded",
+                      "type": {
+                        "key": "wh_type_vortex",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_vortex.png",
+                        "description": "Vortex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Gehenna's Golden Hounds",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_major",
+                          "sort_order": 104,
+                          "description": "➕ Causes major magical damage"
+                        },
+                        {
+                          "key": "wh2_main_spell_medium_vortex",
+                          "sort_order": 105,
+                          "description": "➕ Medium, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_units",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple units"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 13,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 150,
+                      "mana_cost": 8,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_metal_enable_gehennas_golden_hounds_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Gehenna's Golden Hounds\"",
+                "key": "wh_main_effect_magic_metal_cooldown_gehennas_golden_hounds",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Gehenna's Golden Hounds\"",
+                "key": "wh2_main_effect_magic_metal_reduce_wom_cost_gehennas_golden_hounds",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"Gehenna's Golden Hounds Upgraded\"",
+                "key": "wh2_main_effect_magic_metal_reduce_wom_cost_gehennas_golden_hounds_upgraded",
+                "value": -3
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Gehenna's Golden Hounds Upgraded\"",
+                "key": "wh2_main_effect_magic_metal_miscast_reduction_gehennas_golden_hounds_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_all_magic_metal_05_gehennas_golden_hounds_arzik",
+        "tier": 2,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_05",
+        "image_path": "wh_main_spell_death_the_fate_of_bjuna.png",
+        "is_background_skill": false,
+        "name": "The Fate of Bjuna",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"The Fate of Bjuna\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_magic_death_enable_the_fate_of_bjuna",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_the_fate_of_bjuna",
+                      "icon_name": "wh_main_spell_death_the_fate_of_bjuna",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "The Fate of Bjuna",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 20,
+                      "recharge_time": 52,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "mana_cost": 22,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 20,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_magic_death_enable_the_fate_of_bjuna",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"The Fate of Bjuna\"",
+                "key": "wh_main_effect_magic_death_cooldown_the_fate_of_bjuna",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"The Fate of Bjuna\"",
+                "key": "wh2_main_effect_magic_death_reduce_wom_cost_the_fate_of_bjuna",
+                "value": -3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_all_magic_death_09_the_fate_of_bjuna_arzik",
+        "tier": 3,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_06",
+        "image_path": "wh_main_spell_metal_final_transmutation.png",
+        "is_background_skill": false,
+        "name": "Final Transmutation",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Final Transmutation\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_magic_metal_enable_final_transmutation",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_final_transmutation",
+                      "icon_name": "wh_main_spell_metal_final_transmutation",
+                      "overpower_option": "wh_main_spell_metal_final_transmutation_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Final Transmutation",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_unit",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single unit"
+                        }
+                      ],
+                      "active_time": 8,
+                      "recharge_time": 54,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 18,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 8,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_magic_metal_enable_final_transmutation",
+                "value": 1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Final Transmutation Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_metal_enable_final_transmutation_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_final_transmutation",
+                      "icon_name": "wh_main_spell_metal_final_transmutation",
+                      "overpower_option": "wh_main_spell_metal_final_transmutation_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Final Transmutation",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_unit",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single unit"
+                        }
+                      ],
+                      "active_time": 8,
+                      "recharge_time": 54,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 18,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 8,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_metal_enable_final_transmutation_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_metal_final_transmutation",
+                      "icon_name": "wh_main_spell_metal_final_transmutation",
+                      "overpower_option": "wh_main_spell_metal_final_transmutation_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Final Transmutation",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "description": "➕ Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_unit",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single unit"
+                        }
+                      ],
+                      "active_time": 8,
+                      "recharge_time": 54,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 18,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 8,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_metal_enable_final_transmutation_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Final Transmutation\"",
+                "key": "wh_main_effect_magic_metal_cooldown_final_transmutation",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Final Transmutation\"",
+                "key": "wh2_main_effect_magic_metal_reduce_wom_cost_final_transmutation",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -4 for \"Final Transmutation Upgraded\"",
+                "key": "wh2_main_effect_magic_metal_reduce_wom_cost_final_transmutation_upgraded",
+                "value": -4
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Final Transmutation Upgraded\"",
+                "key": "wh2_main_effect_magic_metal_miscast_reduction_final_transmutation_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_all_magic_metal_10_final_transmutation_arzik",
+        "tier": 4,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_07",
+        "image_path": "wh_main_spell_death_soulblight.png",
+        "is_background_skill": false,
+        "name": "Soulblight",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Soulblight\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_magic_death_enable_soulblight",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_soulblight",
+                      "icon_name": "wh_main_spell_death_soulblight",
+                      "overpower_option": "wh_main_spell_death_soulblight_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Soulblight",
+                      "active_time": 18,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 18,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": -30,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "-30 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "placeholder.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_magic_death_enable_soulblight",
+                "value": 1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Soulblight Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_death_enable_soulblight_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_soulblight",
+                      "icon_name": "wh_main_spell_death_soulblight",
+                      "overpower_option": "wh_main_spell_death_soulblight_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Soulblight",
+                      "active_time": 18,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 18,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": -30,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "-30 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "placeholder.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_death_enable_soulblight_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_soulblight",
+                      "icon_name": "wh_main_spell_death_soulblight",
+                      "overpower_option": "wh_main_spell_death_soulblight_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Soulblight",
+                      "active_time": 18,
+                      "recharge_time": 45,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 18,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": -30,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "-30 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "placeholder.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_death_enable_soulblight_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Soulblight\"",
+                "key": "wh_main_effect_magic_death_cooldown_soulblight",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Soulblight\"",
+                "key": "wh2_main_effect_magic_death_reduce_wom_cost_soulblight",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"Soulblight Upgraded\"",
+                "key": "wh2_main_effect_magic_death_reduce_wom_cost_soulblight_upgraded",
+                "value": -3
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Soulblight Upgraded\"",
+                "key": "wh2_main_effect_magic_death_miscast_reduction_soulblight_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_all_magic_death_04_soulblight_arzik",
+        "tier": 5,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_08",
+        "image_path": "wh_dlc08_lord_abilities_fight_or_die.png",
+        "is_background_skill": false,
+        "name": "Fight or Die!",
+        "description": "There is no other choice. There never was.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Fight or Die!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_fight_or_die",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_lord_abilities_fight_or_die",
+                      "icon_name": "wh_dlc08_lord_abilities_fight_or_die",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Fight or Die!",
+                      "active_time": 18,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 18,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 24,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+24 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 16,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+16 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_fight_or_die",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 605,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc08_skill_nor_lord_battle_stand_or_die"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+        "tier": 6,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_09",
+        "image_path": "wh_main_lore_passive_metalshifting.png",
+        "is_background_skill": false,
+        "name": "Metalshifting",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Metalshifting\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_metalshifting",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_lore_passive_metalshifting",
+                      "icon_name": "wh_main_lore_passive_metalshifting",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Metalshifting",
+                      "passive": true,
+                      "effect_range": -1,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 13,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.1 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "placeholder.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_metalshifting",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_metal_03_metalshifting",
+        "tier": 7,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_arzik_magic_10",
+        "image_path": "wh_main_lore_passive_life_leeching.png",
+        "is_background_skill": false,
+        "name": "Life-Leeching",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Life Leeching\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_life-leeching",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_lore_passive_life_leeching",
+                      "icon_name": "wh_main_lore_passive_life_leeching",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment_of_the_winds",
+                        "icon_path": "ui/battle ui/ability_icons/icon_spell_augment_of_the_winds.png",
+                        "description": "Augment of the Winds"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Life Leeching",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_improved_recharge_rate",
+                          "sort_order": 106,
+                          "description": "➕ Improved power recharge rate"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "mana_regen_mod": 0.1,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_life-leeching",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_death_03_life_leeching",
+        "tier": 8,
+        "indent": 3,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": false
+      }
+    ],
+    [],
+    [],
+    []
+  ],
+  "key": "nor_arzik"
+}
