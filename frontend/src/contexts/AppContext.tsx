@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react';
+import { createContext, ReactElement, useReducer } from 'react';
 import BuildInterface from '../types/interfaces/BuildInterface';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
@@ -83,7 +83,11 @@ const AppContext = createContext<{ state: ContextStateInterface; dispatch: (acti
   dispatch: () => {},
 });
 
-const AppProvider: React.FC = ({ children }) => {
+interface InputProps {
+  children: ReactElement;
+}
+
+const AppProvider: React.FC<InputProps> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>;
 };
