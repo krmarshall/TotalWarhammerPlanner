@@ -1,3 +1,9 @@
+interface AttributeInterface {
+  key: string;
+  description: string;
+  attribute_type: string;
+}
+
 interface PhaseInterface {
   duration: number;
   effect_type: string;
@@ -14,11 +20,7 @@ interface PhaseInterface {
     icon: string;
     sort_order: number;
   }>;
-  attributes?: Array<{
-    key: string;
-    description: string;
-    attribute_type: string;
-  }>;
+  attributes?: Array<AttributeInterface>;
 }
 
 interface AbilityInterface {
@@ -117,4 +119,5 @@ export type {
   SkillEffectInterface,
   AbilityInterface,
   PhaseInterface,
+  AttributeInterface,
 };

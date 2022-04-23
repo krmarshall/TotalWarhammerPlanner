@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { PhaseInterface } from '../../types/interfaces/CharacterInterface';
+import SkillPhaseAttribute from './SkillPhaseAttribute';
 
 interface SkillPhaseProps {
   phase: PhaseInterface;
@@ -73,18 +74,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
         <div className="text-left">
           <h5 className="w-20">Attributes:</h5>
           {phase.attributes.map((attr, index) => {
-            return (
-              <div key={index} className="flex flex-row flex-nowrap">
-                <img
-                  src={`/imgs/${selectedGame}/campaign_ui/effect_bundles/attribute_${attr.key}.webp`}
-                  className="w-6 h-6"
-                  alt={`${attr.key} icon`}
-                  width="32"
-                  height="32"
-                />
-                <p className="text-lg whitespace-pre-wrap ml-6">{attr.description}</p>
-              </div>
-            );
+            return <SkillPhaseAttribute key={index} attribute={attr} index={index} />;
           })}
         </div>
       )}
