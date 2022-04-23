@@ -1,6 +1,6 @@
-import GameSelector from '../components/GameSelector';
-import FactionSelector from '../components/FactionSelector';
-import CharacterSelector from '../components/CharacterSelector';
+import GameSelector from '../components/CharacterSelect/GameSelector';
+import FactionSelector from '../components/CharacterSelect/FactionSelector';
+import CharacterSelector from '../components/CharacterSelect/CharacterSelector';
 
 const Home = () => {
   return (

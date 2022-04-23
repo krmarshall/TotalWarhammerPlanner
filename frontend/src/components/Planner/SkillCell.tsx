@@ -1,11 +1,12 @@
 import { MouseEvent, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { AppContext, AppContextActions } from '../contexts/AppContext';
-import { skillIncreaseIsValid, isValidSkillTree } from '../utils/skillVerification';
-import BuildInterface from '../types/interfaces/BuildInterface';
-import { CharacterInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
+import { AppContext, AppContextActions } from '../../contexts/AppContext';
+import { skillIncreaseIsValid, isValidSkillTree } from '../../utils/skillVerification';
+import BuildInterface from '../../types/interfaces/BuildInterface';
+import { CharacterInterface, SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
+import { useImage } from 'react-image';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -183,6 +184,16 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   }
 
   const imagePath = skill.image_path.replace('.png', '.webp');
+  const { src } = useImage({
+    srcList: [
+      `/imgs/${selectedGame}/campaign_ui/skills/${imagePath}`,
+      `/imgs/${selectedGame}/battle_ui/ability_icons/${imagePath}`,
+    ],
+  });
+  let imgClassName = 'w-16 h-16';
+  if (src?.includes('/battle_ui/ability_icons/')) {
+    imgClassName += ' p-2';
+  }
   return (
     <td
       className={tdClassName}
@@ -195,14 +206,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     >
       <div className={divClassName}>
         <div className="flex flex-row has-tooltip">
-          <img
-            src={`/imgs/${selectedGame}/campaign_ui/skills/${imagePath}`}
-            className="w-16 h-16"
-            draggable={false}
-            alt="skillIcon"
-            width="64"
-            height="64"
-          />
+          <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
           <div className="flex flex-col justify-center m-auto">
             <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>

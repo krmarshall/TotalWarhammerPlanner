@@ -1,11 +1,11 @@
 import { Fragment, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router';
-import api from '../api/api';
-import { AppContext, AppContextActions } from '../contexts/AppContext';
-import gameData from '../data/gameData';
-import spellLoreIcons from '../imgs/spellLoreIcons/spellLoreIcons';
-import { createEmptyCharacterBuild } from '../utils/sharedFunctions';
+import api from '../../api/api';
+import { AppContext, AppContextActions } from '../../contexts/AppContext';
+import gameData from '../../data/gameData';
+import spellLoreIcons from '../../imgs/spellLoreIcons/spellLoreIcons';
+import { createEmptyCharacterBuild } from '../../utils/sharedFunctions';
 import CharacterCell from './CharacterCell';
 
 const CharacterSelector = () => {

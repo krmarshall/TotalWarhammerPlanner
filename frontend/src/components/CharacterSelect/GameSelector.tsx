@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { AppContext, AppContextActions } from '../contexts/AppContext';
-import gameData from '../data/gameData';
+import { AppContext, AppContextActions } from '../../contexts/AppContext';
+import gameData from '../../data/gameData';
 
 const GameSelector = () => {
   const { state, dispatch } = useContext(AppContext);

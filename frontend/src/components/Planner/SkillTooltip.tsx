@@ -1,9 +1,9 @@
-import { findSkill } from '../utils/skillVerification';
-import { AbilityInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
+import { findSkill } from '../../utils/skillVerification';
+import { AbilityInterface, SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillEffect from './SkillEffect';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
 import { useContext } from 'react';
-import { AppContext } from '../contexts/AppContext';
+import { AppContext } from '../../contexts/AppContext';
 
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;

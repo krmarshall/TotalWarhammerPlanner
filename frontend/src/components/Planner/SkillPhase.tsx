@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { AppContext } from '../contexts/AppContext';
-import { PhaseInterface } from '../types/interfaces/CharacterInterface';
+import { AppContext } from '../../contexts/AppContext';
+import { PhaseInterface } from '../../types/interfaces/CharacterInterface';
 
 interface SkillPhaseProps {
   phase: PhaseInterface;

@@ -1,4 +1,4 @@
-import { SkillInterface } from '../types/interfaces/CharacterInterface';
+import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillTooltip from './SkillTooltip';
 
 interface SkillPointSelectorPropInterface {

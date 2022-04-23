@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
-import { AppContext, AppContextActions } from '../contexts/AppContext';
-import gameData from '../data/gameData';
-import factionImages from '../imgs/factions/factionImages';
+import { AppContext, AppContextActions } from '../../contexts/AppContext';
+import gameData from '../../data/gameData';
+import factionImages from '../../imgs/factions/factionImages';
 
 const FactionSelector = () => {
   const { state, dispatch } = useContext(AppContext);

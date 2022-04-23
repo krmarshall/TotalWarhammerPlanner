@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { AppContext } from '../contexts/AppContext';
-import { SkillEffectInterface } from '../types/interfaces/CharacterInterface';
+import { AppContext } from '../../contexts/AppContext';
+import { SkillEffectInterface } from '../../types/interfaces/CharacterInterface';
 
 interface SkillEffectPropsInterface {
   skillEffect: SkillEffectInterface;
