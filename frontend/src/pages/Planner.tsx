@@ -20,6 +20,9 @@ const Planner = () => {
 
   useEffect(() => {
     if (state.characterData === null) {
+      dispatch({ type: AppContextActions.changeGame, payload: { selectedGame: game } });
+      dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: faction } });
+
       api
         .getCharacterSkillTree(game as string, faction as string, character as string)
         .then((response: CharacterInterface) => {
