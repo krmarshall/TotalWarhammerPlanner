@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillEffectInterface } from '../../types/interfaces/CharacterInterface';
 
@@ -17,15 +18,15 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   // }
 
   const iconName = skillEffect.icon.replace('.png', '.webp');
+  const { src } = useImage({
+    srcList: [
+      `/imgs/${selectedGame}/campaign_ui/effect_bundles/${iconName}`,
+      `/imgs/${selectedGame}/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
+    ],
+  });
   return (
     <div className="flex flex-row flex-nowrap">
-      <img
-        src={`/imgs/${selectedGame}/campaign_ui/effect_bundles/${iconName}`}
-        className="w-6 h-6"
-        alt={`${skillEffect.key} icon`}
-        width="32"
-        height="32"
-      />
+      <img src={src} className="w-6 h-6" alt={`${skillEffect.key} icon`} width="32" height="32" />
       <div className="flex flex-col justify-center ml-1 text-left ">
         <p className={goodBadEffectClassName}>{skillEffect.description}</p>
       </div>

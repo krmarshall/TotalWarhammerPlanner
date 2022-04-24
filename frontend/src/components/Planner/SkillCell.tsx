@@ -192,7 +192,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   });
   let imgClassName = 'w-16 h-16';
   if (src?.includes('/battle_ui/ability_icons/')) {
-    imgClassName += ' p-2';
+    imgClassName += ' p-2.5';
   }
   return (
     <td

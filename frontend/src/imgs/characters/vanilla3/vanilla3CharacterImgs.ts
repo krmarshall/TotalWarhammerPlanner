@@ -51,7 +51,7 @@ const vanilla3CharacterImgs = {
   nor_marauder_chieftain: norMarauderChieftain,
   cth_dragon_blooded_shugengan_yang: shugengan,
   cth_dragon_blooded_shugengan_yin: shugengan,
-  cth_lord_caravan_master: placeholder,
+  cth_lord_caravan_master: magistrate,
   cth_lord_magistrate_yang: magistrate,
   cth_lord_magistrate_yin: magistrate,
   cth_miao_ying: stormDragon,
