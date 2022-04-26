@@ -7,6 +7,7 @@ interface ContextStateInterface {
   selectedFaction: string;
   characterData: CharacterInterface | null;
   characterBuild: BuildInterface | null;
+  localStorageBuildKeys: Array<string>;
 }
 
 const initialState: ContextStateInterface = {
@@ -14,6 +15,7 @@ const initialState: ContextStateInterface = {
   selectedFaction: 'wh_dlc03_bst_beastmen',
   characterData: null,
   characterBuild: null,
+  localStorageBuildKeys: [],
 };
 
 interface ActionInterface {
@@ -23,6 +25,7 @@ interface ActionInterface {
     selectedFaction?: string;
     characterData?: CharacterInterface | null;
     characterBuild?: BuildInterface | null;
+    localStorageBuildKeys?: Array<string>;
   };
 }
 
@@ -31,6 +34,7 @@ enum AppContextActions {
   changeFaction = 'changeFaction',
   changeCharacterData = 'changeCharacterData',
   changeCharacterBuild = 'changeCharacterBuild',
+  changeLocalStorageBuildKeys = 'changeLocalStorageBuildKeys',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -68,6 +72,15 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.characterBuild = action.payload.characterBuild;
+      return newState;
+    }
+
+    case AppContextActions.changeLocalStorageBuildKeys: {
+      const newState = { ...state };
+      if (action.payload.localStorageBuildKeys === undefined) {
+        return state;
+      }
+      newState.localStorageBuildKeys = action.payload.localStorageBuildKeys;
       return newState;
     }
 

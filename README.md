@@ -17,11 +17,9 @@ npm run dev - Runs both frontend and backend in dev mode, reloading on any saved
 npm run start - Installs and builds the frontend into the backend ./public/ folder, then installs and builds the backend from typescript and runs the server.
 
 ## Known Issues
-- Build links broke somewhere?
-- Local builds need to be implemented again
+- Build links broke somewhere? (Fixed?)
 - Character quest items need to be separated into a different component
 - Figure out what to do with background/hidden skills
-- Find some missing phase stat effect/attribute icons and fix placeholder keys in data parser(prob gonna need some hardcoding for wh2, check norsca marauder chieftain for eg)
 - Work on overall page style
 
 ## Adding A Mod

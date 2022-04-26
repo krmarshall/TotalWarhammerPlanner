@@ -20,7 +20,7 @@ const hasRequiredSkill = (skill: SkillInterface, characterBuild: BuildInterface 
   if (skill.parent_required === undefined) {
     return true;
   }
-  if (characterBuild?.selectedSkills) {
+  if (characterBuild?.selectedSkills && characterBuild?.selectedSkills.length > 0) {
     let includesParentRequired = false;
     skill.parent_required?.forEach((parent) => {
       if (characterBuild?.selectedSkills.includes(parent)) {
