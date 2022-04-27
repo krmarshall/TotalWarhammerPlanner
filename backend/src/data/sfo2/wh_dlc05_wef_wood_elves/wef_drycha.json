@@ -6483,109 +6483,6 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc16_skill_node_set_wef_drycha_innate",
-        "image_path": "trait_wood_elves.png",
-        "is_background_skill": true,
-        "name": "Briarmaven of Woe",
-        "description": "Long ago, Drycha held court on the tainted ground where Morghur’s blood was spilt amongst the roots of the once-glorious Tree of Woe.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: -5",
-                "key": "wh_main_effect_public_order_characters",
-                "value": -5
-              },
-              {
-                "icon": "replenishment.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +10% for Dryads units",
-                "key": "wh2_dlc16_effect_replenishment_dryads",
-                "value": 10
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Dryads units",
-                "key": "wh_dlc05_effect_tech_melee_damage_increase_dryads",
-                "value": 10
-              },
-              {
-                "icon": "melee.png",
-                "priority": 109,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Dryads units",
-                "key": "wh2_dlc16_effect_melee_attack_dryads",
-                "value": 5
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Roused to Wrath\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_roused_to_wrath",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_lord_abilities_roused_to_wrath",
-                      "icon_name": "wh2_dlc16_lord_abilities_roused_to_wrath",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Roused to Wrath",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc16_all_summon_dryads",
-                          "sort_order": 103,
-                          "description": "➕ Summons a unit of Dryads"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_unbinding",
-                          "sort_order": 203,
-                          "description": "➖ Summoned units degrade over time"
-                        }
-                      ],
-                      "num_uses": 1,
-                      "active_time": 1,
-                      "recharge_time": 90,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 60,
-                      "target_self": true
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_roused_to_wrath",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_drycha",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "wef_drycha",
@@ -6714,6 +6611,110 @@
           "key": "wh2_dlc_16_wef_drycha_coeddil_unchained_dummy"
         }
       ]
+    }
+  ],
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc16_skill_node_set_wef_drycha_innate",
+      "image_path": "trait_wood_elves.png",
+      "is_background_skill": true,
+      "name": "Briarmaven of Woe",
+      "description": "Long ago, Drycha held court on the tainted ground where Morghur’s blood was spilt amongst the roots of the once-glorious Tree of Woe.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "public_order.png",
+              "priority": 6,
+              "is_positive_value_good": true,
+              "description": "Public order: -5",
+              "key": "wh_main_effect_public_order_characters",
+              "value": -5
+            },
+            {
+              "icon": "replenishment.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Casualty replenishment rate: +10% for Dryads units",
+              "key": "wh2_dlc16_effect_replenishment_dryads",
+              "value": 10
+            },
+            {
+              "icon": "weapon_damage.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10% for Dryads units",
+              "key": "wh_dlc05_effect_tech_melee_damage_increase_dryads",
+              "value": 10
+            },
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +5 for Dryads units",
+              "key": "wh2_dlc16_effect_melee_attack_dryads",
+              "value": 5
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Roused to Wrath\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_roused_to_wrath",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_lord_abilities_roused_to_wrath",
+                    "icon_name": "wh2_dlc16_lord_abilities_roused_to_wrath",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Roused to Wrath",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc16_all_summon_dryads",
+                        "sort_order": 103,
+                        "description": "➕ Summons a unit of Dryads"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_unbinding",
+                        "sort_order": 203,
+                        "description": "➖ Summoned units degrade over time"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 1,
+                    "recharge_time": 90,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 60,
+                    "target_self": true
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_roused_to_wrath",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc16_skill_node_set_wef_drycha",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_drycha",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ]
 }

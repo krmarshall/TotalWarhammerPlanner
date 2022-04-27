@@ -4816,51 +4816,6 @@
           "wh2_main_skill_node_def_malekith_campaign_3_4"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh2_main_skill_node_def_malekith_innate_01",
-        "image_path": "trait_dark_elves.png",
-        "is_background_skill": true,
-        "name": "Witch King of Naggaroth",
-        "description": "The Witch King long ago sought to take Ulthuan's crown, but the Flames of Asuryan left him twisted with hatred and horribly scarred.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": false,
-                "description": "[HIDDEN]Increased chance of loyalty loss for Lords outranking the faction leader.",
-                "key": "wh2_main_effect_loyalty_penalty_faction_leader_outranked",
-                "value": 3
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[HIDDEN] Gives a percentage of XP received by this character to other characters of the same type. XP is evenly distributed as far as possible with fall-back priority given to higher ranked characters",
-                "key": "wh2_main_effect_percentage_of_xp_to_give_other_characters_of_same_type_hidden",
-                "value": 10
-              },
-              {
-                "icon": "military_spending.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -50% for Black Guard of Naggarond, Dreadspears, Bleakswords and Darkshards units",
-                "key": "wh2_main_effect_upkeep_reduction_malekith_witch_king",
-                "value": -50
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_innate_def_malekith",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "def_malekith",
@@ -5198,6 +5153,52 @@
           "key": "wh2_main_effect_ability_enable_destroyer"
         }
       ]
+    }
+  ],
+  "backgroundSkills": [
+    {
+      "key": "wh2_main_skill_node_def_malekith_innate_01",
+      "image_path": "trait_dark_elves.png",
+      "is_background_skill": true,
+      "name": "Witch King of Naggaroth",
+      "description": "The Witch King long ago sought to take Ulthuan's crown, but the Flames of Asuryan left him twisted with hatred and horribly scarred.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": false,
+              "description": "[HIDDEN]Increased chance of loyalty loss for Lords outranking the faction leader.",
+              "key": "wh2_main_effect_loyalty_penalty_faction_leader_outranked",
+              "value": 3
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Gives a percentage of XP received by this character to other characters of the same type. XP is evenly distributed as far as possible with fall-back priority given to higher ranked characters",
+              "key": "wh2_main_effect_percentage_of_xp_to_give_other_characters_of_same_type_hidden",
+              "value": 10
+            },
+            {
+              "icon": "military_spending.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Upkeep: -50% for Black Guard of Naggarond, Dreadspears, Bleakswords and Darkshards units",
+              "key": "wh2_main_effect_upkeep_reduction_malekith_witch_king",
+              "value": -50
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_def_malekith",
+      "character_skill_key": "wh2_main_skill_innate_def_malekith",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ]
 }

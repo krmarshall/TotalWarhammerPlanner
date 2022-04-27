@@ -4854,803 +4854,812 @@
           "wh2_dlc16_skill_node_wef_ancient_treeman_campaign_9"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_01",
-        "image_path": "trait_spite_1.png",
-        "is_background_skill": true,
-        "name": "Blight of Terrors",
-        "description": "Mirthfully looming out from their host, Terrors take on their most fearsome aspect to dampen the spirits of their horrified prey.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "morale.png",
-                "priority": 61,
-                "is_positive_value_good": false,
-                "description": "Enemy leadership: -5",
-                "key": "wh_main_effect_force_army_battle_enemy_unit_morale",
-                "value": -5
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Blight of Terrors\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_blight_of_terrors",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_abilities_blight_of_terrors",
-                      "icon_name": "wh2_dlc16_character_abilities_blight_of_terrors",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Blight of Terrors",
-                      "num_uses": 3,
-                      "active_time": 20,
-                      "recharge_time": 90,
-                      "passive": false,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 20,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -16,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "-16 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_blight_of_terrors",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_blight_of_terrors_ancient_treeman",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_02",
-        "image_path": "trait_spite_2.png",
-        "is_background_skill": true,
-        "name": "Muster of Malevolents",
-        "description": "Unleashed upon a foe, these aggressive manifestations of the forest are utilised for their needle-like arrows that inflict painful wounds from afar.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Public order: -5",
-                "key": "wh_main_effect_public_order_characters_negative",
-                "value": -5
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Muster of Malevolents\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
-                      "icon_name": "wh2_dlc16_character_abilities_muster_of_malevolents",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Muster of Malevolents",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_resist",
-                          "sort_order": 201,
-                          "description": "➖ Chance opponent will resist damage"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_multiple",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs multiple combatants"
-                        }
-                      ],
-                      "num_uses": 3,
-                      "active_time": 15,
-                      "recharge_time": 90,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 75,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "fatigue_change_ratio": 1,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_muster_of_malevolents_ancient_treeman",
-        "tier": 1,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_03",
-        "image_path": "trait_spite_2.png",
-        "is_background_skill": true,
-        "name": "Lamentation of Despairs",
-        "description": "The Despairs are among the most feared Spites within Athel Loren, their arrival always foretelling imminent death.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ward save: 10%",
-                "key": "wh_main_effect_character_stat_mod_ward_save",
-                "value": 10
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Lamentation of Despairs\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_lamentation_of_despair",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_lord_abilities_lamentation_of_despair",
-                      "icon_name": "wh_dlc05_lord_abilities_lamentation_of_despair",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_magic_missiles",
-                        "icon_path": "icon_spell_magic_missiles.png",
-                        "description": "Magic Missiles"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Lamentation of Despairs",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_armour_piercing_ranged",
-                          "sort_order": 104,
-                          "description": "➕ Causes armour-piercing damage"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single unit"
-                        },
-                        {
-                          "key": "wh_main_projectile_good_high_angle",
-                          "sort_order": 106,
-                          "description": "➕ Good from a high angle"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs a single combatant"
-                        },
-                        {
-                          "key": "wh_dlc05_projectile_strikes_ahead",
-                          "sort_order": 207,
-                          "description": "➖ Strikes any combatants in its path"
-                        }
-                      ],
-                      "recharge_time": 90,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 80,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_ability_enable_lamentation_of_despair",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_lamentation_of_despairs",
-        "tier": 2,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_04",
-        "image_path": "trait_spite_1.png",
-        "is_background_skill": true,
-        "name": "Annoyance of Netlings",
-        "description": "Scurrying over their host with feverish abandon, Netlings snag the weapons of enemies that come too close with webs of magical filaments.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "campaign_movement.png",
-                "priority": 1,
-                "is_positive_value_good": false,
-                "description": "Campaign movement range: -10%",
-                "key": "wh2_main_effect_army_movement_down",
-                "value": -10
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Annoyance of Netlings\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_annoyance_of_netlings",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_passive_annoyance_of_netlings",
-                      "icon_name": "wh2_dlc16_character_passive_annoyance_of_netlings",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Annoyance of Netlings",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -5,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-5 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 0.9,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x0.9 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            },
-                            {
-                              "value": 0.9,
-                              "stat": "stat_melee_damage_base",
-                              "how": "mult",
-                              "description": "x0.9 Base Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "icon_stat_damage_base.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_annoyance_of_netlings",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_annoyance_of_netlings_treeman",
-        "tier": 3,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_05",
-        "image_path": "trait_spite_1.png",
-        "is_background_skill": true,
-        "name": "Befuddlement of Mischiefs",
-        "description": "The staring eyes and tattered wings of tiny, glowing Elves befuddle enemy minds, sending them into a sleep-like trance.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Ambush success chance: +20%",
-                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
-                "value": 20
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Befuddlement of Mischiefs\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_befuddlement_of_mischiefs",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_abilities_befuddlement_of_mischiefs",
-                      "icon_name": "wh2_dlc16_character_abilities_befuddlement_of_mischiefs",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Befuddlement of Mischiefs",
-                      "num_uses": 3,
-                      "active_time": 11,
-                      "recharge_time": 90,
-                      "passive": false,
-                      "effect_range": 30,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 11,
-                          "effect_type": "negative",
-                          "cant_move": true,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_befuddlement_of_mischiefs",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_befuddlement_of_mischiefs",
-        "tier": 4,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_06",
-        "image_path": "trait_spite_2.png",
-        "is_background_skill": true,
-        "name": "Cluster of Radiants",
-        "description": "Radiants are sponges for magical energy, manifesting as little more than blurred shapes of pure light that beckon the Winds to their host.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 66,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic cost: +2 for all enemy spells",
-                "key": "wh2_dlc16_effect_magic_cost_all_lores_enemy",
-                "value": 2
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Cluster of Radiants\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_cluster_of_radiants",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_passive_cluster_of_radiants",
-                      "icon_name": "wh2_dlc16_character_passive_cluster_of_radiants",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment_of_the_winds",
-                        "icon_path": "icon_spell_augment_of_the_winds.png",
-                        "description": "Augment of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Cluster of Radiants",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_improved_recharge_rate",
-                          "sort_order": 106,
-                          "description": "➕ Improved power recharge rate"
-                        },
-                        {
-                          "key": "wh_main_all_increased_max_power_high",
-                          "sort_order": 106,
-                          "description": "➕ Great increase to power reserves"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "mana_max_depletion_mod": 20,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_cluster_of_radiants",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_cluster_of_radiants",
-        "tier": 5,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_07",
-        "image_path": "trait_spite_2.png",
-        "is_background_skill": true,
-        "name": "Murder of Spites",
-        "description": "Hiding in their hosts' hollows are fiendish forms, ready to strike out at any who draw near.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +15%",
-                "key": "wh_main_effect_character_stat_mod_melee_damage",
-                "value": 15
-              },
-              {
-                "icon": "phase_posion.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Enables poison attacks",
-                "key": "wh_main_effect_character_stat_enable_poison_attacks",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Murder of Spites\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_murder_of_spites",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_passive_murder_of_spites",
-                      "icon_name": "wh2_dlc16_character_passive_murder_of_spites",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Murder of Spites",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_murder_of_spites",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_murder_of_spites",
-        "tier": 6,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_08",
-        "image_path": "trait_spite_3.png",
-        "is_background_skill": true,
-        "name": "Pageant of Shrikes",
-        "description": "Shrikes take on various frightening forms, moving like quicksilver to target the eyes, and even enter foes’ bodies to attack their very minds.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "armour_piercing.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour-piercing weapon damage: +50",
-                "key": "wh2_main_effect_armour_piercing_damage",
-                "value": 50
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Pageant of Shrikes\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_pageant_of_shrikes",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_abilities_pageant_of_shrikes",
-                      "icon_name": "wh2_dlc16_character_abilities_pageant_of_shrikes",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_hex",
-                        "icon_path": "icon_spell_hex.png",
-                        "description": "Hex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Pageant of Shrikes",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc16_all_deplete_ammo_high",
-                          "sort_order": 106,
-                          "description": "➖ Greatly depletes ammunition"
-                        }
-                      ],
-                      "num_uses": 3,
-                      "active_time": 20,
-                      "recharge_time": 90,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 75,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 20,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "replenish_ammo": -0.6,
-                          "stat_effects": [
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_missile_range",
-                              "how": "mult",
-                              "description": "x0.8 Range",
-                              "sort_order": 7,
-                              "icon": "icon_stat_range.png"
-                            },
-                            {
-                              "value": -20,
-                              "stat": "stat_reloading",
-                              "how": "add",
-                              "description": "-20 Reload Skill",
-                              "sort_order": 8,
-                              "icon": "icon_stat_reload_time.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_pageant_of_shrikes",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_pageant_of_shrikes",
-        "tier": 7,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
-        "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_09",
-        "image_path": "trait_spite_3.png",
-        "is_background_skill": true,
-        "name": "Resplendence of Luminescents",
-        "description": "Bounding from branch to bow, the Luminescents’ magical spoors alight upon allies’ weapons to bestow a minor but lethal enchantment.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "resistance_magic.png",
-                "priority": 55,
-                "is_positive_value_good": false,
-                "description": "Magic resistance: -25%",
-                "key": "wh2_main_effect_character_stat_mod_ward_save_magic_enemy",
-                "value": -25
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Resplendence of Luminescents\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_resplendence_of_luminescents",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_passive_resplendence_of_luminescents",
-                      "icon_name": "wh2_dlc16_character_passive_respelndance_of_luminescents",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Resplendence of Luminescents",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 5,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+5 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 1.1,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x1.1 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            },
-                            {
-                              "value": 1.1,
-                              "stat": "stat_melee_damage_base",
-                              "how": "mult",
-                              "description": "x1.1 Base Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "icon_stat_damage_base.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_resplendence_of_luminescents",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_resplendence_of_luminescents",
-        "tier": 8,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
-  "key": "wef_ancient_treeman"
+  "key": "wef_ancient_treeman",
+  "backgroundSkills": [
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_01",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Blight of Terrors",
+      "description": "Mirthfully looming out from their host, Terrors take on their most fearsome aspect to dampen the spirits of their horrified prey.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "morale.png",
+              "priority": 61,
+              "is_positive_value_good": false,
+              "description": "Enemy leadership: -5",
+              "key": "wh_main_effect_force_army_battle_enemy_unit_morale",
+              "value": -5
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Blight of Terrors\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_blight_of_terrors",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_blight_of_terrors",
+                    "icon_name": "wh2_dlc16_character_abilities_blight_of_terrors",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Blight of Terrors",
+                    "num_uses": 3,
+                    "active_time": 20,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -16,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "-16 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_blight_of_terrors",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_blight_of_terrors_ancient_treeman",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_02",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Muster of Malevolents",
+      "description": "Unleashed upon a foe, these aggressive manifestations of the forest are utilised for their needle-like arrows that inflict painful wounds from afar.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "public_order.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Public order: -5",
+              "key": "wh_main_effect_public_order_characters_negative",
+              "value": -5
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Muster of Malevolents\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                    "icon_name": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Muster of Malevolents",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_resist",
+                        "sort_order": 201,
+                        "description": "➖ Chance opponent will resist damage"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs multiple combatants"
+                      }
+                    ],
+                    "num_uses": 3,
+                    "active_time": 15,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 75,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "fatigue_change_ratio": 1,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_muster_of_malevolents_ancient_treeman",
+      "tier": 1,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_03",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Lamentation of Despairs",
+      "description": "The Despairs are among the most feared Spites within Athel Loren, their arrival always foretelling imminent death.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "resistance_ward_save.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Ward save: 10%",
+              "key": "wh_main_effect_character_stat_mod_ward_save",
+              "value": 10
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Lamentation of Despairs\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_enable_lamentation_of_despair",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_lord_abilities_lamentation_of_despair",
+                    "icon_name": "wh_dlc05_lord_abilities_lamentation_of_despair",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_magic_missiles",
+                      "icon_path": "icon_spell_magic_missiles.png",
+                      "description": "Magic Missiles"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Lamentation of Despairs",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_armour_piercing_ranged",
+                        "sort_order": 104,
+                        "description": "➕ Causes armour-piercing damage"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_unit",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single unit"
+                      },
+                      {
+                        "key": "wh_main_projectile_good_high_angle",
+                        "sort_order": 106,
+                        "description": "➕ Good from a high angle"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      },
+                      {
+                        "key": "wh_dlc05_projectile_strikes_ahead",
+                        "sort_order": 207,
+                        "description": "➖ Strikes any combatants in its path"
+                      }
+                    ],
+                    "recharge_time": 90,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 80,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_enable_lamentation_of_despair",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_lamentation_of_despairs",
+      "tier": 2,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_04",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Annoyance of Netlings",
+      "description": "Scurrying over their host with feverish abandon, Netlings snag the weapons of enemies that come too close with webs of magical filaments.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "campaign_movement.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Campaign movement range: -10%",
+              "key": "wh2_main_effect_army_movement_down",
+              "value": -10
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Annoyance of Netlings\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_annoyance_of_netlings",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_annoyance_of_netlings",
+                    "icon_name": "wh2_dlc16_character_passive_annoyance_of_netlings",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Annoyance of Netlings",
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -5,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-5 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 0.9,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x0.9 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 0.9,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x0.9 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_annoyance_of_netlings",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_annoyance_of_netlings_treeman",
+      "tier": 3,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_05",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Befuddlement of Mischiefs",
+      "description": "The staring eyes and tattered wings of tiny, glowing Elves befuddle enemy minds, sending them into a sleep-like trance.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Ambush success chance: +20%",
+              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+              "value": 20
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Befuddlement of Mischiefs\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_befuddlement_of_mischiefs",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_befuddlement_of_mischiefs",
+                    "icon_name": "wh2_dlc16_character_abilities_befuddlement_of_mischiefs",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Befuddlement of Mischiefs",
+                    "num_uses": 3,
+                    "active_time": 11,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 30,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 11,
+                        "effect_type": "negative",
+                        "cant_move": true,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_befuddlement_of_mischiefs",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_befuddlement_of_mischiefs",
+      "tier": 4,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_06",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Cluster of Radiants",
+      "description": "Radiants are sponges for magical energy, manifesting as little more than blurred shapes of pure light that beckon the Winds to their host.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 66,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic cost: +2 for all enemy spells",
+              "key": "wh2_dlc16_effect_magic_cost_all_lores_enemy",
+              "value": 2
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Cluster of Radiants\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_cluster_of_radiants",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_cluster_of_radiants",
+                    "icon_name": "wh2_dlc16_character_passive_cluster_of_radiants",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment_of_the_winds",
+                      "icon_path": "icon_spell_augment_of_the_winds.png",
+                      "description": "Augment of the Winds"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Cluster of Radiants",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_improved_recharge_rate",
+                        "sort_order": 106,
+                        "description": "➕ Improved power recharge rate"
+                      },
+                      {
+                        "key": "wh_main_all_increased_max_power_high",
+                        "sort_order": 106,
+                        "description": "➕ Great increase to power reserves"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "mana_max_depletion_mod": 20,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_cluster_of_radiants",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_cluster_of_radiants",
+      "tier": 5,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_07",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Murder of Spites",
+      "description": "Hiding in their hosts' hollows are fiendish forms, ready to strike out at any who draw near.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +15%",
+              "key": "wh_main_effect_character_stat_mod_melee_damage",
+              "value": 15
+            },
+            {
+              "icon": "phase_posion.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Enables poison attacks",
+              "key": "wh_main_effect_character_stat_enable_poison_attacks",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Murder of Spites\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_murder_of_spites",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_murder_of_spites",
+                    "icon_name": "wh2_dlc16_character_passive_murder_of_spites",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Murder of Spites",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_murder_of_spites",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_murder_of_spites",
+      "tier": 6,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_08",
+      "image_path": "trait_spite_3.png",
+      "is_background_skill": true,
+      "name": "Pageant of Shrikes",
+      "description": "Shrikes take on various frightening forms, moving like quicksilver to target the eyes, and even enter foes’ bodies to attack their very minds.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_piercing.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing weapon damage: +50",
+              "key": "wh2_main_effect_armour_piercing_damage",
+              "value": 50
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Pageant of Shrikes\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_pageant_of_shrikes",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_pageant_of_shrikes",
+                    "icon_name": "wh2_dlc16_character_abilities_pageant_of_shrikes",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_hex",
+                      "icon_path": "icon_spell_hex.png",
+                      "description": "Hex"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Pageant of Shrikes",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc16_all_deplete_ammo_high",
+                        "sort_order": 106,
+                        "description": "➖ Greatly depletes ammunition"
+                      }
+                    ],
+                    "num_uses": 3,
+                    "active_time": 20,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 75,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "replenish_ammo": -0.6,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_missile_range",
+                            "how": "mult",
+                            "description": "x0.8 Range",
+                            "sort_order": 7,
+                            "icon": "icon_stat_range.png"
+                          },
+                          {
+                            "value": -20,
+                            "stat": "stat_reloading",
+                            "how": "add",
+                            "description": "-20 Reload Skill",
+                            "sort_order": 8,
+                            "icon": "icon_stat_reload_time.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_pageant_of_shrikes",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_pageant_of_shrikes",
+      "tier": 7,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc05_skill_node_wef_ancient_treeman_innate_09",
+      "image_path": "trait_spite_3.png",
+      "is_background_skill": true,
+      "name": "Resplendence of Luminescents",
+      "description": "Bounding from branch to bow, the Luminescents’ magical spoors alight upon allies’ weapons to bestow a minor but lethal enchantment.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "resistance_magic.png",
+              "priority": 55,
+              "is_positive_value_good": false,
+              "description": "Magic resistance: -25%",
+              "key": "wh2_main_effect_character_stat_mod_ward_save_magic_enemy",
+              "value": -25
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Resplendence of Luminescents\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_resplendence_of_luminescents",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_resplendence_of_luminescents",
+                    "icon_name": "wh2_dlc16_character_passive_respelndance_of_luminescents",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_augments",
+                      "icon_path": "icon_spell_area_of_augments.png",
+                      "description": "Augment (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Resplendence of Luminescents",
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 5,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "+5 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x1.1 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x1.1 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_resplendence_of_luminescents",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_ancient_treeman",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_resplendence_of_luminescents",
+      "tier": 8,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

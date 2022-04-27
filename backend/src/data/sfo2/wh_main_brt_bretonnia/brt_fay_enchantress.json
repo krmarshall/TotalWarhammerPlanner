@@ -7947,181 +7947,6 @@
     ],
     [
       {
-        "key": "wh_dlc07_skill_brt_innate_fay_enchantress_1",
-        "image_path": "trait_bretonnia.png",
-        "is_background_skill": true,
-        "name": "Supreme Aura of the Lady",
-        "description": "A figure of awe and inspiration, hers is the will of the goddess.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "chivalry_positive.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "Chivalry: +10",
-                "key": "wh_dlc07_effect_chivalry_dummy",
-                "value": 10
-              },
-              {
-                "icon": "religion.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Untainted: +4",
-                "key": "wh_main_effect_religion_conversion_untainted",
-                "value": 4
-              },
-              {
-                "icon": "melee.png",
-                "priority": 109,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +25 for Peasant Mob units",
-                "key": "wh_dlc07_effect_tech_melee_attack_peasant_mob",
-                "value": 25
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Blessing of the Lady\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_blessing_of_the_lady",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_lord_passive_the_blessing_of_the_lady",
-                      "icon_name": "wh_main_lord_passive_the_blessing_of_the_lady",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_ward_save",
-                        "icon_path": "icon_spell_ward_save.png",
-                        "description": "Ward Save"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Blessing of the Lady",
-                      "num_uses": 1,
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 20,
-                              "stat": "stat_resistance_physical",
-                              "how": "add",
-                              "description": "+20 Physical Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_physical.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_blessing_of_the_lady",
-                "value": 1
-              },
-              {
-                "icon": "attribute_causes_fear.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Causes Fear",
-                "key": "wh_main_effect_unit_enable_attribute_fear",
-                "value": 1
-              },
-              {
-                "icon": "amber.png",
-                "priority": 1000,
-                "is_positive_value_good": true,
-                "description": "Army ability: \"Blessing of the Fay\"",
-                "related_abilities": [
-                  {
-                    "effect": "brt_army_fay_enable",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "brt_army_fay",
-                      "icon_name": "brt_army_fay",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Blessing of the Fay",
-                      "ui_effects": [
-                        {
-                          "key": "wh_heal_active_750",
-                          "sort_order": 1,
-                          "description": "➕ Restores up to 750 Hit Points"
-                        },
-                        {
-                          "key": "wh_main_all_replenish",
-                          "sort_order": 105,
-                          "description": "Units won't regenerate if cap was reached"
-                        }
-                      ],
-                      "num_uses": 1,
-                      "active_time": 30,
-                      "recharge_time": 300,
-                      "initial_recharge": 300,
-                      "passive": false,
-                      "effect_range": -1,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 30,
-                          "effect_type": "positive",
-                          "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 20,
-                              "stat": "stat_resistance_magic",
-                              "how": "add",
-                              "description": "+20 Magic Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_magic.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "brt_army_fay_enable",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_dlc07_skill_brt_innate_fay_enchantress",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
-    ],
-    [
-      {
         "key": "wh_dlc07_skill_brt_lord_dummy_fay_guardians",
         "image_path": "battle_attack.png",
         "is_background_skill": false,
@@ -8301,6 +8126,182 @@
           "key": "wh_dlc07_effect_ability_enable_the_chalice_of_potions"
         }
       ]
+    }
+  ],
+  "backgroundSkills": [
+    {
+      "key": "wh_dlc07_skill_brt_innate_fay_enchantress_1",
+      "image_path": "trait_bretonnia.png",
+      "is_background_skill": true,
+      "name": "Supreme Aura of the Lady",
+      "description": "A figure of awe and inspiration, hers is the will of the goddess.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "chivalry_positive.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Chivalry: +10",
+              "key": "wh_dlc07_effect_chivalry_dummy",
+              "value": 10
+            },
+            {
+              "icon": "religion.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Untainted: +4",
+              "key": "wh_main_effect_religion_conversion_untainted",
+              "value": 4
+            },
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +25 for Peasant Mob units",
+              "key": "wh_dlc07_effect_tech_melee_attack_peasant_mob",
+              "value": 25
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"The Blessing of the Lady\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_blessing_of_the_lady",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_lord_passive_the_blessing_of_the_lady",
+                    "icon_name": "wh_main_lord_passive_the_blessing_of_the_lady",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_ward_save",
+                      "icon_path": "icon_spell_ward_save.png",
+                      "description": "Ward Save"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Blessing of the Lady",
+                    "num_uses": 1,
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 20,
+                            "stat": "stat_resistance_physical",
+                            "how": "add",
+                            "description": "+20 Physical Resistance",
+                            "sort_order": 10,
+                            "icon": "resistance_physical.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_blessing_of_the_lady",
+              "value": 1
+            },
+            {
+              "icon": "attribute_causes_fear.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Causes Fear",
+              "key": "wh_main_effect_unit_enable_attribute_fear",
+              "value": 1
+            },
+            {
+              "icon": "amber.png",
+              "priority": 1000,
+              "is_positive_value_good": true,
+              "description": "Army ability: \"Blessing of the Fay\"",
+              "related_abilities": [
+                {
+                  "effect": "brt_army_fay_enable",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "brt_army_fay",
+                    "icon_name": "brt_army_fay",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_augments",
+                      "icon_path": "icon_spell_area_of_augments.png",
+                      "description": "Augment (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Blessing of the Fay",
+                    "ui_effects": [
+                      {
+                        "key": "wh_heal_active_750",
+                        "sort_order": 1,
+                        "description": "➕ Restores up to 750 Hit Points"
+                      },
+                      {
+                        "key": "wh_main_all_replenish",
+                        "sort_order": 105,
+                        "description": "Units won't regenerate if cap was reached"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 30,
+                    "recharge_time": 300,
+                    "initial_recharge": 300,
+                    "passive": false,
+                    "effect_range": -1,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 30,
+                        "effect_type": "positive",
+                        "fatigue_change_ratio": -0.1,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 20,
+                            "stat": "stat_resistance_magic",
+                            "how": "add",
+                            "description": "+20 Magic Resistance",
+                            "sort_order": 10,
+                            "icon": "resistance_magic.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "brt_army_fay_enable",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+      "character_skill_key": "wh_dlc07_skill_brt_innate_fay_enchantress",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ]
 }

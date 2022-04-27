@@ -3807,46 +3807,47 @@
           "wh_dlc04_skill_node_vmp_helman_ghorst_campaign_10"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh_dlc04_skill_node_vmp_helman_ghorst_innate_01",
-        "image_path": "trait_vampire_counts.png",
-        "is_background_skill": true,
-        "name": "Neophyte",
-        "description": "The student thrives on heretical knowledge; dark foundations lead to darker, binding deliverance.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "phase_posion.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "All units in Helman Ghorst's army receive poison attacks",
-                "key": "wh_main_effect_character_stat_enable_poison_attacks_dummy",
-                "value": 1
-              },
-              {
-                "icon": "armour.png",
-                "priority": 107,
-                "is_positive_value_good": true,
-                "description": "Armour: +15 for Zombies units",
-                "key": "wh_main_effect_tech_hitpoints_increase_zombies",
-                "value": 15
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_dlc04_skill_innate_vmp_helman_ghorst",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "vmp_helman_ghorst",
+  "backgroundSkills": [
+    {
+      "key": "wh_dlc04_skill_node_vmp_helman_ghorst_innate_01",
+      "image_path": "trait_vampire_counts.png",
+      "is_background_skill": true,
+      "name": "Neophyte",
+      "description": "The student thrives on heretical knowledge; dark foundations lead to darker, binding deliverance.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "phase_posion.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "All units in Helman Ghorst's army receive poison attacks",
+              "key": "wh_main_effect_character_stat_enable_poison_attacks_dummy",
+              "value": 1
+            },
+            {
+              "icon": "armour.png",
+              "priority": 107,
+              "is_positive_value_good": true,
+              "description": "Armour: +15 for Zombies units",
+              "key": "wh_main_effect_tech_hitpoints_increase_zombies",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc04_skill_node_set_vmp_helman_ghorst",
+      "character_skill_key": "wh_dlc04_skill_innate_vmp_helman_ghorst",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh_dlc04_skill_node_vmp_helman_ghorst_unique_01",

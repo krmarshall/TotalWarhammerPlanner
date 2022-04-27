@@ -2,200 +2,31 @@
   "skillTree": [
     [
       {
-        "key": "wh_dlc16_skill_node_wef_coeddil_innate",
-        "image_path": "trait_spite_1.png",
-        "is_background_skill": true,
-        "name": "Rotten Soul",
-        "description": "Coeddil's curdled heart attracts the most malignant and terrifying spirits.",
+        "key": "wh2_dlc16_skill_node_wef_coeddil_unique_01",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Ancient Warding",
+        "description": "By the eternal will of the Ancients, the forest looks after its own.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "",
-                "priority": 0,
+                "icon": "resistance_ward_save.png",
+                "priority": 23,
                 "is_positive_value_good": true,
-                "description": "[HIDDEN] adds immortal",
-                "key": "wh2_dlc11_enable_immortal_hidden",
-                "value": 1
-              },
-              {
-                "icon": "wound_time.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "When normally killed in action, this Hero will be wounded instead",
-                "key": "wh2_main_effect_grant_immortality_hero",
-                "value": 1
-              },
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: -2",
-                "key": "wh_main_effect_public_order_characters",
-                "value": -2
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: -15%",
-                "key": "wh_main_effect_character_stat_mod_melee_damage",
-                "value": -15
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Murder of Spites\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_murder_of_spites",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_passive_murder_of_spites",
-                      "icon_name": "wh2_dlc16_character_passive_murder_of_spites",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Murder of Spites",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc16_character_passive_murder_of_spites",
-                          "sort_order": 1,
-                          "description": "➕100% chance to deal 2 direct damage to 4 entities per second"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -5,
-                              "stat": "stat_resistance_all",
-                              "how": "add",
-                              "description": "-5 Damage Resistance ",
-                              "sort_order": 10,
-                              "icon": "resistance_ward_save.png"
-                            },
-                            {
-                              "value": -5,
-                              "stat": "stat_resistance_magic",
-                              "how": "add",
-                              "description": "-5 Magic Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_magic.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_murder_of_spites",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Muster of Malevolents\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
-                      "icon_name": "wh2_dlc16_character_abilities_muster_of_malevolents",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Muster of Malevolents",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
-                          "sort_order": 1,
-                          "description": "➕50% chance to deal 150 direct damage to 1 entitiy per second"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_resist",
-                          "sort_order": 201,
-                          "description": "➖ Chance opponent will resist damage"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_multiple",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs multiple combatants"
-                        }
-                      ],
-                      "num_uses": 3,
-                      "active_time": 15,
-                      "recharge_time": 90,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 75,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "fatigue_change_ratio": 1,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
-                "value": 1
+                "description": "Ward save: 15% during forest battles",
+                "key": "wh_dlc05_effect_bonus_damage_reduction_when_in_forest",
+                "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc16_skill_wef_coeddil_innate",
+        "character_skill_key": "wh2_dlc16_skill_wef_coeddil_unique_1",
         "tier": 0,
         "indent": 0,
-        "points_on_creation": 1,
+        "points_on_creation": 0,
         "required_num_parents": 0,
-        "visible_in_ui": false
+        "visible_in_ui": true
       },
       {
         "key": "wh2_dlc16_skill_node_wef_coeddil_unique_02",
@@ -4412,7 +4243,6 @@
         "visible_in_ui": true
       }
     ],
-    [],
     [
       {
         "key": "wh_dlc16_skill_node_wef_coeddil_campaign_actions_dummy",
@@ -4515,5 +4345,204 @@
       }
     ]
   ],
-  "key": "wef_coeddil"
+  "key": "wef_coeddil",
+  "backgroundSkills": [
+    {
+      "key": "wh_dlc16_skill_node_wef_coeddil_innate",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Rotten Soul",
+      "description": "Coeddil's curdled heart attracts the most malignant and terrifying spirits.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] adds immortal",
+              "key": "wh2_dlc11_enable_immortal_hidden",
+              "value": 1
+            },
+            {
+              "icon": "wound_time.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "When normally killed in action, this Hero will be wounded instead",
+              "key": "wh2_main_effect_grant_immortality_hero",
+              "value": 1
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 6,
+              "is_positive_value_good": true,
+              "description": "Public order: -2",
+              "key": "wh_main_effect_public_order_characters",
+              "value": -2
+            },
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: -15%",
+              "key": "wh_main_effect_character_stat_mod_melee_damage",
+              "value": -15
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Murder of Spites\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_murder_of_spites",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_murder_of_spites",
+                    "icon_name": "wh2_dlc16_character_passive_murder_of_spites",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Murder of Spites",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc16_character_passive_murder_of_spites",
+                        "sort_order": 1,
+                        "description": "➕100% chance to deal 2 direct damage to 4 entities per second"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -5,
+                            "stat": "stat_resistance_all",
+                            "how": "add",
+                            "description": "-5 Damage Resistance ",
+                            "sort_order": 10,
+                            "icon": "resistance_ward_save.png"
+                          },
+                          {
+                            "value": -5,
+                            "stat": "stat_resistance_magic",
+                            "how": "add",
+                            "description": "-5 Magic Resistance",
+                            "sort_order": 10,
+                            "icon": "resistance_magic.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_murder_of_spites",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Muster of Malevolents\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                    "icon_name": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Muster of Malevolents",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                        "sort_order": 1,
+                        "description": "➕50% chance to deal 150 direct damage to 1 entitiy per second"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_resist",
+                        "sort_order": 201,
+                        "description": "➖ Chance opponent will resist damage"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs multiple combatants"
+                      }
+                    ],
+                    "num_uses": 3,
+                    "active_time": 15,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 75,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "fatigue_change_ratio": 1,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc16_skill_node_set_wef_coeddil",
+      "character_skill_key": "wh2_dlc16_skill_wef_coeddil_innate",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

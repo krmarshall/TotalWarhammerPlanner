@@ -6094,146 +6094,6 @@
     ],
     [
       {
-        "key": "wh2_dlc09_skill_innate_tmb_setep",
-        "image_path": "trait_tomb_kings.png",
-        "is_background_skill": true,
-        "name": "Setep of the Fifth Dynasty",
-        "description": "Ruling in the wake of the war with Nagash, Setep restored the Necropolis and the Priesthood to their former glory.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[HIDDEN] Adds the name \"King\"",
-                "key": "wh2_dlc09_title_king",
-                "value": 1
-              },
-              {
-                "icon": "magic.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve: +5",
-                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character",
-                "value": 5
-              },
-              {
-                "icon": "resistance_magic.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Magic resistance: 10%",
-                "key": "wh_main_effect_character_stat_mod_ward_save_magic",
-                "value": 10
-              },
-              {
-                "icon": "wizard.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Hero action success chance: +5% for Liche Priests",
-                "key": "wh2_dlc09_effect_agent_action_success_chance_wizard_tmb",
-                "value": 5
-              },
-              {
-                "icon": "wizard.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Hero recruit rank: +2 for Liche Priests",
-                "key": "wh2_dlc09_effect_agent_recruitment_xp_tmb_liche_priest",
-                "value": 2
-              },
-              {
-                "icon": "religion.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Untainted: +5",
-                "key": "wh_main_effect_religion_conversion_untainted",
-                "value": 5
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Curse\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_curse",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_lord_passive_the_curse",
-                      "icon_name": "wh2_dlc09_lord_passive_the_curse",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Curse",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc09_lord_passive_the_curse",
-                          "sort_order": 1,
-                          "description": "➕25% chance to deal 5 direct damage to 20 entities per second"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_dlc06_automatic",
-                          "sort_order": 105,
-                          "description": "➕ Activates automatically when conditions are met"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs a single combatant"
-                        }
-                      ],
-                      "num_uses": 1,
-                      "active_time": 15,
-                      "passive": true,
-                      "effect_range": 50,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc09_effect_ability_enable_curse",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_setep",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
-    ],
-    [
-      {
         "key": "wh2_dlc09_skill_tmb_dummy_immortality_setep",
         "image_path": "trait_human.png",
         "is_background_skill": false,
@@ -6262,5 +6122,146 @@
       }
     ]
   ],
-  "key": "tmb_tomb_king_setep"
+  "key": "tmb_tomb_king_setep",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc09_skill_innate_tmb_setep",
+      "image_path": "trait_tomb_kings.png",
+      "is_background_skill": true,
+      "name": "Setep of the Fifth Dynasty",
+      "description": "Ruling in the wake of the war with Nagash, Setep restored the Necropolis and the Priesthood to their former glory.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Adds the name \"King\"",
+              "key": "wh2_dlc09_title_king",
+              "value": 1
+            },
+            {
+              "icon": "magic.png",
+              "priority": 15,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve: +5",
+              "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character",
+              "value": 5
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Magic resistance: 10%",
+              "key": "wh_main_effect_character_stat_mod_ward_save_magic",
+              "value": 10
+            },
+            {
+              "icon": "wizard.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Hero action success chance: +5% for Liche Priests",
+              "key": "wh2_dlc09_effect_agent_action_success_chance_wizard_tmb",
+              "value": 5
+            },
+            {
+              "icon": "wizard.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Hero recruit rank: +2 for Liche Priests",
+              "key": "wh2_dlc09_effect_agent_recruitment_xp_tmb_liche_priest",
+              "value": 2
+            },
+            {
+              "icon": "religion.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Untainted: +5",
+              "key": "wh_main_effect_religion_conversion_untainted",
+              "value": 5
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"The Curse\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc09_effect_ability_enable_curse",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc09_lord_passive_the_curse",
+                    "icon_name": "wh2_dlc09_lord_passive_the_curse",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Curse",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc09_lord_passive_the_curse",
+                        "sort_order": 1,
+                        "description": "➕25% chance to deal 5 direct damage to 20 entities per second"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_dlc06_automatic",
+                        "sort_order": 105,
+                        "description": "➕ Activates automatically when conditions are met"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 15,
+                    "passive": true,
+                    "effect_range": 50,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc09_effect_ability_enable_curse",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc09_skill_node_set_tmb_tomb_king_setep",
+      "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_setep",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

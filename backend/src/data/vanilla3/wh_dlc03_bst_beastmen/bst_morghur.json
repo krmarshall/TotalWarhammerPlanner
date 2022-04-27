@@ -2806,121 +2806,122 @@
           "wh_dlc03_skill_node_bst_morghur_campaign_10"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh_dlc03_skill_node_bst_morghur_innate_01",
-        "image_path": "trait_beastmen.png",
-        "is_background_skill": true,
-        "name": "Shadowgave",
-        "description": "“Morghur returns. Morghur spread Gods’ corruption. Many die but all fall to Ruin. ALL!”",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "religion_chaos.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "Raiding stance is upgraded to \"Despoiler raiding stance\" which spreads corruption and attrition",
-                "key": "wh2_dlc17_morghur_raiding_stance_corruption",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 2,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Aura of Vile Transmutation\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc17_effect_ability_enable_aura_of_vile_transmutation",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc17_passive_aura_of_vile_transmutation",
-                      "icon_name": "wh_dlc05_lord_passive_aura_of_transmutation",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Aura of Vile Transmutation",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes damage to combatants"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 35,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc17_effect_ability_enable_aura_of_vile_transmutation",
-                "value": 8
-              },
-              {
-                "icon": "attrition.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Immune to Athel Loren attrition",
-                "key": "wh2_main_effect_force_army_campaign_attrition_immunity_athel_loren",
-                "value": 1
-              },
-              {
-                "icon": "wound_time.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Morghur will always remain wounded for no more than 1 turn",
-                "key": "wh_dlc05_morghur_trait_immortalitiy",
-                "value": -100
-              },
-              {
-                "icon": "corruption_chaos.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +5",
-                "key": "wh3_main_effect_corruption_chaos_characters",
-                "value": 5
-              },
-              {
-                "icon": "resistance_magic.png",
-                "priority": 280,
-                "is_positive_value_good": true,
-                "description": "Spell resistance: 20%",
-                "key": "wh_main_effect_character_stat_magic_resistance",
-                "value": 20
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_dlc03_skill_innate_bst_morghur_shadowgave",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "bst_morghur",
+  "backgroundSkills": [
+    {
+      "key": "wh_dlc03_skill_node_bst_morghur_innate_01",
+      "image_path": "trait_beastmen.png",
+      "is_background_skill": true,
+      "name": "Shadowgave",
+      "description": "“Morghur returns. Morghur spread Gods’ corruption. Many die but all fall to Ruin. ALL!”",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "religion_chaos.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Raiding stance is upgraded to \"Despoiler raiding stance\" which spreads corruption and attrition",
+              "key": "wh2_dlc17_morghur_raiding_stance_corruption",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 2,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Aura of Vile Transmutation\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc17_effect_ability_enable_aura_of_vile_transmutation",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc17_passive_aura_of_vile_transmutation",
+                    "icon_name": "wh_dlc05_lord_passive_aura_of_transmutation",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Aura of Vile Transmutation",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes damage to combatants"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 35,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc17_effect_ability_enable_aura_of_vile_transmutation",
+              "value": 8
+            },
+            {
+              "icon": "attrition.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Immune to Athel Loren attrition",
+              "key": "wh2_main_effect_force_army_campaign_attrition_immunity_athel_loren",
+              "value": 1
+            },
+            {
+              "icon": "wound_time.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Morghur will always remain wounded for no more than 1 turn",
+              "key": "wh_dlc05_morghur_trait_immortalitiy",
+              "value": -100
+            },
+            {
+              "icon": "corruption_chaos.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Chaos Undivided corruption: +5",
+              "key": "wh3_main_effect_corruption_chaos_characters",
+              "value": 5
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Spell resistance: 20%",
+              "key": "wh_main_effect_character_stat_magic_resistance",
+              "value": 20
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc03_skill_node_set_bst_morghur",
+      "character_skill_key": "wh_dlc03_skill_innate_bst_morghur_shadowgave",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh_main_anc_weapon_stave_of_ruinous_corruption",

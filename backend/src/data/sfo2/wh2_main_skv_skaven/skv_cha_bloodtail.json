@@ -3043,7 +3043,6 @@
         "visible_in_ui": true
       }
     ],
-    [],
     [
       {
         "key": "skill_all_dummy_agent_actions_skv_cha_bloodtail",
@@ -3144,60 +3143,61 @@
         "required_num_parents": 0,
         "visible_in_ui": false
       }
-    ],
-    [
-      {
-        "key": "skv_skill_bloodtail_trait",
-        "image_path": "trait_skaven.png",
-        "is_background_skill": true,
-        "name": "Queek's Right Paw",
-        "description": "The most loyal-dutiful Ska will protect Warlord Queek from any danger.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Hero self-defence: +10% chance of wounding aggressors",
-                "key": "wh_main_effect_agent_defence_wound_chance_mod",
-                "value": 10
-              },
-              {
-                "icon": "attribute_unbreakable.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Unbreakable",
-                "key": "wh_main_effect_unit_enable_attribute_unbreakable",
-                "value": 1
-              },
-              {
-                "icon": "morale.png",
-                "priority": 1000,
-                "is_positive_value_good": true,
-                "description": "Leadership: +5 for Red Guard unit",
-                "key": "skv_redguard_morale",
-                "value": 5
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 10000,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Queek Headtaker",
-                "key": "skv_queek_damage",
-                "value": 10
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "skv_skill_bloodtail_trait",
-        "tier": 0,
-        "indent": 100,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      }
     ]
   ],
-  "key": "skv_cha_bloodtail"
+  "key": "skv_cha_bloodtail",
+  "backgroundSkills": [
+    {
+      "key": "skv_skill_bloodtail_trait",
+      "image_path": "trait_skaven.png",
+      "is_background_skill": true,
+      "name": "Queek's Right Paw",
+      "description": "The most loyal-dutiful Ska will protect Warlord Queek from any danger.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Hero self-defence: +10% chance of wounding aggressors",
+              "key": "wh_main_effect_agent_defence_wound_chance_mod",
+              "value": 10
+            },
+            {
+              "icon": "attribute_unbreakable.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Unbreakable",
+              "key": "wh_main_effect_unit_enable_attribute_unbreakable",
+              "value": 1
+            },
+            {
+              "icon": "morale.png",
+              "priority": 1000,
+              "is_positive_value_good": true,
+              "description": "Leadership: +5 for Red Guard unit",
+              "key": "skv_redguard_morale",
+              "value": 5
+            },
+            {
+              "icon": "weapon_damage.png",
+              "priority": 10000,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10% for Queek Headtaker",
+              "key": "skv_queek_damage",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "skill_node_set_skv_cha_bloodtail",
+      "character_skill_key": "skv_skill_bloodtail_trait",
+      "tier": 0,
+      "indent": 100,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": true
+    }
+  ]
 }

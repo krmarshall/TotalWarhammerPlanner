@@ -3121,114 +3121,6 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc17_skill_innate_bst_taurox",
-        "image_path": "trait_beastmen.png",
-        "is_background_skill": true,
-        "name": "Slaughterhorn",
-        "description": "The Bloodbeast marches to war with his towering Minotaurs in tow, the land left scarred and bleeding in his stampeding wake.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "campaign_movement.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "Raiding stance is upgraded to \"Juggernaut raiding stance\" which increases campaign movement range but reduces raiding income",
-                "key": "wh2_dlc17_taurox_raiding_stance_forced_march",
-                "value": 1
-              },
-              {
-                "icon": "disaster.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Taurox leaves \"River of Blood\" effects in regions after winning battles\\\\n(stacks up to 3 times)",
-                "key": "wh2_dlc17_effect_taurox_river_of_blood_dummy",
-                "value": 1
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 108,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Minotaur units",
-                "key": "wh_dlc03_effect_tech_unit_stat_melee_damage_minotaurs",
-                "value": 10
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Bloodbeast\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc17_effect_ability_enable_bloodbeast",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc17_lord_abilities_bloodbeast",
-                      "icon_name": "wh2_dlc17_lord_abilities_bloodbeast",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_explosion",
-                        "icon_path": "icon_spell_explosion.png",
-                        "description": "Explosion"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Bloodbeast",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc17_lord_abilities_bloodbeast",
-                          "sort_order": 1,
-                          "description": "➕ Deals 10 10 damage per second (15m)"
-                        },
-                        {
-                          "key": "wh2_main_all_flaming",
-                          "sort_order": 104,
-                          "description": "➕ Causes fire damage"
-                        },
-                        {
-                          "key": "wh_main_all_can_disrupt_formation",
-                          "sort_order": 105,
-                          "description": "➕ Can disrupt unit formation"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "description": "➕ Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 5,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_dlc17_effect_ability_enable_bloodbeast",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc17_lord_trait_bst_taurox",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "bst_taurox",
@@ -3358,6 +3250,115 @@
           "key": "wh2_dlc17_effect_ability_enable_rune_tortued_axes"
         }
       ]
+    }
+  ],
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc17_skill_innate_bst_taurox",
+      "image_path": "trait_beastmen.png",
+      "is_background_skill": true,
+      "name": "Slaughterhorn",
+      "description": "The Bloodbeast marches to war with his towering Minotaurs in tow, the land left scarred and bleeding in his stampeding wake.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "campaign_movement.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Raiding stance is upgraded to \"Juggernaut raiding stance\" which increases campaign movement range but reduces raiding income",
+              "key": "wh2_dlc17_taurox_raiding_stance_forced_march",
+              "value": 1
+            },
+            {
+              "icon": "disaster.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Taurox leaves \"River of Blood\" effects in regions after winning battles\\\\n(stacks up to 3 times)",
+              "key": "wh2_dlc17_effect_taurox_river_of_blood_dummy",
+              "value": 1
+            },
+            {
+              "icon": "weapon_damage.png",
+              "priority": 108,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10% for Minotaur units",
+              "key": "wh_dlc03_effect_tech_unit_stat_melee_damage_minotaurs",
+              "value": 10
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Bloodbeast\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc17_effect_ability_enable_bloodbeast",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc17_lord_abilities_bloodbeast",
+                    "icon_name": "wh2_dlc17_lord_abilities_bloodbeast",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_explosion",
+                      "icon_path": "icon_spell_explosion.png",
+                      "description": "Explosion"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Bloodbeast",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc17_lord_abilities_bloodbeast",
+                        "sort_order": 1,
+                        "description": "➕ Deals 10 10 damage per second (15m)"
+                      },
+                      {
+                        "key": "wh2_main_all_flaming",
+                        "sort_order": 104,
+                        "description": "➕ Causes fire damage"
+                      },
+                      {
+                        "key": "wh_main_all_can_disrupt_formation",
+                        "sort_order": 105,
+                        "description": "➕ Can disrupt unit formation"
+                      },
+                      {
+                        "key": "wh2_main_all_good_against_armour",
+                        "sort_order": 106,
+                        "description": "➕ Good against armour"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_unit",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single unit"
+                      }
+                    ],
+                    "active_time": 5,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_dlc17_effect_ability_enable_bloodbeast",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc17_skill_node_set_bst_taurox",
+      "character_skill_key": "wh2_dlc17_lord_trait_bst_taurox",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ]
 }

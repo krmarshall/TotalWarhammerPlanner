@@ -5864,134 +5864,6 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc15_skill_node_hef_prince_eltharion_innate_01",
-        "image_path": "trait_high_elves.png",
-        "is_background_skill": true,
-        "name": "Warden of Tor Yvresse",
-        "description": "\"Pointy-ead'' is legendary among the Greenskins, who both fear and respect his martial prowess.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Mistwalker Barrage\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc15_lord_passive_mistwalkers_barrage",
-                      "icon_name": "wh2_dlc15_lord_passive_mistwalkers_barrage",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Mistwalkers' Barrage",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc15_bombardment_passive_melee",
-                          "sort_order": 1,
-                          "description": "➕ Enemies hit by bombardment in melee combat"
-                        },
-                        {
-                          "key": "wh2_dlc15_lord_passive_mistwalkers_barrage",
-                          "sort_order": 1,
-                          "description": "➕ Calls down 15 projectiles each dealing 0 0 damage and 0 50 explosion damage (2m)"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh2_main_all_weak_against_armour",
-                          "sort_order": 206,
-                          "description": "➖ Weak against armour"
-                        }
-                      ],
-                      "active_time": 3,
-                      "recharge_time": 30,
-                      "initial_recharge": 15,
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 3,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
-                "value": 1
-              },
-              {
-                "icon": "disaster.png",
-                "priority": 56,
-                "is_positive_value_good": true,
-                "description": "Immune to Barren Wasteland attrition",
-                "key": "wh_dlc07_effect_attrition_immunity_badlands",
-                "value": 1
-              },
-              {
-                "icon": "morale.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Leadership: +5 for Spear Infantry and Ranger units",
-                "key": "wh2_dlc15_hef_morale_spear_infantry_rangers",
-                "value": 5
-              },
-              {
-                "icon": "defence.png",
-                "priority": 108,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Spear Infantry and Rangers units",
-                "key": "wh2_dlc15_hef_melee_defence_spear_infantry_rangers",
-                "value": 5
-              },
-              {
-                "icon": "attribute_causes_fear.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Causes Fear when fighting against Greenskins",
-                "key": "wh2_main_effect_cause_fear_versus_grn",
-                "value": 1
-              },
-              {
-                "icon": "armour.png",
-                "priority": 1000,
-                "is_positive_value_good": true,
-                "description": "Armour: +10 for all Mistwalker units",
-                "key": "hef_mistwalkers_armour",
-                "value": 10
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_innate_hef_eltharion",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "hef_eltharion",
@@ -6255,6 +6127,135 @@
           "key": "wh2_main_effect_magic_high_reduce_wom_cost_hand_of_glory_upgraded"
         }
       ]
+    }
+  ],
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc15_skill_node_hef_prince_eltharion_innate_01",
+      "image_path": "trait_high_elves.png",
+      "is_background_skill": true,
+      "name": "Warden of Tor Yvresse",
+      "description": "\"Pointy-ead'' is legendary among the Greenskins, who both fear and respect his martial prowess.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Mistwalker Barrage\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc15_lord_passive_mistwalkers_barrage",
+                    "icon_name": "wh2_dlc15_lord_passive_mistwalkers_barrage",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_bombardment",
+                      "icon_path": "icon_spell_bombardment.png",
+                      "description": "Bombardment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Mistwalkers' Barrage",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc15_bombardment_passive_melee",
+                        "sort_order": 1,
+                        "description": "➕ Enemies hit by bombardment in melee combat"
+                      },
+                      {
+                        "key": "wh2_dlc15_lord_passive_mistwalkers_barrage",
+                        "sort_order": 1,
+                        "description": "➕ Calls down 15 projectiles each dealing 0 0 damage and 0 50 explosion damage (2m)"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      }
+                    ],
+                    "active_time": 3,
+                    "recharge_time": 30,
+                    "initial_recharge": 15,
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 3,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
+              "value": 1
+            },
+            {
+              "icon": "disaster.png",
+              "priority": 56,
+              "is_positive_value_good": true,
+              "description": "Immune to Barren Wasteland attrition",
+              "key": "wh_dlc07_effect_attrition_immunity_badlands",
+              "value": 1
+            },
+            {
+              "icon": "morale.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Leadership: +5 for Spear Infantry and Ranger units",
+              "key": "wh2_dlc15_hef_morale_spear_infantry_rangers",
+              "value": 5
+            },
+            {
+              "icon": "defence.png",
+              "priority": 108,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +5 for Spear Infantry and Rangers units",
+              "key": "wh2_dlc15_hef_melee_defence_spear_infantry_rangers",
+              "value": 5
+            },
+            {
+              "icon": "attribute_causes_fear.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Causes Fear when fighting against Greenskins",
+              "key": "wh2_main_effect_cause_fear_versus_grn",
+              "value": 1
+            },
+            {
+              "icon": "armour.png",
+              "priority": 1000,
+              "is_positive_value_good": true,
+              "description": "Armour: +10 for all Mistwalker units",
+              "key": "hef_mistwalkers_armour",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_eltharion",
+      "character_skill_key": "wh2_dlc15_skill_innate_hef_eltharion",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ]
 }

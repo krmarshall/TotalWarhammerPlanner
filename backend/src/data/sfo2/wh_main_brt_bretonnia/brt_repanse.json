@@ -3504,117 +3504,118 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc14_skill_innate_repanse",
-        "image_path": "trait_bretonnia.png",
-        "is_background_skill": true,
-        "name": "Champion of the People",
-        "description": "To the smallfolk of Bretonnia, Repanse is their champion – a beacon of hope in what would otherwise be lives of hopeless, downtrodden drudgery.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "chivalry_positive.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "Chivalry: +10",
-                "key": "wh_dlc07_effect_chivalry_dummy",
-                "value": 10
-              },
-              {
-                "icon": "resistance_physical.png",
-                "priority": 14,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for all Peasant units",
-                "key": "wh2_dlc14_effect_brt_physical_resistance_peasant",
-                "value": 10
-              },
-              {
-                "icon": "morale.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Leadership: +5 for all Peasant units",
-                "key": "wh_dlc07_effect_battle_morale_peasants",
-                "value": 5
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Halo of Maidenly Wrath\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc14_effect_ability_enable_halo_of_maidenly_wrath",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
-                      "icon_name": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_explosion",
-                        "icon_path": "icon_spell_explosion.png",
-                        "description": "Explosion"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Halo of Maidenly Wrath",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
-                          "sort_order": 1,
-                          "description": "➕ Spawns 3 vortices, each dealing 10 0 damage per second (15m)"
-                        },
-                        {
-                          "key": "wh2_main_spell_friendly_fire_explosion",
-                          "sort_order": 101,
-                          "description": "➕ Explosion does not affect friendly troops"
-                        },
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "description": "➕ Causes magical damage"
-                        },
-                        {
-                          "key": "wh2_main_all_weak_against_armour",
-                          "sort_order": 206,
-                          "description": "➖ Weak against armour"
-                        },
-                        {
-                          "key": "wh_main_all_poor_vs_large",
-                          "sort_order": 206,
-                          "description": "➖ Poor against large combatants"
-                        }
-                      ],
-                      "active_time": 3,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 10,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_dlc14_effect_ability_enable_halo_of_maidenly_wrath",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc14_skill_innate_brt_repanse",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "brt_repanse",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc14_skill_innate_repanse",
+      "image_path": "trait_bretonnia.png",
+      "is_background_skill": true,
+      "name": "Champion of the People",
+      "description": "To the smallfolk of Bretonnia, Repanse is their champion – a beacon of hope in what would otherwise be lives of hopeless, downtrodden drudgery.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "chivalry_positive.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Chivalry: +10",
+              "key": "wh_dlc07_effect_chivalry_dummy",
+              "value": 10
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 14,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 10% for all Peasant units",
+              "key": "wh2_dlc14_effect_brt_physical_resistance_peasant",
+              "value": 10
+            },
+            {
+              "icon": "morale.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Leadership: +5 for all Peasant units",
+              "key": "wh_dlc07_effect_battle_morale_peasants",
+              "value": 5
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Halo of Maidenly Wrath\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc14_effect_ability_enable_halo_of_maidenly_wrath",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
+                    "icon_name": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_explosion",
+                      "icon_path": "icon_spell_explosion.png",
+                      "description": "Explosion"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Halo of Maidenly Wrath",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
+                        "sort_order": 1,
+                        "description": "➕ Spawns 3 vortices, each dealing 10 0 damage per second (15m)"
+                      },
+                      {
+                        "key": "wh2_main_spell_friendly_fire_explosion",
+                        "sort_order": 101,
+                        "description": "➕ Explosion does not affect friendly troops"
+                      },
+                      {
+                        "key": "wh2_main_all_magical_damage_moderate",
+                        "sort_order": 104,
+                        "description": "➕ Causes magical damage"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      },
+                      {
+                        "key": "wh_main_all_poor_vs_large",
+                        "sort_order": 206,
+                        "description": "➖ Poor against large combatants"
+                      }
+                    ],
+                    "active_time": 3,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 10,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_dlc14_effect_ability_enable_halo_of_maidenly_wrath",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc14_skill_node_set_brt_repanse",
+      "character_skill_key": "wh2_dlc14_skill_innate_brt_repanse",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh2_dlc14_skill_node_brt_repanse_unique_1",

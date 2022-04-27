@@ -3352,117 +3352,118 @@
           "wh_main_skill_node_grn_goblin_great_shaman_raknik_campaign_10"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh2_main_skill_innate_grn_raknik",
-        "image_path": "trait_greenskins.png",
-        "is_background_skill": true,
-        "name": "Spiderclaw",
-        "description": "\"Shamans are nasty buggers as it iz, but Raknik iz one depraved gobbo!\"",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "wound_time.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "When normally killed in battle, this Lord will be wounded instead",
-                "key": "wh2_main_effect_grant_immortality_lord",
-                "value": 1
-              },
-              {
-                "icon": "charge.png",
-                "priority": 108,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +10 for all spider units",
-                "key": "wh2_dlc15_effect_charge_bonus_increase_spider_units",
-                "value": 10
-              },
-              {
-                "icon": "melee.png",
-                "priority": 109,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +10 for all spider units",
-                "key": "wh2_dlc15_effect_melee_attack_increase_spider_units",
-                "value": 10
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 300,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Arachnarok Eggs\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc08_effect_ability_enable_arachnarok_eggs",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc08_item_abilities_arachnarok_eggs",
-                      "icon_name": "wh_dlc06_unit_abilities_venom_queen",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_summon_unit",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Summon Unit"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Arachnarok Eggs",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc06_all_summon_spider_hatchlings",
-                          "sort_order": 103,
-                          "effect_state": "positive",
-                          "description": "Summons a unit of Spider Hatchlings"
-                        },
-                        {
-                          "key": "wh_dlc06_all_defend_vs_charge",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good at defending the summoner"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_unbinding",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Summoned units degrade over time"
-                        }
-                      ],
-                      "num_uses": 5,
-                      "active_time": 1,
-                      "recharge_time": 60,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 50,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_dlc08_effect_ability_enable_arachnarok_eggs",
-                "value": 1
-              },
-              {
-                "icon": "morale.png",
-                "priority": 411,
-                "is_positive_value_good": false,
-                "description": "Enemy leadership: -5",
-                "key": "wh_main_effect_force_stat_leadership_enemy_unit",
-                "value": -5
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_innate_grn_raknik",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
-  "key": "raknik"
+  "key": "raknik",
+  "backgroundSkills": [
+    {
+      "key": "wh2_main_skill_innate_grn_raknik",
+      "image_path": "trait_greenskins.png",
+      "is_background_skill": true,
+      "name": "Spiderclaw",
+      "description": "\"Shamans are nasty buggers as it iz, but Raknik iz one depraved gobbo!\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "wound_time.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "When normally killed in battle, this Lord will be wounded instead",
+              "key": "wh2_main_effect_grant_immortality_lord",
+              "value": 1
+            },
+            {
+              "icon": "charge.png",
+              "priority": 108,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +10 for all spider units",
+              "key": "wh2_dlc15_effect_charge_bonus_increase_spider_units",
+              "value": 10
+            },
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +10 for all spider units",
+              "key": "wh2_dlc15_effect_melee_attack_increase_spider_units",
+              "value": 10
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 300,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Arachnarok Eggs\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc08_effect_ability_enable_arachnarok_eggs",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc08_item_abilities_arachnarok_eggs",
+                    "icon_name": "wh_dlc06_unit_abilities_venom_queen",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_summon_unit",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Summon Unit"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Arachnarok Eggs",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc06_all_summon_spider_hatchlings",
+                        "sort_order": 103,
+                        "effect_state": "positive",
+                        "description": "Summons a unit of Spider Hatchlings"
+                      },
+                      {
+                        "key": "wh_dlc06_all_defend_vs_charge",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Good at defending the summoner"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_unbinding",
+                        "sort_order": 203,
+                        "effect_state": "negative",
+                        "description": "Summoned units degrade over time"
+                      }
+                    ],
+                    "num_uses": 5,
+                    "active_time": 1,
+                    "recharge_time": 60,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 50,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_dlc08_effect_ability_enable_arachnarok_eggs",
+              "value": 1
+            },
+            {
+              "icon": "morale.png",
+              "priority": 411,
+              "is_positive_value_good": false,
+              "description": "Enemy leadership: -5",
+              "key": "wh_main_effect_force_stat_leadership_enemy_unit",
+              "value": -5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_raknik",
+      "character_skill_key": "wh2_main_skill_innate_grn_raknik",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

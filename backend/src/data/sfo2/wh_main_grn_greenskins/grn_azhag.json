@@ -5873,214 +5873,215 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh_main_skill_node_grn_azhag_innate_01",
-        "image_path": "trait_greenskins.png",
-        "is_background_skill": true,
-        "name": "Slaughterer",
-        "description": "\"Wyverns is good fer one thing, eatin', smashin', smellin' and flyin'.\"",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Aspect of the Dread Knight\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Aspect of the Dread Knight",
-                      "active_time": 40,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 4,
-                      "miscast_chance": 0.3,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 40,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "attributes": [
-                            {
-                              "key": "causes_fear",
-                              "description": "Can  Cause Fear",
-                              "attribute_type": "positive"
-                            },
-                            {
-                              "key": "causes_terror",
-                              "description": "Can  Cause Terror",
-                              "attribute_type": "positive"
-                            }
-                          ],
-                          "stat_effects": [
-                            {
-                              "value": 8,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+8 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Spirit Leech\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_death_enable_spirit_leech",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_spirit_leech",
-                      "icon_name": "wh_main_spell_death_spirit_leech",
-                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Spirit Leech",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_spell_death_spirit_leech",
-                          "sort_order": 1,
-                          "description": "➕ 75% chance to deal 75 direct damage to 1 entity per second"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_resist",
-                          "sort_order": 201,
-                          "description": "➖ Chance opponent will resist damage"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_multiple",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs multiple combatants"
-                        }
-                      ],
-                      "active_time": 15,
-                      "recharge_time": 40,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 100,
-                      "mana_cost": 10,
-                      "miscast_chance": 0.3,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "fatigue_change_ratio": 0.1,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_death_enable_spirit_leech",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 5,
-                "is_positive_value_good": true,
-                "description": "Leadership aura size: +25%",
-                "key": "wh_main_effect_character_stat_mod_personal_aura_size",
-                "value": 25
-              },
-              {
-                "icon": "morale_character.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Character's aura leadership effect: +10",
-                "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect",
-                "value": 10
-              },
-              {
-                "icon": "charge_reflector.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Charge Defence vs Large",
-                "key": "wh2_dlc15_effect_unit_enable_attribute_charge_defence_against_large",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 999,
-                "is_positive_value_good": true,
-                "description": "Army ability: \"Azhag's Waaagh!\"\\\\n(replaces: \"Waaagh!\")",
-                "key": "wh2_dlc15_effect_leader_waaagh_azhag",
-                "value": 1
-              },
-              {
-                "icon": "unit_cap.png",
-                "priority": 10000,
-                "is_positive_value_good": true,
-                "description": "Unit capacity: +2\\\\nArachnarok Spider",
-                "key": "cap_grn_arachnarok",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_innate_grn_azhag_the_slaughterer",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "grn_azhag",
+  "backgroundSkills": [
+    {
+      "key": "wh_main_skill_node_grn_azhag_innate_01",
+      "image_path": "trait_greenskins.png",
+      "is_background_skill": true,
+      "name": "Slaughterer",
+      "description": "\"Wyverns is good fer one thing, eatin', smashin', smellin' and flyin'.\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Aspect of the Dread Knight\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Aspect of the Dread Knight",
+                    "active_time": 40,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 4,
+                    "miscast_chance": 0.3,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 40,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          },
+                          {
+                            "key": "causes_terror",
+                            "description": "Can  Cause Terror",
+                            "attribute_type": "positive"
+                          }
+                        ],
+                        "stat_effects": [
+                          {
+                            "value": 8,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "+8 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Spirit Leech\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_death_enable_spirit_leech",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_spirit_leech",
+                    "icon_name": "wh_main_spell_death_spirit_leech",
+                    "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Spirit Leech",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_spell_death_spirit_leech",
+                        "sort_order": 1,
+                        "description": "➕ 75% chance to deal 75 direct damage to 1 entity per second"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_resist",
+                        "sort_order": 201,
+                        "description": "➖ Chance opponent will resist damage"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs multiple combatants"
+                      }
+                    ],
+                    "active_time": 15,
+                    "recharge_time": 40,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 100,
+                    "mana_cost": 10,
+                    "miscast_chance": 0.3,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "fatigue_change_ratio": 0.1,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_death_enable_spirit_leech",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 5,
+              "is_positive_value_good": true,
+              "description": "Leadership aura size: +25%",
+              "key": "wh_main_effect_character_stat_mod_personal_aura_size",
+              "value": 25
+            },
+            {
+              "icon": "morale_character.png",
+              "priority": 6,
+              "is_positive_value_good": true,
+              "description": "Character's aura leadership effect: +10",
+              "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect",
+              "value": 10
+            },
+            {
+              "icon": "charge_reflector.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Charge Defence vs Large",
+              "key": "wh2_dlc15_effect_unit_enable_attribute_charge_defence_against_large",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 999,
+              "is_positive_value_good": true,
+              "description": "Army ability: \"Azhag's Waaagh!\"\\\\n(replaces: \"Waaagh!\")",
+              "key": "wh2_dlc15_effect_leader_waaagh_azhag",
+              "value": 1
+            },
+            {
+              "icon": "unit_cap.png",
+              "priority": 10000,
+              "is_positive_value_good": true,
+              "description": "Unit capacity: +2\\\\nArachnarok Spider",
+              "key": "cap_grn_arachnarok",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_grn_azhag",
+      "character_skill_key": "wh_main_skill_innate_grn_azhag_the_slaughterer",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh_main_skill_node_grn_azhag_unique_01",

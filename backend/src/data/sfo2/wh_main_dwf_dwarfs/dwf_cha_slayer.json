@@ -2763,7 +2763,6 @@
         "visible_in_ui": true
       }
     ],
-    [],
     [
       {
         "key": "skill_all_dummy_agent_actions_dwf_cha_slayer",
@@ -2864,52 +2863,53 @@
         "required_num_parents": 0,
         "visible_in_ui": false
       }
-    ],
-    [
-      {
-        "key": "skill_node_dwf_cha_slayer_trait_01",
-        "image_path": "trait_dwarf.png",
-        "is_background_skill": true,
-        "name": "A True Legend",
-        "description": "Although it irks them, slayers of this renown attract a following of younger slayers, hoping to learn from them and follow in their great footsteps.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "experience.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Recruit rank: +1 for Slayer units",
-                "key": "wh_main_effect_force_army_campaign_experience_base_slayers",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Leadership aura size: +100% (when attacking)",
-                "key": "wh_main_effect_general_aura_mod_all_during_attack",
-                "value": 100
-              },
-              {
-                "icon": "turns.png",
-                "priority": 1000,
-                "is_positive_value_good": false,
-                "description": "Global recruitment duration: -1 turn for Slayers units",
-                "key": "dwf_slayer_recruit_global",
-                "value": -1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "dwf_slayer_trait_1",
-        "tier": 0,
-        "indent": 25,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
-  "key": "dwf_cha_slayer"
+  "key": "dwf_cha_slayer",
+  "backgroundSkills": [
+    {
+      "key": "skill_node_dwf_cha_slayer_trait_01",
+      "image_path": "trait_dwarf.png",
+      "is_background_skill": true,
+      "name": "A True Legend",
+      "description": "Although it irks them, slayers of this renown attract a following of younger slayers, hoping to learn from them and follow in their great footsteps.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "experience.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Recruit rank: +1 for Slayer units",
+              "key": "wh_main_effect_force_army_campaign_experience_base_slayers",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Leadership aura size: +100% (when attacking)",
+              "key": "wh_main_effect_general_aura_mod_all_during_attack",
+              "value": 100
+            },
+            {
+              "icon": "turns.png",
+              "priority": 1000,
+              "is_positive_value_good": false,
+              "description": "Global recruitment duration: -1 turn for Slayers units",
+              "key": "dwf_slayer_recruit_global",
+              "value": -1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "skill_node_set_dwf_cha_slayer",
+      "character_skill_key": "dwf_slayer_trait_1",
+      "tier": 0,
+      "indent": 25,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

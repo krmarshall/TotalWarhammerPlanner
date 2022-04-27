@@ -2802,52 +2802,493 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh3_main_skill_innate_cth_caravan_master_stealth",
-        "image_path": "trait_personality.png",
-        "is_background_skill": true,
-        "name": "Clandestine",
-        "description": "A secretive history allows him to call upon veteran troops who perhaps served him in the past.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[HIDDEN] Reduce line of sight",
-                "key": "wh3_prologue_effect_reduce_line_of_sight",
-                "value": -50
-              },
-              {
-                "icon": "army.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "This Lord's caravan army has veteran units",
-                "key": "wh3_main_skill_innate_cth_caravan_master_stealth_army",
-                "value": 1
-              },
-              {
-                "icon": "experience.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Experience per turn: +25",
-                "key": "wh3_main_effect_character_experience_per_turn",
-                "value": 25
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_stealth",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
-  "key": "cth_lord_caravan_master"
+  "key": "cth_lord_caravan_master",
+  "backgroundSkills": [
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Dragon-Blooded",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Dragon-Blooded",
+      "description": "This master has Dragon-blood in his veins, perhaps a son of a Shugengan, and so can call upon the Emperor's personal bodyguards.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has an additional Celestial unit",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Dragon-Blooded",
+              "value": 1
+            },
+            {
+              "icon": "armour.png",
+              "priority": 401,
+              "is_positive_value_good": true,
+              "description": "Armour: +20 for Celestial Dragon Guard units",
+              "key": "wh3_main_effect_force_stat_armour_cth_dragon_guard",
+              "value": 20
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Dragon-Blooded",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Former-Artillery-Officer",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Former Artillery Officer",
+      "description": "Once of the Dragon Emperor's artillery legions. Though now an independent trader, those ties are hard to break.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has additional Artillery units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Former-Artillery-Officer",
+              "value": 1
+            },
+            {
+              "icon": "ammo.png",
+              "priority": 511,
+              "is_positive_value_good": true,
+              "description": "Ammunition: +20% for missile units",
+              "key": "wh3_main_effect_ammo_cth_ranged",
+              "value": 20
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Former-Artillery-Officer",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Humble-Born",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Humble-Born",
+      "description": "Many masters of the continent spanning caravans come from the peasant farms or the slums of the Cathay's mighty cities.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has additional Peasant unit",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Humble-Born",
+              "value": 1
+            },
+            {
+              "icon": "replenishment.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Casualty replenishment rate: +9% for Peasant Long Spearmen, Peasant Archers, and Peasant Horsemen units",
+              "key": "wh3_main_effect_force_replenishment_rate_cth_peasant_units",
+              "value": 9
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Humble-Born",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Longma-Whisperer",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Longma Whisperer",
+      "description": "Such a talent as taming the Longma is highly sought after, but those who wish to exploit it for their own enterprise will be in debt to the Dragon Emperor.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army includes Longma Riders units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Longma-Whisperer",
+              "value": 1
+            },
+            {
+              "icon": "charge.png",
+              "priority": 501,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +12 for Great Longma Riders units",
+              "key": "wh3_main_effect_force_stat_charge_bonus_add_cth_longma_riders",
+              "value": 12
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Longma-Whisperer",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Nan-Gau",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Nan-Gau Ties",
+      "description": "Hails from Nan-Gau with strong ties to the barracks of the Nine Rings, its guilds and troops.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has additional Gunner units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Nan-Gau",
+              "value": 1
+            },
+            {
+              "icon": "ranged_damage.png",
+              "priority": 551,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing missile damage: +15% for Crane Gunners units",
+              "key": "wh3_main_effect_force_stat_missile_damage_cth_crane_gunners",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Nan-Gau",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Ogre-Ally",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Ogre Ally",
+      "description": "The master has spent many years in the Mountains of Mourn, forming bonds and making contracts with the tribes of the Ogre Kingdoms.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "allegiance.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Allegiance points gained: +5% for alliances with Ogre Kingdoms",
+              "key": "wh3_main_effect_allegiance_points_mod_ogres",
+              "value": 5
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army includes Ogre Mercenary units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Ogre-Ally",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Ogre-Ally",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_Western-Idealist",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Western Idealist",
+      "description": "The caravan and its master spends a lot of time in the western nations, to the point that he prefers the company of foreigners to his homeland.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army includes Empire units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_Western-Idealist",
+              "value": 1
+            },
+            {
+              "icon": "diplomacy.png",
+              "priority": 5,
+              "is_positive_value_good": true,
+              "description": "Diplomatic relations: +5 with Empire",
+              "key": "wh_main_faction_political_diplomacy_mod_empire",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_Western-Idealist",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_cavalry",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Rough Rider",
+      "description": "This master knows what to look for in horses and other beasts, so will recruit accordingly.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has additional Cavalry units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_cavalry_army",
+              "value": 1
+            },
+            {
+              "icon": "weapon_damage.png",
+              "priority": 461,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +25% for Peasant Horsemen, Jade Lancers and Great Longma Riders units",
+              "key": "wh3_main_effect_force_stat_weapon_strength_cth_cavalry",
+              "value": 25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_cavalry",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_gunner",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Artisan",
+      "description": "Strong ties with the artificer guilds in the northern provinces allow an influx of prized rifle regiments into this retinue.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has additional Gunpowder units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_gunner_army",
+              "value": 1
+            },
+            {
+              "icon": "accuracy.png",
+              "priority": 531,
+              "is_positive_value_good": true,
+              "description": "Range: +10% for missile infantry units",
+              "key": "wh_main_effect_force_stat_range_missile_infantry",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_gunner",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_royalty",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Favoured",
+      "description": "In Cathay, reputation is a powerful tool, and those favoured by nobles will be able to recruit quality troops.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has units of increased quality",
+              "key": "wh3_main_skill_innate_cth_caravan_master_royalty_army",
+              "value": 1
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 580,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 2%",
+              "key": "wh_main_effect_force_stat_physical_resistance",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_royalty",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_innate_cth_caravan_master_stealth",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Clandestine",
+      "description": "A secretive history allows him to call upon veteran troops who perhaps served him in the past.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Reduce line of sight",
+              "key": "wh3_prologue_effect_reduce_line_of_sight",
+              "value": -50
+            },
+            {
+              "icon": "army.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "This Lord's caravan army has veteran units",
+              "key": "wh3_main_skill_innate_cth_caravan_master_stealth_army",
+              "value": 1
+            },
+            {
+              "icon": "experience.png",
+              "priority": 15,
+              "is_positive_value_good": true,
+              "description": "Experience per turn: +25",
+              "key": "wh3_main_effect_character_experience_per_turn",
+              "value": 25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_cth_lord_caravan_master",
+      "character_skill_key": "wh3_main_skill_innate_cth_caravan_master_stealth",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

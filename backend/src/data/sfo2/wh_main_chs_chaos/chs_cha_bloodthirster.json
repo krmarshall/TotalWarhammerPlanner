@@ -3400,97 +3400,6 @@
     ],
     [
       {
-        "key": "skill_node_chs_cha_bloodthirster_innate_01",
-        "image_path": "trait_chaos.png",
-        "is_background_skill": true,
-        "name": "Power!",
-        "description": "I feel daemonic power within me!",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Daemonic Strength\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_daemonic_strength",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_item_abilities_daemonic_strength",
-                      "icon_name": "wh_main_item_abilities_daemonic_strength",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Daemonic Strength",
-                      "num_uses": 1,
-                      "active_time": 60,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 60,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 1.5,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x1.5 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            },
-                            {
-                              "value": 1.5,
-                              "stat": "stat_melee_damage_base",
-                              "how": "mult",
-                              "description": "x1.5 Base Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "icon_stat_damage_base.png"
-                            },
-                            {
-                              "value": 25,
-                              "stat": "stat_resistance_physical",
-                              "how": "add",
-                              "description": "+25 Physical Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_physical.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_daemonic_strength",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "chs_trait_1",
-        "tier": 14,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
-    ],
-    [
-      {
         "key": "skill_all_dummy_agent_actions_chs_cha_bloodthirster",
         "image_path": "battle_attack.png",
         "is_background_skill": false,
@@ -3575,5 +3484,97 @@
       }
     ]
   ],
-  "key": "chs_cha_bloodthirster"
+  "key": "chs_cha_bloodthirster",
+  "backgroundSkills": [
+    {
+      "key": "skill_node_chs_cha_bloodthirster_innate_01",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Power!",
+      "description": "I feel daemonic power within me!",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Daemonic Strength\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_daemonic_strength",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_item_abilities_daemonic_strength",
+                    "icon_name": "wh_main_item_abilities_daemonic_strength",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Daemonic Strength",
+                    "num_uses": 1,
+                    "active_time": 60,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 60,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 1.5,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x1.5 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 1.5,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x1.5 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          },
+                          {
+                            "value": 25,
+                            "stat": "stat_resistance_physical",
+                            "how": "add",
+                            "description": "+25 Physical Resistance",
+                            "sort_order": 10,
+                            "icon": "resistance_physical.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_daemonic_strength",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "skill_node_set_chs_cha_bloodthirster",
+      "character_skill_key": "chs_trait_1",
+      "tier": 14,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

@@ -5157,116 +5157,117 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh_main_skill_node_vmp_heinrich_innate_01",
-        "image_path": "trait_vampire_counts.png",
-        "is_background_skill": true,
-        "name": "Wanderer",
-        "description": "\"You and your masters are desiccated relics of a dead age.\"",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "disaster.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "All units in Heinrich Kemmler's army are immune to non-Vampire Count territory attrition",
-                "key": "wh2_dlc11_effect_force_army_campaign_attrition_immunity_land_of_living",
-                "value": 1
-              },
-              {
-                "icon": "magic_cooldown_character.png",
-                "priority": 60,
-                "is_positive_value_good": false,
-                "description": "Cooldown: -20% to Lore of Vampires spells",
-                "key": "wh_main_effect_battle_magic_lore_of_vampires_cooldown_rate",
-                "value": -20
-              },
-              {
-                "icon": "magic.png",
-                "priority": 68,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -20% for Lore of Vampires",
-                "key": "wh2_dlc17_effect_magic__reduce_wom_cost_vampires_percentage",
-                "value": -20
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 108,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +20% for Skeleton Warriors and Skeleton Spearmen",
-                "key": "wh_main_effect_tech_melee_damage_increase_skeleton_warriors_spears",
-                "value": 20
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Lord of Undeath\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc17_effect_ability_enable_krell_baseline",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_pro03_lord_abilities_lord_of_undeath_3",
-                      "icon_name": "wh_pro03_lord_abilities_lord_of_undeath",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Lord of Undeath",
-                      "ui_effects": [
-                        {
-                          "key": "wh_pro03_all_summon_krell",
-                          "sort_order": 0,
-                          "description": " Summons Krell"
-                        },
-                        {
-                          "key": "wh_dlc08_spell_upgraded_degrade_for_krell",
-                          "sort_order": 1,
-                          "description": " Krell will degrade at half-speed"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_unbinding",
-                          "sort_order": 203,
-                          "description": "➖ Summoned units degrade over time"
-                        }
-                      ],
-                      "num_uses": 1,
-                      "active_time": 1,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 60,
-                      "target_self": true
-                    }
-                  }
-                ],
-                "key": "wh_dlc17_effect_ability_enable_krell_baseline",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_innate_vmp_heinrich_kemmler",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "vmp_heinrich",
+  "backgroundSkills": [
+    {
+      "key": "wh_main_skill_node_vmp_heinrich_innate_01",
+      "image_path": "trait_vampire_counts.png",
+      "is_background_skill": true,
+      "name": "Wanderer",
+      "description": "\"You and your masters are desiccated relics of a dead age.\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "disaster.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "All units in Heinrich Kemmler's army are immune to non-Vampire Count territory attrition",
+              "key": "wh2_dlc11_effect_force_army_campaign_attrition_immunity_land_of_living",
+              "value": 1
+            },
+            {
+              "icon": "magic_cooldown_character.png",
+              "priority": 60,
+              "is_positive_value_good": false,
+              "description": "Cooldown: -20% to Lore of Vampires spells",
+              "key": "wh_main_effect_battle_magic_lore_of_vampires_cooldown_rate",
+              "value": -20
+            },
+            {
+              "icon": "magic.png",
+              "priority": 68,
+              "is_positive_value_good": false,
+              "description": "Winds of Magic cost: -20% for Lore of Vampires",
+              "key": "wh2_dlc17_effect_magic__reduce_wom_cost_vampires_percentage",
+              "value": -20
+            },
+            {
+              "icon": "weapon_damage.png",
+              "priority": 108,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +20% for Skeleton Warriors and Skeleton Spearmen",
+              "key": "wh_main_effect_tech_melee_damage_increase_skeleton_warriors_spears",
+              "value": 20
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Lord of Undeath\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc17_effect_ability_enable_krell_baseline",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_pro03_lord_abilities_lord_of_undeath_3",
+                    "icon_name": "wh_pro03_lord_abilities_lord_of_undeath",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Lord of Undeath",
+                    "ui_effects": [
+                      {
+                        "key": "wh_pro03_all_summon_krell",
+                        "sort_order": 0,
+                        "description": " Summons Krell"
+                      },
+                      {
+                        "key": "wh_dlc08_spell_upgraded_degrade_for_krell",
+                        "sort_order": 1,
+                        "description": " Krell will degrade at half-speed"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_unbinding",
+                        "sort_order": 203,
+                        "description": "➖ Summoned units degrade over time"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 1,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 60,
+                    "target_self": true
+                  }
+                }
+              ],
+              "key": "wh_dlc17_effect_ability_enable_krell_baseline",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_vmp_heinrich",
+      "character_skill_key": "wh_main_skill_innate_vmp_heinrich_kemmler",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh_main_skill_node_vmp_heinrich_unique_01",

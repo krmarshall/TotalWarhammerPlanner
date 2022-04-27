@@ -4822,106 +4822,107 @@
           "wh2_main_skill_node_hef_teclis_campaign_3_4"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh2_main_skill_node_hef_teclis_innate_01",
-        "image_path": "trait_high_elves.png",
-        "is_background_skill": true,
-        "name": "Pre-Eminent Mage",
-        "description": "\"This body may be frail, but never doubt the strength of the mind, or the heart within it.\"",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_campaign.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +30% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 30
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 291,
-                "is_positive_value_good": true,
-                "description": "Bound spell: \"Fireball\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_bound_fireball",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_bound_fireball",
-                      "icon_name": "wh_main_spell_fire_fireball",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Fireball",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_medium",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes moderate magical & fire damage"
-                        },
-                        {
-                          "key": "wh_main_projectile_powerful_explosion",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Powerful explosion"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
-                          "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
-                        }
-                      ],
-                      "num_uses": 4,
-                      "recharge_time": 60,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 300,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_bound_fireball",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_innate_hef_teclis_preeminent_mage",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "hef_teclis",
+  "backgroundSkills": [
+    {
+      "key": "wh2_main_skill_node_hef_teclis_innate_01",
+      "image_path": "trait_high_elves.png",
+      "is_background_skill": true,
+      "name": "Pre-Eminent Mage",
+      "description": "\"This body may be frail, but never doubt the strength of the mind, or the heart within it.\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +30% when increasing",
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
+              "value": 30
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 291,
+              "is_positive_value_good": true,
+              "description": "Bound spell: \"Fireball\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_bound_fireball",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_bound_fireball",
+                    "icon_name": "wh_main_spell_fire_fireball",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_magic_missile",
+                      "icon_path": "icon_spell_magic_missile.png",
+                      "description": "Magic Missile"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Fireball",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_and_flaming_medium",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes moderate magical & fire damage"
+                      },
+                      {
+                        "key": "wh_main_projectile_powerful_explosion",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Powerful explosion"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_effective_long_range",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Effective at long range"
+                      },
+                      {
+                        "key": "wh3_main_projectile_requires_line_of_sight",
+                        "sort_order": 215,
+                        "effect_state": "negative",
+                        "description": "Requires line of sight to the target"
+                      }
+                    ],
+                    "num_uses": 4,
+                    "recharge_time": 60,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 300,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_bound_fireball",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_hef_teclis",
+      "character_skill_key": "wh2_main_skill_innate_hef_teclis_preeminent_mage",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh2_main_anc_armour_war_crown_of_saphery",

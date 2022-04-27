@@ -2546,104 +2546,6 @@
           "wh_main_skill_node_brt_louen_campaign_10"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh_main_skill_node_brt_louen_innate_01",
-        "image_path": "trait_bretonnia.png",
-        "is_background_skill": true,
-        "name": "The Puissant Virtue",
-        "description": "Chaste, honourable, and untainted by notions of self-aggrandisement, King Louen is the most virtuous of all the Lady's champions.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "chivalry_positive.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "Chivalry: +10",
-                "key": "wh_dlc07_effect_chivalry_dummy",
-                "value": 10
-              },
-              {
-                "icon": "melee.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +8 when fighting against Undead, Greenskins and all forces of Chaos",
-                "key": "wh2_dlc11_effect_bonus_melee_attack_fighting_against_bretonnia_enemies",
-                "value": 8
-              },
-              {
-                "icon": "morale.png",
-                "priority": 108,
-                "is_positive_value_good": true,
-                "description": "Leadership: +12 when fighting against Undead, Greenskins and all forces of Chaos",
-                "key": "wh2_dlc11_effect_bonus_morale_fighting_against_bretonnia_enemies",
-                "value": 12
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Blessing of the Lady\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_blessing_of_the_lady",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_lord_passive_the_blessing_of_the_lady",
-                      "icon_name": "wh_main_lord_passive_the_blessing_of_the_lady",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_ward_save",
-                        "icon_path": "icon_spell_ward_save.png",
-                        "description": "Ward Save"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Blessing of the Lady",
-                      "num_uses": 1,
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 20,
-                              "stat": "stat_resistance_physical",
-                              "how": "add",
-                              "description": "+20 Physical Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_physical.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_blessing_of_the_lady",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_innate_brt_louen_leoncouer",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "brt_louen",
@@ -2789,6 +2691,105 @@
           "key": "wh_main_effect_ability_enable_the_sword_of_couronne"
         }
       ]
+    }
+  ],
+  "backgroundSkills": [
+    {
+      "key": "wh_main_skill_node_brt_louen_innate_01",
+      "image_path": "trait_bretonnia.png",
+      "is_background_skill": true,
+      "name": "The Puissant Virtue",
+      "description": "Chaste, honourable, and untainted by notions of self-aggrandisement, King Louen is the most virtuous of all the Lady's champions.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "chivalry_positive.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Chivalry: +10",
+              "key": "wh_dlc07_effect_chivalry_dummy",
+              "value": 10
+            },
+            {
+              "icon": "melee.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +8 when fighting against Undead, Greenskins and all forces of Chaos",
+              "key": "wh2_dlc11_effect_bonus_melee_attack_fighting_against_bretonnia_enemies",
+              "value": 8
+            },
+            {
+              "icon": "morale.png",
+              "priority": 108,
+              "is_positive_value_good": true,
+              "description": "Leadership: +12 when fighting against Undead, Greenskins and all forces of Chaos",
+              "key": "wh2_dlc11_effect_bonus_morale_fighting_against_bretonnia_enemies",
+              "value": 12
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"The Blessing of the Lady\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_blessing_of_the_lady",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_lord_passive_the_blessing_of_the_lady",
+                    "icon_name": "wh_main_lord_passive_the_blessing_of_the_lady",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_ward_save",
+                      "icon_path": "icon_spell_ward_save.png",
+                      "description": "Ward Save"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Blessing of the Lady",
+                    "num_uses": 1,
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 20,
+                            "stat": "stat_resistance_physical",
+                            "how": "add",
+                            "description": "+20 Physical Resistance",
+                            "sort_order": 10,
+                            "icon": "resistance_physical.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_blessing_of_the_lady",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_brt_louen",
+      "character_skill_key": "wh_main_skill_innate_brt_louen_leoncouer",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ]
 }

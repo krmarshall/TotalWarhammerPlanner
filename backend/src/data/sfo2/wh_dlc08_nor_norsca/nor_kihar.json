@@ -509,89 +509,6 @@
         "visible_in_ui": false
       },
       {
-        "key": "nor_skill_kihar",
-        "image_path": "trait_chaos.png",
-        "is_background_skill": true,
-        "name": "Champion of Serpent",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "wound_time.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "When normally killed in action, this Hero will be wounded instead",
-                "key": "wh2_main_effect_grant_immortality_hero",
-                "value": 1
-              },
-              {
-                "icon": "campaign_movement.png",
-                "priority": 14,
-                "is_positive_value_good": false,
-                "description": "Campaign movement range: -25% for enemy armies starting their turn in this province",
-                "key": "wh2_main_effect_force_enemy_campaign_movement_range",
-                "value": -25
-              },
-              {
-                "icon": "morale.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Leadership: -10 when under siege",
-                "key": "wh_main_effect_force_army_battle_unit_morale_siege_defence",
-                "value": -10
-              },
-              {
-                "icon": "accuracy.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Range: -50%",
-                "key": "wh_main_effect_force_unit_stat_missile_range",
-                "value": -50
-              },
-              {
-                "icon": "income.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Income from raiding: +100%",
-                "key": "wh_main_effect_force_all_campaign_raid_income",
-                "value": 100
-              },
-              {
-                "icon": "public_order.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Public order: -10",
-                "key": "wh_main_effect_public_order_characters_negative",
-                "value": -10
-              },
-              {
-                "icon": "religion_chaos.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Chaos corruption: +5",
-                "key": "wh_main_effect_religion_conversion_chaos",
-                "value": 5
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: -25% for all units",
-                "key": "wh_dlc03_effect_tech_movement_speed_all",
-                "value": -25
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "nor_skill_kihar",
-        "tier": 2,
-        "indent": 0,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      },
-      {
         "key": "nor_skill_kihar_dump",
         "image_path": "campaign_experience.png",
         "is_background_skill": false,
@@ -2450,7 +2367,6 @@
     [],
     [],
     [],
-    [],
     [
       {
         "key": "wh_dlc08_skill_node_nor_kihar_campaign_actions_dummy",
@@ -2537,5 +2453,91 @@
       }
     ]
   ],
-  "key": "nor_kihar"
+  "key": "nor_kihar",
+  "backgroundSkills": [
+    {
+      "key": "nor_skill_kihar",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Champion of Serpent",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "wound_time.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "When normally killed in action, this Hero will be wounded instead",
+              "key": "wh2_main_effect_grant_immortality_hero",
+              "value": 1
+            },
+            {
+              "icon": "campaign_movement.png",
+              "priority": 14,
+              "is_positive_value_good": false,
+              "description": "Campaign movement range: -25% for enemy armies starting their turn in this province",
+              "key": "wh2_main_effect_force_enemy_campaign_movement_range",
+              "value": -25
+            },
+            {
+              "icon": "morale.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Leadership: -10 when under siege",
+              "key": "wh_main_effect_force_army_battle_unit_morale_siege_defence",
+              "value": -10
+            },
+            {
+              "icon": "accuracy.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Range: -50%",
+              "key": "wh_main_effect_force_unit_stat_missile_range",
+              "value": -50
+            },
+            {
+              "icon": "income.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Income from raiding: +100%",
+              "key": "wh_main_effect_force_all_campaign_raid_income",
+              "value": 100
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Public order: -10",
+              "key": "wh_main_effect_public_order_characters_negative",
+              "value": -10
+            },
+            {
+              "icon": "religion_chaos.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Chaos corruption: +5",
+              "key": "wh_main_effect_religion_conversion_chaos",
+              "value": 5
+            },
+            {
+              "icon": "battle_movement.png",
+              "priority": 115,
+              "is_positive_value_good": true,
+              "description": "Speed: -25% for all units",
+              "key": "wh_dlc03_effect_tech_movement_speed_all",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_kihar",
+      "character_skill_key": "nor_skill_kihar",
+      "tier": 2,
+      "indent": 0,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

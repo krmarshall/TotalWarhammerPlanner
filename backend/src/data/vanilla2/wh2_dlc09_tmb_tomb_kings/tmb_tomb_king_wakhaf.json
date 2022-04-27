@@ -2509,141 +2509,6 @@
     ],
     [
       {
-        "key": "wh2_dlc09_skill_innate_tmb_wakhaf",
-        "image_path": "trait_tomb_kings.png",
-        "is_background_skill": true,
-        "name": "Wakhaf of the First Dynasty",
-        "description": "Wakhaf repelled the nomads and secured the borders. He is a peerless master of desert warfare.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[HIDDEN] Adds the name \"King\"",
-                "key": "wh2_dlc09_title_king",
-                "value": 1
-              },
-              {
-                "icon": "charge_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +16",
-                "key": "wh_main_effect_character_stat_mod_charge_add",
-                "value": 16
-              },
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Ambush success chance: +20%",
-                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
-                "value": 20
-              },
-              {
-                "icon": "accuracy.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Range: +10%",
-                "key": "wh_main_effect_force_unit_stat_missile_range",
-                "value": 10
-              },
-              {
-                "icon": "melee.png",
-                "priority": 109,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +8 when fighting in desert terrain",
-                "key": "wh2_main_effect_force_unit_stat_melee_attack_in_desert_terrain",
-                "value": 8
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Curse\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_curse",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_lord_passive_the_curse",
-                      "icon_name": "wh2_dlc09_lord_passive_the_curse",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Curse",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_dlc06_automatic",
-                          "sort_order": 105,
-                          "description": "➕ Activates automatically when conditions are met"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs a single combatant"
-                        }
-                      ],
-                      "num_uses": 1,
-                      "active_time": 15,
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc09_effect_ability_enable_curse",
-                "value": 1
-              },
-              {
-                "icon": "attribute_stalk.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Stalk",
-                "key": "wh_main_effect_unit_enable_attribute_stalk",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_wakhaf",
-        "tier": 0,
-        "indent": 6,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
-    ],
-    [
-      {
         "key": "wh2_dlc09_skill_tmb_dummy_immortality_wakhaf",
         "image_path": "trait_human.png",
         "is_background_skill": false,
@@ -2672,5 +2537,141 @@
       }
     ]
   ],
-  "key": "tmb_tomb_king_wakhaf"
+  "key": "tmb_tomb_king_wakhaf",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc09_skill_innate_tmb_wakhaf",
+      "image_path": "trait_tomb_kings.png",
+      "is_background_skill": true,
+      "name": "Wakhaf of the First Dynasty",
+      "description": "Wakhaf repelled the nomads and secured the borders. He is a peerless master of desert warfare.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Adds the name \"King\"",
+              "key": "wh2_dlc09_title_king",
+              "value": 1
+            },
+            {
+              "icon": "charge_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +16",
+              "key": "wh_main_effect_character_stat_mod_charge_add",
+              "value": 16
+            },
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Ambush success chance: +20%",
+              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+              "value": 20
+            },
+            {
+              "icon": "accuracy.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Range: +10%",
+              "key": "wh_main_effect_force_unit_stat_missile_range",
+              "value": 10
+            },
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +8 when fighting in desert terrain",
+              "key": "wh2_main_effect_force_unit_stat_melee_attack_in_desert_terrain",
+              "value": 8
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"The Curse\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc09_effect_ability_enable_curse",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc09_lord_passive_the_curse",
+                    "icon_name": "wh2_dlc09_lord_passive_the_curse",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Curse",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_dlc06_automatic",
+                        "sort_order": 105,
+                        "description": "➕ Activates automatically when conditions are met"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 15,
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc09_effect_ability_enable_curse",
+              "value": 1
+            },
+            {
+              "icon": "attribute_stalk.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Stalk",
+              "key": "wh_main_effect_unit_enable_attribute_stalk",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc09_skill_node_set_tmb_tomb_king_wakhaf",
+      "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_wakhaf",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }
