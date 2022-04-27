@@ -111,6 +111,7 @@ interface CharacterInterface {
   key: string;
   skillTree: Array<Array<SkillInterface>>;
   items: Array<ItemInterface>;
+  backgroundSkills: Array<SkillInterface>;
 }
 
 export type {

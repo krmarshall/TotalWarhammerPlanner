@@ -159,7 +159,10 @@ const Planner = () => {
           </div>
           <div className="h-[20vh] flex flex-row place-content-around mt-4">
             {state.characterData?.items && state.characterData?.items.length > 0 && <CharacterItems />}
-            <BackgroundSkills />
+            {state.characterData.backgroundSkills && state.characterData.backgroundSkills.length > 0 && (
+              <BackgroundSkills />
+            )}
+
             <BuildStorage />
           </div>
         </Fragment>
