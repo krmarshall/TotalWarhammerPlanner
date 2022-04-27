@@ -330,93 +330,6 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc15_skill_hef_archmage_death_innate_conduit",
-        "image_path": "wh_main_spell_heavens_urannons_thunderbolt.png",
-        "is_background_skill": false,
-        "name": "Conduit haver",
-        "description": "This character has arcane conduit innately.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Arcane Conduit\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_character_abilities_arcane_conduit",
-                      "icon_name": "wh_main_character_abilities_arcane_conduit",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment_of_the_winds",
-                        "icon_path": "icon_spell_augment_of_the_winds.png",
-                        "description": "Augment of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Arcane Conduit",
-                      "ui_effects": [
-                        {
-                          "key": "wh_mana_pool_15",
-                          "sort_order": 1,
-                          "description": "➕ Increase to power reserves by 15"
-                        },
-                        {
-                          "key": "wh_mana_rate_point15",
-                          "sort_order": 1,
-                          "description": "➕ Improves power recharge rate by 1 every 7 seconds"
-                        },
-                        {
-                          "key": "wh_main_all_improved_recharge_rate",
-                          "sort_order": 9999,
-                          "description": ""
-                        },
-                        {
-                          "key": "wh_main_all_increased_max_power",
-                          "sort_order": 9999,
-                          "description": ""
-                        }
-                      ],
-                      "active_time": 45,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "mana_regen_mod": 0.1,
-                          "mana_max_depletion_mod": 15,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_arcane_conduit",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_hef_archmage_innate_conduit",
-        "tier": 15,
-        "indent": 0,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -3307,169 +3220,6 @@
           "wh2_dlc15_skill_node_hef_archmage_death_magic_3_3",
           "wh2_dlc15_skill_node_hef_archmage_death_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_dlc15_skill_node_hef_archmage_death_magic_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Spirit Leech [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Aspect of the Dread Knight\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Aspect of the Dread Knight",
-                      "active_time": 40,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 4,
-                      "miscast_chance": 0.3,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 40,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "attributes": [
-                            {
-                              "key": "causes_fear",
-                              "description": "Can  Cause Fear",
-                              "attribute_type": "positive"
-                            },
-                            {
-                              "key": "causes_terror",
-                              "description": "Can  Cause Terror",
-                              "attribute_type": "positive"
-                            }
-                          ],
-                          "stat_effects": [
-                            {
-                              "value": 8,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+8 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Spirit Leech\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_death_enable_spirit_leech",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_spirit_leech",
-                      "icon_name": "wh_main_spell_death_spirit_leech",
-                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Spirit Leech",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_spell_death_spirit_leech",
-                          "sort_order": 1,
-                          "description": "➕ 75% chance to deal 75 direct damage to 1 entity per second"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_resist",
-                          "sort_order": 201,
-                          "description": "➖ Chance opponent will resist damage"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_multiple",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs multiple combatants"
-                        }
-                      ],
-                      "active_time": 15,
-                      "recharge_time": 40,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 100,
-                      "mana_cost": 10,
-                      "miscast_chance": 0.3,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "fatigue_change_ratio": 0.1,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_death_enable_spirit_leech",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -5270,84 +5020,262 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc15_skill_node_set_hef_archmage_death_innate_09",
-        "image_path": "trait_high_elves.png",
-        "is_background_skill": false,
-        "name": "Genius",
-        "description": "An individual of exceptional skill and worth; the very embodiment of sagacity.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "technology.png",
-                "priority": 60,
-                "is_positive_value_good": true,
-                "description": "Research rate: +10%",
-                "key": "wh_main_effect_technology_research_points",
-                "value": 10
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Hero action success chance: +25%",
-                "key": "wh_main_effect_agent_action_success_chance",
-                "value": 25
-              },
-              {
-                "icon": "agent.png",
-                "priority": 102,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -25%",
-                "key": "wh2_main_effect_agent_action_success_chance_enemies",
-                "value": -25
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_7_genius",
-        "tier": 8,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
-    ],
-    [
-      {
-        "key": "hef_skill_army_death",
-        "image_path": "campaign_experience.png",
-        "is_background_skill": false,
-        "name": "",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "hef_army_death_enable",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "hef_skill_army_death",
-        "tier": 100,
-        "indent": 10,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "hef_archmage_death",
   "backgroundSkills": [
+    {
+      "key": "wh2_dlc15_skill_hef_archmage_death_innate_conduit",
+      "image_path": "wh_main_spell_heavens_urannons_thunderbolt.png",
+      "is_background_skill": false,
+      "name": "Conduit haver",
+      "description": "This character has arcane conduit innately.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Arcane Conduit\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_character_abilities_arcane_conduit",
+                    "icon_name": "wh_main_character_abilities_arcane_conduit",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment_of_the_winds",
+                      "icon_path": "icon_spell_augment_of_the_winds.png",
+                      "description": "Augment of the Winds"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Arcane Conduit",
+                    "ui_effects": [
+                      {
+                        "key": "wh_mana_pool_15",
+                        "sort_order": 1,
+                        "description": "➕ Increase to power reserves by 15"
+                      },
+                      {
+                        "key": "wh_mana_rate_point15",
+                        "sort_order": 1,
+                        "description": "➕ Improves power recharge rate by 1 every 7 seconds"
+                      },
+                      {
+                        "key": "wh_main_all_improved_recharge_rate",
+                        "sort_order": 9999,
+                        "description": ""
+                      },
+                      {
+                        "key": "wh_main_all_increased_max_power",
+                        "sort_order": 9999,
+                        "description": ""
+                      }
+                    ],
+                    "active_time": 45,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 45,
+                        "effect_type": "positive",
+                        "mana_regen_mod": 0.1,
+                        "mana_max_depletion_mod": 15,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_arcane_conduit",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_death",
+      "character_skill_key": "wh2_dlc15_skill_hef_archmage_innate_conduit",
+      "tier": 15,
+      "indent": 0,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_hef_archmage_death_magic_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Spirit Leech [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Aspect of the Dread Knight\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Aspect of the Dread Knight",
+                    "active_time": 40,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 4,
+                    "miscast_chance": 0.3,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 40,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          },
+                          {
+                            "key": "causes_terror",
+                            "description": "Can  Cause Terror",
+                            "attribute_type": "positive"
+                          }
+                        ],
+                        "stat_effects": [
+                          {
+                            "value": 8,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "+8 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Spirit Leech\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_death_enable_spirit_leech",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_spirit_leech",
+                    "icon_name": "wh_main_spell_death_spirit_leech",
+                    "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Spirit Leech",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_spell_death_spirit_leech",
+                        "sort_order": 1,
+                        "description": "➕ 75% chance to deal 75 direct damage to 1 entity per second"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_resist",
+                        "sort_order": 201,
+                        "description": "➖ Chance opponent will resist damage"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs multiple combatants"
+                      }
+                    ],
+                    "active_time": 15,
+                    "recharge_time": 40,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 100,
+                    "mana_cost": 10,
+                    "miscast_chance": 0.3,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "fatigue_change_ratio": 0.1,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_death_enable_spirit_leech",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_death",
+      "character_skill_key": "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh2_dlc15_skill_node_set_hef_archmage_death_innate_01",
       "image_path": "trait_high_elves.png",
@@ -5583,6 +5511,50 @@
       "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_death",
       "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_3_thinker",
       "tier": 7,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_set_hef_archmage_death_innate_09",
+      "image_path": "trait_high_elves.png",
+      "is_background_skill": false,
+      "name": "Genius",
+      "description": "An individual of exceptional skill and worth; the very embodiment of sagacity.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "technology.png",
+              "priority": 60,
+              "is_positive_value_good": true,
+              "description": "Research rate: +10%",
+              "key": "wh_main_effect_technology_research_points",
+              "value": 10
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Hero action success chance: +25%",
+              "key": "wh_main_effect_agent_action_success_chance",
+              "value": 25
+            },
+            {
+              "icon": "agent.png",
+              "priority": 102,
+              "is_positive_value_good": false,
+              "description": "Enemy Hero action success chance: -25%",
+              "key": "wh2_main_effect_agent_action_success_chance_enemies",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_death",
+      "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_7_genius",
+      "tier": 8,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
@@ -7019,6 +6991,34 @@
       "tier": 26,
       "indent": 6,
       "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "hef_skill_army_death",
+      "image_path": "campaign_experience.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "hef_army_death_enable",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_death",
+      "character_skill_key": "hef_skill_army_death",
+      "tier": 100,
+      "indent": 10,
+      "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

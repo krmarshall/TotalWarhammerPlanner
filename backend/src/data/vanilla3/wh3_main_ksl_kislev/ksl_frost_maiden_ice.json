@@ -2956,71 +2956,6 @@
           "wh3_main_skill_node_ksl_frost_maiden_ice_magic_3_3",
           "wh3_main_skill_node_ksl_frost_maiden_ice_magic_3_4"
         ]
-      },
-      {
-        "key": "wh3_main_skill_node_ksl_frost_maiden_ice_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": " ",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Ice Maiden's Kiss\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh3_main_effect_ability_enable_ice_maidens_kiss",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh3_main_spell_ice_ice_maidens_kiss",
-                      "icon_name": "wh3_main_spell_ice_ice_maidens_kiss",
-                      "overpower_option": "wh3_main_spell_ice_ice_maidens_kiss_upgraded",
-                      "type": {
-                        "key": "wh_type_breath",
-                        "icon_path": "icon_spell_breath.png",
-                        "description": "Breath"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Ice Maiden's Kiss",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_vortex_large_breath_short",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Short, wide, expanding, tear-shaped attack"
-                        }
-                      ],
-                      "active_time": 15,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 6,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh3_main_effect_ability_enable_ice_maidens_kiss",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh3_main_skill_ksl_magic_ice_dummy_ice_maidens_kiss",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -3414,92 +3349,159 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh3_main_skill_node_ksl_frost_maiden_ice_campaign_actions_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": " ",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_army_assault_unit",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_scout_settlement",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_passive_boost_income",
-                "value": 1
-              },
-              {
-                "icon": "income.png",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "Income from all buildings: -5%",
-                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
-                "value": -5
-              },
-              {
-                "icon": "income.png",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "Income from all buildings: +5%",
-                "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
-                "value": 5
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh3_main_effect_agent_action_enable_wizard_hinder_agent_assassinate",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh3_main_skill_all_dummy_agent_actions_ksl_frost_maiden",
-        "tier": 0,
-        "indent": 8,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
-  "key": "ksl_frost_maiden_ice"
+  "key": "ksl_frost_maiden_ice",
+  "backgroundSkills": [
+    {
+      "key": "wh3_main_skill_node_ksl_frost_maiden_ice_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": " ",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_army_assault_unit",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_passive_boost_income",
+              "value": 1
+            },
+            {
+              "icon": "income.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Income from all buildings: -5%",
+              "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
+              "value": -5
+            },
+            {
+              "icon": "income.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Income from all buildings: +5%",
+              "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
+              "value": 5
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh3_main_effect_agent_action_enable_wizard_hinder_agent_assassinate",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_frost_maiden_ice",
+      "character_skill_key": "wh3_main_skill_all_dummy_agent_actions_ksl_frost_maiden",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh3_main_skill_node_ksl_frost_maiden_ice_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": " ",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Ice Maiden's Kiss\"",
+              "related_abilities": [
+                {
+                  "effect": "wh3_main_effect_ability_enable_ice_maidens_kiss",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh3_main_spell_ice_ice_maidens_kiss",
+                    "icon_name": "wh3_main_spell_ice_ice_maidens_kiss",
+                    "overpower_option": "wh3_main_spell_ice_ice_maidens_kiss_upgraded",
+                    "type": {
+                      "key": "wh_type_breath",
+                      "icon_path": "icon_spell_breath.png",
+                      "description": "Breath"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Ice Maiden's Kiss",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_vortex_large_breath_short",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Short, wide, expanding, tear-shaped attack"
+                      }
+                    ],
+                    "active_time": 15,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 6,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh3_main_effect_ability_enable_ice_maidens_kiss",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_frost_maiden_ice",
+      "character_skill_key": "wh3_main_skill_ksl_magic_ice_dummy_ice_maidens_kiss",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

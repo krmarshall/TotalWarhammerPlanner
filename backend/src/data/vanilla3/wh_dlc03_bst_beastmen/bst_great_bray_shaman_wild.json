@@ -2688,178 +2688,6 @@
           "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild_magic_3_3",
           "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild_magic_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Viletide [HIDDEN]",
-        "description": "This spell calls to the creeping things of the undergrowth, sending a swarm of spiders, centipedes and slug-beetles onto the foe. ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Bray-Scream\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc03_effect_ability_enable_bray_scream",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc03_spell_wild_bray_scream",
-                      "icon_name": "wh_dlc03_spell_wild_bray_scream",
-                      "overpower_option": "wh_dlc03_spell_wild_bray_scream_upgraded",
-                      "type": {
-                        "key": "wh_type_breath",
-                        "icon_path": "icon_spell_breath.png",
-                        "description": "Breath"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Bray-Scream",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_vortex_large_breath_short",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Short, wide, expanding, tear-shaped attack"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_units",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
-                        }
-                      ],
-                      "active_time": 1,
-                      "recharge_time": 29,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 5,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_dlc03_effect_ability_enable_bray_scream",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Devolve\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc03_effect_ability_enable_devolve",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc03_spell_wild_devolve",
-                      "icon_name": "wh_dlc03_spell_wild_devolve",
-                      "overpower_option": "wh_dlc03_spell_wild_devolve_upgraded",
-                      "type": {
-                        "key": "wh_type_hex",
-                        "icon_path": "icon_spell_hex.png",
-                        "description": "Hex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Devolve",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes damage to combatants"
-                        }
-                      ],
-                      "active_time": 20,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 4,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 20,
-                          "effect_type": "negative",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_charge_speed",
-                              "how": "mult",
-                              "description": "x0.8 Charge Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.8 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": -24,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-24 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": -8,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "-8 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc03_effect_ability_enable_devolve",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_wild_dummy_viletide_bray_scream",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -5131,6 +4959,179 @@
       "tier": 18,
       "indent": 6,
       "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild_magic_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Viletide [HIDDEN]",
+      "description": "This spell calls to the creeping things of the undergrowth, sending a swarm of spiders, centipedes and slug-beetles onto the foe. ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Bray-Scream\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc03_effect_ability_enable_bray_scream",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc03_spell_wild_bray_scream",
+                    "icon_name": "wh_dlc03_spell_wild_bray_scream",
+                    "overpower_option": "wh_dlc03_spell_wild_bray_scream_upgraded",
+                    "type": {
+                      "key": "wh_type_breath",
+                      "icon_path": "icon_spell_breath.png",
+                      "description": "Breath"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Bray-Scream",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_vortex_large_breath_short",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Short, wide, expanding, tear-shaped attack"
+                      },
+                      {
+                        "key": "wh2_main_all_good_against_armour",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Good against armour"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_units",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple units"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "effect_state": "negative",
+                        "description": "Weak vs a single combatant"
+                      }
+                    ],
+                    "active_time": 1,
+                    "recharge_time": 29,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 5,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_dlc03_effect_ability_enable_bray_scream",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Devolve\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc03_effect_ability_enable_devolve",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc03_spell_wild_devolve",
+                    "icon_name": "wh_dlc03_spell_wild_devolve",
+                    "overpower_option": "wh_dlc03_spell_wild_devolve_upgraded",
+                    "type": {
+                      "key": "wh_type_hex",
+                      "icon_path": "icon_spell_hex.png",
+                      "description": "Hex"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Devolve",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes damage to combatants"
+                      }
+                    ],
+                    "active_time": 20,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 4,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_charge_speed",
+                            "how": "mult",
+                            "description": "x0.8 Charge Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.8 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": -24,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-24 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": -8,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "-8 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc03_effect_ability_enable_devolve",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc17_skill_node_set_bst_great_bray_shaman_wild",
+      "character_skill_key": "wh2_main_skill_all_magic_wild_dummy_viletide_bray_scream",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

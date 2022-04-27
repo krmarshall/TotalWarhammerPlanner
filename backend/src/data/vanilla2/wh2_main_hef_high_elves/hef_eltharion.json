@@ -3446,149 +3446,6 @@
           "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_3",
           "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_dlc15_skill_node_hef_eltharion_high_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": "[HIDDEN] Apotheosis and soul quench",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Apotheosis\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_magic_high_enable_apotheosis",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_high_magic_apotheosis",
-                      "icon_name": "wh2_main_spell_high_magic_apotheosis",
-                      "overpower_option": "wh2_main_spell_high_magic_apotheosis_upgraded",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Apotheosis",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc15_heal_active_480",
-                          "sort_order": 108,
-                          "description": "➕ Restores up to 480 Hit Points"
-                        }
-                      ],
-                      "active_time": 10,
-                      "recharge_time": 29,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 5,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 10,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "attributes": [
-                            {
-                              "key": "causes_fear",
-                              "description": "Can  Cause Fear",
-                              "attribute_type": "positive"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_magic_high_enable_apotheosis",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Soul Quench\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_magic_high_enable_soul_quench",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_high_magic_soul_quench",
-                      "icon_name": "wh2_main_spell_high_magic_soul_quench",
-                      "overpower_option": "wh2_main_spell_high_magic_soul_quench_upgraded",
-                      "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Soul Quench",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "description": "➕ Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_powerful_explosion",
-                          "sort_order": 105,
-                          "description": "➕ Powerful explosion"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "description": "➕ Effective at long range"
-                        }
-                      ],
-                      "recharge_time": 43,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_magic_high_enable_soul_quench",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
-        "tier": 11,
-        "indent": 3,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -5081,6 +4938,266 @@
     ]
   ],
   "key": "hef_eltharion",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc15_skill_node_hef_eltharion_high_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": "[HIDDEN] Apotheosis and soul quench",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Apotheosis\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_magic_high_enable_apotheosis",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_high_magic_apotheosis",
+                    "icon_name": "wh2_main_spell_high_magic_apotheosis",
+                    "overpower_option": "wh2_main_spell_high_magic_apotheosis_upgraded",
+                    "type": {
+                      "key": "wh_type_regeneration",
+                      "icon_path": "icon_spell_regeneration.png",
+                      "description": "Regeneration"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Apotheosis",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc15_heal_active_480",
+                        "sort_order": 108,
+                        "description": "➕ Restores up to 480 Hit Points"
+                      }
+                    ],
+                    "active_time": 10,
+                    "recharge_time": 29,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 5,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 10,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_magic_high_enable_apotheosis",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Soul Quench\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_magic_high_enable_soul_quench",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_high_magic_soul_quench",
+                    "icon_name": "wh2_main_spell_high_magic_soul_quench",
+                    "overpower_option": "wh2_main_spell_high_magic_soul_quench_upgraded",
+                    "type": {
+                      "key": "wh_type_magic_missile",
+                      "icon_path": "icon_spell_magic_missile.png",
+                      "description": "Magic Missile"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Soul Quench",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_moderate",
+                        "sort_order": 104,
+                        "description": "➕ Causes moderate magical damage"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_powerful_explosion",
+                        "sort_order": 105,
+                        "description": "➕ Powerful explosion"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_effective_long_range",
+                        "sort_order": 106,
+                        "description": "➕ Effective at long range"
+                      }
+                    ],
+                    "recharge_time": 43,
+                    "wind_up_time": 3,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 250,
+                    "mana_cost": 7,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_magic_high_enable_soul_quench",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_eltharion",
+      "character_skill_key": "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
+      "tier": 11,
+      "indent": 3,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_hef_prince_eltharion_innate_01",
+      "image_path": "trait_high_elves.png",
+      "is_background_skill": true,
+      "name": "Warden of Tor Yvresse",
+      "description": "\"Pointy-ead'' is legendary among the Greenskins, who both fear and respect his martial prowess.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Mistwalker Barrage\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc15_lord_passive_mistwalkers_barrage",
+                    "icon_name": "wh2_dlc15_lord_passive_mistwalkers_barrage",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_bombardment",
+                      "icon_path": "icon_spell_bombardment.png",
+                      "description": "Bombardment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Mistwalkers' Barrage",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc15_bombardment_passive_melee",
+                        "sort_order": 1,
+                        "description": "➕ Enemies hit by bombardment in melee combat"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      }
+                    ],
+                    "active_time": 3,
+                    "recharge_time": 30,
+                    "initial_recharge": 15,
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 3,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
+              "value": 1
+            },
+            {
+              "icon": "disaster.png",
+              "priority": 56,
+              "is_positive_value_good": true,
+              "description": "Immune to Barren Wasteland attrition",
+              "key": "wh_dlc07_effect_attrition_immunity_badlands",
+              "value": 1
+            },
+            {
+              "icon": "morale.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Leadership: +8 for Spear Infantry and Ranger units",
+              "key": "wh2_dlc15_hef_morale_spear_infantry_rangers",
+              "value": 8
+            },
+            {
+              "icon": "defence.png",
+              "priority": 108,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +8 for Spear Infantry and Rangers units",
+              "key": "wh2_dlc15_hef_melee_defence_spear_infantry_rangers",
+              "value": 8
+            },
+            {
+              "icon": "attribute_causes_fear.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Causes Fear when fighting against Greenskins",
+              "key": "wh2_main_effect_cause_fear_versus_grn",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_eltharion",
+      "character_skill_key": "wh2_dlc15_skill_innate_hef_eltharion",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
   "items": [
     {
       "key": "wh2_dlc15_skill_node_hef_eltharion_quest_fangsword_of_eltharion",
@@ -5308,122 +5425,6 @@
           "key": "wh2_main_effect_magic_high_reduce_wom_cost_hand_of_glory_upgraded"
         }
       ]
-    }
-  ],
-  "backgroundSkills": [
-    {
-      "key": "wh2_dlc15_skill_node_hef_prince_eltharion_innate_01",
-      "image_path": "trait_high_elves.png",
-      "is_background_skill": true,
-      "name": "Warden of Tor Yvresse",
-      "description": "\"Pointy-ead'' is legendary among the Greenskins, who both fear and respect his martial prowess.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "general_ability.png",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "Passive ability: \"Mistwalker Barrage\"",
-              "related_abilities": [
-                {
-                  "effect": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
-                  "bonus_value_id": "enable",
-                  "unit_ability": {
-                    "key": "wh2_dlc15_lord_passive_mistwalkers_barrage",
-                    "icon_name": "wh2_dlc15_lord_passive_mistwalkers_barrage",
-                    "overpower_option": "",
-                    "type": {
-                      "key": "wh_type_bombardment",
-                      "icon_path": "icon_spell_bombardment.png",
-                      "description": "Bombardment"
-                    },
-                    "is_hidden_in_ui": false,
-                    "description": "Mistwalkers' Barrage",
-                    "ui_effects": [
-                      {
-                        "key": "wh2_dlc15_bombardment_passive_melee",
-                        "sort_order": 1,
-                        "description": "➕ Enemies hit by bombardment in melee combat"
-                      },
-                      {
-                        "key": "wh_main_all_strong_against_multiple",
-                        "sort_order": 106,
-                        "description": "➕ Strong vs multiple combatants"
-                      },
-                      {
-                        "key": "wh2_main_all_weak_against_armour",
-                        "sort_order": 206,
-                        "description": "➖ Weak against armour"
-                      }
-                    ],
-                    "active_time": 3,
-                    "recharge_time": 30,
-                    "initial_recharge": 15,
-                    "passive": true,
-                    "effect_range": 0,
-                    "affect_self": true,
-                    "target_friends": false,
-                    "target_enemies": false,
-                    "target_ground": false,
-                    "target_intercept_range": 0,
-                    "target_self": false,
-                    "phases": [
-                      {
-                        "duration": 3,
-                        "effect_type": "positive",
-                        "recharge_time": -1,
-                        "is_hidden_in_ui": false
-                      }
-                    ]
-                  }
-                }
-              ],
-              "key": "wh2_dlc15_effect_ability_enable_mistwalker_barrage",
-              "value": 1
-            },
-            {
-              "icon": "disaster.png",
-              "priority": 56,
-              "is_positive_value_good": true,
-              "description": "Immune to Barren Wasteland attrition",
-              "key": "wh_dlc07_effect_attrition_immunity_badlands",
-              "value": 1
-            },
-            {
-              "icon": "morale.png",
-              "priority": 61,
-              "is_positive_value_good": true,
-              "description": "Leadership: +8 for Spear Infantry and Ranger units",
-              "key": "wh2_dlc15_hef_morale_spear_infantry_rangers",
-              "value": 8
-            },
-            {
-              "icon": "defence.png",
-              "priority": 108,
-              "is_positive_value_good": true,
-              "description": "Melee defence: +8 for Spear Infantry and Rangers units",
-              "key": "wh2_dlc15_hef_melee_defence_spear_infantry_rangers",
-              "value": 8
-            },
-            {
-              "icon": "attribute_causes_fear.png",
-              "priority": 620,
-              "is_positive_value_good": true,
-              "description": "Attribute: Causes Fear when fighting against Greenskins",
-              "key": "wh2_main_effect_cause_fear_versus_grn",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_eltharion",
-      "character_skill_key": "wh2_dlc15_skill_innate_hef_eltharion",
-      "tier": 0,
-      "indent": 6,
-      "points_on_creation": 1,
-      "required_num_parents": 0,
-      "visible_in_ui": false
     }
   ]
 }

@@ -3506,162 +3506,6 @@
           "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_3",
           "wh2_dlc15_skill_node_hef_eltharion_high_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_dlc15_skill_node_hef_eltharion_high_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": "[HIDDEN] Apotheosis and soul quench",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Apotheosis\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_apotheosis",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_high_magic_apotheosis",
-                      "icon_name": "wh2_main_spell_high_magic_apotheosis",
-                      "overpower_option": "wh2_main_spell_high_magic_apotheosis_upgraded",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Apotheosis",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_replenish",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Replenishes hit points of combatants"
-                        }
-                      ],
-                      "active_time": 10,
-                      "recharge_time": 29,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 5,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 10,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "attributes": [
-                            {
-                              "key": "causes_fear",
-                              "description": "Can  Cause Fear",
-                              "attribute_type": "positive"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_ability_enable_apotheosis",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Soul Quench\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_soul_quench",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_high_magic_soul_quench",
-                      "icon_name": "wh2_main_spell_high_magic_soul_quench",
-                      "overpower_option": "wh2_main_spell_high_magic_soul_quench_upgraded",
-                      "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Soul Quench",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_powerful_explosion",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Powerful explosion"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
-                          "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
-                        }
-                      ],
-                      "recharge_time": 43,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_ability_enable_soul_quench",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
-        "tier": 11,
-        "indent": 3,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -5151,6 +4995,163 @@
   ],
   "key": "hef_eltharion",
   "backgroundSkills": [
+    {
+      "key": "wh2_dlc15_skill_node_hef_eltharion_high_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": "[HIDDEN] Apotheosis and soul quench",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Apotheosis\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_enable_apotheosis",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_high_magic_apotheosis",
+                    "icon_name": "wh2_main_spell_high_magic_apotheosis",
+                    "overpower_option": "wh2_main_spell_high_magic_apotheosis_upgraded",
+                    "type": {
+                      "key": "wh_type_regeneration",
+                      "icon_path": "icon_spell_regeneration.png",
+                      "description": "Regeneration"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Apotheosis",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_replenish",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Replenishes hit points of combatants"
+                      }
+                    ],
+                    "active_time": 10,
+                    "recharge_time": 29,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 5,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 10,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_enable_apotheosis",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Soul Quench\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_enable_soul_quench",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_high_magic_soul_quench",
+                    "icon_name": "wh2_main_spell_high_magic_soul_quench",
+                    "overpower_option": "wh2_main_spell_high_magic_soul_quench_upgraded",
+                    "type": {
+                      "key": "wh_type_magic_missile",
+                      "icon_path": "icon_spell_magic_missile.png",
+                      "description": "Magic Missile"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Soul Quench",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_moderate",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes moderate magical damage"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_powerful_explosion",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Powerful explosion"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_effective_long_range",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Effective at long range"
+                      },
+                      {
+                        "key": "wh3_main_projectile_requires_line_of_sight",
+                        "sort_order": 215,
+                        "effect_state": "negative",
+                        "description": "Requires line of sight to the target"
+                      }
+                    ],
+                    "recharge_time": 43,
+                    "wind_up_time": 3,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 250,
+                    "mana_cost": 7,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_enable_soul_quench",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_eltharion",
+      "character_skill_key": "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
+      "tier": 11,
+      "indent": 3,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh2_dlc15_skill_node_hef_prince_eltharion_innate_01",
       "image_path": "trait_high_elves.png",

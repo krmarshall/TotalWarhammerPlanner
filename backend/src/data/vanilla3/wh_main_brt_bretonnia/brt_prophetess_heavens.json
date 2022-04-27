@@ -296,55 +296,7 @@
         "visible_in_ui": true
       }
     ],
-    [
-      {
-        "key": "wh_main_skill_node_brt_prophetess_heavens_vows_01",
-        "image_path": "wh_dlc07_character_knights_vow.png",
-        "is_background_skill": false,
-        "name": "Knight's Vow",
-        "description": "\"When the clarion call is sounded\\\\n I will ride out and fight in the name of Liege and Lady\\\\nWhilst I draw breath the lands bequeathed\\\\n unto me will remain untainted by evil\\\\n Honour is all, Chivalry is all...\"",
-        "character_skill_key": "wh_dlc07_skill_brt_knight_vow",
-        "tier": 1,
-        "indent": 1,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false,
-        "right_arrow": true
-      },
-      {
-        "key": "wh_main_skill_node_brt_prophetess_heavens_vows_02",
-        "image_path": "wh_dlc07_character_questing_vow.png",
-        "is_background_skill": false,
-        "name": "Questing Vow",
-        "description": "\"I set down my lance, symbol of duty\\\\nI spurn those whom I love\\\\nI relinquish all and take up the tools of my quest\\\\nNo obstacle will stand before me\\\\nNo plea for help shall find me waiting\\\\nNo moon will look upon me twice lest I be judged idle\\\\nI give my body, heart and soul to the Lady whom I seek...\"",
-        "character_skill_key": "wh_dlc07_skill_brt_questing_vow",
-        "tier": 2,
-        "indent": 1,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false,
-        "parent_required": [
-          "wh_main_skill_node_brt_prophetess_heavens_vows_01"
-        ],
-        "right_arrow": true
-      },
-      {
-        "key": "wh_main_skill_node_brt_prophetess_heavens_vows_03",
-        "image_path": "wh_dlc07_character_grail_vow.png",
-        "is_background_skill": false,
-        "name": "Grail Vow",
-        "description": "\"That which is sacrosanct I shall preserve\\\\n That which is sublime I will protect\\\\nThat which threatens I will destroy\\\\nFor my holy wrath will know no bounds...\"",
-        "character_skill_key": "wh_dlc07_skill_brt_grail_vow",
-        "tier": 3,
-        "indent": 1,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false,
-        "parent_required": [
-          "wh_main_skill_node_brt_prophetess_heavens_vows_02"
-        ]
-      }
-    ],
+    [],
     [],
     [
       {
@@ -2487,142 +2439,6 @@
           "wh_dlc07_skill_node_brt_prophetess_heavens_magic_09",
           "wh_dlc07_skill_node_brt_prophetess_heavens_magic_10"
         ]
-      },
-      {
-        "key": "wh_dlc07_skill_node_brt_prophetess_heavens_magic_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Harmonic Convergence [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Harmonic Convergence\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_harmonic_convergence",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_heavens_harmonic_convergence",
-                      "icon_name": "wh_main_spell_heavens_harmonic_convergence",
-                      "overpower_option": "wh_main_spell_heavens_harmonic_convergence_upgraded",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Harmonic Convergence",
-                      "active_time": 22,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 6,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 22,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 24,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+24 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 24,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+24 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_harmonic_convergence",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Wind Blast\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_wind_blast",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_heavens_wind_blast",
-                      "icon_name": "wh_main_spell_heavens_wind_blast",
-                      "overpower_option": "wh_main_spell_heavens_wind_blast_upgraded",
-                      "type": {
-                        "key": "wh_type_breath",
-                        "icon_path": "icon_spell_breath.png",
-                        "description": "Breath"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Wind Blast",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_vortex_large_breath",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Expanding tear-shaped attack"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_units",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple units"
-                        }
-                      ],
-                      "active_time": 6,
-                      "recharge_time": 32,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 8,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_wind_blast",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_heavens_dummy_harmonic_convergence_wind_blast",
-        "tier": 11,
-        "indent": 3,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -4371,6 +4187,193 @@
       "points_on_creation": 0,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_brt_prophetess_heavens_magic_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Harmonic Convergence [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Harmonic Convergence\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_harmonic_convergence",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_heavens_harmonic_convergence",
+                    "icon_name": "wh_main_spell_heavens_harmonic_convergence",
+                    "overpower_option": "wh_main_spell_heavens_harmonic_convergence_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Harmonic Convergence",
+                    "active_time": 22,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 6,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 22,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 24,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "+24 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 24,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "+24 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_harmonic_convergence",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Wind Blast\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_wind_blast",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_heavens_wind_blast",
+                    "icon_name": "wh_main_spell_heavens_wind_blast",
+                    "overpower_option": "wh_main_spell_heavens_wind_blast_upgraded",
+                    "type": {
+                      "key": "wh_type_breath",
+                      "icon_path": "icon_spell_breath.png",
+                      "description": "Breath"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Wind Blast",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_vortex_large_breath",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Expanding tear-shaped attack"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_units",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple units"
+                      }
+                    ],
+                    "active_time": 6,
+                    "recharge_time": 32,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 8,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_wind_blast",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+      "character_skill_key": "wh2_main_skill_all_magic_heavens_dummy_harmonic_convergence_wind_blast",
+      "tier": 11,
+      "indent": 3,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_brt_prophetess_heavens_vows_01",
+      "image_path": "wh_dlc07_character_knights_vow.png",
+      "is_background_skill": false,
+      "name": "Knight's Vow",
+      "description": "\"When the clarion call is sounded\\\\n I will ride out and fight in the name of Liege and Lady\\\\nWhilst I draw breath the lands bequeathed\\\\n unto me will remain untainted by evil\\\\n Honour is all, Chivalry is all...\"",
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+      "character_skill_key": "wh_dlc07_skill_brt_knight_vow",
+      "tier": 1,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false,
+      "right_arrow": true
+    },
+    {
+      "key": "wh_main_skill_node_brt_prophetess_heavens_vows_02",
+      "image_path": "wh_dlc07_character_questing_vow.png",
+      "is_background_skill": false,
+      "name": "Questing Vow",
+      "description": "\"I set down my lance, symbol of duty\\\\nI spurn those whom I love\\\\nI relinquish all and take up the tools of my quest\\\\nNo obstacle will stand before me\\\\nNo plea for help shall find me waiting\\\\nNo moon will look upon me twice lest I be judged idle\\\\nI give my body, heart and soul to the Lady whom I seek...\"",
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+      "character_skill_key": "wh_dlc07_skill_brt_questing_vow",
+      "tier": 2,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false,
+      "parent_required": [
+        "wh_main_skill_node_brt_prophetess_heavens_vows_01"
+      ],
+      "right_arrow": true
+    },
+    {
+      "key": "wh_main_skill_node_brt_prophetess_heavens_vows_03",
+      "image_path": "wh_dlc07_character_grail_vow.png",
+      "is_background_skill": false,
+      "name": "Grail Vow",
+      "description": "\"That which is sacrosanct I shall preserve\\\\n That which is sublime I will protect\\\\nThat which threatens I will destroy\\\\nFor my holy wrath will know no bounds...\"",
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+      "character_skill_key": "wh_dlc07_skill_brt_grail_vow",
+      "tier": 3,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false,
+      "parent_required": [
+        "wh_main_skill_node_brt_prophetess_heavens_vows_02"
+      ]
     }
   ]
 }

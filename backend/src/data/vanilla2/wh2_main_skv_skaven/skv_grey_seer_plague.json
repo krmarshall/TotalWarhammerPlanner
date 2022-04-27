@@ -2337,137 +2337,6 @@
           "wh2_main_skill_node_skv_grey_seer_plague_magic_3_3",
           "wh2_main_skill_node_skv_grey_seer_plague_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_main_skill_node_skv_grey_seer_plague_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": "[HIDDEN] Pestilent Breath",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Bless with Filth\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_magic_plague_enable_bless_with_filth",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_plague_bless_with_filth",
-                      "icon_name": "wh2_main_spell_plague_bless_with_filth",
-                      "overpower_option": "wh2_main_spell_plague_bless_with_filth_upgraded",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Bless with Filth",
-                      "active_time": 22,
-                      "recharge_time": 29,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 40,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 4,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 22,
-                          "effect_type": "positive",
-                          "imbue_contact": "wh_main_unit_contact_poison",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_magic_plague_enable_bless_with_filth",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Pestilent Breath\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_magic_plague_enable_pestilent_breath",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_plague_pestilent_breath",
-                      "icon_name": "wh2_main_spell_plague_pestilent_breath",
-                      "overpower_option": "wh2_main_spell_plague_pestilent_breath_upgraded",
-                      "type": {
-                        "key": "wh_type_breath",
-                        "icon_path": "icon_spell_breath.png",
-                        "description": "Breath"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Pestilent Breath",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "description": "➕ Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh_main_all_can_disrupt_formation",
-                          "sort_order": 105,
-                          "description": "➕ Can disrupt unit formation"
-                        },
-                        {
-                          "key": "wh_main_vortex_large_breath",
-                          "sort_order": 105,
-                          "description": "➕ Expanding tear-shaped attack"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_units",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh2_main_all_weak_against_armour",
-                          "sort_order": 206,
-                          "description": "➖ Weak against armour"
-                        }
-                      ],
-                      "active_time": 8,
-                      "recharge_time": 32,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 8,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_magic_plague_enable_pestilent_breath",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_plague_dummy_pestilent_breath_bless_with_filth",
-        "tier": 11,
-        "indent": 3,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -4510,6 +4379,138 @@
       "tier": 13,
       "indent": 6,
       "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_grey_seer_plague_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": "[HIDDEN] Pestilent Breath",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Bless with Filth\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_magic_plague_enable_bless_with_filth",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_plague_bless_with_filth",
+                    "icon_name": "wh2_main_spell_plague_bless_with_filth",
+                    "overpower_option": "wh2_main_spell_plague_bless_with_filth_upgraded",
+                    "type": {
+                      "key": "wh_type_area_of_augments",
+                      "icon_path": "icon_spell_area_of_augments.png",
+                      "description": "Augment (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Bless with Filth",
+                    "active_time": 22,
+                    "recharge_time": 29,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 40,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 4,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 22,
+                        "effect_type": "positive",
+                        "imbue_contact": "wh_main_unit_contact_poison",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_magic_plague_enable_bless_with_filth",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Pestilent Breath\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_magic_plague_enable_pestilent_breath",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_plague_pestilent_breath",
+                    "icon_name": "wh2_main_spell_plague_pestilent_breath",
+                    "overpower_option": "wh2_main_spell_plague_pestilent_breath_upgraded",
+                    "type": {
+                      "key": "wh_type_breath",
+                      "icon_path": "icon_spell_breath.png",
+                      "description": "Breath"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Pestilent Breath",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_moderate",
+                        "sort_order": 104,
+                        "description": "➕ Causes moderate magical damage"
+                      },
+                      {
+                        "key": "wh_main_all_can_disrupt_formation",
+                        "sort_order": 105,
+                        "description": "➕ Can disrupt unit formation"
+                      },
+                      {
+                        "key": "wh_main_vortex_large_breath",
+                        "sort_order": 105,
+                        "description": "➕ Expanding tear-shaped attack"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_units",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple units"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      }
+                    ],
+                    "active_time": 8,
+                    "recharge_time": 32,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 8,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_magic_plague_enable_pestilent_breath",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_grey_seer_plague",
+      "character_skill_key": "wh2_main_skill_all_magic_plague_dummy_pestilent_breath_bless_with_filth",
+      "tier": 11,
+      "indent": 3,
+      "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

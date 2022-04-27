@@ -3584,177 +3584,6 @@
           "wh_dlc07_skill_node_chs_sorcerer_lord_shadow_magic_09",
           "wh_dlc07_skill_node_chs_sorcerer_lord_shadow_magic_10"
         ]
-      },
-      {
-        "key": "wh_dlc07_skill_node_chs_sorcerer_lord_shadow_magic_dummy",
-        "image_path": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma.png",
-        "is_background_skill": false,
-        "name": "Mystifying Miasma [HIDDEN]",
-        "description": "The caster weaves a confounding fog that numbs and deludes enemies, causing them to stumble and stagger.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"The Enfeebling Foe\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_magic_shadow_enfeebling_foe",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_shadow_the_enfeebling_foe",
-                      "icon_name": "wh_dlc05_spell_shadow_the_enfeebling_foe",
-                      "overpower_option": "wh_dlc05_spell_shadow_the_enfeebling_foe_upgraded",
-                      "type": {
-                        "key": "wh_type_hex",
-                        "icon_path": "icon_spell_hex.png",
-                        "description": "Hex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Enfeebling Foe",
-                      "active_time": 25,
-                      "recharge_time": 35,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 6,
-                      "miscast_chance": 0.3,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 25,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -35,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-35 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": -35,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "-35 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_magic_shadow_enfeebling_foe",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Melkoth's Mystifying Miasma\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_magic_shadow_melkoths_mystifying_miasma",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma",
-                      "icon_name": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma",
-                      "overpower_option": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma_upgraded",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Melkoth's Mystifying Miasma",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma",
-                          "sort_order": 1,
-                          "description": "➕ 25% chance to deal 7 direct damage to 18 entities per second"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs a single combatant"
-                        }
-                      ],
-                      "active_time": 15,
-                      "recharge_time": 35,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 100,
-                      "mana_cost": 8,
-                      "miscast_chance": 0.3,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.8 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": -25,
-                              "stat": "stat_reloading",
-                              "how": "add",
-                              "description": "-25 Reload Skill",
-                              "sort_order": 8,
-                              "icon": "icon_stat_reload_time.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_magic_shadow_melkoths_mystifying_miasma",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_magic_shadow_mystifying_miasma_enfeebling_foe",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -6259,6 +6088,178 @@
       "tier": 12,
       "indent": 6,
       "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_sorcerer_lord_shadow_magic_dummy",
+      "image_path": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma.png",
+      "is_background_skill": false,
+      "name": "Mystifying Miasma [HIDDEN]",
+      "description": "The caster weaves a confounding fog that numbs and deludes enemies, causing them to stumble and stagger.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"The Enfeebling Foe\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_shadow_enfeebling_foe",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_shadow_the_enfeebling_foe",
+                    "icon_name": "wh_dlc05_spell_shadow_the_enfeebling_foe",
+                    "overpower_option": "wh_dlc05_spell_shadow_the_enfeebling_foe_upgraded",
+                    "type": {
+                      "key": "wh_type_hex",
+                      "icon_path": "icon_spell_hex.png",
+                      "description": "Hex"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Enfeebling Foe",
+                    "active_time": 25,
+                    "recharge_time": 35,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 6,
+                    "miscast_chance": 0.3,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 25,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -35,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-35 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": -35,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "-35 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_shadow_enfeebling_foe",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Melkoth's Mystifying Miasma\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_shadow_melkoths_mystifying_miasma",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma",
+                    "icon_name": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma",
+                    "overpower_option": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma_upgraded",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Melkoth's Mystifying Miasma",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc05_spell_shadow_melkoths_mystifying_miasma",
+                        "sort_order": 1,
+                        "description": "➕ 25% chance to deal 7 direct damage to 18 entities per second"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      }
+                    ],
+                    "active_time": 15,
+                    "recharge_time": 35,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 100,
+                    "mana_cost": 8,
+                    "miscast_chance": 0.3,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.8 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": -25,
+                            "stat": "stat_reloading",
+                            "how": "add",
+                            "description": "-25 Reload Skill",
+                            "sort_order": 8,
+                            "icon": "icon_stat_reload_time.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_shadow_melkoths_mystifying_miasma",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_lord_shadow",
+      "character_skill_key": "wh2_main_skill_magic_shadow_mystifying_miasma_enfeebling_foe",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

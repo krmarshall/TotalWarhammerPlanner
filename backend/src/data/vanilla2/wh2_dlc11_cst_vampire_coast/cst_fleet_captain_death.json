@@ -3192,152 +3192,6 @@
           "wh2_dlc11_skill_node_cst_fleet_captain_death_magic_09",
           "wh2_dlc11_skill_node_cst_fleet_captain_death_magic_10"
         ]
-      },
-      {
-        "key": "wh2_dlc11_skill_node_cst_fleet_captain_death_magic_00_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Spirit Leech [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Aspect of the Dread Knight\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Aspect of the Dread Knight",
-                      "active_time": 16,
-                      "recharge_time": 29,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 4,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 16,
-                          "effect_type": "positive",
-                          "imbue_magical": true,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "attributes": [
-                            {
-                              "key": "causes_fear",
-                              "description": "Can  Cause Fear",
-                              "attribute_type": "positive"
-                            },
-                            {
-                              "key": "causes_terror",
-                              "description": "Can  Cause Terror",
-                              "attribute_type": "positive"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Spirit Leech\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_death_enable_spirit_leech",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_spirit_leech",
-                      "icon_name": "wh_main_spell_death_spirit_leech",
-                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Spirit Leech",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_resist",
-                          "sort_order": 201,
-                          "description": "➖ Chance opponent will resist damage"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_multiple",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs multiple combatants"
-                        }
-                      ],
-                      "active_time": 13,
-                      "recharge_time": 32,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 100,
-                      "mana_cost": 8,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 13,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_death_enable_spirit_leech",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
-        "tier": 11,
-        "indent": 3,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -3730,176 +3584,322 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc11_skill_dummy_agent_actions_fleet_captain_death",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Actions [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc11_effect_agent_action_enable_dignitary_hinder_settlement_establish_pirate_cove",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc11_effect_agent_action_enable_dignitary_hinder_settlement_treasure_hunt",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc11_effect_agent_action_enable_digtinary_assist_province_treasure",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc11_effect_agent_action_enable_digtinary_hinder_province_treasure",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc11_effect_agent_action_hinder_settlement_establish_pirate_cove_cost_mod_hidden",
-                "value": 300
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc12_agent_action_dignitary_discover_under_empire",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_agent_action_dignitary_hinder_army_assault_units",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_agent_action_dignitary_passive_spread_public_order",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_dignitary_assist_army_replenish_troops",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_dignitary_hinder_agent_wound",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
-                "value": -1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Hunger\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_the_hunger",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_lord_passive_the_hunger",
-                      "icon_name": "wh_main_lord_passive_the_hunger",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Hunger",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc15_heal_passive_4",
-                          "sort_order": 109,
-                          "description": "➕ Restores 4 Hit Points per second"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_the_hunger",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc11_skill_dummy_agent_actions_fleet_captain",
-        "tier": 0,
-        "indent": 8,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "cst_fleet_captain_death",
   "backgroundSkills": [
+    {
+      "key": "wh2_dlc11_skill_dummy_agent_actions_fleet_captain_death",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_enable_dignitary_hinder_settlement_establish_pirate_cove",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_enable_dignitary_hinder_settlement_treasure_hunt",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_enable_digtinary_assist_province_treasure",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_enable_digtinary_hinder_province_treasure",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_hinder_settlement_establish_pirate_cove_cost_mod_hidden",
+              "value": 300
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc12_agent_action_dignitary_discover_under_empire",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_agent_action_dignitary_hinder_army_assault_units",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_agent_action_dignitary_passive_spread_public_order",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_dignitary_assist_army_replenish_troops",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_dignitary_hinder_agent_wound",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+              "value": -1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"The Hunger\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_the_hunger",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_lord_passive_the_hunger",
+                    "icon_name": "wh_main_lord_passive_the_hunger",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_regeneration",
+                      "icon_path": "icon_spell_regeneration.png",
+                      "description": "Regeneration"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Hunger",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc15_heal_passive_4",
+                        "sort_order": 109,
+                        "description": "➕ Restores 4 Hit Points per second"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_the_hunger",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_fleet_captain_death",
+      "character_skill_key": "wh2_dlc11_skill_dummy_agent_actions_fleet_captain",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc11_skill_node_cst_fleet_captain_death_magic_00_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Spirit Leech [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Aspect of the Dread Knight\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Aspect of the Dread Knight",
+                    "active_time": 16,
+                    "recharge_time": 29,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 4,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 16,
+                        "effect_type": "positive",
+                        "imbue_magical": true,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          },
+                          {
+                            "key": "causes_terror",
+                            "description": "Can  Cause Terror",
+                            "attribute_type": "positive"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_death_enable_aspect_of_the_dreadknight",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Spirit Leech\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_death_enable_spirit_leech",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_spirit_leech",
+                    "icon_name": "wh_main_spell_death_spirit_leech",
+                    "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Spirit Leech",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_resist",
+                        "sort_order": 201,
+                        "description": "➖ Chance opponent will resist damage"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs multiple combatants"
+                      }
+                    ],
+                    "active_time": 13,
+                    "recharge_time": 32,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 100,
+                    "mana_cost": 8,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 13,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_death_enable_spirit_leech",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc11_skill_node_set_cst_fleet_captain_death",
+      "character_skill_key": "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
+      "tier": 11,
+      "indent": 3,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh2_dlc11_skill_node_set_cst_fleet_captain_death_innate_00",
       "image_path": "trait_vampire_counts.png",

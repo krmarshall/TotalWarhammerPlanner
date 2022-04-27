@@ -330,93 +330,6 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc15_skill_hef_archmage_life_innate_conduit",
-        "image_path": "wh_main_spell_heavens_urannons_thunderbolt.png",
-        "is_background_skill": false,
-        "name": "Conduit haver",
-        "description": "This character has arcane conduit innately.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Arcane Conduit\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_character_abilities_arcane_conduit",
-                      "icon_name": "wh_main_character_abilities_arcane_conduit",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment_of_the_winds",
-                        "icon_path": "icon_spell_augment_of_the_winds.png",
-                        "description": "Augment of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Arcane Conduit",
-                      "ui_effects": [
-                        {
-                          "key": "wh_mana_pool_15",
-                          "sort_order": 1,
-                          "description": "➕ Increase to power reserves by 15"
-                        },
-                        {
-                          "key": "wh_mana_rate_point15",
-                          "sort_order": 1,
-                          "description": "➕ Improves power recharge rate by 1 every 7 seconds"
-                        },
-                        {
-                          "key": "wh_main_all_improved_recharge_rate",
-                          "sort_order": 9999,
-                          "description": ""
-                        },
-                        {
-                          "key": "wh_main_all_increased_max_power",
-                          "sort_order": 9999,
-                          "description": ""
-                        }
-                      ],
-                      "active_time": 45,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "mana_regen_mod": 0.1,
-                          "mana_max_depletion_mod": 15,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_arcane_conduit",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_hef_archmage_innate_conduit",
-        "tier": 15,
-        "indent": 0,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -3705,163 +3618,6 @@
           "wh2_dlc15_skill_node_hef_archmage_life_magic_3_3",
           "wh2_dlc15_skill_node_hef_archmage_life_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_dlc15_skill_node_hef_archmage_life_magic_dummy",
-        "image_path": "wh_dlc05_spell_life_awakening_of_the_wood.png",
-        "is_background_skill": false,
-        "name": "[Hidden] Awakening of the Wood",
-        "description": "Trees live for thousands of years and have very long memories. When called to fight, centuries of pent-up wrath are unleashed.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Awakening of the Wood\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_life_awakening_of_the_wood",
-                      "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_explosion",
-                        "icon_path": "icon_spell_explosion.png",
-                        "description": "Explosion"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Awakening of the Wood",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_spell_life_awakening_of_the_wood",
-                          "sort_order": 1,
-                          "description": "➕ Deals 35 0 damage per second (15m)"
-                        },
-                        {
-                          "key": "wh2_main_all_magical_damage_minor",
-                          "sort_order": 104,
-                          "description": "➕ Causes magical damage"
-                        },
-                        {
-                          "key": "wh_main_vortex_large_static_aoe",
-                          "sort_order": 105,
-                          "description": "➕ Large explosion area"
-                        },
-                        {
-                          "key": "wh2_main_all_weak_against_armour",
-                          "sort_order": 206,
-                          "description": "➖ Weak against armour"
-                        }
-                      ],
-                      "active_time": 12,
-                      "recharge_time": 50,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 8,
-                      "miscast_chance": 0.3,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Earth Blood\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_magic_life_enable_earth_blood",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_life_earth_blood",
-                      "icon_name": "wh_dlc05_spell_life_earth_blood",
-                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
-                      "type": {
-                        "key": "wh_type_area_of_regeneration",
-                        "icon_path": "icon_spell_area_of_regeneration.png",
-                        "description": "Regeneration (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Earth Blood",
-                      "ui_effects": [
-                        {
-                          "key": "wh_heal_active_700",
-                          "sort_order": 1,
-                          "description": "➕ Restores up to 700 Hit Points"
-                        },
-                        {
-                          "key": "wh2_dlc15_heal_active_336",
-                          "sort_order": 108,
-                          "description": "Units won't regenerate if cap was reached"
-                        }
-                      ],
-                      "active_time": 7,
-                      "recharge_time": 40,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 30,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 8,
-                      "miscast_chance": 0.3,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 7,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -5,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-5 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 0.5,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.5 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_magic_life_enable_earth_blood",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_magic_life_wizard_awakening_of_the_wood_earth_blood_dummy",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -5662,84 +5418,256 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc15_skill_node_set_hef_archmage_life_innate_09",
-        "image_path": "trait_high_elves.png",
-        "is_background_skill": false,
-        "name": "Genius",
-        "description": "An individual of exceptional skill and worth; the very embodiment of sagacity.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "technology.png",
-                "priority": 60,
-                "is_positive_value_good": true,
-                "description": "Research rate: +10%",
-                "key": "wh_main_effect_technology_research_points",
-                "value": 10
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Hero action success chance: +25%",
-                "key": "wh_main_effect_agent_action_success_chance",
-                "value": 25
-              },
-              {
-                "icon": "agent.png",
-                "priority": 102,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -25%",
-                "key": "wh2_main_effect_agent_action_success_chance_enemies",
-                "value": -25
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_7_genius",
-        "tier": 8,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
-    ],
-    [
-      {
-        "key": "hef_skill_army_life",
-        "image_path": "campaign_experience.png",
-        "is_background_skill": false,
-        "name": "",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "hef_army_life_enable",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "hef_skill_army_life",
-        "tier": 100,
-        "indent": 10,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "hef_archmage_life",
   "backgroundSkills": [
+    {
+      "key": "wh2_dlc15_skill_hef_archmage_life_innate_conduit",
+      "image_path": "wh_main_spell_heavens_urannons_thunderbolt.png",
+      "is_background_skill": false,
+      "name": "Conduit haver",
+      "description": "This character has arcane conduit innately.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Arcane Conduit\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_character_abilities_arcane_conduit",
+                    "icon_name": "wh_main_character_abilities_arcane_conduit",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment_of_the_winds",
+                      "icon_path": "icon_spell_augment_of_the_winds.png",
+                      "description": "Augment of the Winds"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Arcane Conduit",
+                    "ui_effects": [
+                      {
+                        "key": "wh_mana_pool_15",
+                        "sort_order": 1,
+                        "description": "➕ Increase to power reserves by 15"
+                      },
+                      {
+                        "key": "wh_mana_rate_point15",
+                        "sort_order": 1,
+                        "description": "➕ Improves power recharge rate by 1 every 7 seconds"
+                      },
+                      {
+                        "key": "wh_main_all_improved_recharge_rate",
+                        "sort_order": 9999,
+                        "description": ""
+                      },
+                      {
+                        "key": "wh_main_all_increased_max_power",
+                        "sort_order": 9999,
+                        "description": ""
+                      }
+                    ],
+                    "active_time": 45,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 45,
+                        "effect_type": "positive",
+                        "mana_regen_mod": 0.1,
+                        "mana_max_depletion_mod": 15,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_arcane_conduit",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_life",
+      "character_skill_key": "wh2_dlc15_skill_hef_archmage_innate_conduit",
+      "tier": 15,
+      "indent": 0,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_hef_archmage_life_magic_dummy",
+      "image_path": "wh_dlc05_spell_life_awakening_of_the_wood.png",
+      "is_background_skill": false,
+      "name": "[Hidden] Awakening of the Wood",
+      "description": "Trees live for thousands of years and have very long memories. When called to fight, centuries of pent-up wrath are unleashed.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Awakening of the Wood\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                    "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_explosion",
+                      "icon_path": "icon_spell_explosion.png",
+                      "description": "Explosion"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Awakening of the Wood",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                        "sort_order": 1,
+                        "description": "➕ Deals 35 0 damage per second (15m)"
+                      },
+                      {
+                        "key": "wh2_main_all_magical_damage_minor",
+                        "sort_order": 104,
+                        "description": "➕ Causes magical damage"
+                      },
+                      {
+                        "key": "wh_main_vortex_large_static_aoe",
+                        "sort_order": 105,
+                        "description": "➕ Large explosion area"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      }
+                    ],
+                    "active_time": 12,
+                    "recharge_time": 50,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 8,
+                    "miscast_chance": 0.3,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Earth Blood\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_life_enable_earth_blood",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_life_earth_blood",
+                    "icon_name": "wh_dlc05_spell_life_earth_blood",
+                    "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                    "type": {
+                      "key": "wh_type_area_of_regeneration",
+                      "icon_path": "icon_spell_area_of_regeneration.png",
+                      "description": "Regeneration (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Earth Blood",
+                    "ui_effects": [
+                      {
+                        "key": "wh_heal_active_700",
+                        "sort_order": 1,
+                        "description": "➕ Restores up to 700 Hit Points"
+                      },
+                      {
+                        "key": "wh2_dlc15_heal_active_336",
+                        "sort_order": 108,
+                        "description": "Units won't regenerate if cap was reached"
+                      }
+                    ],
+                    "active_time": 7,
+                    "recharge_time": 40,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 30,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 8,
+                    "miscast_chance": 0.3,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 7,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -5,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-5 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 0.5,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.5 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_life_enable_earth_blood",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_life",
+      "character_skill_key": "wh2_main_skill_magic_life_wizard_awakening_of_the_wood_earth_blood_dummy",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh2_dlc15_skill_node_set_hef_archmage_life_innate_01",
       "image_path": "trait_high_elves.png",
@@ -5975,6 +5903,50 @@
       "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_life",
       "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_3_thinker",
       "tier": 7,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_set_hef_archmage_life_innate_09",
+      "image_path": "trait_high_elves.png",
+      "is_background_skill": false,
+      "name": "Genius",
+      "description": "An individual of exceptional skill and worth; the very embodiment of sagacity.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "technology.png",
+              "priority": 60,
+              "is_positive_value_good": true,
+              "description": "Research rate: +10%",
+              "key": "wh_main_effect_technology_research_points",
+              "value": 10
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Hero action success chance: +25%",
+              "key": "wh_main_effect_agent_action_success_chance",
+              "value": 25
+            },
+            {
+              "icon": "agent.png",
+              "priority": 102,
+              "is_positive_value_good": false,
+              "description": "Enemy Hero action success chance: -25%",
+              "key": "wh2_main_effect_agent_action_success_chance_enemies",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_life",
+      "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_7_genius",
+      "tier": 8,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
@@ -7411,6 +7383,34 @@
       "tier": 26,
       "indent": 6,
       "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "hef_skill_army_life",
+      "image_path": "campaign_experience.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "hef_army_life_enable",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_life",
+      "character_skill_key": "hef_skill_army_life",
+      "tier": 100,
+      "indent": 10,
+      "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

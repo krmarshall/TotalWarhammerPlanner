@@ -2656,136 +2656,6 @@
           "wh3_main_skill_node_ksl_ice_witch_ice_magic_3_3",
           "wh3_main_skill_node_ksl_ice_witch_ice_magic_3_4"
         ]
-      },
-      {
-        "key": "wh3_main_skill_node_ksl_ice_witch_ice_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": " ",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Ice Maiden's Kiss\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh3_main_effect_ability_enable_ice_maidens_kiss",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh3_main_spell_ice_ice_maidens_kiss",
-                      "icon_name": "wh3_main_spell_ice_ice_maidens_kiss",
-                      "overpower_option": "wh3_main_spell_ice_ice_maidens_kiss_upgraded",
-                      "type": {
-                        "key": "wh_type_breath",
-                        "icon_path": "icon_spell_breath.png",
-                        "description": "Breath"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Ice Maiden's Kiss",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_vortex_large_breath_short",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Short, wide, expanding, tear-shaped attack"
-                        }
-                      ],
-                      "active_time": 15,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 6,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh3_main_effect_ability_enable_ice_maidens_kiss",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Ice Sheet\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh3_main_effect_ability_enable_ice_sheet",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh3_main_spell_ice_ice_sheet",
-                      "icon_name": "wh3_main_spell_ice_ice_sheet",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Ice Sheet",
-                      "active_time": 17,
-                      "recharge_time": 27,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 55,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 4,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 17,
-                          "effect_type": "negative",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_charge_speed",
-                              "how": "mult",
-                              "description": "x0.8 Charge Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.8 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh3_main_effect_ability_enable_ice_sheet",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh3_main_skill_ksl_magic_ice_dummy_ice_maidens_kiss_ice_sheet",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -4242,5 +4112,138 @@
       }
     ]
   ],
-  "key": "ksl_ice_witch_ice"
+  "key": "ksl_ice_witch_ice",
+  "backgroundSkills": [
+    {
+      "key": "wh3_main_skill_node_ksl_ice_witch_ice_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": " ",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Ice Maiden's Kiss\"",
+              "related_abilities": [
+                {
+                  "effect": "wh3_main_effect_ability_enable_ice_maidens_kiss",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh3_main_spell_ice_ice_maidens_kiss",
+                    "icon_name": "wh3_main_spell_ice_ice_maidens_kiss",
+                    "overpower_option": "wh3_main_spell_ice_ice_maidens_kiss_upgraded",
+                    "type": {
+                      "key": "wh_type_breath",
+                      "icon_path": "icon_spell_breath.png",
+                      "description": "Breath"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Ice Maiden's Kiss",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_vortex_large_breath_short",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Short, wide, expanding, tear-shaped attack"
+                      }
+                    ],
+                    "active_time": 15,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 6,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh3_main_effect_ability_enable_ice_maidens_kiss",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Ice Sheet\"",
+              "related_abilities": [
+                {
+                  "effect": "wh3_main_effect_ability_enable_ice_sheet",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh3_main_spell_ice_ice_sheet",
+                    "icon_name": "wh3_main_spell_ice_ice_sheet",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Ice Sheet",
+                    "active_time": 17,
+                    "recharge_time": 27,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 55,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 4,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 17,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_charge_speed",
+                            "how": "mult",
+                            "description": "x0.8 Charge Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.8 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh3_main_effect_ability_enable_ice_sheet",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_ice_witch_ice",
+      "character_skill_key": "wh3_main_skill_ksl_magic_ice_dummy_ice_maidens_kiss_ice_sheet",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
 }

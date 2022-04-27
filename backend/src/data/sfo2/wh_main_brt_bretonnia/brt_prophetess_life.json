@@ -421,53 +421,6 @@
     ],
     [
       {
-        "key": "wh_main_skill_node_brt_prophetess_life_vows_01",
-        "image_path": "wh_dlc07_character_knights_vow.png",
-        "is_background_skill": false,
-        "name": "Knight's Vow",
-        "description": "\"When the clarion call is sounded\\\\n I will ride out and fight in the name of Liege and Lady\\\\nWhilst I draw breath the lands bequeathed\\\\n unto me will remain untainted by evil\\\\n Honour is all, Chivalry is all...\"",
-        "character_skill_key": "wh_dlc07_skill_brt_knight_vow",
-        "tier": 1,
-        "indent": 1,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false,
-        "right_arrow": true
-      },
-      {
-        "key": "wh_main_skill_node_brt_prophetess_life_vows_02",
-        "image_path": "wh_dlc07_character_questing_vow.png",
-        "is_background_skill": false,
-        "name": "Questing Vow",
-        "description": "\"I set down my lance, symbol of duty\\\\nI spurn those whom I love\\\\nI relinquish all and take up the tools of my quest\\\\nNo obstacle will stand before me\\\\nNo plea for help shall find me waiting\\\\nNo moon will look upon me twice lest I be judged idle\\\\nI give my body, heart and soul to the Lady whom I seek...\"",
-        "character_skill_key": "wh_dlc07_skill_brt_questing_vow",
-        "tier": 2,
-        "indent": 1,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false,
-        "parent_required": [
-          "wh_main_skill_node_brt_prophetess_life_vows_01"
-        ],
-        "right_arrow": true
-      },
-      {
-        "key": "wh_main_skill_node_brt_prophetess_life_vows_03",
-        "image_path": "wh_dlc07_character_grail_vow.png",
-        "is_background_skill": false,
-        "name": "Grail Vow",
-        "description": "\"That which is sacrosanct I shall preserve\\\\n That which is sublime I will protect\\\\nThat which threatens I will destroy\\\\nFor my holy wrath will know no bounds...\"",
-        "character_skill_key": "wh_dlc07_skill_brt_grail_vow",
-        "tier": 3,
-        "indent": 1,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false,
-        "parent_required": [
-          "wh_main_skill_node_brt_prophetess_life_vows_02"
-        ]
-      },
-      {
         "key": "brt_prophet_life_brt_skill_8",
         "image_path": "Lys_1.png",
         "is_background_skill": false,
@@ -3527,163 +3480,6 @@
           "wh_dlc07_skill_node_brt_prophetess_life_magic_09",
           "wh_dlc07_skill_node_brt_prophetess_life_magic_10"
         ]
-      },
-      {
-        "key": "wh_dlc07_skill_node_brt_prophetess_life_magic1_dummy",
-        "image_path": "wh_dlc05_spell_life_awakening_of_the_wood.png",
-        "is_background_skill": false,
-        "name": "[Hidden] Awakening of the Wood",
-        "description": "Trees live for thousands of years and have very long memories. When called to fight, centuries of pent-up wrath are unleashed.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Awakening of the Wood\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_life_awakening_of_the_wood",
-                      "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_explosion",
-                        "icon_path": "icon_spell_explosion.png",
-                        "description": "Explosion"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Awakening of the Wood",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_spell_life_awakening_of_the_wood",
-                          "sort_order": 1,
-                          "description": "➕ Deals 35 0 damage per second (15m)"
-                        },
-                        {
-                          "key": "wh2_main_all_magical_damage_minor",
-                          "sort_order": 104,
-                          "description": "➕ Causes magical damage"
-                        },
-                        {
-                          "key": "wh_main_vortex_large_static_aoe",
-                          "sort_order": 105,
-                          "description": "➕ Large explosion area"
-                        },
-                        {
-                          "key": "wh2_main_all_weak_against_armour",
-                          "sort_order": 206,
-                          "description": "➖ Weak against armour"
-                        }
-                      ],
-                      "active_time": 12,
-                      "recharge_time": 50,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 8,
-                      "miscast_chance": 0.3,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
-                "value": 1
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Earth Blood\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_magic_life_enable_earth_blood",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_life_earth_blood",
-                      "icon_name": "wh_dlc05_spell_life_earth_blood",
-                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
-                      "type": {
-                        "key": "wh_type_area_of_regeneration",
-                        "icon_path": "icon_spell_area_of_regeneration.png",
-                        "description": "Regeneration (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Earth Blood",
-                      "ui_effects": [
-                        {
-                          "key": "wh_heal_active_700",
-                          "sort_order": 1,
-                          "description": "➕ Restores up to 700 Hit Points"
-                        },
-                        {
-                          "key": "wh2_dlc15_heal_active_336",
-                          "sort_order": 108,
-                          "description": "Units won't regenerate if cap was reached"
-                        }
-                      ],
-                      "active_time": 7,
-                      "recharge_time": 40,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 30,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 8,
-                      "miscast_chance": 0.3,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 7,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -5,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-5 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 0.5,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.5 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_magic_life_enable_earth_blood",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_magic_life_wizard_awakening_of_the_wood_earth_blood_dummy",
-        "tier": 11,
-        "indent": 3,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -5838,6 +5634,214 @@
       "points_on_creation": 0,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_brt_prophetess_life_magic1_dummy",
+      "image_path": "wh_dlc05_spell_life_awakening_of_the_wood.png",
+      "is_background_skill": false,
+      "name": "[Hidden] Awakening of the Wood",
+      "description": "Trees live for thousands of years and have very long memories. When called to fight, centuries of pent-up wrath are unleashed.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Awakening of the Wood\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                    "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_explosion",
+                      "icon_path": "icon_spell_explosion.png",
+                      "description": "Explosion"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Awakening of the Wood",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                        "sort_order": 1,
+                        "description": "➕ Deals 35 0 damage per second (15m)"
+                      },
+                      {
+                        "key": "wh2_main_all_magical_damage_minor",
+                        "sort_order": 104,
+                        "description": "➕ Causes magical damage"
+                      },
+                      {
+                        "key": "wh_main_vortex_large_static_aoe",
+                        "sort_order": 105,
+                        "description": "➕ Large explosion area"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      }
+                    ],
+                    "active_time": 12,
+                    "recharge_time": 50,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 8,
+                    "miscast_chance": 0.3,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+              "value": 1
+            },
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Earth Blood\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_life_enable_earth_blood",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_life_earth_blood",
+                    "icon_name": "wh_dlc05_spell_life_earth_blood",
+                    "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                    "type": {
+                      "key": "wh_type_area_of_regeneration",
+                      "icon_path": "icon_spell_area_of_regeneration.png",
+                      "description": "Regeneration (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Earth Blood",
+                    "ui_effects": [
+                      {
+                        "key": "wh_heal_active_700",
+                        "sort_order": 1,
+                        "description": "➕ Restores up to 700 Hit Points"
+                      },
+                      {
+                        "key": "wh2_dlc15_heal_active_336",
+                        "sort_order": 108,
+                        "description": "Units won't regenerate if cap was reached"
+                      }
+                    ],
+                    "active_time": 7,
+                    "recharge_time": 40,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 30,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 8,
+                    "miscast_chance": 0.3,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 7,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -5,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-5 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 0.5,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.5 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_life_enable_earth_blood",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_life",
+      "character_skill_key": "wh2_main_skill_magic_life_wizard_awakening_of_the_wood_earth_blood_dummy",
+      "tier": 11,
+      "indent": 3,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_brt_prophetess_life_vows_01",
+      "image_path": "wh_dlc07_character_knights_vow.png",
+      "is_background_skill": false,
+      "name": "Knight's Vow",
+      "description": "\"When the clarion call is sounded\\\\n I will ride out and fight in the name of Liege and Lady\\\\nWhilst I draw breath the lands bequeathed\\\\n unto me will remain untainted by evil\\\\n Honour is all, Chivalry is all...\"",
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_life",
+      "character_skill_key": "wh_dlc07_skill_brt_knight_vow",
+      "tier": 1,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false,
+      "right_arrow": true
+    },
+    {
+      "key": "wh_main_skill_node_brt_prophetess_life_vows_02",
+      "image_path": "wh_dlc07_character_questing_vow.png",
+      "is_background_skill": false,
+      "name": "Questing Vow",
+      "description": "\"I set down my lance, symbol of duty\\\\nI spurn those whom I love\\\\nI relinquish all and take up the tools of my quest\\\\nNo obstacle will stand before me\\\\nNo plea for help shall find me waiting\\\\nNo moon will look upon me twice lest I be judged idle\\\\nI give my body, heart and soul to the Lady whom I seek...\"",
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_life",
+      "character_skill_key": "wh_dlc07_skill_brt_questing_vow",
+      "tier": 2,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false,
+      "parent_required": [
+        "wh_main_skill_node_brt_prophetess_life_vows_01"
+      ],
+      "right_arrow": true
+    },
+    {
+      "key": "wh_main_skill_node_brt_prophetess_life_vows_03",
+      "image_path": "wh_dlc07_character_grail_vow.png",
+      "is_background_skill": false,
+      "name": "Grail Vow",
+      "description": "\"That which is sacrosanct I shall preserve\\\\n That which is sublime I will protect\\\\nThat which threatens I will destroy\\\\nFor my holy wrath will know no bounds...\"",
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_brt_prophetess_life",
+      "character_skill_key": "wh_dlc07_skill_brt_grail_vow",
+      "tier": 3,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false,
+      "parent_required": [
+        "wh_main_skill_node_brt_prophetess_life_vows_02"
+      ]
     }
   ]
 }

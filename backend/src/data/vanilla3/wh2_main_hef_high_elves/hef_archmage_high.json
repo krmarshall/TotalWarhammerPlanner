@@ -324,69 +324,6 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc15_skill_hef_archmage_high_innate_conduit",
-        "image_path": "wh_main_spell_heavens_urannons_thunderbolt.png",
-        "is_background_skill": false,
-        "name": "Conduit haver",
-        "description": "This character has arcane conduit innately.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 300,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Arcane Conduit\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_character_abilities_arcane_conduit",
-                      "icon_name": "wh_main_character_abilities_arcane_conduit",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment_of_the_winds",
-                        "icon_path": "icon_spell_augment_of_the_winds.png",
-                        "description": "Augment of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Arcane Conduit",
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "mana_regen_mod": 0.4,
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_arcane_conduit",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_hef_archmage_innate_conduit",
-        "tier": 15,
-        "indent": 0,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -3406,162 +3343,6 @@
           "wh2_dlc15_skill_node_hef_archmage_high_magic_3_3",
           "wh2_dlc15_skill_node_hef_archmage_high_magic_3_4"
         ]
-      },
-      {
-        "key": "wh2_dlc15_skill_node_hef_archmage_high_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": "[HIDDEN] Apotheosis and soul quench",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Apotheosis\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_apotheosis",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_high_magic_apotheosis",
-                      "icon_name": "wh2_main_spell_high_magic_apotheosis",
-                      "overpower_option": "wh2_main_spell_high_magic_apotheosis_upgraded",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Apotheosis",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_replenish",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Replenishes hit points of combatants"
-                        }
-                      ],
-                      "active_time": 10,
-                      "recharge_time": 29,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 5,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 10,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "attributes": [
-                            {
-                              "key": "causes_fear",
-                              "description": "Can  Cause Fear",
-                              "attribute_type": "positive"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_ability_enable_apotheosis",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Soul Quench\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_soul_quench",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_high_magic_soul_quench",
-                      "icon_name": "wh2_main_spell_high_magic_soul_quench",
-                      "overpower_option": "wh2_main_spell_high_magic_soul_quench_upgraded",
-                      "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Soul Quench",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_powerful_explosion",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Powerful explosion"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
-                          "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
-                        }
-                      ],
-                      "recharge_time": 43,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh2_main_effect_ability_enable_soul_quench",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -5006,55 +4787,231 @@
           "wh2_dlc15_skill_node_hef_archmage_high_campaign_3_4"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc15_skill_node_set_hef_archmage_high_innate_09",
-        "image_path": "trait_high_elves.png",
-        "is_background_skill": false,
-        "name": "Genius",
-        "description": "An individual of exceptional skill and worth; the very embodiment of sagacity.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "technology.png",
-                "priority": 60,
-                "is_positive_value_good": true,
-                "description": "Research rate: +10%",
-                "key": "wh_main_effect_technology_research_points",
-                "value": 10
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Hero action success chance: +25%",
-                "key": "wh_main_effect_agent_action_success_chance",
-                "value": 25
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -25%",
-                "key": "wh_main_effect_agent_action_success_chance_enemy",
-                "value": -25
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_7_genius",
-        "tier": 8,
-        "indent": 6,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "hef_archmage_high",
   "backgroundSkills": [
+    {
+      "key": "wh2_dlc15_skill_hef_archmage_high_innate_conduit",
+      "image_path": "wh_main_spell_heavens_urannons_thunderbolt.png",
+      "is_background_skill": false,
+      "name": "Conduit haver",
+      "description": "This character has arcane conduit innately.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 300,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Arcane Conduit\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_character_abilities_arcane_conduit",
+                    "icon_name": "wh_main_character_abilities_arcane_conduit",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment_of_the_winds",
+                      "icon_path": "icon_spell_augment_of_the_winds.png",
+                      "description": "Augment of the Winds"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Arcane Conduit",
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "mana_regen_mod": 0.4,
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_arcane_conduit",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_high",
+      "character_skill_key": "wh2_dlc15_skill_hef_archmage_innate_conduit",
+      "tier": 15,
+      "indent": 0,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_hef_archmage_high_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": "[HIDDEN] Apotheosis and soul quench",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Apotheosis\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_enable_apotheosis",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_high_magic_apotheosis",
+                    "icon_name": "wh2_main_spell_high_magic_apotheosis",
+                    "overpower_option": "wh2_main_spell_high_magic_apotheosis_upgraded",
+                    "type": {
+                      "key": "wh_type_regeneration",
+                      "icon_path": "icon_spell_regeneration.png",
+                      "description": "Regeneration"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Apotheosis",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_replenish",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Replenishes hit points of combatants"
+                      }
+                    ],
+                    "active_time": 10,
+                    "recharge_time": 29,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 5,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 10,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_enable_apotheosis",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Soul Quench\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_enable_soul_quench",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_main_spell_high_magic_soul_quench",
+                    "icon_name": "wh2_main_spell_high_magic_soul_quench",
+                    "overpower_option": "wh2_main_spell_high_magic_soul_quench_upgraded",
+                    "type": {
+                      "key": "wh_type_magic_missile",
+                      "icon_path": "icon_spell_magic_missile.png",
+                      "description": "Magic Missile"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Soul Quench",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_moderate",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes moderate magical damage"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_powerful_explosion",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Powerful explosion"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_projectile_effective_long_range",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Effective at long range"
+                      },
+                      {
+                        "key": "wh3_main_projectile_requires_line_of_sight",
+                        "sort_order": 215,
+                        "effect_state": "negative",
+                        "description": "Requires line of sight to the target"
+                      }
+                    ],
+                    "recharge_time": 43,
+                    "wind_up_time": 3,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 250,
+                    "mana_cost": 7,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_enable_soul_quench",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_high",
+      "character_skill_key": "wh2_main_skill_all_magic_high_dummy_apotheosis_soulquench",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh2_dlc15_skill_node_set_hef_archmage_high_innate_01",
       "image_path": "trait_high_elves.png",
@@ -5290,6 +5247,50 @@
       "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_high",
       "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_3_thinker",
       "tier": 7,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc15_skill_node_set_hef_archmage_high_innate_09",
+      "image_path": "trait_high_elves.png",
+      "is_background_skill": false,
+      "name": "Genius",
+      "description": "An individual of exceptional skill and worth; the very embodiment of sagacity.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "technology.png",
+              "priority": 60,
+              "is_positive_value_good": true,
+              "description": "Research rate: +10%",
+              "key": "wh_main_effect_technology_research_points",
+              "value": 10
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Hero action success chance: +25%",
+              "key": "wh_main_effect_agent_action_success_chance",
+              "value": 25
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Enemy Hero action success chance: -25%",
+              "key": "wh_main_effect_agent_action_success_chance_enemy",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc15_skill_node_set_hef_archmage_high",
+      "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_campaign_7_genius",
+      "tier": 8,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,

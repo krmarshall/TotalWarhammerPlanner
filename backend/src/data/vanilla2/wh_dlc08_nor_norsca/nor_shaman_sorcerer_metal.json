@@ -2596,85 +2596,6 @@
           "wh_dlc08_skill_node_nor_shaman_sorcerer_metal_magic_09",
           "wh_dlc08_skill_node_nor_shaman_sorcerer_metal_magic_10"
         ]
-      },
-      {
-        "key": "wh_dlc08_skill_node_nor_shaman_sorcerer_metal_magic_00_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Searing Doom [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "spell_ability.png",
-                "priority": 3,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Searing Doom\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_magic_metal_enable_searing_doom",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_metal_searing_doom",
-                      "icon_name": "wh_main_spell_metal_searing_doom",
-                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
-                      "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Searing Doom",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "description": "➕ Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "description": "➕ Medium strike area"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single unit"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs a single combatant"
-                        }
-                      ],
-                      "active_time": 9,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 6,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_magic_metal_enable_searing_doom",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_all_magic_metal_dummy_searing_doom",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -3044,95 +2965,174 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh_dlc08_skill_node_nor_shaman_sorcerer_metal_campaign_actions_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Actions [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_dlc12_agent_action_wizard_discover_under_empire",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_agent_wound",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_army_block_army",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[hidden]",
-                "key": "wh2_main_effect_agent_action_enable_wizard_passive_spread_corruption_chs",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "[HIDDEN] Corruption from character presence: +2",
-                "key": "wh_main_effect_character_passive_religious_conversion",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_dlc08_skill_all_dummy_agent_actions_nor_shaman_sorcerer",
-        "tier": 0,
-        "indent": 8,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "nor_shaman_sorcerer_metal",
   "backgroundSkills": [
+    {
+      "key": "wh_dlc08_skill_node_nor_shaman_sorcerer_metal_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc12_agent_action_wizard_discover_under_empire",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_agent_wound",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_army_block_army",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_wizard_passive_spread_corruption_chs",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[HIDDEN] Corruption from character presence: +2",
+              "key": "wh_main_effect_character_passive_religious_conversion",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_shaman_sorcerer_metal",
+      "character_skill_key": "wh_dlc08_skill_all_dummy_agent_actions_nor_shaman_sorcerer",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc08_skill_node_nor_shaman_sorcerer_metal_magic_00_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Searing Doom [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Searing Doom\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_magic_metal_enable_searing_doom",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_metal_searing_doom",
+                    "icon_name": "wh_main_spell_metal_searing_doom",
+                    "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
+                    "type": {
+                      "key": "wh_type_bombardment",
+                      "icon_path": "icon_spell_bombardment.png",
+                      "description": "Bombardment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Searing Doom",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_moderate",
+                        "sort_order": 104,
+                        "description": "➕ Causes moderate magical damage"
+                      },
+                      {
+                        "key": "wh2_main_bombardment_medium_strike_aoe",
+                        "sort_order": 105,
+                        "description": "➕ Medium strike area"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_unit",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single unit"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      }
+                    ],
+                    "active_time": 9,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 6,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_main_effect_magic_metal_enable_searing_doom",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_shaman_sorcerer_metal",
+      "character_skill_key": "wh_main_skill_all_magic_metal_dummy_searing_doom",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh_dlc08_skill_node_set_nor_shaman_sorcerer_metal_innate_01",
       "image_path": "trait_chaos.png",

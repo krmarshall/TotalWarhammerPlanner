@@ -2753,161 +2753,6 @@
           "wh2_dlc09_skill_tmb_khalida_campaign_9"
         ]
       }
-    ],
-    [
-      {
-        "key": "wh2_dlc09_skill_tmb_khalida_hidden",
-        "image_path": "character_general_ability.png",
-        "is_background_skill": false,
-        "name": "Khalida Ability [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Blessing of Asaph\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_blessing_of_asaph",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_character_passive_blessing_of_asaph",
-                      "icon_name": "wh2_dlc09_character_passive_blessing_of_asaph",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Blessing of Asaph",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_missile_damage_ap",
-                              "how": "mult",
-                              "description": "x1.1 Armour-Piercing Missile Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing_ranged.png"
-                            },
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_missile_damage_base",
-                              "how": "mult",
-                              "description": "x1.1 Base Missile Damage",
-                              "sort_order": 10,
-                              "icon": "icon_stat_ranged_damage_base.png"
-                            },
-                            {
-                              "value": 15,
-                              "stat": "stat_reloading",
-                              "how": "add",
-                              "description": "+15 Reload Skill",
-                              "sort_order": 8,
-                              "icon": "icon_stat_reload_time.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc09_effect_ability_enable_blessing_of_asaph",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Curse\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_curse",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_lord_passive_the_curse",
-                      "icon_name": "wh2_dlc09_lord_passive_the_curse",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Curse",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "description": "➕ Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_dlc06_automatic",
-                          "sort_order": 105,
-                          "description": "➕ Activates automatically when conditions are met"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "description": "➖ Weak vs a single combatant"
-                        }
-                      ],
-                      "num_uses": 1,
-                      "active_time": 15,
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc09_effect_ability_enable_curse",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_dlc09_skill_tmb_khalida_hidden",
-        "tier": 0,
-        "indent": 9,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "tmb_khalida",
@@ -2952,6 +2797,160 @@
       "character_skill_key": "wh2_dlc09_skill_innate_tmb_khalida",
       "tier": 0,
       "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc09_skill_tmb_khalida_hidden",
+      "image_path": "character_general_ability.png",
+      "is_background_skill": false,
+      "name": "Khalida Ability [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Blessing of Asaph\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc09_effect_ability_enable_blessing_of_asaph",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc09_character_passive_blessing_of_asaph",
+                    "icon_name": "wh2_dlc09_character_passive_blessing_of_asaph",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_augments",
+                      "icon_path": "icon_spell_area_of_augments.png",
+                      "description": "Augment (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Blessing of Asaph",
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 1.1,
+                            "stat": "scalar_missile_damage_ap",
+                            "how": "mult",
+                            "description": "x1.1 Armour-Piercing Missile Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing_ranged.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "scalar_missile_damage_base",
+                            "how": "mult",
+                            "description": "x1.1 Base Missile Damage",
+                            "sort_order": 10,
+                            "icon": "icon_stat_ranged_damage_base.png"
+                          },
+                          {
+                            "value": 15,
+                            "stat": "stat_reloading",
+                            "how": "add",
+                            "description": "+15 Reload Skill",
+                            "sort_order": 8,
+                            "icon": "icon_stat_reload_time.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc09_effect_ability_enable_blessing_of_asaph",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"The Curse\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc09_effect_ability_enable_curse",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc09_lord_passive_the_curse",
+                    "icon_name": "wh2_dlc09_lord_passive_the_curse",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Curse",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_dlc06_automatic",
+                        "sort_order": 105,
+                        "description": "➕ Activates automatically when conditions are met"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 15,
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc09_effect_ability_enable_curse",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc09_skill_node_set_tmb_khalida",
+      "character_skill_key": "wh2_dlc09_skill_tmb_khalida_hidden",
+      "tier": 0,
+      "indent": 9,
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false

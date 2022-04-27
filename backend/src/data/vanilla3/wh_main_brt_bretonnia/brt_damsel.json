@@ -2465,90 +2465,6 @@
           "wh_main_skill_node_brt_damsel_magic1_09",
           "wh_main_skill_node_brt_damsel_magic1_10"
         ]
-      },
-      {
-        "key": "wh_main_skill_node_brt_damsel_magic1_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Harmonic Convergence [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Harmonic Convergence\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_harmonic_convergence",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_heavens_harmonic_convergence",
-                      "icon_name": "wh_main_spell_heavens_harmonic_convergence",
-                      "overpower_option": "wh_main_spell_heavens_harmonic_convergence_upgraded",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Harmonic Convergence",
-                      "active_time": 22,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 6,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 22,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 24,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+24 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 24,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+24 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_harmonic_convergence",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_all_magic_heavens_dummy_harmonic_convergence",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [],
@@ -2918,87 +2834,86 @@
         "required_num_parents": 0,
         "visible_in_ui": true
       }
-    ],
-    [
-      {
-        "key": "wh_main_skill_node_brt_damsel_campaign_actions_dummy",
-        "image_path": "battle_attack.png",
-        "is_background_skill": false,
-        "name": "Actions [HIDDEN]",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_agent_wound",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_army_block_army",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
-                "value": 1
-              },
-              {
-                "icon": "",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "",
-                "key": "wh2_main_effect_agent_action_enable_wizard_passive_spread_corruption",
-                "value": 1
-              },
-              {
-                "icon": "corruption.png",
-                "priority": 0,
-                "is_positive_value_good": false,
-                "description": "Corruption: -2",
-                "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
-                "value": -2
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_all_dummy_agent_actions_brt_damsel",
-        "tier": 0,
-        "indent": 8,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
-      }
     ]
   ],
   "key": "brt_damsel",
   "backgroundSkills": [
+    {
+      "key": "wh_main_skill_node_brt_damsel_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_agent_wound",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_army_block_army",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_passive_spread_corruption",
+              "value": 1
+            },
+            {
+              "icon": "corruption.png",
+              "priority": 0,
+              "is_positive_value_good": false,
+              "description": "Corruption: -2",
+              "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
+              "value": -2
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_brt_damsel",
+      "character_skill_key": "wh2_main_skill_all_dummy_agent_actions_brt_damsel",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
     {
       "key": "wh_main_skill_node_brt_damsel_innate_02",
       "image_path": "trait_personality.png",
@@ -3348,6 +3263,91 @@
       "tier": 9,
       "indent": 6,
       "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_brt_damsel_magic1_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Harmonic Convergence [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Harmonic Convergence\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_harmonic_convergence",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_heavens_harmonic_convergence",
+                    "icon_name": "wh_main_spell_heavens_harmonic_convergence",
+                    "overpower_option": "wh_main_spell_heavens_harmonic_convergence_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Harmonic Convergence",
+                    "active_time": 22,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 6,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 22,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 24,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "+24 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 24,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "+24 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_harmonic_convergence",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_brt_damsel",
+      "character_skill_key": "wh_main_skill_all_magic_heavens_dummy_harmonic_convergence",
+      "tier": 11,
+      "indent": 2,
+      "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

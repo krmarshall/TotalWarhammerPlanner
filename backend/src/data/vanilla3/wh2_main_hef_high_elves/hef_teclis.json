@@ -2382,163 +2382,6 @@
           "wh2_main_skill_node_hef_teclis_magic_1_4",
           "wh2_main_skill_node_hef_teclis_magic_1_5"
         ]
-      },
-      {
-        "key": "wh2_main_skill_node_hef_teclis_magic_dummy",
-        "image_path": "trait_human.png",
-        "is_background_skill": false,
-        "name": "Flock of Doom",
-        "description": "With a mighty bellow, the caster invokes Corvus the Crow Lord, summoning his servants to peck at the foe's eyes.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Flock of Doom\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc03_effect_ability_enable_flock_of_doom",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc03_spell_beasts_flock_of_doom",
-                      "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
-                      "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
-                      "type": {
-                        "key": "wh_type_area_of_direct_damage",
-                        "icon_path": "icon_spell_area_of_direct_damage.png",
-                        "description": "Direct Damage (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Flock of Doom",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_dlc08_direct_damage_medium_unit",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Strong vs 25 men unit or above"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
-                        }
-                      ],
-                      "active_time": 7,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 35,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "mana_cost": 6,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 7,
-                          "effect_type": "negative",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc03_effect_ability_enable_flock_of_doom",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"The Enfeebling Foe\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc05_effect_ability_enable_enfeebling_foe",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_spell_shadow_the_enfeebling_foe",
-                      "icon_name": "wh_dlc05_spell_shadow_the_enfeebling_foe",
-                      "overpower_option": "wh_dlc05_spell_shadow_the_enfeebling_foe_upgraded",
-                      "type": {
-                        "key": "wh_type_hex",
-                        "icon_path": "icon_spell_hex.png",
-                        "description": "Hex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Enfeebling Foe",
-                      "active_time": 17,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 6,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 17,
-                          "effect_type": "negative",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": -24,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-24 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": -24,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "-24 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_dlc05_effect_ability_enable_enfeebling_foe",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_magic_dark_flock_of_doom_teclis_dummy",
-        "tier": 11,
-        "indent": 2,
-        "points_on_creation": 1,
-        "required_num_parents": 0,
-        "visible_in_ui": false
       }
     ],
     [
@@ -4918,6 +4761,164 @@
       "character_skill_key": "wh2_main_skill_innate_hef_teclis_preeminent_mage",
       "tier": 0,
       "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_hef_teclis_magic_dummy",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": "Flock of Doom",
+      "description": "With a mighty bellow, the caster invokes Corvus the Crow Lord, summoning his servants to peck at the foe's eyes.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Flock of Doom\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc03_effect_ability_enable_flock_of_doom",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc03_spell_beasts_flock_of_doom",
+                    "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
+                    "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Flock of Doom",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_dlc08_direct_damage_medium_unit",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Strong vs 25 men unit or above"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "effect_state": "negative",
+                        "description": "Weak vs a single combatant"
+                      }
+                    ],
+                    "active_time": 7,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 35,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "mana_cost": 6,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 7,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc03_effect_ability_enable_flock_of_doom",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"The Enfeebling Foe\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_ability_enable_enfeebling_foe",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_shadow_the_enfeebling_foe",
+                    "icon_name": "wh_dlc05_spell_shadow_the_enfeebling_foe",
+                    "overpower_option": "wh_dlc05_spell_shadow_the_enfeebling_foe_upgraded",
+                    "type": {
+                      "key": "wh_type_hex",
+                      "icon_path": "icon_spell_hex.png",
+                      "description": "Hex"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "The Enfeebling Foe",
+                    "active_time": 17,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 6,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 17,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": -24,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-24 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": -24,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "-24 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_ability_enable_enfeebling_foe",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_hef_teclis",
+      "character_skill_key": "wh2_main_skill_magic_dark_flock_of_doom_teclis_dummy",
+      "tier": 11,
+      "indent": 2,
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
