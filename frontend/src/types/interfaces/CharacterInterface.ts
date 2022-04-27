@@ -98,12 +98,13 @@ interface SkillInterface {
 
 interface ItemInterface {
   key: string;
-  type: string;
+  type?: string;
   effects?: Array<SkillEffectInterface>;
   name: string;
   description: string;
-  unlocked_at_rank: number;
-  instant: boolean;
+  image_path: string;
+  unlocked_at_rank?: number;
+  instant?: boolean;
 }
 
 interface CharacterInterface {
@@ -114,6 +115,7 @@ interface CharacterInterface {
 
 export type {
   CharacterInterface,
+  ItemInterface,
   SkillInterface,
   SkillLevelInterface,
   SkillEffectInterface,

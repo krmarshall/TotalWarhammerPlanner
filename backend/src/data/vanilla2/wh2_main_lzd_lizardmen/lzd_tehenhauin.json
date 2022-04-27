@@ -2,102 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc12_skill_lzd_tehenhauin_enchanted_item_plaque_of_sotek",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "Plaque of Sotek",
-        "description": "Upon this stone plaque is inscribed an extract of the Prophecy of Sotek that grants additional warding to Tehenhauin.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +3",
-                "value": 3,
-                "key": "wh_main_effect_public_order_characters"
-              },
-              {
-                "icon": "magic.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic starting amount: +15",
-                "value": 15,
-                "key": "wh_main_effect_military_force_winds_of_magic_starting_mod"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Plaque of Sotek\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc12_effect_ability_enable_plaque_of_sotek",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc12_item_passive_plaque_of_sotek",
-                      "icon_name": "wh_magic_item_passive_arcane",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_ward_save",
-                        "icon_path": "icon_spell_ward_save.png",
-                        "description": "Ward Save"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Plaque of Sotek",
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 21,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 12,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+12 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            },
-                            {
-                              "value": 20,
-                              "stat": "stat_resistance_all",
-                              "how": "add",
-                              "description": "+20 Damage Resistance ",
-                              "sort_order": 10,
-                              "icon": "resistance_ward_save.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc12_effect_ability_enable_plaque_of_sotek"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc12_skill_lzd_tehenhauin_quest_1",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc12_skill_node_lzd_tehenhauin_mount_01",
         "image_path": "mount_horned_one.png",
         "is_background_skill": false,
@@ -5161,5 +5065,91 @@
     ],
     []
   ],
-  "key": "lzd_tehenhauin"
+  "key": "lzd_tehenhauin",
+  "items": [
+    {
+      "key": "wh2_dlc12_skill_lzd_tehenhauin_enchanted_item_plaque_of_sotek",
+      "image_path": "item_enchanted_item.png",
+      "name": "Plaque of Sotek",
+      "description": "Upon this stone plaque is inscribed an extract of the Prophecy of Sotek that grants additional warding to Tehenhauin.",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Public order: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "magic.png",
+          "priority": 15,
+          "is_positive_value_good": true,
+          "description": "Winds of Magic starting amount: +15",
+          "value": 15,
+          "key": "wh_main_effect_military_force_winds_of_magic_starting_mod"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Plaque of Sotek\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc12_effect_ability_enable_plaque_of_sotek",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc12_item_passive_plaque_of_sotek",
+                "icon_name": "wh_magic_item_passive_arcane",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_ward_save",
+                  "icon_path": "icon_spell_ward_save.png",
+                  "description": "Ward Save"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Plaque of Sotek",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 21,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 12,
+                        "stat": "stat_morale",
+                        "how": "add",
+                        "description": "+12 Leadership",
+                        "sort_order": 1,
+                        "icon": "icon_stat_morale.png"
+                      },
+                      {
+                        "value": 20,
+                        "stat": "stat_resistance_all",
+                        "how": "add",
+                        "description": "+20 Damage Resistance ",
+                        "sort_order": 10,
+                        "icon": "resistance_ward_save.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc12_effect_ability_enable_plaque_of_sotek"
+        }
+      ]
+    }
+  ]
 }

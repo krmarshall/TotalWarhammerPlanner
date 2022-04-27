@@ -2,93 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc09_skill_node_tmb_khatep_quest_1",
-        "image_path": "item_arcane_item.png",
-        "is_background_skill": false,
-        "name": "The Liche Staff",
-        "description": "All of Nehekhara's gods and goddesses are inscribed along the ancient copper staff, granting Khatep mastery over their latent magical power.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "item_ability.png",
-                "priority": 8,
-                "is_positive_value_good": true,
-                "description": "Magic item drop chance: +60%",
-                "value": 60,
-                "key": "wh_main_effect_character_mod_ancillary_drop"
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 8,
-                "is_positive_value_good": false,
-                "description": "Miscast base chance: -15%",
-                "value": -15,
-                "key": "wh_main_effect_character_stat_mod_miscast_chance"
-              },
-              {
-                "icon": "religion.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Untainted: +5",
-                "value": 5,
-                "key": "wh_main_effect_religion_conversion_untainted"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Liche Staff\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_the_liche_staff",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_weapon_passive_the_liche_staff",
-                      "icon_name": "wh_magic_item_passive_weapon",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Liche Staff",
-                      "passive": true,
-                      "effect_range": -1,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "ability_recharge_change": 15,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc09_effect_ability_enable_the_liche_staff"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc09_skill_tmb_lord_unique_khatep_the_liche_staff",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc09_skill_tmb_khatep_mount_skeletal_steed",
         "image_path": "mount_skeletal_steed_tmb.png",
         "is_background_skill": false,
@@ -4613,5 +4526,82 @@
       }
     ]
   ],
-  "key": "tmb_khatep"
+  "key": "tmb_khatep",
+  "items": [
+    {
+      "key": "wh2_dlc09_skill_node_tmb_khatep_quest_1",
+      "image_path": "item_arcane_item.png",
+      "name": "The Liche Staff",
+      "description": "All of Nehekhara's gods and goddesses are inscribed along the ancient copper staff, granting Khatep mastery over their latent magical power.",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +60%",
+          "value": 60,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 8,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_character_stat_mod_miscast_chance"
+        },
+        {
+          "icon": "religion.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Untainted: +5",
+          "value": 5,
+          "key": "wh_main_effect_religion_conversion_untainted"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"The Liche Staff\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc09_effect_ability_enable_the_liche_staff",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc09_weapon_passive_the_liche_staff",
+                "icon_name": "wh_magic_item_passive_weapon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Liche Staff",
+                "passive": true,
+                "effect_range": -1,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "negative",
+                    "ability_recharge_change": 15,
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc09_effect_ability_enable_the_liche_staff"
+        }
+      ]
+    }
+  ]
 }

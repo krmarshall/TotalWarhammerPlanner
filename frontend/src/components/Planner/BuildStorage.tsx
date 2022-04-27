@@ -36,41 +36,34 @@ const BuildStorage = () => {
   };
 
   return (
-    <div
-      className="h-auto w-auto flex flex-row place-content-between shadow-lg border border-gray-500 rounded select-none"
-      style={{ minWidth: '24rem' }}
-    >
+    <div className="h-auto w-[30vw] flex flex-col place-content-between shadow-lg border border-gray-500 rounded select-none">
       <div className="flex flex-col justify-center">
-        <h2 className="text-center text-3xl m-2 text-gray-200">Builds: </h2>
+        <h2 className="text-center text-3xl my-1 text-gray-200">Builds</h2>
       </div>
-      <ul className="h-20 flex-grow pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+      <ul className="flex-grow pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         {state.localStorageBuildKeys.map((buildKey, index) => {
           return (
             <li
               key={index}
-              className="bg-gray-600 hover:bg-gray-500 rounded p-0.5 pl-2 my-1 flex flex-row place-content-between cursor-pointer"
+              className="bg-gray-600 hover:bg-gray-500 rounded p-0.5 pl-2 mx-3 my-1 flex flex-row place-content-between cursor-pointer"
               onClick={() => {
                 setBuildHandler(buildKey);
               }}
             >
-              <div className="flex flex-col justify-center">
-                <p className="text-center text-xl text-gray-200">{buildKey}</p>
-              </div>
-              <div className="flex flex-col justify-center">
-                <p
-                  className="ml-2 px-2 pt-0.5 text-center text-xl text-red-500 rounded hover:bg-gray-700"
-                  onClick={(event) => {
-                    deleteClickHandler(buildKey, event);
-                  }}
-                >
-                  X
-                </p>
-              </div>
+              <p className="text-2xl mx-auto text-gray-200">{buildKey}</p>
+              <p
+                className="-ml-7 px-2 pt-0.5 text-xl text-red-500 rounded hover:bg-gray-700"
+                onClick={(event) => {
+                  deleteClickHandler(buildKey, event);
+                }}
+              >
+                X
+              </p>
             </li>
           );
         })}
       </ul>
-      <div className="flex flex-col my-auto place-items-center">
+      <div className="flex flex-row my-2 place-content-center">
         <input
           type="text"
           placeholder="Build Name"

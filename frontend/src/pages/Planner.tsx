@@ -2,14 +2,15 @@ import { Fragment, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 import api from '../api/api';
-import BuildStorage from '../components/Planner/BuildStorage';
-import SkillRow from '../components/Planner/SkillRow';
-import CharacterItems from '../components/Planner/CharacterItems';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../utils/sharedFunctions';
 import { convertBuildToCode, convertCodeToBuild } from '../utils/urlFunctions';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 import gameData from '../data/gameData';
+import BuildStorage from '../components/Planner/BuildStorage';
+import SkillRow from '../components/Planner/SkillRow';
+import CharacterItems from '../components/Planner/CharacterItems';
+import BackgroundSkills from '../components/Planner/BackgroundSkills';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -119,7 +120,7 @@ const Planner = () => {
         </div>
       ) : (
         <Fragment>
-          <div className="flex flex-row flex-nowrap">
+          <div className="h-[6vh] flex flex-row flex-nowrap">
             <div className="invisible w-28">Spacer</div>
             <h1 className="flex-grow text-center text-4xl m-2 text-gray-200">{characterName}</h1>
             <button
@@ -141,7 +142,7 @@ const Planner = () => {
             )}
           </div>
           <div
-            className="pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+            className="h-[56vh] pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"
             onWheel={(event) => {
               horizontalScroll(event);
@@ -156,8 +157,9 @@ const Planner = () => {
               </tbody>
             </table>
           </div>
-          <div className="flex flex-row place-content-between mt-4">
-            <CharacterItems />
+          <div className="h-[20vh] flex flex-row place-content-around mt-4">
+            {state.characterData?.items && state.characterData?.items.length > 0 && <CharacterItems />}
+            <BackgroundSkills />
             <BuildStorage />
           </div>
         </Fragment>

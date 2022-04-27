@@ -2,220 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc10_skill_anc_enchanted_item_the_shadow_crown",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "The Shadow Crown",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +5",
-                "value": 5,
-                "key": "wh_main_effect_public_order_characters"
-              },
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Ambush success chance: +10%",
-                "value": 10,
-                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Shadow Crown\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc10_effect_ability_enable_the_shadow_crown",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc10_item_passive_the_shadow_crown",
-                      "icon_name": "wh_magic_item_passive_enchanted",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Shadow Crown",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_ability_range",
-                          "sort_order": 101,
-                          "description": "➕ Ability range 70m"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 55,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 70,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x1.1 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": 5,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+5 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc10_effect_ability_enable_the_shadow_crown"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc10_skill_anc_enchanted_item_the_shadow_crown",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc10_skill_node_hef_alith_anar_quest_0",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "The Moonbow",
-        "description": "The Moonbow handed to Alith Anar by the goddess Lileath shoots arrows over great distances with immense power.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "ammo_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ammunition: +15%",
-                "value": 15,
-                "key": "wh_main_effect_character_stat_mod_ammunition"
-              },
-              {
-                "icon": "ranged_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +10%",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_missile_damage"
-              },
-              {
-                "icon": "accuracy_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Range: +15%",
-                "value": 15,
-                "key": "wh_main_effect_character_stat_mod_range"
-              },
-              {
-                "icon": "magical_attacks.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Enables magical attacks",
-                "value": 1,
-                "key": "wh_main_effect_character_stat_enable_magic_attacks"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"The Moonbow\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc10_effect_ability_enable_the_moonbow",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc10_weapon_abilities_the_moonbow",
-                      "icon_name": "wh2_dlc10_weapon_abilities_the_moonbow",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Moonbow",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_armour_piercing",
-                          "sort_order": 104,
-                          "description": "➕ Causes armour-piercing damage"
-                        },
-                        {
-                          "key": "wh_main_projectile_powerful_explosion",
-                          "sort_order": 105,
-                          "description": "➕ Powerful explosion"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single unit"
-                        },
-                        {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "description": "➕ Effective at long range"
-                        }
-                      ],
-                      "num_uses": 2,
-                      "recharge_time": 120,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 300,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc10_effect_ability_enable_the_moonbow"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc10_skill_hef_alith_anar_quest_1",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc10_skill_node_hef_alith_anar_generic_0",
         "image_path": "character_speed.png",
         "is_background_skill": false,
@@ -2858,5 +2644,197 @@
       }
     ]
   ],
-  "key": "hef_alith_anar"
+  "key": "hef_alith_anar",
+  "items": [
+    {
+      "key": "wh2_dlc10_skill_anc_enchanted_item_the_shadow_crown",
+      "image_path": "item_enchanted_item.png",
+      "name": "The Shadow Crown",
+      "description": "",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Public order: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "icon_effects_ambush.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Ambush success chance: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"The Shadow Crown\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc10_effect_ability_enable_the_shadow_crown",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc10_item_passive_the_shadow_crown",
+                "icon_name": "wh_magic_item_passive_enchanted",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Shadow Crown",
+                "ui_effects": [
+                  {
+                    "key": "wh_dlc05_ability_range",
+                    "sort_order": 101,
+                    "description": "➕ Ability range 70m"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 55,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 70,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 1.1,
+                        "stat": "scalar_speed",
+                        "how": "mult",
+                        "description": "x1.1 Speed",
+                        "sort_order": 10,
+                        "icon": "icon_stat_speed.png"
+                      },
+                      {
+                        "value": 5,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "+5 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc10_effect_ability_enable_the_shadow_crown"
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc10_skill_node_hef_alith_anar_quest_0",
+      "image_path": "item_weapon.png",
+      "name": "The Moonbow",
+      "description": "The Moonbow handed to Alith Anar by the goddess Lileath shoots arrows over great distances with immense power.",
+      "effects": [
+        {
+          "icon": "ammo_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Ammunition: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_mod_ammunition"
+        },
+        {
+          "icon": "ranged_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Missile strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_missile_damage"
+        },
+        {
+          "icon": "accuracy_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Range: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_mod_range"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 61,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Moonbow\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc10_effect_ability_enable_the_moonbow",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc10_weapon_abilities_the_moonbow",
+                "icon_name": "wh2_dlc10_weapon_abilities_the_moonbow",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missile",
+                  "icon_path": "icon_spell_magic_missile.png",
+                  "description": "Magic Missile"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Moonbow",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_armour_piercing",
+                    "sort_order": 104,
+                    "description": "➕ Causes armour-piercing damage"
+                  },
+                  {
+                    "key": "wh_main_projectile_powerful_explosion",
+                    "sort_order": 105,
+                    "description": "➕ Powerful explosion"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_unit",
+                    "sort_order": 106,
+                    "description": "➕ Strong vs a single unit"
+                  },
+                  {
+                    "key": "wh_main_projectile_effective_long_range",
+                    "sort_order": 106,
+                    "description": "➕ Effective at long range"
+                  }
+                ],
+                "num_uses": 2,
+                "recharge_time": 120,
+                "wind_up_time": 3,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 300,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc10_effect_ability_enable_the_moonbow"
+        }
+      ]
+    }
+  ]
 }

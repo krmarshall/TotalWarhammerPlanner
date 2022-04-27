@@ -2,272 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_main_skill_skv_queek_armour_warp_shard_armour",
-        "image_path": "item_armour.png",
-        "is_background_skill": false,
-        "name": "Warp-Shard Armour",
-        "description": "These magical plates absorb enemy blows and direct them back again with many times the force.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "armour_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour: +10",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_armour"
-              },
-              {
-                "icon": "defence_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +5",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_melee_defence"
-              },
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ward save: 5%",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_ward_save"
-              },
-              {
-                "icon": "wound_time.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Wound recovery time: -2",
-                "value": -2,
-                "key": "wh_main_effect_character_wound_recovery_time_mod"
-              },
-              {
-                "icon": "vigour.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Vigour loss reduction: +10%",
-                "value": 10,
-                "key": "wh_main_effect_force_unit_stat_fatigue_resistance_small"
-              },
-              {
-                "icon": "religion_skaven.png",
-                "priority": 190,
-                "is_positive_value_good": true,
-                "description": "Skaven corruption: +3",
-                "value": 3,
-                "key": "wh_main_effect_religion_conversion_skaven"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Warp-Shard Armour\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_warp_shard_armour",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_item_passive_warp_shard_armour",
-                      "icon_name": "wh2_main_item_passive_warp_shard_armour",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Warp-Shard Armour",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -20,
-                              "stat": "stat_armour",
-                              "how": "add",
-                              "description": "-20 Armour",
-                              "sort_order": 6,
-                              "icon": "icon_stat_armour.png"
-                            },
-                            {
-                              "value": -5,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "-5 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_main_effect_ability_enable_warp_shard_armour"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_main_skill_skv_queek_quest_1",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_main_skill_skv_queek_weapon_dwarf_gouger",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "Dwarf Gouger",
-        "description": "It takes a special breed of vermin to wield this wicked, ancient weapon. Fortunately, there are no shortage of suitable candidates!",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "diplomacy.png",
-                "priority": 5,
-                "is_positive_value_good": true,
-                "description": "Diplomatic relations: -25 with Dwarfs",
-                "value": -25,
-                "key": "wh_main_faction_diplomacy_penalty_dwarfs"
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +25% when fighting against Dwarfs",
-                "value": 25,
-                "key": "wh2_main_effect_character_stat_mod_melee_damage_versus_dwarfs"
-              },
-              {
-                "icon": "bonus_vs_small_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Bonus vs Infantry: +20",
-                "value": 20,
-                "key": "wh_main_effect_character_stat_mod_bonus_v_small"
-              },
-              {
-                "icon": "treasury.png",
-                "priority": 106,
-                "is_positive_value_good": false,
-                "description": "Recruitment cost: -25% for all units",
-                "value": -25,
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
-              },
-              {
-                "icon": "income.png",
-                "priority": 201,
-                "is_positive_value_good": true,
-                "description": "Income from post-battle loot: +10%",
-                "value": 10,
-                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Dwarf Gouger\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_dwarf_gouger",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_weapon_abilities_dwarf_gouger",
-                      "icon_name": "wh2_main_weapon_abilities_dwarf_gouger",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Dwarf Gouger",
-                      "active_time": 45,
-                      "recharge_time": 150,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 25,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+25 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 1.5,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x1.5 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_main_effect_ability_enable_dwarf_gouger"
-              },
-              {
-                "icon": "attribute_guerrilla_deploy.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Vanguard Deployment",
-                "value": 1,
-                "key": "wh_main_effect_unit_enable_attribute_guerrilla_deployment"
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 1000,
-                "is_positive_value_good": true,
-                "description": "Number of uses: +1 for \"Lord of Clan Mors\"",
-                "value": 1,
-                "key": "skv_army_queek_use"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_main_skill_skv_queek_quest_2",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_main_skill_node_skv_queek_headtaker_generic_2",
         "image_path": "character_ward_save.png",
         "is_background_skill": false,
@@ -4110,5 +3844,249 @@
       }
     ]
   ],
-  "key": "skv_queek_headtaker"
+  "key": "skv_queek_headtaker",
+  "items": [
+    {
+      "key": "wh2_main_skill_skv_queek_armour_warp_shard_armour",
+      "image_path": "item_armour.png",
+      "name": "Warp-Shard Armour",
+      "description": "These magical plates absorb enemy blows and direct them back again with many times the force.",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_armour"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_ward_save"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -2",
+          "value": -2,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "vigour.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Vigour loss reduction: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_unit_stat_fatigue_resistance_small"
+        },
+        {
+          "icon": "religion_skaven.png",
+          "priority": 190,
+          "is_positive_value_good": true,
+          "description": "Skaven corruption: +3",
+          "value": 3,
+          "key": "wh_main_effect_religion_conversion_skaven"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Warp-Shard Armour\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_warp_shard_armour",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_item_passive_warp_shard_armour",
+                "icon_name": "wh2_main_item_passive_warp_shard_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Warp-Shard Armour",
+                "passive": true,
+                "effect_range": 40,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -20,
+                        "stat": "stat_armour",
+                        "how": "add",
+                        "description": "-20 Armour",
+                        "sort_order": 6,
+                        "icon": "icon_stat_armour.png"
+                      },
+                      {
+                        "value": -5,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-5 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_warp_shard_armour"
+        }
+      ]
+    },
+    {
+      "key": "wh2_main_skill_skv_queek_weapon_dwarf_gouger",
+      "image_path": "item_weapon.png",
+      "name": "Dwarf Gouger",
+      "description": "It takes a special breed of vermin to wield this wicked, ancient weapon. Fortunately, there are no shortage of suitable candidates!",
+      "effects": [
+        {
+          "icon": "diplomacy.png",
+          "priority": 5,
+          "is_positive_value_good": true,
+          "description": "Diplomatic relations: -25 with Dwarfs",
+          "value": -25,
+          "key": "wh_main_faction_diplomacy_penalty_dwarfs"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +25% when fighting against Dwarfs",
+          "value": 25,
+          "key": "wh2_main_effect_character_stat_mod_melee_damage_versus_dwarfs"
+        },
+        {
+          "icon": "bonus_vs_small_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Infantry: +20",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_mod_bonus_v_small"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -25% for all units",
+          "value": -25,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "income.png",
+          "priority": 201,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Dwarf Gouger\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_dwarf_gouger",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_abilities_dwarf_gouger",
+                "icon_name": "wh2_main_weapon_abilities_dwarf_gouger",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Dwarf Gouger",
+                "active_time": 45,
+                "recharge_time": 150,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 45,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 25,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+25 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_dwarf_gouger"
+        },
+        {
+          "icon": "attribute_guerrilla_deploy.png",
+          "priority": 620,
+          "is_positive_value_good": true,
+          "description": "Attribute: Vanguard Deployment",
+          "value": 1,
+          "key": "wh_main_effect_unit_enable_attribute_guerrilla_deployment"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 1000,
+          "is_positive_value_good": true,
+          "description": "Number of uses: +1 for \"Lord of Clan Mors\"",
+          "value": 1,
+          "key": "skv_army_queek_use"
+        }
+      ]
+    }
+  ]
 }

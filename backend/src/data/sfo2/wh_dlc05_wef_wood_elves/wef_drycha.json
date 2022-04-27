@@ -2,143 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc16_drycha_misc_0",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "Coeddil Unchained",
-        "description": "ph",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "morale_character.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Character's aura leadership effect: +5",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect"
-              },
-              {
-                "icon": "battle_movement_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Speed: +10%",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_battle_movement_speed"
-              },
-              {
-                "icon": "armour_piercing_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour-piercing weapon damage: +25",
-                "value": 25,
-                "key": "wh_main_effect_character_stat_mod_ap_damage"
-              },
-              {
-                "icon": "resistance_magic.png",
-                "priority": 62,
-                "is_positive_value_good": true,
-                "description": "Enable contact effect: \"Dampened\" that lowers magic resistance and armour",
-                "value": 1,
-                "key": "wh2_dlc16_effect_character_stat_enable_dampening_attacks"
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 67,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -2 for \"Okkam's Mindrazor\"",
-                "value": -2,
-                "key": "wh2_main_effect_magic_shadow_reduce_wom_cost_okkams_mindrazor"
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 68,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -4 for \"Okkam's Mindrazor Upgraded\"",
-                "value": -4,
-                "key": "wh2_main_effect_magic_shadow_reduce_wom_cost_okkams_mindrazor_upgraded"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Fang of Taalroth\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc16_effect_ability_enable_fang_of_taalroth",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc16_item_passive_fang_of_taalroth",
-                      "icon_name": "wh2_dlc16_item_passive_fang_of_taalroth",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_hex_of_the_winds",
-                        "icon_path": "icon_spell_hex_of_the_winds.png",
-                        "description": "Hex of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Fang of Taalroth",
-                      "passive": true,
-                      "effect_range": -1,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 15,
-                          "effect_type": "negative",
-                          "ability_recharge_change": 15,
-                          "recharge_time": 45,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -10,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "-10 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            },
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.8 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc16_effect_ability_enable_fang_of_taalroth"
-              },
-              {
-                "icon": "character.png",
-                "priority": 601,
-                "is_positive_value_good": true,
-                "description": "Enables completion of the quest chain to free the imprisoned Legendary Hero Coeddil",
-                "value": 2,
-                "key": "wh2_dlc_16_wef_drycha_coeddil_unchained_dummy"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc16_anc_enchanted_item_fang_of_taalroth",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc16_drycha_misc_1",
         "image_path": "character_damage.png",
         "is_background_skill": false,
@@ -6725,5 +6588,132 @@
       }
     ]
   ],
-  "key": "wef_drycha"
+  "key": "wef_drycha",
+  "items": [
+    {
+      "key": "wh2_dlc16_drycha_misc_0",
+      "image_path": "item_enchanted_item.png",
+      "name": "Coeddil Unchained",
+      "description": "ph",
+      "effects": [
+        {
+          "icon": "morale_character.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Character's aura leadership effect: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect"
+        },
+        {
+          "icon": "battle_movement_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Speed: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_battle_movement_speed"
+        },
+        {
+          "icon": "armour_piercing_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +25",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_mod_ap_damage"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 62,
+          "is_positive_value_good": true,
+          "description": "Enable contact effect: \"Dampened\" that lowers magic resistance and armour",
+          "value": 1,
+          "key": "wh2_dlc16_effect_character_stat_enable_dampening_attacks"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 67,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -2 for \"Okkam's Mindrazor\"",
+          "value": -2,
+          "key": "wh2_main_effect_magic_shadow_reduce_wom_cost_okkams_mindrazor"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 68,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -4 for \"Okkam's Mindrazor Upgraded\"",
+          "value": -4,
+          "key": "wh2_main_effect_magic_shadow_reduce_wom_cost_okkams_mindrazor_upgraded"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Fang of Taalroth\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc16_effect_ability_enable_fang_of_taalroth",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc16_item_passive_fang_of_taalroth",
+                "icon_name": "wh2_dlc16_item_passive_fang_of_taalroth",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_hex_of_the_winds",
+                  "icon_path": "icon_spell_hex_of_the_winds.png",
+                  "description": "Hex of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Fang of Taalroth",
+                "passive": true,
+                "effect_range": -1,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "negative",
+                    "ability_recharge_change": 15,
+                    "recharge_time": 45,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -10,
+                        "stat": "stat_morale",
+                        "how": "add",
+                        "description": "-10 Leadership",
+                        "sort_order": 1,
+                        "icon": "icon_stat_morale.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_speed",
+                        "how": "mult",
+                        "description": "x0.8 Speed",
+                        "sort_order": 10,
+                        "icon": "icon_stat_speed.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc16_effect_ability_enable_fang_of_taalroth"
+        },
+        {
+          "icon": "character.png",
+          "priority": 601,
+          "is_positive_value_good": true,
+          "description": "Enables completion of the quest chain to free the imprisoned Legendary Hero Coeddil",
+          "value": 2,
+          "key": "wh2_dlc_16_wef_drycha_coeddil_unchained_dummy"
+        }
+      ]
+    }
+  ]
 }

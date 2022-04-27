@@ -2,391 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_main_skill_anc_arcane_item_wand_of_the_kharaidon",
-        "image_path": "item_talisman.png",
-        "is_background_skill": false,
-        "name": "Amber Amulet",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve: +5",
-                "value": 5,
-                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_items"
-              },
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ward save: 5%",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_ward_save"
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -10%",
-                "value": -10,
-                "key": "wh_main_effect_agent_action_success_chance_enemy"
-              },
-              {
-                "icon": "wound_time.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Wound recovery time: -2",
-                "value": -2,
-                "key": "wh_main_effect_character_wound_recovery_time_mod"
-              },
-              {
-                "icon": "replenishment.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +10%",
-                "value": 10,
-                "key": "wh_main_effect_force_all_campaign_replenishment_rate"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Regeneration\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_regeneration",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_unit_passive_regeneration",
-                      "icon_name": "wh_main_unit_passive_regeneration",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Regeneration",
-                      "ui_effects": [
-                        {
-                          "key": "wh_heal_passive_4",
-                          "sort_order": 1,
-                          "description": "➕ Restores 4 Hit Points per second"
-                        },
-                        {
-                          "key": "wh2_dlc15_heal_passive_4",
-                          "sort_order": 109,
-                          "description": "Units won't regenerate if cap was reached"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -25,
-                              "stat": "stat_weakness_flame",
-                              "how": "add",
-                              "description": "-25Weakness to Fire Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_flaming.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_main_effect_ability_enable_regeneration"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_main_skill_anc_talisman_amber_amulet",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_main_skill_anc_talisman_amber_amulet",
-        "image_path": "item_arcane_item.png",
-        "is_background_skill": false,
-        "name": "Wand of the Kharaidon",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "item_ability.png",
-                "priority": 8,
-                "is_positive_value_good": true,
-                "description": "Magic item drop chance: +10%",
-                "value": 10,
-                "key": "wh_main_effect_character_mod_ancillary_drop"
-              },
-              {
-                "icon": "magic.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve: +10",
-                "value": 10,
-                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_items"
-              },
-              {
-                "icon": "magic_cooldown.png",
-                "priority": 60,
-                "is_positive_value_good": false,
-                "description": "Cooldown: -10% to all spells",
-                "value": -10,
-                "key": "wh2_dlc12_effect_magic_cooldown_all_lores"
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 67,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -10 for \"Soulstealer\"",
-                "value": -10,
-                "key": "wh2_main_effect_magic_dark_reduce_wom_cost_soulstealer"
-              },
-              {
-                "icon": "item_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Bound spell: \"Wand of the Kharaidon\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_wand_of_the_kharaidon",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_spell_bound_wand_of_the_kharaidon",
-                      "icon_name": "wh2_main_spell_bound_tome_of_furion",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Wand of the Kharaidon",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_spell_bound_wand_of_the_kharaidon",
-                          "sort_order": 1,
-                          "description": "➕ Calls down 1 projectile dealing 0 800 damage and 0 250 explosion damage (10m)"
-                        },
-                        {
-                          "key": "wh2_main_all_magical_damage_major",
-                          "sort_order": 104,
-                          "description": "➕ Causes magical damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "description": "➕ Medium strike area"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs a single unit"
-                        }
-                      ],
-                      "num_uses": 2,
-                      "active_time": 7,
-                      "recharge_time": 120,
-                      "wind_up_time": 5,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_main_effect_ability_enable_wand_of_the_kharaidon"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_main_skill_anc_arcane_item_wand_of_the_kharaidon",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_main_skill_def_morathi_weapon_heartrender",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "Heartrender & the Darksword",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +5",
-                "value": 5,
-                "key": "wh_main_effect_public_order_characters"
-              },
-              {
-                "icon": "charge_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +30",
-                "value": 30,
-                "key": "wh_main_effect_character_stat_mod_charge_add"
-              },
-              {
-                "icon": "melee_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +10",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_melee_attack"
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +15%",
-                "value": 15,
-                "key": "wh_main_effect_character_stat_mod_melee_damage"
-              },
-              {
-                "icon": "defence_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +5",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_melee_defence"
-              },
-              {
-                "icon": "magical_attacks.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Enables magical attacks",
-                "value": 1,
-                "key": "wh_main_effect_character_stat_enable_magic_attacks"
-              },
-              {
-                "icon": "religion_chaos.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Chaos corruption: 0",
-                "value": 0,
-                "key": "wh_main_effect_religion_conversion_chaos"
-              },
-              {
-                "icon": "military_spending.png",
-                "priority": 105,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -10% for Harpies, War Hydra, Kharibdyss, Sea Dragon, Black Dragon and Bloodwrack Medusae units",
-                "value": -10,
-                "key": "wh2_main_effect_tech_upkeep_cost_reduction_def_beasts"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Heartrender & the Darksword\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_main_effect_ability_enable_heartrender_and_the_darksword",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_main_weapon_passive_heartrender_and_the_darksword",
-                      "icon_name": "wh2_main_weapon_passive_heartrender_and_the_darksword",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Heartrender & the Darksword",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -10,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-10 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": -10,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "-10 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_main_effect_ability_enable_heartrender_and_the_darksword"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_main_skill_def_morathi_quest_1",
-        "tier": 2,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_main_skill_node_def_morathi_mount_1",
         "image_path": "mount_dark_steed.png",
         "is_background_skill": false,
@@ -6226,5 +5841,356 @@
       }
     ]
   ],
-  "key": "def_morathi"
+  "key": "def_morathi",
+  "items": [
+    {
+      "key": "wh2_main_skill_anc_arcane_item_wand_of_the_kharaidon",
+      "image_path": "item_talisman.png",
+      "name": "Amber Amulet",
+      "description": "",
+      "effects": [
+        {
+          "icon": "magic.png",
+          "priority": 15,
+          "is_positive_value_good": true,
+          "description": "Winds of Magic power reserve: +5",
+          "value": 5,
+          "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_items"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_ward_save"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -2",
+          "value": -2,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "replenishment.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Casualty replenishment rate: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_replenishment_rate"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Regeneration\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_regeneration",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_main_unit_passive_regeneration",
+                "icon_name": "wh_main_unit_passive_regeneration",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Regeneration",
+                "ui_effects": [
+                  {
+                    "key": "wh_heal_passive_4",
+                    "sort_order": 1,
+                    "description": "➕ Restores 4 Hit Points per second"
+                  },
+                  {
+                    "key": "wh2_dlc15_heal_passive_4",
+                    "sort_order": 109,
+                    "description": "Units won't regenerate if cap was reached"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -25,
+                        "stat": "stat_weakness_flame",
+                        "how": "add",
+                        "description": "-25Weakness to Fire Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_flaming.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_regeneration"
+        }
+      ]
+    },
+    {
+      "key": "wh2_main_skill_anc_talisman_amber_amulet",
+      "image_path": "item_arcane_item.png",
+      "name": "Wand of the Kharaidon",
+      "description": "",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "magic.png",
+          "priority": 15,
+          "is_positive_value_good": true,
+          "description": "Winds of Magic power reserve: +10",
+          "value": 10,
+          "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_items"
+        },
+        {
+          "icon": "magic_cooldown.png",
+          "priority": 60,
+          "is_positive_value_good": false,
+          "description": "Cooldown: -10% to all spells",
+          "value": -10,
+          "key": "wh2_dlc12_effect_magic_cooldown_all_lores"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 67,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -10 for \"Soulstealer\"",
+          "value": -10,
+          "key": "wh2_main_effect_magic_dark_reduce_wom_cost_soulstealer"
+        },
+        {
+          "icon": "item_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Bound spell: \"Wand of the Kharaidon\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_wand_of_the_kharaidon",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_spell_bound_wand_of_the_kharaidon",
+                "icon_name": "wh2_main_spell_bound_tome_of_furion",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_bombardment",
+                  "icon_path": "icon_spell_bombardment.png",
+                  "description": "Bombardment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Wand of the Kharaidon",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_spell_bound_wand_of_the_kharaidon",
+                    "sort_order": 1,
+                    "description": "➕ Calls down 1 projectile dealing 0 800 damage and 0 250 explosion damage (10m)"
+                  },
+                  {
+                    "key": "wh2_main_all_magical_damage_major",
+                    "sort_order": 104,
+                    "description": "➕ Causes magical damage"
+                  },
+                  {
+                    "key": "wh2_main_bombardment_medium_strike_aoe",
+                    "sort_order": 105,
+                    "description": "➕ Medium strike area"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "description": "➕ Strong vs a single combatant"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_unit",
+                    "sort_order": 106,
+                    "description": "➕ Strong vs a single unit"
+                  }
+                ],
+                "num_uses": 2,
+                "active_time": 7,
+                "recharge_time": 120,
+                "wind_up_time": 5,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 200,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_wand_of_the_kharaidon"
+        }
+      ]
+    },
+    {
+      "key": "wh2_main_skill_def_morathi_weapon_heartrender",
+      "image_path": "item_weapon.png",
+      "name": "Heartrender & the Darksword",
+      "description": " ",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Public order: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "charge_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Charge bonus: +30",
+          "value": 30,
+          "key": "wh_main_effect_character_stat_mod_charge_add"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_melee_attack"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_mod_melee_damage"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_melee_defence"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 61,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "religion_chaos.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Chaos corruption: 0",
+          "value": 0,
+          "key": "wh_main_effect_religion_conversion_chaos"
+        },
+        {
+          "icon": "military_spending.png",
+          "priority": 105,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -10% for Harpies, War Hydra, Kharibdyss, Sea Dragon, Black Dragon and Bloodwrack Medusae units",
+          "value": -10,
+          "key": "wh2_main_effect_tech_upkeep_cost_reduction_def_beasts"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Heartrender & the Darksword\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_heartrender_and_the_darksword",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_passive_heartrender_and_the_darksword",
+                "icon_name": "wh2_main_weapon_passive_heartrender_and_the_darksword",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Heartrender & the Darksword",
+                "passive": true,
+                "effect_range": 40,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -10,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "-10 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": -10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-10 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_heartrender_and_the_darksword"
+        }
+      ]
+    }
+  ]
 }

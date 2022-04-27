@@ -2,92 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc11_skill_node_cst_noctilus_quest_0",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "Captain Roth's Moondial",
-        "description": "This particular moondial enables its owner to pull off seemingly-impossible feats of navigation and piloting.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "campaign_movement.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Campaign movement range: +15%",
-                "value": 15,
-                "key": "wh_main_effect_agent_movement_range_mod"
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Campaign line of sight: +50%",
-                "value": 50,
-                "key": "wh_main_effect_agent_field_line_of_sight_mod"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Captain Roth's Moondial\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc11_effect_ability_enable_captain_roths_moondial",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc11_item_abilities_captain_roths_moondial",
-                      "icon_name": "wh2_dlc11_item_abilities_captain_roths_moondial",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Captain Roth's Moondial",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc11_all_summon_deckhands_mob",
-                          "sort_order": 105,
-                          "description": "➕ Summons a unit of Zombie Pirate Deckhands Mob"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_unbinding",
-                          "sort_order": 203,
-                          "description": "➖ Summoned units degrade over time"
-                        }
-                      ],
-                      "num_uses": 2,
-                      "active_time": 3,
-                      "recharge_time": 120,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 150,
-                      "target_self": true
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc11_effect_ability_enable_captain_roths_moondial"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc11_skill_node_cst_noctilus_quest_0",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc11_skill_cst_misc_noctilus_00",
         "image_path": "mount_necrofex.png",
         "is_background_skill": false,
@@ -5127,5 +5041,81 @@
       }
     ]
   ],
-  "key": "cst_noctilus"
+  "key": "cst_noctilus",
+  "items": [
+    {
+      "key": "wh2_dlc11_skill_node_cst_noctilus_quest_0",
+      "image_path": "item_enchanted_item.png",
+      "name": "Captain Roth's Moondial",
+      "description": "This particular moondial enables its owner to pull off seemingly-impossible feats of navigation and piloting.",
+      "effects": [
+        {
+          "icon": "campaign_movement.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Campaign movement range: +15%",
+          "value": 15,
+          "key": "wh_main_effect_agent_movement_range_mod"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Campaign line of sight: +50%",
+          "value": 50,
+          "key": "wh_main_effect_agent_field_line_of_sight_mod"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Captain Roth's Moondial\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc11_effect_ability_enable_captain_roths_moondial",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc11_item_abilities_captain_roths_moondial",
+                "icon_name": "wh2_dlc11_item_abilities_captain_roths_moondial",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Captain Roth's Moondial",
+                "ui_effects": [
+                  {
+                    "key": "wh2_dlc11_all_summon_deckhands_mob",
+                    "sort_order": 105,
+                    "description": "➕ Summons a unit of Zombie Pirate Deckhands Mob"
+                  },
+                  {
+                    "key": "wh_main_all_direct_damage_unbinding",
+                    "sort_order": 203,
+                    "description": "➖ Summoned units degrade over time"
+                  }
+                ],
+                "num_uses": 2,
+                "active_time": 3,
+                "recharge_time": 120,
+                "wind_up_time": 3,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": true,
+                "target_enemies": false,
+                "target_ground": true,
+                "target_intercept_range": 150,
+                "target_self": true
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc11_effect_ability_enable_captain_roths_moondial"
+        }
+      ]
+    }
+  ]
 }

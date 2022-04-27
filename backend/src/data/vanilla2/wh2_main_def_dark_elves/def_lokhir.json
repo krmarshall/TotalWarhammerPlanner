@@ -2,153 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc11_skill_anc_weapon_red_blades",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "Red Blades",
-        "description": "",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "melee_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +10",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_melee_attack"
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +15%",
-                "value": 15,
-                "key": "wh_main_effect_character_stat_mod_melee_damage"
-              },
-              {
-                "icon": "phase_sunder_armour.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Enables sundering attacks",
-                "value": 1,
-                "key": "wh2_dlc10_effect_character_stat_sundering_attacks"
-              },
-              {
-                "icon": "income.png",
-                "priority": 198,
-                "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +20%",
-                "value": 20,
-                "key": "wh_main_effect_force_all_campaign_sacking_income"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc11_skill_anc_weapon_red_blades",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_main_skill_node_def_lokhir_generic_0",
-        "image_path": "item_armour.png",
-        "is_background_skill": false,
-        "name": "Helm of the Kraken",
-        "description": "Bow down before the true Lord of the Sea.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 4,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Helm of the Kraken\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc11_effect_ability_enable_helm_of_the_kraken",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc11_item_passive_helm_of_the_kraken",
-                      "icon_name": "wh_magic_item_passive_armour",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Helm of the Kraken",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_dlc15_heal_passive_4",
-                          "sort_order": 109,
-                          "description": "➕ Restores 4 Hit Points per second"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 10,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+10 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc11_effect_ability_enable_helm_of_the_kraken"
-              },
-              {
-                "icon": "armour_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour: +15",
-                "value": 15,
-                "key": "wh_main_effect_character_stat_mod_armour"
-              },
-              {
-                "icon": "attribute_causes_terror.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Causes Terror",
-                "value": 1,
-                "key": "wh_main_effect_unit_enable_attribute_terror"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc11_skill_cst_lord_unique_helm_of_the_kraken",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_main_skill_node_def_lokhir_generic_1",
         "image_path": "mount_black_dragon.png",
         "is_background_skill": false,
@@ -2718,5 +2571,130 @@
       }
     ]
   ],
-  "key": "def_lokhir"
+  "key": "def_lokhir",
+  "items": [
+    {
+      "key": "wh2_dlc11_skill_anc_weapon_red_blades",
+      "image_path": "item_weapon.png",
+      "name": "Red Blades",
+      "description": "",
+      "effects": [
+        {
+          "icon": "melee_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_melee_attack"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_mod_melee_damage"
+        },
+        {
+          "icon": "phase_sunder_armour.png",
+          "priority": 61,
+          "is_positive_value_good": true,
+          "description": "Enables sundering attacks",
+          "value": 1,
+          "key": "wh2_dlc10_effect_character_stat_sundering_attacks"
+        },
+        {
+          "icon": "income.png",
+          "priority": 198,
+          "is_positive_value_good": true,
+          "description": "Income from sacking settlements: +20%",
+          "value": 20,
+          "key": "wh_main_effect_force_all_campaign_sacking_income"
+        }
+      ]
+    },
+    {
+      "key": "wh2_main_skill_node_def_lokhir_generic_0",
+      "image_path": "item_armour.png",
+      "name": "Helm of the Kraken",
+      "description": "Bow down before the true Lord of the Sea.",
+      "effects": [
+        {
+          "icon": "general_ability.png",
+          "priority": 4,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Helm of the Kraken\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc11_effect_ability_enable_helm_of_the_kraken",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc11_item_passive_helm_of_the_kraken",
+                "icon_name": "wh_magic_item_passive_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_regeneration",
+                  "icon_path": "icon_spell_regeneration.png",
+                  "description": "Regeneration"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Helm of the Kraken",
+                "ui_effects": [
+                  {
+                    "key": "wh2_dlc15_heal_passive_4",
+                    "sort_order": 109,
+                    "description": "➕ Restores 4 Hit Points per second"
+                  }
+                ],
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "+10 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc11_effect_ability_enable_helm_of_the_kraken"
+        },
+        {
+          "icon": "armour_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour: +15",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_mod_armour"
+        },
+        {
+          "icon": "attribute_causes_terror.png",
+          "priority": 620,
+          "is_positive_value_good": true,
+          "description": "Attribute: Causes Terror",
+          "value": 1,
+          "key": "wh_main_effect_unit_enable_attribute_terror"
+        }
+      ]
+    }
+  ]
 }

@@ -2,144 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc15_skill_node_hef_imrik_quest_armour_of_caledor",
-        "image_path": "item_armour.png",
-        "is_background_skill": false,
-        "name": "Armour of Caledor",
-        "description": "Donned by the masters of the House of Caledor, this ensorcelled armour has endured over four thousand years of battles.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "morale_character.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Character's aura leadership effect: +10",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect"
-              },
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ward save: 10%",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_ward_save"
-              },
-              {
-                "icon": "income.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Tax rate: +5%",
-                "value": 5,
-                "key": "wh_main_effect_province_tax_rate"
-              },
-              {
-                "icon": "armour.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Armour: +10",
-                "value": 10,
-                "key": "wh_main_effect_force_unit_stat_armour"
-              },
-              {
-                "icon": "vigour.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -25%",
-                "value": -25,
-                "key": "wh_main_effect_force_unit_stat_fatigue_resistance_large"
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -5%",
-                "value": -5,
-                "key": "wh_main_effect_agent_action_success_chance_enemy"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 606,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Armour of Caledor\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc15_effect_ability_enable_armour_of_caledor",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc15_item_abilities_armour_of_caledor",
-                      "icon_name": "wh2_dlc15_item_abilities_armour_of_caledor",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Armour of Caledor",
-                      "ui_effects": [
-                        {
-                          "key": "wh_heal_active_2000",
-                          "sort_order": 1,
-                          "description": "➕ Restores up to 2000 Hit Points"
-                        },
-                        {
-                          "key": "wh2_dlc15_heal_active_1000",
-                          "sort_order": 108,
-                          "description": "Units won't regenerate if cap was reached"
-                        }
-                      ],
-                      "num_uses": 3,
-                      "active_time": 20,
-                      "recharge_time": 250,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 20,
-                          "effect_type": "positive",
-                          "cant_move": true,
-                          "fatigue_change_ratio": -1,
-                          "ability_recharge_change": -120,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -10,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "-10 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc15_effect_ability_enable_armour_of_caledor"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc15_skill_hef_imrik_quest_armour_of_caledor",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc15_skill_node_hef_imrik_mount_dragon_prince_steed",
         "image_path": "mount_elven_steed.png",
         "is_background_skill": false,
@@ -3291,5 +3153,133 @@
       }
     ]
   ],
-  "key": "hef_imrik"
+  "key": "hef_imrik",
+  "items": [
+    {
+      "key": "wh2_dlc15_skill_node_hef_imrik_quest_armour_of_caledor",
+      "image_path": "item_armour.png",
+      "name": "Armour of Caledor",
+      "description": "Donned by the masters of the House of Caledor, this ensorcelled armour has endured over four thousand years of battles.",
+      "effects": [
+        {
+          "icon": "morale_character.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Character's aura leadership effect: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_ward_save"
+        },
+        {
+          "icon": "income.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Tax rate: +5%",
+          "value": 5,
+          "key": "wh_main_effect_province_tax_rate"
+        },
+        {
+          "icon": "armour.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_force_unit_stat_armour"
+        },
+        {
+          "icon": "vigour.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Vigour loss reduction: -25%",
+          "value": -25,
+          "key": "wh_main_effect_force_unit_stat_fatigue_resistance_large"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -5%",
+          "value": -5,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 606,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Armour of Caledor\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_armour_of_caledor",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_item_abilities_armour_of_caledor",
+                "icon_name": "wh2_dlc15_item_abilities_armour_of_caledor",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Armour of Caledor",
+                "ui_effects": [
+                  {
+                    "key": "wh_heal_active_2000",
+                    "sort_order": 1,
+                    "description": "➕ Restores up to 2000 Hit Points"
+                  },
+                  {
+                    "key": "wh2_dlc15_heal_active_1000",
+                    "sort_order": 108,
+                    "description": "Units won't regenerate if cap was reached"
+                  }
+                ],
+                "num_uses": 3,
+                "active_time": 20,
+                "recharge_time": 250,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 20,
+                    "effect_type": "positive",
+                    "cant_move": true,
+                    "fatigue_change_ratio": -1,
+                    "ability_recharge_change": -120,
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-10 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_armour_of_caledor"
+        }
+      ]
+    }
+  ]
 }

@@ -2,293 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh_dlc06_skill_node_dwf_belegar_unique_00",
-        "image_path": "item_armour.png",
-        "is_background_skill": false,
-        "name": "Shield of Defiance",
-        "description": "This shield is inscribed with powerful runes of protection that turn away even the most rending of blows.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +3",
-                "value": 3,
-                "key": "wh_main_effect_public_order_characters"
-              },
-              {
-                "icon": "armour_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour: +5",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_armour"
-              },
-              {
-                "icon": "defence_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +5",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_melee_defence"
-              },
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ward save: 5%",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_ward_save"
-              },
-              {
-                "icon": "military_spending.png",
-                "priority": 70,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -5% for all units",
-                "value": -5,
-                "key": "wh_main_effect_force_all_campaign_upkeep"
-              },
-              {
-                "icon": "subterranean.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
-                "value": 10,
-                "key": "wh_main_effect_general_mod_tunnel_interception_chance"
-              },
-              {
-                "icon": "vigour.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -10%",
-                "value": -10,
-                "key": "wh_main_effect_force_unit_stat_fatigue_resistance_medium"
-              },
-              {
-                "icon": "melee.png",
-                "priority": 1000,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Bolstered Defence\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_passive_aura_buff_defence_enable",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_passive_aura_buff_defence",
-                      "icon_name": "wh_passive_aura_buff_defence",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Bolstered Defence",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "attributes": [
-                            {
-                              "key": "charge_reflector",
-                              "description": " Expert Charge Defence",
-                              "attribute_type": "positive"
-                            }
-                          ],
-                          "stat_effects": [
-                            {
-                              "value": 5,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+5 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh_passive_aura_buff_defence_enable"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh_dlc06_skill_dwf_lord_unique_belegar_shield_of_defiance",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh_dlc06_skill_node_dwf_belegar_unique_01",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "Hammer of Angrund",
-        "description": "Soaked in centuries of Greenskin blood, the Ironhammer has been handed down to every rightful Angrund ruler of the Eight Peaks.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +2",
-                "value": 2,
-                "key": "wh_main_effect_public_order_characters"
-              },
-              {
-                "icon": "melee_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +10",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_melee_attack"
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +10%",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_melee_damage"
-              },
-              {
-                "icon": "armour_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour: -5",
-                "value": -5,
-                "key": "wh_main_effect_character_stat_mod_armour"
-              },
-              {
-                "icon": "magical_attacks.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Enables magical attacks",
-                "value": 1,
-                "key": "wh_main_effect_character_stat_enable_magic_attacks"
-              },
-              {
-                "icon": "military_spending.png",
-                "priority": 70,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -5% for all units",
-                "value": -5,
-                "key": "wh_main_effect_force_all_campaign_upkeep"
-              },
-              {
-                "icon": "income.png",
-                "priority": 201,
-                "is_positive_value_good": true,
-                "description": "Income from post-battle loot: +10%",
-                "value": 10,
-                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Hammer of Angrund\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc06_effect_ability_enable_hammer_of_angrund",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc06_weapon_passive_hammer_of_angrund",
-                      "icon_name": "wh_magic_item_passive_weapon",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Hammer of Angrund",
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "stat_charge_bonus",
-                              "how": "mult",
-                              "description": "x1.1 Charge Bonus",
-                              "sort_order": 4,
-                              "icon": "icon_stat_charge_bonus.png"
-                            },
-                            {
-                              "value": 10,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+10 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 1.1,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x1.1 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            },
-                            {
-                              "value": 1.1,
-                              "stat": "stat_melee_damage_base",
-                              "how": "mult",
-                              "description": "x1.1 Base Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "icon_stat_damage_base.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh_dlc06_effect_ability_enable_hammer_of_angrund"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh_dlc06_skill_dwf_lord_unique_belegar_hammer_of_angrund",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh_dlc06_skill_node_dwf_belegar_unique_05",
         "image_path": "character_attack.png",
         "is_background_skill": false,
@@ -3617,5 +3330,270 @@
       }
     ]
   ],
-  "key": "dwf_belegar"
+  "key": "dwf_belegar",
+  "items": [
+    {
+      "key": "wh_dlc06_skill_node_dwf_belegar_unique_00",
+      "image_path": "item_armour.png",
+      "name": "Shield of Defiance",
+      "description": "This shield is inscribed with powerful runes of protection that turn away even the most rending of blows.",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Public order: +3",
+          "value": 3,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "armour_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_armour"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_ward_save"
+        },
+        {
+          "icon": "military_spending.png",
+          "priority": 70,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -5% for all units",
+          "value": -5,
+          "key": "wh_main_effect_force_all_campaign_upkeep"
+        },
+        {
+          "icon": "subterranean.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
+          "value": 10,
+          "key": "wh_main_effect_general_mod_tunnel_interception_chance"
+        },
+        {
+          "icon": "vigour.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Vigour loss reduction: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_unit_stat_fatigue_resistance_medium"
+        },
+        {
+          "icon": "melee.png",
+          "priority": 1000,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Bolstered Defence\"",
+          "related_abilities": [
+            {
+              "effect": "wh_passive_aura_buff_defence_enable",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_passive_aura_buff_defence",
+                "icon_name": "wh_passive_aura_buff_defence",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Bolstered Defence",
+                "passive": true,
+                "effect_range": 40,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "attributes": [
+                      {
+                        "key": "charge_reflector",
+                        "description": " Expert Charge Defence",
+                        "attribute_type": "positive"
+                      }
+                    ],
+                    "stat_effects": [
+                      {
+                        "value": 5,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "+5 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_passive_aura_buff_defence_enable"
+        }
+      ]
+    },
+    {
+      "key": "wh_dlc06_skill_node_dwf_belegar_unique_01",
+      "image_path": "item_weapon.png",
+      "name": "Hammer of Angrund",
+      "description": "Soaked in centuries of Greenskin blood, the Ironhammer has been handed down to every rightful Angrund ruler of the Eight Peaks.",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Public order: +2",
+          "value": 2,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_melee_attack"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_melee_damage"
+        },
+        {
+          "icon": "armour_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour: -5",
+          "value": -5,
+          "key": "wh_main_effect_character_stat_mod_armour"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 61,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "military_spending.png",
+          "priority": 70,
+          "is_positive_value_good": false,
+          "description": "Upkeep: -5% for all units",
+          "value": -5,
+          "key": "wh_main_effect_force_all_campaign_upkeep"
+        },
+        {
+          "icon": "income.png",
+          "priority": 201,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Hammer of Angrund\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc06_effect_ability_enable_hammer_of_angrund",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc06_weapon_passive_hammer_of_angrund",
+                "icon_name": "wh_magic_item_passive_weapon",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Hammer of Angrund",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 1.1,
+                        "stat": "stat_charge_bonus",
+                        "how": "mult",
+                        "description": "x1.1 Charge Bonus",
+                        "sort_order": 4,
+                        "icon": "icon_stat_charge_bonus.png"
+                      },
+                      {
+                        "value": 10,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+10 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": 1.1,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.1 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      },
+                      {
+                        "value": 1.1,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.1 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc06_effect_ability_enable_hammer_of_angrund"
+        }
+      ]
+    }
+  ]
 }

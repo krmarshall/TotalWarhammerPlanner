@@ -2,227 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh_dlc15_skill_node_grn_grom_the_paunch_unique_01",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "Lucky Banner",
-        "description": "Along with his serendipitous standard-bearer, Niblet, who once somehow survived being sat on by him, the Goblin King’s banner brings inexplicable luck. ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "item_ability.png",
-                "priority": 8,
-                "is_positive_value_good": true,
-                "description": "Magic item drop chance: +20%",
-                "value": 20,
-                "key": "wh_main_effect_character_mod_ancillary_drop"
-              },
-              {
-                "icon": "item_ability.png",
-                "priority": 8,
-                "is_positive_value_good": true,
-                "description": "Post battle chance of stealing a magic item: +10%",
-                "value": 10,
-                "key": "wh_main_effect_character_mod_ancillary_steal"
-              },
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Ward save: 10%",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_ward_save"
-              },
-              {
-                "icon": "defence.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +1 (how lucky!)",
-                "value": 1,
-                "key": "wh2_dlc15_effect_force_unit_stat_melee_defence_lucky"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 606,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Lucky Banner\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc15_effect_ability_enable_lucky_banner",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc15_item_abilities_lucky_banner",
-                      "icon_name": "wh2_dlc15_item_abilities_lucky_banner",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Lucky Banner",
-                      "active_time": 25,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 25,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 24,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "+24 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            },
-                            {
-                              "value": 40,
-                              "stat": "stat_resistance_all",
-                              "how": "add",
-                              "description": "+40 Damage Resistance ",
-                              "sort_order": 10,
-                              "icon": "resistance_ward_save.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc15_effect_ability_enable_lucky_banner"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc15_skill_grn_grom_quest_lucky_banner",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh_dlc15_skill_node_grn_grom_the_paunch_unique_02",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "Axe of Grom",
-        "description": "Like a butcher’s cleaver, Grom uses the fabled ‘Elf-Biter’ to make tasty cuts of meat out of his rivals!",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "growth.png",
-                "priority": 30,
-                "is_positive_value_good": true,
-                "description": "Growth: +5",
-                "value": 5,
-                "key": "wh2_main_effect_province_growth_characters_factionwide"
-              },
-              {
-                "icon": "armour_piercing.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour-piercing weapon damage: +40",
-                "value": 40,
-                "key": "wh2_main_effect_armour_piercing_damage"
-              },
-              {
-                "icon": "bonus_vs_small_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Bonus vs Infantry: +15",
-                "value": 15,
-                "key": "wh_main_effect_character_stat_mod_bonus_v_small"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 606,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Axe of Grom\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc15_effect_ability_enable_axe_of_grom",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc15_weapon_abilities_axe_of_grom",
-                      "icon_name": "wh2_dlc15_weapon_abilities_axe_of_grom",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Axe of Grom",
-                      "active_time": 29,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 29,
-                          "effect_type": "positive",
-                          "imbue_contact": "wh_dlc06_unit_contact_sundered_armour",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 1.5,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x1.5 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            },
-                            {
-                              "value": 1.5,
-                              "stat": "stat_melee_damage_base",
-                              "how": "mult",
-                              "description": "x1.5 Base Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "icon_stat_damage_base.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc15_effect_ability_enable_axe_of_grom"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc15_skill_grn_grom_quest_axe_of_grom",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh_dlc15_skill_node_grn_grom_the_paunch_unique_04",
         "image_path": "battle_morale.png",
         "is_background_skill": false,
@@ -2781,5 +2560,204 @@
       }
     ]
   ],
-  "key": "grn_grom_the_paunch"
+  "key": "grn_grom_the_paunch",
+  "items": [
+    {
+      "key": "wh_dlc15_skill_node_grn_grom_the_paunch_unique_01",
+      "image_path": "item_enchanted_item.png",
+      "name": "Lucky Banner",
+      "description": "Along with his serendipitous standard-bearer, Niblet, who once somehow survived being sat on by him, the Goblin King’s banner brings inexplicable luck. ",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +20%",
+          "value": 20,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Post battle chance of stealing a magic item: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_mod_ancillary_steal"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Ward save: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_ward_save"
+        },
+        {
+          "icon": "defence.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +1 (how lucky!)",
+          "value": 1,
+          "key": "wh2_dlc15_effect_force_unit_stat_melee_defence_lucky"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 606,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Lucky Banner\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_lucky_banner",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_item_abilities_lucky_banner",
+                "icon_name": "wh2_dlc15_item_abilities_lucky_banner",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Lucky Banner",
+                "active_time": 25,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 25,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 24,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+24 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": 40,
+                        "stat": "stat_resistance_all",
+                        "how": "add",
+                        "description": "+40 Damage Resistance ",
+                        "sort_order": 10,
+                        "icon": "resistance_ward_save.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_lucky_banner"
+        }
+      ]
+    },
+    {
+      "key": "wh_dlc15_skill_node_grn_grom_the_paunch_unique_02",
+      "image_path": "item_weapon.png",
+      "name": "Axe of Grom",
+      "description": "Like a butcher’s cleaver, Grom uses the fabled ‘Elf-Biter’ to make tasty cuts of meat out of his rivals!",
+      "effects": [
+        {
+          "icon": "growth.png",
+          "priority": 30,
+          "is_positive_value_good": true,
+          "description": "Growth: +5",
+          "value": 5,
+          "key": "wh2_main_effect_province_growth_characters_factionwide"
+        },
+        {
+          "icon": "armour_piercing.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +40",
+          "value": 40,
+          "key": "wh2_main_effect_armour_piercing_damage"
+        },
+        {
+          "icon": "bonus_vs_small_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Infantry: +15",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_mod_bonus_v_small"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 606,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Axe of Grom\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_axe_of_grom",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_weapon_abilities_axe_of_grom",
+                "icon_name": "wh2_dlc15_weapon_abilities_axe_of_grom",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Axe of Grom",
+                "active_time": 29,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 29,
+                    "effect_type": "positive",
+                    "imbue_contact": "wh_dlc06_unit_contact_sundered_armour",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.5 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_axe_of_grom"
+        }
+      ]
+    }
+  ]
 }

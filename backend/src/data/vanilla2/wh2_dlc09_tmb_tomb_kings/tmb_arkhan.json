@@ -2,209 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc09_skill_node_tmb_arkhan_quest_1",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "The Tomb Blade of Arkhan",
-        "description": "The sword burns away the flesh of Arkhan's victims, leaving nothing but a charred skeleton, bound to the Liche King's dark will for all eternity.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +5",
-                "value": 5,
-                "key": "wh_main_effect_public_order_characters"
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +14%",
-                "value": 14,
-                "key": "wh_main_effect_character_stat_mod_melee_damage"
-              },
-              {
-                "icon": "magical_attacks.png",
-                "priority": 61,
-                "is_positive_value_good": true,
-                "description": "Enables magical attacks",
-                "value": 1,
-                "key": "wh_main_effect_character_stat_enable_magic_attacks"
-              },
-              {
-                "icon": "income.png",
-                "priority": 201,
-                "is_positive_value_good": true,
-                "description": "Income from post-battle loot: +15%",
-                "value": 15,
-                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"The Tomb Blade of Arkhan\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_the_tomb_blade_of_arkhan",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_weapon_abilities_tomb_blade_of_arkhan",
-                      "icon_name": "wh2_dlc09_weapon_abilities_tomb_blade_of_arkhan",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Tomb Blade of Arkhan",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc09_all_summon_skeleton_warriors",
-                          "sort_order": 105,
-                          "description": "➕ Summons a larger unit of Skeleton Warriors"
-                        },
-                        {
-                          "key": "wh_main_all_defend_vs_charge",
-                          "sort_order": 106,
-                          "description": "➕ Good at defending spellcaster"
-                        },
-                        {
-                          "key": "wh_main_all_direct_damage_unbinding",
-                          "sort_order": 203,
-                          "description": "➖ Summoned units degrade over time"
-                        }
-                      ],
-                      "num_uses": 5,
-                      "active_time": 1,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 60,
-                      "target_self": true
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc09_effect_ability_enable_the_tomb_blade_of_arkhan"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc09_skill_tmb_lord_unique_arkhan_the_tomb_blade_of_arkhan",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc09_skill_node_tmb_arkhan_quest_2",
-        "image_path": "item_arcane_item.png",
-        "is_background_skill": false,
-        "name": "Staff of Nagash",
-        "description": "Created by the Arch-Necromancer, the staff harnesses Dark Magic from deep within the accursed Black Pyramid.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "item_ability.png",
-                "priority": 8,
-                "is_positive_value_good": true,
-                "description": "Magic item drop chance: +20%",
-                "value": 20,
-                "key": "wh_main_effect_character_mod_ancillary_drop"
-              },
-              {
-                "icon": "spell_ability.png",
-                "priority": 8,
-                "is_positive_value_good": false,
-                "description": "Miscast base chance: -15%",
-                "value": -15,
-                "key": "wh_main_effect_character_stat_mod_miscast_chance"
-              },
-              {
-                "icon": "technology.png",
-                "priority": 60,
-                "is_positive_value_good": true,
-                "description": "Research rate: +10%",
-                "value": 10,
-                "key": "wh_main_effect_technology_research_points"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Staff of Nagash\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc09_effect_ability_enable_staff_of_nagash",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc09_item_abilities_staff_of_nagash",
-                      "icon_name": "wh2_dlc09_item_abilities_staff_of_nagash",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment_of_the_winds",
-                        "icon_path": "icon_spell_augment_of_the_winds.png",
-                        "description": "Augment of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Staff of Nagash",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_improved_recharge_rate",
-                          "sort_order": 106,
-                          "description": "➕ Improved power recharge rate"
-                        }
-                      ],
-                      "active_time": 33,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 33,
-                          "effect_type": "positive",
-                          "ability_recharge_change": -30,
-                          "mana_regen_mod": 0.3,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc09_effect_ability_enable_staff_of_nagash"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc09_skill_tmb_lord_unique_arkhan_staff_of_nagash",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc09_skill_tmb_arkhan_mount_skeletal_steed",
         "image_path": "mount_skeletal_steed_tmb.png",
         "is_background_skill": false,
@@ -5238,5 +5035,186 @@
       }
     ]
   ],
-  "key": "tmb_arkhan"
+  "key": "tmb_arkhan",
+  "items": [
+    {
+      "key": "wh2_dlc09_skill_node_tmb_arkhan_quest_1",
+      "image_path": "item_weapon.png",
+      "name": "The Tomb Blade of Arkhan",
+      "description": "The sword burns away the flesh of Arkhan's victims, leaving nothing but a charred skeleton, bound to the Liche King's dark will for all eternity.",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Public order: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +14%",
+          "value": 14,
+          "key": "wh_main_effect_character_stat_mod_melee_damage"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 61,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "income.png",
+          "priority": 201,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +15%",
+          "value": 15,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Tomb Blade of Arkhan\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc09_effect_ability_enable_the_tomb_blade_of_arkhan",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc09_weapon_abilities_tomb_blade_of_arkhan",
+                "icon_name": "wh2_dlc09_weapon_abilities_tomb_blade_of_arkhan",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Tomb Blade of Arkhan",
+                "ui_effects": [
+                  {
+                    "key": "wh_dlc09_all_summon_skeleton_warriors",
+                    "sort_order": 105,
+                    "description": "➕ Summons a larger unit of Skeleton Warriors"
+                  },
+                  {
+                    "key": "wh_main_all_defend_vs_charge",
+                    "sort_order": 106,
+                    "description": "➕ Good at defending spellcaster"
+                  },
+                  {
+                    "key": "wh_main_all_direct_damage_unbinding",
+                    "sort_order": 203,
+                    "description": "➖ Summoned units degrade over time"
+                  }
+                ],
+                "num_uses": 5,
+                "active_time": 1,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": true,
+                "target_enemies": false,
+                "target_ground": true,
+                "target_intercept_range": 60,
+                "target_self": true
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc09_effect_ability_enable_the_tomb_blade_of_arkhan"
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc09_skill_node_tmb_arkhan_quest_2",
+      "image_path": "item_arcane_item.png",
+      "name": "Staff of Nagash",
+      "description": "Created by the Arch-Necromancer, the staff harnesses Dark Magic from deep within the accursed Black Pyramid.",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 8,
+          "is_positive_value_good": true,
+          "description": "Magic item drop chance: +20%",
+          "value": 20,
+          "key": "wh_main_effect_character_mod_ancillary_drop"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 8,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_character_stat_mod_miscast_chance"
+        },
+        {
+          "icon": "technology.png",
+          "priority": 60,
+          "is_positive_value_good": true,
+          "description": "Research rate: +10%",
+          "value": 10,
+          "key": "wh_main_effect_technology_research_points"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Staff of Nagash\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc09_effect_ability_enable_staff_of_nagash",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc09_item_abilities_staff_of_nagash",
+                "icon_name": "wh2_dlc09_item_abilities_staff_of_nagash",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment_of_the_winds",
+                  "icon_path": "icon_spell_augment_of_the_winds.png",
+                  "description": "Augment of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Staff of Nagash",
+                "ui_effects": [
+                  {
+                    "key": "wh_main_all_improved_recharge_rate",
+                    "sort_order": 106,
+                    "description": "➕ Improved power recharge rate"
+                  }
+                ],
+                "active_time": 33,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 33,
+                    "effect_type": "positive",
+                    "ability_recharge_change": -30,
+                    "mana_regen_mod": 0.3,
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc09_effect_ability_enable_staff_of_nagash"
+        }
+      ]
+    }
+  ]
 }

@@ -2,142 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh_dlc03_skill_node_set_bst_malagor_unique_1",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "Icons of Vilification",
-        "description": "Malagor bears all manner of symbols of blasphemy, from priests' broken bodies to the soiled scraps of mankind's holy texts.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve: +15",
-                "value": 15,
-                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character"
-              },
-              {
-                "icon": "resistance_fire.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Fire resistance: 25%",
-                "value": 25,
-                "key": "wh_main_effect_character_stat_mod_ward_save_fire"
-              },
-              {
-                "icon": "technology.png",
-                "priority": 60,
-                "is_positive_value_good": true,
-                "description": "Research rate: +10%",
-                "value": 10,
-                "key": "wh_main_effect_technology_research_points"
-              },
-              {
-                "icon": "wizard.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Bray-Shamans",
-                "value": 1,
-                "key": "wh_dlc03_effect_agent_cap_increase_wizard_beastmen"
-              },
-              {
-                "icon": "wizard.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Hero recruit rank: +5 for Bray-Shamans",
-                "value": 5,
-                "key": "wh_dlc03_effect_agent_recruitment_xp_wizard_beastmen"
-              },
-              {
-                "icon": "treasury.png",
-                "priority": 120,
-                "is_positive_value_good": false,
-                "description": "Horde building construction cost: -25%",
-                "value": -25,
-                "key": "wh_main_effect_force_building_cost_mod"
-              },
-              {
-                "icon": "growth.png",
-                "priority": 141,
-                "is_positive_value_good": true,
-                "description": "Horde growth: +4",
-                "value": 4,
-                "key": "wh_main_effect_hordebuilding_growth_characters"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Icons of Vilification\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_dlc03_effect_ability_enable_icon_of_vilification",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc03_item_passive_icon_of_vilification",
-                      "icon_name": "wh_magic_item_passive_enchanted",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Icons of Vilification",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": 5,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+5 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            },
-                            {
-                              "value": 8,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "add",
-                              "description": "+8 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh_dlc03_effect_ability_enable_icon_of_vilification"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh_dlc03_skill_malagor_icons_of_villifications",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh_dlc03_skill_node_set_bst_malagor_unique_2",
         "image_path": "battle_speed.png",
         "is_background_skill": false,
@@ -5369,5 +5233,131 @@
       }
     ]
   ],
-  "key": "bst_malagor"
+  "key": "bst_malagor",
+  "items": [
+    {
+      "key": "wh_dlc03_skill_node_set_bst_malagor_unique_1",
+      "image_path": "item_enchanted_item.png",
+      "name": "Icons of Vilification",
+      "description": "Malagor bears all manner of symbols of blasphemy, from priests' broken bodies to the soiled scraps of mankind's holy texts.",
+      "effects": [
+        {
+          "icon": "magic.png",
+          "priority": 15,
+          "is_positive_value_good": true,
+          "description": "Winds of Magic power reserve: +15",
+          "value": 15,
+          "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character"
+        },
+        {
+          "icon": "resistance_fire.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Fire resistance: 25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_mod_ward_save_fire"
+        },
+        {
+          "icon": "technology.png",
+          "priority": 60,
+          "is_positive_value_good": true,
+          "description": "Research rate: +10%",
+          "value": 10,
+          "key": "wh_main_effect_technology_research_points"
+        },
+        {
+          "icon": "wizard.png",
+          "priority": 102,
+          "is_positive_value_good": true,
+          "description": "Hero capacity: +1 for Bray-Shamans",
+          "value": 1,
+          "key": "wh_dlc03_effect_agent_cap_increase_wizard_beastmen"
+        },
+        {
+          "icon": "wizard.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Hero recruit rank: +5 for Bray-Shamans",
+          "value": 5,
+          "key": "wh_dlc03_effect_agent_recruitment_xp_wizard_beastmen"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 120,
+          "is_positive_value_good": false,
+          "description": "Horde building construction cost: -25%",
+          "value": -25,
+          "key": "wh_main_effect_force_building_cost_mod"
+        },
+        {
+          "icon": "growth.png",
+          "priority": 141,
+          "is_positive_value_good": true,
+          "description": "Horde growth: +4",
+          "value": 4,
+          "key": "wh_main_effect_hordebuilding_growth_characters"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Icons of Vilification\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc03_effect_ability_enable_icon_of_vilification",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc03_item_passive_icon_of_vilification",
+                "icon_name": "wh_magic_item_passive_enchanted",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Icons of Vilification",
+                "passive": true,
+                "effect_range": 40,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 5,
+                        "stat": "stat_morale",
+                        "how": "add",
+                        "description": "+5 Leadership",
+                        "sort_order": 1,
+                        "icon": "icon_stat_morale.png"
+                      },
+                      {
+                        "value": 8,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "add",
+                        "description": "+8 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc03_effect_ability_enable_icon_of_vilification"
+        }
+      ]
+    }
+  ]
 }

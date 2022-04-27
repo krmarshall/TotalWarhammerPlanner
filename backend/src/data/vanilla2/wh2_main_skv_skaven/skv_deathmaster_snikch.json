@@ -2,226 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh2_dlc14_skill_node_deathmaster_snikch_unique_00",
-        "image_path": "item_weapon.png",
-        "is_background_skill": false,
-        "name": "Whirl of Weeping Blades",
-        "description": "With a poisoned sword in both hands and his own tail, few warriors can survive long against the Deathmaster.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "armour_piercing.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Armour-piercing weapon damage: +20",
-                "value": 20,
-                "key": "wh2_main_effect_armour_piercing_damage"
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +5%",
-                "value": 5,
-                "key": "wh_main_effect_character_stat_mod_melee_damage"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Ability: \"Whirl of Weeping Blades\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc14_effect_ability_enable_whirl_of_weeping_blades",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc14_weapon_abilities_whirl_of_weeping_blades",
-                      "icon_name": "wh2_dlc14_weapon_abilities_whirl_of_weeping_blades",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_vortex",
-                        "icon_path": "icon_spell_vortex.png",
-                        "description": "Vortex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Whirl of Weeping Blades",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "description": "➕ Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh2_main_spell_stationary_aoe",
-                          "sort_order": 105,
-                          "description": "➕ Huge, stationary area of effect"
-                        },
-                        {
-                          "key": "wh_main_all_can_disrupt_formation",
-                          "sort_order": 105,
-                          "description": "➕ Can disrupt unit formation"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "description": "➕ Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_units",
-                          "sort_order": 106,
-                          "description": "➕ Strong vs multiple units"
-                        }
-                      ],
-                      "active_time": 5,
-                      "recharge_time": 120,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 5,
-                          "effect_type": "negative",
-                          "cant_move": true,
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc14_effect_ability_enable_whirl_of_weeping_blades"
-              },
-              {
-                "icon": "morale.png",
-                "priority": 703,
-                "is_positive_value_good": true,
-                "description": "Leadership: +10 for Gutter Runners, Night Runners, Death Runners and Eshin Triads units (Rank 7 and above)",
-                "value": 10,
-                "key": "wh2_main_effect_skill_battle_morale_increase_skv_runners_triads_rank7"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc14_skill_skv_snikch_quest_whirl_of_weeping_blades",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc14_skill_node_deathmaster_snikch_unique_01",
-        "image_path": "item_armour.png",
-        "is_background_skill": false,
-        "name": "The Cloak of Shadows",
-        "description": "Woven from stolen human hair and spider silk, the cloak both conceals and silences the wearer, making Snikch near invisible in darkness.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "defence_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +10",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_mod_melee_defence"
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -10%",
-                "value": -10,
-                "key": "wh_main_effect_agent_action_success_chance_enemy"
-              },
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Ambush success chance: +20%",
-                "value": 20,
-                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance"
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"The Cloak of Shadows\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc14_effect_ability_enable_the_cloak_of_shadows",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc14_item_passive_the_cloak_of_shadows",
-                      "icon_name": "wh2_dlc14_item_passive_the_cloak_of_shadows",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Cloak of Shadows",
-                      "passive": true,
-                      "effect_range": 40,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "negative",
-                          "recharge_time": -1,
-                          "is_hidden_in_ui": false,
-                          "stat_effects": [
-                            {
-                              "value": -10,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "-10 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            },
-                            {
-                              "value": -4,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "-4 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "wh2_dlc14_effect_ability_enable_the_cloak_of_shadows"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": true,
-        "character_skill_key": "wh2_dlc14_skill_skv_snikch_quest_1",
-        "tier": 2,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh2_dlc14_skill_node_deathmaster_snikch_unique_02",
         "image_path": "item_enchanted_item.png",
         "is_background_skill": false,
@@ -3020,5 +2800,203 @@
       }
     ]
   ],
-  "key": "skv_deathmaster_snikch"
+  "key": "skv_deathmaster_snikch",
+  "items": [
+    {
+      "key": "wh2_dlc14_skill_node_deathmaster_snikch_unique_00",
+      "image_path": "item_weapon.png",
+      "name": "Whirl of Weeping Blades",
+      "description": "With a poisoned sword in both hands and his own tail, few warriors can survive long against the Deathmaster.",
+      "effects": [
+        {
+          "icon": "armour_piercing.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Armour-piercing weapon damage: +20",
+          "value": 20,
+          "key": "wh2_main_effect_armour_piercing_damage"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_mod_melee_damage"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Whirl of Weeping Blades\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc14_effect_ability_enable_whirl_of_weeping_blades",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc14_weapon_abilities_whirl_of_weeping_blades",
+                "icon_name": "wh2_dlc14_weapon_abilities_whirl_of_weeping_blades",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_vortex",
+                  "icon_path": "icon_spell_vortex.png",
+                  "description": "Vortex"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Whirl of Weeping Blades",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_moderate",
+                    "sort_order": 104,
+                    "description": "➕ Causes moderate magical damage"
+                  },
+                  {
+                    "key": "wh2_main_spell_stationary_aoe",
+                    "sort_order": 105,
+                    "description": "➕ Huge, stationary area of effect"
+                  },
+                  {
+                    "key": "wh_main_all_can_disrupt_formation",
+                    "sort_order": 105,
+                    "description": "➕ Can disrupt unit formation"
+                  },
+                  {
+                    "key": "wh2_main_all_good_against_armour",
+                    "sort_order": 106,
+                    "description": "➕ Good against armour"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_units",
+                    "sort_order": 106,
+                    "description": "➕ Strong vs multiple units"
+                  }
+                ],
+                "active_time": 5,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 5,
+                    "effect_type": "negative",
+                    "cant_move": true,
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc14_effect_ability_enable_whirl_of_weeping_blades"
+        },
+        {
+          "icon": "morale.png",
+          "priority": 703,
+          "is_positive_value_good": true,
+          "description": "Leadership: +10 for Gutter Runners, Night Runners, Death Runners and Eshin Triads units (Rank 7 and above)",
+          "value": 10,
+          "key": "wh2_main_effect_skill_battle_morale_increase_skv_runners_triads_rank7"
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc14_skill_node_deathmaster_snikch_unique_01",
+      "image_path": "item_armour.png",
+      "name": "The Cloak of Shadows",
+      "description": "Woven from stolen human hair and spider silk, the cloak both conceals and silences the wearer, making Snikch near invisible in darkness.",
+      "effects": [
+        {
+          "icon": "defence_character.png",
+          "priority": 55,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_mod_melee_defence"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "icon_effects_ambush.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Ambush success chance: +20%",
+          "value": 20,
+          "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"The Cloak of Shadows\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc14_effect_ability_enable_the_cloak_of_shadows",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc14_item_passive_the_cloak_of_shadows",
+                "icon_name": "wh2_dlc14_item_passive_the_cloak_of_shadows",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Cloak of Shadows",
+                "passive": true,
+                "effect_range": 40,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "negative",
+                    "recharge_time": -1,
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -10,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-10 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      },
+                      {
+                        "value": -4,
+                        "stat": "stat_morale",
+                        "how": "add",
+                        "description": "-4 Leadership",
+                        "sort_order": 1,
+                        "icon": "icon_stat_morale.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc14_effect_ability_enable_the_cloak_of_shadows"
+        }
+      ]
+    }
+  ]
 }
