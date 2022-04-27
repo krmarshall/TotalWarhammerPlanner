@@ -4861,6 +4861,112 @@
   ],
   "items": [
     {
+      "key": "wh_main_anc_enchanted_item_the_crown_of_sorcery",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "magic_character.png",
+          "priority": 1,
+          "is_positive_value_good": true,
+          "description": "Enables Lore of Death magic",
+          "value": 1,
+          "key": "wh_main_effect_ancillary_crown_of_sorcery"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 8,
+          "is_positive_value_good": false,
+          "description": "Miscast base chance: -25%",
+          "value": -25,
+          "key": "wh_main_effect_character_stat_mod_miscast_chance"
+        },
+        {
+          "icon": "attrition.png",
+          "priority": 56,
+          "is_positive_value_good": true,
+          "description": "Immune to Vampiric attrition",
+          "value": 1,
+          "key": "wh2_dlc14_effect_attrition_immunity_undead"
+        },
+        {
+          "icon": "public_order.png",
+          "priority": 100,
+          "is_positive_value_good": false,
+          "description": "Control: -50% penalty due to presence or lack of corruption",
+          "value": -50,
+          "key": "wh_main_effect_public_order_penalty_other_religions"
+        },
+        {
+          "icon": "spell_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Bound spell: \"Gaze of Nagash\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_bound_gaze_of_nagash",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_spell_bound_gaze_of_nagash",
+                "icon_name": "wh_main_spell_vampires_gaze_of_nagash",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_magic_missiles",
+                  "icon_path": "icon_spell_magic_missiles.png",
+                  "description": "Magic Missiles"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Gaze of Nagash",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_all_magical_damage_moderate",
+                    "sort_order": 104,
+                    "effect_state": "positive",
+                    "description": "Causes moderate magical damage"
+                  },
+                  {
+                    "key": "wh2_main_all_good_against_armour",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against armour"
+                  },
+                  {
+                    "key": "wh_main_all_good_vs_large",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Good against large combatants"
+                  },
+                  {
+                    "key": "wh_main_all_strong_against_single",
+                    "sort_order": 106,
+                    "effect_state": "positive",
+                    "description": "Strong vs a single combatant"
+                  }
+                ],
+                "num_uses": 3,
+                "recharge_time": 90,
+                "wind_up_time": 3,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": true,
+                "target_ground": false,
+                "target_intercept_range": 250,
+                "target_self": false
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_bound_gaze_of_nagash"
+        }
+      ],
+      "name": "The Crown of Sorcery",
+      "description": "The Crown of Sorcery was found in the ruins of Todtheim by Azhag the Slaughterer. Its malign influence has helped the Warboss carve a path of destruction throughout the Empire, for the Crown whispers advice and grants the wearer the power of Death Magic.",
+      "unlocked_at_rank": 7,
+      "instant": false,
+      "image_path": "item_enchanted_item.png"
+    },
+    {
       "key": "wh_main_anc_armour_azhags_ard_armour",
       "type": "wh_main_anc_armour",
       "effects": [
@@ -4973,112 +5079,6 @@
       "unlocked_at_rank": 12,
       "instant": false,
       "image_path": "item_armour.png"
-    },
-    {
-      "key": "wh_main_anc_enchanted_item_the_crown_of_sorcery",
-      "type": "wh_main_anc_enchanted_item",
-      "effects": [
-        {
-          "icon": "magic_character.png",
-          "priority": 1,
-          "is_positive_value_good": true,
-          "description": "Enables Lore of Death magic",
-          "value": 1,
-          "key": "wh_main_effect_ancillary_crown_of_sorcery"
-        },
-        {
-          "icon": "spell_ability.png",
-          "priority": 8,
-          "is_positive_value_good": false,
-          "description": "Miscast base chance: -25%",
-          "value": -25,
-          "key": "wh_main_effect_character_stat_mod_miscast_chance"
-        },
-        {
-          "icon": "attrition.png",
-          "priority": 56,
-          "is_positive_value_good": true,
-          "description": "Immune to Vampiric attrition",
-          "value": 1,
-          "key": "wh2_dlc14_effect_attrition_immunity_undead"
-        },
-        {
-          "icon": "public_order.png",
-          "priority": 100,
-          "is_positive_value_good": false,
-          "description": "Control: -50% penalty due to presence or lack of corruption",
-          "value": -50,
-          "key": "wh_main_effect_public_order_penalty_other_religions"
-        },
-        {
-          "icon": "spell_ability.png",
-          "priority": 600,
-          "is_positive_value_good": true,
-          "description": "Bound spell: \"Gaze of Nagash\"",
-          "related_abilities": [
-            {
-              "effect": "wh2_dlc15_effect_ability_enable_bound_gaze_of_nagash",
-              "bonus_value_id": "enable",
-              "unit_ability": {
-                "key": "wh2_dlc15_spell_bound_gaze_of_nagash",
-                "icon_name": "wh_main_spell_vampires_gaze_of_nagash",
-                "overpower_option": "",
-                "type": {
-                  "key": "wh_type_magic_missiles",
-                  "icon_path": "icon_spell_magic_missiles.png",
-                  "description": "Magic Missiles"
-                },
-                "is_hidden_in_ui": false,
-                "description": "Gaze of Nagash",
-                "ui_effects": [
-                  {
-                    "key": "wh2_main_all_magical_damage_moderate",
-                    "sort_order": 104,
-                    "effect_state": "positive",
-                    "description": "Causes moderate magical damage"
-                  },
-                  {
-                    "key": "wh2_main_all_good_against_armour",
-                    "sort_order": 106,
-                    "effect_state": "positive",
-                    "description": "Good against armour"
-                  },
-                  {
-                    "key": "wh_main_all_good_vs_large",
-                    "sort_order": 106,
-                    "effect_state": "positive",
-                    "description": "Good against large combatants"
-                  },
-                  {
-                    "key": "wh_main_all_strong_against_single",
-                    "sort_order": 106,
-                    "effect_state": "positive",
-                    "description": "Strong vs a single combatant"
-                  }
-                ],
-                "num_uses": 3,
-                "recharge_time": 90,
-                "wind_up_time": 3,
-                "passive": false,
-                "effect_range": 0,
-                "affect_self": false,
-                "target_friends": false,
-                "target_enemies": true,
-                "target_ground": false,
-                "target_intercept_range": 250,
-                "target_self": false
-              }
-            }
-          ],
-          "value": 1,
-          "key": "wh2_dlc15_effect_ability_enable_bound_gaze_of_nagash"
-        }
-      ],
-      "name": "The Crown of Sorcery",
-      "description": "The Crown of Sorcery was found in the ruins of Todtheim by Azhag the Slaughterer. Its malign influence has helped the Warboss carve a path of destruction throughout the Empire, for the Crown whispers advice and grants the wearer the power of Death Magic.",
-      "unlocked_at_rank": 7,
-      "instant": false,
-      "image_path": "item_enchanted_item.png"
     },
     {
       "key": "wh_main_anc_weapon_slaggas_slashas",

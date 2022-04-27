@@ -4902,6 +4902,86 @@
   ],
   "items": [
     {
+      "key": "wh2_dlc10_anc_talisman_shieldstone_of_isha",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Shieldstone of Isha\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc10_effect_ability_enable_shieldstone_of_isha",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc10_item_passive_shieldstone_of_isha",
+                "icon_name": "wh_magic_item_passive_talisman",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_ward_save",
+                  "icon_path": "icon_spell_area_of_ward_saves.png",
+                  "description": "Ward Save (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Shieldstone of Isha",
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 10,
+                        "stat": "stat_resistance_physical",
+                        "how": "add",
+                        "description": "+10 Physical Resistance",
+                        "sort_order": 10,
+                        "icon": "resistance_physical.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc10_effect_ability_enable_shieldstone_of_isha"
+        }
+      ],
+      "name": "Shieldstone of Isha",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false,
+      "image_path": "item_talisman.png"
+    },
+    {
       "key": "wh2_dlc10_anc_enchanted_item_star_of_avelorn",
       "type": "wh_main_anc_enchanted_item",
       "effects": [
@@ -4989,86 +5069,6 @@
       "unlocked_at_rank": 12,
       "instant": false,
       "image_path": "item_enchanted_item.png"
-    },
-    {
-      "key": "wh2_dlc10_anc_talisman_shieldstone_of_isha",
-      "type": "wh_main_anc_talisman",
-      "effects": [
-        {
-          "icon": "defence_character.png",
-          "priority": 150,
-          "is_positive_value_good": true,
-          "description": "Melee defence: +10",
-          "value": 10,
-          "key": "wh_main_effect_character_stat_melee_defence"
-        },
-        {
-          "icon": "resistance_ward_save.png",
-          "priority": 280,
-          "is_positive_value_good": true,
-          "description": "Ward save: 5%",
-          "value": 5,
-          "key": "wh_main_effect_character_stat_ward_save"
-        },
-        {
-          "icon": "general_ability.png",
-          "priority": 310,
-          "is_positive_value_good": true,
-          "description": "Passive ability: \"Shieldstone of Isha\"",
-          "related_abilities": [
-            {
-              "effect": "wh2_dlc10_effect_ability_enable_shieldstone_of_isha",
-              "bonus_value_id": "enable",
-              "unit_ability": {
-                "key": "wh2_dlc10_item_passive_shieldstone_of_isha",
-                "icon_name": "wh_magic_item_passive_talisman",
-                "overpower_option": "",
-                "type": {
-                  "key": "wh_type_area_of_ward_save",
-                  "icon_path": "icon_spell_area_of_ward_saves.png",
-                  "description": "Ward Save (Area)"
-                },
-                "is_hidden_in_ui": false,
-                "description": "Shieldstone of Isha",
-                "passive": true,
-                "effect_range": 35,
-                "affect_self": true,
-                "target_friends": false,
-                "target_enemies": false,
-                "target_ground": false,
-                "target_intercept_range": 0,
-                "target_self": false,
-                "phases": [
-                  {
-                    "duration": -1,
-                    "effect_type": "positive",
-                    "is_hidden_in_ui": false,
-                    "freeze_recharge": false,
-                    "recharge_time": null,
-                    "stat_effects": [
-                      {
-                        "value": 10,
-                        "stat": "stat_resistance_physical",
-                        "how": "add",
-                        "description": "+10 Physical Resistance",
-                        "sort_order": 10,
-                        "icon": "resistance_physical.png"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          ],
-          "value": 1,
-          "key": "wh2_dlc10_effect_ability_enable_shieldstone_of_isha"
-        }
-      ],
-      "name": "Shieldstone of Isha",
-      "description": " ",
-      "unlocked_at_rank": 7,
-      "instant": false,
-      "image_path": "item_talisman.png"
     }
   ]
 }

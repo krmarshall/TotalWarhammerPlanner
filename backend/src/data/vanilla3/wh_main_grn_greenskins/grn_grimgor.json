@@ -2638,126 +2638,6 @@
   ],
   "items": [
     {
-      "key": "wh_main_anc_armour_blood-forged_armour",
-      "type": "wh_main_anc_armour",
-      "effects": [
-        {
-          "icon": "armour_character.png",
-          "priority": 100,
-          "is_positive_value_good": true,
-          "description": "Armour: +10",
-          "value": 10,
-          "key": "wh_main_effect_character_stat_armour"
-        },
-        {
-          "icon": "agent.png",
-          "priority": 101,
-          "is_positive_value_good": false,
-          "description": "Enemy Hero action success chance: -10%",
-          "value": -10,
-          "key": "wh_main_effect_agent_action_success_chance_enemy"
-        },
-        {
-          "icon": "wound_time.png",
-          "priority": 101,
-          "is_positive_value_good": false,
-          "description": "Wound recovery time: -1",
-          "value": -1,
-          "key": "wh_main_effect_character_wound_recovery_time_mod"
-        },
-        {
-          "icon": "defence_character.png",
-          "priority": 150,
-          "is_positive_value_good": true,
-          "description": "Melee defence: +6",
-          "value": 6,
-          "key": "wh_main_effect_character_stat_melee_defence"
-        },
-        {
-          "icon": "resistance_ward_save.png",
-          "priority": 280,
-          "is_positive_value_good": true,
-          "description": "Ward save: 15%",
-          "value": 15,
-          "key": "wh_main_effect_character_stat_ward_save"
-        },
-        {
-          "icon": "general_ability.png",
-          "priority": 600,
-          "is_positive_value_good": true,
-          "description": "Ability: \"Blood-Forged Armour\"",
-          "related_abilities": [
-            {
-              "effect": "wh2_dlc15_effect_ability_enable_blood_forged_armour",
-              "bonus_value_id": "enable",
-              "unit_ability": {
-                "key": "wh2_dlc15_item_abilities_blood_forged_armour",
-                "icon_name": "wh2_dlc15_item_abilities_blood_forged_armour",
-                "overpower_option": "",
-                "type": {
-                  "key": "wh_type_explosion",
-                  "icon_path": "icon_spell_explosion.png",
-                  "description": "Explosion"
-                },
-                "is_hidden_in_ui": false,
-                "description": "Blood-Forged Armour",
-                "ui_effects": [
-                  {
-                    "key": "wh2_main_spell_friendly_fire_explosion",
-                    "sort_order": 101,
-                    "effect_state": "positive",
-                    "description": "Explosion does not affect friendly troops"
-                  },
-                  {
-                    "key": "wh_main_all_poor_vs_large",
-                    "sort_order": 206,
-                    "effect_state": "negative",
-                    "description": "Poor against large combatants"
-                  }
-                ],
-                "active_time": 12,
-                "recharge_time": 30,
-                "passive": false,
-                "effect_range": 0,
-                "affect_self": true,
-                "target_friends": false,
-                "target_enemies": false,
-                "target_ground": false,
-                "target_intercept_range": 0,
-                "target_self": false,
-                "phases": [
-                  {
-                    "duration": 12,
-                    "effect_type": "positive",
-                    "is_hidden_in_ui": false,
-                    "freeze_recharge": false,
-                    "recharge_time": null,
-                    "stat_effects": [
-                      {
-                        "value": 30,
-                        "stat": "stat_armour",
-                        "how": "add",
-                        "description": "+30 Armour",
-                        "sort_order": 6,
-                        "icon": "icon_stat_armour.png"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          ],
-          "value": 1,
-          "key": "wh2_dlc15_effect_ability_enable_blood_forged_armour"
-        }
-      ],
-      "name": "Blood-Forged Armour",
-      "description": "After being forged under Red Eye Mountain, this armour was cooled with the blood of Dwarf Runesmiths.",
-      "unlocked_at_rank": 12,
-      "instant": false,
-      "image_path": "item_armour.png"
-    },
-    {
       "key": "wh_main_anc_weapon_gitsnik",
       "type": "wh_main_anc_weapon",
       "effects": [
@@ -2878,6 +2758,126 @@
       "unlocked_at_rank": 7,
       "instant": false,
       "image_path": "item_weapon.png"
+    },
+    {
+      "key": "wh_main_anc_armour_blood-forged_armour",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_ward_save.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Ward save: 15%",
+          "value": 15,
+          "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Blood-Forged Armour\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc15_effect_ability_enable_blood_forged_armour",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc15_item_abilities_blood_forged_armour",
+                "icon_name": "wh2_dlc15_item_abilities_blood_forged_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_explosion",
+                  "icon_path": "icon_spell_explosion.png",
+                  "description": "Explosion"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Blood-Forged Armour",
+                "ui_effects": [
+                  {
+                    "key": "wh2_main_spell_friendly_fire_explosion",
+                    "sort_order": 101,
+                    "effect_state": "positive",
+                    "description": "Explosion does not affect friendly troops"
+                  },
+                  {
+                    "key": "wh_main_all_poor_vs_large",
+                    "sort_order": 206,
+                    "effect_state": "negative",
+                    "description": "Poor against large combatants"
+                  }
+                ],
+                "active_time": 12,
+                "recharge_time": 30,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 12,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 30,
+                        "stat": "stat_armour",
+                        "how": "add",
+                        "description": "+30 Armour",
+                        "sort_order": 6,
+                        "icon": "icon_stat_armour.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc15_effect_ability_enable_blood_forged_armour"
+        }
+      ],
+      "name": "Blood-Forged Armour",
+      "description": "After being forged under Red Eye Mountain, this armour was cooled with the blood of Dwarf Runesmiths.",
+      "unlocked_at_rank": 12,
+      "instant": false,
+      "image_path": "item_armour.png"
     }
   ]
 }

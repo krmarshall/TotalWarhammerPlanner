@@ -6279,6 +6279,110 @@
   ],
   "items": [
     {
+      "key": "wh_main_anc_weapon_sword_of_unholy_power",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +10%",
+          "value": 10,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "corruption_vampiric.png",
+          "priority": 104,
+          "is_positive_value_good": true,
+          "description": "Vampiric corruption: +5",
+          "value": 5,
+          "key": "wh3_main_effect_corruption_vampiric_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -10%",
+          "value": -10,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Sword of Unholy Power\"",
+          "related_abilities": [
+            {
+              "effect": "wh_main_effect_ability_enable_sword_of_unholy_power",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_main_weapon_passive_sword_of_unholy_power",
+                "icon_name": "wh_main_weapon_passive_sword_of_unholy_power",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment_of_the_winds",
+                  "icon_path": "icon_spell_augment_of_the_winds.png",
+                  "description": "Augment of the Winds"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Sword of Unholy Power",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "mana_regen_mod": 0.6,
+                    "mana_max_depletion_mod": 0.1,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_main_effect_ability_enable_sword_of_unholy_power"
+        }
+      ],
+      "name": "Sword of Unholy Power",
+      "description": " ",
+      "unlocked_at_rank": 7,
+      "instant": false,
+      "image_path": "item_weapon.png"
+    },
+    {
       "key": "wh_main_anc_armour_armour_of_templehof",
       "type": "wh_main_anc_armour",
       "effects": [
@@ -6390,110 +6494,6 @@
       "unlocked_at_rank": 12,
       "instant": false,
       "image_path": "item_armour.png"
-    },
-    {
-      "key": "wh_main_anc_weapon_sword_of_unholy_power",
-      "type": "wh_main_anc_weapon",
-      "effects": [
-        {
-          "icon": "income.png",
-          "priority": 101,
-          "is_positive_value_good": true,
-          "description": "Income from post-battle loot: +10%",
-          "value": 10,
-          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
-        },
-        {
-          "icon": "corruption_vampiric.png",
-          "priority": 104,
-          "is_positive_value_good": true,
-          "description": "Vampiric corruption: +5",
-          "value": 5,
-          "key": "wh3_main_effect_corruption_vampiric_characters"
-        },
-        {
-          "icon": "treasury.png",
-          "priority": 106,
-          "is_positive_value_good": false,
-          "description": "Recruitment cost: -10%",
-          "value": -10,
-          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
-        },
-        {
-          "icon": "melee_character.png",
-          "priority": 130,
-          "is_positive_value_good": true,
-          "description": "Melee attack: +6",
-          "value": 6,
-          "key": "wh_main_effect_character_stat_melee_attack"
-        },
-        {
-          "icon": "magical_attacks.png",
-          "priority": 140,
-          "is_positive_value_good": true,
-          "description": "Enables magical attacks",
-          "value": 1,
-          "key": "wh_main_effect_character_stat_enable_magic_attacks"
-        },
-        {
-          "icon": "weapon_damage_character.png",
-          "priority": 160,
-          "is_positive_value_good": true,
-          "description": "Weapon strength: +10%",
-          "value": 10,
-          "key": "wh_main_effect_character_stat_weapon_strength"
-        },
-        {
-          "icon": "general_ability.png",
-          "priority": 310,
-          "is_positive_value_good": true,
-          "description": "Passive ability: \"Sword of Unholy Power\"",
-          "related_abilities": [
-            {
-              "effect": "wh_main_effect_ability_enable_sword_of_unholy_power",
-              "bonus_value_id": "enable",
-              "unit_ability": {
-                "key": "wh_main_weapon_passive_sword_of_unholy_power",
-                "icon_name": "wh_main_weapon_passive_sword_of_unholy_power",
-                "overpower_option": "",
-                "type": {
-                  "key": "wh_type_augment_of_the_winds",
-                  "icon_path": "icon_spell_augment_of_the_winds.png",
-                  "description": "Augment of the Winds"
-                },
-                "is_hidden_in_ui": false,
-                "description": "Sword of Unholy Power",
-                "passive": true,
-                "effect_range": 0,
-                "affect_self": true,
-                "target_friends": false,
-                "target_enemies": false,
-                "target_ground": false,
-                "target_intercept_range": 0,
-                "target_self": false,
-                "phases": [
-                  {
-                    "duration": -1,
-                    "effect_type": "positive",
-                    "mana_regen_mod": 0.6,
-                    "mana_max_depletion_mod": 0.1,
-                    "is_hidden_in_ui": false,
-                    "freeze_recharge": false,
-                    "recharge_time": null
-                  }
-                ]
-              }
-            }
-          ],
-          "value": 1,
-          "key": "wh_main_effect_ability_enable_sword_of_unholy_power"
-        }
-      ],
-      "name": "Sword of Unholy Power",
-      "description": " ",
-      "unlocked_at_rank": 7,
-      "instant": false,
-      "image_path": "item_weapon.png"
     }
   ]
 }

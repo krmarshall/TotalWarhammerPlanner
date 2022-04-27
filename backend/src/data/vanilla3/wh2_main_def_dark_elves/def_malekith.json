@@ -4824,6 +4824,49 @@
   ],
   "items": [
     {
+      "key": "wh2_main_anc_armour_armour_of_midnight",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -2",
+          "value": -2,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "resistance_physical.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Physical resistance: 20%",
+          "value": 20,
+          "key": "wh_main_effect_character_stat_physical_resistance"
+        }
+      ],
+      "name": "Armour of Midnight",
+      "description": "Malekith's rune-armour is forged from the hardest meteoric iron and protects against any mortal weapon.",
+      "unlocked_at_rank": 4,
+      "instant": false,
+      "image_path": "item_armour.png"
+    },
+    {
       "key": "wh2_main_anc_arcane_item_circlet_of_iron",
       "type": "wh_main_anc_arcane_item",
       "effects": [
@@ -4928,47 +4971,93 @@
       "image_path": "item_arcane_item.png"
     },
     {
-      "key": "wh2_main_anc_armour_armour_of_midnight",
-      "type": "wh_main_anc_armour",
+      "key": "wh2_main_anc_weapon_destroyer",
+      "type": "wh_main_anc_weapon",
       "effects": [
         {
-          "icon": "armour_character.png",
-          "priority": 100,
+          "icon": "item_ability.png",
+          "priority": 8,
           "is_positive_value_good": true,
-          "description": "Armour: +12",
+          "description": "Post battle chance of stealing a magic item: +50%",
+          "value": 50,
+          "key": "wh_main_effect_character_mod_ancillary_steal"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +12",
           "value": 12,
-          "key": "wh_main_effect_character_stat_armour"
+          "key": "wh_main_effect_character_stat_melee_attack"
         },
         {
-          "icon": "wound_time.png",
-          "priority": 101,
-          "is_positive_value_good": false,
-          "description": "Wound recovery time: -2",
-          "value": -2,
-          "key": "wh_main_effect_character_wound_recovery_time_mod"
-        },
-        {
-          "icon": "defence_character.png",
-          "priority": 150,
+          "icon": "discouraged.png",
+          "priority": 140,
           "is_positive_value_good": true,
-          "description": "Melee defence: +6",
-          "value": 6,
-          "key": "wh_main_effect_character_stat_melee_defence"
+          "description": "Attacks cause \"Discouraged\" effect, reducing leadership",
+          "value": 1,
+          "key": "wh2_main_effect_character_stat_enable_discourage_attacks"
         },
         {
-          "icon": "resistance_physical.png",
-          "priority": 280,
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
           "is_positive_value_good": true,
-          "description": "Physical resistance: 20%",
-          "value": 20,
-          "key": "wh_main_effect_character_stat_physical_resistance"
+          "description": "Weapon strength: +12%",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 310,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Destroyer\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_main_effect_ability_enable_destroyer",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_main_weapon_passive_destroyer",
+                "icon_name": "wh2_main_weapon_passive_destroyer",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_hexes",
+                  "icon_path": "icon_spell_area_of_hexes.png",
+                  "description": "Hex (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Destroyer",
+                "active_time": 15,
+                "recharge_time": 45,
+                "passive": true,
+                "effect_range": 35,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 15,
+                    "effect_type": "negative",
+                    "ability_recharge_change": 15,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_main_effect_ability_enable_destroyer"
         }
       ],
-      "name": "Armour of Midnight",
-      "description": "Malekith's rune-armour is forged from the hardest meteoric iron and protects against any mortal weapon.",
-      "unlocked_at_rank": 4,
+      "name": "Destroyer",
+      "description": " ",
+      "unlocked_at_rank": 12,
       "instant": false,
-      "image_path": "item_armour.png"
+      "image_path": "item_weapon.png"
     },
     {
       "key": "wh2_main_anc_enchanted_item_supreme_spellshield",
@@ -5072,95 +5161,6 @@
       "unlocked_at_rank": 17,
       "instant": false,
       "image_path": "item_enchanted_item.png"
-    },
-    {
-      "key": "wh2_main_anc_weapon_destroyer",
-      "type": "wh_main_anc_weapon",
-      "effects": [
-        {
-          "icon": "item_ability.png",
-          "priority": 8,
-          "is_positive_value_good": true,
-          "description": "Post battle chance of stealing a magic item: +50%",
-          "value": 50,
-          "key": "wh_main_effect_character_mod_ancillary_steal"
-        },
-        {
-          "icon": "melee_character.png",
-          "priority": 130,
-          "is_positive_value_good": true,
-          "description": "Melee attack: +12",
-          "value": 12,
-          "key": "wh_main_effect_character_stat_melee_attack"
-        },
-        {
-          "icon": "discouraged.png",
-          "priority": 140,
-          "is_positive_value_good": true,
-          "description": "Attacks cause \"Discouraged\" effect, reducing leadership",
-          "value": 1,
-          "key": "wh2_main_effect_character_stat_enable_discourage_attacks"
-        },
-        {
-          "icon": "weapon_damage_character.png",
-          "priority": 160,
-          "is_positive_value_good": true,
-          "description": "Weapon strength: +12%",
-          "value": 12,
-          "key": "wh_main_effect_character_stat_weapon_strength"
-        },
-        {
-          "icon": "general_ability.png",
-          "priority": 310,
-          "is_positive_value_good": true,
-          "description": "Passive ability: \"Destroyer\"",
-          "related_abilities": [
-            {
-              "effect": "wh2_main_effect_ability_enable_destroyer",
-              "bonus_value_id": "enable",
-              "unit_ability": {
-                "key": "wh2_main_weapon_passive_destroyer",
-                "icon_name": "wh2_main_weapon_passive_destroyer",
-                "overpower_option": "",
-                "type": {
-                  "key": "wh_type_area_of_hexes",
-                  "icon_path": "icon_spell_area_of_hexes.png",
-                  "description": "Hex (Area)"
-                },
-                "is_hidden_in_ui": false,
-                "description": "Destroyer",
-                "active_time": 15,
-                "recharge_time": 45,
-                "passive": true,
-                "effect_range": 35,
-                "affect_self": false,
-                "target_friends": false,
-                "target_enemies": false,
-                "target_ground": false,
-                "target_intercept_range": 0,
-                "target_self": false,
-                "phases": [
-                  {
-                    "duration": 15,
-                    "effect_type": "negative",
-                    "ability_recharge_change": 15,
-                    "is_hidden_in_ui": false,
-                    "freeze_recharge": false,
-                    "recharge_time": null
-                  }
-                ]
-              }
-            }
-          ],
-          "value": 1,
-          "key": "wh2_main_effect_ability_enable_destroyer"
-        }
-      ],
-      "name": "Destroyer",
-      "description": " ",
-      "unlocked_at_rank": 12,
-      "instant": false,
-      "image_path": "item_weapon.png"
     }
   ]
 }
