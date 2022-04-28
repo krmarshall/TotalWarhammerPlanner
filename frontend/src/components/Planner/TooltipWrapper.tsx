@@ -16,6 +16,8 @@ interface Props {
   children: JSX.Element;
 }
 
+// Adapted from documentation example:
+// https://codesandbox.io/s/winter-tree-wmmffl?file=/src/Tooltip.tsx
 const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
   const [open, setOpen] = useState(false);
 

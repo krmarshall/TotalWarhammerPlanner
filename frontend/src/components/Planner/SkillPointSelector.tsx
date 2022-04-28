@@ -24,7 +24,7 @@ const SkillPointSelector = ({
   if (selected) {
     containerClassName += ' text-gray-50';
   } else {
-    containerClassName += ' text-gray-400';
+    containerClassName += ' text-gray-400 hover:text-gray-300';
   }
 
   return (

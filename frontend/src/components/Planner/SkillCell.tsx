@@ -128,7 +128,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       testCharacterBuild.rank -= 2;
 
       if (!isValidSkillTree(testCharacterBuild, state.characterData as CharacterInterface)) {
-        toast.error('This skill has dependencies.', { id: `${skillKey} dependencies` });
+        toast.error('This skill has dependents.', { id: `${skillKey} dependencies` });
         return;
       }
 
@@ -151,7 +151,6 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   } else if (selectable) {
     divClassName += ' hover:bg-gray-600';
   } else {
-    // Filter/Grayscale on the tooltip breaks position, and cant override parent filter/grayscale, so on hover remove parents filter/gscale, hacky but works
     divClassName +=
       ' hover:bg-gray-600 opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
   }

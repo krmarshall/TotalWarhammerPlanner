@@ -13,7 +13,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
   const { selectedGame } = state;
   const imagePath = item.image_path.replace('.png', '.webp');
   return (
-    <td className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 select-none">
+    <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 select-none">
       <TooltipWrapper
         tooltip={
           <span className="text-center">
@@ -48,7 +48,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
           </div>
         </div>
       </TooltipWrapper>
-    </td>
+    </div>
   );
 };
 
