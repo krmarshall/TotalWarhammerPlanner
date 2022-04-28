@@ -28,20 +28,17 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   );
 
   useEffect(() => {
-    const newSelectable = skillIncreaseIsValid(
-      characterBuild,
-      characterData,
-      skill,
-      thisSkillsCurrentPoints,
-      skillKey,
-      false
-    );
-    setSelectable(newSelectable);
+    let tempCurPoints = thisSkillsCurrentPoints;
     if (characterBuild?.buildData?.[yIndex]?.[xIndex] !== undefined) {
       setThisSkillsCurrentPoints(characterBuild?.buildData?.[yIndex]?.[xIndex] as number);
+      tempCurPoints = characterBuild?.buildData?.[yIndex]?.[xIndex] as number;
     } else {
       setThisSkillsCurrentPoints(0);
+      tempCurPoints = 0;
     }
+
+    const newSelectable = skillIncreaseIsValid(characterBuild, characterData, skill, tempCurPoints, skillKey, false);
+    setSelectable(newSelectable);
   }, [characterBuild?.buildData]);
 
   useEffect(() => {
