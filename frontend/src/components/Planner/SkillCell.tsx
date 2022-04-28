@@ -7,6 +7,7 @@ import { CharacterInterface, SkillInterface } from '../../types/interfaces/Chara
 import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
 import { useImage } from 'react-image';
+import TooltipWrapper from './TooltipWrapper';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -205,14 +206,15 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       }}
     >
       <div className={divClassName}>
-        <div className="flex flex-row has-tooltip">
-          <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
+        <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />}>
+          <div className="flex flex-row">
+            <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
-          <div className="flex flex-col justify-center m-auto">
-            <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+            <div className="flex flex-col justify-center m-auto">
+              <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+            </div>
           </div>
-          <SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />
-        </div>
+        </TooltipWrapper>
 
         <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
           {skill?.levels?.map((rankKey, index) => {

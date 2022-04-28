@@ -3,6 +3,7 @@ import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillTooltip from './SkillTooltip';
+import TooltipWrapper from './TooltipWrapper';
 
 interface PropInterface {
   skill: SkillInterface;
@@ -24,14 +25,15 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
     imgClassName += ' p-2.5';
   }
   return (
-    <td className="flex flex-row has-tooltip w-max h-fit my-1 p-2 border select-none border-gray-700 hover:bg-gray-600 rounded-lg">
-      <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
+    <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
+      <td className="flex flex-row w-max h-fit my-1 p-2 border select-none border-gray-700 hover:bg-gray-600 rounded-lg">
+        <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
-      <div className="flex flex-col justify-center m-auto">
-        <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
-      </div>
-      <SkillTooltip skill={skill} skillPoints={0} blocked={false} />
-    </td>
+        <div className="flex flex-col justify-center m-auto">
+          <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+        </div>
+      </td>
+    </TooltipWrapper>
   );
 };
 

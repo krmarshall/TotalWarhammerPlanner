@@ -16,16 +16,40 @@
     background-color: #48bb78;
   }
 
-  .tooltip {
-    @apply invisible absolute bottom-16 left-16;
+  .floating {
+    max-width: calc(100vw - 16);
   }
 
-  .has-tooltip {
-    @apply not-italic;
+  .fade-in {
+    animation: fadeIn 0.35s;
+    -webkit-animation: fadeIn 0.35s;
+    -moz-animation: fadeIn 0.35s;
+    -o-animation: fadeIn 0.35s;
+    -ms-animation: fadeIn 0.35s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
   }
   
-  .has-tooltip:hover .tooltip {
-    @apply visible z-50
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
   }
 
   .lds-dual-ring {

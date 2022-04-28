@@ -1,5 +1,6 @@
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillTooltip from './SkillTooltip';
+import TooltipWrapper from './TooltipWrapper';
 
 interface SkillPointSelectorPropInterface {
   key: number;
@@ -17,7 +18,7 @@ const SkillPointSelector = ({
   thisSkillsCurrentPoints,
   blocked,
 }: SkillPointSelectorPropInterface) => {
-  let containerClassName = 'w-4 text-center has-tooltip';
+  let containerClassName = 'w-4 text-center';
   const selected = thisSkillsCurrentPoints >= index + 1 ? true : false;
 
   if (selected) {
@@ -27,10 +28,9 @@ const SkillPointSelector = ({
   }
 
   return (
-    <div className={containerClassName}>
-      O
-      <SkillTooltip skill={skill} skillPoints={skillPoints} blocked={blocked} />
-    </div>
+    <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={skillPoints} blocked={blocked} />}>
+      <div className={containerClassName}>O</div>
+    </TooltipWrapper>
   );
 };
 
