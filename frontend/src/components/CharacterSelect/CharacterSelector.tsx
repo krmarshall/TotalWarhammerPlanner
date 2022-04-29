@@ -62,8 +62,12 @@ const CharacterSelector = () => {
   return (
     <Fragment>
       <div className="justify-self-center">
-        <h1 className="text-center text-4xl m-2 text-gray-200">Lords</h1>
-        <ul className="flex flex-row flex-wrap justify-center select-none">
+        <div className="flex flex-row place-content-center w-[80vw] mx-auto mt-2">
+          <hr className="w-full mt-[1.25rem] opacity-50" />
+          <h1 className="text-center text-4xl mx-2 text-gray-200 text-shadow">Lords</h1>
+          <hr className="w-full mt-[1.25rem] opacity-50" />
+        </div>
+        <ul className="flex flex-row flex-wrap justify-center ">
           {lordKeys?.map((lordKey) => {
             if (checkFactionUndefined()) {
               return;
@@ -89,8 +93,12 @@ const CharacterSelector = () => {
         </ul>
       </div>
       <div className="justify-self-center">
-        <h1 className="text-center text-4xl m-2 text-gray-200">Heroes</h1>
-        <ul className="flex flex-row flex-wrap justify-center select-none">
+        <div className="flex flex-row place-content-center w-[80vw] mx-auto mt-2">
+          <hr className="w-full mt-[1.25rem] opacity-50" />
+          <h1 className="text-center text-4xl mx-2 text-gray-200 text-shadow">Heroes</h1>
+          <hr className="w-full mt-[1.25rem] opacity-50" />
+        </div>
+        <ul className="flex flex-row flex-wrap justify-center ">
           {heroKeys?.map((heroKey) => {
             if (checkFactionUndefined()) {
               return;

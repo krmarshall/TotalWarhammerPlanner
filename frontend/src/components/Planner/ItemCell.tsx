@@ -13,7 +13,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
   const { selectedMod } = state;
   const imagePath = item.image_path.replace('.png', '.webp');
   return (
-    <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 select-none">
+    <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 ">
       <TooltipWrapper
         tooltip={
           <span className="text-center">

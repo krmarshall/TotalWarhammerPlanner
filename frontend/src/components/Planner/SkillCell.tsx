@@ -156,7 +156,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     divClassName += ' line-through';
   }
 
-  let tdClassName = 'flex flex-row w-max h-full my-1 border select-none';
+  let tdClassName = 'flex flex-row w-max h-full my-1 border ';
 
   switch (boxedType) {
     case 'start': {

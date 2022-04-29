@@ -125,25 +125,21 @@ const Planner = () => {
             <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-md">{characterName}</h1>
             <div className="w-[20vw] flex flex-nowrap place-content-end">
               <button
-                className="w-[4vw] select-none text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl"
+                className="w-[4vw]  text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl"
                 onClick={shareButtonHandler}
               >
                 Share
               </button>
               <button
-                className="w-[4vw] select-none text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl"
+                className="w-[4vw]  text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl"
                 onClick={resetButtonHandler}
               >
                 Reset
               </button>
               {characterBuild?.rank && characterBuild.rank <= rankLimit ? (
-                <p className="w-[4vw] select-none text-center my-auto text-gray-200 text-2xl">
-                  Rank: {characterBuild?.rank}
-                </p>
+                <p className="w-[4vw] text-center my-auto text-gray-200 text-2xl">Rank: {characterBuild?.rank}</p>
               ) : (
-                <p className="w-[4vw] select-none text-center my-auto text-red-500 text-2xl">
-                  Rank: {characterBuild?.rank}
-                </p>
+                <p className="w-[4vw] text-center my-auto text-red-500 text-2xl">Rank: {characterBuild?.rank}</p>
               )}
             </div>
           </div>

@@ -26,7 +26,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   }
   return (
     <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
-      <div className="flex flex-row w-max h-fit my-1 p-2 border select-none border-gray-700 hover:bg-gray-600 rounded-lg">
+      <div className="flex flex-row w-max h-fit my-1 p-2 border  border-gray-700 hover:bg-gray-600 rounded-lg">
         <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
         <div className="flex flex-col justify-center m-auto">

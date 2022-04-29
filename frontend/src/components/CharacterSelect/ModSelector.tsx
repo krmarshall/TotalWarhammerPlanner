@@ -24,8 +24,12 @@ const ModSelector = () => {
 
   return (
     <div className="justify-self-center">
-      <h1 className="text-center text-4xl mt-16 text-gray-200 text-shadow">Mod</h1>
-      <ul className="flex flex-row flex-wrap justify-center select-none">
+      <div className="flex flex-row place-content-center mt-16 w-[80vw]">
+        <hr className="w-full mt-[1.25rem] opacity-50" />
+        <h1 className="text-center text-4xl mx-2 text-gray-200 text-shadow">Mods</h1>
+        <hr className="w-full mt-[1.25rem] opacity-50" />
+      </div>
+      <ul className="flex flex-row flex-wrap justify-center ">
         {gameKeys.map((gameKey) => {
           const game = gameData[gameKey as keyof typeof gameData];
           let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';

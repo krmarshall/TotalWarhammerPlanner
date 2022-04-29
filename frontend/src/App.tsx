@@ -12,7 +12,7 @@ const Issues = lazy(() => import('./pages/Issues'));
 const App = () => {
   return (
     <AppProvider>
-      <div className="bg-gray-800 w-screen h-screen px-8 font-CaslonAntique">
+      <div className="bg-gray-800 w-screen h-screen px-8 font-CaslonAntique select-none">
         <Toaster
           position="bottom-center"
           toastOptions={{

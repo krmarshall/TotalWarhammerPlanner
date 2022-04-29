@@ -33,27 +33,42 @@ const Header = () => {
     imgSrc = gameData[selectedMod].characterImages[characterData?.key as string];
   }
   return (
-    <div className="flex flex-row flex-nowrap place-content-between">
-      <div className="h-[10vh] text-slate-100 text-4xl flex cursor-pointer" onClick={() => navigateTo('/')}>
-        <img src={headerImg} alt="header diplomacy icon" className="w-20 h-20 my-auto" draggable={false} />
-        <h1 className="m-auto select-none">Warhammer Planner</h1>
+    <div className="flex flex-row flex-nowrap">
+      <div className="h-[10vh] w-[33vw] text-slate-100 text-4xl flex justify-start">
+        <img
+          src={headerImg}
+          alt="header diplomacy icon"
+          className="w-20 h-20 my-auto cursor-pointer drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+          draggable={false}
+          onClick={() => navigateTo('/')}
+        />
+        <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigateTo('/')}>
+          Total Warhammer Planner
+        </h1>
       </div>
-      {location.pathname === '/' ? (
-        <div
-          className="z-20 flex flex-col place-content-center absolute w-[10vw] h-[8vw] left-[45vw] bg-gray-700 hover:bg-gray-600 rounded-full mt-2 border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
-          onClick={gameChangeHandler}
-        >
-          <div className="invisible">spacer</div>
-          <img src={imgSrc} className="drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]" draggable={false} />
-          <h1 className="text-center text-4xl mb-6 text-gray-200 text-shadow-md select-none">Game</h1>
-        </div>
-      ) : (
-        <div className="absolute w-[8vw] h-[8vw] left-[46vw] bg-gray-700 rounded-full mt-2 border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]">
-          <img src={imgSrc} className="drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]" draggable={false} />
-        </div>
-      )}
+      <div className="z-10 w-[34vw]">
+        {location.pathname === '/' ? (
+          <div
+            className="z-20 flex flex-col place-content-end m-auto mt-2 -mb-48 w-[12vw] h-[15.5vh] bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+            onClick={gameChangeHandler}
+          >
+            <img src={imgSrc} className="drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]" draggable={false} />
+            <h1 className="z-10 text-center text-3xl -mt-8 mb-4 text-gray-200 text-shadow-md">Toggle Game</h1>
+          </div>
+        ) : location.pathname === '/about' || location.pathname === '/issues' ? (
+          <></>
+        ) : (
+          <div className="m-auto -mb-48 mt-2 w-[8vw] h-[15.5vh] bg-gray-700 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]">
+            <img
+              src={imgSrc}
+              className="w-[8vw] h-[15.5vh] drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+              draggable={false}
+            />
+          </div>
+        )}
+      </div>
 
-      <div className="text-xl text-slate-50 my-auto">
+      <div className="w-[33vw] flex flex-row justify-end text-xl text-slate-50 my-auto">
         <button className={buttonClass} onClick={() => navigateTo('/about')}>
           About
         </button>
