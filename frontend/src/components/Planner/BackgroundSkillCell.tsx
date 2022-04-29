@@ -11,13 +11,13 @@ interface PropInterface {
 
 const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedGame } = state;
+  const { selectedMod } = state;
 
   const imagePath = skill.image_path.replace('.png', '.webp');
   const { src } = useImage({
     srcList: [
-      `/imgs/${selectedGame}/campaign_ui/skills/${imagePath}`,
-      `/imgs/${selectedGame}/battle_ui/ability_icons/${imagePath}`,
+      `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+      `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
     ],
   });
   let imgClassName = 'w-16 h-16';

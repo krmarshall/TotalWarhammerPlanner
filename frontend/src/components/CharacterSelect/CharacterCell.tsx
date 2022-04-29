@@ -2,7 +2,7 @@ interface CharacterCellProps {
   charKey: string;
   char?: {
     name: string;
-    spellLore: string;
+    spellLore?: string;
   };
   charImage?: string;
   spellLore?: {

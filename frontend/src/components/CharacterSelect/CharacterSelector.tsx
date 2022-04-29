@@ -10,10 +10,10 @@ import CharacterCell from './CharacterCell';
 
 const CharacterSelector = () => {
   const { state, dispatch } = useContext(AppContext);
-  const { selectedGame, selectedFaction } = state;
+  const { selectedMod, selectedFaction } = state;
   const navigate = useNavigate();
 
-  const [gameCharacters, setGameCharacters] = useState(gameData[selectedGame as keyof typeof gameData].characters);
+  const [gameCharacters, setGameCharacters] = useState(gameData[selectedMod as keyof typeof gameData]?.characters);
 
   // Grab all the lord and hero keys from the currently selected game characters
   const [lordKeys, setLordKeys] = useState<Array<string>>();
@@ -21,8 +21,8 @@ const CharacterSelector = () => {
 
   // Whenever the selected game changes refresh the characters
   useEffect(() => {
-    setGameCharacters(gameData[selectedGame as keyof typeof gameData].characters);
-  }, [selectedGame]);
+    setGameCharacters(gameData[selectedMod as keyof typeof gameData].characters);
+  }, [selectedMod]);
 
   // Whenever the faction/characters change refresh the lord/hero keys
   useEffect(() => {
@@ -42,11 +42,11 @@ const CharacterSelector = () => {
   };
 
   const handleCharacterSelect = (characterKey: string) => {
-    const apiPromise = api.getCharacterSkillTree(selectedGame, selectedFaction, characterKey).then((response) => {
+    const apiPromise = api.getCharacterSkillTree(selectedMod, selectedFaction, characterKey).then((response) => {
       dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
-      const emptyCharacterBuild = createEmptyCharacterBuild(response, selectedGame, selectedFaction, characterKey);
+      const emptyCharacterBuild = createEmptyCharacterBuild(response, selectedMod, selectedFaction, characterKey);
       dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
-      navigate(`/planner/${selectedGame}/${selectedFaction}/${characterKey}`);
+      navigate(`/planner/${selectedMod}/${selectedFaction}/${characterKey}`);
     });
     toast.promise(
       apiPromise,
@@ -68,10 +68,8 @@ const CharacterSelector = () => {
             if (checkFactionUndefined()) {
               return;
             }
-            // @ts-expect-error ts(7053)
             const lord = gameCharacters[`${selectedFaction}_lords`][lordKey];
-            // @ts-expect-error ts(7053)
-            const lordImage = gameData[selectedGame].characterImages[lordKey];
+            const lordImage = gameData[selectedMod]?.characterImages[lordKey];
 
             let spellLore = undefined;
             if (lord?.spellLore !== undefined) {
@@ -97,10 +95,8 @@ const CharacterSelector = () => {
             if (checkFactionUndefined()) {
               return;
             }
-            // @ts-expect-error ts(7053)
             const hero = gameCharacters[`${selectedFaction}_heroes`][heroKey];
-            // @ts-expect-error ts(7053)
-            const heroImage = gameData[selectedGame].characterImages[heroKey];
+            const heroImage = gameData[selectedMod]?.characterImages[heroKey];
             let spellLore = undefined;
             if (hero?.spellLore !== undefined) {
               spellLore = spellLoreIcons[hero.spellLore as keyof typeof spellLoreIcons];

@@ -3,11 +3,12 @@ import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
 import gameImages from '../imgs/games/gameImages';
+import GameInterface from '../types/interfaces/GameInterface';
 import sfo2Characters from './sfo2Characters';
 import vanilla2Characters from './vanilla2Characters';
 import vanilla3Characters from './vanilla3Characters';
 
-const gameData = {
+const gameData: GameInterface = {
   vanilla2: {
     text: 'Vanilla 2',
     image: gameImages['vanilla2'],

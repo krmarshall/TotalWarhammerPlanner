@@ -4,6 +4,7 @@ import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
 interface ContextStateInterface {
   selectedGame: string;
+  selectedMod: string;
   selectedFaction: string;
   characterData: CharacterInterface | null;
   characterBuild: BuildInterface | null;
@@ -11,7 +12,8 @@ interface ContextStateInterface {
 }
 
 const initialState: ContextStateInterface = {
-  selectedGame: 'vanilla2',
+  selectedGame: '2',
+  selectedMod: 'vanilla2',
   selectedFaction: 'wh_dlc03_bst_beastmen',
   characterData: null,
   characterBuild: null,
@@ -22,6 +24,7 @@ interface ActionInterface {
   type: string;
   payload: {
     selectedGame?: string;
+    selectedMod?: string;
     selectedFaction?: string;
     characterData?: CharacterInterface | null;
     characterBuild?: BuildInterface | null;
@@ -31,6 +34,7 @@ interface ActionInterface {
 
 enum AppContextActions {
   changeGame = 'changeGame',
+  changeMod = 'changeMod',
   changeFaction = 'changeFaction',
   changeCharacterData = 'changeCharacterData',
   changeCharacterBuild = 'changeCharacterBuild',
@@ -45,6 +49,15 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.selectedGame = action.payload.selectedGame;
+      return newState;
+    }
+
+    case AppContextActions.changeMod: {
+      const newState = { ...state };
+      if (action.payload.selectedMod === undefined) {
+        return state;
+      }
+      newState.selectedMod = action.payload.selectedMod;
       return newState;
     }
 

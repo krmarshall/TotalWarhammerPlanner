@@ -19,7 +19,7 @@ interface SkillCellPropsInterface {
 
 const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild, characterData, selectedGame } = state;
+  const { characterBuild, characterData, selectedMod } = state;
   const [selectable, setSelectable] = useState(false);
   const [previewSkillPoints, setPreviewSkillPoints] = useState(0);
   const [blocked, setBlocked] = useState(false);
@@ -183,8 +183,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const imagePath = skill.image_path.replace('.png', '.webp');
   const { src } = useImage({
     srcList: [
-      `/imgs/${selectedGame}/campaign_ui/skills/${imagePath}`,
-      `/imgs/${selectedGame}/battle_ui/ability_icons/${imagePath}`,
+      `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+      `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
     ],
   });
   let imgClassName = 'w-16 h-16';

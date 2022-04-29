@@ -9,7 +9,7 @@ interface SkillPhaseProps {
 
 const SkillPhase = ({ phase }: SkillPhaseProps) => {
   const { state } = useContext(AppContext);
-  const { selectedGame } = state;
+  const { selectedMod } = state;
 
   const type = phase.effect_type === 'positive' ? 'Buff' : 'Debuff';
   return (
@@ -58,7 +58,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
             return (
               <div key={index} className="flex flex-row flex-nowrap">
                 <img
-                  src={`/imgs/${selectedGame}/skins/default/${imagePath}`}
+                  src={`/imgs/${selectedMod}/skins/default/${imagePath}`}
                   className="w-6 h-6"
                   alt={`${effect.stat} icon`}
                   width="32"

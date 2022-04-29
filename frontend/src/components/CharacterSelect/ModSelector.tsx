@@ -1,20 +1,36 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
 
-const GameSelector = () => {
+const ModSelector = () => {
   const { state, dispatch } = useContext(AppContext);
-  const gameKeys = Object.keys(gameData);
+  const { selectedGame, selectedMod } = state;
+
+  const filterGamesKeys = () => {
+    const newKeys: Array<string> = [];
+    Object.keys(gameData).forEach((gameKey) => {
+      if (gameKey.includes(selectedGame)) {
+        newKeys.push(gameKey);
+      }
+    });
+    return newKeys;
+  };
+
+  const [gameKeys, setGameKeys] = useState(filterGamesKeys());
+
+  useEffect(() => {
+    setGameKeys(filterGamesKeys);
+  }, [selectedGame]);
 
   return (
     <div className="justify-self-center">
-      <h1 className="text-center text-4xl mb-2 text-gray-200">Game/Mod</h1>
+      <h1 className="text-center text-4xl mt-16 text-gray-200 text-shadow">Mod</h1>
       <ul className="flex flex-row flex-wrap justify-center select-none">
         {gameKeys.map((gameKey) => {
           const game = gameData[gameKey as keyof typeof gameData];
           let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
 
-          if (gameKey === state.selectedGame) {
+          if (gameKey === selectedMod) {
             liClassName += ' bg-gray-600 hover:bg-gray-500';
           } else {
             liClassName += ' hover:bg-gray-600';
@@ -24,13 +40,13 @@ const GameSelector = () => {
               className={liClassName}
               key={gameKey}
               onClick={() => {
-                dispatch({ type: AppContextActions.changeGame, payload: { selectedGame: gameKey } });
+                dispatch({ type: AppContextActions.changeMod, payload: { selectedMod: gameKey } });
               }}
             >
               <h2 className="text-center text-gray-200 text-xl mb-1">{game.text}</h2>
               <div className="flex flex-row justify-center">
                 <img
-                  className="w-30 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                  className="w-30 h-fit drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
                   draggable={false}
                   src={game.image}
                   alt={`${game.text} icon`}
@@ -46,4 +62,4 @@ const GameSelector = () => {
   );
 };
 
-export default GameSelector;
+export default ModSelector;

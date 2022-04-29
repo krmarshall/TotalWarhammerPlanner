@@ -10,7 +10,7 @@ interface SkillCellPropsInterface {
 
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedGame } = state;
+  const { selectedMod } = state;
   const imagePath = item.image_path.replace('.png', '.webp');
   return (
     <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 select-none">
@@ -36,7 +36,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
       >
         <div className="flex flex-row">
           <img
-            src={`/imgs/${selectedGame}/campaign_ui/skills/${imagePath}`}
+            src={`/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`}
             className="w-16 h-16"
             draggable={false}
             alt="itemIcon"

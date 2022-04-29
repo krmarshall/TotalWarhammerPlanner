@@ -9,7 +9,7 @@ interface SkillEffectPropsInterface {
 
 const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedGame } = state;
+  const { selectedMod } = state;
   const goodBadEffectClassName = 'text-lg whitespace-pre-wrap';
   // if (skillEffect.goodEffect) {
   //   goodBadEffectClassName += ' text-green-400';
@@ -20,8 +20,8 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   const iconName = skillEffect.icon.replace('.png', '.webp');
   const { src } = useImage({
     srcList: [
-      `/imgs/${selectedGame}/campaign_ui/effect_bundles/${iconName}`,
-      `/imgs/${selectedGame}/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
+      `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName}`,
+      `/imgs/${selectedMod}/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
     ],
   });
   return (
