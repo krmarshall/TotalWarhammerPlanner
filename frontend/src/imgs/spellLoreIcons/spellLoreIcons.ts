@@ -27,6 +27,7 @@ import tzeentch from './wh3_main_lore_passive_fires_of_change.webp';
 import nurgle from './wh3_main_lore_passive_children_of_nurgle.webp';
 import slaanesh from './wh3_main_lore_passive_blissful_rapture.webp';
 import greatMaw from './wh3_main_lore_passive_bloodgruel.webp';
+import mixed from './mixedBG.webp';
 
 const spellLoreIcons = {
   light: {
@@ -126,6 +127,10 @@ const spellLoreIcons = {
   greatMaw: {
     image: greatMaw,
     shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #684717) drop-shadow(0.1rem 0.1rem 0.25rem #684717)',
+  },
+  mixed: {
+    image: mixed,
+    shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #80612f) drop-shadow(0.1rem 0.1rem 0.25rem #80612f)',
   },
 };
 

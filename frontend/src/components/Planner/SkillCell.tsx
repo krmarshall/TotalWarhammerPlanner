@@ -185,6 +185,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     srcList: [
       `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
       `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
+      `/imgs/${selectedMod}/campaign_ui/skills/${imagePath.replace('_active', '')}`,
+      `/imgs/${selectedMod}/campaign_ui/skills/0_placeholder_skill.webp`,
     ],
   });
   let imgClassName = 'w-16 h-16';

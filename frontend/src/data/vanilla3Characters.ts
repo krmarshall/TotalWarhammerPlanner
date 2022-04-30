@@ -32,9 +32,11 @@ const vanilla3Characters = {
     },
     def_malekith: {
       name: 'Malekith',
+      spellLore: 'dark',
     },
     def_morathi: {
       name: 'Morathi',
+      spellLore: 'mixed',
     },
     def_rakarth: {
       name: 'Rakarth',
@@ -76,9 +78,11 @@ const vanilla3Characters = {
   wh3_main_cth_cathay_lords: {
     cth_miao_ying: {
       name: 'Miao Ying',
+      spellLore: 'mixed',
     },
     cth_zhao_ming: {
-      name: 'Zhaeo Ming',
+      name: 'Zhao Ming',
+      spellLore: 'mixed',
     },
     cth_lord_caravan_master: {
       name: 'Caravan Master',
@@ -103,14 +107,17 @@ const vanilla3Characters = {
   wh3_main_cth_cathay_heroes: {
     cth_alchemist: {
       name: 'Alchemist',
+      spellLore: 'metal',
     },
     cth_astromancer: {
       name: 'Astromancer',
+      spellLore: 'heavens',
     },
   },
   wh3_main_dae_daemons_lords: {
     dae_cha_be_lakor_0: {
       name: "Be'lakor???",
+      spellLore: 'shadows',
     },
     dae_daemon_prince: {
       name: 'Daemon Prince???',
@@ -200,6 +207,7 @@ const vanilla3Characters = {
     },
     ksl_katarin: {
       name: 'Tzarina Katarin???',
+      spellLore: 'ice',
     },
     ksl_ataman: {
       name: 'Ataman???',
@@ -232,6 +240,7 @@ const vanilla3Characters = {
   wh3_main_nur_nurgle_lords: {
     nur_kugath: {
       name: "Ku'gath Plaguefather???",
+      spellLore: 'nurgle',
     },
     nur_exalted_great_unclean_one_death: {
       name: 'Exalted Great Unclean One (Death)',
@@ -269,6 +278,7 @@ const vanilla3Characters = {
     },
     ogr_skrag_the_slaughterer: {
       name: 'Skrag the Slaughterer???',
+      spellLore: 'greatMaw',
     },
     ogr_slaughtermaster_beasts: {
       name: 'Slaughtermaster (Beasts)',
@@ -293,6 +303,7 @@ const vanilla3Characters = {
     },
     ogr_firebelly: {
       name: 'Firebelly',
+      spellLore: 'fire',
     },
     ogr_hunter: {
       name: 'Hunter',
@@ -301,6 +312,7 @@ const vanilla3Characters = {
   wh3_main_sla_slaanesh_lords: {
     sla_nkari: {
       name: "N'Kari???",
+      spellLore: 'slaanesh',
     },
     sla_exalted_keeper_of_secrets_shadow: {
       name: 'Exalted Keeper of Secrets (Shadow)',
@@ -335,6 +347,7 @@ const vanilla3Characters = {
   wh3_main_tze_tzeentch_lords: {
     tze_kairos: {
       name: 'Kairos Fateweaver???',
+      spellLore: 'mixed',
     },
     tze_exalted_lord_of_change_metal: {
       name: 'Exalted Lord of Change (Metal)',
@@ -356,6 +369,7 @@ const vanilla3Characters = {
   wh3_main_tze_tzeentch_heroes: {
     tze_cultist: {
       name: 'Cultist of Tzeentch',
+      spellLore: 'fire',
     },
     tze_iridescent_horror_metal: {
       name: 'Iridescent Horror (Metal)',

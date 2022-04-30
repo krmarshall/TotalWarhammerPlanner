@@ -43,7 +43,7 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
         <div
           {...getFloatingProps({
             ref: floating,
-            className: 'Tooltip z-20 max-w-[40vw] min-w-[20vw] fade-in',
+            className: 'Tooltip z-20 max-w-[40vw] min-w-[20vw] max-h-[99vh] fade-in overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600',
             style: {
               position: strategy,
               top: y ?? '',

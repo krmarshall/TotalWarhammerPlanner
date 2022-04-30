@@ -18,6 +18,10 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 
 ## Known Issues
 - Skills with really long names can cause the skillcell to grow, see Grand Hierophant Khatep for eg.
+- Check starting skill points get assigned? Ungrim Ironfist for potential example?
+- Cultist of Khorne (All?) has a weird boxed visual
+- Katarin has incorrect spell icons?
+- Bunch of WH3 casters have incorrect spell icons?
 - Build links broke somewhere? (Fixed?)
 - Work on overall page style
 
