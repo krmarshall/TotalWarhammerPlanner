@@ -17,9 +17,8 @@ npm run dev - Runs both frontend and backend in dev mode, reloading on any saved
 npm run start - Installs and builds the frontend into the backend ./public/ folder, then installs and builds the backend from typescript and runs the server.
 
 ## Known Issues
+- Skills with really long names can cause the skillcell to grow, see Grand Hierophant Khatep for eg.
 - Build links broke somewhere? (Fixed?)
-- Character quest items need to be separated into a different component
-- Figure out what to do with background/hidden skills
 - Work on overall page style
 
 ## Adding A Mod

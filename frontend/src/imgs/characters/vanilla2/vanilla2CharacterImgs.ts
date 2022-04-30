@@ -243,7 +243,7 @@ const vanilla2CharacterImgs = {
   cst_admiral_tech_01: vampireFleetAdmiralMale,
   cst_admiral_tech_02: vampireFleetAdmiralMale,
   cst_admiral_tech_03: vampireFleetAdmiralMale,
-  cst_admiral_tech_04: vampireFleetAdmiralMale,
+  cst_admiral_tech_04: vampireFleetAdmiralFem,
 
   cst_fleet_captain: fleetCaptain,
   cst_fleet_captain_death: fleetCaptain,

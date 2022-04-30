@@ -98,7 +98,7 @@ const CharacterSelector = () => {
           <h1 className="text-center text-4xl mx-2 text-gray-200 text-shadow">Heroes</h1>
           <hr className="w-full mt-[1.25rem] opacity-50" />
         </div>
-        <ul className="flex flex-row flex-wrap justify-center ">
+        <ul className="flex flex-row flex-wrap justify-center mb-4">
           {heroKeys?.map((heroKey) => {
             if (checkFactionUndefined()) {
               return;

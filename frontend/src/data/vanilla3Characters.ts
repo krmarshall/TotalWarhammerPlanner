@@ -5,17 +5,17 @@ const vanilla3Characters = {
 
   // Chieftain spelled properly in 3
   wh_dlc08_nor_norsca_lords: {
-    nor_arzik: {
-      name: 'Azrik the Maze Keeper',
-    },
-    nor_marauder_chieftain: {
-      name: 'Marauder Chieftain',
-    },
     nor_throgg: {
       name: 'Throgg',
     },
     nor_wulfrik: {
       name: 'Wulfrik the Wanderer',
+    },
+    nor_arzik: {
+      name: 'Azrik the Maze Keeper',
+    },
+    nor_marauder_chieftain: {
+      name: 'Marauder Chieftain',
     },
   },
 
@@ -23,6 +23,33 @@ const vanilla3Characters = {
   wh2_main_def_dark_elves_lords: {
     def_crone: {
       name: 'Crone Hellebron',
+    },
+    def_lokhir: {
+      name: 'Lokhir Fellheart',
+    },
+    def_malus: {
+      name: 'Malus Darkblade',
+    },
+    def_malekith: {
+      name: 'Malekith',
+    },
+    def_morathi: {
+      name: 'Morathi',
+    },
+    def_rakarth: {
+      name: 'Rakarth',
+    },
+    def_black_ark: {
+      name: 'Black Ark',
+    },
+    def_dreadlord: {
+      name: 'Dreadlord (Sword & Crossbow)',
+    },
+    def_dreadlord_fem: {
+      name: 'Dreadlord (Sword & Shield)',
+    },
+    def_high_beastmaster: {
+      name: 'High Beastmaster',
     },
     def_supreme_sorceress_beasts: {
       name: 'Supreme Sorceress (Beasts)',
@@ -44,36 +71,18 @@ const vanilla3Characters = {
       name: 'Supreme Sorceress (Shadows)',
       spellLore: 'shadows',
     },
-    def_lokhir: {
-      name: 'Lokhir Fellheart',
-    },
-    def_high_beastmaster: {
-      name: 'High Beastmaster',
-    },
-    def_malus: {
-      name: 'Malus Darkblade',
-    },
-    def_black_ark: {
-      name: 'Black Ark',
-    },
-    def_dreadlord: {
-      name: 'Dreadlord (Sword & Crossbow)',
-    },
-    def_dreadlord_fem: {
-      name: 'Dreadlord (Sword & Shield)',
-    },
-    def_malekith: {
-      name: 'Malekith',
-    },
-    def_morathi: {
-      name: 'Morathi',
-    },
-    def_rakarth: {
-      name: 'Rakarth',
-    },
   },
 
   wh3_main_cth_cathay_lords: {
+    cth_miao_ying: {
+      name: 'Miao Ying',
+    },
+    cth_zhao_ming: {
+      name: 'Zhaeo Ming',
+    },
+    cth_lord_caravan_master: {
+      name: 'Caravan Master',
+    },
     cth_dragon_blooded_shugengan_yang: {
       name: 'Dragon-Blooded Shugengan Lord (Yang)',
       spellLore: 'yang',
@@ -82,9 +91,6 @@ const vanilla3Characters = {
       name: 'Dragon-Blooded Shugengan Lord (Yin)',
       spellLore: 'yin',
     },
-    cth_lord_caravan_master: {
-      name: 'Caravan Master',
-    },
     cth_lord_magistrate_yang: {
       name: 'Lord Magistrate (Yang)',
       spellLore: 'yang',
@@ -92,12 +98,6 @@ const vanilla3Characters = {
     cth_lord_magistrate_yin: {
       name: 'Lord Magistrate (Yin)',
       spellLore: 'yin',
-    },
-    cth_miao_ying: {
-      name: 'Miao Ying???',
-    },
-    cth_zhao_ming: {
-      name: 'Zhaeo Ming???',
     },
   },
   wh3_main_cth_cathay_heroes: {
@@ -144,17 +144,6 @@ const vanilla3Characters = {
     },
   },
   wh3_main_dae_daemons_heroes: {
-    kho_bloodreaper: {
-      name: 'Bloodreaper',
-    },
-    nur_plagueridden_death: {
-      name: 'Plagueridden (Death)',
-      spellLore: 'death',
-    },
-    nur_plagueridden_nurgle: {
-      name: 'Plagueridden (Nurgle)',
-      spellLore: 'nurgle',
-    },
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
       spellLore: 'shadows',
@@ -162,6 +151,9 @@ const vanilla3Characters = {
     sla_alluress_slaanesh: {
       name: 'Alluress (Slaanesh)',
       spellLore: 'slaanesh',
+    },
+    kho_bloodreaper: {
+      name: 'Bloodreaper',
     },
     tze_iridescent_horror_metal: {
       name: 'Iridescent Horror (Metal)',
@@ -171,16 +163,24 @@ const vanilla3Characters = {
       name: 'Iridescent Horror (Tzeentch)',
       spellLore: 'tzeentch',
     },
+    nur_plagueridden_death: {
+      name: 'Plagueridden (Death)',
+      spellLore: 'death',
+    },
+    nur_plagueridden_nurgle: {
+      name: 'Plagueridden (Nurgle)',
+      spellLore: 'nurgle',
+    },
   },
   wh3_main_kho_khorne_lords: {
+    kho_skarbrand: {
+      name: 'Skarbrand???',
+    },
     kho_exalted_bloodthirster: {
       name: 'Exalted Bloodthirster',
     },
     kho_herald_of_khorne: {
       name: 'Herald of Khorne',
-    },
-    kho_skarbrand: {
-      name: 'Skarbrand???',
     },
   },
   wh3_main_kho_khorne_heroes: {
@@ -192,11 +192,17 @@ const vanilla3Characters = {
     },
   },
   wh3_main_ksl_kislev_lords: {
-    ksl_ataman: {
-      name: 'Ataman???',
-    },
     ksl_boris: {
       name: 'Boris Ursus???',
+    },
+    ksl_kostaltyn: {
+      name: 'Kostaltyn???',
+    },
+    ksl_katarin: {
+      name: 'Tzarina Katarin???',
+    },
+    ksl_ataman: {
+      name: 'Ataman???',
     },
     ksl_boyar: {
       name: 'Boyar',
@@ -208,12 +214,6 @@ const vanilla3Characters = {
     ksl_ice_witch_tempest: {
       name: 'Ice Witch (Tempest)',
       spellLore: 'tempest',
-    },
-    ksl_katarin: {
-      name: 'Tzarina Katarin???',
-    },
-    ksl_kostaltyn: {
-      name: 'Kostaltyn???',
     },
   },
   wh3_main_ksl_kislev_heroes: {
@@ -230,6 +230,9 @@ const vanilla3Characters = {
     },
   },
   wh3_main_nur_nurgle_lords: {
+    nur_kugath: {
+      name: "Ku'gath Plaguefather???",
+    },
     nur_exalted_great_unclean_one_death: {
       name: 'Exalted Great Unclean One (Death)',
       spellLore: 'death',
@@ -246,16 +249,10 @@ const vanilla3Characters = {
       name: 'Herald of Nurgle (Nurgle)',
       spellLore: 'nurgle',
     },
-    nur_kugath: {
-      name: "Ku'gath Plaguefather???",
-    },
   },
   wh3_main_nur_nurgle_heroes: {
     nur_cultist: {
       name: 'Cultist of Nurgle',
-    },
-    nur_plague_cultist: {
-      name: 'Plague Cultist',
     },
     nur_plagueridden_death: {
       name: 'Plagueridden (Death)',
@@ -302,6 +299,9 @@ const vanilla3Characters = {
     },
   },
   wh3_main_sla_slaanesh_lords: {
+    sla_nkari: {
+      name: "N'Kari???",
+    },
     sla_exalted_keeper_of_secrets_shadow: {
       name: 'Exalted Keeper of Secrets (Shadow)',
       spellLore: 'shadows',
@@ -318,9 +318,6 @@ const vanilla3Characters = {
       name: 'Herald of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
-    sla_nkari: {
-      name: "N'Kari???",
-    },
   },
   wh3_main_sla_slaanesh_heroes: {
     sla_alluress_shadow: {
@@ -336,6 +333,9 @@ const vanilla3Characters = {
     },
   },
   wh3_main_tze_tzeentch_lords: {
+    tze_kairos: {
+      name: 'Kairos Fateweaver???',
+    },
     tze_exalted_lord_of_change_metal: {
       name: 'Exalted Lord of Change (Metal)',
       spellLore: 'metal',
@@ -351,9 +351,6 @@ const vanilla3Characters = {
     tze_herald_of_tzeentch_tzeentch: {
       name: 'Herald of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
-    },
-    tze_kairos: {
-      name: 'Kairos Fateweaver???',
     },
   },
   wh3_main_tze_tzeentch_heroes: {
