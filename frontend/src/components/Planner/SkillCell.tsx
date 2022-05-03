@@ -58,7 +58,6 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   }, [characterBuild?.blockedSkills]);
 
   const skillClickHandler = (event: MouseEvent) => {
-    console.log(`Y: ${yIndex}, X: ${xIndex}, Button: ${event.button}, Skill Rank: ${thisSkillsCurrentPoints}`);
     // 0 = LMB, 2 = RMB
     if (event.button === 0) {
       if (!skillIncreaseIsValid(characterBuild, characterData, skill, thisSkillsCurrentPoints, skillKey, true)) {
@@ -141,7 +140,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
-  let divClassName = 'flex flex-row rounded-lg';
+  let divClassName = 'flex flex-row rounded-lg hover:shadow-lg';
 
   if (thisSkillsCurrentPoints > 0) {
     divClassName += ' bg-gray-600 hover:bg-gray-500';
@@ -156,7 +155,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     divClassName += ' line-through';
   }
 
-  let tdClassName = 'flex flex-row w-max h-full my-1 border ';
+  let tdClassName = 'flex flex-row w-max h-auto my-1 border ';
 
   switch (boxedType) {
     case 'start': {
@@ -184,12 +183,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const { src } = useImage({
     srcList: [
       `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+      // WH2 has pretty much all the skill icons in campaign_ui, WH3 has many of the spells/abilities under battle_ui
       `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
+      // Some SFO ability icons have _active in the imagePath, but not on the actual image name /shrug
       `/imgs/${selectedMod}/campaign_ui/skills/${imagePath.replace('_active', '')}`,
       `/imgs/${selectedMod}/campaign_ui/skills/0_placeholder_skill.webp`,
     ],
   });
-  let imgClassName = 'w-16 h-16';
+  let imgClassName = 'w-16 h-16 my-auto drop-shadow-lg';
   if (src?.includes('/battle_ui/ability_icons/')) {
     imgClassName += ' p-2.5';
   }
@@ -209,7 +210,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
             <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
             <div className="flex flex-col justify-center m-auto">
-              <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+              <h2 className="w-32 text-center text-xl text-gray-200 text-shadow">{skill.name}</h2>
             </div>
           </div>
         </TooltipWrapper>

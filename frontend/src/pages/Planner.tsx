@@ -122,7 +122,7 @@ const Planner = () => {
         <Fragment>
           <div className="h-[6vh] flex flex-row place-content-between">
             <div className="w-[20vw] invisible">Spacer</div>
-            <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-md select-text">{characterName}</h1>
+            <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
             <div className="w-[20vw] flex flex-nowrap place-content-end">
               <button
                 className="w-[4vw] text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl"

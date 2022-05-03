@@ -20,17 +20,17 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
       `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
     ],
   });
-  let imgClassName = 'w-16 h-16';
+  let imgClassName = 'w-16 h-16 drop-shadow-lg';
   if (src?.includes('/battle_ui/ability_icons/')) {
     imgClassName += ' p-2.5';
   }
   return (
     <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
-      <div className="flex flex-row w-max h-fit my-1 p-2 border  border-gray-700 hover:bg-gray-600 rounded-lg">
+      <div className="flex flex-row w-max h-fit my-1 p-2 border border-gray-700 hover:bg-gray-600 rounded-lg hover:shadow-lg">
         <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
         <div className="flex flex-col justify-center m-auto">
-          <h2 className="w-32 text-center text-xl text-gray-200">{skill.name}</h2>
+          <h2 className="w-32 text-center text-xl text-gray-200 text-shadow">{skill.name}</h2>
         </div>
       </div>
     </TooltipWrapper>

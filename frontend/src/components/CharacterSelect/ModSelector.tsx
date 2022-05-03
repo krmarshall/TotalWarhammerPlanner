@@ -47,7 +47,7 @@ const ModSelector = () => {
                 dispatch({ type: AppContextActions.changeMod, payload: { selectedMod: gameKey } });
               }}
             >
-              <h2 className="text-center text-gray-200 text-xl mb-1">{game.text}</h2>
+              <h2 className="text-center text-gray-200 text-2xl text-shadow mb-1">{game.text}</h2>
               <div className="flex flex-row justify-center">
                 <img
                   className="w-30 h-fit drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"

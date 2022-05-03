@@ -36,23 +36,25 @@ const BuildStorage = () => {
   };
 
   return (
-    <div className="h-auto w-[30vw] flex flex-col place-content-between shadow-lg border border-gray-500 rounded ">
+    <div className="h-auto w-[25vw] flex flex-col place-content-between shadow-lg border border-gray-500 rounded ">
       <div className="flex flex-col justify-center">
-        <h2 className="text-center text-3xl my-1 text-gray-200">Builds</h2>
+        <h2 className="text-center text-3xl my-1 text-gray-200 text-shadow">Builds</h2>
       </div>
-      <ul className="flex-grow pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+      <ul className="flex-grow pr-2 pb-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         {state.localStorageBuildKeys.map((buildKey, index) => {
           return (
             <li
               key={index}
-              className="bg-gray-600 hover:bg-gray-500 rounded p-0.5 pl-2 mx-3 my-1 flex flex-row place-content-between cursor-pointer"
+              className="bg-gray-600 hover:bg-gray-500 w-fit min-w-[10vw] max-w-[22vw] rounded p-0.5 pl-2 mx-auto my-1 flex flex-row place-content-between cursor-pointer"
               onClick={() => {
                 setBuildHandler(buildKey);
               }}
             >
-              <p className="text-2xl mx-auto text-gray-200">{buildKey}</p>
+              <p className="overflow-hidden whitespace-nowrap text-ellipsis text-2xl mx-auto text-gray-200">
+                {buildKey}
+              </p>
               <p
-                className="-ml-7 px-2 pt-0.5 text-xl text-red-500 rounded hover:bg-gray-700"
+                className="px-2 pt-0.5 text-xl text-red-500 rounded hover:bg-gray-700"
                 onClick={(event) => {
                   deleteClickHandler(buildKey, event);
                 }}

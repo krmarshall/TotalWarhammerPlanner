@@ -38,7 +38,7 @@ const FactionSelector = () => {
                 dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: factionKey } });
               }}
             >
-              <h2 className="text-center text-gray-200 text-xl mb-1">{factionName}</h2>
+              <h2 className="text-center text-gray-200 text-2xl text-shadow mb-2">{factionName}</h2>
               <div className="flex flex-row justify-center">
                 <img
                   className="w-20 drop-shadow-[0.1rem_0.1rem_0.35rem_rgba(0,0,0,0.7)]"

@@ -17,7 +17,6 @@ npm run dev - Runs both frontend and backend in dev mode, reloading on any saved
 npm run start - Installs and builds the frontend into the backend ./public/ folder, then installs and builds the backend from typescript and runs the server.
 
 ## Known Issues
-- Skills with really long names can cause the skillcell to grow, see Grand Hierophant Khatep for eg.
 - Check starting skill points get assigned? Ungrim Ironfist for potential example?
 - Cultist of Khorne (All?) has a weird boxed visual
 - Katarin has incorrect spell icons?

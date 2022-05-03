@@ -19,7 +19,7 @@ const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSel
       className="flex flex-col justify-around m-1 p-1 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500 hover:bg-gray-600"
       onClick={() => handleCharacterSelect(charKey)}
     >
-      <h2 className="w-36 text-center text-xl text-gray-200 mb-2">{char?.name}</h2>
+      <h2 className="w-36 text-center text-2xl text-shadow text-gray-200 mb-2">{char?.name}</h2>
       <div className="flex flex-row justify-center relative">
         <img
           className="w-32 mb-1 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
