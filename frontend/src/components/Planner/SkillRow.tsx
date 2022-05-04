@@ -16,11 +16,17 @@ const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
           const nextSkill = skillRow[xIndex + 1];
           const prevSkill = skillRow[xIndex - 1];
           let boxedType = 'none';
-          if (skill.boxed && !prevSkill?.boxed) {
+          if (skill.boxed && !prevSkill?.boxed && !nextSkill?.boxed) {
+            boxedType = 'none';
+          } else if (skill.boxed && prevSkill?.boxed && prevSkill.right_arrow) {
+            boxedType = 'start';
+          } else if (skill.boxed && nextSkill?.boxed && skill.right_arrow) {
+            boxedType = 'end';
+          } else if (skill.boxed && !prevSkill?.boxed) {
             boxedType = 'start';
           } else if (skill.boxed && prevSkill?.boxed && nextSkill?.boxed) {
             boxedType = 'center';
-          } else if (skill.boxed && !nextSkill.boxed) {
+          } else if (skill.boxed && !nextSkill?.boxed) {
             boxedType = 'end';
           }
           return (

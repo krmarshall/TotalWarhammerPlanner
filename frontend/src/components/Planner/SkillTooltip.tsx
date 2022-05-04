@@ -33,9 +33,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
       <div className="w-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
         <h3 className="text-gray-50 text-2xl">{skill?.name}</h3>
         {skill?.description.trim() && (
-          <h4 className="text-gray-50 opacity-70 text-lg max-w-fit min-w-[15vw]">
-            &quot;{skill?.description.trim()}&quot;
-          </h4>
+          <h4 className="text-gray-50 opacity-70 text-lg max-w-fit min-w-[15vw]">{skill?.description.trim()}</h4>
         )}
         {skill?.levels?.[skillPoints]?.unlocked_at_rank && (
           <p className="text-yellow-400 text-lg">Available at rank {skill?.levels?.[skillPoints]?.unlocked_at_rank}</p>
