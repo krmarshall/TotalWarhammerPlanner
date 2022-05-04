@@ -12,9 +12,6 @@ const Header = () => {
   const location = useLocation();
 
   const navigate = useNavigate();
-  const navigateTo = (path: string) => {
-    navigate(path);
-  };
 
   const gameChangeHandler = () => {
     const gameChange = selectedGame === '2' ? '3' : '2';
@@ -33,16 +30,16 @@ const Header = () => {
     imgSrc = gameData[selectedMod].characterImages[characterData?.key as string];
   }
   return (
-    <div className="flex flex-row flex-nowrap">
-      <div className="h-[10vh] w-[33vw] text-slate-100 text-4xl flex justify-start">
+    <div className="flex flex-row flex-nowrap h-[10vh]">
+      <div className="w-[33vw] text-slate-100 text-4xl flex justify-start">
         <img
           src={headerImg}
           alt="header diplomacy icon"
           className="w-20 h-20 my-auto cursor-pointer drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
           draggable={false}
-          onClick={() => navigateTo('/')}
+          onClick={() => navigate('/')}
         />
-        <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigateTo('/')}>
+        <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigate('/')}>
           Total Warhammer Planner
         </h1>
       </div>
@@ -69,10 +66,10 @@ const Header = () => {
       </div>
 
       <div className="w-[33vw] flex flex-row justify-end text-xl text-slate-50 my-auto">
-        <button className={buttonClass} onClick={() => navigateTo('/about')}>
+        <button className={buttonClass} onClick={() => navigate('/about')}>
           About
         </button>
-        <button className={buttonClass + ' ml-4'} onClick={() => navigateTo('/issues')}>
+        <button className={buttonClass + ' ml-4'} onClick={() => navigate('/issues')}>
           Issues
         </button>
       </div>

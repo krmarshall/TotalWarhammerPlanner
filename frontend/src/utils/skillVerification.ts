@@ -7,7 +7,7 @@ const isRequiredLevel = (characterBuild: BuildInterface | null, skillCheckRank: 
     return true;
   }
   if (characterBuild?.rank) {
-    if (characterBuild?.rank < skillCheckRank?.unlocked_at_rank) {
+    if (characterBuild?.rank - characterBuild?.startingSkillPoints < skillCheckRank?.unlocked_at_rank) {
       return false;
     } else {
       return true;

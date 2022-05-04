@@ -30,7 +30,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
   });
   return (
     <span className="text-center">
-      <div className="p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+      <div className="w-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
         <h3 className="text-gray-50 text-2xl">{skill?.name}</h3>
         {skill?.description.trim() && (
           <h4 className="text-gray-50 opacity-70 text-lg max-w-fit">&quot;{skill?.description.trim()}&quot;</h4>
@@ -55,7 +55,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
       </div>
       {
         relatedAbilities.length !== 0 && (
-          <div className="mt-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
+          <div className="w-fit mt-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
             <SkillAbilityTooltip ability={relatedAbilities[0]} />
           </div>
         )

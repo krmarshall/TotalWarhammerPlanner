@@ -28,6 +28,7 @@ const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSel
           alt={`${char?.name} icon`}
           height="96"
           width="96"
+          loading="lazy"
         />
         {spellLore && (
           <img

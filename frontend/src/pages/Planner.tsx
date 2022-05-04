@@ -18,6 +18,7 @@ const Planner = () => {
   const { game, faction, character, code } = useParams();
 
   const [urlLoaded, setUrlLoaded] = useState(false);
+  const [effectiveRank, setEffectiveRank] = useState(1);
 
   useEffect(() => {
     if (state.characterData === null) {
@@ -61,6 +62,12 @@ const Planner = () => {
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
     setUrlLoaded(true);
   }, [code, state.characterData]);
+
+  useEffect(() => {
+    if (typeof characterBuild?.rank === 'number' && typeof characterBuild?.startingSkillPoints === 'number') {
+      setEffectiveRank(characterBuild?.rank - characterBuild?.startingSkillPoints);
+    }
+  }, [characterBuild?.rank, characterBuild?.startingSkillPoints]);
 
   const horizontalScroll = (event: React.WheelEvent) => {
     const container = document.getElementById('horScrollContainer');
@@ -114,7 +121,7 @@ const Planner = () => {
   return (
     <Fragment>
       {state.characterData === null ? (
-        <div className="flex flex-col place-items-center">
+        <div className="flex flex-col place-items-center mt-[20vh]">
           <p className="text-center text-4xl text-gray-200">Loading Character Data...</p>
           <div className="lds-dual-ring"></div>
         </div>
@@ -125,21 +132,21 @@ const Planner = () => {
             <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
             <div className="w-[20vw] flex flex-nowrap place-content-end">
               <button
-                className="w-[4vw] text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl"
+                className="w-[4vw] text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl drop-shadow-lg"
                 onClick={shareButtonHandler}
               >
                 Share
               </button>
               <button
-                className="w-[4vw] text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl"
+                className="w-[4vw] text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl drop-shadow-lg"
                 onClick={resetButtonHandler}
               >
                 Reset
               </button>
-              {characterBuild?.rank && characterBuild.rank <= rankLimit ? (
-                <p className="w-[4vw] text-center my-auto text-gray-200 text-2xl">Rank: {characterBuild?.rank}</p>
+              {effectiveRank <= rankLimit ? (
+                <p className="w-[4vw] text-center my-auto text-gray-200 text-2xl text-shadow">Rank: {effectiveRank}</p>
               ) : (
-                <p className="w-[4vw] text-center my-auto text-red-500 text-2xl">Rank: {characterBuild?.rank}</p>
+                <p className="w-[4vw] text-center my-auto text-red-500 text-2xl text-shadow">Rank: {effectiveRank}</p>
               )}
             </div>
           </div>

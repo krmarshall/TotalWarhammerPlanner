@@ -36,7 +36,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
   return (
     <Fragment>
       <div className="flex flex-row ml-4">
-        <h3 className="flex-grow text-left text-2xl mr-2">{unitAbility.description}</h3>
+        <h3 className="flex-grow text-left text-2xl mr-8">{unitAbility.description}</h3>
         {unitAbility.num_uses !== undefined && unitAbility.num_uses > 0 && (
           <div className="flex flex-row mr-2">
             <img className="w-6 h-6" src={chargesImg} alt="charges icon" width="24" height="24" />
