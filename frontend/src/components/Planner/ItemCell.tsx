@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
-import { ItemInterface } from '../../types/interfaces/CharacterInterface';
+import { AbilityInterface, ItemInterface } from '../../types/interfaces/CharacterInterface';
+import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 
@@ -11,6 +12,14 @@ interface SkillCellPropsInterface {
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
   const { state } = useContext(AppContext);
   const { selectedMod } = state;
+
+  const relatedAbilities: Array<AbilityInterface> = [];
+  item.effects?.forEach((effect) => {
+    if (effect.related_abilities) {
+      relatedAbilities.push(...effect.related_abilities);
+    }
+  });
+
   const imagePath = item.image_path.replace('.png', '.webp');
   return (
     <TooltipWrapper
@@ -30,6 +39,11 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
               })}
             </div>
           </div>
+          {relatedAbilities.length !== 0 && (
+            <div className="w-fit mt-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
+              <SkillAbilityTooltip ability={relatedAbilities[0]} />
+            </div>
+          )}
         </span>
       }
     >

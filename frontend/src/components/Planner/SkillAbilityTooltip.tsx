@@ -102,11 +102,8 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
         <div className="text-left">
           <h5 className="w-20">Effects:</h5>
           {unitAbility.ui_effects.map((skillEffect, index) => {
-            const positive = skillEffect.description.includes('➕');
-            let effectClassName = 'text-lg whitespace-pre-wrap ml-6 ';
-            effectClassName += positive ? 'text-green-400' : 'text-red-400';
             return (
-              <p key={index} className={effectClassName}>
+              <p key={index} className="text-lg whitespace-pre-wrap ml-6 text-yellow-200">
                 {skillEffect.description}
               </p>
             );
