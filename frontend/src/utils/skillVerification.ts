@@ -55,15 +55,32 @@ const missingRequiredPoints = (
   if (skill.required_num_parents === 0) {
     return false;
   }
+
   if (characterBuild?.buildData && skill.parent_subset_required) {
     let spentPoints = 0;
-    skill.parent_subset_required.forEach((parentKey) => {
-      const parentSkill = findSkill(characterData, characterBuild, parentKey);
+    for (let i = 0; i < skill.parent_subset_required.length; i++) {
+      const parentSkill = findSkill(characterData, characterBuild, skill.parent_subset_required[i]);
       if (parentSkill === undefined) {
         return true;
       }
       spentPoints += parentSkill.points;
-    });
+    }
+    if (spentPoints >= skill.required_num_parents) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  if (characterBuild?.buildData && skill.parent_required) {
+    let spentPoints = 0;
+    for (let i = 0; i < skill.parent_required.length; i++) {
+      const parentSkill = findSkill(characterData, characterBuild, skill.parent_required[i]);
+      if (parentSkill === undefined) {
+        return true;
+      }
+      spentPoints += parentSkill.points;
+    }
     if (spentPoints >= skill.required_num_parents) {
       return false;
     } else {

@@ -71,12 +71,8 @@ const Planner = () => {
 
   const horizontalScroll = (event: React.WheelEvent) => {
     const container = document.getElementById('horScrollContainer');
-    let containerScrollPosition = container?.scrollLeft;
-    if (!containerScrollPosition) {
-      containerScrollPosition = 0;
-    }
+    const containerScrollPosition = container?.scrollLeft !== undefined ? container?.scrollLeft : 0;
     container?.scrollTo({
-      top: 0,
       left: containerScrollPosition + event.deltaY,
     });
   };

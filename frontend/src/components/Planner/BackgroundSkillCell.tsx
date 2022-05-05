@@ -20,7 +20,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
       `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
     ],
   });
-  let imgClassName = 'w-16 h-16 drop-shadow-lg';
+  let imgClassName = 'w-16 h-16 drop-shadow-lg my-auto';
   if (src?.includes('/battle_ui/ability_icons/')) {
     imgClassName += ' p-2.5';
   }

@@ -36,7 +36,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
       <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 hover:shadow-lg">
         <img
           src={`/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`}
-          className="w-16 h-16 drop-shadow-lg"
+          className="w-16 h-16 drop-shadow-lg my-auto"
           draggable={false}
           alt="itemIcon"
           width="64"

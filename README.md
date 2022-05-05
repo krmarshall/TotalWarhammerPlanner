@@ -17,7 +17,6 @@ npm run dev - Runs both frontend and backend in dev mode, reloading on any saved
 npm run start - Installs and builds the frontend into the backend ./public/ folder, then installs and builds the backend from typescript and runs the server.
 
 ## Known Issues
-- Kroak has broken skill requirements
 - Katarin has incorrect spell icons?
 - Bunch of WH3 casters have incorrect spell icons?
 - Work on overall page style
