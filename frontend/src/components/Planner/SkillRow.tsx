@@ -30,14 +30,21 @@ const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
             boxedType = 'end';
           }
           return (
-            <SkillCell
-              key={skill.character_skill_key}
-              skillKey={skill.character_skill_key}
-              skill={skill}
-              yIndex={yIndex}
-              xIndex={xIndex}
-              boxedType={boxedType}
-            />
+            <>
+              <SkillCell
+                key={skill.character_skill_key}
+                skillKey={skill.character_skill_key}
+                skill={skill}
+                yIndex={yIndex}
+                xIndex={xIndex}
+                boxedType={boxedType}
+              />
+              {skill.right_arrow && (
+                <div className="w-10 flex flex-col justify-center">
+                  {skill?.right_arrow && <p className="text-center text-4xl text-gray-200">→</p>}
+                </div>
+              )}
+            </>
           );
         })
       )}
