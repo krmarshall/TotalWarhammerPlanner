@@ -179,10 +179,25 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }
 
+  const findAbilityImage = () => {
+    if (skill.levels?.[0].effects === undefined) {
+      return '';
+    }
+    for (let i = 0; i < skill.levels?.[0].effects?.length; i++) {
+      const effect = skill.levels?.[0].effects[i];
+      if (effect.related_abilities?.[0].unit_ability.icon_name) {
+        return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+      }
+    }
+  };
+
   const imagePath = skill.image_path.replace('.png', '.webp');
+  const abilityImagePath = findAbilityImage();
   const { src } = useImage({
     srcList: [
       `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+      // Some WH3 spells have incorrect icons on the character skill, but correct icons on the related ability
+      `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePath}`,
       // WH2 has pretty much all the skill icons in campaign_ui, WH3 has many of the spells/abilities under battle_ui
       `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
       // Some SFO ability icons have _active in the imagePath, but not on the actual image name /shrug
