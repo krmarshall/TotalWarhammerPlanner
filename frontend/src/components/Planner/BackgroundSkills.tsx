@@ -10,7 +10,7 @@ const BackgroundSkills = () => {
       <h2 className="text-center text-3xl m-2 text-gray-200 text-shadow">Background Skills</h2>
       <div className="flex flex-col w-full place-items-center overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         {characterData?.backgroundSkills.map((bgSkill) => {
-          return <BackgroundSkillCell key={bgSkill.character_skill_key} skill={bgSkill} />;
+          return <BackgroundSkillCell key={bgSkill.key} skill={bgSkill} />;
         })}
       </div>
     </div>

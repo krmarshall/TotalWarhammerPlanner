@@ -1,16 +1,25 @@
 import { toast } from 'react-hot-toast';
 import BuildInterface from '../types/interfaces/BuildInterface';
-import { CharacterInterface, SkillLevelInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
+import { CharacterInterface, SkillInterface } from '../types/interfaces/CharacterInterface';
 
-const isRequiredLevel = (characterBuild: BuildInterface | null, skillCheckRank: SkillLevelInterface | undefined) => {
+const isRequiredLevel = (
+  characterBuild: BuildInterface | null,
+  thisSkillsCurrentPoints: number,
+  skill: SkillInterface
+) => {
+  const skillCheckRank = skill?.levels?.[thisSkillsCurrentPoints];
   if (!skillCheckRank?.unlocked_at_rank) {
     return true;
   }
   if (characterBuild?.rank) {
-    if (characterBuild?.rank - characterBuild?.startingSkillPoints < skillCheckRank?.unlocked_at_rank) {
-      return false;
-    } else {
+    if (skill.points_on_creation > 0 && thisSkillsCurrentPoints <= skill.points_on_creation) {
       return true;
+    }
+
+    if (characterBuild?.rank - characterBuild?.startingSkillPoints > skillCheckRank?.unlocked_at_rank) {
+      return true;
+    } else {
+      return false;
     }
   }
   return false;
@@ -117,7 +126,7 @@ const skillIsValid = (
   characterData: CharacterInterface | null
 ) => {
   // Check Required Level
-  if (!isRequiredLevel(characterBuild, skill?.levels?.[thisSkillsCurrentPoints - 1])) {
+  if (!isRequiredLevel(characterBuild, thisSkillsCurrentPoints - 1, skill)) {
     return false;
   }
   // Check Required Skills
@@ -151,7 +160,7 @@ const skillIncreaseIsValid = (
     return false;
   }
   // Check Required Level
-  if (!isRequiredLevel(characterBuild, skill.levels?.[thisSkillsCurrentPoints])) {
+  if (!isRequiredLevel(characterBuild, thisSkillsCurrentPoints, skill)) {
     if (printError) {
       toast.error(`Requires rank ${skill.levels?.[thisSkillsCurrentPoints]?.unlocked_at_rank}`, {
         id: `${skillKey} requires rank`,
@@ -191,7 +200,7 @@ const isValidSkillTree = (characterBuild: BuildInterface, characterData: Charact
   const skillKeyArray = [...Array(characterData.skillTree.length)].map(() => Array(35).fill(''));
   const skillDataArray = characterData.skillTree.map((skillRow, yIndex) => {
     return skillRow.map((skill, xIndex) => {
-      skillKeyArray[yIndex][xIndex] = skill.character_skill_key;
+      skillKeyArray[yIndex][xIndex] = skill.key;
       return skill;
     });
   });

@@ -32,8 +32,8 @@ const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
           return (
             <>
               <SkillCell
-                key={skill.character_skill_key}
-                skillKey={skill.character_skill_key}
+                key={skill.key}
+                skillKey={skill.key}
                 skill={skill}
                 yIndex={yIndex}
                 xIndex={xIndex}
