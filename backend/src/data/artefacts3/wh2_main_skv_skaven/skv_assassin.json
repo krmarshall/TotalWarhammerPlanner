@@ -1,0 +1,1848 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh2_main_skill_node_skv_assassin_generic_1",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Sneaky",
+        "description": "Furtive, scheming, sly, cunning, underhand, devious, conniving, double-dealing, and sneaky - valuable traits if you wish to stay alive!",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 10%",
+                "key": "wh_main_effect_character_stat_missile_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_generic_missile_ward",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_generic_2",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Tricksy",
+        "description": "All Skaven are unprincipled and untrustworthy by their foul natures. However, this is rarely a disadvantage in the face of the enemy.",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "resistance_magic.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 10%",
+                "key": "wh_main_effect_character_stat_magic_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_generic_magic_ward",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_immortality",
+        "image_path": "character_wound_time.png",
+        "is_background_skill": false,
+        "name": "Immortality",
+        "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
+        "levels": [
+          {
+            "unlocked_at_rank": 20,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "When normally killed in action, this Hero will be wounded instead",
+                "key": "wh2_main_effect_grant_immortality_hero",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_immortality_hero",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_main_skill_node_skv_assassin_specialty_1",
+        "image_path": "wh_main_unit_contact_poison.png",
+        "is_background_skill": false,
+        "name": "Venomous Blades",
+        "description": "The poisoned knife is assurance of the target's removal from the game, and from the world also.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "phase_posion.png",
+                "priority": 140,
+                "is_positive_value_good": true,
+                "description": "Enables poison attacks",
+                "key": "wh_main_effect_character_stat_enable_poison_attacks",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_assassin_poison",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_specialty_3",
+        "image_path": "wh2_main_unit_abilities_concealment_bombs.png",
+        "is_background_skill": false,
+        "name": "Concealment Bombs",
+        "description": " ",
+        "levels": [
+          {
+            "unlocked_at_rank": 9,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Concealment Bombs\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_ability_enable_smoke_bombs",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_main_unit_abilities_concealment_bombs",
+                      "icon_name": "wh2_main_unit_abilities_concealment_bombs",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_hiding",
+                        "icon_path": "icon_spell_hiding.png",
+                        "description": "Hiding"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Concealment Bombs",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_hiding",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Target is hidden"
+                        },
+                        {
+                          "key": "wh2_main_all_flanking",
+                          "sort_order": 307,
+                          "effect_state": "positive",
+                          "description": "Effective when flanking"
+                        }
+                      ],
+                      "num_uses": 3,
+                      "active_time": 73,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 73,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "stalk",
+                              "description": " Stalk",
+                              "attribute_type": "positive"
+                            },
+                            {
+                              "key": "unspottable",
+                              "description": " Unspottable",
+                              "attribute_type": "positive"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_ability_enable_smoke_bombs",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_assassin_smoke_bomb",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_0",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Dance of Death",
+        "description": "So much of war is an art. Over time and with much practice, combat moves can resemble a series of perfectly-rehearsed dance moves.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 4
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 4
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_def_combat_dance_of_death",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_1_1",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Gutter Fighter",
+        "description": "This being fights dirty, no honour system applies here!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_gutter_fighter_2",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_1_2",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Elusive",
+        "description": "\"Stay in one place, gods-damn you!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_elusive",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_1_3",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Precise",
+        "description": "Whether a targeted slice to the throat, or a precision stab to the heart, this one knows how to kill!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_precise_2",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_1_4",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Survivalist",
+        "description": "\"The enemy's fear; their blood spilt in the mud – these are the things that sustain me.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_survivalist_2",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_2",
+        "image_path": "wh_main_hero_abilities_slippery.png",
+        "is_background_skill": false,
+        "name": "Slippery",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Slippery\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_slippery",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_hero_abilities_slippery",
+                      "icon_name": "wh_main_hero_abilities_slippery",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Slippery",
+                      "active_time": 25,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 24,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+24 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_slippery",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_slippery",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_main_skill_node_skv_assassin_combat_1_1",
+          "wh2_main_skill_node_skv_assassin_combat_1_2",
+          "wh2_main_skill_node_skv_assassin_combat_1_3",
+          "wh2_main_skill_node_skv_assassin_combat_1_4"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_3_1",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Fleet-Footed",
+        "description": "Those who are fleet of foot can reach the enemy faster.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +3%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +8%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +15%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_fleet-footed",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_3_2",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Opportunist",
+        "description": "Always on the lookout for an opening or advantage in battle - somewhere to put the knife in…",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +4",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +9",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +15",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_opportunist",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_3_3",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Counter-Striker",
+        "description": "The harder they hit, the more they commit, the easier it is to strike back.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_counter-striker_2",
+        "tier": 8,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_3_4",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Bloody Blade",
+        "description": "A drawn blade should not be put away until slaked in blood.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_spy_self_bloody_blade",
+        "tier": 9,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_main_skill_node_skv_assassin_combat_2"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_combat_4",
+        "image_path": "wh2_main_character_abilities_assassins_trophy.png",
+        "is_background_skill": false,
+        "name": "Assassin's Trophy",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Assassin's Trophy\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_ability_enable_skv_trophy_heads_assassin",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_main_character_abilities_assassins_trophy",
+                      "icon_name": "wh2_main_character_abilities_assassins_trophy",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_hex",
+                        "icon_path": "icon_spell_hex.png",
+                        "description": "Hex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Assassin's Trophy",
+                      "active_time": 29,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 150,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -24,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "-24 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": -24,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-24 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_ability_enable_skv_trophy_heads_assassin",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_skv_trophy_heads_assassin",
+        "tier": 10,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_main_skill_node_skv_assassin_combat_3_1",
+          "wh2_main_skill_node_skv_assassin_combat_3_2",
+          "wh2_main_skill_node_skv_assassin_combat_3_3",
+          "wh2_main_skill_node_skv_assassin_combat_3_4"
+        ]
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "key": "wh2_main_skill_node_skv_assassin_campaign_01",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Replenish Troops",
+        "description": "Those in the army can find succour or be replenished by the power of this champion.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 3%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 6%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 9%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 9
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_replenish_troops",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_campaign_02",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Spread Control",
+        "description": "The sight of this warrior, their stature, import or infamy, can have a calming effect.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -2
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 2
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -3
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 3
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_passive_spread_public_order",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_campaign_03",
+        "image_path": "campaign_siege_defence.png",
+        "is_background_skill": false,
+        "name": "Assault Garrison",
+        "description": "\"If they know I'm coming then more's the better!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 5% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 15% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 30% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_settlement_assault_garrison",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_campaign_04",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Assassinate",
+        "description": "A skilled assassin is a cold-hearted killer and merciless murderer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Assassinate action: Additional 3% success chance",
+                "key": "wh2_main_effect_agent_action_hinder_agent_assassinate_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Assassinate action: Additional 8% success chance",
+                "key": "wh2_main_effect_agent_action_hinder_agent_assassinate_buff",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Assassinate action: Additional 15% success chance",
+                "key": "wh2_main_effect_agent_action_hinder_agent_assassinate_buff",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_agent_assassinate",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_campaign_05",
+        "image_path": "campaign_disaster.png",
+        "is_background_skill": false,
+        "name": "Assault Units",
+        "description": "Lying in wait, experienced and patient, striking when the foe least expects.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 3% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 8% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 15% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_army_assault_units",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_main_skill_node_skv_assassin_campaign_06",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Specialist",
+        "description": "An expert in their craft, this Hero knows all the mistakes that can be made and how to best avoid making them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -10%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +1%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -20%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -20
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +3%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -40%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -40
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +6%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_reduce_action_cost",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ]
+  ],
+  "key": "skv_assassin",
+  "backgroundSkills": [
+    {
+      "key": "wh2_main_skill_node_skv_assassin_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_dlc11_effect_agent_action_enable_spy_hinder_settlement_treasure_hunt",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_assist_army_replenish_troops",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_hinder_agent_assassinate",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_hinder_army_assault_units",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_hinder_settlement_assault_garrison",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_passive_spread_public_order",
+              "value": 1
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Control: -1",
+              "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+              "value": -1
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Control: +1",
+              "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_all_dummy_agent_actions_skv_assassin",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_01",
+      "image_path": "trait_skaven.png",
+      "is_background_skill": true,
+      "name": "Sharp Claws",
+      "description": "\"I keep them sharp, yes-yes. Always ready for the challenge that I know is coming, yes-yes!\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 160,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +5%",
+              "key": "wh_main_effect_character_stat_weapon_strength",
+              "value": 5
+            },
+            {
+              "icon": "charge_character.png",
+              "priority": 200,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +4",
+              "key": "wh_main_effect_character_stat_charge_bonus_add",
+              "value": 4
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_skv_sharp_claws",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_02",
+      "image_path": "trait_skaven.png",
+      "is_background_skill": true,
+      "name": "Sharp Teeth",
+      "description": "\"When they come for you, go straight for the throat and tear it clean out. They won't come again.\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "melee_character.png",
+              "priority": 130,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +3",
+              "key": "wh_main_effect_character_stat_melee_attack",
+              "value": 3
+            },
+            {
+              "icon": "armour_piercing_character.png",
+              "priority": 170,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing weapon damage: +5",
+              "key": "wh_main_effect_character_stat_ap_damage",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_skv_sharp_teeth",
+      "tier": 1,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_04",
+      "image_path": "trait_skaven.png",
+      "is_background_skill": true,
+      "name": "Warpstone Hoarder",
+      "description": "\"Most precious of all substances, the pulse of our life.\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "military_spending.png",
+              "priority": 105,
+              "is_positive_value_good": false,
+              "description": "Upkeep: -12% for Warpfire Thrower, Warp Lightning Cannon and Doomwheel units",
+              "key": "wh2_main_effect_skv_warp_unit_upkeep_down",
+              "value": -12
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_skv_warpstone_hoarder",
+      "tier": 3,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_05",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Fleet-Footed",
+      "description": "Being fleet of foot is useful in a fight… or when trying to get away afterwards!",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "battle_movement_character.png",
+              "priority": 120,
+              "is_positive_value_good": true,
+              "description": "Speed: +15%",
+              "key": "wh_main_effect_character_stat_speed",
+              "value": 15
+            },
+            {
+              "icon": "attribute_ignore_forest_penalties.png",
+              "priority": 320,
+              "is_positive_value_good": true,
+              "description": "Attribute: Strider",
+              "key": "wh_main_effect_attribute_enable_strider",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_fleet_footed",
+      "tier": 4,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_06",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Cunning",
+      "description": "Deceit is a perfectly acceptable means of attack.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Ambush success chance: +10%",
+              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+              "value": 10
+            },
+            {
+              "icon": "phase_posion.png",
+              "priority": 140,
+              "is_positive_value_good": true,
+              "description": "Enables poison attacks",
+              "key": "wh_main_effect_character_stat_enable_poison_attacks",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_cunning",
+      "tier": 5,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_07",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Determined",
+      "description": "Having a modicum of resolve is useful in a world that continually tests it.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +3",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 3
+            },
+            {
+              "icon": "attribute_immune_to_psychology.png",
+              "priority": 320,
+              "is_positive_value_good": true,
+              "description": "Attribute: Immune to Psychology",
+              "key": "wh_main_effect_attribute_enable_immune_to_psychology",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_determined",
+      "tier": 6,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_08",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Confident",
+      "description": "Self-belief is a fine thing when not misplaced.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "morale.png",
+              "priority": 410,
+              "is_positive_value_good": true,
+              "description": "Leadership: +2",
+              "key": "wh_main_effect_force_stat_leadership",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_confident",
+      "tier": 7,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_09",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Disciplined",
+      "description": "Always in control, this one leaves no stone unturned and nothing to chance.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "morale.png",
+              "priority": 410,
+              "is_positive_value_good": true,
+              "description": "Leadership: +2",
+              "key": "wh_main_effect_force_stat_leadership",
+              "value": 2
+            },
+            {
+              "icon": "melee.png",
+              "priority": 430,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +2",
+              "key": "wh_main_effect_force_stat_melee_attack",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_disciplined",
+      "tier": 8,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_10",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Perceptive",
+      "description": "Although actually reading minds is not in their skillset, this one has extraordinary insight into the motives of others.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "item_ability.png",
+              "priority": 8,
+              "is_positive_value_good": true,
+              "description": "Magic item drop chance: +15%",
+              "key": "wh_main_effect_character_mod_ancillary_drop",
+              "value": 15
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Campaign line of sight: +10%",
+              "key": "wh_main_effect_agent_field_line_of_sight_mod",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_perceptive",
+      "tier": 9,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_11",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Aggressive",
+      "description": "If you're gonna die, you may as well die with your boots on.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 160,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +5%",
+              "key": "wh_main_effect_character_stat_weapon_strength",
+              "value": 5
+            },
+            {
+              "icon": "charge_character.png",
+              "priority": 200,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +8",
+              "key": "wh_main_effect_character_stat_charge_bonus_add",
+              "value": 8
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_aggressive",
+      "tier": 10,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_12",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Tough",
+      "description": "Rugged, resistant, and almost unbreakable, this being can and will take on all comers.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_character.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Armour: +5",
+              "key": "wh_main_effect_character_stat_armour",
+              "value": 5
+            },
+            {
+              "icon": "defence_character.png",
+              "priority": 150,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +3",
+              "key": "wh_main_effect_character_stat_melee_defence",
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_tough",
+      "tier": 11,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_13",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Strong",
+      "description": "Well built, robust. Powerful.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_character.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Armour: +3",
+              "key": "wh_main_effect_character_stat_armour",
+              "value": 3
+            },
+            {
+              "icon": "melee_character.png",
+              "priority": 130,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +2",
+              "key": "wh_main_effect_character_stat_melee_attack",
+              "value": 2
+            },
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 160,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +5%",
+              "key": "wh_main_effect_character_stat_weapon_strength",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_strong",
+      "tier": 12,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_14",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Weapon Master",
+      "description": "If you can swing, slash, stab, gouge, or shoot it, this warrior has mastered every aspect of its use.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "melee_character.png",
+              "priority": 130,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +3",
+              "key": "wh_main_effect_character_stat_melee_attack",
+              "value": 3
+            },
+            {
+              "icon": "armour_piercing_character.png",
+              "priority": 170,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing weapon damage: +5",
+              "key": "wh_main_effect_character_stat_ap_damage",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_weapon_master",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_15",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Strategist",
+      "description": "This being has a plan - not just a game plan, but a master plan to achieve their long-term aims.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "campaign_movement.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Campaign movement range: +5%",
+              "key": "wh_main_effect_agent_movement_range_mod",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_strategist",
+      "tier": 14,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_main_skill_node_skv_assassin_innate_16",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Tactician",
+      "description": "Careful planning, knowledge of the terrain and the weaknesses of the enemy are the key to victory.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 260,
+              "is_positive_value_good": true,
+              "description": "Character's aura leadership effect: +2",
+              "key": "wh_main_effect_character_stat_aura_leadership_effect",
+              "value": 2
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 260,
+              "is_positive_value_good": true,
+              "description": "Leadership aura size: +10%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_main_skill_node_set_skv_assassin",
+      "character_skill_key": "wh2_main_skill_innate_all_tactician",
+      "tier": 15,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
+}

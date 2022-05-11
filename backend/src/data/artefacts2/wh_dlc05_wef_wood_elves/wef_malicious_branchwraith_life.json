@@ -1,0 +1,4465 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh2_dlc16_skill_node_malicious_branchwraith_life_unique_01",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Flurry of Boughs",
+        "description": "When at war under the canopy it is like the trees themselves join the fray, striking from all directions.",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 61,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6 during forest battles",
+                "key": "wh_dlc05_effect_bonus_leadership_when_in_forest",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_branchwraith_unique_leadership_bonus_in_forest",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_malicious_branchwraith_life_unique_02",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Nettles of Malice",
+        "description": "The forest has myriad ways to cause discomfort, pain and death to those foolhardy enough to make unwanted contact with its denizens.",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 during forest battles",
+                "key": "wh_dlc05_effect_force_army_battle_melee_attack_during_forest",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_wef_melee_attack_in_forest",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_malicious_branchwraith_life_unique_03",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Enchanted Photosynthesis",
+        "description": "Enhanced by magic, the laws of nature grant the wargrove a heightened ability to heal its ranks from light energy alone.",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 5%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 5
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Regeneration\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_ability_enable_regeneration",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_unit_passive_regeneration",
+                      "icon_name": "wh_main_unit_passive_regeneration",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Regeneration",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_passive_4",
+                          "sort_order": 109,
+                          "description": "➕ Restores 4 Hit Points per second"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": -20,
+                              "stat": "stat_weakness_flame",
+                              "how": "add",
+                              "description": "-20Weakness to Fire Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_flaming.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_ability_enable_regeneration",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_wef_malicious_branchwraith_unique_life",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_immortality",
+        "image_path": "character_wound_time.png",
+        "is_background_skill": false,
+        "name": "Immortality",
+        "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
+        "levels": [
+          {
+            "unlocked_at_rank": 20,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "When normally killed in action, this Hero will be wounded instead",
+                "key": "wh2_main_effect_grant_immortality_hero",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_immortality_hero",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_01",
+        "image_path": "wh_dlc05_spell_life_awakening_of_the_wood.png",
+        "is_background_skill": false,
+        "name": "Awakening of the Wood",
+        "description": "Trees live for thousands of years and have very long memories. When called to fight, centuries of pent-up wrath are unleashed.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Awakening of the Wood\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                      "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_explosion",
+                        "icon_path": "icon_spell_explosion.png",
+                        "description": "Explosion"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Awakening of the Wood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_minor",
+                          "sort_order": 104,
+                          "description": "➕ Causes minor magical damage"
+                        },
+                        {
+                          "key": "wh_main_vortex_large_static_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Large explosion area"
+                        },
+                        {
+                          "key": "wh2_main_all_weak_against_armour",
+                          "sort_order": 206,
+                          "description": "➖ Weak against armour"
+                        }
+                      ],
+                      "active_time": 12,
+                      "recharge_time": 31,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -30% to \"Awakening of the Wood\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_awakening_of_the_wood",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Awakening of the Wood\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                      "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_explosion",
+                        "icon_path": "icon_spell_explosion.png",
+                        "description": "Explosion"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Awakening of the Wood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_all_magical_damage_minor",
+                          "sort_order": 104,
+                          "description": "➕ Causes minor magical damage"
+                        },
+                        {
+                          "key": "wh_main_vortex_large_static_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Large explosion area"
+                        },
+                        {
+                          "key": "wh2_main_all_weak_against_armour",
+                          "sort_order": 206,
+                          "description": "➖ Weak against armour"
+                        }
+                      ],
+                      "active_time": 12,
+                      "recharge_time": 31,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Awakening of the Wood\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_awakening_of_the_wood",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -1 for \"Awakening of the Wood\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_awakening_of_the_wood",
+                "value": -1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_wizard_awakening_of_the_wood",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_02",
+        "image_path": "wh_dlc05_spell_life_life_bloom.png",
+        "is_background_skill": false,
+        "name": "Life Bloom",
+        "description": "Even the simplest of spells can bring forth the full bloom of renewal, reinvigorating and healing the broken and bleeding.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Life Bloom\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_ability_enable_life_bloom",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_lore_passive_life_bloom",
+                      "icon_name": "wh_dlc05_spell_life_life_bloom",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Life Bloom",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc05_spell_trigger_when_casting",
+                          "sort_order": 1,
+                          "description": "➕ Triggers when casting spell"
+                        },
+                        {
+                          "key": "wh2_dlc15_heal_active_40",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 40 Hit Points"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": -1,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 5,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_ability_enable_life_bloom",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_life_bloom",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_03",
+        "image_path": "wh_dlc05_spell_life_earth_blood.png",
+        "is_background_skill": false,
+        "name": "Earth Blood",
+        "description": "The Wizard draws wholesome energies from the soil, imbuing companions with the natural resilience of the earth.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Earth Blood\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_earth_blood",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_earth_blood",
+                      "icon_name": "wh_dlc05_spell_life_earth_blood",
+                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Earth Blood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_336",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 336 Hit Points"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_earth_blood",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Earth Blood Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_earth_blood_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_earth_blood",
+                      "icon_name": "wh_dlc05_spell_life_earth_blood",
+                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Earth Blood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_336",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 336 Hit Points"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_earth_blood_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_earth_blood",
+                      "icon_name": "wh_dlc05_spell_life_earth_blood",
+                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Earth Blood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_336",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 336 Hit Points"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_earth_blood_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -30% to \"Earth Blood\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_earth_blood",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Earth Blood Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_earth_blood_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_earth_blood",
+                      "icon_name": "wh_dlc05_spell_life_earth_blood",
+                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Earth Blood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_336",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 336 Hit Points"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_earth_blood_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_earth_blood",
+                      "icon_name": "wh_dlc05_spell_life_earth_blood",
+                      "overpower_option": "wh_dlc05_spell_life_earth_blood_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Earth Blood",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_336",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 336 Hit Points"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_earth_blood_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Earth Blood\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_earth_blood",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Earth Blood\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_earth_blood",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"Earth Blood Upgraded\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_earth_blood_upgraded",
+                "value": -3
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Earth Blood Upgraded\"",
+                "key": "wh2_main_effect_magic_life_miscast_reduction_earth_blood_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_wizard_earth_blood",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_04",
+        "image_path": "wh_dlc05_spell_life_shield_of_thorns.png",
+        "is_background_skill": false,
+        "name": "Shield of Thorns",
+        "description": "Prickly gorse bursts from the ground around the caster's allies, protecting them from attack like a spiky, living shield.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Shield of Thorns\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_shield_of_thorns",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_shield_of_thorns",
+                      "icon_name": "wh_dlc05_spell_life_shield_of_thorns",
+                      "overpower_option": "wh_dlc05_spell_life_shield_of_thorns_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Shield of Thorns",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc07_spell_ignores_ap",
+                          "sort_order": 0,
+                          "description": "➕ Good against AP damage"
+                        }
+                      ],
+                      "active_time": 22,
+                      "recharge_time": 44,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 22,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            },
+                            {
+                              "value": 20,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+20 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_shield_of_thorns",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Shield of Thorns Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_shield_of_thorns_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_shield_of_thorns",
+                      "icon_name": "wh_dlc05_spell_life_shield_of_thorns",
+                      "overpower_option": "wh_dlc05_spell_life_shield_of_thorns_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Shield of Thorns",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc07_spell_ignores_ap",
+                          "sort_order": 0,
+                          "description": "➕ Good against AP damage"
+                        }
+                      ],
+                      "active_time": 22,
+                      "recharge_time": 44,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 22,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            },
+                            {
+                              "value": 20,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+20 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_shield_of_thorns_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_shield_of_thorns",
+                      "icon_name": "wh_dlc05_spell_life_shield_of_thorns",
+                      "overpower_option": "wh_dlc05_spell_life_shield_of_thorns_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Shield of Thorns",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc07_spell_ignores_ap",
+                          "sort_order": 0,
+                          "description": "➕ Good against AP damage"
+                        }
+                      ],
+                      "active_time": 22,
+                      "recharge_time": 44,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 22,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            },
+                            {
+                              "value": 20,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+20 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_shield_of_thorns_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -30% to \"Shield of Thorns\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_shield_of_thorns",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Shield of Thorns Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_shield_of_thorns_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_shield_of_thorns",
+                      "icon_name": "wh_dlc05_spell_life_shield_of_thorns",
+                      "overpower_option": "wh_dlc05_spell_life_shield_of_thorns_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Shield of Thorns",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc07_spell_ignores_ap",
+                          "sort_order": 0,
+                          "description": "➕ Good against AP damage"
+                        }
+                      ],
+                      "active_time": 22,
+                      "recharge_time": 44,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 22,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            },
+                            {
+                              "value": 20,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+20 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_shield_of_thorns_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_shield_of_thorns",
+                      "icon_name": "wh_dlc05_spell_life_shield_of_thorns",
+                      "overpower_option": "wh_dlc05_spell_life_shield_of_thorns_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Shield of Thorns",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc07_spell_ignores_ap",
+                          "sort_order": 0,
+                          "description": "➕ Good against AP damage"
+                        }
+                      ],
+                      "active_time": 22,
+                      "recharge_time": 44,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 8,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 22,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            },
+                            {
+                              "value": 20,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+20 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_shield_of_thorns_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Shield of Thorns\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_shield_of_thorns",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Shield of Thorns\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_shield_of_thorns",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Shield of Thorns Upgraded\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_shield_of_thorns_upgraded",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Shield of Thorns Upgraded\"",
+                "key": "wh2_main_effect_magic_life_miscast_reduction_shield_of_thorns_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_wizard_shield_of_thorns",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_05",
+        "image_path": "wh_dlc05_spell_life_flesh_to_stone.png",
+        "is_background_skill": false,
+        "name": "Flesh to Stone",
+        "description": "This spell temporarily transforms allies' mortal flesh into unbreakable rock, increasing tenfold their resistance to attack.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Flesh to Stone\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_flesh_to_stone",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_flesh_to_stone",
+                      "icon_name": "wh_dlc05_spell_life_flesh_to_stone",
+                      "overpower_option": "wh_dlc05_spell_life_flesh_to_stone_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flesh to Stone",
+                      "active_time": 44,
+                      "recharge_time": 43,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 44,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 60,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "+60 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_flesh_to_stone",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Flesh to Stone Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_flesh_to_stone_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_flesh_to_stone",
+                      "icon_name": "wh_dlc05_spell_life_flesh_to_stone",
+                      "overpower_option": "wh_dlc05_spell_life_flesh_to_stone_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flesh to Stone",
+                      "active_time": 44,
+                      "recharge_time": 43,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 44,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 60,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "+60 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_flesh_to_stone_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_flesh_to_stone",
+                      "icon_name": "wh_dlc05_spell_life_flesh_to_stone",
+                      "overpower_option": "wh_dlc05_spell_life_flesh_to_stone_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flesh to Stone",
+                      "active_time": 44,
+                      "recharge_time": 43,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 44,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 60,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "+60 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_flesh_to_stone_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -30% to \"Flesh to Stone\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_flesh_to_stone",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Flesh to Stone Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_flesh_to_stone_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_flesh_to_stone",
+                      "icon_name": "wh_dlc05_spell_life_flesh_to_stone",
+                      "overpower_option": "wh_dlc05_spell_life_flesh_to_stone_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flesh to Stone",
+                      "active_time": 44,
+                      "recharge_time": 43,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 44,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 60,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "+60 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_flesh_to_stone_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_flesh_to_stone",
+                      "icon_name": "wh_dlc05_spell_life_flesh_to_stone",
+                      "overpower_option": "wh_dlc05_spell_life_flesh_to_stone_upgraded",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flesh to Stone",
+                      "active_time": 44,
+                      "recharge_time": 43,
+                      "wind_up_time": 3,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 6,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 44,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 60,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "+60 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_flesh_to_stone_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Flesh to Stone\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_flesh_to_stone",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -1 for \"Flesh to Stone\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_flesh_to_stone",
+                "value": -1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -1 for \"Flesh to Stone Upgraded\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_flesh_to_stone_upgraded",
+                "value": -1
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Flesh to Stone Upgraded\"",
+                "key": "wh2_main_effect_magic_life_miscast_reduction_flesh_to_stone_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_wizard_flesh_to_stone",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_06",
+        "image_path": "wh_main_character_passive_evasion.png",
+        "is_background_skill": false,
+        "name": "Evasion",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Evasion\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_evasion",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_passive_evasion",
+                      "icon_name": "wh_main_character_passive_evasion",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Evasion",
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.1 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+5 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_evasion",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_all_06_evasion",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_02",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_03",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_04",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_05"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_09",
+        "image_path": "wh_dlc05_spell_life_regrowth.png",
+        "is_background_skill": false,
+        "name": "Regrowth",
+        "description": "By speaking Druthandor's name the Wizard is able to heal allies' injuries much faster than by natural means.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"Regrowth\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_regrowth",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_regrowth",
+                      "icon_name": "wh_dlc05_spell_life_regrowth",
+                      "overpower_option": "wh_dlc05_spell_life_regrowth_upgraded",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Regrowth",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_1392",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 1392 Hit Points"
+                        }
+                      ],
+                      "active_time": 29,
+                      "recharge_time": 48,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 13,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_regrowth",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Regrowth Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_regrowth_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_regrowth",
+                      "icon_name": "wh_dlc05_spell_life_regrowth",
+                      "overpower_option": "wh_dlc05_spell_life_regrowth_upgraded",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Regrowth",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_1392",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 1392 Hit Points"
+                        }
+                      ],
+                      "active_time": 29,
+                      "recharge_time": 48,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 13,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_regrowth_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_regrowth",
+                      "icon_name": "wh_dlc05_spell_life_regrowth",
+                      "overpower_option": "wh_dlc05_spell_life_regrowth_upgraded",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Regrowth",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_1392",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 1392 Hit Points"
+                        }
+                      ],
+                      "active_time": 29,
+                      "recharge_time": 48,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 13,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_regrowth_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -30% to \"Regrowth\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_regrowth",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Regrowth Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_regrowth_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_regrowth",
+                      "icon_name": "wh_dlc05_spell_life_regrowth",
+                      "overpower_option": "wh_dlc05_spell_life_regrowth_upgraded",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Regrowth",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_1392",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 1392 Hit Points"
+                        }
+                      ],
+                      "active_time": 29,
+                      "recharge_time": 48,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 13,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_regrowth_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_regrowth",
+                      "icon_name": "wh_dlc05_spell_life_regrowth",
+                      "overpower_option": "wh_dlc05_spell_life_regrowth_upgraded",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Regrowth",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc15_heal_active_1392",
+                          "sort_order": 108,
+                          "description": "➕ Restores up to 1392 Hit Points"
+                        }
+                      ],
+                      "active_time": 29,
+                      "recharge_time": 48,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 200,
+                      "mana_cost": 13,
+                      "target_self": true,
+                      "phases": [
+                        {
+                          "duration": 29,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -1,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_regrowth_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Regrowth\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_regrowth",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Regrowth\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_regrowth",
+                "value": -2
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"Regrowth Upgraded\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_regrowth_upgraded",
+                "value": -3
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Regrowth Upgraded\"",
+                "key": "wh2_main_effect_magic_life_miscast_reduction_regrowth_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_wizard_regrowth",
+        "tier": 6,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_10",
+        "image_path": "wh_dlc05_spell_life_the_dwellers_below.png",
+        "is_background_skill": false,
+        "name": "The Dwellers Below",
+        "description": "This spell causes gnarled, fibrous hands to emerge from beneath the ground, dragging the foe to a claustrophobic, suffocating end.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Spell: \"The Dwellers Below\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_magic_life_enable_the_dwellers_below",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_the_dwellers_below",
+                      "icon_name": "wh_dlc05_spell_life_the_dwellers_below",
+                      "overpower_option": "wh_dlc05_spell_life_the_dwellers_below_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "The Dwellers Below",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_high",
+                          "sort_order": 104,
+                          "description": "➕ Causes severe damage to combatants"
+                        },
+                        {
+                          "key": "wh2_main_spell_stationary_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Huge, stationary area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 45,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 17,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_magic_life_enable_the_dwellers_below",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"The Dwellers Below Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_dwellers_below_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_the_dwellers_below",
+                      "icon_name": "wh_dlc05_spell_life_the_dwellers_below",
+                      "overpower_option": "wh_dlc05_spell_life_the_dwellers_below_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "The Dwellers Below",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_high",
+                          "sort_order": 104,
+                          "description": "➕ Causes severe damage to combatants"
+                        },
+                        {
+                          "key": "wh2_main_spell_stationary_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Huge, stationary area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 45,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 17,
+                      "target_self": false
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_dwellers_below_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_the_dwellers_below",
+                      "icon_name": "wh_dlc05_spell_life_the_dwellers_below",
+                      "overpower_option": "wh_dlc05_spell_life_the_dwellers_below_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "The Dwellers Below",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_high",
+                          "sort_order": 104,
+                          "description": "➕ Causes severe damage to combatants"
+                        },
+                        {
+                          "key": "wh2_main_spell_stationary_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Huge, stationary area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 45,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 17,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_dwellers_below_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -30% to \"The Dwellers Below\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_the_dwellers_below",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"The Dwellers Below Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_dwellers_below_upgraded",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_the_dwellers_below",
+                      "icon_name": "wh_dlc05_spell_life_the_dwellers_below",
+                      "overpower_option": "wh_dlc05_spell_life_the_dwellers_below_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "The Dwellers Below",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_high",
+                          "sort_order": 104,
+                          "description": "➕ Causes severe damage to combatants"
+                        },
+                        {
+                          "key": "wh2_main_spell_stationary_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Huge, stationary area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 45,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 17,
+                      "target_self": false
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_magic_life_enable_dwellers_below_upgraded",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_spell_life_the_dwellers_below",
+                      "icon_name": "wh_dlc05_spell_life_the_dwellers_below",
+                      "overpower_option": "wh_dlc05_spell_life_the_dwellers_below_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "The Dwellers Below",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_high",
+                          "sort_order": 104,
+                          "description": "➕ Causes severe damage to combatants"
+                        },
+                        {
+                          "key": "wh2_main_spell_stationary_aoe",
+                          "sort_order": 105,
+                          "description": "➕ Huge, stationary area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "description": "➕ Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_direct_damage_resist",
+                          "sort_order": 201,
+                          "description": "➖ Chance opponent will resist damage"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "description": "➖ Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 45,
+                      "wind_up_time": 5,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
+                      "mana_cost": 17,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_magic_life_enable_dwellers_below_upgraded",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 60,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"The Dwellers Below\"",
+                "key": "wh_dlc05_effect_magic_life_cooldown_the_dwellers_below",
+                "value": -50
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 67,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"The Dwellers Below\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_dwellers_below",
+                "value": -3
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 68,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -3 for \"The Dwellers Below Upgraded\"",
+                "key": "wh2_main_effect_magic_life_reduce_wom_dwellers_below_upgraded",
+                "value": -3
+              },
+              {
+                "icon": "spell_ability.png",
+                "priority": 111,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"The Dwellers Below Upgraded\"",
+                "key": "wh2_main_effect_magic_life_miscast_reduction_dwellers_below_upgraded",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_magic_life_wizard_the_dwellers_below",
+        "tier": 7,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_07",
+        "image_path": "character_magic.png",
+        "is_background_skill": false,
+        "name": "Earthing",
+        "description": "By stabbing a staff or some arcane conduit into the ground, an accomplished magic-user can earth or tether the Winds and hopefully reduce a chance of miscasting.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "spell_ability.png",
+                "priority": 8,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15%",
+                "key": "wh_main_effect_character_stat_mod_miscast_chance",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_all_07_earthing",
+        "tier": 8,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_08",
+        "image_path": "character_magic.png",
+        "is_background_skill": false,
+        "name": "Magical Reserves",
+        "description": "A few magic-users have the ability to store the Winds of Magic for later use, increasing their spellcasting power when it really counts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic.png",
+                "priority": 15,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve: +15",
+                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_character",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_all_08_power_drain",
+        "tier": 9,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_06"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_11",
+        "image_path": "wh_main_character_abilities_arcane_conduit.png",
+        "is_background_skill": false,
+        "name": "Arcane Conduit",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Arcane Conduit\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_arcane_conduit",
+                      "icon_name": "wh_main_character_abilities_arcane_conduit",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment_of_the_winds",
+                        "icon_path": "icon_spell_augment_of_the_winds.png",
+                        "description": "Augment of the Winds"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Arcane Conduit",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_improved_recharge_rate",
+                          "sort_order": 106,
+                          "description": "➕ Improved power recharge rate"
+                        },
+                        {
+                          "key": "wh_main_all_increased_max_power",
+                          "sort_order": 106,
+                          "description": "➕ Increase to power reserves"
+                        }
+                      ],
+                      "active_time": 40,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "positive",
+                          "mana_regen_mod": 0.1,
+                          "mana_max_depletion_mod": 10,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_arcane_conduit",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_all_11_arcane_conduit",
+        "tier": 10,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_07",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_08",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_09",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_10"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_01",
+        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "is_background_skill": false,
+        "name": "Foe-Seeker",
+        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Foe-Seeker\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_foe_seeker",
+                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Foe-Seeker",
+                      "active_time": 25,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "fatigue_change_ratio": -0.2,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_02",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Endurance of the Oak",
+        "description": "Taking their cue from the forest itself, the Lord endures and overcomes all.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_personal_buff_hitpoints",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_03",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Impenetrable Bark",
+        "description": "Using the forest itself as a shield, this Lord is protected by their devotion to Athel Loren.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: +10",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: +20",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: +30",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_personal_buff_armour",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_04",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Tempered Rigour",
+        "description": "When to strike, when to block, when to dodge. These are all skills the warriors of Athel Loren must perfect.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 3
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 7
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 12
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_personal_buff_melee_attack_defence",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_05",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Violent Delights",
+        "description": "There is no greater thrill than to be in the midst of battle, slaughtering in the forest's name.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_mod_melee_damage",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_mod_melee_damage",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +30%",
+                "key": "wh_main_effect_character_stat_mod_melee_damage",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_personal_buff_damage",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_06",
+        "image_path": "wh_main_character_abilities_deadly_onslaught.png",
+        "is_background_skill": false,
+        "name": "Deadly Onslaught",
+        "description": "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Deadly Onslaught\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_deadly_onslaught",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_deadly_onslaught",
+                      "icon_name": "wh_main_character_abilities_deadly_onslaught",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Deadly Onslaught",
+                      "active_time": 31,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 31,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.4,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.4 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.3 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_deadly_onslaught",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_02",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_03",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_04",
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_self_melee_05"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_aspect_01",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Aspect of the Oak",
+        "description": "Not even the fiercest weather conditions can strike down a hardy and long-lived oak, for it endures all seasons.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: +35",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 35
+              },
+              {
+                "icon": "battle_movement.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Speed: -15%",
+                "key": "wh_main_effect_force_army_battle_movement_speed",
+                "value": -15
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_birch",
+              "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_willow"
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_oak",
+        "tier": 2,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_aspect_02",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Aspect of the Birch",
+        "description": "A birch’s oils can soften its wood, but once dry can harden branches into lethal clubs of war.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: -10%",
+                "key": "wh2_main_effect_physical_resistance_increase",
+                "value": -10
+              },
+              {
+                "icon": "armour_piercing_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour-piercing weapon damage: +35",
+                "key": "wh_main_effect_character_stat_mod_ap_damage",
+                "value": 35
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_oak",
+              "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_willow"
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_birch",
+        "tier": 3,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_aspect_03",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Aspect of the Willow",
+        "description": "The willow is a harbinger of spring, and a conduit of lifeforces that can bolster a tree to withstand the direst of circumstances.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 15%",
+                "key": "wh2_main_effect_physical_resistance_increase",
+                "value": 15
+              },
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: -20",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": -20
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_birch",
+              "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_oak"
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_unique_malicious_branchwraith_aspect_of_the_willow",
+        "tier": 4,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_melee_battle_01",
+        "image_path": "wh_dlc05_call_of_the_woods.png",
+        "is_background_skill": false,
+        "name": "Call of the Woods",
+        "description": "The Lord embodies the forest; as a result of this, their warriors feel a greater call to defend it. ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Call of the Woods\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_ability_enable_passive_melee_aura_1",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_lord_passive_call_of_the_woods",
+                      "icon_name": "wh_dlc05_lord_passive_call_of_the_woods",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Call of the Woods",
+                      "passive": true,
+                      "effect_range": 30,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+5 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_ability_enable_passive_melee_aura_1",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_wef_ability_dance_of_loec",
+              "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god",
+              "wh_dlc05_skill_wef_army_buff_ranged_ranged_ability_1",
+              "wh_dlc05_skill_wef_army_buff_ranged_ranged_ability_2"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_army_buff_melee_melee_ability_1",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_melee_battle_02",
+        "image_path": "wh_dlc05_howl_of_the_forest.png",
+        "is_background_skill": false,
+        "name": "Howl of the Forest",
+        "description": "The Lord's troops are charged to fight for Athel Loren, for their very souls are tethered to its fate.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Howl of the Forest\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_ability_enable_passive_melee_aura_2",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_lord_passive_howl_of_the_forest",
+                      "icon_name": "wh_dlc05_lord_passive_howl_of_the_forest",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Howl of the Forest",
+                      "passive": true,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 10,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+10 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_ability_enable_passive_melee_aura_2",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 605,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Call of the Woods\"",
+                "key": "wh_dlc05_effect_ability_disable_call_of_the_woods",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_army_buff_branchwraith_melee_melee_ability_2",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_melee_battle_01"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_champion_campaign_01",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Replenish Troops",
+        "description": "Those in the army can find succour or be replenished by the power of this champion.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 3%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 7%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 12%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_replenish_troops",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_champion_campaign_02",
+        "image_path": "campaign_growth.png",
+        "is_background_skill": false,
+        "name": "Stimulate Growth",
+        "description": "All will listen, for the news will either be dire or wonderful.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
+                "value": -10
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
+                "value": 10
+              },
+              {
+                "icon": "growth.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Stimulate Growth action: Growth is modified by an additional 10",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_buff",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
+                "value": -20
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
+                "value": 20
+              },
+              {
+                "icon": "growth.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Stimulate Growth action: Growth is modified by an additional 20",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_buff",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
+                "value": -30
+              },
+              {
+                "icon": "",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "[hidden]",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
+                "value": 30
+              },
+              {
+                "icon": "growth.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Stimulate Growth action: Growth is modified by an additional 30",
+                "key": "wh2_main_effect_agent_action_passive_stimulate_growth_buff",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_passive_stimulate_growth",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_champion_campaign_03",
+        "image_path": "campaign_siege_attack.png",
+        "is_background_skill": false,
+        "name": "Damage Walls",
+        "description": "They cannot stop what they cannot see.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "siege_attack.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Damage Walls action: 1 additional wall breaches",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_damage_walls_buff",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "siege_attack.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Damage Walls action: 2 additional wall breaches",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_damage_walls_buff",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "siege_attack.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Damage Walls action: 3 additional wall breaches",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_damage_walls_buff",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_settlement_damage_walls",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_champion_campaign_04",
+        "image_path": "campaign_wound_time.png",
+        "is_background_skill": false,
+        "name": "Wound",
+        "description": "Such a champion will not bend or break, but slay in their Lord's name.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 4% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 10% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 18% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 18
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_agent_wound",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_champion_campaign_05",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "Block Army",
+        "description": "To sow discord and confuse the enemy, sending them down the wrong route or befuddling their senses.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 11,
+                "is_positive_value_good": false,
+                "description": "Block Army action: Movement range is modified by an additional -3%",
+                "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 11,
+                "is_positive_value_good": false,
+                "description": "Block Army action: Movement range is modified by an additional -8%",
+                "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+                "value": -8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 11,
+                "is_positive_value_good": false,
+                "description": "Block Army action: Movement range is modified by an additional -15%",
+                "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_army_block_army",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_champion_campaign_06",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Specialist",
+        "description": "An expert in their craft, this Hero knows all the mistakes that can be made and how to best avoid making them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -10%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +1%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -20%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -20
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +3%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -40%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -40
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +6%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_reduce_action_cost",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ]
+  ],
+  "key": "wef_malicious_branchwraith_life",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": " ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_dlc12_agent_action_champion_discover_under_empire",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_champion_assist_army_replenish_troops",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_agent_wound",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_army_block_army",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_damage_walls",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_enable_champion_passive_stimulate_growth",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
+              "value": -10
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "[hidden]",
+              "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_main_skill_all_dummy_agent_actions_wef_branchwraith",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_01",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Lamentation of Despairs",
+      "description": "The Despairs are among the most feared Spites within Athel Loren, their arrival always foretelling imminent death.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "resistance_ward_save.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Ward save: 10%",
+              "key": "wh_main_effect_character_stat_mod_ward_save",
+              "value": 10
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Lamentation of Despairs\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_enable_lamentation_of_despair",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_lord_abilities_lamentation_of_despair",
+                    "icon_name": "wh_dlc05_lord_abilities_lamentation_of_despair",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_magic_missiles",
+                      "icon_path": "icon_spell_magic_missiles.png",
+                      "description": "Magic Missiles"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Lamentation of Despairs",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_armour_piercing_ranged",
+                        "sort_order": 104,
+                        "description": "➕ Causes armour-piercing damage"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_unit",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single unit"
+                      },
+                      {
+                        "key": "wh_main_projectile_good_high_angle",
+                        "sort_order": 106,
+                        "description": "➕ Good from a high angle"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs a single combatant"
+                      },
+                      {
+                        "key": "wh_dlc05_projectile_strikes_ahead",
+                        "sort_order": 207,
+                        "description": "➖ Strikes any combatants in its path"
+                      }
+                    ],
+                    "recharge_time": 90,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 80,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_enable_lamentation_of_despair",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_lamentation_of_despairs",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_02",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Annoyance of Netlings",
+      "description": "Scurrying over their host with feverish abandon, Netlings snag the weapons of enemies that come too close with webs of magical filaments.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "campaign_movement.png",
+              "priority": 11,
+              "is_positive_value_good": false,
+              "description": "Block Army action: Movement range is modified by an additional -15%",
+              "key": "wh2_main_effect_agent_action_hinder_army_block_army_buff",
+              "value": -15
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Annoyance of Netlings\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_annoyance_of_netlings",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_annoyance_of_netlings",
+                    "icon_name": "wh2_dlc16_character_passive_annoyance_of_netlings",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Annoyance of Netlings",
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -5,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-5 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 0.9,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x0.9 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 0.9,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x0.9 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_annoyance_of_netlings",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_annoyance_of_netlings_branchwraith",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_03",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Blight of Terrors",
+      "description": "Mirthfully looming out from their host, Terrors take on their most fearsome aspect to dampen the spirits of their horrified prey.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Blight of Terrors\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_blight_of_terrors",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_blight_of_terrors",
+                    "icon_name": "wh2_dlc16_character_abilities_blight_of_terrors",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Blight of Terrors",
+                    "num_uses": 3,
+                    "active_time": 20,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -16,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "-16 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_blight_of_terrors",
+              "value": 1
+            },
+            {
+              "icon": "attribute_causes_terror.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Causes Terror",
+              "key": "wh_main_effect_unit_enable_attribute_terror",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_blight_of_terrors_branchwraith",
+      "tier": 9,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_04",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Muster of Malevolents",
+      "description": "Unleashed upon a foe, these aggressive manifestations of the forest are utilised for their needle-like arrows that inflict painful wounds from afar.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "wound_time.png",
+              "priority": 10,
+              "is_positive_value_good": true,
+              "description": "Wound action: Additional 15% chance of wounding target",
+              "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+              "value": 15
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Muster of Malevolents\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                    "icon_name": "wh2_dlc16_character_abilities_muster_of_malevolents",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Muster of Malevolents",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "description": "➕ Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_resist",
+                        "sort_order": 201,
+                        "description": "➖ Chance opponent will resist damage"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "description": "➖ Weak vs multiple combatants"
+                      }
+                    ],
+                    "num_uses": 3,
+                    "active_time": 15,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 75,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "fatigue_change_ratio": 1,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_muster_of_malevolents",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_muster_of_malevolents_branchwraith",
+      "tier": 11,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_05",
+      "image_path": "trait_spite_1.png",
+      "is_background_skill": true,
+      "name": "Befuddlement of Mischiefs",
+      "description": "The staring eyes and tattered wings of tiny, glowing Elves befuddle enemy minds, sending them into a sleep-like trance.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Ambush success chance: +20%",
+              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+              "value": 20
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Befuddlement of Mischiefs\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_befuddlement_of_mischiefs",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_befuddlement_of_mischiefs",
+                    "icon_name": "wh2_dlc16_character_abilities_befuddlement_of_mischiefs",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_hexes",
+                      "icon_path": "icon_spell_area_of_hexes.png",
+                      "description": "Hex (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Befuddlement of Mischiefs",
+                    "num_uses": 3,
+                    "active_time": 11,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 30,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 100,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 11,
+                        "effect_type": "negative",
+                        "cant_move": true,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_befuddlement_of_mischiefs",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_befuddlement_of_mischiefs",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_06",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Cluster of Radiants",
+      "description": "Radiants are sponges for magical energy, manifesting as little more than blurred shapes of pure light that beckon the Winds to their host.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 66,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic cost: +2 for all enemy spells",
+              "key": "wh2_dlc16_effect_magic_cost_all_lores_enemy",
+              "value": 2
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Cluster of Radiants\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_cluster_of_radiants",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_cluster_of_radiants",
+                    "icon_name": "wh2_dlc16_character_passive_cluster_of_radiants",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment_of_the_winds",
+                      "icon_path": "icon_spell_augment_of_the_winds.png",
+                      "description": "Augment of the Winds"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Cluster of Radiants",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_improved_recharge_rate",
+                        "sort_order": 106,
+                        "description": "➕ Improved power recharge rate"
+                      },
+                      {
+                        "key": "wh_main_all_increased_max_power_high",
+                        "sort_order": 106,
+                        "description": "➕ Great increase to power reserves"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "mana_max_depletion_mod": 20,
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_cluster_of_radiants",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_cluster_of_radiants",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_07",
+      "image_path": "trait_spite_2.png",
+      "is_background_skill": true,
+      "name": "Murder of Spites",
+      "description": "Hiding in their hosts' hollows are fiendish forms, ready to strike out at any who draw near.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +15%",
+              "key": "wh_main_effect_character_stat_mod_melee_damage",
+              "value": 15
+            },
+            {
+              "icon": "phase_posion.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Enables poison attacks",
+              "key": "wh_main_effect_character_stat_enable_poison_attacks",
+              "value": 1
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Murder of Spites\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_murder_of_spites",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_murder_of_spites",
+                    "icon_name": "wh2_dlc16_character_passive_murder_of_spites",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_direct_damage",
+                      "icon_path": "icon_spell_area_of_direct_damage.png",
+                      "description": "Direct Damage (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Murder of Spites",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "description": "➕ Causes damage to combatants"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_murder_of_spites",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_murder_of_spites",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_08",
+      "image_path": "trait_spite_3.png",
+      "is_background_skill": true,
+      "name": "Pageant of Shrikes",
+      "description": "Shrikes take on various frightening forms, moving like quicksilver to target the eyes, and even enter foes’ bodies to attack their very minds.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_piercing.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing weapon damage: +50",
+              "key": "wh2_main_effect_armour_piercing_damage",
+              "value": 50
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Pageant of Shrikes\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_pageant_of_shrikes",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_abilities_pageant_of_shrikes",
+                    "icon_name": "wh2_dlc16_character_abilities_pageant_of_shrikes",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_hex",
+                      "icon_path": "icon_spell_hex.png",
+                      "description": "Hex"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Pageant of Shrikes",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_dlc16_all_deplete_ammo_high",
+                        "sort_order": 106,
+                        "description": "➖ Greatly depletes ammunition"
+                      }
+                    ],
+                    "num_uses": 3,
+                    "active_time": 20,
+                    "recharge_time": 90,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 75,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "negative",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "replenish_ammo": -0.6,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_missile_range",
+                            "how": "mult",
+                            "description": "x0.8 Range",
+                            "sort_order": 7,
+                            "icon": "icon_stat_range.png"
+                          },
+                          {
+                            "value": -20,
+                            "stat": "stat_reloading",
+                            "how": "add",
+                            "description": "-20 Reload Skill",
+                            "sort_order": 8,
+                            "icon": "icon_stat_reload_time.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_pageant_of_shrikes",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_pageant_of_shrikes",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_innate_09",
+      "image_path": "trait_spite_3.png",
+      "is_background_skill": true,
+      "name": "Resplendence of Luminescents",
+      "description": "Bounding from branch to bow, the Luminescents’ magical spoors alight upon allies’ weapons to bestow a minor but lethal enchantment.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "resistance_magic.png",
+              "priority": 55,
+              "is_positive_value_good": false,
+              "description": "Magic resistance: -25%",
+              "key": "wh2_main_effect_character_stat_mod_ward_save_magic_enemy",
+              "value": -25
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Resplendence of Luminescents\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc16_effect_ability_enable_resplendence_of_luminescents",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc16_character_passive_resplendence_of_luminescents",
+                    "icon_name": "wh2_dlc16_character_passive_respelndance_of_luminescents",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_area_of_augments",
+                      "icon_path": "icon_spell_area_of_augments.png",
+                      "description": "Augment (Area)"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Resplendence of Luminescents",
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "recharge_time": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 5,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "+5 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x1.1 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x1.1 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh2_dlc16_effect_ability_enable_resplendence_of_luminescents",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_spite_resplendence_of_luminescents",
+      "tier": 0,
+      "indent": 0,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh2_dlc16_skill_node_wef_malicious_branchwraith_life_magic_dummy",
+      "image_path": "wh_dlc05_spell_life_awakening_of_the_wood.png",
+      "is_background_skill": false,
+      "name": "[Hidden] Awakening of the Wood",
+      "description": "Trees live for thousands of years and have very long memories. When called to fight, centuries of pent-up wrath are unleashed.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "spell_ability.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Awakening of the Wood\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_dlc05_spell_life_awakening_of_the_wood",
+                    "icon_name": "wh_dlc05_spell_life_awakening_of_the_wood",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_explosion",
+                      "icon_path": "icon_spell_explosion.png",
+                      "description": "Explosion"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Awakening of the Wood",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_minor",
+                        "sort_order": 104,
+                        "description": "➕ Causes minor magical damage"
+                      },
+                      {
+                        "key": "wh_main_vortex_large_static_aoe",
+                        "sort_order": 105,
+                        "description": "➕ Large explosion area"
+                      },
+                      {
+                        "key": "wh2_main_all_weak_against_armour",
+                        "sort_order": 206,
+                        "description": "➖ Weak against armour"
+                      }
+                    ],
+                    "active_time": 12,
+                    "recharge_time": 31,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "mana_cost": 6,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh_dlc05_effect_magic_life_enable_awakening_of_the_wood",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_malicious_branchwraith_life",
+      "character_skill_key": "wh_dlc05_skill_magic_life_wizard_awakening_of_the_wood_dummy",
+      "tier": 11,
+      "indent": 1,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
+}

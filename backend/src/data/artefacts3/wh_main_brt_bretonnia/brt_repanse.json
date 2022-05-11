@@ -1,0 +1,2930 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_2",
+        "image_path": "mount_barded_warhorse.png",
+        "is_background_skill": false,
+        "name": "Suleman",
+        "description": "Commandeered as a rider-less warhorse of a slain Knight, Suleman boldly charges Repanse into battle at the apex of her feared lance formation.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Barded Warhorse",
+                "key": "wh_main_effect_enable_mount_barded_warhorse",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_barded_warhorse",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_3",
+        "image_path": "character_general_ability.png",
+        "is_background_skill": false,
+        "name": "Virtue of Empathy",
+        "description": "Led by noble example, peasants fight longer and harder lest their Lord be dishonoured.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +25%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 25
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_4",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Basic Training",
+        "description": "Thorough drilling increases the peasants' chances of withstanding the horrors of battle.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "vigour.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Vigour loss reduction: -15%",
+                "key": "wh_main_effect_force_stat_vigour_loss_reduction_large",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_battle_basic_training",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_5",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Lady’s Mantle",
+        "description": "From the verdant depths, the Lady rises to protect the faithful.",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 10%",
+                "key": "wh_main_effect_character_stat_missile_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_all_unique_ladys_mantle",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_12",
+        "image_path": "wh2_dlc14_fleur_de_lys_banner.png",
+        "is_background_skill": false,
+        "name": "Fleur de Lys Banner",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Fleur de Lys Banner\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc14_effect_ability_enable_fleur_de_lys_banner",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc14_lord_passive_fleur_de_lys_banner",
+                      "icon_name": "wh2_dlc14_item_passive_fleur_de_lys_banner",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Fleur de Lys Banner",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 8,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+8 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc14_effect_ability_enable_fleur_de_lys_banner",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_banner_of_lyonesse",
+        "tier": 6,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_lionhearted",
+        "image_path": "character_cooldown.png",
+        "is_background_skill": false,
+        "name": "Lionhearted",
+        "description": "Like the lion, this one is the biggest and the bravest of his kind... with the sharpest teeth.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 293,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Rally!\" and \"Stand Your Ground\"",
+                "key": "wh_dlc07_effect_ability_cooldown_rally_stand_your_ground",
+                "value": -50
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_battle_lionhearted",
+        "tier": 7,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_dlc14_skill_node_brt_repanse_item_1",
+        "image_path": "item_armour.png",
+        "is_background_skill": false,
+        "name": "Armour of Valor",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 3,
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +10",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_armour"
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "value": 5,
+                "key": "wh_main_effect_character_stat_aura_leadership_effect"
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +20%",
+                "value": 20,
+                "key": "wh_main_effect_character_stat_leadership_aura_size"
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Ward save: 10%",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_ward_save"
+              },
+              {
+                "icon": "armour.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Heroic Inspiration\"",
+                "related_abilities": [
+                  {
+                    "effect": "stompies_effect_ability_blessing_of_valor",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "stompies_ability_blessing_of_valor",
+                      "icon_name": "wh2_main_unit_passive_primal_instincts",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Heroic Inspiration",
+                      "passive": true,
+                      "effect_range": 65,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.1 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "value": 1,
+                "key": "stompies_effect_ability_blessing_of_valor"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_armour_blessed_plate",
+        "tier": 44,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_dlc14_skill_node_brt_repanse_item_2",
+        "image_path": "item_talisman.png",
+        "is_background_skill": false,
+        "name": "The Crusader's Pendant",
+        "description": "King Louis the Young gave Repanse this necklace as a gift before she left for her Errantry War.  It protects with divine powers and was made to honour the Crusading Knights of old.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: +3",
+                "value": 3,
+                "key": "wh3_main_effect_corruption_reduction_characters"
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +25",
+                "value": 25,
+                "key": "wh_main_effect_character_stat_charge_bonus_add"
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Ward save: 10%",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_ward_save"
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 10%",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_magic_resistance"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_talisman_crusaders_pendant",
+        "tier": 45,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_dlc14_skill_node_brt_repanse_item_3",
+        "image_path": "item_enchanted_item.png",
+        "is_background_skill": false,
+        "name": "King's Decree",
+        "description": "A scroll with an official seal of the King of Bretonnia declaring, \"By decree of the King, all will aid the carrier of this parchment!\"",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -10%",
+                "value": -10,
+                "key": "wh_main_effect_force_all_campaign_upkeep"
+              },
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -20%",
+                "value": -20,
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_enchanted_kings_decree",
+        "tier": 46,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_6",
+        "image_path": "wh2_dlc14_skill_brt_repanse_the_peoples_hero.png",
+        "is_background_skill": false,
+        "name": "The People's Hero",
+        "description": "Knights, peasants, and everyone in between feel honour-bound to follow Repanse to death or glory.",
+        "levels": [
+          {
+            "unlocked_at_rank": 9,
+            "effects": [
+              {
+                "icon": "armour_piercing.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour-piercing weapon damage: +3 for infantry units",
+                "key": "wh2_dlc14_effect_armour_piercing_damage_infantry",
+                "value": 3
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +5%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 5
+              },
+              {
+                "icon": "melee.png",
+                "priority": 108,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for infantry units",
+                "key": "wh2_dlc14_effect_force_army_battle_all_infantry_attack",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_7",
+        "image_path": "wh2_dlc14_skill_brt_repanse_banish_the_scourge.png",
+        "is_background_skill": false,
+        "name": "Banish the Scourge",
+        "description": "“The Undead scourge must be destroyed. The Lady hath spoken.”",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 when fighting against Vampire Counts, Vampire Coast and Tomb Kings",
+                "key": "wh2_dlc13_effect_melee_attack_versus_vmp_cst_tmb",
+                "value": 8
+              },
+              {
+                "icon": "modifier_icon_flaming.png",
+                "priority": 61,
+                "is_positive_value_good": true,
+                "description": "Enables flaming attacks when fighting against Vampire Counts, Vampire Coast and Tomb Kings",
+                "key": "wh2_dlc14_effect_character_stat_enable_flaming_attacks_versus_undead",
+                "value": 1
+              },
+              {
+                "icon": "attribute_immune_to_psychology.png",
+                "priority": 620,
+                "is_positive_value_good": true,
+                "description": "Attribute: Immune to Psychology when fighting against Vampire Counts, Vampire Coast and Tomb Kings",
+                "key": "wh2_dlc14_effect_unit_enable_attribute_immpsy_when_fighting_undead",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_banish_the_scourge",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_unique_6"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_8",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Courageous",
+        "description": "In the eyes of the brave, danger gleams like sunshine.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +15",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 15
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Ward save: 10%",
+                "key": "wh_main_effect_character_stat_ward_save",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_couragous",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_unique_6"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_9",
+        "image_path": "campaign_army.png",
+        "is_background_skill": false,
+        "name": "Rebuild the Ruins",
+        "description": "\"Toss down your blade and pick up the plough, these lands are ours now!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Construction cost: -25% for all buildings",
+                "key": "wh_main_effect_building_construction_cost_mod",
+                "value": -25
+              },
+              {
+                "icon": "construction.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Construction time: -50% for all buildings",
+                "key": "wh2_main_effect_building_construction_time_mod_all",
+                "value": -50
+              },
+              {
+                "icon": "army.png",
+                "priority": 270,
+                "is_positive_value_good": true,
+                "description": "Local recruitment capacity: +2",
+                "key": "wh_main_effect_unit_recruitment_points",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_rebuild_the_ruins",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_unique_6"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_10",
+        "image_path": "character_untainted.png",
+        "is_background_skill": false,
+        "name": "Honourable & Pure",
+        "description": "Honour and purity are the wings with which the righteous soar above their peers.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -5",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -5
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +25%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 25
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_honorable_and_pure",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_unique_6"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_unique_11",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Eternal Errantry War",
+        "description": "If you wish to find an enemy, you need merely throw a stone.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Frenzy\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_frenzy",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_unit_passive_frenzy",
+                      "icon_name": "wh_main_unit_passive_frenzy",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Frenzy",
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "positive"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.1 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 8,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+8 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.1 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_frenzy",
+                "value": 1
+              },
+              {
+                "icon": "attribute_unbreakable.png",
+                "priority": 320,
+                "is_positive_value_good": true,
+                "description": "Attribute: Unbreakable",
+                "key": "wh_main_effect_attribute_enable_unbreakable",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc14_skill_brt_repanse_eternal_errantry_war",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 2,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_unique_10",
+          "wh2_dlc14_skill_node_brt_repanse_unique_7",
+          "wh2_dlc14_skill_node_brt_repanse_unique_8",
+          "wh2_dlc14_skill_node_brt_repanse_unique_9"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_01",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Blade Master",
+        "description": "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_blade_master_starter",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_02",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Devastating Charge",
+        "description": "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +15",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_devastating_charge",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_03",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Full Plate Armour",
+        "description": "Full-Plate armour protects the wearer from head-to-foot. Many such suits are blessed or imbued with arcane abilities.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +7",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +15",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_04",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Scarred Veteran",
+        "description": "The scars on this storied warrior reveal a veteran of many battles, a being not easy to kill and one worthy of respect and fear.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_05",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Hard to Hit",
+        "description": "Hand-to-hand combat is a lethal match of cut and thrust. However, it’s not all about offensive strikes; parries and other defensive moves can also win the day.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_06",
+        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "is_background_skill": false,
+        "name": "Foe-Seeker",
+        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Foe-Seeker\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_foe_seeker",
+                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Foe-Seeker",
+                      "active_time": 25,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_02",
+          "wh2_dlc14_skill_node_brt_repanse_self_03",
+          "wh2_dlc14_skill_node_brt_repanse_self_04",
+          "wh2_dlc14_skill_node_brt_repanse_self_05"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_07",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Wound-Maker",
+        "description": "Such is their power and ferocity, a wound-maker will ravage the foe, cutting and pulverising until there is only one exit - death.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_wound-maker",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_08",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Deadly Blade",
+        "description": "A deadly blade is especially lethal when in the hands of this master death-maker, killer and slaughterer!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_deadly_blade",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_09",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Indomitable",
+        "description": "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +12",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_self_indomitable",
+        "tier": 8,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_10",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Blade Shield",
+        "description": "A blade that sings in defence will not let its wielder be penetrated.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_shield",
+        "tier": 9,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_06"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_self_11",
+        "image_path": "wh_main_character_abilities_deadly_onslaught.png",
+        "is_background_skill": false,
+        "name": "Deadly Onslaught",
+        "description": "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Deadly Onslaught\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_deadly_onslaught",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_deadly_onslaught",
+                      "icon_name": "wh_main_character_abilities_deadly_onslaught",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Deadly Onslaught",
+                      "active_time": 31,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 31,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.6,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.6 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.3 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_deadly_onslaught",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
+        "tier": 10,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_self_07",
+          "wh2_dlc14_skill_node_brt_repanse_self_08",
+          "wh2_dlc14_skill_node_brt_repanse_self_09",
+          "wh2_dlc14_skill_node_brt_repanse_self_10"
+        ]
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_01",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Inspiring Presence",
+        "description": "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_inspiring_presence",
+        "tier": 0,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_02",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Low-Born Militia",
+        "description": "Even stupid peasants can learn to stand fast and brace against the charge.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": true,
+                "description": "Leadership: +4 for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+                "key": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": true,
+                "description": "Leadership: +4 for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+                "key": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+                "value": 4
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4 for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+                "key": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6 for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+                "key": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+                "value": 6
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+                "key": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_03",
+        "image_path": "battle_ammo.png",
+        "is_background_skill": false,
+        "name": "Peasant Proficiency",
+        "description": "Even dull and stupid peasants can aim a bow, but with a little training they can learn to shoot with some success.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10% for Peasant Bowmen and Mounted Yeomen Archers units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +15% for Peasant Bowmen and Mounted Yeomen Archers units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+                "value": 15
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +4% for Peasant Bowmen and Mounted Yeomen Archers units",
+                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for Peasant Bowmen and Mounted Yeomen Archers units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+                "value": 20
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +8% for Peasant Bowmen and Mounted Yeomen Archers units",
+                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_04",
+        "image_path": "battle_armour.png",
+        "is_background_skill": false,
+        "name": "Worshippers of the Grail",
+        "description": "Drink from the chalice. You will be reborn.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +6 for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+                "key": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +9 for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+                "key": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+                "value": 9
+              },
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+                "key": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+                "value": 12
+              },
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "tier": 3,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_05",
+        "image_path": "battle_charge.png",
+        "is_background_skill": false,
+        "name": "Glorfinial's Progeny",
+        "description": "The bloodline of the noblest of all steeds has been preserved; it serves us still.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +6 for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, Grail Knights, and Grail Guardians units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_mounted_yeomen_grail_knights_grail_guardians_knights_errant_knights_of_the_realm_questing_knights",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +6% for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, Grail Knights, and Grail Guardians units",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_brt_mounted_yeomen_grail_knights_grail_guardians_knights_errant_knights_of_the_realm_questing_knights",
+                "value": 6
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +9 for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, Grail Knights, and Grail Guardians units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_mounted_yeomen_grail_knights_grail_guardians_knights_errant_knights_of_the_realm_questing_knights",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12% for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, Grail Knights, and Grail Guardians units",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_brt_mounted_yeomen_grail_knights_grail_guardians_knights_errant_knights_of_the_realm_questing_knights",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, Grail Knights, and Grail Guardians units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_mounted_yeomen_grail_knights_grail_guardians_knights_errant_knights_of_the_realm_questing_knights",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_glorfinials_progeny",
+        "tier": 4,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_06",
+        "image_path": "battle_charge.png",
+        "is_background_skill": false,
+        "name": "Guardians of the Lady",
+        "description": "Those who serve the Lady purely are rewarded with a portion of her strength when battle is joined.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +6 for Pegasus Knights, Royal Pegasus Knights, and Royal Hippogryph Knights units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_pegasus_knights_royal_pegasus_knights_royal_hippogryph_knights",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for Pegasus Knights, Royal Pegasus Knights, and Royal Hippogryph Knights units",
+                "key": "wh2_dlc11_effect_force_stat_speed_pegasus_knights_royal_pegasus_knights_royal_hippogryph_knights",
+                "value": 6
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +9 for Pegasus Knights, Royal Pegasus Knights, and Royal Hippogryph Knights units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_pegasus_knights_royal_pegasus_knights_royal_hippogryph_knights",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +12% for Pegasus Knights, Royal Pegasus Knights, and Royal Hippogryph Knights units",
+                "key": "wh2_dlc11_effect_force_stat_speed_pegasus_knights_royal_pegasus_knights_royal_hippogryph_knights",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Pegasus Knights, Royal Pegasus Knights, and Royal Hippogryph Knights units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_pegasus_knights_royal_pegasus_knights_royal_hippogryph_knights",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_guardians_of_the_lady",
+        "tier": 5,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_07",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Engines of War",
+        "description": "Although nothing can replace the thrill of the charge and the righteous clash of steel, seriously heavy artillery generally helps.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +4% for Field Trebuchet units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_brt_trebuchet",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10% for Field Trebuchet units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_brt_trebuchet",
+                "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Field Trebuchet units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_brt_trebuchet",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for Field Trebuchet units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_brt_trebuchet",
+                "value": 20
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Field Trebuchet units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_brt_trebuchet",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_engines_of_war",
+        "tier": 6,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_08",
+        "image_path": "wh_main_character_abilities_rally.png",
+        "is_background_skill": false,
+        "name": "Rally!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Rally!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_rally",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_rally",
+                      "icon_name": "wh_main_character_abilities_rally",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rally!",
+                      "active_time": 14,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 14,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 16,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+16 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_rally",
+        "tier": 7,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 6,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_02",
+          "wh2_dlc14_skill_node_brt_repanse_battle_03",
+          "wh2_dlc14_skill_node_brt_repanse_battle_04",
+          "wh2_dlc14_skill_node_brt_repanse_battle_05",
+          "wh2_dlc14_skill_node_brt_repanse_battle_06",
+          "wh2_dlc14_skill_node_brt_repanse_battle_07"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_09",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "The Peasant's Duty",
+        "description": "When the alternative probably involves being killed by their own side, the smallfolk tend to rise to the occasion...",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 403,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Peasant Mob, Men-at-Arms, Spearmen-at-Arms, Grail Reliquae, Battle Pilgrims, and Foot Squires units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_armour_peasant_mob_men_at_arms_spear_at_arms_battle_pilgrims_foot_squires_grail_reliquae_rank7",
+                "value": 12
+              },
+              {
+                "icon": "morale.png",
+                "priority": 412,
+                "is_positive_value_good": true,
+                "description": "Leadership: +5 for Peasant Mob, Men-at-Arms, Spearmen-at-Arms, Grail Reliquae, Battle Pilgrims, and Foot Squires units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms_battle_pilgrims_foot_squires_grail_reliquae_rank7",
+                "value": 5
+              },
+              {
+                "icon": "resistance_physical.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10% for Peasant Mob, Men-at-Arms, Spearmen-at-Arms, Grail Reliquae, Battle Pilgrims, and Foot Squires units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_physical_resistance_brt_peasant_mob_men_at_arms_spear_at_arms_battle_pilgrims_foot_squires_grail_reliquae_rank7",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_the_peasants_duty",
+        "tier": 8,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_08"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_10",
+        "image_path": "battle_armour.png",
+        "is_background_skill": false,
+        "name": "Protectors of the Realm",
+        "description": "There are literally no opponents too great for them to face down. None.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 403,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, and Pegasus Knights units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_armour_mounted_yeomen_knights_errant_knights_of_the_realm_questing_knights_pegasus_knights_rank7",
+                "value": 12
+              },
+              {
+                "icon": "defence.png",
+                "priority": 452,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, and Pegasus Knights units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_melee_defence_brt_mounted_yeomen_knights_errant_knights_of_the_realm_questing_knights_pegasus_knights_rank7",
+                "value": 5
+              },
+              {
+                "icon": "charge.png",
+                "priority": 502,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Mounted Yeomen, Knights Errant, Knights of the Realm, Questing Knights, and Pegasus Knights units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_brt_mounted_yeomen_knights_errant_knights_of_the_realm_questing_knights_pegasus_knights_rank7",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_protectors_of_the_realm",
+        "tier": 9,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_08"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_11",
+        "image_path": "battle_ward_save.png",
+        "is_background_skill": false,
+        "name": "Chivalric Code",
+        "description": "Thou shalt be everywhere and always the champion of the Right and the Good against Injustice and Evil.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 432,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Grail Knights, Grail Guardians, Royal Pegasus Knights, and Royal Hippogryph Knights units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_grail_knights_grail_guardians_royal_pegasus_knights_royal_hippogryph_knights_rank7",
+                "value": 5
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 462,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12% for Grail Knights, Grail Guardians, Royal Pegasus Knights, and Royal Hippogryph Knights units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_brt_grail_knights_grail_guardians_royal_pegasus_knights_royal_hippogryph_knights_rank7",
+                "value": 12
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Ward save: 8% for Grail Knights, Grail Guardians, Royal Pegasus Knights, and Royal Hippogryph Knights units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_ward_save_grail_knights_grail_guardians_royal_pegasus_knights_royal_hippogryph_knights_rank7",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_chivalric_code",
+        "tier": 10,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_08"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_12",
+        "image_path": "battle_range.png",
+        "is_background_skill": false,
+        "name": "Guided by the Lady",
+        "description": "Many Bretonnian veterans speak of a soothing presence felt on occasion in the heat of battle, helping them to find their mark and keep their cool.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "accuracy.png",
+                "priority": 532,
+                "is_positive_value_good": true,
+                "description": "Range: +10% for Peasant Bowmen, Mounted Yeomen Archers, and Field Trebuchet units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_range_brt_peasant_bowmen_mounted_yeomen_archers_trebuchet_rank7",
+                "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 542,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +12% for Peasant Bowmen, Mounted Yeomen Archers, and Field Trebuchet units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_brt_peasant_bowmen_mounted_yeomen_archers_trebuchet_rank7",
+                "value": 12
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 562,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Peasant Bowmen, Mounted Yeomen Archers, and Field Trebuchet units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers_trebuchet_rank7",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_brt_army_buff_guided_by_the_lady",
+        "tier": 11,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_08"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_battle_13",
+        "image_path": "wh_main_character_abilities_stand_your_ground.png",
+        "is_background_skill": false,
+        "name": "Stand Your Ground!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Stand Your Ground!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_stand_your_ground",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_stand_your_ground",
+                      "icon_name": "wh_main_character_abilities_stand_your_ground",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Stand Your Ground!",
+                      "active_time": 18,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 18,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 24,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+24 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": 16,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+16 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_stand_your_ground",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 305,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_stand_your_ground",
+        "tier": 12,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_battle_09",
+          "wh2_dlc14_skill_node_brt_repanse_battle_10",
+          "wh2_dlc14_skill_node_brt_repanse_battle_11",
+          "wh2_dlc14_skill_node_brt_repanse_battle_12"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_01",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "Route Marcher",
+        "description": "Those who know the land and its secrets will travel faster and further than the foes who don't.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_route_marcher",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_02",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Justiciar",
+        "description": "As an expert in such matters, it is their duty to know the king's law and to mete justice in his name.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +1",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +2",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +3",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_justiciar",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_03",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Bonded Service",
+        "description": "The Lords rule, the peasants toil. Nothing has changed in over a thousand years.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -5%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -10%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -15%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_bonded_service",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_04",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Tenth-Share",
+        "description": "The Lord is entitled to collect tithes from tenants in return for continued protection.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Income from Farms: +4%",
+                "key": "wh_dlc07_effect_economy_gdp_mod_farming",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Income from Farms: +8%",
+                "key": "wh_dlc07_effect_economy_gdp_mod_farming",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Income from Farms: +10%",
+                "key": "wh_dlc07_effect_economy_gdp_mod_farming",
+                "value": 10
+              },
+              {
+                "icon": "income.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Income from Industry: +5%",
+                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_tenth-share",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_05",
+        "image_path": "campaign_untainted.png",
+        "is_background_skill": false,
+        "name": "Devoted of the Goddess",
+        "description": "They've seen the Lady's acts or witnessed her blessed grace.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -1",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -2",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -3",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_devoted_of_the_goddess",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_06",
+        "image_path": "campaign_wound_time.png",
+        "is_background_skill": false,
+        "name": "Irrepressible Spirit",
+        "description": "Those whom the Lady has blessed fight with an unquenchable, almost super-human zeal, for they know that she sees them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +30% for this Lord",
+                "key": "wh2_main_effect_replenishment_lords",
+                "value": 30
+              },
+              {
+                "icon": "wound_time.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Wound recovery time: -1",
+                "key": "wh_main_effect_character_wound_recovery_time_mod",
+                "value": -1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc07_skill_brt_lord_campaign_irrepressible_spirit",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_02",
+          "wh2_dlc14_skill_node_brt_repanse_campaign_03",
+          "wh2_dlc14_skill_node_brt_repanse_campaign_04",
+          "wh2_dlc14_skill_node_brt_repanse_campaign_05"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_07",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Lightning Strike",
+        "description": "\"The time to strike is now!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +25%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 25
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Enables lightning strike battles when reinforcements are present",
+                "key": "wh_main_effect_conquest_enable_night_battles",
+                "value": 1
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_lightning_strike",
+        "tier": 6,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_08",
+        "image_path": "campaign_growth.png",
+        "is_background_skill": false,
+        "name": "Steward of the Realm",
+        "description": "\"The land from here to the sea is yours, if you enforce the king's will.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +8",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +20",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +36",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 36
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_steward_of_the_realm",
+        "tier": 7,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_09",
+        "image_path": "campaign_disaster.png",
+        "is_background_skill": false,
+        "name": "Lordly Conqueror",
+        "description": "The knowledge that they fight in the king's name, with his support, steels an army for the privations of the siege.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Attrition: -3% when under siege",
+                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Attrition: -8% when under siege",
+                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition",
+                "value": -8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Attrition: -15% when under siege",
+                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_lordly_conqueror",
+        "tier": 8,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_10",
+        "image_path": "campaign_ambush.png",
+        "is_background_skill": false,
+        "name": "Premonition",
+        "description": "This being must be touched by Tzeentch, seeing things before they happen.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +6%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterranean.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +8%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 8
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +16%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterranean.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +15%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 15
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +30%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_premonition",
+        "tier": 9,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_06"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc14_skill_node_brt_repanse_campaign_11",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Bailiff",
+        "description": "Lords must not be concerned with the collecting of taxes; there are others whose lot it is to feel the people's scorn.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Income from Industry: +10%",
+                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_brt_lord_campaign_bailiff",
+        "tier": 10,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc14_skill_node_brt_repanse_campaign_07",
+          "wh2_dlc14_skill_node_brt_repanse_campaign_08",
+          "wh2_dlc14_skill_node_brt_repanse_campaign_09",
+          "wh2_dlc14_skill_node_brt_repanse_campaign_10"
+        ]
+      }
+    ]
+  ],
+  "key": "brt_repanse",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc14_skill_innate_repanse",
+      "image_path": "trait_bretonnia.png",
+      "is_background_skill": true,
+      "name": "Champion of the People",
+      "description": "To the smallfolk of Bretonnia, Repanse is their champion – a beacon of hope in what would otherwise be lives of hopeless, downtrodden drudgery.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "chivalry_positive.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Chivalry: +10",
+              "key": "wh_dlc07_effect_chivalry_dummy",
+              "value": 10
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 14,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 5% for all Peasant units",
+              "key": "wh2_dlc14_effect_brt_physical_resistance_peasant",
+              "value": 5
+            },
+            {
+              "icon": "morale.png",
+              "priority": 411,
+              "is_positive_value_good": true,
+              "description": "Leadership: +5 for Peasant units",
+              "key": "wh_dlc07_effect_force_stat_leadership_peasants",
+              "value": 5
+            },
+            {
+              "icon": "general_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Ability: \"Halo of Maidenly Wrath\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_dlc14_effect_ability_enable_halo_of_maidenly_wrath",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
+                    "icon_name": "wh2_dlc14_lord_abilities_halo_of_maidenly_wrath",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_explosion",
+                      "icon_path": "icon_spell_explosion.png",
+                      "description": "Explosion"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Halo of Maidenly Wrath",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_spell_friendly_fire_explosion",
+                        "sort_order": 101,
+                        "effect_state": "positive",
+                        "description": "Explosion does not affect friendly troops"
+                      },
+                      {
+                        "key": "wh_main_all_poor_vs_large",
+                        "sort_order": 206,
+                        "effect_state": "negative",
+                        "description": "Poor against large combatants"
+                      }
+                    ],
+                    "active_time": 3,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_dlc14_effect_ability_enable_halo_of_maidenly_wrath",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc14_skill_node_set_brt_repanse",
+      "character_skill_key": "wh2_dlc14_skill_innate_brt_repanse",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
+  "items": [
+    {
+      "key": "wh2_dlc14_anc_weapon_sword_of_lyonesse",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 600,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Sword of Lyonesse\"",
+          "related_abilities": [
+            {
+              "effect": "wh2_dlc14_effect_ability_enable_sword_of_lyonesse",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh2_dlc14_weapon_abilities_sword_of_lyonesse",
+                "icon_name": "wh2_dlc14_weapon_abilities_sword_of_lyonesse",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Sword of Lyonesse",
+                "active_time": 24,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 24,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 40,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+40 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.5 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      },
+                      {
+                        "value": 1.5,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.5 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh2_dlc14_effect_ability_enable_sword_of_lyonesse"
+        }
+      ],
+      "name": "The Sword of Lyonesse",
+      "description": "When first she faced Chaos, Repanse broke open the reliquary of the village Grail Chapel and took up the ancient sword she found there.",
+      "unlocked_at_rank": 7,
+      "instant": false,
+      "image_path": "item_weapon.png"
+    }
+  ]
+}

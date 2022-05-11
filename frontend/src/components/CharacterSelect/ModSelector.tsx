@@ -32,7 +32,8 @@ const ModSelector = () => {
       <ul className="flex flex-row flex-wrap justify-center ">
         {gameKeys.map((gameKey) => {
           const game = gameData[gameKey as keyof typeof gameData];
-          let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
+          let liClassName =
+            'flex flex-col justify-between m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
 
           if (gameKey === selectedMod) {
             liClassName += ' bg-gray-600 hover:bg-gray-500';
@@ -48,16 +49,14 @@ const ModSelector = () => {
               }}
             >
               <h2 className="text-center text-gray-200 text-2xl text-shadow mb-1">{game.text}</h2>
-              <div className="flex flex-row justify-center">
-                <img
-                  className="w-30 h-fit drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
-                  draggable={false}
-                  src={game.image}
-                  alt={`${game.text} icon`}
-                  height="128"
-                  width="128"
-                />
-              </div>
+              <img
+                className="w-30 h-fit m-auto drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                draggable={false}
+                src={game.image}
+                alt={`${game.text} icon`}
+                height="128"
+                width="128"
+              />
             </li>
           );
         })}
