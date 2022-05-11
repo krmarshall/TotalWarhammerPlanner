@@ -40,9 +40,9 @@ const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
                 boxedType={boxedType}
               />
               {skill.right_arrow && (
-                <div className="w-10 flex flex-col justify-center">
+                <td className="w-10 flex flex-col justify-center">
                   {skill?.right_arrow && <p className="text-center text-4xl text-gray-200">→</p>}
-                </div>
+                </td>
               )}
             </>
           );

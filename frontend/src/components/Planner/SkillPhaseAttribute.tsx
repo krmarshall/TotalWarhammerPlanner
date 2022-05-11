@@ -10,11 +10,15 @@ interface PropInterface {
 
 const SkillPhaseAttribute = ({ attribute, index }: PropInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedMod } = state;
+  const { selectedMod, selectedGame } = state;
+
+  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const { src } = useImage({
     srcList: [
       `/imgs/${selectedMod}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
+      `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
       `/imgs/${selectedMod}/battle_ui/ability_icons/${attribute.key}.webp`,
+      `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${attribute.key}.webp`,
     ],
   });
   return (
