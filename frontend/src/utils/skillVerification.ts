@@ -88,6 +88,12 @@ const missingRequiredPoints = (
       if (parentSkill === undefined) {
         return true;
       }
+      if (
+        (characterData?.skillTree[parentSkill.yIndex][parentSkill.xIndex].levels?.length as number) <
+        skill.required_num_parents
+      ) {
+        return false;
+      }
       spentPoints += parentSkill.points;
     }
     if (spentPoints >= skill.required_num_parents) {
