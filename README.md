@@ -26,3 +26,4 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 - Create appropriate mod character list in frontend ./src/data, may have to look around rpfm for actual character names
 - Find/create an icon for the mod, put into ./src/imgs/games and link with gameImage.ts
 - Create appropriate entry in frontend ./src/data/gameData
+- Create appropriate entry in backend ./__tests__/characterApi.js gameList to add it to the test suite
