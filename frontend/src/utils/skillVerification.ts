@@ -16,7 +16,7 @@ const isRequiredLevel = (
       return true;
     }
 
-    if (characterBuild?.rank - characterBuild?.startingSkillPoints > skillCheckRank?.unlocked_at_rank) {
+    if (characterBuild?.rank - characterBuild?.startingSkillPoints >= skillCheckRank?.unlocked_at_rank) {
       return true;
     } else {
       return false;
