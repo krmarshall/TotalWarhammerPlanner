@@ -50,7 +50,7 @@ const ModSelector = () => {
             >
               <h2 className="text-center text-gray-200 text-2xl text-shadow mb-1">{game.text}</h2>
               <img
-                className="w-30 h-fit m-auto drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                className="w-36 h-fit m-auto drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
                 draggable={false}
                 src={game.image}
                 alt={`${game.text} icon`}

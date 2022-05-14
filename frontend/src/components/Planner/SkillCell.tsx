@@ -236,16 +236,18 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
         <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
           {skill?.levels?.map((rankKey, index) => {
-            return (
-              <SkillPointSelector
-                key={index}
-                index={index}
-                skill={skill}
-                skillPoints={index}
-                thisSkillsCurrentPoints={thisSkillsCurrentPoints}
-                blocked={blocked}
-              />
-            );
+            if (index < 3) {
+              return (
+                <SkillPointSelector
+                  key={index}
+                  index={index}
+                  skill={skill}
+                  skillPoints={index}
+                  thisSkillsCurrentPoints={thisSkillsCurrentPoints}
+                  blocked={blocked}
+                />
+              );
+            }
           })}
         </div>
       </div>

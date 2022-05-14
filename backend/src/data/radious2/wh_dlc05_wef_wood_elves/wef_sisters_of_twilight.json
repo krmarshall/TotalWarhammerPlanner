@@ -1,0 +1,3976 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_02",
+        "image_path": "mount_forest_dragon.png",
+        "is_background_skill": false,
+        "name": "Ceithin-Har",
+        "description": "Forest Dragons are not known for their recklessness, but the venturesome Ceithin-Har is a true reflection of the Sisters’ combative aspect.",
+        "character_skill_key": "wh2_dlc16_skill_mount_wef_cha_sisters_of_twilight_forest_dragon",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_03",
+        "image_path": "campaign_turns.png",
+        "is_background_skill": false,
+        "name": "Challenge to Daith",
+        "description": "Whenever the twins present Lord Daith with a new challenge, he simply gives a small smile and returns to the fires of the forge.",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "forge_of_daith.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Daith's Favour: +33% chance to earn additional Daith's Favour after battles",
+                "key": "wh2_dlc16_effect_wef_forge_of_daith_increase_daiths_favour_chance_dummy",
+                "value": 33
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_6",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_04",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Rain of Spines",
+        "description": "A ranger should give no reprieve to the foe. Arrows must fall like a deluge, as deadly as lightning.",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "icon_stat_reload_time_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +12%",
+                "key": "wh_main_effect_character_stat_mod_missile_attack_rate",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_army_buff_ranged_extra_reload",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_05",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Speed of the Hunter",
+        "description": "Elven hunters emulate Kurnous, the God of the Hunt. Their speed and swiftness is therefore without peer.",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for Elven units",
+                "key": "wh_dlc05_effect_battle_speed_elf_units",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_glade_lord_unique_battle_speed_elven_units",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_06",
+        "image_path": "wh_dlc05_howl_of_the_forest.png",
+        "is_background_skill": false,
+        "name": "Howl of the Forest",
+        "description": "The Lord charges their troops to fight for Athel Loren, for their very souls are tethered to its fate.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Howl of the Forest\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_ability_enable_passive_melee_aura_2",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_lord_passive_howl_of_the_forest",
+                      "icon_name": "wh_dlc05_lord_passive_howl_of_the_forest",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Howl of the Forest",
+                      "passive": true,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 6,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+6 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_ability_enable_passive_melee_aura_2",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god",
+              "wh2_dlc16_skill_wef_ability_sight_beyond_sight"
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_wef_ability_howl_of_the_forest",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_07",
+        "image_path": "wh_dlc05_sight_beyond_sight.png",
+        "is_background_skill": false,
+        "name": "Sight Beyond Sight",
+        "description": "Waystalkers’ keen eyes can spot an enemy at a distance that defies belief, and so they demand the same of their troops.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Sight Beyond Sight\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_ability_enable_passive_ranged_aura_2",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_lord_passive_sight_beyond_sight",
+                      "icon_name": "wh_dlc05_lord_passive_sight_beyond_sight",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Sight Beyond Sight",
+                      "passive": true,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_missile_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Missile Damage",
+                              "sort_order": 10,
+                              "icon": "icon_stat_ranged_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_ability_enable_passive_ranged_aura_2",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_wef_ability_howl_of_the_forest",
+              "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god"
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_wef_ability_sight_beyond_sight",
+        "tier": 6,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_unique_08",
+        "image_path": "wh2_dlc16_wef_skill_possessed_by_the_trickster_god.png",
+        "is_background_skill": false,
+        "name": "Possessed by the Trickster God",
+        "description": "Once consumed by Loec’s aspect, one can instinctively evade attack through trickery, mimicking his deception of the Dark Gods.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Possessed by the Trickster God\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc16_effect_ability_enable_possessed_by_the_trickster_god",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc16_hero_passive_possessed_by_the_trickster_god",
+                      "icon_name": "wh2_dlc16_hero_passive_possessed_by_the_trickster_god",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Possessed by the Trickster God",
+                      "passive": true,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc16_effect_ability_enable_possessed_by_the_trickster_god",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc16_skill_wef_ability_howl_of_the_forest",
+              "wh2_dlc16_skill_wef_ability_sight_beyond_sight"
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_skill_wef_ability_possessed_by_the_trickster_god",
+        "tier": 7,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "op3_skill_key_wef_sisters_001",
+        "image_path": "mount_great_eagle.png",
+        "is_background_skill": false,
+        "name": "Gwindalor",
+        "description": "A giant amongst the Eagles, Gwindalor carries the Sisters of Twilight to battle.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive Ability: \" Death from Above\", while this Mount is equipped, for Eagle and Hawk units",
+                "key": "op3_effect_enable_ability_dummy_wef_ancillary_great_eagle",
+                "value": 1
+              },
+              {
+                "icon": "mount.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Mount: Gwindalor",
+                "key": "op3_effect_enable_mount_wef_ancillary_special_sisters",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "op3_skill_mount_wef_sisters_great_eagle",
+        "tier": 8,
+        "indent": 0,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_wef_sisters_unique_0",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Inseverable",
+        "description": "Such is the twins’ bond that the harms inflicted on one are inconsequential so long as the other yet draws breath.",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Ward save: 10%",
+                "key": "wh_main_effect_character_stat_mod_ward_save",
+                "value": 10
+              },
+              {
+                "icon": "wound_time.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Wound recovery time: -3",
+                "key": "wh_main_effect_character_wound_recovery_time_mod",
+                "value": -3
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive Ability: \"Death from Above\" for Eagle and Hawk units",
+                "value": 1,
+                "key": "op3_effect_enable_ability_wef_ancillary_great_eagle"
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_0",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_unique_1",
+        "image_path": "character_diplomacy.png",
+        "is_background_skill": false,
+        "name": "The Queen’s Emissaries",
+        "description": "Regardless of their mysterious origins, all Elves know Naestra and Arahan speak with the authority of their beloved Mage Queen.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +2",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2
+              },
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +20",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 20
+              },
+              {
+                "icon": "diplomacy.png",
+                "priority": 145,
+                "is_positive_value_good": true,
+                "description": "Diplomatic relations: +15 with Dark Elves, High Elves and Wood Elves",
+                "key": "wh2_dlc16_diplomacy_bonus_all_elves",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_1",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_unique_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_unique_2",
+        "image_path": "character_movement.png",
+        "is_background_skill": false,
+        "name": "Naestra’s Vigilance",
+        "description": "A dedicated sentinel of all that the Asrai hold dear, Naestra seeks battle only in pursuit of preventing greater harms.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +10%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Campaign line of sight: +15%",
+                "key": "wh_main_effect_agent_field_line_of_sight_mod",
+                "value": 15
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +10%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 10
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Guardian\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc10_effect_ability_enable_guardian",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc10_unit_passive_guardian",
+                      "icon_name": "wh2_dlc09_unit_passive_guardian",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_ward_save",
+                        "icon_path": "icon_spell_area_of_ward_saves.png",
+                        "description": "Ward Save (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Guardian",
+                      "passive": true,
+                      "effect_range": 30,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 20,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+20 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc10_effect_ability_enable_guardian",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_2",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_unique_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_unique_3",
+        "image_path": "character_military_spending.png",
+        "is_background_skill": false,
+        "name": "Arahan’s Reckoning",
+        "description": "Like an unbridled flame, Arahan lives for destruction, welcoming battle with wanton joy.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "worldroots_health.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Gain +1 additional Forest Health for winning battles in Magical Forests or their Heathlands",
+                "key": "wh2_dlc16_effect_additional_worldroots_health_from_battles_dummy",
+                "value": 1
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from razing settlements: +15%",
+                "key": "wh_main_effect_force_all_campaign_razing_income",
+                "value": 15
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Ambush success chance: +10%",
+                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+                "value": 10
+              },
+              {
+                "icon": "income.png",
+                "priority": 201,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +15%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_3",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_unique_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_unique_4",
+        "image_path": "guerrilla_deploy.png",
+        "is_background_skill": false,
+        "name": "Masters of the Aeries",
+        "description": "The sky’s fauna adore Naestra, doing as she wills out of love, while fearing Arahan and doing as she wills out of respect.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10% for flying units",
+                "key": "wh2_dlc16_effect_physical_resistance",
+                "value": 10
+              },
+              {
+                "icon": "attribute_guerrilla_deploy.png",
+                "priority": 15,
+                "is_positive_value_good": true,
+                "description": "Attribute: Vanguard Deployment for Great Eagle and Forest Dragon units",
+                "key": "wh2_dlc16_effect_vanguard_flying",
+                "value": 1
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 105,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -10% for flying units",
+                "key": "wh2_dlc16_effect_upkeep_flying",
+                "value": -10
+              },
+              {
+                "icon": "attribute_guerrilla_deploy.png",
+                "priority": 620,
+                "is_positive_value_good": true,
+                "description": "Attribute: Vanguard Deployment",
+                "key": "wh_main_effect_unit_enable_attribute_guerrilla_deployment",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_4",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_unique_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_unique_5",
+        "image_path": "character_general_ability.png",
+        "is_background_skill": false,
+        "name": "Otherworldly of Spirit",
+        "description": "The sisters walk paths that even Waywatchers dread, treading the Dreaming Wood as if it were the eternally sunlit groves of Arranoc.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Ward save: 5%",
+                "key": "wh_main_effect_character_stat_mod_ward_save",
+                "value": 5
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability number of uses: +1 for \"Volley of Kurnous\"",
+                "key": "wh2_dlc16_effect_skill_sisters_volley_of_kurnous_increase_uses",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 705,
+                "is_positive_value_good": true,
+                "description": "Ability number of uses: +1 for all Dragon Breath attacks",
+                "key": "wh2_dlc15_effect_ability_uses_all_dragon_breaths",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_unique_5",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 2,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_wef_sisters_unique_1",
+          "wh2_dlc16_wef_sisters_unique_2",
+          "wh2_dlc16_wef_sisters_unique_3",
+          "wh2_dlc16_wef_sisters_unique_4"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_0",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Bow and Blade",
+        "description": "Naestra possesses lethality in her precision, and Arahan exuberance in her bladework, both fighting zealously in the forest’s name.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5%",
+                "key": "wh_main_effect_force_unit_stat_melee_damage",
+                "value": 5
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +5%",
+                "key": "wh_main_effect_force_unit_stat_missile_damage",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_combat_0",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_1",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Endurance of the Oak",
+        "description": "Taking their cue from the forest itself, the Lord endures and overcomes all.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_lord_self_endurance_of_the_oak",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_2",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Impenetrable Bark",
+        "description": "Using the forest itself as a shield, this Lord is protected by their devotion to Athel Loren.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: +15",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Armour: +30",
+                "key": "wh_main_effect_character_stat_mod_armour",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_lord_self_impenetrable_bark",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_3",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Resilient",
+        "description": "Armour is just a formality when you're as hard as nails and as tough as old boots.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 5%",
+                "key": "wh2_main_effect_physical_resistance_increase",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10%",
+                "key": "wh2_main_effect_physical_resistance_increase",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_combat_1",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_4",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Tempered Rigour",
+        "description": "When to strike, when to block, when to dodge. These are all skills the warriors of Athel Loren must perfect.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 6
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 12
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_lord_self_tempered_rigour",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_5",
+        "image_path": "character_ammo.png",
+        "is_background_skill": false,
+        "name": "Always Ready",
+        "description": "Death is always just a shot away.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ammo_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10%",
+                "key": "wh_main_effect_character_stat_mod_ammunition",
+                "value": 10
+              },
+              {
+                "icon": "icon_stat_reload_time_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +5%",
+                "key": "wh_main_effect_character_stat_mod_missile_attack_rate",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20%",
+                "key": "wh_main_effect_character_stat_mod_ammunition",
+                "value": 20
+              },
+              {
+                "icon": "icon_stat_reload_time_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10%",
+                "key": "wh_main_effect_character_stat_mod_missile_attack_rate",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_combat_2",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_6",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Swift and Lethal",
+        "description": "Naestra and Arahan do not shirk the bitter press of melee, moving swiftly to the fray should the situation require it.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Speed: +5%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 5
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +10%",
+                "key": "wh_main_effect_character_stat_mod_charge_bonus",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Speed: +10%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 10
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +20%",
+                "key": "wh_main_effect_character_stat_mod_charge_bonus",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc16_wef_sisters_combat_3",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_wef_sisters_combat_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_wef_sisters_combat_7",
+        "image_path": "wh_dlc05_prey_of_anath_raena.png",
+        "is_background_skill": false,
+        "name": "Prey of Anath Raema",
+        "description": "By all means summon the bloodthirsty Goddess of the Hunt to assist you, but always make sure you thank her afterwards…",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Prey of Anath Raema\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc05_effect_ability_enable_pray_of_anna_raema",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc05_character_abilities_prey_of_anath_raema",
+                      "icon_name": "wh_dlc05_character_abilities_prey_of_anath_raema",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_hex",
+                        "icon_path": "icon_spell_hex.png",
+                        "description": "Hex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Prey of Anath Raema",
+                      "num_uses": 3,
+                      "active_time": 40,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "negative",
+                          "cant_move": true,
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": -25,
+                              "stat": "stat_resistance_missile",
+                              "how": "add",
+                              "description": "-25 Missile Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_missile.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc05_effect_ability_enable_pray_of_anna_raema",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_main_skill_all_all_self_deadly_onslaught"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_wef_sisters_combat_1",
+          "wh2_dlc16_wef_sisters_combat_2",
+          "wh2_dlc16_wef_sisters_combat_3",
+          "wh2_dlc16_wef_sisters_combat_4",
+          "wh2_dlc16_wef_sisters_combat_5",
+          "wh2_dlc16_wef_sisters_combat_6"
+        ]
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Inspiring Presence",
+        "description": "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_inspiring_presence",
+        "tier": 0,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_1",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Piercing Thorns",
+        "description": "Every blade and barbed branch will eventually find its mark – when they do, the forest’s infinite anger is truly felt.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Eternal Guard and Dryads units",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_eternal_guard_dryads",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Eternal Guard and Dryads units",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_eternal_guard_dryads",
+                "value": 6
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 119,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5% for Eternal Guard and Dryads units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_eternal_guard_dryads",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for Eternal Guard and Dryads units",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_eternal_guard_dryads",
+                "value": 8
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 119,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for Eternal Guard and Dryads units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_eternal_guard_dryads",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_piercing_thorns",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_2",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Bolts of the Forest",
+        "description": "Let each bolt be imbued with the strength of Kurnous, and bring death to all his enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 203,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Glade Guard, Deepwood Scouts, and Waywatchers units",
+                "key": "wh2_dlc11_effect_skill_missile_damage_increase_wef_glade_guard_deepwood_scouts_waywatchers",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +5% for Glade Guard, Deepwood Scouts, and Waywatchers units",
+                "key": "wh2_dlc11_effect_skill_reload_increase_wef_glade_guard_deepwood_scouts_waywatchers",
+                "value": 5
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 203,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Glade Guard, Deepwood Scouts, and Waywatchers units",
+                "key": "wh2_dlc11_effect_skill_missile_damage_increase_wef_glade_guard_deepwood_scouts_waywatchers",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units",
+                "key": "wh2_dlc11_effect_skill_reload_increase_wef_glade_guard_deepwood_scouts_waywatchers",
+                "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 203,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units",
+                "key": "wh2_dlc11_effect_skill_missile_damage_increase_wef_glade_guard_deepwood_scouts_waywatchers",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_bolts_of_the_forest",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_3",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Striking Branches",
+        "description": "Let the enemy feel the fury of nature, embodied in these warriors as they crash through their lines.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 115,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units",
+                "key": "wh2_dlc11_effect_skill_speed_increase_wef_glade_riders_wild_riders_sisters_of_the_thorn",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 115,
+                "is_positive_value_good": true,
+                "description": "Speed: +9% for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units",
+                "key": "wh2_dlc11_effect_skill_speed_increase_wef_glade_riders_wild_riders_sisters_of_the_thorn",
+                "value": 9
+              },
+              {
+                "icon": "charge.png",
+                "priority": 121,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +6 for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units",
+                "key": "wh2_dlc11_effect_skill_charge_increase_wef_glade_riders_wild_riders_sisters_of_the_thorn",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 115,
+                "is_positive_value_good": true,
+                "description": "Speed: +12% for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units",
+                "key": "wh2_dlc11_effect_skill_speed_increase_wef_glade_riders_wild_riders_sisters_of_the_thorn",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 121,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units",
+                "key": "wh2_dlc11_effect_skill_charge_increase_wef_glade_riders_wild_riders_sisters_of_the_thorn",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_striking_branches",
+        "tier": 3,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_4",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Swinging Boughs",
+        "description": "The warrior strikes with the strength of a swinging tree limb; few can stand against such strength.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Wardancers, Bladesingers and Wildwood Rangers units",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_wardancers_wildwood_rangers",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Wardancers, Bladesingers and Wildwood Rangers units",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_wardancers_wildwood_rangers",
+                "value": 6
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4 for Wardancers, Bladesingers and Wildwood Rangers units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_wardancers_wildwood_rangers",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for Wardancers, Bladesingers and Wildwood Rangers units",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_wardancers_wildwood_rangers",
+                "value": 8
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Wardancers, Bladesingers and Wildwood Rangers units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_wardancers_wildwood_rangers",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_swinging_boughs",
+        "tier": 4,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_5",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Ancient Bark",
+        "description": "Centuries upon centuries of existence have given these ancient Tree Spirits a natural armour, mitigating any physical blows dealt against them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Armour: +6 for Tree Kin and Treeman units",
+                "key": "wh2_dlc11_effect_skill_armour_increase_wef_tree_kin_treeman",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 14,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 5% for Tree Kin and Treeman units",
+                "key": "wh2_dlc11_effect_skill_physical_resist_increase_wef_tree_kin_treeman",
+                "value": 5
+              },
+              {
+                "icon": "armour.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Armour: +9 for Tree Kin and Treeman units",
+                "key": "wh2_dlc11_effect_skill_armour_increase_wef_tree_kin_treeman",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 14,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10% for Tree Kin and Treeman units",
+                "key": "wh2_dlc11_effect_skill_physical_resist_increase_wef_tree_kin_treeman",
+                "value": 10
+              },
+              {
+                "icon": "armour.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Tree Kin and Treeman units",
+                "key": "wh2_dlc11_effect_skill_armour_increase_wef_tree_kin_treeman",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_ancient_bark",
+        "tier": 5,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_6",
+        "image_path": "battle_damage.png",
+        "is_background_skill": false,
+        "name": "Wings of the Forest",
+        "description": "Not all of the forest's guardians are rooted to the ground – flying enemies will always be in danger from the woodland's airborne protectors.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 119,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +6% for Hawk Riders, Great Eagle, and Forest Dragon units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_hawk_riders_great_eagle_forest_dragon",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 119,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +8% for Hawk Riders, Great Eagle, and Forest Dragon units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_hawk_riders_great_eagle_forest_dragon",
+                "value": 8
+              },
+              {
+                "icon": "charge.png",
+                "priority": 121,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +6 for Hawk Riders, Great Eagle, and Forest Dragon units",
+                "key": "wh2_dlc11_effect_skill_charge_increase_wef_hawk_riders_great_eagle_forest_dragon",
+                "value": 6
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +5% for Hawk Riders units",
+                "key": "wh2_dlc11_effect_skill_reload_increase_wef_hawk_riders",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 119,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for Hawk Riders, Great Eagle, and Forest Dragon units",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_hawk_riders_great_eagle_forest_dragon",
+                "value": 10
+              },
+              {
+                "icon": "charge.png",
+                "priority": 121,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Hawk Riders, Great Eagle, and Forest Dragon units",
+                "key": "wh2_dlc11_effect_skill_charge_increase_wef_hawk_riders_great_eagle_forest_dragon",
+                "value": 12
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Hawk Riders units",
+                "key": "wh2_dlc11_effect_skill_reload_increase_wef_hawk_riders",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_wings_of_the_forest",
+        "tier": 6,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_2",
+        "image_path": "wh_main_character_abilities_rally.png",
+        "is_background_skill": false,
+        "name": "Rally!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Rally!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_rally",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_rally",
+                      "icon_name": "wh_main_character_abilities_rally",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rally!",
+                      "active_time": 30,
+                      "recharge_time": 75,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 12,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+12 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_rally",
+        "tier": 7,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 6,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_1",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_2",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_3",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_4",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_5",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_1_6"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_1",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Shield of the Forest",
+        "description": "Armour as hard as the ancient bark of the forest, it repels blows that would rend others asunder.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 14,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 15% for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Rangers units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_physical_resist_increase_wef_eternal_guard_dryads_wardancers_wildwood_rangers_rank7",
+                "value": 15
+              },
+              {
+                "icon": "armour.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Rangers units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_armour_increase_wef_eternal_guard_dryads_wardancers_wildwood_rangers_rank7",
+                "value": 12
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Rangers units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_melee_defence_increase_wef_eternal_guard_dryads_wardancers_wildwood_rangers_rank7",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_shield_of_the_forest",
+        "tier": 8,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_2",
+        "image_path": "battle_range.png",
+        "is_background_skill": false,
+        "name": "Nature's Quiver ",
+        "description": "What is a ranger without an arrow? Who can be the best without dozens?",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_missile_resist_increase_wef_glade_guard_deepwod_scouts_waywatcher_rank7",
+                "value": 15
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 201,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_ammo_increase_wef_glade_guard_deepwod_scouts_waywatcher_rank7",
+                "value": 20
+              },
+              {
+                "icon": "accuracy.png",
+                "priority": 203,
+                "is_positive_value_good": true,
+                "description": "Range: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_range_increase_wef_glade_guard_deepwod_scouts_waywatcher_rank7",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_natures_quiver",
+        "tier": 9,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_3",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Swift & Sturdy",
+        "description": "Moving like the wind, whistling past tree branches, the riders of the forest hunt any who would do harm to the place they call home.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 Glade Riders, Wild Riders, Great Stag Knights, Zoats, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_melee_defence_increase_wef_wild_riders_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
+                "value": 5
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 119,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% Glade Riders, Wild Riders, Great Stag Knights, Zoats, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_wef_wild_riders_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
+                "value": 10
+              },
+              {
+                "icon": "charge.png",
+                "priority": 121,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Glade Riders, Wild Riders, Great Stag Knights, Zoats, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_charge_increase_wef_wild_riders_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
+                "value": 12
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 203,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +10% for Glade Riders, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_missile_damage_increase_wef_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_swift_and_sturdy",
+        "tier": 10,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_4",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "The Forest's Roar",
+        "description": "All of Athel Loren shouts with a fury as old as the ages, and the enemy knows its power.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_missile_resist_increase_wef_tree_kin_treeman_forest_dragon_great_eagle_rank7",
+                "value": 15
+              },
+              {
+                "icon": "melee.png",
+                "priority": 109,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_wef_tree_kin_treeman_forest_dragon_great_eagle_rank7",
+                "value": 5
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_skill_melee_defence_increase_wef_tree_kin_treeman_forest_dragon_great_eagle_rank7",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_wef_army_buff_the_forests_roar",
+        "tier": 11,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_2"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_4",
+        "image_path": "wh_main_character_abilities_stand_your_ground.png",
+        "is_background_skill": false,
+        "name": "Stand Your Ground!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Stand Your Ground!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_stand_your_ground",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_stand_your_ground",
+                      "icon_name": "wh_main_character_abilities_stand_your_ground",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Stand Your Ground!",
+                      "active_time": 30,
+                      "recharge_time": 80,
+                      "passive": false,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 36,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+36 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": 12,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+12 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_stand_your_ground",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 605,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_stand_your_ground",
+        "tier": 12,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_1",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_2",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_3",
+          "wh2_dlc16_skill_node_set_wef_sisters_of_twilight_army_3_4"
+        ]
+      },
+      {
+        "key": "fsd_0000292",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Radious Fake Skill Dump",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +21%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 21
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +22%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 22
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +23%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 23
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +24%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 24
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +25%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 25
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +26%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 26
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +27%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 27
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +28%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 28
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +29%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 29
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +30%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +31%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 31
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +32%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 32
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +33%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 33
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +34%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 34
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +35%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 35
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +36%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 36
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +37%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 37
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +38%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 38
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +39%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 39
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +40%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 40
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +41%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 41
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +42%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 42
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +43%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 43
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +44%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 44
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +45%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 45
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +46%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 46
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +47%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 47
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +48%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 48
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +49%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 49
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +50%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 50
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +51%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 51
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +52%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 52
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +53%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 53
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +54%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 54
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +55%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 55
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +56%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 56
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +57%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 57
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +58%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 58
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +59%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 59
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +60%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 60
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +61%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 61
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +62%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 62
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +63%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 63
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +64%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 64
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +65%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 65
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +66%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 66
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +67%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 67
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +68%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 68
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +69%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 69
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +70%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 70
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +71%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 71
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +72%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 72
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +73%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 73
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +74%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 74
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +75%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 75
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +76%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 76
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +77%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 77
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +78%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 78
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +79%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 79
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +80%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 80
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +81%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 81
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +82%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 82
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +83%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 83
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +84%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 84
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +85%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 85
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +86%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 86
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +87%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 87
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +88%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 88
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +89%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 89
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +90%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 90
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +91%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 91
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +92%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 92
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +93%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 93
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +94%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 94
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +95%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 95
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +96%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 96
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +97%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 97
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +98%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 98
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +99%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 99
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Hit points: +100%",
+                "key": "wh_main_effect_character_stat_mod_unit_health",
+                "value": 100
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_alt_main_fake_skill",
+        "tier": 39,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_1",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "Ever-Reaching Tendrils",
+        "description": "The denizens of the forest will travel many miles to see those who would threaten Athel Loren put to rout.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +10%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_campaign_range",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_2",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Wonders of the Forest",
+        "description": "Athel Loren provides for its deserving children, with wondrous boons gifted in recognition of their many endeavours.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from raiding: +5%",
+                "key": "wh_main_effect_force_all_campaign_raid_income",
+                "value": 5
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from razing settlements: +2%",
+                "key": "wh_main_effect_force_all_campaign_razing_income",
+                "value": 2
+              },
+              {
+                "icon": "income.png",
+                "priority": 201,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +5%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from raiding: +12%",
+                "key": "wh_main_effect_force_all_campaign_raid_income",
+                "value": 12
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from razing settlements: +5%",
+                "key": "wh_main_effect_force_all_campaign_razing_income",
+                "value": 5
+              },
+              {
+                "icon": "income.png",
+                "priority": 201,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +12%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from raiding: +20%",
+                "key": "wh_main_effect_force_all_campaign_raid_income",
+                "value": 20
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from razing settlements: +10%",
+                "key": "wh_main_effect_force_all_campaign_razing_income",
+                "value": 10
+              },
+              {
+                "icon": "income.png",
+                "priority": 201,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +20%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_post_battle_loot",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_3",
+        "image_path": "campaign_untainted.png",
+        "is_background_skill": false,
+        "name": "Nature's Salve",
+        "description": "The Worldroots provide succour for their children, purging the forests of any corrupting infestation.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +1",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1
+              },
+              {
+                "icon": "religion.png",
+                "priority": 104,
+                "is_positive_value_good": true,
+                "description": "Untainted: +1",
+                "key": "wh_main_effect_religion_conversion_untainted",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +2",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2
+              },
+              {
+                "icon": "religion.png",
+                "priority": 104,
+                "is_positive_value_good": true,
+                "description": "Untainted: +2",
+                "key": "wh_main_effect_religion_conversion_untainted",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +3",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 3
+              },
+              {
+                "icon": "religion.png",
+                "priority": 104,
+                "is_positive_value_good": true,
+                "description": "Untainted: +3",
+                "key": "wh_main_effect_religion_conversion_untainted",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_chaos_reduction",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_4",
+        "image_path": "campaign_ambush.png",
+        "is_background_skill": false,
+        "name": "Obscuring Canopy",
+        "description": "The magics of the woods obscure and connive, able to turn enemy blades away from their targets. ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Ambush success chance: +5%",
+                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 62,
+                "is_positive_value_good": true,
+                "description": "Missile Strength: +5% during ambushes",
+                "key": "wh2_dlc16_effect_force_army_battle_unit_missile_strength_during_ambushes",
+                "value": 5
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Ambush success chance: +10%",
+                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 62,
+                "is_positive_value_good": true,
+                "description": "Missile Strength: +10% during ambushes",
+                "key": "wh2_dlc16_effect_force_army_battle_unit_missile_strength_during_ambushes",
+                "value": 10
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Ambush success chance: +20%",
+                "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_protection_from_agents",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_5",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Growth of the Forest",
+        "description": "The forest provides for its warriors, rehabilitating and regenerating wounds suffered in its defence.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +1",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1
+              },
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +5",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +1",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1
+              },
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +12",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +2",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2
+              },
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +20",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_increased_replenishment_1",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_1"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_6",
+        "image_path": "campaign_army.png",
+        "is_background_skill": false,
+        "name": "Open Branches",
+        "description": "From all corners of the forest, they come to defend their homes.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +10",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 10
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1 for all units",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              },
+              {
+                "icon": "army.png",
+                "priority": 270,
+                "is_positive_value_good": true,
+                "description": "Global recruitment capacity: +1",
+                "key": "wh_main_effect_force_army_campaign_recruitment_points",
+                "value": 1
+              },
+              {
+                "icon": "army.png",
+                "priority": 270,
+                "is_positive_value_good": true,
+                "description": "Local recruitment capacity: +1",
+                "key": "wh_main_effect_unit_recruitment_points",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_army_recruitment_capacity",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_2",
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_3",
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_4",
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_5"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_7",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Lightning Strike",
+        "description": "\"The time to strike is now!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Enables lightning strike battles when reinforcements are present",
+                "key": "wh_main_effect_conquest_enable_night_battles",
+                "value": 1
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_lightning_strike",
+        "tier": 6,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_6"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_8",
+        "image_path": "campaign_magic.png",
+        "is_background_skill": false,
+        "name": "Swiftfingers",
+        "description": "The dead do not want for material possessions, yet the living may yet find value in them…",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Magic item drop chance: +5%",
+                "key": "wh_main_effect_character_mod_ancillary_drop",
+                "value": 5
+              },
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Post battle chance of stealing a magic item: +5%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Magic item drop chance: +10%",
+                "key": "wh_main_effect_character_mod_ancillary_drop",
+                "value": 10
+              },
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Post battle chance of stealing a magic item: +10%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Magic item drop chance: +15%",
+                "key": "wh_main_effect_character_mod_ancillary_drop",
+                "value": 15
+              },
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Post battle chance of stealing a magic item: +15%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_steal_ancillaries",
+        "tier": 7,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_6"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_9",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Perenniality",
+        "description": "Like the forest itself, the warriors of Athel Loren ebb and flow and regenerate with the passing of time.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +3%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +8%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +15%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_increased_replenishmnet_2",
+        "tier": 8,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_6"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_10",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Quartermaster",
+        "description": "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -3% for all units",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8% for all units",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -15% for all units",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_quartermaster",
+        "tier": 9,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_6"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_11",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Home Amongst the Boughs",
+        "description": "The forest-dwellers draw from the strength of Kurnous to fight ever harder, and be ever stronger.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8% for all units",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1 for all units",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc05_skill_wef_general_campaign_recruitment_experience",
+        "tier": 10,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_10",
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_7",
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_8",
+          "wh2_dlc16_skill_node_wef_sisters_of_twilight_campaign_9"
+        ]
+      }
+    ]
+  ],
+  "key": "wef_sisters_of_twilight",
+  "backgroundSkills": [
+    {
+      "key": "wh2_dlc16_skill_node_wef_sisters_of_twilight_innate_01",
+      "image_path": "trait_wood_elves.png",
+      "is_background_skill": true,
+      "name": "Dusk & Dawn",
+      "description": "Some say Naestra and Arahan are the lightest and darkest aspects of Ariel’s spirit made manifest, her mercy and passion split from her soul.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "military_spending.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Upkeep: -10% for missile units",
+              "key": "wh2_dlc16_effect_upkeep_reduction_wef_missile_units",
+              "value": -10
+            },
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +10 for flying units",
+              "key": "wh2_dlc16_effect_melee_attack_flying",
+              "value": 10
+            },
+            {
+              "icon": "charge.png",
+              "priority": 121,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +15% for flying units",
+              "key": "wh2_dlc16_effect_charge_flying",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh2_dlc16_skill_node_set_wef_sisters_of_twilight",
+      "character_skill_key": "wh2_dlc16_skill_innate_wef_sisters_of_twilight",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ]
+}

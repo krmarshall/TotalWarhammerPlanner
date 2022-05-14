@@ -1,3 +1,12 @@
+interface StatEffectInterface {
+  value: number;
+  stat: string;
+  how: string;
+  description: string;
+  icon: string;
+  sort_order: number;
+}
+
 interface AttributeInterface {
   key: string;
   description: string;
@@ -12,14 +21,7 @@ interface PhaseInterface {
   mana_max_depletion_mod?: number;
   fatigue_change_ratio?: number;
   mana_regen_mod?: number;
-  stat_effects?: Array<{
-    value: number;
-    stat: string;
-    how: string;
-    description: string;
-    icon: string;
-    sort_order: number;
-  }>;
+  stat_effects?: Array<StatEffectInterface>;
   attributes?: Array<AttributeInterface>;
 }
 
@@ -123,4 +125,5 @@ export type {
   AbilityInterface,
   PhaseInterface,
   AttributeInterface,
+  StatEffectInterface,
 };
