@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { AbilityInterface, ItemInterface } from '../../types/interfaces/CharacterInterface';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
@@ -11,7 +12,7 @@ interface SkillCellPropsInterface {
 
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedMod } = state;
+  const { selectedMod, selectedGame } = state;
 
   const relatedAbilities: Array<AbilityInterface> = [];
   item.effects?.forEach((effect) => {
@@ -20,7 +21,14 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     }
   });
 
+  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = item.image_path.replace('.png', '.webp');
+  const { src } = useImage({
+    srcList: [
+      `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+      `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
+    ],
+  });
   return (
     <TooltipWrapper
       tooltip={
@@ -49,7 +57,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     >
       <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 hover:shadow-lg">
         <img
-          src={`/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`}
+          src={src}
           className="w-16 h-16 drop-shadow-lg my-auto"
           draggable={false}
           alt="itemIcon"
