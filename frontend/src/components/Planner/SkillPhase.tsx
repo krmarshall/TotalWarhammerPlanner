@@ -1,16 +1,12 @@
-import { useContext } from 'react';
-import { AppContext } from '../../contexts/AppContext';
 import { PhaseInterface } from '../../types/interfaces/CharacterInterface';
 import SkillPhaseAttribute from './SkillPhaseAttribute';
+import SkillPhaseEffect from './SkillPhaseEffect';
 
 interface SkillPhaseProps {
   phase: PhaseInterface;
 }
 
 const SkillPhase = ({ phase }: SkillPhaseProps) => {
-  const { state } = useContext(AppContext);
-  const { selectedMod } = state;
-
   const type = phase.effect_type === 'positive' ? 'Buff' : 'Debuff';
   return (
     <div className="rounded-lg border border-gray-500 mb-2 p-2 shadow-lg">
@@ -54,19 +50,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
         <div className="text-left">
           <h5 className="w-20">Stat Effects:</h5>
           {phase.stat_effects.map((effect, index) => {
-            const imagePath = effect?.icon?.replace('.png', '.webp');
-            return (
-              <div key={index} className="flex flex-row flex-nowrap">
-                <img
-                  src={`/imgs/${selectedMod}/skins/default/${imagePath}`}
-                  className="w-6 h-6"
-                  alt={`${effect.stat} icon`}
-                  width="32"
-                  height="32"
-                />
-                <p className="text-lg whitespace-pre-wrap ml-6">{effect.description}</p>
-              </div>
-            );
+            return <SkillPhaseEffect key={index} effect={effect} />;
           })}
         </div>
       )}
