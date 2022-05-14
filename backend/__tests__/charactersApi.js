@@ -47,6 +47,7 @@ describe('Bulk character API test', () => {
     { charList: vanilla2Characters, name: 'vanilla2' },
     { charList: sfo2Characters, name: 'sfo2' },
     { charList: artefacts2Characters, name: 'artefacts2' },
+
     { charList: vanilla3Characters, name: 'vanilla3' },
     { charList: artefacts3Characters, name: 'artefacts3' },
   ];
