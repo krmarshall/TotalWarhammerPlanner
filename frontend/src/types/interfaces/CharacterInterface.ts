@@ -74,6 +74,7 @@ interface SkillEffectInterface {
 
 interface SkillLevelInterface {
   unlocked_at_rank?: number;
+  auto_unlock_at_rank?: number;
   blocks_character_skill_key?: Array<string>;
   effects?: Array<SkillEffectInterface>;
 }
