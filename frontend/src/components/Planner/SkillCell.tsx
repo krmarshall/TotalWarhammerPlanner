@@ -57,69 +57,105 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }, [characterBuild?.blockedSkills]);
 
-  const skillClickHandler = (event: MouseEvent) => {
-    // 0 = LMB, 2 = RMB
-    if (event.button === 0) {
+  useEffect(() => {
+    // TS check values exist
+    if (
+      characterBuild?.rank !== undefined &&
+      characterBuild?.startingSkillPoints !== undefined &&
+      characterBuild?.autoUnlockSkillPoints !== undefined &&
+      skill.levels?.[0].auto_unlock_at_rank !== undefined
+    ) {
+      // Auto rank up/down skill when at appropriate character rank.
+      if (
+        thisSkillsCurrentPoints === 0 &&
+        skill.levels?.[0].auto_unlock_at_rank <=
+          characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+      ) {
+        rankUpSkill(true);
+      } else if (
+        thisSkillsCurrentPoints > 0 &&
+        skill.levels?.[0].auto_unlock_at_rank >=
+          characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+      ) {
+        rankDownSkill(true);
+      }
+    }
+  }, [characterBuild?.rank]);
+
+  const rankUpSkill = (autoRankSkill: boolean) => {
+    if (!autoRankSkill) {
       if (!skillIncreaseIsValid(characterBuild, characterData, skill, thisSkillsCurrentPoints, skillKey, true)) {
         return;
       }
-      // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
-      if (thisSkillsCurrentPoints === 0) {
-        characterBuild?.selectedSkills.push(skill.key);
-        if (skill?.levels?.[0].blocks_character_skill_key) {
-          skill?.levels?.[0].blocks_character_skill_key.forEach((blockedSkill) => {
-            characterBuild?.blockedSkills.push(blockedSkill);
-          });
-        }
-      }
-      // Add skill point to build array
-      // Add 1 to character rank
-      const newCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
-      newCharacterBuild.buildData[yIndex][xIndex] += 1;
-      newCharacterBuild.rank += 1;
-
-      dispatch({
-        type: AppContextActions.changeCharacterBuild,
-        payload: { characterBuild: newCharacterBuild as BuildInterface },
-      });
-    } else if (event.button === 2) {
-      // Check if skill has lower rank than already selected
-      if (thisSkillsCurrentPoints === 0) {
-        toast.error('Cannot remove unselected skill.', { id: `${skillKey} unselect` });
-        return;
-      }
-
-      // Check skill doesn't start with more ranks than attempting
-      if (thisSkillsCurrentPoints === skill.points_on_creation) {
-        toast.error('Cannot remove starting skill points.', { id: `${skillKey} starting` });
-        return;
-      }
-
-      // Check removing skill wont invalidate other skills.
-      const testCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
-      testCharacterBuild.buildData[yIndex][xIndex] -= 1;
-
-      // If skill was entirely removed delete from characterBuild.selectedSkills and blockedSkills references if needed
-      if (testCharacterBuild.buildData[yIndex][xIndex] === 0) {
-        const selectedSkillIndex = testCharacterBuild.selectedSkills.indexOf(skill.key);
-        testCharacterBuild.selectedSkills.splice(selectedSkillIndex, 1);
-
-        let blocksSkill = false;
-        const blockedSkillKeys: Array<string> = [];
-        skill.levels?.forEach((level) => {
-          if (level.blocks_character_skill_key) {
-            blocksSkill = true;
-            blockedSkillKeys.push(...level.blocks_character_skill_key);
-          }
+    }
+    // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
+    if (thisSkillsCurrentPoints === 0) {
+      characterBuild?.selectedSkills.push(skill.character_skill_key);
+      characterBuild?.selectedSkills.push(skill.key);
+      if (skill?.levels?.[0].blocks_character_skill_key) {
+        skill?.levels?.[0].blocks_character_skill_key.forEach((blockedSkill) => {
+          characterBuild?.blockedSkills.push(blockedSkill);
         });
-        if (blocksSkill) {
-          blockedSkillKeys.map((blockedSkill) => {
-            const blockedSkillIndex = testCharacterBuild.blockedSkills.indexOf(blockedSkill);
-            testCharacterBuild.blockedSkills.splice(blockedSkillIndex, 1);
-          });
-        }
       }
+    }
+    // Add skill point to build array
+    // Add 1 to character rank
+    const newCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
+    newCharacterBuild.buildData[yIndex][xIndex]++;
+    newCharacterBuild.rank++;
+    if (autoRankSkill) {
+      newCharacterBuild.autoUnlockSkillPoints++;
+    }
 
+    dispatch({
+      type: AppContextActions.changeCharacterBuild,
+      payload: { characterBuild: newCharacterBuild as BuildInterface },
+    });
+  };
+
+  const rankDownSkill = (autoRankSkill: boolean) => {
+    // Check if skill has lower rank than already selected
+    if (thisSkillsCurrentPoints === 0) {
+      toast.error('Cannot remove unselected skill.', { id: `${skillKey} unselect` });
+      return;
+    }
+
+    // Check skill doesn't start with more ranks than attempting
+    if (thisSkillsCurrentPoints === skill.points_on_creation) {
+      toast.error('Cannot remove starting skill points.', { id: `${skillKey} starting` });
+      return;
+    }
+
+    const testCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
+    testCharacterBuild.buildData[yIndex][xIndex]--;
+    if (autoRankSkill) {
+      testCharacterBuild.autoUnlockSkillPoints--;
+    }
+
+    // If skill was entirely removed delete from characterBuild.selectedSkills and blockedSkills references if needed
+    if (testCharacterBuild.buildData[yIndex][xIndex] === 0) {
+      const selectedSkillKeyIndex = testCharacterBuild.selectedSkills.indexOf(skill.key);
+      testCharacterBuild.selectedSkills.splice(selectedSkillKeyIndex, 1);
+      const selectedCharSkillKeyIndex = testCharacterBuild.selectedSkills.indexOf(skill.character_skill_key);
+      testCharacterBuild.selectedSkills.splice(selectedCharSkillKeyIndex, 1);
+
+      let blocksSkill = false;
+      const blockedSkillKeys: Array<string> = [];
+      skill.levels?.forEach((level) => {
+        if (level.blocks_character_skill_key) {
+          blocksSkill = true;
+          blockedSkillKeys.push(...level.blocks_character_skill_key);
+        }
+      });
+      if (blocksSkill) {
+        blockedSkillKeys.map((blockedSkill) => {
+          const blockedSkillIndex = testCharacterBuild.blockedSkills.indexOf(blockedSkill);
+          testCharacterBuild.blockedSkills.splice(blockedSkillIndex, 1);
+        });
+      }
+    }
+
+    if (!autoRankSkill) {
       // Remove 2 from character rank to check rank requirements on other skills
       testCharacterBuild.rank -= 2;
 
@@ -129,14 +165,23 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       }
 
       // Add back the extra rank we took off to verify the skill tree
-      testCharacterBuild.rank += 1;
-      // Remove Skill Point from build array
-      const newCharacterBuild: BuildInterface = testCharacterBuild;
+      testCharacterBuild.rank++;
+    } else {
+      testCharacterBuild.rank--;
+    }
 
-      dispatch({
-        type: AppContextActions.changeCharacterBuild,
-        payload: { characterBuild: newCharacterBuild as BuildInterface },
-      });
+    dispatch({
+      type: AppContextActions.changeCharacterBuild,
+      payload: { characterBuild: testCharacterBuild as BuildInterface },
+    });
+  };
+
+  const skillClickHandler = (event: MouseEvent) => {
+    // 0 = LMB, 2 = RMB
+    if (event.button === 0) {
+      rankUpSkill(false);
+    } else if (event.button === 2) {
+      rankDownSkill(false);
     }
   };
 

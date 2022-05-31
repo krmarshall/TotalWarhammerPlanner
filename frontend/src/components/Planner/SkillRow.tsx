@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillCell from './SkillCell';
 
@@ -30,21 +31,20 @@ const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
             boxedType = 'end';
           }
           return (
-            <>
+            <Fragment key={skill.key}>
               <SkillCell
-                key={skill.key}
-                skillKey={skill.key}
+                skillKey={skill.character_skill_key}
                 skill={skill}
                 yIndex={yIndex}
                 xIndex={xIndex}
                 boxedType={boxedType}
               />
-              {skill.right_arrow && (
+              {skill?.right_arrow && (
                 <td className="w-10 flex flex-col justify-center">
-                  {skill?.right_arrow && <p className="text-center text-4xl text-gray-200">→</p>}
+                  <p className="text-center text-4xl text-gray-200">→</p>
                 </td>
               )}
-            </>
+            </Fragment>
           );
         })
       )}

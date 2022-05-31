@@ -18,6 +18,7 @@ const createEmptyCharacterBuild = (
       rank += skill.points_on_creation;
       startingSkillPoints += skill.points_on_creation;
       if (skill.points_on_creation > 0) {
+        selectedSkills.push(skill.character_skill_key);
         selectedSkills.push(skill.key);
       }
     });
@@ -30,6 +31,7 @@ const createEmptyCharacterBuild = (
     buildData: emptyBuildArray,
     rank,
     startingSkillPoints,
+    autoUnlockSkillPoints: 0,
     selectedSkills,
     blockedSkills: [],
   };
@@ -46,6 +48,7 @@ const createCharacterBuildFromArray = (
 ) => {
   let rank = 1;
   let startingSkillPoints = 0;
+  let autoUnlockSkillPoints = 0;
   const selectedSkills: Array<string> = [];
   const blockedSkills: Array<string> = [];
 
@@ -54,7 +57,12 @@ const createCharacterBuildFromArray = (
       if (skill > 0) {
         rank += skill;
 
+        selectedSkills.push(characterData.skillTree[y][x].character_skill_key);
         selectedSkills.push(characterData.skillTree[y][x].key);
+
+        if (characterData.skillTree[y][x].points_on_creation > 0) {
+          startingSkillPoints += characterData.skillTree[y][x].points_on_creation;
+        }
 
         characterData.skillTree[y][x].levels?.forEach((level, index) => {
           if (index + 1 <= skill) {
@@ -62,11 +70,11 @@ const createCharacterBuildFromArray = (
               blockedSkills.push(...level.blocks_character_skill_key);
             }
           }
-        });
 
-        if (characterData.skillTree[y][x].points_on_creation > 0) {
-          startingSkillPoints += characterData.skillTree[y][x].points_on_creation;
-        }
+          if (level.auto_unlock_at_rank !== undefined) {
+            autoUnlockSkillPoints++;
+          }
+        });
       }
     });
   });
@@ -77,6 +85,7 @@ const createCharacterBuildFromArray = (
     buildData: arrayBuild,
     rank,
     startingSkillPoints,
+    autoUnlockSkillPoints,
     selectedSkills,
     blockedSkills,
   };

@@ -64,10 +64,16 @@ const Planner = () => {
   }, [code, state.characterData]);
 
   useEffect(() => {
-    if (typeof characterBuild?.rank === 'number' && typeof characterBuild?.startingSkillPoints === 'number') {
-      setEffectiveRank(characterBuild?.rank - characterBuild?.startingSkillPoints);
+    if (
+      typeof characterBuild?.rank === 'number' &&
+      typeof characterBuild?.startingSkillPoints === 'number' &&
+      typeof characterBuild?.autoUnlockSkillPoints === 'number'
+    ) {
+      setEffectiveRank(
+        characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+      );
     }
-  }, [characterBuild?.rank, characterBuild?.startingSkillPoints]);
+  }, [characterBuild?.rank, characterBuild?.startingSkillPoints, characterBuild?.autoUnlockSkillPoints]);
 
   const horizontalScroll = (event: React.WheelEvent) => {
     const container = document.getElementById('horScrollContainer');
