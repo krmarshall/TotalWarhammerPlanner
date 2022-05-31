@@ -220,6 +220,171 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_dlc10_skill_node_hef_alarielle_item_1",
+        "image_path": "item_armour.png",
+        "is_background_skill": false,
+        "name": "Gown of Avelorn",
+        "description": "The Kingdom of Avelorn is the oldest of all the Elven realms.  It is believed this elegant dress was given to Astarielle, the first recorded Everqueen, by Isha herself.",
+        "levels": [
+          {
+            "unlocked_at_rank": 3,
+            "effects": [
+              {
+                "icon": "magic_campaign.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve change: +10% when increasing",
+                "value": 10,
+                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+              },
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -5",
+                "value": -5,
+                "key": "wh3_main_effect_corruption_reduction_characters"
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "value": 5,
+                "key": "wh_main_effect_character_stat_melee_defence"
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Ward save: 10%",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_ward_save"
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 15%",
+                "value": 15,
+                "key": "wh_main_effect_character_stat_magic_resistance"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_armour_gown_of_avelorn",
+        "tier": 44,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_dlc10_skill_node_hef_alarielle_item_2",
+        "image_path": "item_weapon.png",
+        "is_background_skill": false,
+        "name": "Cleansing Ring of Isha",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "magic_campaign.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve change: +10% when increasing",
+                "value": 10,
+                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+              },
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -5",
+                "value": -5,
+                "key": "wh3_main_effect_corruption_reduction_characters"
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 161,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12% when fighting against Greenskins, Skaven, Dark Elves, Beastmen, Warriors of Chaos, Daemons of Chaos and Norsca",
+                "value": 12,
+                "key": "wh2_main_effect_character_stat_weapon_strength_vs_forces_of_destruction"
+              },
+              {
+                "icon": "magic_character.png",
+                "priority": 298,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -10%",
+                "value": -10,
+                "key": "wh_main_effect_character_stat_miscast"
+              },
+              {
+                "icon": "item_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Purify\"",
+                "related_abilities": [
+                  {
+                    "effect": "stompies_effect_ability_purify",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "stompies_ability_purify",
+                      "icon_name": "wh_magic_item_passive_weapon",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Purify",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 30,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "value": 1,
+                "key": "stompies_effect_ability_purify"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_weapon_cleansing_ring_of_isha",
+        "tier": 45,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
       }
     ],
     [

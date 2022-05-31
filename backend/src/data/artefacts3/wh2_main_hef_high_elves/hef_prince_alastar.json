@@ -248,6 +248,208 @@
         "points_on_creation": 1,
         "required_num_parents": 0,
         "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_main_skill_node_hef_prince_alastar_item_1",
+        "image_path": "item_weapon.png",
+        "is_background_skill": false,
+        "name": "Lion's Fang",
+        "description": "A heavy axe based upon the native Chracian design of the woodsman's axe.  It was used to slay the legendary lion, known as Uabaiff, and now has one of Uabaiff's fangs imbued into the axe's blade.",
+        "levels": [
+          {
+            "unlocked_at_rank": 3,
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +10",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_melee_attack"
+              },
+              {
+                "icon": "magical_attacks.png",
+                "priority": 140,
+                "is_positive_value_good": true,
+                "description": "Enables magical attacks",
+                "value": 1,
+                "key": "wh_main_effect_character_stat_enable_magic_attacks"
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12%",
+                "value": 12,
+                "key": "wh_main_effect_character_stat_weapon_strength"
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "value": 30,
+                "key": "wh_main_effect_character_stat_charge_bonus_add"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_weapon_lions_fang",
+        "tier": 44,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_main_skill_node_hef_prince_alastar_item_2",
+        "image_path": "item_talisman.png",
+        "is_background_skill": false,
+        "name": "Lion's Heart",
+        "description": "An amulet made from the heart of the lion known as Uabaiff.  Uabaiff was warped and mutated by Chaos magic and believed to be unkillable, until Prince Alastar proved the rumors false.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "value": 20,
+                "key": "wh_main_effect_character_stat_unit_health"
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "value": 5,
+                "key": "wh_main_effect_character_stat_melee_attack"
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_weapon_strength"
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "value": 30,
+                "key": "wh_main_effect_character_stat_charge_bonus_add"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_talisman_lions_heart",
+        "tier": 45,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "stompies_wh2_main_skill_node_hef_prince_alastar_item_3",
+        "image_path": "item_enchanted_item.png",
+        "is_background_skill": false,
+        "name": "Asur Maiden's Braid",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 9,
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -3",
+                "value": -3,
+                "key": "wh3_main_effect_corruption_reduction_characters"
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "value": 5,
+                "key": "wh_main_effect_character_stat_melee_defence"
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 10%",
+                "value": 10,
+                "key": "wh_main_effect_character_stat_magic_resistance"
+              },
+              {
+                "icon": "item_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Rejuvenation\"",
+                "related_abilities": [
+                  {
+                    "effect": "stompies_effect_ability_rejuvenation",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "stompies_ability_rejuvenation",
+                      "icon_name": "wh_magic_item_passive_enchanted",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_regeneration",
+                        "icon_path": "icon_spell_regeneration.png",
+                        "description": "Regeneration"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rejuvenation",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_replenish",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Replenishes hit points of combatants"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "value": 1,
+                "key": "stompies_effect_ability_rejuvenation"
+              }
+            ]
+          }
+        ],
+        "use_quest_for_prefix": false,
+        "character_skill_key": "stompies_skill_enchanted_maidens_braid",
+        "tier": 46,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
       }
     ],
     [
@@ -411,20 +613,20 @@
                 "value": 20
               },
               {
-                "icon": "bonus_vs_large.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Bonus vs Infantry: +8 for War Lions and Lion Chariots units",
-                "key": "wh_dlc15_effect_force_unit_stat_bonusvssmall_war_lions",
-                "value": 8
-              },
-              {
                 "icon": "experience.png",
                 "priority": 103,
                 "is_positive_value_good": true,
                 "description": "Recruit rank: +2 War Lions and Lion Chariots units",
                 "key": "wh_dlc15_effect_unit_xp_levels_war_lions",
                 "value": 2
+              },
+              {
+                "icon": "bonus_vs_small.png",
+                "priority": 482,
+                "is_positive_value_good": true,
+                "description": "Bonus vs Infantry: +8 for War Lions and Lion Chariots units",
+                "key": "wh_dlc15_effect_force_unit_stat_bonusvssmall_war_lions",
+                "value": 8
               }
             ]
           }
