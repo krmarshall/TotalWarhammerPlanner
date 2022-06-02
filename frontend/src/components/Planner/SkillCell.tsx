@@ -37,8 +37,12 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       tempCurPoints = 0;
     }
 
-    const newSelectable = skillIncreaseIsValid(characterBuild, characterData, skill, tempCurPoints, skillKey, false);
-    setSelectable(newSelectable);
+    if (skill.levels?.[0].auto_unlock_at_rank !== undefined) {
+      setSelectable(false);
+    } else {
+      const newSelectable = skillIncreaseIsValid(characterBuild, characterData, skill, tempCurPoints, skillKey, false);
+      setSelectable(newSelectable);
+    }
   }, [characterBuild?.buildData]);
 
   useEffect(() => {
@@ -71,12 +75,15 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         skill.levels?.[0].auto_unlock_at_rank <=
           characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
       ) {
+        // Manually set current points, without this the auto skill gets added to selectedSkills twice, (think it passes the thisSkillsCurrentPoints === 0 check before the other useEffect updates its value?)
+        setThisSkillsCurrentPoints(1);
         rankUpSkill(true);
       } else if (
         thisSkillsCurrentPoints > 0 &&
-        skill.levels?.[0].auto_unlock_at_rank >=
+        skill.levels?.[0].auto_unlock_at_rank >
           characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
       ) {
+        setThisSkillsCurrentPoints(0);
         rankDownSkill(true);
       }
     }
@@ -178,7 +185,11 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   const skillClickHandler = (event: MouseEvent) => {
     // 0 = LMB, 2 = RMB
-    if (event.button === 0) {
+    if (skill.levels?.[0]?.auto_unlock_at_rank !== undefined) {
+      toast.error(`This skill is automatically leveled up/down at rank ${skill.levels?.[0]?.auto_unlock_at_rank}`, {
+        id: `${skillKey} autorank`,
+      });
+    } else if (event.button === 0) {
       rankUpSkill(false);
     } else if (event.button === 2) {
       rankDownSkill(false);

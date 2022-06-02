@@ -35,6 +35,11 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
         {skill?.description.trim() && (
           <h4 className="text-gray-50 opacity-70 text-lg max-w-fit min-w-[15vw]">{skill?.description.trim()}</h4>
         )}
+        {skill?.levels?.[skillPoints]?.auto_unlock_at_rank && (
+          <p className="text-yellow-400 text-lg">
+            Automatically unlocks at rank {skill?.levels?.[skillPoints]?.auto_unlock_at_rank}
+          </p>
+        )}
         {skill?.levels?.[skillPoints]?.unlocked_at_rank && (
           <p className="text-yellow-400 text-lg">Available at rank {skill?.levels?.[skillPoints]?.unlocked_at_rank}</p>
         )}
