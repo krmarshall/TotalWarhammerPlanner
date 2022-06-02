@@ -15,23 +15,25 @@ import BackgroundSkills from '../components/Planner/BackgroundSkills';
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild } = state;
-  const { game, faction, character, code } = useParams();
+  const { mod, faction, character, code } = useParams();
 
   const [urlLoaded, setUrlLoaded] = useState(false);
   const [effectiveRank, setEffectiveRank] = useState(1);
 
   useEffect(() => {
     if (state.characterData === null) {
-      dispatch({ type: AppContextActions.changeMod, payload: { selectedMod: game } });
+      const game = mod?.includes('2') ? '2' : '3';
+      dispatch({ type: AppContextActions.changeGame, payload: { selectedGame: game } });
+      dispatch({ type: AppContextActions.changeMod, payload: { selectedMod: mod } });
       dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: faction } });
 
       api
-        .getCharacterSkillTree(game as string, faction as string, character as string)
+        .getCharacterSkillTree(mod as string, faction as string, character as string)
         .then((response: CharacterInterface) => {
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
           const emptyCharacterBuild = createEmptyCharacterBuild(
             response,
-            game as string,
+            mod as string,
             faction as string,
             character as string
           );
@@ -55,7 +57,7 @@ const Planner = () => {
     const newCharacterBuild = createCharacterBuildFromArray(
       importBuild,
       state.characterData,
-      game as string,
+      mod as string,
       faction as string,
       character as string
     );
@@ -89,7 +91,7 @@ const Planner = () => {
     }
     const emptyCharacterBuild = createEmptyCharacterBuild(
       state.characterData,
-      game as string,
+      mod as string,
       faction as string,
       character as string
     );
@@ -113,12 +115,12 @@ const Planner = () => {
   };
 
   // @ts-expect-error ts(7053)
-  const lordName = gameData[game].characters[`${faction}_lords`]?.[character]?.name;
+  const lordName = gameData[mod].characters[`${faction}_lords`]?.[character]?.name;
   // @ts-expect-error ts(7053)
-  const heroName = gameData[game].characters[`${faction}_heroes`]?.[character]?.name;
+  const heroName = gameData[mod].characters[`${faction}_heroes`]?.[character]?.name;
   const characterName = lordName === undefined ? heroName : lordName;
 
-  const rankLimit = game?.includes('2') ? 40 : 50;
+  const rankLimit = mod?.includes('2') ? 40 : 50;
 
   return (
     <Fragment>
