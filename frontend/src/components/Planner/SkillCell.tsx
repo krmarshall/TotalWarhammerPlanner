@@ -8,6 +8,7 @@ import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
 import { useImage } from 'react-image';
 import TooltipWrapper from './TooltipWrapper';
+import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -211,7 +212,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     divClassName += ' line-through';
   }
 
-  let tdClassName = 'flex flex-row w-max h-auto my-1 border ';
+  let tdClassName = 'flex flex-row w-max h-auto my-1 border relative ';
 
   switch (boxedType) {
     case 'start': {
@@ -279,6 +280,26 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         event.preventDefault();
       }}
     >
+      {skill.levels?.[0]?.auto_unlock_at_rank && (
+        <TooltipWrapper
+          tooltip={
+            <div className="w-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+              <p className="text-yellow-400 text-lg">
+                This skill automatically unlocks at rank {skill.levels?.[0]?.auto_unlock_at_rank}
+              </p>
+            </div>
+          }
+        >
+          <img
+            className="w-6 h-6 absolute bottom-1 left-1 z-10"
+            src={autoSkillIcon}
+            draggable={false}
+            alt="autoUnlockIcon"
+            width="32"
+            height="32"
+          />
+        </TooltipWrapper>
+      )}
       <div className={divClassName}>
         <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />}>
           <div className="flex flex-row">
