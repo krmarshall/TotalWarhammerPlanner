@@ -34,31 +34,25 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
     }
   });
   return (
-    <Fragment>
+    <div className="flex-grow min-w-[15vw] ml-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
       <div className="flex flex-row ml-4">
-        <h3 className="flex-grow text-left text-2xl mr-8">{unitAbility.description}</h3>
+        <h3 className="text-left whitespace-nowrap text-2xl pr-6 mr-auto">{unitAbility.description}</h3>
         {unitAbility.num_uses !== undefined && unitAbility.num_uses > 0 && (
-          <div className="flex flex-row mr-2">
+          <div className="flex flex-row mr-3">
             <img className="w-6 h-6" src={chargesImg} alt="charges icon" width="24" height="24" />
-            <div className="ml-1 flex flex-col justify-center">
-              <p className="text-center">{unitAbility.num_uses}</p>
-            </div>
+            <p className="ml-1 text-center">{unitAbility.num_uses}</p>
           </div>
         )}
         {unitAbility.mana_cost !== undefined && unitAbility.mana_cost > 0 && (
-          <div className="flex flex-row mr-2">
+          <div className="flex flex-row mr-3">
             <img className="w-6 h-6" src={windsImg} alt="winds icon" width="24" height="24" />
-            <div className="ml-1 flex flex-col justify-center">
-              <p className="text-center">{unitAbility.mana_cost}</p>
-            </div>
+            <p className="ml-1 text-center">{unitAbility.mana_cost}</p>
           </div>
         )}
         {unitAbility.recharge_time !== undefined && unitAbility.recharge_time > 0 && (
-          <div className="flex flex-row">
+          <div className="flex flex-row mr-3">
             <img className="w-6 h-6" src={cooldownImg} alt="cooldown icon" width="24" height="24" />
-            <div className="ml-1 flex flex-col justify-center">
-              <p className="text-center">{unitAbility.recharge_time}s</p>
-            </div>
+            <p className="ml-1 text-center">{unitAbility.recharge_time}s</p>
           </div>
         )}
       </div>
@@ -128,7 +122,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           </div>
         </div>
       )}
-    </Fragment>
+    </div>
   );
 };
 

@@ -199,16 +199,16 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
-  let divClassName =
-    'flex flex-row rounded-lg hover:shadow-lg bg-[url(/imgs/other/skills_tab_frame.webp)] bg-no-repeat bg-cover';
+  let divClassName = 'flex flex-row rounded-lg drop-shadow-lg bg-no-repeat bg-cover';
 
   if (thisSkillsCurrentPoints > 0) {
-    divClassName += ' bg-gray-600 hover:bg-gray-500';
-  } else if (selectable) {
-    divClassName += ' hover:bg-gray-600';
-  } else {
+    divClassName += ' filter-none bg-[url(/imgs/other/skills_tab_frame_selected.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_selected_hover.webp)]';
+  } else if (thisSkillsCurrentPoints === 0 && selectable) {
     divClassName +=
-      ' hover:bg-gray-600 opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
+      ' filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]';
+  } else if (thisSkillsCurrentPoints === 0 && !selectable) {
+    divClassName +=
+      ' bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)] opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
   }
 
   let tdClassName = 'flex flex-row w-max h-auto my-1 border relative';
@@ -223,7 +223,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       break;
     }
     case 'end': {
-      tdClassName += ' border-gray-400 border-l-0 rounded-r';
+      tdClassName += ' border-gray-400 border-l-0 rounded-r pr-2';
       break;
     }
     case 'none': {
