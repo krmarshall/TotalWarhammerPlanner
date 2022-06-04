@@ -18,18 +18,20 @@ const SkillPointSelector = ({
   thisSkillsCurrentPoints,
   blocked,
 }: SkillPointSelectorPropInterface) => {
-  let containerClassName = 'w-4 text-center';
+  let containerClassName = 'w-4 h-4 bg-contain ';
   const selected = thisSkillsCurrentPoints >= index + 1 ? true : false;
 
   if (selected) {
-    containerClassName += ' text-gray-50';
+    containerClassName +=
+      'bg-[url(/imgs/other/checkbox_round_selected.webp)] hover:bg-[url(/imgs/other/checkbox_round_selected_hover.webp)]';
   } else {
-    containerClassName += ' text-gray-400 hover:text-gray-300';
+    containerClassName +=
+      'bg-[url(/imgs/other/checkbox_round_active.webp)] hover:bg-[url(/imgs/other/checkbox_round_hover.webp)]';
   }
 
   return (
     <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={skillPoints} blocked={blocked} />}>
-      <div className={containerClassName}>O</div>
+      <div className={containerClassName}></div>
     </TooltipWrapper>
   );
 };

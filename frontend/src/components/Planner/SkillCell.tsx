@@ -8,7 +8,9 @@ import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
 import { useImage } from 'react-image';
 import TooltipWrapper from './TooltipWrapper';
+
 import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';
+import blockedSkillOverlay from '../../imgs/other/skill_locked_rank.webp';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -197,7 +199,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
-  let divClassName = 'flex flex-row rounded-lg hover:shadow-lg';
+  let divClassName =
+    'flex flex-row rounded-lg hover:shadow-lg bg-[url(/imgs/other/skills_tab_frame.webp)] bg-no-repeat bg-cover';
 
   if (thisSkillsCurrentPoints > 0) {
     divClassName += ' bg-gray-600 hover:bg-gray-500';
@@ -208,11 +211,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       ' hover:bg-gray-600 opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
   }
 
-  if (blocked) {
-    divClassName += ' line-through';
-  }
-
-  let tdClassName = 'flex flex-row w-max h-auto my-1 border relative ';
+  let tdClassName = 'flex flex-row w-max h-auto my-1 border relative';
 
   switch (boxedType) {
     case 'start': {
@@ -235,6 +234,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       break;
     }
   }
+
+  const fontSize = skill.name.length < 32 ? 'text-xl' : 'text-lg';
 
   const findAbilityImage = () => {
     if (skill.levels?.[0].effects === undefined) {
@@ -266,7 +267,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
     ],
   });
-  let imgClassName = 'w-16 h-16 my-auto drop-shadow-lg';
+  let imgClassName = 'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg';
   if (src?.includes('/battle_ui/ability_icons/')) {
     imgClassName += ' p-2.5';
   }
@@ -303,15 +304,25 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       <div className={divClassName}>
         <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />}>
           <div className="flex flex-row">
+            {blocked && (
+              <img
+                src={blockedSkillOverlay}
+                className="w-auto absolute top-0 right-8 z-0"
+                draggable={false}
+                alt="blockedSkillOverlay"
+                width="135"
+                height="72"
+              />
+            )}
             <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
-            <div className="flex flex-col justify-center m-auto">
-              <h2 className="w-32 text-center text-xl text-gray-200 text-shadow">{skill.name}</h2>
+            <div className="flex flex-col justify-center">
+              <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>
             </div>
           </div>
         </TooltipWrapper>
 
-        <div className="w-4 flex flex-col justify-center mx-1 text-sm text-gray-200">
+        <div className="w-4 flex flex-col justify-center pl-0.5 text-sm text-gray-200">
           {skill?.levels?.map((rankKey, index) => {
             if (index < 3) {
               return (
