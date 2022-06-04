@@ -11,7 +11,7 @@ import {
 const BuildStorage = () => {
   const [buildNameInput, setBuildNameInput] = useState('');
   const { state, dispatch } = useContext(AppContext);
-  const { game, faction, character } = useParams();
+  const { mod, faction, character } = useParams();
 
   useEffect(() => {
     if (!state.characterBuild?.character) {
@@ -32,7 +32,7 @@ const BuildStorage = () => {
   };
 
   const setBuildHandler = (buildName: string) => {
-    setActiveBuildFromStorage(state, dispatch, buildName, game as string, faction as string, character as string);
+    setActiveBuildFromStorage(state, dispatch, buildName, mod as string, faction as string, character as string);
   };
 
   return (
