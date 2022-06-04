@@ -9,7 +9,7 @@ interface SkillRowPropsInterface {
 
 const SkillRow = ({ skillRow, yIndex }: SkillRowPropsInterface) => {
   return (
-    <tr className="flex flex-row">
+    <tr className="flex flex-row mb-0.5">
       {skillRow.length === 0 ? (
         <td className="h-16"></td>
       ) : (

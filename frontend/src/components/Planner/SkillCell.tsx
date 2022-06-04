@@ -202,7 +202,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   let divClassName = 'flex flex-row rounded-lg drop-shadow-lg bg-no-repeat bg-cover';
 
   if (thisSkillsCurrentPoints > 0) {
-    divClassName += ' filter-none bg-[url(/imgs/other/skills_tab_frame_selected.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_selected_hover.webp)]';
+    divClassName +=
+      ' filter-none bg-[url(/imgs/other/skills_tab_frame_selected.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_selected_hover.webp)]';
   } else if (thisSkillsCurrentPoints === 0 && selectable) {
     divClassName +=
       ' filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]';
@@ -235,7 +236,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }
 
-  const fontSize = skill.name.length < 32 ? 'text-xl' : 'text-lg';
+  const fontSize = skill.name.length < 28 ? 'text-xl' : 'text-base';
 
   const findAbilityImage = () => {
     if (skill.levels?.[0].effects === undefined) {
@@ -269,7 +270,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   });
   let imgClassName = 'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg';
   if (src?.includes('/battle_ui/ability_icons/')) {
-    imgClassName += ' p-2.5';
+    imgClassName += ' p-3';
   }
   return (
     <td
@@ -284,7 +285,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       {skill.levels?.[0]?.auto_unlock_at_rank && (
         <TooltipWrapper
           tooltip={
-            <div className="w-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+            <div className="w-max p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
               <p className="text-yellow-400 text-lg">
                 This skill automatically unlocks at rank {skill.levels?.[0]?.auto_unlock_at_rank}
               </p>

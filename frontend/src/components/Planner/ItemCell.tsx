@@ -21,6 +21,8 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     }
   });
 
+  const fontSize = item.name.length < 28 ? 'text-xl' : 'text-base';
+
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = item.image_path.replace('.png', '.webp');
   const { src } = useImage({
@@ -32,8 +34,8 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
   return (
     <TooltipWrapper
       tooltip={
-        <span className="text-center">
-          <div className="p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+        <span className="text-center flex flex-row w-max">
+          <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
             <h3 className="text-gray-50 text-2xl">{item?.name}</h3>
             {item?.description.trim() && (
               <h4 className="text-gray-50 opacity-70 text-lg max-w-fit">&quot;{item?.description.trim()}&quot;</h4>
@@ -47,26 +49,23 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
               })}
             </div>
           </div>
-          {relatedAbilities.length !== 0 && (
-            <div className="w-fit mt-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
-              <SkillAbilityTooltip ability={relatedAbilities[0]} />
-            </div>
-          )}
+          {relatedAbilities.length !== 0 && <SkillAbilityTooltip ability={relatedAbilities[0]} />}
         </span>
       }
     >
-      <div className="flex flex-row w-max m-1 -ml-2 px-3 py-1 rounded-lg hover:bg-gray-600 hover:shadow-lg">
+      <div className="flex flex-row w-max rounded-lg drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <img
           src={src}
-          className="w-16 h-16 drop-shadow-lg my-auto"
+          className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
           draggable={false}
           alt="itemIcon"
           width="64"
           height="64"
         />
-        <div className="flex flex-col justify-center m-auto">
-          <h2 className="w-32 text-center text-xl text-gray-200 text-shadow">{item.name}</h2>
+        <div className="flex flex-col justify-center">
+          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{item.name}</h2>
         </div>
+        <div className="invisible w-4 pl-0.5">spacer</div>
       </div>
     </TooltipWrapper>
   );
