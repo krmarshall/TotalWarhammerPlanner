@@ -70,17 +70,16 @@ const setActiveBuildFromStorage = (
   const newCharacterBuild = createCharacterBuildFromArray(loadBuild, state.characterData, game, faction, character);
   dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
 
-  // Skill verification has some quirks that need sorting still
-  // if (isValidSkillTree(newCharacterBuild, state.characterData)) {
-  //   dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
-  // } else {
-  //   toast.error(
-  //     'The build you are trying to load is invalid, this may have been caused by an update or bugfix to the character tree. Sorry!',
-  //     { id: `${buildName} set storage build`, duration: 6000 }
-  //   );
-  //   const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, game, faction, character);
-  //   dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
-  // }
+  if (isValidSkillTree(newCharacterBuild, state.characterData)) {
+    dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
+  } else {
+    toast.error(
+      'The build you are trying to load is invalid, this may have been caused by an update or bugfix to the character tree. Sorry!',
+      { id: `${buildName} set storage build`, duration: 6000 }
+    );
+    const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, game, faction, character);
+    dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
+  }
 };
 
 const loadBuildsFromStorage = (state: ContextStateInterface) => {
