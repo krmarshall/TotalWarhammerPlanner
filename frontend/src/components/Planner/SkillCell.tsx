@@ -74,19 +74,16 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     ) {
       // Auto rank up/down skill when at appropriate character rank.
       if (
-        thisSkillsCurrentPoints === 0 &&
+        characterBuild.buildData[yIndex][xIndex] === 0 &&
         skill.levels?.[0].auto_unlock_at_rank <=
           characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
       ) {
-        // Manually set current points, without this the auto skill gets added to selectedSkills twice, (think it passes the thisSkillsCurrentPoints === 0 check before the other useEffect updates its value?)
-        setThisSkillsCurrentPoints(1);
         rankUpSkill(true);
       } else if (
-        thisSkillsCurrentPoints > 0 &&
+        characterBuild.buildData[yIndex][xIndex] > 0 &&
         skill.levels?.[0].auto_unlock_at_rank >
           characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
       ) {
-        setThisSkillsCurrentPoints(0);
         rankDownSkill(true);
       }
     }
