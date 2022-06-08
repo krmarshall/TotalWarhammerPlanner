@@ -1,6 +1,6 @@
 import { Fragment, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import api from '../api/api';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../utils/sharedFunctions';
@@ -11,6 +11,11 @@ import BuildStorage from '../components/Planner/BuildStorage';
 import SkillRow from '../components/Planner/SkillRow';
 import CharacterItems from '../components/Planner/CharacterItems';
 import BackgroundSkills from '../components/Planner/BackgroundSkills';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+import resetIcon from '../imgs/other/icon_reset.webp';
+import shareIcon from '../imgs/other/resume_saved.webp';
+import backIcon from '../imgs/other/icon_home.webp';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -19,6 +24,8 @@ const Planner = () => {
 
   const [urlLoaded, setUrlLoaded] = useState(false);
   const [effectiveRank, setEffectiveRank] = useState(1);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (state.characterData === null) {
@@ -125,32 +132,41 @@ const Planner = () => {
   return (
     <Fragment>
       {state.characterData === null ? (
-        <div className="flex flex-col place-items-center mt-[20vh]">
-          <p className="text-center text-4xl text-gray-200">Loading Character Data...</p>
-          <div className="lds-dual-ring"></div>
-        </div>
+        <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
         <Fragment>
           <div className="h-[6vh] flex flex-row place-content-between">
-            <div className="w-[20vw] invisible">Spacer</div>
-            <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
-            <div className="w-[20vw] flex flex-nowrap place-content-end">
+            <div className="w-[20vw] flex place-content-start">
               <button
-                className="w-[4vw] text-center mr-6 my-auto px-2 bg-blue-600 hover:bg-blue-500 text-gray-200 text-2xl border rounded-xl drop-shadow-lg"
+                className="flex flex-row place-content-center my-auto px-1.5 bg-gray-500 hover:bg-gray-400 border rounded-xl drop-shadow-lg"
+                onClick={() => navigate('/')}
+              >
+                <img src={backIcon} width="45" height="45" className="my-auto w-8 h-8" draggable={false} />
+                <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Home</p>
+              </button>
+            </div>
+            <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
+            <div className="w-[20vw] flex place-content-end">
+              <button
+                className="flex flex-row place-content-center mr-4 my-auto px-2 bg-blue-600 hover:bg-blue-500 border rounded-xl drop-shadow-lg"
                 onClick={shareButtonHandler}
               >
-                Share
+                <img src={shareIcon} width="20" height="20" className="my-auto w-5 h-5" draggable={false} />
+                <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Share</p>
               </button>
               <button
-                className="w-[4vw] text-center mr-6 my-auto px-2 bg-gray-500 hover:bg-gray-400 text-gray-200 text-2xl border rounded-xl drop-shadow-lg"
+                className="flex flex-row place-content-center mr-4 px-2 my-auto bg-gray-500 hover:bg-gray-400 border rounded-xl drop-shadow-lg"
                 onClick={resetButtonHandler}
               >
-                Reset
+                <img src={resetIcon} width="20" height="20" className="my-auto w-6 h-6" draggable={false} />
+                <p className="text-center text-gray-200 text-2xl px-0.5">Reset</p>
               </button>
               {effectiveRank <= rankLimit ? (
-                <p className="w-[4vw] text-center my-auto text-gray-200 text-2xl text-shadow">Rank: {effectiveRank}</p>
+                <p className="w-18 mr-2 text-center my-auto text-gray-200 text-2xl text-shadow">
+                  Rank: {effectiveRank}
+                </p>
               ) : (
-                <p className="w-[4vw] text-center my-auto text-red-500 text-2xl text-shadow">Rank: {effectiveRank}</p>
+                <p className="w-18 mr-2 text-center my-auto text-red-500 text-2xl text-shadow">Rank: {effectiveRank}</p>
               )}
             </div>
           </div>

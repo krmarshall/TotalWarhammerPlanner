@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AppProvider } from './contexts/AppContext';
 import Header from './components/Header';
+import LoadingSpinner from './components/LoadingSpinner';
 
 const Home = lazy(() => import('./pages/Home'));
 const Planner = lazy(() => import('./pages/Planner'));
@@ -29,14 +30,7 @@ const App = () => {
         <BrowserRouter>
           <Header />
           <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-            <Suspense
-              fallback={
-                <div className="flex flex-col place-items-center mt-[20vh]">
-                  <p className="text-center text-4xl text-gray-200">Loading...</p>
-                  <div className="lds-dual-ring"></div>
-                </div>
-              }
-            >
+            <Suspense fallback={<LoadingSpinner loadingText="Loading..." />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="planner" element={<Planner />}>

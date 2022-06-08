@@ -8,6 +8,9 @@ import {
   setActiveBuildFromStorage,
 } from '../../utils/storageFunctions';
 
+import deleteIcon from '../../imgs/other/icon_delete.webp';
+import saveIcon from '../../imgs/other/icon_quick_save.webp';
+
 const BuildStorage = () => {
   const [buildNameInput, setBuildNameInput] = useState('');
   const { state, dispatch } = useContext(AppContext);
@@ -53,14 +56,16 @@ const BuildStorage = () => {
               <p className="overflow-hidden whitespace-nowrap text-ellipsis text-2xl mx-auto text-gray-200">
                 {buildKey}
               </p>
-              <p
-                className="px-2 pt-0.5 text-xl text-red-500 rounded hover:bg-gray-700"
+              <img
+                src={deleteIcon}
+                alt="deleteIcon"
+                className="w-9 h-9 grayscale hover:grayscale-0"
                 onClick={(event) => {
                   deleteClickHandler(buildKey, event);
                 }}
-              >
-                X
-              </p>
+                width="40"
+                height="40"
+              />
             </li>
           );
         })}
@@ -81,10 +86,11 @@ const BuildStorage = () => {
           className="w-32 rounded m-1 px-1 text-xl text-center focus:outline-none placeholder-opacity-50 placeholder-black bg-gray-400"
         />
         <button
-          className="text-center w-18 m-1 my-auto px-2 bg-green-800 hover:bg-green-600 text-gray-200 text-xl border rounded-xl"
+          className="flex flex-row place-content-center w-18 h-min my-auto py-0.5 pl-1 pr-2 bg-green-800 hover:bg-green-700 border rounded-xl"
           onClick={saveClickHandler}
         >
-          Save
+          <img src={saveIcon} alt="saveIcon" width="26" height="26" className="m-auto" draggable={false} />
+          <p className="text-center text-gray-200 text-xl my-auto ml-0.5">Save</p>
         </button>
       </div>
     </div>
