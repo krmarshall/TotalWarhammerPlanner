@@ -191,140 +191,6 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
-      },
-      {
-        "key": "stompies_wh_main_skill_node_grn_azhag_item_1",
-        "image_path": "item_talisman.png",
-        "is_background_skill": false,
-        "name": "Tuff Necklace",
-        "description": "Shortly after Azhag united the northern Orc tribes, hordes of Night Goblins from Red Eye Mountain joined his army.  The Goblins gave Azhag this stone necklace, which was stolen from the Dwarfs.",
-        "levels": [
-          {
-            "unlocked_at_rank": 3,
-            "effects": [
-              {
-                "icon": "health_character.png",
-                "priority": 90,
-                "is_positive_value_good": true,
-                "description": "Hit points: +20%",
-                "value": 20,
-                "key": "wh_main_effect_character_stat_unit_health"
-              },
-              {
-                "icon": "resistance_physical.png",
-                "priority": 280,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 20%",
-                "value": 20,
-                "key": "wh_main_effect_character_stat_physical_resistance"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": false,
-        "character_skill_key": "stompies_skill_talisman_tuff_necklace",
-        "tier": 44,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "stompies_wh_main_skill_node_grn_azhag_item_2",
-        "image_path": "item_arcane_item.png",
-        "is_background_skill": false,
-        "name": "Shiny Crystal",
-        "description": "",
-        "levels": [
-          {
-            "unlocked_at_rank": 6,
-            "effects": [
-              {
-                "icon": "magic_campaign.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +25% when increasing",
-                "value": 25,
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
-              },
-              {
-                "icon": "corruption.png",
-                "priority": 104,
-                "is_positive_value_good": false,
-                "description": "Corruption: -3",
-                "value": -3,
-                "key": "wh3_main_effect_corruption_reduction_characters"
-              },
-              {
-                "icon": "resistance_magic.png",
-                "priority": 280,
-                "is_positive_value_good": true,
-                "description": "Spell resistance: 10%",
-                "value": 10,
-                "key": "wh_main_effect_character_stat_magic_resistance"
-              },
-              {
-                "icon": "item_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Arcane Energy\"",
-                "related_abilities": [
-                  {
-                    "effect": "stompies_effect_ability_arcane_energy",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "stompies_ability_arcane_energy",
-                      "icon_name": "wh_magic_item_passive_arcane",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Arcane Energy",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_spell_trigger_when_casting",
-                          "sort_order": 1,
-                          "effect_state": "positive",
-                          "description": "Triggers when casting spell"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "mana_regen_mod": 0.6,
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "stompies_effect_ability_arcane_energy"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": false,
-        "character_skill_key": "stompies_skill_arcane_shiny_crystal",
-        "tier": 45,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
       }
     ],
     [
@@ -4991,9 +4857,155 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_main_skill_node_grn_azhag_item_1",
+      "image_path": "item_talisman.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "health_character.png",
+              "priority": 90,
+              "is_positive_value_good": true,
+              "description": "Hit points: +20%",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_unit_health"
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 20%",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_physical_resistance"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_main_skill_node_set_grn_azhag",
+      "character_skill_key": "stompies_skill_talisman_tuff_necklace",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_main_skill_node_grn_azhag_item_2",
+      "image_path": "item_arcane_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +25% when increasing",
+              "value": 25,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "corruption.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Corruption: -3",
+              "value": -3,
+              "key": "wh3_main_effect_corruption_reduction_characters"
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Spell resistance: 10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_magic_resistance"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Arcane Energy\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_arcane_energy",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_arcane_energy",
+                    "icon_name": "wh_magic_item_passive_arcane",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Arcane Energy",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc05_spell_trigger_when_casting",
+                        "sort_order": 1,
+                        "effect_state": "positive",
+                        "description": "Triggers when casting spell"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "mana_regen_mod": 0.6,
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null
+                      }
+                    ]
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_arcane_energy"
+            }
+          ],
+          "auto_unlock_at_rank": 8
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_main_skill_node_set_grn_azhag",
+      "character_skill_key": "stompies_skill_arcane_shiny_crystal",
+      "tier": 45,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ],
   "items": [
+    {
+      "key": "stompies_anc_talisman_tuff_necklace",
+      "type": "wh_main_anc_talisman",
+      "effects": [],
+      "name": "Tuff Necklace",
+      "description": "Shortly after Azhag united the northern Orc tribes, hordes of Night Goblins from Red Eye Mountain joined his army.  The Goblins gave Azhag this stone necklace, which was stolen from the Dwarfs.",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_talisman.png"
+    },
     {
       "key": "wh_main_anc_enchanted_item_the_crown_of_sorcery",
       "type": "wh_main_anc_enchanted_item",
@@ -5099,6 +5111,16 @@
       "unlocked_at_rank": 7,
       "instant": false,
       "image_path": "item_enchanted_item.png"
+    },
+    {
+      "key": "stompies_anc_arcane_shiny_crystal",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [],
+      "name": "Shiny Crystal",
+      "description": "After the Battle of Butcher's Hill, Azhag found this sparkling crystal from a dead wizard.  The jagged crystal shimmers and glows with arcane energy.",
+      "unlocked_at_rank": 8,
+      "instant": true,
+      "image_path": "item_arcane_item.png"
     },
     {
       "key": "wh_main_anc_armour_azhags_ard_armour",

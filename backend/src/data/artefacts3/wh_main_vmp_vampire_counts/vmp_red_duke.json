@@ -5032,6 +5032,383 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_vmp_red_duke_item_1",
+      "image_path": "item_armour.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_character.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Armour: +10",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_armour"
+            },
+            {
+              "icon": "defence_character.png",
+              "priority": 150,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +5",
+              "value": 5,
+              "key": "wh_main_effect_character_stat_melee_defence"
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Spell resistance: 15%",
+              "value": 15,
+              "key": "wh_main_effect_character_stat_magic_resistance"
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 15%",
+              "value": 15,
+              "key": "wh_main_effect_character_stat_physical_resistance"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_vmp_red_duke",
+      "character_skill_key": "stompies_skill_armour_armour_of_blood",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_vmp_red_duke_item_2",
+      "image_path": "item_weapon.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "battle_movement_character.png",
+              "priority": 120,
+              "is_positive_value_good": true,
+              "description": "Speed: +15%",
+              "value": 15,
+              "key": "wh_main_effect_character_stat_speed"
+            },
+            {
+              "icon": "melee_character.png",
+              "priority": 130,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +8",
+              "value": 8,
+              "key": "wh_main_effect_character_stat_melee_attack"
+            },
+            {
+              "icon": "magical_attacks.png",
+              "priority": 140,
+              "is_positive_value_good": true,
+              "description": "Enables magical attacks",
+              "value": 1,
+              "key": "wh_main_effect_character_stat_enable_magic_attacks"
+            },
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 160,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_weapon_strength"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Item ability: \"Deadly Swiftness\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_deadly_swiftness",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_deadly_swiftness",
+                    "icon_name": "wh_main_weapon_abilities_runefang",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Deadly Swiftness",
+                    "active_time": 30,
+                    "recharge_time": 120,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 30,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 1.4,
+                            "stat": "scalar_entity_acceleration_modifier",
+                            "how": "mult",
+                            "description": "x1.4 Acceleration",
+                            "sort_order": 0,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": 18,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "+18 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 1.4,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x1.4 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 18,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "+18 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_deadly_swiftness"
+            }
+          ],
+          "auto_unlock_at_rank": 8
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_vmp_red_duke",
+      "character_skill_key": "stompies_skill_weapon_blade_of_leaping_gold",
+      "tier": 45,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_vmp_red_duke_item_3",
+      "image_path": "item_talisman.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +10% when increasing",
+              "value": 10,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "corruption_vampiric.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Vampiric corruption: +5",
+              "value": 5,
+              "key": "wh3_main_effect_corruption_vampiric_characters"
+            },
+            {
+              "icon": "resistance_ward_save.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Ward save: 15%",
+              "value": 15,
+              "key": "wh_main_effect_character_stat_ward_save"
+            },
+            {
+              "icon": "treasury.png",
+              "priority": 1000,
+              "is_positive_value_good": false,
+              "description": "Raise dead cost: -10%",
+              "value": -10,
+              "key": "wh_main_effect_raise_dead_recruitment_cost_mod"
+            }
+          ],
+          "auto_unlock_at_rank": 12
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_vmp_red_duke",
+      "character_skill_key": "stompies_skill_talisman_black_gem_of_mousillon",
+      "tier": 46,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_vmp_red_duke_item_4",
+      "image_path": "item_enchanted_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +8 for Grave Guard, Black Knights, and Blood Knights units",
+              "value": 8,
+              "key": "stompies_effect_vmp_graveguard_knights_attack"
+            },
+            {
+              "icon": "morale_character.png",
+              "priority": 260,
+              "is_positive_value_good": true,
+              "description": "Character's aura leadership effect: +9",
+              "value": 9,
+              "key": "wh_main_effect_character_stat_aura_leadership_effect"
+            }
+          ],
+          "auto_unlock_at_rank": 16
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_vmp_red_duke",
+      "character_skill_key": "stompies_skill_enchanted_grimoire_necris",
+      "tier": 47,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_vmp_red_duke_item_5",
+      "image_path": "item_arcane_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_vampiric.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Vampiric corruption: +3",
+              "value": 3,
+              "key": "wh3_main_effect_corruption_vampiric_characters"
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Spell resistance: 10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_magic_resistance"
+            },
+            {
+              "icon": "treasury.png",
+              "priority": 1000,
+              "is_positive_value_good": false,
+              "description": "Raise dead cost: -10%",
+              "value": -10,
+              "key": "wh_main_effect_raise_dead_recruitment_cost_mod"
+            }
+          ],
+          "auto_unlock_at_rank": 20
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_vmp_red_duke",
+      "character_skill_key": "stompies_skill_arcane_mousillon_rose",
+      "tier": 48,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
+  "items": [
+    {
+      "key": "stompies_anc_armour_armour_of_blood",
+      "type": "wh_main_anc_armour",
+      "effects": [],
+      "name": "Profane Armour",
+      "description": "Three nights after being buried in his tomb, the former Duke of Aquitaine emerged as a dreaded Vampire.  He immediately began slaughtering those he used to protect, and his once holy Paladin armour became permanently stained crimson and enchanted from the blood.",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_armour.png"
+    },
+    {
+      "key": "stompies_anc_weapon_blade_of_leaping_gold",
+      "type": "wh_main_anc_weapon",
+      "effects": [],
+      "name": "Blade of Leaping Gold",
+      "description": "A magic sword taken from an Emir of Araby after being defeated in single combat.  It has never dulled and provides supernatural speed to whoever holds the weapon.",
+      "unlocked_at_rank": 8,
+      "instant": true,
+      "image_path": "item_weapon.png"
+    },
+    {
+      "key": "stompies_anc_talisman_black_gem_of_mousillon",
+      "type": "wh_main_anc_talisman",
+      "effects": [],
+      "name": "Black Gem of Mousillon",
+      "description": "Mousillon is the smallest, poorest, and most cursed of the Dukedoms of Bretonnia.  Long ago, miners found a large black gem located at the very center of the duchy.  Some claim it's the source of the land's curse, for the dead began rising from their graves after this gem was found.",
+      "unlocked_at_rank": 12,
+      "instant": true,
+      "image_path": "item_talisman.png"
+    },
+    {
+      "key": "stompies_anc_enchanted_grimoire_necris",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [],
+      "name": "Grimoire Necris",
+      "description": "An ancient book of Necromancy which was written by the Dread King, one of Nagash's most powerful servants.  The infamous tome was thought lost when the Dread King was destroyed by a mercenary army known as, \"The Grudgebringers.\"",
+      "unlocked_at_rank": 16,
+      "instant": true,
+      "image_path": "item_enchanted_item.png"
+    },
+    {
+      "key": "stompies_anc_arcane_mousillon_rose",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [],
+      "name": "Mousillon Rose",
+      "description": "These purple flowers only grow in the hills of Mousillon, specifically where a human corpse has been left to rot.  The rose is resistant to magic, but studying such an odd characteristic is difficult due to the poisonous nature of the flower.",
+      "unlocked_at_rank": 20,
+      "instant": true,
+      "image_path": "item_arcane_item.png"
     }
   ]
 }

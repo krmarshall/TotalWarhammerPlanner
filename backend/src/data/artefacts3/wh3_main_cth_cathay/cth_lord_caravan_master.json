@@ -2,6 +2,34 @@
   "skillTree": [
     [
       {
+        "key": "wh3_main_skill_node_cth_lord_caravan_master_mount_warhorse",
+        "image_path": "mount_warhorse.png",
+        "is_background_skill": false,
+        "name": "Warhorse",
+        "description": "A general's horse can be their most trusted and daring companion. Just don't name him 'Daisy'.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Warhorse",
+                "key": "wh_main_effect_enable_mount_warhorse",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 5
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_cth_lord_magistrate_mount_warhorse",
+        "tier": 0,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
         "key": "wh3_main_skill_innate_cth_caravan_master_1",
         "image_path": "character_movement.png",
         "is_background_skill": false,
@@ -55,7 +83,7 @@
           }
         ],
         "character_skill_key": "wh3_main_skill_cth_caravan_master_wheelwright",
-        "tier": 0,
+        "tier": 1,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -115,34 +143,6 @@
           }
         ],
         "character_skill_key": "wh3_main_skill_cth_caravan_master_smugglers_space",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh3_main_skill_node_cth_lord_caravan_master_mount_warhorse",
-        "image_path": "mount_warhorse.png",
-        "is_background_skill": false,
-        "name": "Warhorse",
-        "description": "A general's horse can be their most trusted and daring companion. Just don't name him 'Daisy'.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "mount.png",
-                "priority": 50,
-                "is_positive_value_good": true,
-                "description": "Mount: Warhorse",
-                "key": "wh_main_effect_enable_mount_warhorse",
-                "value": 1
-              }
-            ],
-            "auto_unlock_at_rank": 5
-          }
-        ],
-        "character_skill_key": "wh3_main_skill_cth_lord_magistrate_mount_warhorse",
         "tier": 2,
         "indent": 0,
         "points_on_creation": 0,
@@ -250,6 +250,34 @@
         "visible_in_ui": true
       },
       {
+        "key": "wh3_main_skill_node_cth_lord_caravan_master_generic_2",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Ranged Discipline",
+        "description": "The best way to repel the chaotic flurry of missile fire is to meet it with order, discipline, and a stalwart row of shields.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "resistance_missile.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 10%",
+                "key": "wh_main_effect_character_stat_missile_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_cth_all_unique_missile_resist",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
         "key": "wh3_main_skill_node_cth_lord_caravan_master_generic_3",
         "image_path": "character_wound_time.png",
         "is_background_skill": false,
@@ -271,7 +299,7 @@
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
-        "tier": 5,
+        "tier": 6,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -432,10 +460,6 @@
                 "key": "wh3_main_effect_ability_enable_inspired_assault_i",
                 "value": 1
               }
-            ],
-            "blocks_character_skill_key": [
-              "wh3_main_skill_cth_lord_magistrate_self_inspired_defence",
-              "wh3_main_skill_cth_lord_magistrate_self_inspired_marksmanship"
             ]
           },
           {
@@ -656,10 +680,6 @@
                 "key": "wh3_main_effect_ability_enable_inspired_defence_i",
                 "value": 1
               }
-            ],
-            "blocks_character_skill_key": [
-              "wh3_main_skill_cth_lord_magistrate_self_inspired_assault",
-              "wh3_main_skill_cth_lord_magistrate_self_inspired_marksmanship"
             ]
           },
           {
@@ -894,10 +914,6 @@
                 "key": "wh3_main_effect_ability_enable_inspired_marksmanship_i",
                 "value": 1
               }
-            ],
-            "blocks_character_skill_key": [
-              "wh3_main_skill_cth_lord_magistrate_self_inspired_assault",
-              "wh3_main_skill_cth_lord_magistrate_self_inspired_defence"
             ]
           },
           {
@@ -1141,7 +1157,6 @@
         ]
       }
     ],
-    [],
     [
       {
         "key": "wh3_main_skill_node_cth_lord_caravan_master_combat_0",
@@ -1165,7 +1180,7 @@
         ],
         "character_skill_key": "wh_main_skill_all_all_self_hard_to_hit_starter",
         "tier": 0,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1205,7 +1220,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_devastating_charge",
         "tier": 1,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1248,7 +1263,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_full_plate_armour",
         "tier": 2,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1291,7 +1306,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_scarred_veteran",
         "tier": 3,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1334,7 +1349,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_deadly_blade",
         "tier": 4,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1413,7 +1428,7 @@
         ],
         "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
         "tier": 5,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 4,
         "visible_in_ui": true,
@@ -1459,7 +1474,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_wound-maker",
         "tier": 6,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1502,7 +1517,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_master",
         "tier": 7,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1545,7 +1560,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_self_indomitable",
         "tier": 8,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1588,7 +1603,7 @@
         ],
         "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_shield",
         "tier": 9,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
@@ -1686,7 +1701,7 @@
         ],
         "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
         "tier": 10,
-        "indent": 3,
+        "indent": 2,
         "points_on_creation": 0,
         "required_num_parents": 4,
         "visible_in_ui": true,
@@ -1698,6 +1713,7 @@
         ]
       }
     ],
+    [],
     [
       {
         "key": "wh3_main_skill_node_cth_lord_caravan_master_army_0",
@@ -2052,9 +2068,9 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +4% for Wu Xing War Compass and Terracotta Sentinel units",
+                "description": "Weapon strength: +8% for Wu Xing War Compass and Terracotta Sentinel units",
                 "key": "wh3_main_effect_force_stat_weapon_strength_cth_compass_terracotta_sentinel",
-                "value": 4
+                "value": 8
               }
             ]
           },
@@ -2263,12 +2279,20 @@
                 "value": 6
               },
               {
-                "icon": "charge.png",
-                "priority": 502,
+                "icon": "defence.png",
+                "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +18% for Peasant Long Spearmen, Celestial Dragon Guard, Jade Warriors and Jade Warriors (Halberds) units (Rank 7 and above)",
-                "key": "wh3_main_effect_force_stat_charge_bonus_pct_cth_infantry_rank7",
-                "value": 18
+                "description": "Melee defence: +5 for Peasant Long Spearmen, Celestial Dragon Guard, Jade Warriors and Jade Warriors (Halberds) units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_melee_defence_cth_infantry_rank7",
+                "value": 5
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 10% for Peasant Long Spearmen, Celestial Dragon Guard, Jade Warriors and Jade Warriors (Halberds) units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_magic_resistance_cth_infantry_rank7",
+                "value": 10
               }
             ]
           }
@@ -2293,6 +2317,14 @@
         "levels": [
           {
             "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 542,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Peasant Archers, Celestial Dragon Crossbowmen, Jade Warrior Crossbowmen, Iron Hail Gunners, Crane Gunners, Grand Cannon and Fire Rain Rocket units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_damage_cth_ranged_rank7",
+                "value": 6
+              },
               {
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
@@ -2341,8 +2373,16 @@
                 "value": 10
               },
               {
+                "icon": "melee.png",
+                "priority": 432,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Peasant Horsemen, Jade Lancers, Great Longma Riders, Terracotta Sentinel and Wu Xing War Compass units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_melee_attack_cth_cavalry_rank7",
+                "value": 5
+              },
+              {
                 "icon": "resistance_physical.png",
-                "priority": 581,
+                "priority": 582,
                 "is_positive_value_good": true,
                 "description": "Physical resistance: 10% for Peasant Horsemen, Jade Lancers, Great Longma Riders, Terracotta Sentinel and Wu Xing War Compass units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_physical_resistance_cth_cavalry_rank7",
@@ -2378,6 +2418,14 @@
                 "description": "Leadership: +6 for Sky Lantern and Sky-junk units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_leadership_cth_flyers_rank7",
                 "value": 6
+              },
+              {
+                "icon": "accuracy.png",
+                "priority": 532,
+                "is_positive_value_good": true,
+                "description": "Range: +15% for Sky Lantern and Sky-junk units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_range_cth_flyers_rank7",
+                "value": 15
               },
               {
                 "icon": "resistance_missile.png",

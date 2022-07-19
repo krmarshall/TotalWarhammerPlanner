@@ -261,20 +261,20 @@
           {
             "effects": [
               {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 12
+              },
+              {
                 "icon": "charge_character.png",
                 "priority": 200,
                 "is_positive_value_good": true,
                 "description": "Charge bonus: +20",
                 "key": "wh_main_effect_character_stat_charge_bonus_add",
                 "value": 20
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 461,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +12%",
-                "key": "wh_main_effect_force_stat_weapon_strength",
-                "value": 12
               },
               {
                 "icon": "general_ability.png",
@@ -5194,9 +5194,274 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc16_skill_node_wef_drycha_item_1",
+      "image_path": "item_armour.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "diplomacy.png",
+              "priority": 5,
+              "is_positive_value_good": true,
+              "description": "Diplomatic relations: -50 with Bretonnia",
+              "value": -50,
+              "key": "wh_dlc05_faction_political_diplomacy_mod_bretonnia"
+            },
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +10% when increasing",
+              "value": 10,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Spell resistance: 12%",
+              "value": 12,
+              "key": "wh_main_effect_character_stat_magic_resistance"
+            },
+            {
+              "icon": "resistance_ward_save.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Ward save: 12%",
+              "value": 12,
+              "key": "wh_main_effect_character_stat_ward_save"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc16_skill_node_set_wef_drycha",
+      "character_skill_key": "stompies_skill_armour_bretonnian_artefacts",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc16_skill_node_wef_drycha_item_2",
+      "image_path": "item_weapon.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_piercing_character.png",
+              "priority": 170,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing weapon damage: +100",
+              "value": 100,
+              "key": "wh_main_effect_character_stat_ap_damage"
+            },
+            {
+              "icon": "bonus_vs_small_character.png",
+              "priority": 180,
+              "is_positive_value_good": true,
+              "description": "Bonus vs Infantry: +12",
+              "value": 12,
+              "key": "wh_main_effect_character_stat_bonus_vs_infantry"
+            },
+            {
+              "icon": "bonus_vs_large_character.png",
+              "priority": 190,
+              "is_positive_value_good": true,
+              "description": "Bonus vs Large: +12",
+              "value": 12,
+              "key": "wh_main_effect_character_stat_bonus_vs_large"
+            }
+          ],
+          "auto_unlock_at_rank": 8
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc16_skill_node_set_wef_drycha",
+      "character_skill_key": "stompies_skill_weapon_impaling_thorns",
+      "tier": 45,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc16_skill_node_wef_drycha_item_3",
+      "image_path": "item_enchanted_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "resistance_missile.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Missile resistance: +10% for Drycha, Dryads, Tree Kin and Treeman units",
+              "value": 10,
+              "key": "stompies_effect_wef_tree_missile_resist"
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 2,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: +10% for Drycha, Dryads, Tree Kin and Treeman units",
+              "value": 10,
+              "key": "stompies_effect_wef_tree_physical_resist"
+            },
+            {
+              "icon": "replenishment.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Casualty replenishment: +5% for Drycha, Dryads, Tree Kin and Treeman units",
+              "value": 5,
+              "key": "stompies_effect_wef_tree_replenish"
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Enemy Hero action success chance: -10%",
+              "value": -10,
+              "key": "wh_main_effect_agent_action_success_chance_enemy"
+            }
+          ],
+          "auto_unlock_at_rank": 12
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc16_skill_node_set_wef_drycha",
+      "character_skill_key": "stompies_skill_enchanted_moss_spirit",
+      "tier": 46,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc16_skill_node_wef_drycha_item_4",
+      "image_path": "item_arcane_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_cooldown.png",
+              "priority": 60,
+              "is_positive_value_good": false,
+              "description": "Cooldown: -10% to all spells",
+              "value": -10,
+              "key": "wh2_dlc12_effect_magic_cooldown_all_lores"
+            },
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +10% when increasing",
+              "value": 10,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -10%",
+              "value": -10,
+              "key": "wh_main_effect_character_stat_miscast"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Item ability: \"Ancient Strength\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_ancient_strength",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_ancient_strength",
+                    "icon_name": "wh2_dlc13_unit_abilities_blinding_radiance",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Ancient Strength",
+                    "num_uses": 1,
+                    "active_time": 30,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 30,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 1.4,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x1.4 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_ancient_strength"
+            }
+          ],
+          "auto_unlock_at_rank": 16
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc16_skill_node_set_wef_drycha",
+      "character_skill_key": "stompies_skill_arcane_elders_lichen",
+      "tier": 47,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ],
   "items": [
+    {
+      "key": "stompies_anc_armour_bretonnian_artefacts",
+      "type": "wh_main_anc_armour",
+      "effects": [],
+      "name": "Bretonnian Artefacts",
+      "description": "Southern Bretonnia was ravaged when an army of Forest Spirits rampaged across the lands surrounding Parravon.  Many valuable relics and artefacts were taken from La Chald Abbey and are now used to further Drycha's dangerous schemes.",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_armour.png"
+    },
     {
       "key": "wh2_dlc16_anc_enchanted_item_fang_of_taalroth",
       "type": "wh_main_anc_talisman",
@@ -5284,6 +5549,36 @@
       "unlocked_at_rank": 7,
       "instant": false,
       "image_path": "item_talisman.png"
+    },
+    {
+      "key": "stompies_anc_weapon_impaling_thorns",
+      "type": "wh_main_anc_weapon",
+      "effects": [],
+      "name": "Impaling Thorns",
+      "description": "All Dryads are shape shifters and capable of altering their forms, but Drycha is ancient and more skilled at changing her appearance.  She is capable of growing long and deadly thorns that are sharper than any sword.",
+      "unlocked_at_rank": 8,
+      "instant": true,
+      "image_path": "item_weapon.png"
+    },
+    {
+      "key": "stompies_anc_enchanted_moss_spirit",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [],
+      "name": "Moss Spirit",
+      "description": "A sentient moss grows on all of the Forest Spirits in Drycha's army.  The moss is incredibly thick and blunts incoming attacks, making the formidable Forest Spirits even more durable and lethal.",
+      "unlocked_at_rank": 12,
+      "instant": true,
+      "image_path": "item_enchanted_item.png"
+    },
+    {
+      "key": "stompies_anc_arcane_elders_lichen",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [],
+      "name": "Elder's Lichen",
+      "description": "The Elders are the oldest of the Treeman Ancients.  In the time before Chaos, there were hundreds of such beings, but only three remain.  This rare purple lichen is a favorite snack for Treemen and provides a mysterious power to those who can digest it.",
+      "unlocked_at_rank": 16,
+      "instant": true,
+      "image_path": "item_arcane_item.png"
     }
   ]
 }

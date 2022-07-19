@@ -143,7 +143,7 @@
                 "priority": 101,
                 "is_positive_value_good": false,
                 "description": "Vigour loss reduction: -15%",
-                "key": "wh_main_effect_force_stat_vigour_loss_reduction_large",
+                "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -15
               }
             ]
@@ -179,137 +179,6 @@
         ],
         "character_skill_key": "wh_main_skill_chs_all_unique_aura_of_chaos",
         "tier": 9,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "stompies_wh_main_skill_node_chs_archaon_item_1",
-        "image_path": "item_arcane_item.png",
-        "is_background_skill": false,
-        "name": "",
-        "description": "",
-        "levels": [
-          {
-            "unlocked_at_rank": 3,
-            "effects": [
-              {
-                "icon": "item_ability.png",
-                "priority": 8,
-                "is_positive_value_good": true,
-                "description": "Magic item drop chance: +10%",
-                "value": 10,
-                "key": "wh_main_effect_character_mod_ancillary_drop"
-              },
-              {
-                "icon": "magic_campaign.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +15% when increasing",
-                "value": 15,
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
-              },
-              {
-                "icon": "corruption_chaos.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +3",
-                "value": 3,
-                "key": "wh3_main_effect_corruption_chaos_characters"
-              },
-              {
-                "icon": "magic_cooldown_character.png",
-                "priority": 293,
-                "is_positive_value_good": false,
-                "description": "Cooldown: -15% to spells",
-                "value": -15,
-                "key": "wh2_main_effect_ability_cooldown_spells"
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 294,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Fireball\"",
-                "value": -1,
-                "key": "wh2_main_effect_ability_wom_cost_fireball"
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 295,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -2 for \"Fireball Upgraded\"",
-                "value": -2,
-                "key": "wh2_main_effect_ability_wom_cost_fireball_upgraded"
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 298,
-                "is_positive_value_good": false,
-                "description": "Miscast base chance: -15%",
-                "value": -15,
-                "key": "wh_main_effect_character_stat_miscast"
-              },
-              {
-                "icon": "item_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Daemonic Teachings\"",
-                "related_abilities": [
-                  {
-                    "effect": "stompies_effect_ability_daemonic_teachings",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "stompies_ability_daemonic_teachings",
-                      "icon_name": "wh_dlc08_nor_apocalyptic_charge",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment_of_the_winds",
-                        "icon_path": "icon_spell_augment_of_the_winds.png",
-                        "description": "Augment of the Winds"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Daemonic Teachings",
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "mana_regen_mod": 0.6,
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_spell_mastery",
-                              "how": "mult",
-                              "description": "x1.1Spell Mastery",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "stompies_effect_ability_daemonic_teachings"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": false,
-        "character_skill_key": "stompies_skill_arcane_daemon_familiar",
-        "tier": 44,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -4955,9 +4824,151 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_main_skill_node_chs_archaon_item_1",
+      "image_path": "item_arcane_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "item_ability.png",
+              "priority": 8,
+              "is_positive_value_good": true,
+              "description": "Magic item drop chance: +10%",
+              "value": 10,
+              "key": "wh_main_effect_character_mod_ancillary_drop"
+            },
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +15% when increasing",
+              "value": 15,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "corruption_chaos.png",
+              "priority": 104,
+              "is_positive_value_good": true,
+              "description": "Chaos Undivided corruption: +3",
+              "value": 3,
+              "key": "wh3_main_effect_corruption_chaos_characters"
+            },
+            {
+              "icon": "magic_cooldown_character.png",
+              "priority": 293,
+              "is_positive_value_good": false,
+              "description": "Cooldown: -15% to spells",
+              "value": -15,
+              "key": "wh2_main_effect_ability_cooldown_spells"
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 294,
+              "is_positive_value_good": false,
+              "description": "Winds of Magic cost: -1 for \"Fireball\"",
+              "value": -1,
+              "key": "wh2_main_effect_ability_wom_cost_fireball"
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 295,
+              "is_positive_value_good": false,
+              "description": "Winds of Magic cost: -2 for \"Fireball Upgraded\"",
+              "value": -2,
+              "key": "wh2_main_effect_ability_wom_cost_fireball_upgraded"
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -15%",
+              "value": -15,
+              "key": "wh_main_effect_character_stat_miscast"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Daemonic Teachings\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_daemonic_teachings",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_daemonic_teachings",
+                    "icon_name": "wh_dlc08_nor_apocalyptic_charge",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment_of_the_winds",
+                      "icon_path": "icon_spell_augment_of_the_winds.png",
+                      "description": "Augment of the Winds"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Daemonic Teachings",
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "mana_regen_mod": 0.6,
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 1.1,
+                            "stat": "scalar_spell_mastery",
+                            "how": "mult",
+                            "description": "x1.1Spell Mastery",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_magical.webp"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_daemonic_teachings"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_main_skill_node_set_chs_archaon",
+      "character_skill_key": "stompies_skill_arcane_daemon_familiar",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ],
   "items": [
+    {
+      "key": "stompies_anc_arcane_daemon_familiar",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [],
+      "name": "MISSING LOC ENTRY",
+      "description": "MISSING LOC ENTRY",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_arcane_item.png"
+    },
     {
       "key": "wh_main_anc_weapon_the_slayer_of_kings",
       "type": "wh_main_anc_weapon",

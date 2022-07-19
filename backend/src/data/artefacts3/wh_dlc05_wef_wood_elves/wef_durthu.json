@@ -76,11 +76,11 @@
             "unlocked_at_rank": 10,
             "effects": [
               {
-                "icon": "icon_stat_reload_time_character.png",
-                "priority": 260,
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 560,
                 "is_positive_value_good": true,
                 "description": "Reload time reduction: +8%",
-                "key": "wh_main_effect_character_stat_reload_time_reduction",
+                "key": "wh_main_effect_force_stat_reload_time_reduction",
                 "value": 8
               }
             ]
@@ -547,7 +547,7 @@
                 "priority": 101,
                 "is_positive_value_good": false,
                 "description": "Vigour loss reduction: -33%",
-                "key": "wh_main_effect_force_stat_vigour_loss_reduction_large",
+                "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -33
               },
               {
@@ -5186,9 +5186,287 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_wef_durthu_item_1",
+      "image_path": "item_armour.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_character.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Armour: +25",
+              "value": 25,
+              "key": "wh_main_effect_character_stat_armour"
+            },
+            {
+              "icon": "resistance_fire.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Fire resistance: 10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_fire_resistance"
+            },
+            {
+              "icon": "resistance_missile.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Missile resistance: 10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_missile_resistance"
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_physical_resistance"
+            },
+            {
+              "icon": "mass.png",
+              "priority": 430,
+              "is_positive_value_good": true,
+              "description": "Unit mass: +10%",
+              "value": 10,
+              "key": "wh3_main_effect_force_stat_unit_mass_percentage_mod"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_durthu",
+      "character_skill_key": "stompies_skill_armour_stone_armour",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_wef_durthu_item_2",
+      "image_path": "item_talisman.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "health_character.png",
+              "priority": 90,
+              "is_positive_value_good": true,
+              "description": "Hit points: +20%",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_unit_health"
+            },
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": false,
+              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
+              "value": -10,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy"
+            },
+            {
+              "icon": "battle_movement_character.png",
+              "priority": 120,
+              "is_positive_value_good": true,
+              "description": "Speed: +20%",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_speed"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Item ability: \"Nature's Wrath\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_natures_wrath",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_natures_wrath",
+                    "icon_name": "wh_dlc05_spell_life_the_dwellers_below",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Nature's Wrath",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc03_spell_upgraded_speed_reduction",
+                        "sort_order": 1,
+                        "effect_state": "magic",
+                        "description": "Greater effect on speed"
+                      },
+                      {
+                        "key": "wh_main_all_direct_damage_high",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes severe damage to combatants"
+                      },
+                      {
+                        "key": "wh_dlc08_direct_damage_character_unit",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Strong vs character"
+                      },
+                      {
+                        "key": "wh2_main_all_huge_static_aoe",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Huge explosion area"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
+                        "effect_state": "negative",
+                        "description": "Weak vs a single combatant"
+                      }
+                    ],
+                    "num_uses": 2,
+                    "active_time": 15,
+                    "recharge_time": 75,
+                    "wind_up_time": 5,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
+                    "target_self": false
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_natures_wrath"
+            }
+          ],
+          "auto_unlock_at_rank": 8
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_durthu",
+      "character_skill_key": "stompies_skill_talisman_waystone_talisman",
+      "tier": 45,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_wef_durthu_item_3",
+      "image_path": "item_enchanted_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 160,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_weapon_strength"
+            },
+            {
+              "icon": "charge_character.png",
+              "priority": 200,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +20",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_charge_bonus_add"
+            }
+          ],
+          "auto_unlock_at_rank": 12
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_durthu",
+      "character_skill_key": "stompies_skill_enchanted_raging_vines",
+      "tier": 46,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_dlc05_skill_node_wef_durthu_item_4",
+      "image_path": "item_arcane_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +25% when increasing",
+              "value": 25,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "corruption.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Corruption: +5",
+              "value": 5,
+              "key": "wh3_main_effect_corruption_reduction_characters"
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -25%",
+              "value": -25,
+              "key": "wh_main_effect_character_stat_miscast"
+            }
+          ],
+          "auto_unlock_at_rank": 16
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_dlc05_skill_node_set_wef_durthu",
+      "character_skill_key": "stompies_skill_arcane_staff_of_ancient_oak",
+      "tier": 47,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ],
   "items": [
+    {
+      "key": "stompies_anc_armour_stone_armour",
+      "type": "wh_main_anc_armour",
+      "effects": [],
+      "name": "Stone Armour",
+      "description": "Eager to destroy all his enemies, Durthu dug up the petrified remnants of ancient Elders and grafted the remains to his body.  No longer a healer or teacher; only a macabre warrior remains.",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_armour.png"
+    },
     {
       "key": "wh_dlc05_anc_weapon_daiths_sword",
       "type": "wh_main_anc_weapon",
@@ -5313,6 +5591,36 @@
       "unlocked_at_rank": 7,
       "instant": false,
       "image_path": "item_weapon.png"
+    },
+    {
+      "key": "stompies_anc_talisman_waystone_talisman",
+      "type": "wh_main_anc_talisman",
+      "effects": [],
+      "name": "Waystone Talisman",
+      "description": "The Waystones of Athel Loren contain the wild lands within, but the great trees are always straining to escape the magic barrier.  This talisman captures the spirit of the forest, invigorating Durthu and allowing him to unleash the stored power.",
+      "unlocked_at_rank": 8,
+      "instant": true,
+      "image_path": "item_talisman.png"
+    },
+    {
+      "key": "stompies_anc_enchanted_raging_vines",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [],
+      "name": "Raging Vines",
+      "description": "After the collapse of the Great Polar Gates, Chaos swept across the world.  Athel Loren's forest spirits became aggressive and cruel in order to battle the invading daemons.  Enraged vines wrapped around Durthu's body to add their strength to his.",
+      "unlocked_at_rank": 12,
+      "instant": true,
+      "image_path": "item_enchanted_item.png"
+    },
+    {
+      "key": "stompies_anc_arcane_staff_of_ancient_oak",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [],
+      "name": "Staff of the Ancient Oak",
+      "description": "Thousands of years ago, Daith, the most celebrated of all Elven smiths, took a branch from the Oak of Ages and carved a magic staff.  He gifted the staff to Durthu in an attempt to calm the mighty Elder's wrath.",
+      "unlocked_at_rank": 16,
+      "instant": true,
+      "image_path": "item_arcane_item.png"
     }
   ]
 }

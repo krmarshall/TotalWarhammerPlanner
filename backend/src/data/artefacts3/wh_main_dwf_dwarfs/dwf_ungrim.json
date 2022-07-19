@@ -78,7 +78,7 @@
                 "priority": 101,
                 "is_positive_value_good": false,
                 "description": "Vigour loss reduction: -15%",
-                "key": "wh_main_effect_force_stat_vigour_loss_reduction_large",
+                "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -15
               }
             ]
@@ -142,108 +142,6 @@
         ],
         "character_skill_key": "wh_main_skill_dwf_all_unique_rune_of_grimnir",
         "tier": 7,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "stompies_wh_main_skill_node_dwf_ungrim_item_1",
-        "image_path": "item_enchanted_item.png",
-        "is_background_skill": false,
-        "name": "Oath-Bound Gauntlets",
-        "description": "",
-        "levels": [
-          {
-            "unlocked_at_rank": 3,
-            "effects": [
-              {
-                "icon": "battle_movement_character.png",
-                "priority": 120,
-                "is_positive_value_good": true,
-                "description": "Speed: +20%",
-                "value": 20,
-                "key": "wh_main_effect_character_stat_speed"
-              },
-              {
-                "icon": "bonus_vs_large_character.png",
-                "priority": 190,
-                "is_positive_value_good": true,
-                "description": "Bonus vs Large: +30",
-                "value": 30,
-                "key": "wh_main_effect_character_stat_bonus_vs_large"
-              },
-              {
-                "icon": "charge_character.png",
-                "priority": 200,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +30",
-                "value": 30,
-                "key": "wh_main_effect_character_stat_charge_bonus_add"
-              },
-              {
-                "icon": "item_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Unkillable\"",
-                "related_abilities": [
-                  {
-                    "effect": "stompies_effect_ability_unkillable",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "stompies_ability_unkillable",
-                      "icon_name": "wh_magic_item_passive_enchanted",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_regeneration",
-                        "icon_path": "icon_spell_regeneration.png",
-                        "description": "Regeneration"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Unkillable",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc06_automatic",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Activates automatically when conditions are met"
-                        },
-                        {
-                          "key": "wh_main_all_replenish",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Replenishes hit points of combatants"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "value": 1,
-                "key": "stompies_effect_ability_unkillable"
-              }
-            ]
-          }
-        ],
-        "use_quest_for_prefix": false,
-        "character_skill_key": "stompies_skill_enchanted_oathbound_gauntlets",
-        "tier": 44,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -2842,9 +2740,122 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh_main_skill_node_dwf_ungrim_item_1",
+      "image_path": "item_enchanted_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "battle_movement_character.png",
+              "priority": 120,
+              "is_positive_value_good": true,
+              "description": "Speed: +20%",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_speed"
+            },
+            {
+              "icon": "bonus_vs_large_character.png",
+              "priority": 190,
+              "is_positive_value_good": true,
+              "description": "Bonus vs Large: +30",
+              "value": 30,
+              "key": "wh_main_effect_character_stat_bonus_vs_large"
+            },
+            {
+              "icon": "charge_character.png",
+              "priority": 200,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +30",
+              "value": 30,
+              "key": "wh_main_effect_character_stat_charge_bonus_add"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Unkillable\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_unkillable",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_unkillable",
+                    "icon_name": "wh_magic_item_passive_enchanted",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_regeneration",
+                      "icon_path": "icon_spell_regeneration.png",
+                      "description": "Regeneration"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Unkillable",
+                    "ui_effects": [
+                      {
+                        "key": "wh_dlc06_automatic",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Activates automatically when conditions are met"
+                      },
+                      {
+                        "key": "wh_main_all_replenish",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Replenishes hit points of combatants"
+                      }
+                    ],
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null
+                      }
+                    ]
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_unkillable"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh_main_skill_node_set_dwf_ungrim",
+      "character_skill_key": "stompies_skill_enchanted_oathbound_gauntlets",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ],
   "items": [
+    {
+      "key": "stompies_anc_enchanted_oathbound_gauntlets",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [],
+      "name": "Oath-Bound Gauntlets",
+      "description": "Ungrim bears the burden of the unfulfilled vow made by his ancestor, King Baragor, who took the name Ungrim, meaning \"oath-bound\" or \"unfulfilled oath\".  By tradition, every king of the Ironfist line takes the Slayer Oath and is granted these powerful gauntlets.",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_enchanted_item.png"
+    },
     {
       "key": "wh_main_anc_armour_the_slayer_crown",
       "type": "wh_main_anc_armour",
