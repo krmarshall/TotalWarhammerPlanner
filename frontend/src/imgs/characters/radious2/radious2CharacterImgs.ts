@@ -36,9 +36,9 @@ const radious2CharacterImgs = {
   tmb_liche_high_priest_nehekhara: rdsTmbLicheHighPriest,
   vpr_herald_of_mathlann: rdsCstHeraldOfMathlann,
   vpr_strigoi: rdsCstStrigoi,
-  wef_wood_seer_death: placeholder,
-  wef_wood_seer_heavens: placeholder,
-  wef_wood_seer_light: placeholder,
+  wef_wood_seer_death: rdsWefMaleSpellweaver,
+  wef_wood_seer_heavens: rdsWefMaleSpellweaver,
+  wef_wood_seer_light: rdsWefMaleSpellweaver,
 };
 
 export default radious2CharacterImgs;
