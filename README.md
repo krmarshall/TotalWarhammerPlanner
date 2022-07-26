@@ -17,7 +17,6 @@ npm run dev - Runs both frontend and backend in dev mode, reloading on any saved
 npm run start - Installs and builds the frontend into the backend ./public/ folder, then installs and builds the backend from typescript and runs the server.
 
 ## Known Issues
-- Radious 2 needs a look over for portraits, names, spellLores, general bugs.
 - Work on overall page style
 
 ## Adding A Mod

@@ -15,9 +15,9 @@ const FactionSelector = () => {
   return (
     <div className="justify-self-center">
       <div className="flex flex-row place-content-center w-[80vw] mx-auto mt-2">
-        <hr className="w-full mt-[1.25rem] opacity-50" />
-        <h1 className="text-center text-4xl mx-2 text-gray-200 text-shadow">Factions</h1>
-        <hr className="w-full mt-[1.25rem] opacity-50" />
+        <hr className="grow mt-[1.25rem] opacity-50" />
+        <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Factions</h1>
+        <hr className="grow mt-[1.25rem] opacity-50" />
       </div>
       <ul className="flex flex-row flex-wrap justify-center ">
         {currentGameFactions?.map((factionKey) => {
