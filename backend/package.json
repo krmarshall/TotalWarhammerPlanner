@@ -5,7 +5,7 @@
   "main": "./src/start.ts",
   "scripts": {
     "prodW": "tsc && SET NODE_ENV=production&&node ./dist/start.js",
-    "prod": "tsc && NODE_ENV=production node ./dist/start.js",
+    "prod": "tsc && NODE_ENV=production node --max-old-space-size=1024 ./dist/start.js",
     "start": "tsc && node ./dist/start.js",
     "dev": "tsnd ./src/start.ts",
     "lint": "eslint ./src/",
