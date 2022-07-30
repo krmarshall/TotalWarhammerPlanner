@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { Suspense, useContext } from 'react';
 import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
@@ -35,7 +35,9 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   return (
     <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
       <div className="flex flex-row drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
-        <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
+        <Suspense fallback={<div className={imgClassName}></div>}>
+          <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
+        </Suspense>
 
         <div className="flex flex-col justify-center">
           <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>

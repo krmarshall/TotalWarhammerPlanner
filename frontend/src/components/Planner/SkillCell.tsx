@@ -1,4 +1,4 @@
-import { MouseEvent, useContext, useEffect, useState } from 'react';
+import { MouseEvent, Suspense, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { skillIncreaseIsValid, isValidSkillTree } from '../../utils/skillVerification';
@@ -312,7 +312,9 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
                 height="72"
               />
             )}
-            <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
+            <Suspense fallback={<div className={imgClassName}></div>}>
+              <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
+            </Suspense>
 
             <div className="flex flex-col justify-center">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>

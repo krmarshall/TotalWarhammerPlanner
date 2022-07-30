@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { Suspense, useContext } from 'react';
 import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { AbilityInterface, ItemInterface } from '../../types/interfaces/CharacterInterface';
@@ -54,14 +54,17 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
       }
     >
       <div className="flex flex-row w-max rounded-lg drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
-        <img
-          src={src}
-          className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
-          draggable={false}
-          alt="itemIcon"
-          width="64"
-          height="64"
-        />
+        <Suspense fallback={<div className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"></div>}>
+          <img
+            src={src}
+            className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
+            draggable={false}
+            alt="itemIcon"
+            width="64"
+            height="64"
+          />
+        </Suspense>
+
         <div className="flex flex-col justify-center">
           <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{item.name}</h2>
         </div>

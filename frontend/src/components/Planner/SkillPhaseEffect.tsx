@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { Suspense, useContext } from 'react';
 import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { StatEffectInterface } from '../../types/interfaces/CharacterInterface';
@@ -18,7 +18,10 @@ const SkillPhaseEffect = ({ effect }: PropInterface) => {
   });
   return (
     <div className="flex flex-row flex-nowrap">
-      <img src={src} className="w-6 h-6" alt={`${effect.stat} icon`} width="32" height="32" />
+      <Suspense fallback={<div className="w-6 h-6"></div>}>
+        <img src={src} className="w-6 h-6" alt={`${effect.stat} icon`} width="32" height="32" />
+      </Suspense>
+
       <p className="text-lg whitespace-pre-wrap ml-6">{effect.description}</p>
     </div>
   );

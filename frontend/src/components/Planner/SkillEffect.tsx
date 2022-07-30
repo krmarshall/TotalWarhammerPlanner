@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { Suspense, useContext } from 'react';
 import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillEffectInterface } from '../../types/interfaces/CharacterInterface';
@@ -28,7 +28,10 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   });
   return (
     <div className="flex flex-row flex-nowrap">
-      <img src={src} className="w-6 h-6" alt={`${skillEffect.key} icon`} width="32" height="32" />
+      <Suspense fallback={<div className="w-6 h-6"></div>}>
+        <img src={src} className="w-6 h-6" alt={`${skillEffect.key} icon`} width="32" height="32" />
+      </Suspense>
+
       <div className="flex flex-col justify-center ml-1 text-left max-w-fit min-w-[18vw]">
         <p className={goodBadEffectClassName}>{skillEffect.description}</p>
       </div>
