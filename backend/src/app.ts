@@ -13,7 +13,7 @@ const app = express();
 
 const origin =
   process.env.NODE_ENV === 'production'
-    ? 'https://totalwarhammerplanner.ca'
+    ? 'https://totalwarhammerplanner.com'
     : ['http://localhost:5000', 'http://localhost:3000'];
 
 initializeData();
