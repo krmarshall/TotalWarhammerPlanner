@@ -1,6 +1,6 @@
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
-const path = import.meta.env.DEV ? 'http://localhost:5000/api' : 'http://localhost:5000/api';
+const path = import.meta.env.DEV ? 'http://localhost:5000/api' : 'https://totalwarhammerplanner.com/api';
 
 const api = {
   getCharacterSkillTree: (gameKey: string, factionKey: string, characterKey: string): Promise<CharacterInterface> => {
