@@ -36,7 +36,7 @@ app.get('/api/:gameKey.:factionKey.:characterKey', apiListener);
 // Serve static front end HTML/JS/Images
 app.use(
   express.static('public', {
-    maxAge: '1m',
+    maxAge: '1y',
     setHeaders: setCustomCacheControl,
   })
 );

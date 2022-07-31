@@ -1,4 +1,4 @@
-import { MouseEvent, Suspense, useContext, useEffect, useState } from 'react';
+import { MouseEvent, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { skillIncreaseIsValid, isValidSkillTree } from '../../utils/skillVerification';
@@ -264,6 +264,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       `/imgs/${selectedMod}/campaign_ui/skills/${imagePath.replace('_active', '')}`,
       `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
     ],
+    useSuspense: false,
   });
   let imgClassName = 'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg';
   if (src?.includes('/battle_ui/ability_icons/')) {
@@ -312,9 +313,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
                 height="72"
               />
             )}
-            <Suspense fallback={<div className={imgClassName}></div>}>
-              <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
-            </Suspense>
+            <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
             <div className="flex flex-col justify-center">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>

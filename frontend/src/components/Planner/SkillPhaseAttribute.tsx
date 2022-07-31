@@ -1,4 +1,4 @@
-import { Suspense, useContext } from 'react';
+import {  useContext } from 'react';
 import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { AttributeInterface } from '../../types/interfaces/CharacterInterface';
@@ -20,12 +20,11 @@ const SkillPhaseAttribute = ({ attribute, index }: PropInterface) => {
       `/imgs/${selectedMod}/battle_ui/ability_icons/${attribute.key}.webp`,
       `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${attribute.key}.webp`,
     ],
+    useSuspense: false,
   });
   return (
     <div key={index} className="flex flex-row flex-nowrap">
-      <Suspense fallback={<div className="w-6 h-6"></div>}>
-        <img src={src} className="w-6 h-6" alt={`${attribute.key} icon`} width="32" height="32" />
-      </Suspense>
+      <img src={src} className="w-6 h-6" alt={`${attribute.key} icon`} width="32" height="32" />
 
       <p className="text-lg whitespace-pre-wrap ml-6">{attribute.description}</p>
     </div>

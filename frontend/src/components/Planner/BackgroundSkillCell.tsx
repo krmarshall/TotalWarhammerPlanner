@@ -1,4 +1,4 @@
-import { Suspense, useContext } from 'react';
+import { useContext } from 'react';
 import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
@@ -25,6 +25,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
       `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${imagePath}`,
       `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
     ],
+    useSuspense: false,
   });
   let imgClassName = 'w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto';
   if (src?.includes('/battle_ui/ability_icons/')) {
@@ -35,9 +36,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   return (
     <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
       <div className="flex flex-row drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
-        <Suspense fallback={<div className={imgClassName}></div>}>
-          <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
-        </Suspense>
+        <img src={src} className={imgClassName} draggable={false} alt="skillIcon" width="64" height="64" />
 
         <div className="flex flex-col justify-center">
           <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>
