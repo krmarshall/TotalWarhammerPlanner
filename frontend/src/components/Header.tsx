@@ -49,7 +49,12 @@ const Header = () => {
             className="z-20 flex flex-col place-content-end m-auto mt-2 -mb-48 w-[14.5rem] h-[9.5rem] bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
             onClick={gameChangeHandler}
           >
-            <img src={imgSrc} className="drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]" draggable={false} />
+            <img
+              src={imgSrc}
+              alt="Game Toggle"
+              className="drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+              draggable={false}
+            />
             <h1 className="z-10 text-center text-3xl -mt-8 mb-4 text-gray-200 text-shadow-border">Toggle Game</h1>
           </div>
         ) : location.pathname === '/about' || location.pathname === '/issues' ? (
@@ -60,6 +65,7 @@ const Header = () => {
               src={imgSrc}
               className="w-[9.5rem] h-[9.5rem] drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
               draggable={false}
+              alt="Character Portrait"
             />
           </div>
         )}

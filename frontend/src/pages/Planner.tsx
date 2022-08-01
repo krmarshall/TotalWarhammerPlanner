@@ -141,7 +141,7 @@ const Planner = () => {
                 className="flex flex-row place-content-center my-auto px-1.5 bg-gray-500 hover:bg-gray-400 border rounded-xl drop-shadow-lg"
                 onClick={() => navigate('/')}
               >
-                <img src={backIcon} width="45" height="45" className="my-auto w-8 h-8" draggable={false} />
+                <img src={backIcon} alt="Back" width="45" height="45" className="my-auto w-8 h-8" draggable={false} />
                 <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Home</p>
               </button>
             </div>
@@ -151,14 +151,14 @@ const Planner = () => {
                 className="flex flex-row place-content-center mr-4 my-auto px-2 bg-blue-600 hover:bg-blue-500 border rounded-xl drop-shadow-lg"
                 onClick={shareButtonHandler}
               >
-                <img src={shareIcon} width="20" height="20" className="my-auto w-5 h-5" draggable={false} />
+                <img src={shareIcon} alt="Share" width="20" height="20" className="my-auto w-5 h-5" draggable={false} />
                 <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Share</p>
               </button>
               <button
                 className="flex flex-row place-content-center mr-4 px-2 my-auto bg-gray-500 hover:bg-gray-400 border rounded-xl drop-shadow-lg"
                 onClick={resetButtonHandler}
               >
-                <img src={resetIcon} width="20" height="20" className="my-auto w-6 h-6" draggable={false} />
+                <img src={resetIcon} alt="reset" width="20" height="20" className="my-auto w-6 h-6" draggable={false} />
                 <p className="text-center text-gray-200 text-2xl px-0.5">Reset</p>
               </button>
               {effectiveRank <= rankLimit ? (

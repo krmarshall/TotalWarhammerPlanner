@@ -13,6 +13,7 @@ const apiListener = (req: Request, res: Response) => {
 
 // If (when) all the skill trees get too large to reasonable hold in memory consider reading from file instead.
 // About half the requests/sec but can be improved a bit if you memoize the readFile.
+// SANITIZE USER INPUT IF USING THIS
 // const apiListener = (req: Request, res: Response) => {
 //   //const selectedCharacter = bulkData[req.params.gameKey]?.[req.params.factionKey]?.[req.params.characterKey];
 //   readFile(`./src/data/${req.params.gameKey}/${req.params.factionKey}/${req.params.characterKey}.json`, 'utf-8')
