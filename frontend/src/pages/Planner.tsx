@@ -135,7 +135,7 @@ const Planner = () => {
         <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
         <Fragment>
-          <div className="h-[6vh] flex flex-row place-content-between">
+          <div className="h-[8.5vh] flex flex-row place-content-between">
             <div className="w-[20vw] flex place-content-start">
               <button
                 className="flex flex-row place-content-center my-auto px-1.5 bg-gray-500 hover:bg-gray-400 border rounded-xl drop-shadow-lg"
@@ -171,7 +171,7 @@ const Planner = () => {
             </div>
           </div>
           <div
-            className="h-[56vh] pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+            className="h-[57vh] pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"
             onWheel={(event) => {
               horizontalScroll(event);
@@ -186,7 +186,7 @@ const Planner = () => {
               </tbody>
             </table>
           </div>
-          <div className="h-[20vh] flex flex-row place-content-around mt-4">
+          <div className="h-[17.5vh] flex flex-row place-content-around mt-4">
             {state.characterData?.items && state.characterData?.items.length > 0 && <CharacterItems />}
             {state.characterData.backgroundSkills && state.characterData.backgroundSkills.length > 0 && (
               <BackgroundSkills />

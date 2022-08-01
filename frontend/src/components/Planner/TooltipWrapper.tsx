@@ -25,7 +25,7 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
     placement,
     open,
     onOpenChange: setOpen,
-    middleware: [offset(20), flip(), shift({ padding: 8 })],
+    middleware: [offset(20), flip(), shift({ padding: 4, crossAxis: true })],
   });
 
   const { getReferenceProps, getFloatingProps } = useInteractions([useHover(context)]);

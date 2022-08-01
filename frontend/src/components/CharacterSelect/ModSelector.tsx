@@ -23,8 +23,8 @@ const ModSelector = () => {
   }, [selectedGame]);
 
   return (
-    <div className="justify-self-center">
-      <div className="flex flex-row place-content-center mt-16 w-[80vw]">
+    <div className="justify-self-center mt-[5rem]">
+      <div className="flex flex-row place-content-center w-[80vw]">
         <hr className="grow mt-[1.25rem] opacity-50" />
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Mods</h1>
         <hr className="grow mt-[1.25rem] opacity-50" />
