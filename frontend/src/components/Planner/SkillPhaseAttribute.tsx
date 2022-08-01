@@ -1,7 +1,7 @@
-import {  useContext } from 'react';
-import { useImage } from 'react-image';
+import { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { AttributeInterface } from '../../types/interfaces/CharacterInterface';
+import ReactImage from '../ReactImage';
 
 interface PropInterface {
   attribute: AttributeInterface;
@@ -13,18 +13,20 @@ const SkillPhaseAttribute = ({ attribute, index }: PropInterface) => {
   const { selectedMod, selectedGame } = state;
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
-  const { src } = useImage({
-    srcList: [
-      `/imgs/${selectedMod}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
-      `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
-      `/imgs/${selectedMod}/battle_ui/ability_icons/${attribute.key}.webp`,
-      `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${attribute.key}.webp`,
-    ],
-    useSuspense: false,
-  });
   return (
     <div key={index} className="flex flex-row flex-nowrap">
-      <img src={src} className="w-6 h-6" alt={`${attribute.key} icon`} width="32" height="32" />
+      <ReactImage
+        srcList={[
+          `/imgs/${selectedMod}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
+          `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
+          `/imgs/${selectedMod}/battle_ui/ability_icons/${attribute.key}.webp`,
+          `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${attribute.key}.webp`,
+        ]}
+        className="w-6 h-6"
+        alt={`${attribute.key} icon`}
+        w="24"
+        h="24"
+      />
 
       <p className="text-lg whitespace-pre-wrap ml-6">{attribute.description}</p>
     </div>

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { useImage } from 'react-image';
 import { AppContext } from '../../contexts/AppContext';
 import { AbilityInterface, ItemInterface } from '../../types/interfaces/CharacterInterface';
+import ReactImage from '../ReactImage';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
@@ -25,13 +25,6 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = item.image_path.replace('.png', '.webp');
-  const { src } = useImage({
-    srcList: [
-      `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
-      `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
-    ],
-    useSuspense: false,
-  });
   return (
     <TooltipWrapper
       tooltip={
@@ -55,13 +48,15 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
       }
     >
       <div className="flex flex-row w-max rounded-lg drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
-        <img
-          src={src}
+        <ReactImage
+          srcList={[
+            `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+            `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
+          ]}
           className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
-          draggable={false}
           alt="itemIcon"
-          width="64"
-          height="64"
+          w="64"
+          h="64"
         />
 
         <div className="flex flex-col justify-center">
