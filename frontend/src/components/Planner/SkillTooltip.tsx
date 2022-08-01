@@ -18,8 +18,8 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
   let parentName = '';
   if (skill?.parent_required) {
     const parentLocation = findSkill(characterData, characterBuild, skill?.parent_required[0]);
-    parentName = characterData?.skillTree[parentLocation?.yIndex as number][parentLocation?.xIndex as number]
-      .name as string;
+    parentName = characterData?.skillTree[parentLocation?.yIndex as number]?.[parentLocation?.xIndex as number]
+      ?.name as string;
   }
 
   const relatedAbilities: Array<AbilityInterface> = [];
@@ -49,7 +49,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
           </p>
         )}
         {skill?.parent_required && (
-          <p className="text-yellow-400 text-lg">Available after unlocking &quot;{parentName.trim()}&quot;</p>
+          <p className="text-yellow-400 text-lg">Available after unlocking &quot;{parentName?.trim()}&quot;</p>
         )}
         {blocked && <p className="text-red-500 text-lg">Skill has been blocked by another skill.</p>}
         <div>
