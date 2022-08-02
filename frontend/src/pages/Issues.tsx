@@ -7,14 +7,14 @@ const Issues = () => {
         <hr className="grow mt-[1.6rem] opacity-50" />
       </div>
       <ul className="list-disc list-inside">
+        <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
         <li className="text-gray-200 text-2xl">
           Radious 2 needs a look over for portraits, names, spellLores, general bugs.
         </li>
-        <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
         <li className="text-gray-200 text-2xl">Radious 2 Wood Seer mounts missing skill titles</li>
         <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
         <li className="text-gray-200 text-2xl">
-          Artefacts 3 might not be grabbing effects properly since moving to quest items? See Skarbrand
+          Artefacts 3 item effects are getting linked to background skills leaving the quest item blank.
         </li>
       </ul>
 

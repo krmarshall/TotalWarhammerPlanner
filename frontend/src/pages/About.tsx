@@ -30,6 +30,7 @@ const About = () => {
         <li className="text-gray-200 text-2xl">Find where TW2 quest item levels are defined in tables.</li>
         <li className="text-gray-200 text-2xl">Find Brettonia vow details.</li>
         <li className="text-gray-200 text-2xl">Add much more spell/ability info (damage, entities, ect).</li>
+        <li className="text-gray-200 text-2xl">Mobile UI</li>
       </ul>
     </div>
   );

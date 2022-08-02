@@ -22,7 +22,7 @@ const Header = () => {
     dispatch({ type: AppContextActions.changeMod, payload: { selectedMod: modChange } });
   };
 
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1200px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' });
 
   const buttonClass = 'bg-slate-500 rounded-2xl py-1 px-5 my-auto shadow-md shadow-gray-900';
 

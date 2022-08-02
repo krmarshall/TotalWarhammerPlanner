@@ -12,7 +12,7 @@ const About = lazy(() => import('./pages/About'));
 const Issues = lazy(() => import('./pages/Issues'));
 
 const App = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1200px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' });
   return (
     <AppProvider>
       <div className="bg-gray-800 w-screen h-screen px-8 font-CaslonAntique select-none">
