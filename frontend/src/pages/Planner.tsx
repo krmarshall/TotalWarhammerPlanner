@@ -128,13 +128,13 @@ const Planner = () => {
   const rankLimit = mod?.includes('2') ? 40 : 50;
 
   return (
-    <Fragment>
+    <div className="h-[88vh] flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">
       {state.characterData === null ? (
         <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
         <Fragment>
           <div className="h-[8.5vh] flex flex-row place-content-between">
-            <div className="w-[20vw] flex place-content-start">
+            <div className="w-[30vw] flex place-content-start">
               <button
                 className="flex flex-row place-content-center my-auto px-1.5 bg-gray-500 hover:bg-gray-400 border rounded-xl drop-shadow-lg"
                 onClick={() => navigate('/')}
@@ -144,7 +144,7 @@ const Planner = () => {
               </button>
             </div>
             <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
-            <div className="w-[20vw] flex place-content-end">
+            <div className="w-[30vw] flex place-content-end">
               <button
                 className="flex flex-row place-content-center mr-4 my-auto px-2 bg-blue-600 hover:bg-blue-500 border rounded-xl drop-shadow-lg"
                 onClick={shareButtonHandler}
@@ -169,7 +169,7 @@ const Planner = () => {
             </div>
           </div>
           <div
-            className="h-[57vh] pb-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
+            className="grow max-h-[73vh] overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600"
             id="horScrollContainer"
             onWheel={(event) => {
               horizontalScroll(event);
@@ -188,7 +188,7 @@ const Planner = () => {
           <ExtrasDrawer />
         </Fragment>
       )}
-    </Fragment>
+    </div>
   );
 };
 
