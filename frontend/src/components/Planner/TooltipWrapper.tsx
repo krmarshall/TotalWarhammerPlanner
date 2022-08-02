@@ -8,6 +8,7 @@ import {
   useFloating,
   useInteractions,
   useHover,
+  FloatingPortal,
 } from '@floating-ui/react-dom-interactions';
 
 interface Props {
@@ -39,21 +40,26 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
   return (
     <>
       {cloneElement(children, getReferenceProps({ ref: reference, ...children.props }))}
-      {open && (
-        <div
-          {...getFloatingProps({
-            ref: floating,
-            className: 'Tooltip z-30 max-h-[99vh] fade-in',
-            style: {
-              position: strategy,
-              top: y ?? '',
-              left: x ?? '',
-            },
-          })}
-        >
-          {tooltip}
-        </div>
-      )}
+      <FloatingPortal>
+        {open && (
+          <div
+            {...getFloatingProps({
+              ref: floating,
+              className: 'Tooltip z-30 max-h-[99vh] fade-in font-CaslonAntique select-none',
+              style: {
+                position: strategy,
+                // top: y ?? '', // Allegedly using below transform is better perf but can blur if set on subpixels?
+                // left: x ?? '',
+                top: '0',
+                left: '0',
+                transform: `translate(${Math.round(x as number)}px,${Math.round(y as number)}px)`,
+              },
+            })}
+          >
+            {tooltip}
+          </div>
+        )}
+      </FloatingPortal>
     </>
   );
 };

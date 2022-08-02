@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
 import factionImages from '../../imgs/factions/factionImages';
+import ReactImage from '../ReactImage';
+import placeholderImg from '../../imgs/other/0placeholder.webp';
 
 const FactionSelector = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -40,13 +42,12 @@ const FactionSelector = () => {
             >
               <h2 className="text-center text-gray-200 text-2xl text-shadow mb-2">{factionName}</h2>
               <div className="flex flex-row justify-center">
-                <img
-                  className="w-20 drop-shadow-[0.1rem_0.1rem_0.35rem_rgba(0,0,0,0.7)]"
-                  draggable={false}
-                  src={factionImages[factionKey as keyof typeof factionImages]}
+                <ReactImage
+                  srcList={[factionImages[factionKey as keyof typeof factionImages], placeholderImg]}
                   alt={`${factionName} icon`}
-                  height="96"
-                  width="96"
+                  className="w-20 drop-shadow-[0.1rem_0.1rem_0.35rem_rgba(0,0,0,0.7)]"
+                  w="96"
+                  h="96"
                 />
               </div>
             </li>

@@ -1,3 +1,6 @@
+import ReactImage from '../ReactImage';
+import placeholderImg from '../../imgs/other/0placeholder.webp';
+
 interface CharacterCellProps {
   charKey: string;
   char?: {
@@ -21,14 +24,12 @@ const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSel
     >
       <h2 className="w-36 text-center text-2xl text-shadow text-gray-200 mb-2">{char?.name}</h2>
       <div className="flex flex-row justify-center relative">
-        <img
+        <ReactImage
+          srcList={[charImage as string, placeholderImg]}
           className="w-32 mb-1 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
-          draggable={false}
-          src={charImage}
           alt={`${char?.name} icon`}
-          height="96"
-          width="96"
-          loading="lazy"
+          w="96"
+          h="96"
         />
         {spellLore && (
           <img
