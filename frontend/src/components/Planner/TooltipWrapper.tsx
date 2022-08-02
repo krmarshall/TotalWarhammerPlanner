@@ -2,13 +2,13 @@ import { cloneElement, useEffect, useState } from 'react';
 import {
   Placement,
   offset,
-  flip,
   shift,
   autoUpdate,
   useFloating,
   useInteractions,
   useHover,
   FloatingPortal,
+  autoPlacement,
 } from '@floating-ui/react-dom-interactions';
 
 interface Props {
@@ -26,7 +26,7 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
     placement,
     open,
     onOpenChange: setOpen,
-    middleware: [offset(20), flip(), shift({ padding: 8, crossAxis: true })],
+    middleware: [offset(20), autoPlacement({ padding: 8 }), shift({ padding: 8, crossAxis: true })],
   });
 
   const { getReferenceProps, getFloatingProps } = useInteractions([useHover(context)]);

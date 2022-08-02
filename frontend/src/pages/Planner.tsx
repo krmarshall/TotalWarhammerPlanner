@@ -7,15 +7,13 @@ import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../uti
 import { convertBuildToCode, convertCodeToBuild } from '../utils/urlFunctions';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 import gameData from '../data/gameData';
-import BuildStorage from '../components/Planner/BuildStorage';
 import SkillRow from '../components/Planner/SkillRow';
-import CharacterItems from '../components/Planner/CharacterItems';
-import BackgroundSkills from '../components/Planner/BackgroundSkills';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 import resetIcon from '../imgs/other/icon_reset.webp';
 import shareIcon from '../imgs/other/resume_saved.webp';
 import backIcon from '../imgs/other/icon_home.webp';
+import ExtrasDrawer from '../components/Planner/ExtrasDrawer';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -186,14 +184,8 @@ const Planner = () => {
               </tbody>
             </table>
           </div>
-          <div className="h-[17.5vh] flex flex-row place-content-around mt-4">
-            {state.characterData?.items && state.characterData?.items.length > 0 && <CharacterItems />}
-            {state.characterData.backgroundSkills && state.characterData.backgroundSkills.length > 0 && (
-              <BackgroundSkills />
-            )}
 
-            <BuildStorage />
-          </div>
+          <ExtrasDrawer />
         </Fragment>
       )}
     </Fragment>

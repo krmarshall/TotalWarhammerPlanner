@@ -37,7 +37,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   }
   return (
     <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
-      <div className="flex flex-row mx-auto drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
+      <div className="flex flex-row m-auto drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <ReactImage srcList={srcList} className={imgClassName} alt="skillIcon" w="64" h="64" />
 
         <div className="flex flex-col justify-center">
