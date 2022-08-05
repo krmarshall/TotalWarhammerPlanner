@@ -2695,6 +2695,59 @@
         {
           "effects": [
             {
+              "icon": "military_spending.png",
+              "priority": 105,
+              "is_positive_value_good": false,
+              "description": "Upkeep: -25% for Terradon Riders, Cold One, Stegadon, Bastiladon and Carnosaur units",
+              "value": -25,
+              "key": "wh2_main_effect_upkeep_cost_reduction_lzd_beasts"
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_release_the_beast",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_release_the_beast",
+                    "icon_name": "wh2_main_item_abilities_black_dragon_egg",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_summon_unit",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Summon Unit"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_summoned_unit",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Powerful unit ideal for combat"
+                      }
+                    ],
+                    "num_uses": 1,
+                    "active_time": 1,
+                    "wind_up_time": 8,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": true,
+                    "target_intercept_range": 80,
+                    "target_self": false
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_release_the_beast"
+            },
+            {
               "icon": "diplomacy.png",
               "priority": 5,
               "is_positive_value_good": true,
@@ -2778,7 +2831,7 @@
       "type": "wh_main_anc_armour",
       "effects": [],
       "name": "Armour of the Emperor",
-      "description": "This set of armour was forged by the unparalleled talents of Dwarf smiths.  It incorporates some of the actual armour worn by Magnus the Pious during the Battle of Kislev.  The armour is made of black gromril and is richly gilded and adorned with runes and symbols of power.",
+      "description": "This set of armour was forged by the unparalleled talents of Dwarf smiths. It incorporates some of the actual armour worn by Magnus the Pious during the Battle of Kislev. The armour is made of black gromril and is richly gilded and adorned with runes and symbols of power.",
       "unlocked_at_rank": 4,
       "instant": true,
       "image_path": "item_armour.png"
@@ -2900,7 +2953,72 @@
     {
       "key": "stompies_anc_enchanted_emperors_crown",
       "type": "wh_main_anc_enchanted_item",
-      "effects": [],
+      "effects": [
+        {
+          "icon": "diplomacy.png",
+          "priority": 5,
+          "is_positive_value_good": true,
+          "description": "Diplomatic relations: +15 with Bretonnia",
+          "value": 15,
+          "key": "wh_dlc05_faction_political_diplomacy_mod_bretonnia"
+        },
+        {
+          "icon": "diplomacy.png",
+          "priority": 5,
+          "is_positive_value_good": true,
+          "description": "Diplomatic relations: +15 with Dwarfs",
+          "value": 15,
+          "key": "wh_main_faction_political_diplomacy_mod_dwarfs"
+        },
+        {
+          "icon": "diplomacy.png",
+          "priority": 5,
+          "is_positive_value_good": true,
+          "description": "Diplomatic relations: +20 with Empire",
+          "value": 20,
+          "key": "wh_main_faction_political_diplomacy_mod_empire"
+        },
+        {
+          "icon": "diplomacy.png",
+          "priority": 5,
+          "is_positive_value_good": true,
+          "description": "Diplomatic relations: -50 with Vampire Counts",
+          "value": -50,
+          "key": "wh_main_faction_political_diplomacy_mod_vampire_counts"
+        },
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +1",
+          "value": 1,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "income.png",
+          "priority": 162,
+          "is_positive_value_good": true,
+          "description": "Income from all buildings: +10%",
+          "value": 10,
+          "key": "wh_main_effect_economy_gdp_mod_all"
+        },
+        {
+          "icon": "morale_character.png",
+          "priority": 260,
+          "is_positive_value_good": true,
+          "description": "Character's aura leadership effect: +9",
+          "value": 9,
+          "key": "wh_main_effect_character_stat_aura_leadership_effect"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 260,
+          "is_positive_value_good": true,
+          "description": "Leadership aura size: +25%",
+          "value": 25,
+          "key": "wh_main_effect_character_stat_leadership_aura_size"
+        }
+      ],
       "name": "Imperial Crown",
       "description": "The Emperor is chosen by the 15 Electors and crowned by the Grand Theogonist.  Karl Franz recieved this crown in 2502 IC, and it reminds all that he is the leader and ruler of The Empire, the most powerful nation of the Old World.",
       "unlocked_at_rank": 8,

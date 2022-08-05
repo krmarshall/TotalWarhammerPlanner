@@ -5238,9 +5238,258 @@
       "points_on_creation": 1,
       "required_num_parents": 0,
       "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc12_skill_node_lzd_tehenhauin_item_1",
+      "image_path": "item_armour.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "plague.png",
+              "priority": 5,
+              "is_positive_value_good": false,
+              "description": "Chance of a plague spreading: -50%",
+              "value": -50,
+              "key": "wh2_main_effect_plague_infectivity_mod"
+            },
+            {
+              "icon": "armour_character.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Armour: +5",
+              "value": 5,
+              "key": "wh_main_effect_character_stat_armour"
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Enemy Hero action success chance: -25%",
+              "value": -25,
+              "key": "wh_main_effect_agent_action_success_chance_enemy"
+            },
+            {
+              "icon": "defence_character.png",
+              "priority": 150,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +5",
+              "value": 5,
+              "key": "wh_main_effect_character_stat_melee_defence"
+            },
+            {
+              "icon": "resistance_ward_save.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Ward save: 12%",
+              "value": 12,
+              "key": "wh_main_effect_character_stat_ward_save"
+            },
+            {
+              "icon": "armour.png",
+              "priority": 600,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Fury of Sotek\"",
+              "related_abilities": [
+                {
+                  "effect": "stompies_effect_ability_fury_of_sotek",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "stompies_ability_fury_of_sotek",
+                    "icon_name": "wh_magic_item_passive_armour",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Fury of Sotek",
+                    "passive": true,
+                    "effect_range": 40,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x1.1 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          },
+                          {
+                            "value": 12,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "+12 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "value": 1,
+              "key": "stompies_effect_ability_fury_of_sotek"
+            }
+          ],
+          "auto_unlock_at_rank": 4
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh2_dlc12_skill_node_set_lzd_tehenhauin",
+      "character_skill_key": "stompies_skill_armour_hidden_plaques_of_chaqua",
+      "tier": 44,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc12_skill_node_lzd_tehenhauin_item_2",
+      "image_path": "item_talisman.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "melee.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +10 for Skink, Chameleon Skink and Red Crested Skink units",
+              "value": 10,
+              "key": "stompies_effect_lzd_skink_melee_attack"
+            },
+            {
+              "icon": "battle_movement_character.png",
+              "priority": 120,
+              "is_positive_value_good": true,
+              "description": "Speed: +20%",
+              "value": 20,
+              "key": "wh_main_effect_character_stat_speed"
+            },
+            {
+              "icon": "melee_character.png",
+              "priority": 130,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +10",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_melee_attack"
+            },
+            {
+              "icon": "armour_piercing_character.png",
+              "priority": 170,
+              "is_positive_value_good": true,
+              "description": "Armour-piercing weapon damage: +35",
+              "value": 35,
+              "key": "wh_main_effect_character_stat_ap_damage"
+            },
+            {
+              "icon": "attribute_fatigue_immune.png",
+              "priority": 320,
+              "is_positive_value_good": true,
+              "description": "Attribute: Perfect Vigour",
+              "value": 1,
+              "key": "wh2_dlc10_effect_attribute_enable_perfect_vigour"
+            }
+          ],
+          "auto_unlock_at_rank": 8
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh2_dlc12_skill_node_set_lzd_tehenhauin",
+      "character_skill_key": "stompies_skill_talisman_snake_fang_necklace",
+      "tier": 45,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "stompies_wh2_dlc12_skill_node_lzd_tehenhauin_item_3",
+      "image_path": "item_arcane_item.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_campaign.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve change: +10% when increasing",
+              "value": 10,
+              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod"
+            },
+            {
+              "icon": "corruption.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Corruption: +3",
+              "value": 3,
+              "key": "wh3_main_effect_corruption_reduction_characters"
+            },
+            {
+              "icon": "resistance_magic.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Spell resistance: 10%",
+              "value": 10,
+              "key": "wh_main_effect_character_stat_magic_resistance"
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -10%",
+              "value": -10,
+              "key": "wh_main_effect_character_stat_miscast"
+            }
+          ],
+          "auto_unlock_at_rank": 12
+        }
+      ],
+      "use_quest_for_prefix": false,
+      "character_skill_node_set_key": "wh2_dlc12_skill_node_set_lzd_tehenhauin",
+      "character_skill_key": "stompies_skill_arcane_priests_ring",
+      "tier": 46,
+      "indent": 10,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
     }
   ],
   "items": [
+    {
+      "key": "stompies_anc_armour_hidden_plaques_of_chaqua",
+      "type": "wh_main_anc_armour",
+      "effects": [],
+      "name": "Hidden Plaques of Chaqua",
+      "description": "Tehenhauin led a massive Skink migration from Chaqua, bearing plaques which proclaimed the coming of Sotek. He now wears the golden plaques over his chest, blessing all those who fight for the Serpent god.",
+      "unlocked_at_rank": 4,
+      "instant": true,
+      "image_path": "item_armour.png"
+    },
     {
       "key": "wh2_dlc12_anc_enchanted_item_plaque_of_sotek",
       "type": "wh_main_anc_enchanted_item",
@@ -5321,6 +5570,26 @@
       "unlocked_at_rank": 7,
       "instant": false,
       "image_path": "item_enchanted_item.png"
+    },
+    {
+      "key": "stompies_anc_talisman_snake_fang_necklace",
+      "type": "wh_main_anc_talisman",
+      "effects": [],
+      "name": "Snake Fang Necklace",
+      "description": "Made from the large fangs of albino serpents, this necklace grants the quick Skinks the ability to fight with the agility of a striking snake.",
+      "unlocked_at_rank": 8,
+      "instant": true,
+      "image_path": "item_talisman.png"
+    },
+    {
+      "key": "stompies_anc_arcane_priests_ring",
+      "type": "wh_main_anc_arcane_item",
+      "effects": [],
+      "name": "Priest's Ring",
+      "description": "Skink Priests are the most intelligent of their skittish kind, whose roles within their society are to act as religious figures, magic-users, and important emissaries for their mighty Slann. The greatest Priests are given a golden ring that will glow while the Priest casts spells.",
+      "unlocked_at_rank": 12,
+      "instant": true,
+      "image_path": "item_arcane_item.png"
     }
   ]
 }
