@@ -45,7 +45,7 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
           <div
             {...getFloatingProps({
               ref: floating,
-              className: 'Tooltip z-30 max-h-[99vh] fade-in font-CaslonAntique select-none',
+              className: 'Tooltip z-30 max-h-[98vh] fade-in font-CaslonAntique select-none overflow-hidden',
               style: {
                 position: strategy,
                 // top: y ?? '', // Allegedly using below transform is better perf but can blur if set on subpixels?

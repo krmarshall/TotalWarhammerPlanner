@@ -8,6 +8,14 @@ const Issues = () => {
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
         <ul className="list-disc list-inside">
+          <li className="text-gray-200 text-2xl">
+            Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t
+            visible.
+          </li>
+          <li className="text-gray-200 text-2xl">
+            Tooltips that overflow the viewport (eg. SFO2 Norsca Fimir Lord The Withering) are just cut off for the time
+            being, need to pass scroll event onto the tooltip?
+          </li>
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
           <li className="text-gray-200 text-2xl">
             Radious 2 needs a look over for portraits, names, spellLores, general bugs.

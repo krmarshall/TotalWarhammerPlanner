@@ -226,7 +226,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       break;
     }
     case 'none': {
-      tdClassName += ' border-gray-700 rounded';
+      tdClassName += ' border-transparent rounded';
       break;
     }
     default: {
