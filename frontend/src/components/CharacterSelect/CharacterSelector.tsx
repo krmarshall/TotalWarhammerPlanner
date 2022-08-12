@@ -1,6 +1,7 @@
 import { Fragment, useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import api from '../../api/api';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
@@ -67,29 +68,40 @@ const CharacterSelector = () => {
           <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Lords</h1>
           <hr className="grow mt-[1.25rem] opacity-50" />
         </div>
-        <ul className="flex flex-row flex-wrap justify-center ">
-          {lordKeys?.map((lordKey) => {
-            if (checkFactionUndefined()) {
-              return;
-            }
-            const lord = gameCharacters[`${selectedFaction}_lords`][lordKey];
-            const lordImage = gameData[selectedMod]?.characterImages[lordKey];
+        <ul className="flex flex-row flex-wrap justify-center">
+          <TransitionGroup component={null}>
+            {lordKeys?.map((lordKey) => {
+              if (checkFactionUndefined()) {
+                return;
+              }
+              const lord = gameCharacters[`${selectedFaction}_lords`][lordKey];
+              const lordImage = gameData[selectedMod]?.characterImages[lordKey];
 
-            let spellLore = undefined;
-            if (lord?.spellLore !== undefined) {
-              spellLore = spellLoreIcons[lord.spellLore as keyof typeof spellLoreIcons];
-            }
-            return (
-              <CharacterCell
-                key={lordKey}
-                charKey={lordKey}
-                char={lord}
-                charImage={lordImage}
-                spellLore={spellLore}
-                handleCharacterSelect={handleCharacterSelect}
-              />
-            );
-          })}
+              let spellLore = undefined;
+              if (lord?.spellLore !== undefined) {
+                spellLore = spellLoreIcons[lord.spellLore as keyof typeof spellLoreIcons];
+              }
+              return (
+                <CSSTransition
+                  key={lordKey}
+                  classNames={{
+                    enterActive: 'animate__animated animate__faster animate__flipInX',
+                    exitActive: 'hidden',
+                  }}
+                  timeout={500}
+                >
+                  <CharacterCell
+                    key={lordKey}
+                    charKey={lordKey}
+                    char={lord}
+                    charImage={lordImage}
+                    spellLore={spellLore}
+                    handleCharacterSelect={handleCharacterSelect}
+                  />
+                </CSSTransition>
+              );
+            })}
+          </TransitionGroup>
         </ul>
       </div>
       <div className="justify-self-center">
@@ -99,27 +111,38 @@ const CharacterSelector = () => {
           <hr className="grow mt-[1.25rem] opacity-50" />
         </div>
         <ul className="flex flex-row flex-wrap justify-center mb-4">
-          {heroKeys?.map((heroKey) => {
-            if (checkFactionUndefined()) {
-              return;
-            }
-            const hero = gameCharacters[`${selectedFaction}_heroes`][heroKey];
-            const heroImage = gameData[selectedMod]?.characterImages[heroKey];
-            let spellLore = undefined;
-            if (hero?.spellLore !== undefined) {
-              spellLore = spellLoreIcons[hero.spellLore as keyof typeof spellLoreIcons];
-            }
-            return (
-              <CharacterCell
-                key={heroKey}
-                charKey={heroKey}
-                char={hero}
-                charImage={heroImage}
-                spellLore={spellLore}
-                handleCharacterSelect={handleCharacterSelect}
-              />
-            );
-          })}
+          <TransitionGroup component={null}>
+            {heroKeys?.map((heroKey) => {
+              if (checkFactionUndefined()) {
+                return;
+              }
+              const hero = gameCharacters[`${selectedFaction}_heroes`][heroKey];
+              const heroImage = gameData[selectedMod]?.characterImages[heroKey];
+              let spellLore = undefined;
+              if (hero?.spellLore !== undefined) {
+                spellLore = spellLoreIcons[hero.spellLore as keyof typeof spellLoreIcons];
+              }
+              return (
+                <CSSTransition
+                  key={heroKey}
+                  classNames={{
+                    enterActive: 'animate__animated animate__faster animate__flipInX',
+                    exitActive: 'hidden',
+                  }}
+                  timeout={500}
+                >
+                  <CharacterCell
+                    key={heroKey}
+                    charKey={heroKey}
+                    char={hero}
+                    charImage={heroImage}
+                    spellLore={spellLore}
+                    handleCharacterSelect={handleCharacterSelect}
+                  />
+                </CSSTransition>
+              );
+            })}
+          </TransitionGroup>
         </ul>
       </div>
     </Fragment>

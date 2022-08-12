@@ -1,5 +1,5 @@
 import ReactImage from '../ReactImage';
-import placeholderImg from '../../imgs/other/0placeholder.webp';
+import placeholderImg from '../../imgs/other/0placeholderInvis.webp';
 
 interface CharacterCellProps {
   charKey: string;
