@@ -25,7 +25,7 @@ const Header = () => {
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1023 });
   const isTabletOrMobileHeight = useMediaQuery({ maxHeight: 719 });
 
-  const buttonClass = 'bg-slate-500 rounded-2xl py-1 px-5 my-auto shadow-md shadow-gray-900';
+  const buttonClass = 'bg-slate-500 rounded-2xl py-1 px-5 my-auto shadow-md shadow-gray-900 hover-scale';
 
   let imgSrc = '';
   if (location.pathname === '/') {

@@ -47,7 +47,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         </span>
       }
     >
-      <div className="flex flex-row w-max m-auto rounded-lg drop-shadow-lg bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
+      <div className="flex flex-row w-max m-auto rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <ReactImage
           srcList={[
             `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,

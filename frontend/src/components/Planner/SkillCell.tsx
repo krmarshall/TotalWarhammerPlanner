@@ -197,7 +197,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   };
 
-  let divClassName = 'flex flex-row rounded-lg drop-shadow-lg bg-no-repeat bg-cover';
+  let divClassName = 'flex flex-row rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover';
 
   if (thisSkillsCurrentPoints > 0) {
     divClassName +=
