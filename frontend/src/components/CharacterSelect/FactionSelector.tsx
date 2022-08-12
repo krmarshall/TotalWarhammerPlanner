@@ -24,10 +24,11 @@ const FactionSelector = () => {
       <ul className="flex flex-row flex-wrap justify-center ">
         {currentGameFactions?.map((factionKey) => {
           const factionName = gameData[selectedMod]?.factions[factionKey];
-          let liClassName = 'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
+          let liClassName =
+            'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
           if (factionKey === state.selectedFaction) {
-            liClassName += ' bg-gray-600 hover:bg-gray-500';
+            liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';
           } else {
             liClassName += ' hover:bg-gray-600';
           }

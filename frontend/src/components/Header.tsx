@@ -65,7 +65,7 @@ const Header = () => {
           <div className="z-10 w-[34vw]">
             {location.pathname === '/' ? (
               <div
-                className="z-20 flex flex-col place-content-end m-auto mt-2 -mb-48 w-[14.5rem] h-[9.5rem] bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                className="z-20 flex flex-col place-content-end m-auto mt-2 -mb-48 w-[14.5rem] h-[9.5rem] bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)] hover-scale"
                 onClick={gameChangeHandler}
               >
                 <img

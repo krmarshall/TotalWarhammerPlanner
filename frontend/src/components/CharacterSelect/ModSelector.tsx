@@ -35,10 +35,10 @@ const ModSelector = () => {
         {gameKeys.map((gameKey) => {
           const game = gameData[gameKey as keyof typeof gameData];
           let liClassName =
-            'flex flex-col justify-between m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg';
+            'flex flex-col justify-between m-1 mx-2 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
           if (gameKey === selectedMod) {
-            liClassName += ' bg-gray-600 hover:bg-gray-500';
+            liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';
           } else {
             liClassName += ' hover:bg-gray-600';
           }
