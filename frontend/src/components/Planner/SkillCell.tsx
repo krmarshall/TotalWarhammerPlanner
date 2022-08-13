@@ -212,6 +212,10 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   let tdClassName = 'flex flex-row w-max h-auto my-1 border relative';
 
+  if (!skill.right_arrow) {
+    tdClassName += ' pr-2';
+  }
+
   switch (boxedType) {
     case 'start': {
       tdClassName += ' border-gray-400 border-r-0 rounded-l';
