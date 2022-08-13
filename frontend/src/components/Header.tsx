@@ -1,10 +1,12 @@
+import { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { AppContext, AppContextActions } from '../contexts/AppContext';
 import headerImg from '../imgs/header.webp';
+import wipBanner from '../imgs/other/wip_banner.webp';
 import gameData from '../data/gameData';
 import gameImages from '../imgs/games/gameImages';
-import { useContext } from 'react';
-import { AppContext, AppContextActions } from '../contexts/AppContext';
+// import portholeFrame from '../imgs/other/porthole_frame_battle_load.webp';
 
 const Header = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -47,6 +49,7 @@ const Header = () => {
           <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigate('/')}>
             Total Warhammer Planner
           </h1>
+          <img src={wipBanner} alt="WIP Banner" className="my-auto" draggable={false} />
         </div>
       ) : (
         <>
@@ -61,6 +64,7 @@ const Header = () => {
             <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigate('/')}>
               Total Warhammer Planner
             </h1>
+            <img src={wipBanner} alt="WIP Banner" className="my-auto" draggable={false} />
           </div>
           <div className="z-10 w-[34vw]">
             {location.pathname === '/' ? (
@@ -79,13 +83,19 @@ const Header = () => {
             ) : location.pathname === '/about' || location.pathname === '/issues' ? (
               <></>
             ) : (
-              <div className="m-auto -mb-48 mt-2 w-[9.5rem] h-[9.5rem] bg-gray-700 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]">
+              <div className="relative m-auto -mb-48 mt-2 w-[9.5rem] h-[9.5rem] bg-gray-700 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]">
                 <img
                   src={imgSrc}
-                  className="w-[9.5rem] h-[9.5rem] drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                  className="w-[9.5rem] h-[9.5rem] absolute drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
                   draggable={false}
                   alt="Character Portrait"
                 />
+                {/* <img
+                  src={portholeFrame}
+                  className="w-[9.5rem] h-[9.5rem] absolute"
+                  draggable={false}
+                  alt="Portrait Frame"
+                /> */}
               </div>
             )}
           </div>

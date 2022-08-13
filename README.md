@@ -19,6 +19,9 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 ## Known Issues
 - Work on overall page style
 
+## On IE Release
+Check ui/skins/<faction folders>/text_tree_bg(_front/_mid) for potential character planner page backgrounds that are factional.
+
 ## Adding A Mod
 - Copy over json data to backend ./src/data
 - Copy over auto extracted and manually extracted images to respective frontend ./src/imgs or ./public/imgs, using respective vanilla game images as a base to overwrite.
