@@ -34,7 +34,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
     }
   });
   return (
-    <div className="flex-grow h-fit min-w-[15vw] ml-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
+    <div className="flex-grow h-fit max-w-[30vw] ml-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">
       <div className="flex flex-row ml-2">
         <h3 className="text-left whitespace-nowrap text-2xl pr-6 mr-auto">{unitAbility.description}</h3>
         {unitAbility.num_uses !== undefined && unitAbility.num_uses > 0 && (

@@ -33,7 +33,7 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
         h="24"
       />
 
-      <div className="flex flex-col justify-center ml-1 text-left max-w-fit min-w-[18vw]">
+      <div className="flex flex-col justify-center ml-1 text-left max-w-[25vw]">
         <p className={goodBadEffectClassName}>{skillEffect.description}</p>
       </div>
     </div>
