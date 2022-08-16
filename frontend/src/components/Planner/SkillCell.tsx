@@ -186,12 +186,30 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   const skillClickHandler = (event: MouseEvent) => {
     // 0 = LMB, 2 = RMB
-    if (skill.levels?.[0]?.auto_unlock_at_rank !== undefined) {
+    // Rank up an auto rank skill with more than 1 skill level
+    if (
+      event.button === 0 &&
+      skill.levels?.[0]?.auto_unlock_at_rank !== undefined &&
+      thisSkillsCurrentPoints > 0 &&
+      skill.levels?.[thisSkillsCurrentPoints] !== undefined
+    ) {
+      rankUpSkill(false);
+      // Rank down an auto rank skill with more than 1 skill level
+    } else if (
+      event.button === 2 &&
+      skill.levels?.[0]?.auto_unlock_at_rank !== undefined &&
+      thisSkillsCurrentPoints > 1
+    ) {
+      rankDownSkill(false);
+      // Don't allow changing auto rank skills first skill level
+    } else if (skill.levels?.[0]?.auto_unlock_at_rank !== undefined) {
       toast.error(`This skill is automatically leveled up/down at rank ${skill.levels?.[0]?.auto_unlock_at_rank}`, {
         id: `${skillKey} autorank`,
       });
+      // Normal skill rank up
     } else if (event.button === 0) {
       rankUpSkill(false);
+      // Normal skill rank down
     } else if (event.button === 2) {
       rankDownSkill(false);
     }

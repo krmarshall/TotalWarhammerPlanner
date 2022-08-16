@@ -48,12 +48,12 @@ const Header = () => {
           />
           <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigate('/')}>
             Total Warhammer Planner
+            <span className="text-base text-gray-400 align-super">WIP</span>
           </h1>
-          <img src={wipBanner} alt="WIP Banner" className="my-auto" draggable={false} />
         </div>
       ) : (
         <>
-          <div className="w-[33vw] text-slate-100 text-4xl flex justify-start">
+          <div className="w-[38vw] text-slate-100 text-4xl flex justify-start">
             <img
               src={headerImg}
               alt="header diplomacy icon"
@@ -61,12 +61,12 @@ const Header = () => {
               draggable={false}
               onClick={() => navigate('/')}
             />
-            <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigate('/')}>
+            <h1 className="my-auto cursor-pointer text-shadow-md whitespace-normal" onClick={() => navigate('/')}>
               Total Warhammer Planner
+              <span className="text-base text-gray-400 align-super">WIP</span>
             </h1>
-            <img src={wipBanner} alt="WIP Banner" className="my-auto" draggable={false} />
           </div>
-          <div className="z-10 w-[34vw]">
+          <div className="z-10 w-[24vw]">
             {location.pathname === '/' ? (
               <div
                 className="z-20 flex flex-col place-content-end m-auto mt-2 -mb-48 w-[14.5rem] h-[9.5rem] bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)] hover-scale"
@@ -100,7 +100,7 @@ const Header = () => {
             )}
           </div>
 
-          <div className="w-[33vw] flex flex-row justify-end text-xl text-slate-50 my-auto">
+          <div className="w-[38vw] flex flex-row justify-end text-xl text-slate-50 my-auto">
             <button className={buttonClass} onClick={() => navigate('/about')}>
               About
             </button>
