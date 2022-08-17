@@ -35,7 +35,12 @@ const Issues = () => {
         </div>
         <p className="text-center text-gray-200 text-2xl">
           If you think you&apos;ve found a bug the easiest way to message me is on{' '}
-          <a href="https://www.reddit.com/user/Fearhorn/" className="text-blue-500">
+          <a
+            href="https://www.reddit.com/user/Fearhorn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500"
+          >
             Reddit
           </a>
           . Some notes to follow before messaging:
