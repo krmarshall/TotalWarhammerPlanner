@@ -26,9 +26,6 @@ const Issues = () => {
           </li>
           <li className="text-gray-200 text-2xl">Radious 2 Wood Seer mounts missing skill titles</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
-          <li className="text-gray-200 text-2xl">
-            Artefacts 3 item effects are getting linked to background skills leaving the quest item blank
-          </li>
         </ul>
 
         <div className="flex flex-row place-content-center mt-14">

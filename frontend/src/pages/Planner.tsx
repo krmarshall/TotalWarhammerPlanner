@@ -142,6 +142,9 @@ const Planner = () => {
                 <img src={backIcon} alt="Back" width="45" height="45" className="my-auto w-8 h-8" draggable={false} />
                 <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Home</p>
               </button>
+              <p className="text-gray-200 text-2xl text-center my-auto ml-4">
+                Selected Game: {gameData[state.selectedMod]?.text}
+              </p>
             </div>
             <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
             <div className="w-[30vw] flex place-content-end">

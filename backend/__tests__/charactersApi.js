@@ -6,10 +6,8 @@ import app from '../src/app';
 import { initializeData, bulkData } from '../src/initializeData';
 import vanilla2Characters from '../../frontend/src/data/vanilla2Characters';
 import sfo2Characters from '../../frontend/src/data/sfo2Characters';
-import artefacts2Characters from '../../frontend/src/data/artefacts2Characters';
 import radious2Characters from '../../frontend/src/data/radious2Characters';
 import vanilla3Characters from '../../frontend/src/data/vanilla3Characters';
-import artefacts3Characters from '../../frontend/src/data/artefacts3Characters';
 
 const request = supertest(app);
 
@@ -47,11 +45,9 @@ describe('Bulk character API test', () => {
   const gameList = [
     { charList: vanilla2Characters, name: 'vanilla2' },
     { charList: sfo2Characters, name: 'sfo2' },
-    { charList: artefacts2Characters, name: 'artefacts2' },
     { charList: radious2Characters, name: 'radious2' },
 
     { charList: vanilla3Characters, name: 'vanilla3' },
-    { charList: artefacts3Characters, name: 'artefacts3' },
   ];
 
   gameList.forEach((game) => {
