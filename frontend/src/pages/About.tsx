@@ -28,7 +28,7 @@ const About = () => {
           server costs, keep this tool ad and tracking free, or just buy me a coffee by donating it is greatly
           appreciated.
         </p>
-        <a href="https://patreon.com/twplanner" className="mx-auto mt-2">
+        <a href="https://patreon.com/twplanner" target="_blank" rel="noopener noreferrer" className="mx-auto mt-2">
           <img src={patreonButton} alt="Become a Patron" className="w-auto h-12 rounded-xl" width="300" height="100" />
         </a>
 
