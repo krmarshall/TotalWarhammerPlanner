@@ -26,6 +26,7 @@ const Issues = () => {
           </li>
           <li className="text-gray-200 text-2xl">Radious 2 Wood Seer mounts missing skill titles</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
+          <li className="text-gray-200 text-2xl">Radious 3 Cathay Celestial Champion poorly scaled icon</li>
         </ul>
 
         <div className="flex flex-row place-content-center mt-14">

@@ -1,11 +1,13 @@
 import { factions2, factions3 } from '../data/factionData';
 import radious2CharacterImgs from '../imgs/characters/radious2/radious2CharacterImgs';
+import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
 import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
 import gameImages from '../imgs/games/gameImages';
 import GameInterface from '../types/interfaces/GameInterface';
 import radious2Characters from './radious2Characters';
+import radious3Characters from './radious3Characters';
 import sfo2Characters from './sfo2Characters';
 import vanilla2Characters from './vanilla2Characters';
 import vanilla3Characters from './vanilla3Characters';
@@ -38,6 +40,13 @@ const gameData: GameInterface = {
     factions: factions3,
     characters: vanilla3Characters,
     characterImages: vanilla3CharacterImgs,
+  },
+  radious3: {
+    text: 'Radious 3',
+    image: gameImages['radious3'],
+    factions: factions3,
+    characters: radious3Characters,
+    characterImages: radious3CharacterImgs,
   },
 };
 

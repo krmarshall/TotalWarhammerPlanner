@@ -1,0 +1,3757 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_02",
+        "image_path": "mount_warhorse.png",
+        "is_background_skill": false,
+        "name": "Norscan Warhorse",
+        "description": "The horses of Norsca live for battle, even choosing to graze on the bones of the fallen over grass.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Norscan Warhorse",
+                "key": "wh_dlc08_effect_enable_mount_norscan_steed",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive Ability: \"Blood for the Hound\", while this Mount is equipped, for Cavary units",
+                "key": "op3_effect_enable_ability_dummy_nor_ancillary_horse",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 4
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_unique_norscan_warhorse",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_03",
+        "image_path": "mount_chaos_chariot.png",
+        "is_background_skill": false,
+        "name": "Marauder Chariot",
+        "description": "Marauder mobs are awarded even greater mobility when riding their crude chariots of bone and wood, lashed together with the guts and sinew of the vanquished.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Marauder Chariot",
+                "key": "wh_dlc08_effect_enable_mount_chaos_chariot",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive Ability: \" Devour the Weaklings\", while this Mount is equipped, for Chariot, Warhound, and Manticore units",
+                "key": "op3_effect_enable_ability_dummy_nor_ancillary_chariot_manticore",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 10
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_unique_marauder_chariot",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_04",
+        "image_path": "mount_mammoth.png",
+        "is_background_skill": false,
+        "name": "War Mammoth",
+        "description": "Tainted and savage they may be, but these behemoths remain willing to bear high-status Marauders into battle, trampling flat everything foolish enough to get in their way.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: War Mammoth",
+                "key": "wh_dlc08_effect_enable_mount_chaos_war_mammoth",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 18
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_unique_war_mammoth",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_07",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "The Eternal Challenger",
+        "description": "Beware drunken boasts made in sight of the Dark Gods, lest they hold you to such claims…",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +50% for this Lord",
+                "key": "wh2_main_effect_replenishment_lords",
+                "value": 50
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 68,
+                "is_positive_value_good": true,
+                "description": "Upgrades ability: \"Hunter of Champions\"\n\t(affected targets cannot move)",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc17_effect_ability_enable_hunter_of_champions_upgrade",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc17_character_abilities_hunter_of_champions_upgraded",
+                      "icon_name": "wh_dlc08_unit_abilities_hunter_of_champions",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_hex",
+                        "icon_path": "icon_spell_hex.png",
+                        "description": "Hex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Hunter of Champions",
+                      "active_time": 30,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "negative",
+                          "cant_move": true,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -20,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "-20 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            },
+                            {
+                              "value": -30,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-30 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc17_effect_ability_enable_hunter_of_champions_upgrade",
+                "value": 1
+              },
+              {
+                "icon": "attribute_fatigue_immune.png",
+                "priority": 320,
+                "is_positive_value_good": true,
+                "description": "Attribute: Perfect Vigour",
+                "key": "wh2_dlc10_effect_attribute_enable_perfect_vigour",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_unique_eternal_challenger",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_09",
+        "image_path": "battle_general_ability.png",
+        "is_background_skill": false,
+        "name": "Voice of the Dark Gods",
+        "description": "This Lord speaks with a dread booming voice - a gift from his Dark Masters to ensure obedience.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +80%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 80
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods_wulfrick",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_10",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Juggernauts of the Sarl",
+        "description": "Towering mountains of muscle and flesh, these War Mammoths give Wulfrik's tribe the edge over all comers.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +15 for Mammoth units",
+                "key": "wh_dlc08_effect_force_stat_melee_attack_war_mammoth",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_battle_juggernauts_of_the_sarl",
+        "tier": 6,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_unique_11",
+        "image_path": "battle_charge.png",
+        "is_background_skill": false,
+        "name": "Fervent Creatures",
+        "description": "Skin Wolves in the Wanderer's service enjoy speed and skill beyond even their preternatural capabilities.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +15 for Skin Wolves units",
+                "key": "wh_dlc08_effect_force_stat_melee_defence_skin_wolves",
+                "value": 15
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +15 for Skin Wolves units",
+                "key": "wh_dlc08_effect_force_stat_charge_bonus_add_skin_wolves",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_battle_fervent_creatures",
+        "tier": 7,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh2_dlc17_skill_node_nor_wulfrik_0_1",
+        "image_path": "wh_dlc08_hunter_of_champions.png",
+        "is_background_skill": false,
+        "name": "Hunter of Champions",
+        "description": "Cursed to wander the length and breadth of the world, his never-ending quest to challenge and best the most gifted warriors.",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Hunter of Champions\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_hunter_of_champions",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_character_abilities_hunter_of_champions",
+                      "icon_name": "wh_dlc08_unit_abilities_hunter_of_champions",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_hex",
+                        "icon_path": "icon_spell_hex.png",
+                        "description": "Hex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Hunter of Champions",
+                      "active_time": 30,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 0.6,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.6 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -20,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "-20 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            },
+                            {
+                              "value": -30,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-30 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_hunter_of_champions",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_self_hunter_of_champions",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc17_skill_node_nor_wulfrik_1_1",
+        "image_path": "character_bonus_vs_large.png",
+        "is_background_skill": false,
+        "name": "Juggernauts of the Sarl",
+        "description": "Men as great as the beasts they bring down.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "bonus_vs_large.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "\"Wyrmpiercer\" ammunition (improved anti-large) for all javelin units",
+                "key": "wh2_dlc17_projectile_replacement_norsca_anti_large_javelin",
+                "value": 1
+              },
+              {
+                "icon": "bonus_vs_large.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Bonus vs Large: +8 for Marauder Hunters, Marauder Spearmen and all Marauder cavalry units ",
+                "key": "wh2_dlc17_effect_bonus_vs_infantry_increase_norscan_hunter_units",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc17_skill_nor_wulfrik_unique_juggernauts_of_the_sarl",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc17_skill_node_nor_wulfrik_0_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc17_skill_node_nor_wulfrik_2_1",
+        "image_path": "character_ambush.png",
+        "is_background_skill": false,
+        "name": "World Walker",
+        "description": "Cursed to seek the deadliest opponents to best and kill in single combat, Wulfrik must forever walk the world.",
+        "levels": [
+          {
+            "unlocked_at_rank": 15,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Ability number of uses: +2 for \"Seafang\"",
+                "key": "wh2_dlc17_effect_ability_uses_seafang",
+                "value": 2
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +10%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 10
+              },
+              {
+                "icon": "attrition.png",
+                "priority": 105,
+                "is_positive_value_good": true,
+                "description": "Immune to all sea based attrition",
+                "key": "wh2_dlc17_effect_force_army_campaign_attrition_environmental_immunity",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_unique_world_walker",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc17_skill_node_nor_wulfrik_0_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc17_skill_node_nor_wulfrik_3_1",
+        "image_path": "causes_terror.png",
+        "is_background_skill": false,
+        "name": "Gift of Tongues",
+        "description": "Wulfrik’s Gift of Tongues means no-one can deny him a duel, but he still delights in crude invectives to break his enemies’ spirits.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attribute_causes_terror.png",
+                "priority": 320,
+                "is_positive_value_good": true,
+                "description": "Attribute: Causes Terror",
+                "key": "wh_main_effect_attribute_enable_causes_terror",
+                "value": 1
+              },
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": false,
+                "description": "Enemy leadership: -5",
+                "key": "wh_main_effect_force_stat_leadership_enemy_unit",
+                "value": -5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc17_skill_nor_wulfrik_unique_gift_of_tongues",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc17_skill_node_nor_wulfrik_0_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc17_skill_node_nor_wulfrik_4_1",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Echoes of Ambition",
+        "description": "Wulfrik once pursued the path of a great warrior king, and for a time cursed the gods for denying him.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -10%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -10
+              },
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Construction cost: -20% for Province Capital/Settlement buildings",
+                "key": "wh_main_effect_building_construction_cost_mod_settlement",
+                "value": -20
+              },
+              {
+                "icon": "construction.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Construction time: -2 for Province Capital/Settlement buildings",
+                "key": "wh_main_effect_building_construction_time_mod_settlement",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc17_skill_nor_wulfrik_unique_echoes_of_ambition",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc17_skill_node_nor_wulfrik_0_1"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc17_skill_node_nor_wulfrik_5_1",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "The Eternal Challenger",
+        "description": "Beware drunken boasts made in sight of the Dark Gods, lest they hold you to such claims…",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +50% for this Lord",
+                "key": "wh2_main_effect_replenishment_lords",
+                "value": 50
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 68,
+                "is_positive_value_good": true,
+                "description": "Upgrades ability: \"Hunter of Champions\"\n\t(affected targets cannot move)",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_dlc17_effect_ability_enable_hunter_of_champions_upgrade",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh2_dlc17_character_abilities_hunter_of_champions_upgraded",
+                      "icon_name": "wh_dlc08_unit_abilities_hunter_of_champions",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_hex",
+                        "icon_path": "icon_spell_hex.png",
+                        "description": "Hex"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Hunter of Champions",
+                      "active_time": 30,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "negative",
+                          "cant_move": true,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -20,
+                              "stat": "stat_armour",
+                              "how": "add",
+                              "description": "-20 Armour",
+                              "sort_order": 6,
+                              "icon": "icon_stat_armour.png"
+                            },
+                            {
+                              "value": -30,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-30 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_dlc17_effect_ability_enable_hunter_of_champions_upgrade",
+                "value": 1
+              },
+              {
+                "icon": "attribute_fatigue_immune.png",
+                "priority": 320,
+                "is_positive_value_good": true,
+                "description": "Attribute: Perfect Vigour",
+                "key": "wh2_dlc10_effect_attribute_enable_perfect_vigour",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_unique_eternal_challenger",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 2,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc17_skill_node_nor_wulfrik_1_1",
+          "wh2_dlc17_skill_node_nor_wulfrik_2_1",
+          "wh2_dlc17_skill_node_nor_wulfrik_3_1",
+          "wh2_dlc17_skill_node_nor_wulfrik_4_1"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_01",
+        "image_path": "wh_dlc08_seafang.png",
+        "is_background_skill": false,
+        "name": "Seafang",
+        "description": "There's no outrunning the terrible, flying Longship known as the 'Seafang'; once in its sights, an agonising, merciless death is your only possible destination.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Seafang\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_seafang",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_lord_abilities_seafang",
+                      "icon_name": "wh_dlc08_item_abilities_seafang",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_wind",
+                        "icon_path": "icon_spell_wind.png",
+                        "description": "Wind"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Seafang",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_main_spell_small_wind",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Small, forward-moving area of effect"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_units",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs multiple units"
+                        }
+                      ],
+                      "num_uses": 3,
+                      "active_time": 8,
+                      "recharge_time": 90,
+                      "wind_up_time": 4,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 150,
+                      "target_self": false
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_seafang",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_self_seafang",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_02",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Devastating Charge",
+        "description": "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +15",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_devastating_charge",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_03",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Thick-Skinned",
+        "description": "Creatures with tough hides or some kind of natural armour are tough nuts to crack - even a powerful attack may fall foul of their thick-skin.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +7",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +15",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_thick-skinned",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_04",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Hard to Hit",
+        "description": "Hand-to-hand combat is a lethal match of cut and thrust. However, it’s not all about offensive strikes; parries and other defensive moves can also win the day.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_05",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Deadly Blade",
+        "description": "A deadly blade is especially lethal when in the hands of this master death-maker, killer and slaughterer!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_deadly_blade",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_06",
+        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "is_background_skill": false,
+        "name": "Foe-Seeker",
+        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Foe-Seeker\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_foe_seeker",
+                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Foe-Seeker",
+                      "active_time": 30,
+                      "recharge_time": 70,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 1.2,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.2 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_02",
+          "wh_dlc08_skill_node_nor_wulfrik_self_03",
+          "wh_dlc08_skill_node_nor_wulfrik_self_04",
+          "wh_dlc08_skill_node_nor_wulfrik_self_05"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_07",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Wound-Maker",
+        "description": "Such is their power and ferocity, a wound-maker will ravage the foe, cutting and pulverising until there is only one exit - death.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_wound-maker",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_08",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Scarred Veteran",
+        "description": "The scars on this storied warrior reveal a veteran of many battles, a being not easy to kill and one worthy of respect and fear.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_09",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Indomitable",
+        "description": "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +12",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_self_indomitable",
+        "tier": 8,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_10",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Quicksilver",
+        "description": "Blink and you die.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +7%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +15%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_lords_self_quicksilver",
+        "tier": 9,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_06"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_self_11",
+        "image_path": "wh_main_character_abilities_deadly_onslaught.png",
+        "is_background_skill": false,
+        "name": "Deadly Onslaught",
+        "description": "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Deadly Onslaught\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_deadly_onslaught",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_deadly_onslaught",
+                      "icon_name": "wh_main_character_abilities_deadly_onslaught",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Deadly Onslaught",
+                      "active_time": 30,
+                      "recharge_time": 70,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.1 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.1 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_deadly_onslaught",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
+        "tier": 10,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_self_07",
+          "wh_dlc08_skill_node_nor_wulfrik_self_08",
+          "wh_dlc08_skill_node_nor_wulfrik_self_09",
+          "wh_dlc08_skill_node_nor_wulfrik_self_10"
+        ]
+      },
+      {
+        "key": "Rad_Skill_Dump_Attack_000257",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Martial Mastery (Skill Dump)",
+        "description": "When everything else fails, there is always studying the blade. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +1",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +2",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +9",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +10",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +11",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +13",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +14",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +15",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +16",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +17",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +18",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +19",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +20",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Attack",
+        "tier": 20,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "Rad_Skill_Dump_Defence_000256",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Defensive Dedication (Skill Dump)",
+        "description": "Wielding the shield is better than returning on it. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +1",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +2",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +9",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +10",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +11",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +13",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +14",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +15",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +16",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +17",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +18",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +19",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +20",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Defence",
+        "tier": 21,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_01",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Dominating Presence",
+        "description": "A Chaos Lord dominates – lesser beings cringe from a being that is so intently under scrutiny from the Dark Gods.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_chs_lord_battle_dominating_presence",
+        "tier": 0,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_02",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Fearsome Warriors",
+        "description": "Those who do not bend the knee to the Gods of the North soon find all they hold dear obliterated before them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_marauders_spearmen_berserkers_champions",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_marauders_spearmen_berserkers_champions",
+                "value": 6
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_marauders_spearmen_berserkers_champions",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_marauders_spearmen_berserkers_champions",
+                "value": 8
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_marauders_spearmen_berserkers_champions",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_fearsome_warriors",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_03",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Beast Slayers",
+        "description": "Delighting in death and suffering, these savage warriors follow their ignoble Lord wherever he goes.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +3% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_nor_marauder_hunters_marauder_horsemen",
+                "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +5% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "key": "wh2_dlc11_effect_force_stat_ammunition_nor_marauder_hunters_marauder_horsemen",
+                "value": 20
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +7% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen",
+                "value": 7
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_beast_slayers",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_04",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Unnatural Selection",
+        "description": "Only the fiercest creatures can survive the frozen north; the strongest are rounded up for war and starved into viciousness, ready for the next battle.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "key": "wh2_dlc11_effect_force_stat_speed_nor_warhounds_ice_wolves_chariots",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +9% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "key": "wh2_dlc11_effect_force_stat_speed_nor_warhounds_ice_wolves_chariots",
+                "value": 9
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +6 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_nor_warhounds_ice_wolves_chariots",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +12% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "key": "wh2_dlc11_effect_force_stat_speed_nor_warhounds_ice_wolves_chariots",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_nor_warhounds_ice_wolves_chariots",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_unnatural_selection",
+        "tier": 3,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_05",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Frostbitten",
+        "description": "The intense cold cuts into the flesh, burning the foe's extremities until they drop off altogether!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_skin_wolves_trolls",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_skin_wolves_trolls",
+                "value": 4
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5% for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_skin_wolves_trolls",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_skin_wolves_trolls",
+                "value": 6
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_skin_wolves_trolls",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_frostbitten",
+        "tier": 4,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_06",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Hail of Teeth",
+        "description": "The razor-sharp hail of the north is not the only danger in the Norscan sky – its airborne beasts are just as deadly and far less predictable.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Manticore and Frost Wyrm units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_manticore_frost_wyrm",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +6 for Manticore and Frost Wyrm units",
+                "key": "wh2_dlc11_effect_force_stat_armour_manticore_frost_wyrm",
+                "value": 6
+              },
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Manticore and Frost Wyrm units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_manticore_frost_wyrm",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Manticore and Frost Wyrm units",
+                "key": "wh2_dlc11_effect_force_stat_armour_manticore_frost_wyrm",
+                "value": 12
+              },
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Manticore and Frost Wyrm units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_manticore_frost_wyrm",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_hail_of_teeth",
+        "tier": 5,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_07",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Monsters of the North",
+        "description": "Giant, deadly, and able to take orders, this Lord’s monstrosities are especially terrifying and lethal.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_fimir_giant_mammoth",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_fimir_giant_mammoth",
+                "value": 4
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "key": "wh2_dlc11_effect_force_stat_melee_defence_nor_fimir_giant_mammoth",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_fimir_giant_mammoth",
+                "value": 6
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "key": "wh2_dlc11_effect_force_stat_melee_defence_nor_fimir_giant_mammoth",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_monsters_of_the_north",
+        "tier": 6,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_08",
+        "image_path": "wh_main_character_abilities_rally.png",
+        "is_background_skill": false,
+        "name": "Rally!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Rally!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_rally",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_rally",
+                      "icon_name": "wh_main_character_abilities_rally",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rally!",
+                      "active_time": 30,
+                      "recharge_time": 75,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 12,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+12 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_rally",
+        "tier": 7,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 6,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_02",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_03",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_04",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_05",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_06",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_07"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_09",
+        "image_path": "battle_armour.png",
+        "is_background_skill": false,
+        "name": "Champions of the North",
+        "description": "In spite of their savage nature, they are possessed of a savage code of conduct and form a loose brotherhood of those considered worthy.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 403,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_armour_marauders_spearmen_berserkers_champions_rank7",
+                "value": 12
+              },
+              {
+                "icon": "defence.png",
+                "priority": 452,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_melee_defence_nor_marauders_spearmen_berserkers_champions_rank7",
+                "value": 5
+              },
+              {
+                "icon": "resistance_physical.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_physical_resistance_nor_marauders_spearmen_berserkers_champions_rank7",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_champions_of_the_north",
+        "tier": 8,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_08"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_10",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Hardened Hunters",
+        "description": "No beast too large, no adversary too great; no quarry - mortal or otherwise - can evade them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 542,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen_rank7",
+                "value": 10
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 562,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_nor_marauder_hunters_marauder_horsemen_rank7",
+                "value": 10
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_missile_resistance_nor_marauder_hunters_marauder_horsemen_rank7",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_hardened_hunters",
+        "tier": 9,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_08"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_11",
+        "image_path": "battle_damage.png",
+        "is_background_skill": false,
+        "name": "Icy Wrath",
+        "description": "The intense cold and near-constant darkness of the far north make for a certain kind of killer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 432,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_melee_attack_warhounds_ice_wolves_manticore_skin_wolves_chariots_rank7",
+                "value": 5
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 462,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_warhounds_ice_wolves_manticore_skin_wolves_chariots_rank7",
+                "value": 10
+              },
+              {
+                "icon": "charge.png",
+                "priority": 502,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_nor_warhounds_ice_wolves_manticore_skin_wolves_chariots_rank7",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_icy_wrath",
+        "tier": 10,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_08"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_12",
+        "image_path": "battle_ward_save.png",
+        "is_background_skill": false,
+        "name": "Hulks of Death",
+        "description": "The freezing darkness and stunning violence of the far north bring no small solace to those who have lost everything and wish to forget.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 403,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_armour_trolls_frost_wyrm_giant_mammoth_fimir_rank7",
+                "value": 12
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 462,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_trolls_frost_wyrm_giant_mammoth_fimir_rank7",
+                "value": 10
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Ward save: 8% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)",
+                "key": "wh2_dlc11_effect_force_stat_ward_save_trolls_frost_wyrm_giant_mammoth_fimir_rank7",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_nor_army_buff_hulks_of_death",
+        "tier": 11,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_08"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_13",
+        "image_path": "wh_main_character_abilities_stand_or_die.png",
+        "is_background_skill": false,
+        "name": "Stand or Die!",
+        "description": "There can be no turning back for those whose souls are turning black.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Stand or Die!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_stand_or_die",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_stand_or_die",
+                      "icon_name": "wh_main_character_abilities_stand_or_die",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Stand or Die!",
+                      "active_time": 30,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 34,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+34 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": 14,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+14 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_stand_or_die",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 305,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc08_skill_nor_lords_battle_fight_or_die"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lord_battle_stand_or_die",
+        "tier": 12,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_09",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_10",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_11",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_12"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh2_dlc11_skill_node_nor_wulfrik_battle_14",
+        "image_path": "wh_dlc08_lord_abilities_fight_or_die.png",
+        "is_background_skill": false,
+        "name": "Fight or Die!",
+        "description": "There is no other choice. There never was.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Fight or Die!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_dlc08_effect_ability_enable_fight_or_die",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_lord_abilities_fight_or_die",
+                      "icon_name": "wh_dlc08_lord_abilities_fight_or_die",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Fight or Die!",
+                      "active_time": 25,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 20,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+20 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 12,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+12 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_dlc08_effect_ability_enable_fight_or_die",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 305,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc08_skill_nor_lord_battle_stand_or_die"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_battle_fight_or_die",
+        "tier": 13,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_09",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_10",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_11",
+          "wh2_dlc11_skill_node_nor_wulfrik_battle_12"
+        ],
+        "boxed": true
+      }
+    ],
+    [
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_01",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "Route Marcher",
+        "description": "Those who know the land and its secrets will travel faster and further than the foes who don't.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_route_marcher",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_02",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Despoilers",
+        "description": "To despoil, to corrupt and ruin, to break the mortals and take their gods from them - this is what Chaos wants.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 108,
+                "is_positive_value_good": true,
+                "description": "Income from sacking settlements: +3%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 108,
+                "is_positive_value_good": true,
+                "description": "Income from sacking settlements: +8%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 108,
+                "is_positive_value_good": true,
+                "description": "Income from sacking settlements: +15%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lord_campaign_despoilers",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_03",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Serve or Die",
+        "description": "\"You will serve me, wretch, or you will die, there is no other option.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -5%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -10%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -15%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_chs_lord_campaign_serve_or_die",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_04",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Norse Resilience",
+        "description": "The bleak, brutal landscape of the far north breeds bloody, warlike tribes in thrall to Chaos' delicious, twisted power.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +5%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_campaign_norse_resilience",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_05",
+        "image_path": "campaign_growth.png",
+        "is_background_skill": false,
+        "name": "Swelling of Doom",
+        "description": "Maybe it is the influence of the Dark Gods that has caused the populace to burgeon and proliferate beyond their natural bounds?",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +8",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +20",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +36",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 36
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_campaign_swelling_of_doom",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_06",
+        "image_path": "campaign_agent.png",
+        "is_background_skill": false,
+        "name": "Devourers of Flesh",
+        "description": "Once Wulfrik has made his infernal offerings, the mangled gore that remains is devoured by his ravenous, insatiable Werekin.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "skin_wolf_werekin.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero recruit rank: +5 for Skin Wolf Werekin",
+                "key": "wh_dlc08_effect_skill_agent_recruitment_xp_champion_norsca",
+                "value": 5
+              },
+              {
+                "icon": "skin_wolf_werekin.png",
+                "priority": 302,
+                "is_positive_value_good": true,
+                "description": "Hero capacity: +1 for Skin Wolf Werekin",
+                "key": "wh_dlc08_effect_skill_agent_cap_increase_champion_skin_wolf_werekin",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_wulfrik_campaign_devourers_of_flesh",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_02",
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_03",
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_04",
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_05"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_07",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Lightning Strike",
+        "description": "\"The time to strike is now!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +25%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 25
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Enables lightning strike battles when reinforcements are present",
+                "key": "wh_main_effect_conquest_enable_night_battles",
+                "value": 1
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_lightning_strike",
+        "tier": 6,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_08",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Savage Skills",
+        "description": "There's something about the harsh, unforgiving nature of northern life that makes its occupants fight harder and longer than many of their soft, southern equivalents.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Post battle chance of stealing a magic item: +4%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 4
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Post battle chance of stealing a magic item: +8%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 8
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +2",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Post battle chance of stealing a magic item: +12%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 12
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +2",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_campaign_savage_skills",
+        "tier": 7,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_09",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Unnatural Healing",
+        "description": "Something strange - something no scholar really wishes to discover - governs who dies and who lives in the warlike northern wastes.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Attrition: -5% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -5
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +8%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_campaign_unnatural_healing",
+        "tier": 8,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_06"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_10",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Fuelled by War",
+        "description": "War and glory before the Gods are the determining elements in every decision made; there is nothing else worth living - or dying - for.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -3%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -6%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -9%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -9
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_campaign_fuelled_by_war",
+        "tier": 9,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_06"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh_dlc08_skill_node_nor_wulfrik_campaign_11",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Spawn of Chaos",
+        "description": "The tendrils (and tentacles!) of the Northern Gods reach down from the poles and far across the world, twisting and corrupting all they touch.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +150",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 150
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_campaign_spawn_of_chaos",
+        "tier": 10,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_07",
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_08",
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_09",
+          "wh_dlc08_skill_node_nor_wulfrik_campaign_10"
+        ]
+      }
+    ]
+  ],
+  "key": "nor_wulfrik",
+  "backgroundSkills": [
+    {
+      "key": "wh_dlc08_skill_node_nor_wulfrik_innate_01",
+      "image_path": "trait_norsca.png",
+      "is_background_skill": true,
+      "name": "Born Warrior",
+      "description": "Born to slaughter in their Ruinous names, Wulfrik bears the Mark of the Dark Gods upon his flesh.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "military.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Reinforcement range: +30%",
+              "key": "wh_main_effect_force_all_campaign_reinforcement_range",
+              "value": 30
+            },
+            {
+              "icon": "attribute_can_siege.png",
+              "priority": 320,
+              "is_positive_value_good": true,
+              "description": "Attribute: Siege Attacker",
+              "key": "wh_dlc04_effect_attribute_enable_can_siege_dummy",
+              "value": 1
+            },
+            {
+              "icon": "attribute_causes_fear.png",
+              "priority": 320,
+              "is_positive_value_good": true,
+              "description": "Attribute: Causes Fear",
+              "key": "wh_main_effect_attribute_enable_causes_fear",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_wulfrik",
+      "character_skill_key": "wh_dlc08_skill_innate_nor_wulfrik",
+      "tier": 0,
+      "indent": 7,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
+  "items": [
+    {
+      "key": "wh_dlc08_anc_weapon_sword_of_torgald",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
+        },
+        {
+          "icon": "income.png",
+          "priority": 101,
+          "is_positive_value_good": true,
+          "description": "Income from post-battle loot: +15%",
+          "value": 15,
+          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "weapon_damage_character.png",
+          "priority": 160,
+          "is_positive_value_good": true,
+          "description": "Weapon strength: +5%",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_weapon_strength"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Sword of Torgald\"",
+          "related_abilities": [
+            {
+              "effect": "wh_dlc08_effect_ability_enable_sword_of_torgald",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh_dlc08_weapon_abilities_sword_of_torgald",
+                "icon_name": "wh_dlc08_item_abilities_sword_of_torgald",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Sword of Torgald",
+                "active_time": 50,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 50,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 1.6,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.6 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh_dlc08_effect_ability_enable_sword_of_torgald"
+        }
+      ],
+      "name": "Sword of Torgald",
+      "description": "Although King Torgald's blade is a prized trophy, it is also an eternal reminder of the consequences of grand proclamations afore the Gods.",
+      "unlocked_at_rank": 7,
+      "instant": false,
+      "image_path": "item_weapon.png"
+    }
+  ]
+}

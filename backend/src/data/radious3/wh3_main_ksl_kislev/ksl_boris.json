@@ -1,0 +1,3770 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_boris_generic_03",
+        "image_path": "mount_warhorse.png",
+        "is_background_skill": false,
+        "name": "Warhorse",
+        "description": "A general's horse can be their most trusted and daring companion. Just don't name him 'Daisy'.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Warhorse",
+                "key": "wh_main_effect_enable_mount_warhorse",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 5
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_warhorse",
+        "tier": 0,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_generic_04",
+        "image_path": "mount_urskin.png",
+        "is_background_skill": false,
+        "name": "Urskin",
+        "description": "Greatest of all the bear mounts, the 'Bear-brother' who awaits his legendary rider, Boris Bokha.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Urskin",
+                "key": "wh3_main_effect_enable_mount_urskin",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 11
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_urskin",
+        "tier": 1,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_generic_06",
+        "image_path": "character_general_ability.png",
+        "is_background_skill": false,
+        "name": "Brass-Lunged",
+        "description": "This Lord belts out orders and can be heard even across a battlefield smothered in the grim noise of war.",
+        "levels": [
+          {
+            "unlocked_at_rank": 4,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +25%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 25
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_brass-lunged",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_generic_07",
+        "image_path": "wh3_main_character_passive_heroic_resilience.png",
+        "is_background_skill": false,
+        "name": "Heroic Resilience",
+        "description": "",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Heroic Resilience\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_heroic_resilience",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_character_passive_heroic_resilience",
+                      "icon_name": "wh3_main_character_passive_heroic_resilience",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Heroic Resilience",
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 15,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+15 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": 5,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+5 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_heroic_resilience",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_generic_heroic_resilience",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_generic_05",
+        "image_path": "character_growth.png",
+        "is_background_skill": false,
+        "name": "Resettler",
+        "description": "Boris' return heralds a period of unprecedented growth among the Kislevites, proving his intrinsic connection to the Motherland and its people.",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "growth.png",
+                "priority": 30,
+                "is_positive_value_good": true,
+                "description": "Growth: +10",
+                "key": "wh_main_effect_province_growth_characters",
+                "value": 10
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 162,
+                "is_positive_value_good": false,
+                "description": "No colonisation cost",
+                "key": "wh_main_effect_occupation_decision_colonise_cost_zero",
+                "value": -1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_growth",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_08",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "As One with Ursun",
+        "description": "\"You've got to lose yourself before you find yourself, back in exile…\"",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: -8",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": -8
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              },
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": false,
+                "description": "Enemy leadership: -8",
+                "key": "wh_main_effect_force_stat_leadership_enemy_unit",
+                "value": -8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_devotion",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_06",
+        "image_path": "character_construction.png",
+        "is_background_skill": false,
+        "name": "Grand Builder",
+        "description": "Following centuries of devastating conflict against Ruin, the cities of Kislev shall rise again, stronger than ever before.",
+        "levels": [
+          {
+            "unlocked_at_rank": 18,
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Construction cost: -6% for all buildings",
+                "key": "wh_main_effect_building_construction_cost_mod",
+                "value": -6
+              },
+              {
+                "icon": "construction.png",
+                "priority": 131,
+                "is_positive_value_good": false,
+                "description": "Construction time: -50% for Garrison and Religion buildings",
+                "key": "wh3_main_effect_building_construction_time_mod_ksl_defence_religion",
+                "value": -50
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_06",
+        "tier": 6,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "rad_wh3_part3_skill_node_ksl_unique_041",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "On the March",
+        "description": "Most Kislevites are used to walk and ride days on puruit of roaming Chaos warbands and other invaders.",
+        "levels": [
+          {
+            "unlocked_at_rank": 9,
+            "effects": [
+              {
+                "icon": "vigour.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Vigour loss reduction: -20%",
+                "key": "wh_main_effect_force_stat_vigour_loss_reduction",
+                "value": -20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "rad_wh3_part3_skill_ksl_generic_on_the_march",
+        "tier": 7,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "rad_wh3_part3_skill_node_ksl_unique_042",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Vodka for Everyone!",
+        "description": "A Kislevite army without vodka is like a bear without teeth and claws.",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +5%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "rad_wh3_part3_skill_ksl_generic_vodka_for_everyone",
+        "tier": 8,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "rad_wh3_part3_skill_node_ksl_unique_043",
+        "image_path": "campaign_untainted.png",
+        "is_background_skill": false,
+        "name": "The Strength Of the Faithful",
+        "description": "Our gods stand with us in the battlefield, protecting us from the Dark Powers.",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "resistance_magic.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Magic Resistance: +10% for Torch Bearers of Dazh, Sons of ursun, Claws of Ursun, and Hammers of Tor units",
+                "key": "rad_wh3_part3_effect_ksl_the_strength_of_the_faithful",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "rad_wh3_part3_skill_ksl_generic_the_strength_of_the_faithful",
+        "tier": 9,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "rad_wh3_part3_skill_node_ksl_unique_044",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "This is OUR Homeland",
+        "description": "We have endured the attacks of the servants of the Dark Powers for centuries, and we will keep doing it as long as one of us still breaths.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Physical Resistance: +2% for Infantry units",
+                "key": "rad_wh3_part3_effect_ksl_this_is_our_homeland_melee_defence",
+                "value": 2
+              },
+              {
+                "icon": "armour.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Armour: +4 for Cavalry, Bear Cavalry, Sleds and Monsters units",
+                "key": "rad_wh3_part3_effect_ksl_this_is_our_homeland_armour",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Physical Resistance: +4% for Infantry units",
+                "key": "rad_wh3_part3_effect_ksl_this_is_our_homeland_melee_defence",
+                "value": 4
+              },
+              {
+                "icon": "armour.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Armour: +6 for Cavalry, Bear Cavalry, Sleds and Monsters units",
+                "key": "rad_wh3_part3_effect_ksl_this_is_our_homeland_armour",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Physical Resistance: +6% for Infantry units",
+                "key": "rad_wh3_part3_effect_ksl_this_is_our_homeland_melee_defence",
+                "value": 6
+              },
+              {
+                "icon": "armour.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Armour: +8 for Cavalry, Bear Cavalry, Sleds and Monsters units",
+                "key": "rad_wh3_part3_effect_ksl_this_is_our_homeland_armour",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "rad_wh3_part3_skill_ksl_generic_this_is_our_homeland",
+        "tier": 10,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_01",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Stout-Hearted",
+        "description": "Boris' every heartbeat echoes with the courage and tenacity of Ursun.",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +5",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_01",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_02",
+        "image_path": "character_bonus_vs_large.png",
+        "is_background_skill": false,
+        "name": "Fearless Fighter",
+        "description": "Hold tight to duty and rid the mind of all fear, for fear is a threat to the Motherland.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "bonus_vs_large_character.png",
+                "priority": 190,
+                "is_positive_value_good": true,
+                "description": "Bonus vs Large: +25",
+                "key": "wh_main_effect_character_stat_bonus_vs_large",
+                "value": 25
+              },
+              {
+                "icon": "attribute_immune_to_psychology.png",
+                "priority": 320,
+                "is_positive_value_good": true,
+                "description": "Attribute: Immune to Psychology",
+                "key": "wh_main_effect_attribute_enable_immune_to_psychology",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_02",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_unique_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_03",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Brother of Bears",
+        "description": "Every enemy has the right to bear arms. And the right to be horrifically mauled by bear-teeth.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for War Bear Riders and Elemental Bear units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_war_bears_elemental_bears",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_03",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_unique_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_04",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Band of Brutes",
+        "description": "\"I don't know what effect these men will have upon the enemy, but by Ursun, they frighten me.\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6 for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_leadership_ksl_tsar_guard",
+                "value": 6
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +8% for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_tsar_guard",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_04",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_unique_01"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_05",
+        "image_path": "character_movement.png",
+        "is_background_skill": false,
+        "name": "The Great Reclaimer",
+        "description": "All that was lost to Chaos shall be reclaimed, in Ursun's name for the good of all Kislev.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +10%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_05",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_unique_01"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_unique_09",
+        "image_path": "wh_main_unit_passive_regeneration.png",
+        "is_background_skill": false,
+        "name": "Elemental Regeneration",
+        "description": "The Great Bear shall be reborn, and the Motherland with him.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Regeneration\" for Elemental Bear units",
+                "key": "wh3_main_effect_ability_enable_regeneration_ksl_elemental_bears",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_boris_unique_elemental_bear_regen",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_unique_02",
+          "wh3_main_skill_node_ksl_boris_unique_03",
+          "wh3_main_skill_node_ksl_boris_unique_04",
+          "wh3_main_skill_node_ksl_boris_unique_05"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_0",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Hard to Hit",
+        "description": "Hand-to-hand combat is a lethal match of cut and thrust. However, it’s not all about offensive strikes; parries and other defensive moves can also win the day.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_hard_to_hit_starter",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_1_1",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Devastating Charge",
+        "description": "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +15",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_devastating_charge",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_1_2",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Full Plate Armour",
+        "description": "Full-Plate armour protects the wearer from head-to-foot. Many such suits are blessed or imbued with arcane abilities.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +7",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +15",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_1_3",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Scarred Veteran",
+        "description": "The scars on this storied warrior reveal a veteran of many battles, a being not easy to kill and one worthy of respect and fear.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_scarred_veteran",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_1_4",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Deadly Blade",
+        "description": "A deadly blade is especially lethal when in the hands of this master death-maker, killer and slaughterer!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_deadly_blade",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_2",
+        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "is_background_skill": false,
+        "name": "Foe-Seeker",
+        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Foe-Seeker\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_foe_seeker",
+                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Foe-Seeker",
+                      "active_time": 30,
+                      "recharge_time": 70,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 1.2,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.2 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_combat_1_1",
+          "wh3_main_skill_node_ksl_boris_combat_1_2",
+          "wh3_main_skill_node_ksl_boris_combat_1_3",
+          "wh3_main_skill_node_ksl_boris_combat_1_4"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_3_1",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Wound-Maker",
+        "description": "Such is their power and ferocity, a wound-maker will ravage the foe, cutting and pulverising until there is only one exit - death.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_wound-maker",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_3_2",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Blade Master",
+        "description": "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_master",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_3_3",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Indomitable",
+        "description": "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +12",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_self_indomitable",
+        "tier": 8,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_3_4",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Blade Shield",
+        "description": "A blade that sings in defence will not let its wielder be penetrated.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_shield",
+        "tier": 9,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_combat_2"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_combat_4",
+        "image_path": "wh_main_character_abilities_deadly_onslaught.png",
+        "is_background_skill": false,
+        "name": "Deadly Onslaught",
+        "description": "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Deadly Onslaught\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_deadly_onslaught",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_deadly_onslaught",
+                      "icon_name": "wh_main_character_abilities_deadly_onslaught",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Deadly Onslaught",
+                      "active_time": 30,
+                      "recharge_time": 70,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.1 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.1 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.1,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.1 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_deadly_onslaught",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
+        "tier": 10,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_combat_3_1",
+          "wh3_main_skill_node_ksl_boris_combat_3_2",
+          "wh3_main_skill_node_ksl_boris_combat_3_3",
+          "wh3_main_skill_node_ksl_boris_combat_3_4"
+        ]
+      },
+      {
+        "key": "Rad_Skill_Dump_Attack_000196",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Martial Mastery (Skill Dump)",
+        "description": "When everything else fails, there is always studying the blade. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +1",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +2",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +9",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +10",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +11",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +13",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +14",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +15",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +16",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +17",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +18",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +19",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +20",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Attack",
+        "tier": 20,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "Rad_Skill_Dump_Defence_000195",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Defensive Dedication (Skill Dump)",
+        "description": "Wielding the shield is better than returning on it. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +1",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +2",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +9",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +10",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +11",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +13",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +14",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +15",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +16",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +17",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +18",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +19",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +20",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Defence",
+        "tier": 21,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_0",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Inspiring Presence",
+        "description": "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_inspiring_presence",
+        "tier": 0,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_1_1",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Firing Drills",
+        "description": "\"Again, again, again! We'll practice this until your fingers bleed!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4 for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_kossars_streltsi",
+                "value": 4
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +3% for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_kossars_strelsi",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_kossars_streltsi",
+                "value": 6
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +6% for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_kossars_strelsi",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8 for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_kossars_streltsi",
+                "value": 8
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +9% for Kossars, Armoured Kossars and Streltsi units",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_kossars_strelsi",
+                "value": 9
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_kossars_streltsi",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_1_3",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Best of the Court",
+        "description": "\"There's ice in the veins of the mighty Guards of Kislev, or so the rumour goes…\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4 for Tzar Guard and Ice Guard units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_tsar_guard_ice_guard",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_tsar_guard",
+                "value": 4
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Tzar Guard and Ice Guard units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_tsar_guard_ice_guard",
+                "value": 6
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Ice Guard units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_ice_guard",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for Tzar Guard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_tsar_guard",
+                "value": 6
+              },
+              {
+                "icon": "defence.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8 for Tzar Guard and Ice Guard units",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_tsar_guard_ice_guard",
+                "value": 8
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Ice Guard units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_ice_guard",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_elite_infantry",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_1_4",
+        "image_path": "battle_charge.png",
+        "is_background_skill": false,
+        "name": "Relentless Chargers",
+        "description": "The thunderous pounding of Kislevite hooves can be heard for leagues around, even muffled by the crunch of fresh snow.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12% for Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_charge_bonus_pct_ksl_heavy_cavalry",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +8% for Horse Archers, Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_speed_ksl_heavy_cavalry",
+                "value": 8
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12% for Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_charge_bonus_pct_ksl_heavy_cavalry",
+                "value": 12
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Horse Archers units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_horse_archers",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +12% for Horse Archers, Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_speed_ksl_heavy_cavalry",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +18% for Kossovite Dervishes, Winged Lancers and Gryphon Legion units",
+                "key": "wh3_main_effect_force_stat_charge_bonus_pct_ksl_heavy_cavalry",
+                "value": 18
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Horse Archers units",
+                "key": "wh3_main_effect_force_stat_missile_damage_ksl_horse_archers",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_heavy_cavalry",
+        "tier": 3,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_1_5",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Creatures of the Land",
+        "description": "The beasts that roam the forests of Kislev are somehow even more lethal than the land they inhabit.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4 for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_war_bear_elemental_bear_leopard",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6 for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_war_bear_elemental_bear_leopard",
+                "value": 6
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +8% for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_monsters",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_war_bear_elemental_bear_leopard",
+                "value": 8
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 461,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12% for War Bear Riders, Elemental Bear and Snow Leopard units",
+                "key": "wh3_main_effect_force_stat_weapon_strength_ksl_monsters",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_monsters",
+        "tier": 4,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_1_6",
+        "image_path": "battle_armour.png",
+        "is_background_skill": false,
+        "name": "Skilled Craftsmen",
+        "description": "Kislevite craftsmen toil night and day, tinkering with contraptions to help repel the forces of Chaos.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +8 for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_armour_ksl_war_machines",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +10 for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_armour_ksl_war_machines",
+                "value": 10
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10% for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_war_machines",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_armour_ksl_war_machines",
+                "value": 12
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 511,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for War Sleds and Little Grom units",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_war_machines",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_war_machines",
+        "tier": 5,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_2",
+        "image_path": "wh_main_character_abilities_rally.png",
+        "is_background_skill": false,
+        "name": "Rally!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Rally!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_rally",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_rally",
+                      "icon_name": "wh_main_character_abilities_rally",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rally!",
+                      "active_time": 30,
+                      "recharge_time": 75,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 12,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+12 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_rally",
+        "tier": 6,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 6,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_army_1_1",
+          "wh3_main_skill_node_ksl_boris_army_1_3",
+          "wh3_main_skill_node_ksl_boris_army_1_4",
+          "wh3_main_skill_node_ksl_boris_army_1_5",
+          "wh3_main_skill_node_ksl_boris_army_1_6"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_3_1",
+        "image_path": "battle_attack.png",
+        "is_background_skill": false,
+        "name": "Skirmisher Traditions",
+        "description": "The warriors of the north carry conflict in their blood, a legacy left by the Khan-Kings and Khan-Queens of old.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 432,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Kossars, Armoured Kossars, Streltsi and Ice Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_melee_attack_ksl_kossars_streltsi_ice_guard_rank7",
+                "value": 5
+              },
+              {
+                "icon": "ammo.png",
+                "priority": 512,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +15% for Kossars, Armoured Kossars, Streltsi and Ice Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_kossars_streltsi_ice_guard_rank7",
+                "value": 15
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 10% for Kossars, Armoured Kossars, Streltsi and Ice Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_resistance_ksl_kossars_streltsi_ice_guard_rank7",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_kossars_streltsi_ice_guard_rank_7",
+        "tier": 7,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_3_2",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Horsemasters",
+        "description": "Descended of the proud horse-warriors of the Gospodar, all Kislevites are born to the saddle like their ancestors before them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement.png",
+                "priority": 422,
+                "is_positive_value_good": true,
+                "description": "Speed: +10% for Kossovite Dervishes, Horse Archers, Winged Lancers, and Gryphon Legion units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_speed_ksl_horse_cavalry_rank7",
+                "value": 10
+              },
+              {
+                "icon": "charge.png",
+                "priority": 502,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for Kossovite Dervishes, Horse Archers, Winged Lancers, and Gryphon Legion units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_charge_bonus_add_ksl_horse_cavalry_rank7",
+                "value": 12
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for Kossovite Dervishes, Horse Archers, Winged Lancers, and Gryphon Legion units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_resistance_ksl_horse_cavalry_rank7",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_cavalry_rank_7",
+        "tier": 8,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_3_3",
+        "image_path": "battle_defence.png",
+        "is_background_skill": false,
+        "name": "Ursun's Favoured",
+        "description": "\"Ursun is with us, brothers! None can stand against the beasts of the Bear-God!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 402,
+                "is_positive_value_good": true,
+                "description": "Armour: +10 for War Bear Riders, Elemental Bear, Snow Leopard and Tzar Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_armour_ksl_bears_leopards_tsar_guard_rank7",
+                "value": 10
+              },
+              {
+                "icon": "defence.png",
+                "priority": 452,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for War Bear Riders, Elemental Bears, Snow Leopard and Tzar Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_melee_defence_ksl_bears_leopards_tsar_guard_rank7",
+                "value": 5
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 15% for War Bear Riders, Elemental Bears, Snow Leopard and Tzar Guard units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_magic_resistance_ksl_bears_leopards_tsar_guard_rank7",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_bears_tsar_guard_rank_7",
+        "tier": 9,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_3_4",
+        "image_path": "battle_ranged_damage.png",
+        "is_background_skill": false,
+        "name": "Battle Engineers",
+        "description": "The workshops of the north are always busy, their engineers working tirelessly in the pursuit of battle excellence.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 512,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +20% for War Sleds and Little Grom units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_ammunition_ksl_artillery_sleds_rank7",
+                "value": 20
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 562,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for War Sleds and Little Grom units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_reload_time_reduction_ksl_artillery_sleds_rank7",
+                "value": 10
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 582,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for War Sleds and Little Grom units (Rank 7 and above)",
+                "key": "wh3_main_effect_force_stat_missile_resistance_ksl_artillery_sleds_rank7",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_main_skill_ksl_army_buff_war_machines_rank_7",
+        "tier": 10,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_army_2"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_army_4",
+        "image_path": "wh_main_character_abilities_stand_your_ground.png",
+        "is_background_skill": false,
+        "name": "Stand Your Ground!",
+        "description": " ",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Stand Your Ground!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_stand_your_ground",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_stand_your_ground",
+                      "icon_name": "wh_main_character_abilities_stand_your_ground",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Stand Your Ground!",
+                      "active_time": 30,
+                      "recharge_time": 80,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 30,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 36,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+36 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": 12,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+12 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_stand_your_ground",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 305,
+                "is_positive_value_good": true,
+                "description": "Replaces: \"Rally!\"",
+                "key": "wh_main_effect_ability_disable_rally",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_stand_your_ground",
+        "tier": 11,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 1,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_army_3_1",
+          "wh3_main_skill_node_ksl_boris_army_3_2",
+          "wh3_main_skill_node_ksl_boris_army_3_3",
+          "wh3_main_skill_node_ksl_boris_army_3_4"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_0",
+        "image_path": "campaign_movement.png",
+        "is_background_skill": false,
+        "name": "Route Marcher",
+        "description": "Those who know the land and its secrets will travel faster and further than the foes who don't.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_route_marcher",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_1_1",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Iron Disciplinarian",
+        "description": "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +1",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +2",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Control: +3",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_iron_disciplinarian",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_1_2",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Leader of Renown",
+        "description": "Revered by the Warrior Priests, such a celebrated leader will inspire many new recruits.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -5%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -10%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -15%",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_leader_of_renown",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_1_3",
+        "image_path": "campaign_disaster.png",
+        "is_background_skill": false,
+        "name": "Reassuring Presence",
+        "description": "The presence of this Lord ensures a measure of calm, reducing panic and desertion amongst followers.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Attrition: -10% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Attrition: -20% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Attrition: -30% casualties suffered from all attrition",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_lord_all_campaign_reassuring_presence",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_1_4",
+        "image_path": "campaign_untainted.png",
+        "is_background_skill": false,
+        "name": "Fervent",
+        "description": "Through our acts, the gods will cleanse the lands.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -1",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -2",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -3",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_fervent",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_2",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Draftmaster",
+        "description": "Someone has to ensure the numbers and quality of recruits remain high.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              },
+              {
+                "icon": "army.png",
+                "priority": 270,
+                "is_positive_value_good": true,
+                "description": "Local recruitment capacity: +1",
+                "key": "wh_main_effect_unit_recruitment_points",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_def_campaign_draftmaster",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_1_1",
+          "wh3_main_skill_node_ksl_boris_campaign_1_2",
+          "wh3_main_skill_node_ksl_boris_campaign_1_3",
+          "wh3_main_skill_node_ksl_boris_campaign_1_4"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_3_1",
+        "image_path": "campaign_subterfuge.png",
+        "is_background_skill": false,
+        "name": "Lightning Strike",
+        "description": "\"The time to strike is now!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +25%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 25
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterfuge.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Enables lightning strike battles when reinforcements are present",
+                "key": "wh_main_effect_conquest_enable_night_battles",
+                "value": 1
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "military.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Enemy battle reinforcement time: +50%",
+                "key": "wh3_main_effect_opposing_reinforcement_time_percentage_mod",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_lightning_strike",
+        "tier": 6,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_3_2",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Quartermaster",
+        "description": "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -3%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -6%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -9%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -9
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_quartermaster",
+        "tier": 7,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_3_3",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Logistician",
+        "description": "Proficient with figures, this Lord, or his subordinates, can keep his army fulfilled, even in dire circumstances.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +3%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +6%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +9%",
+                "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "value": 9
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_lord_campaign_logistician",
+        "tier": 8,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_3_4",
+        "image_path": "campaign_ambush.png",
+        "is_background_skill": false,
+        "name": "Alert",
+        "description": "Countless conflicts and a keen sense of awareness have made this Lord difficult to entrap.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +6%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterranean.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +5%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 5
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +16%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "subterranean.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 10
+              },
+              {
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Ambush defence chance: +30%",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_campaign_alert",
+        "tier": 9,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_2"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "wh3_main_skill_node_ksl_boris_campaign_4",
+        "image_path": "campaign_agent.png",
+        "is_background_skill": false,
+        "name": "Renowned & Feared",
+        "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_ll_self_defense",
+        "tier": 10,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "wh3_main_skill_node_ksl_boris_campaign_3_1",
+          "wh3_main_skill_node_ksl_boris_campaign_3_2",
+          "wh3_main_skill_node_ksl_boris_campaign_3_3",
+          "wh3_main_skill_node_ksl_boris_campaign_3_4"
+        ]
+      }
+    ]
+  ],
+  "key": "ksl_boris",
+  "backgroundSkills": [
+    {
+      "key": "wh3_main_skill_node_ksl_boris_innate_01",
+      "image_path": "trait_kislev.png",
+      "is_background_skill": true,
+      "name": "Red Tzar",
+      "description": "\"Ursun called to me, and even in the coldest of sleeps, I answered!\"",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh3_main_effect_force_stat_leadership_vs_chaos_daemons_norsca_KURGAN",
+              "value": 7
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh3_main_effect_force_stat_melee_attack_vs_chaos_daemons_norsca_KURGAN",
+              "value": 9
+            },
+            {
+              "icon": "military_spending.png",
+              "priority": 105,
+              "is_positive_value_good": false,
+              "description": "Upkeep: -30% for War Bear Riders units",
+              "key": "wh3_main_effect_upkeep_ksl_war_bear_riders",
+              "value": -30
+            },
+            {
+              "icon": "morale.png",
+              "priority": 411,
+              "is_positive_value_good": true,
+              "description": "Leadership: +7 when fighting against Warriors of Chaos, Daemons of Chaos and Norsca",
+              "key": "wh3_main_effect_force_stat_leadership_vs_chaos_daemons_norsca",
+              "value": 7
+            },
+            {
+              "icon": "melee.png",
+              "priority": 431,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +9 when fighting against Warriors of Chaos, Daemons of Chaos and Norsca",
+              "key": "wh3_main_effect_force_stat_melee_attack_vs_chaos_daemons_norsca",
+              "value": 9
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh3_main_skill_node_set_ksl_boris",
+      "character_skill_key": "wh3_main_skill_innate_ksl_boris",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
+  "items": [
+    {
+      "key": "wh3_main_anc_weapon_shard_blade",
+      "type": "wh_main_anc_weapon",
+      "effects": [
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -6",
+          "value": -6,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "treasury.png",
+          "priority": 106,
+          "is_positive_value_good": false,
+          "description": "Recruitment cost: -5%",
+          "value": -5,
+          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +6",
+          "value": 6,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "magical_attacks.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables magical attacks",
+          "value": 1,
+          "key": "wh_main_effect_character_stat_enable_magic_attacks"
+        },
+        {
+          "icon": "bonus_vs_large_character.png",
+          "priority": 190,
+          "is_positive_value_good": true,
+          "description": "Bonus vs Large: +12",
+          "value": 12,
+          "key": "wh_main_effect_character_stat_bonus_vs_large"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Shard Blade\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_shard_blade",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_weapon_abilities_shard_blade",
+                "icon_name": "wh3_main_weapon_abilities_shard_blade",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_direct_damage",
+                  "icon_path": "icon_spell_area_of_direct_damage.png",
+                  "description": "Direct Damage (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Shard Blade",
+                "num_uses": 3,
+                "active_time": 20,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 15,
+                "affect_self": false,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 20,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 0.6,
+                        "stat": "scalar_speed",
+                        "how": "mult",
+                        "description": "x0.6 Speed",
+                        "sort_order": 10,
+                        "icon": "icon_stat_speed.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_shard_blade"
+        }
+      ],
+      "name": "Shard Blade",
+      "description": "Its blade crafted from the Norscan glaciers and magically bound to remain forever frozen, when this mighty polearm strikes, the foe’s blood turns to ice.",
+      "unlocked_at_rank": 7,
+      "instant": true,
+      "image_path": "item_weapon.png"
+    },
+    {
+      "key": "wh3_main_anc_armour_armour_of_ursun",
+      "type": "wh_main_anc_armour",
+      "effects": [
+        {
+          "icon": "armour_character.png",
+          "priority": 100,
+          "is_positive_value_good": true,
+          "description": "Armour: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_armour"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -15%",
+          "value": -15,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "wound_time.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Wound recovery time: -1",
+          "value": -1,
+          "key": "wh_main_effect_character_wound_recovery_time_mod"
+        },
+        {
+          "icon": "defence_character.png",
+          "priority": 150,
+          "is_positive_value_good": true,
+          "description": "Melee defence: +10",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_melee_defence"
+        },
+        {
+          "icon": "general_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Armour of Ursun\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_main_effect_ability_enable_armour_of_ursun",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_main_item_passive_armour_of_ursun",
+                "icon_name": "wh_magic_item_passive_armour",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Armour of Ursun",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 10,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "+10 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": 1.1,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.1 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      },
+                      {
+                        "value": 1.1,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x1.1 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_main_effect_ability_enable_armour_of_ursun"
+        }
+      ],
+      "name": "Armour of Ursun",
+      "description": "This suit of ancient scale carries with it the blessing of the Bear-God, allowing the wearer to shrug off blows that would fell an ox and fortifying their strength.",
+      "unlocked_at_rank": 10,
+      "instant": true,
+      "image_path": "item_armour.png"
+    }
+  ]
+}
