@@ -116,11 +116,11 @@ const vanilla3Characters = {
   },
   wh3_main_dae_daemons_lords: {
     dae_cha_be_lakor_0: {
-      name: "Be'lakor???",
+      name: "Be'lakor",
       spellLore: 'shadows',
     },
     dae_daemon_prince: {
-      name: 'Daemon Prince???',
+      name: 'Daemon Prince',
     },
     kho_herald_of_khorne: {
       name: 'Herald of Khorne',
@@ -181,7 +181,7 @@ const vanilla3Characters = {
   },
   wh3_main_kho_khorne_lords: {
     kho_skarbrand: {
-      name: 'Skarbrand???',
+      name: 'Skarbrand the Exiled',
     },
     kho_exalted_bloodthirster: {
       name: 'Exalted Bloodthirster',
@@ -200,17 +200,17 @@ const vanilla3Characters = {
   },
   wh3_main_ksl_kislev_lords: {
     ksl_boris: {
-      name: 'Boris Ursus???',
+      name: 'Boris Ursus',
     },
     ksl_kostaltyn: {
-      name: 'Kostaltyn???',
+      name: 'Kostaltyn',
     },
     ksl_katarin: {
-      name: 'Tzarina Katarin???',
+      name: 'Tzarina Katarin',
       spellLore: 'ice',
     },
     ksl_ataman: {
-      name: 'Ataman???',
+      name: 'Ataman',
     },
     ksl_boyar: {
       name: 'Boyar',
@@ -239,7 +239,7 @@ const vanilla3Characters = {
   },
   wh3_main_nur_nurgle_lords: {
     nur_kugath: {
-      name: "Ku'gath Plaguefather???",
+      name: "Ku'gath Plaguefather",
       spellLore: 'nurgle',
     },
     nur_exalted_great_unclean_one_death: {
@@ -274,10 +274,10 @@ const vanilla3Characters = {
   },
   wh3_main_ogr_ogre_kingdoms_lords: {
     ogr_greasus_goldtooth: {
-      name: 'Greasus Goldtooth???',
+      name: 'Greasus Goldtooth',
     },
     ogr_skrag_the_slaughterer: {
-      name: 'Skrag the Slaughterer???',
+      name: 'Skrag the Slaughterer',
       spellLore: 'greatMaw',
     },
     ogr_slaughtermaster_beasts: {
@@ -311,7 +311,7 @@ const vanilla3Characters = {
   },
   wh3_main_sla_slaanesh_lords: {
     sla_nkari: {
-      name: "N'Kari???",
+      name: "N'Kari",
       spellLore: 'slaanesh',
     },
     sla_exalted_keeper_of_secrets_shadow: {
@@ -346,7 +346,7 @@ const vanilla3Characters = {
   },
   wh3_main_tze_tzeentch_lords: {
     tze_kairos: {
-      name: 'Kairos Fateweaver???',
+      name: 'Kairos Fateweaver',
       spellLore: 'mixed',
     },
     tze_exalted_lord_of_change_metal: {

@@ -21,10 +21,7 @@ const Issues = () => {
             Vanilla 2 Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
-          <li className="text-gray-200 text-2xl">
-            Radious 2 needs a look over for portraits, names, spellLores, general bugs
-          </li>
-          <li className="text-gray-200 text-2xl">Radious 2 Wood Seer mounts missing skill titles</li>
+          <li className="text-gray-200 text-2xl">Radious 2/3 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
           <li className="text-gray-200 text-2xl">Radious 3 Cathay Celestial Champion poorly scaled icon</li>
         </ul>

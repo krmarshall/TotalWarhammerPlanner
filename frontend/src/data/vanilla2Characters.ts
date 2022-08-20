@@ -251,7 +251,7 @@ const vanilla2Characters = {
       name: 'Tyrion',
     },
     hef_prince_alastar: {
-      name: 'Alastar the White Lion???',
+      name: 'Alastar the White Lion',
     },
     hef_archmage_beasts: {
       name: 'Archmage (Beasts)',
