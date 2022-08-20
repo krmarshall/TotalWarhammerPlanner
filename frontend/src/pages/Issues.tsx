@@ -18,12 +18,16 @@ const Issues = () => {
             being
           </li>
           <li className="text-gray-200 text-2xl">
-            Vanilla 2 Daemon Prince Reinforcer skill has a placeholder skill icon
+            Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
           <li className="text-gray-200 text-2xl">Radious 2/3 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
           <li className="text-gray-200 text-2xl">Radious 3 Cathay Celestial Champion poorly scaled icon</li>
+          <li className="text-gray-200 text-2xl">
+            Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
+            like copying from broken base game skill?)
+          </li>
         </ul>
 
         <div className="flex flex-row place-content-center mt-14">
