@@ -68,6 +68,7 @@ const ModSelector = () => {
                     h="128"
                     w="128"
                   />
+                  <h3 className="text-center text-gray-400 text-lg text-shadow mb-1">{gameData[gameKey].updated}</h3>
                 </li>
               </CSSTransition>
             );
