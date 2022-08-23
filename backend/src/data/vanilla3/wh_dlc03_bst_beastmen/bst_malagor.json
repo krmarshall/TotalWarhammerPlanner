@@ -276,15 +276,14 @@
         "description": "Gifted by the Chaos Gods themselves, Malagor distributes this gift to his followers, that his masters may see their agenda realised.",
         "levels": [
           {
-            "unlocked_at_rank": 15,
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +30% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 30
+                "description": "Winds of Magic power reserve capacity: +10",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 10
               }
             ]
           }
@@ -308,7 +307,6 @@
         "description": "\"Into the mud with them, break their skulls and eat their hearts!\"",
         "levels": [
           {
-            "unlocked_at_rank": 25,
             "effects": [
               {
                 "icon": "unit_capacity.png",
@@ -411,14 +409,6 @@
                 "description": "Hero action success chance: +10% for Bray-Shamans",
                 "key": "wh_dlc03_effect_agent_action_success_chance_wizard_beastmen",
                 "value": 10
-              },
-              {
-                "icon": "magic_character.png",
-                "priority": 294,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for all spells",
-                "key": "wh2_dlc14_effect_magic_cost_all_lores",
-                "value": -1
               }
             ]
           }
@@ -2323,7 +2313,7 @@
                 "value": -50
               },
               {
-                "icon": "spell_ability.png",
+                "icon": "magic_character.png",
                 "priority": 67,
                 "is_positive_value_good": false,
                 "description": "Winds of Magic cost: -3 for \"Mantle of Ghorok Upgraded\"",
@@ -2331,7 +2321,7 @@
                 "value": -3
               },
               {
-                "icon": "spell_ability.png",
+                "icon": "magic_character.png",
                 "priority": 67,
                 "is_positive_value_good": false,
                 "description": "Winds of Magic cost: -2 for \"Mantle of Ghorok\"",
@@ -2495,9 +2485,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -2538,11 +2528,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2888,12 +2878,12 @@
           {
             "effects": [
               {
-                "icon": "spell_ability.png",
+                "icon": "magic_character.png",
                 "priority": 66,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -20% for all spells",
+                "description": "Winds of Magic cost: -10% for all spells",
                 "key": "wh2_dlc14_effect_magic_cost_all_lores_percentage",
-                "value": -20
+                "value": -10
               }
             ]
           }
@@ -3025,7 +3015,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +6 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 6
               }
@@ -3045,7 +3035,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Weapon strength: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_centigors_chariot",
                 "value": 6
               },
@@ -3053,7 +3043,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +9 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 9
               }
@@ -3073,7 +3063,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Weapon strength: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_centigors_chariot",
                 "value": 12
               },
@@ -3081,7 +3071,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 12
               }
@@ -3121,14 +3111,6 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
-                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
-                "value": 5
-              },
-              {
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
@@ -3143,19 +3125,19 @@
                 "description": "Ammunition: +15% for Ungor Raiders and Centigors (Throwing Axes) units",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 15
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
+                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
-              {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
-                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
-                "value": 10
-              },
               {
                 "icon": "battle_movement.png",
                 "priority": 421,
@@ -3171,6 +3153,14 @@
                 "description": "Ammunition: +20% for Ungor Raiders and Centigors (Throwing Axes) units",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 20
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
+                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
+                "value": 10
               }
             ]
           }
@@ -3270,7 +3260,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Minotaurs and Cygor units",
+                "description": "Melee defence: +4 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 4
               }
@@ -3282,7 +3272,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Minotaurs and Cygor units",
+                "description": "Melee attack: +4 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_minotaurs_cygor",
                 "value": 4
               },
@@ -3290,7 +3280,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Minotaurs and Cygor units",
+                "description": "Melee defence: +4 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 4
               }
@@ -3302,7 +3292,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Minotaurs and Cygor units",
+                "description": "Melee attack: +6 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_minotaurs_cygor",
                 "value": 6
               },
@@ -3310,7 +3300,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Minotaurs and Cygor units",
+                "description": "Melee defence: +6 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 6
               }
@@ -3341,7 +3331,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +6% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 6
               }
@@ -3353,7 +3343,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Spawn and Giant units",
+                "description": "Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_spawn_giant",
                 "value": 4
               },
@@ -3361,7 +3351,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +6% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 6
               }
@@ -3373,7 +3363,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Spawn and Giant units",
+                "description": "Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_spawn_giant",
                 "value": 4
               },
@@ -3381,7 +3371,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +9% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 9
               }
@@ -3543,7 +3533,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_speed_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 10
               },
@@ -3551,7 +3541,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_pct_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 12
               },
@@ -3559,7 +3549,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_bst_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 15
               }
@@ -3606,7 +3596,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Chaos Spawn, Minotaurs, and Giant units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_minotaur_giant_rank7",
                 "value": 12
               }
@@ -3637,7 +3627,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +12% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)",
+                "description": "Missile strength: +12% for Ungor Raiders, Centigors (Throwing Axes) and Cygor units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_bst_ungor_raider_centigors_throwing_axes_cygor_rank7",
                 "value": 12
               },
@@ -3952,8 +3942,8 @@
         "key": "wh_dlc03_skill_node_bst_malagor_campaign_04",
         "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Dark Apothecary",
-        "description": "The Dark Apothecaries mix their fell unguents, ensuring those that can continue to serve.",
+        "name": "Foetid Gallipot",
+        "description": "A pungent mix of fell unguents ensures the unholy vitality of one’s minions.",
         "levels": [
           {
             "effects": [
@@ -4040,8 +4030,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -4057,12 +4047,12 @@
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -4077,12 +4067,12 @@
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }

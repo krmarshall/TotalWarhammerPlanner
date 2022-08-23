@@ -37,16 +37,7 @@
         "description": " ",
         "levels": [
           {
-            "unlocked_at_rank": 4,
             "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 294,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Raise Dead\"",
-                "key": "wh2_main_effect_ability_wom_cost_raise_dead",
-                "value": -1
-              },
               {
                 "icon": "magic_character.png",
                 "priority": 295,
@@ -56,12 +47,84 @@
                 "value": 2
               },
               {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Master of the Dead\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_master_of_the_dead",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_passive_master_of_the_dead",
+                      "icon_name": "wh_main_character_passive_master_of_the_dead",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Master of the Dead",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_replenish",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Replenishes hit points of combatants"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_master_of_the_dead",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "magic_character.png",
+                "priority": 60,
+                "is_positive_value_good": true,
+                "description": "Effect range: +35% for \"Master of the Dead\"",
+                "key": "wh3_main_effect_ability_effect_range_master_of_the_dead",
+                "value": 35
+              },
+              {
+                "icon": "magic_character.png",
+                "priority": 60,
+                "is_positive_value_good": true,
+                "description": "Targeting range: +200% for \"Raise Dead\" and \"Raise Dead Upgraded\"",
+                "key": "wh3_main_effect_ability_targeting_range_raise_dead",
+                "value": 200
+              },
+              {
                 "icon": "magic_character.png",
                 "priority": 295,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Raise Dead Upgraded\"",
-                "key": "wh2_main_effect_ability_wom_cost_raise_dead_upgraded",
-                "value": -1
+                "is_positive_value_good": true,
+                "description": "Spell number of uses: +2 for \"Raise Dead\" and \"Raise Dead Upgraded\"",
+                "key": "wh2_main_effect_ability_uses_raise_dead_raise_dead_upgraded",
+                "value": 2
               },
               {
                 "icon": "general_ability.png",
@@ -120,7 +183,7 @@
         "character_skill_key": "wh_main_skill_vmp_all_unique_master_of_the_dead",
         "tier": 5,
         "indent": 0,
-        "points_on_creation": 0,
+        "points_on_creation": 1,
         "required_num_parents": 0,
         "visible_in_ui": true
       },
@@ -164,9 +227,9 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +8 when attacking",
+                "description": "Leadership: +5 when attacking",
                 "key": "wh_main_effect_force_stat_leadership_attacking",
-                "value": 8
+                "value": 5
               }
             ]
           }
@@ -222,7 +285,7 @@
                 "icon": "magic_cooldown_character.png",
                 "priority": 303,
                 "is_positive_value_good": true,
-                "description": "Krell no longer degrades in battle",
+                "description": "Krell's combat ability is greatly enhanced.",
                 "key": "wh_dlc08_effect_abilitiy_disable_krell_3",
                 "value": 1
               },
@@ -248,6 +311,12 @@
                       "description": "Lord of Undeath",
                       "ui_effects": [
                         {
+                          "key": "wh_dlc08_spell_upgraded_krell",
+                          "sort_order": 0,
+                          "effect_state": "magic",
+                          "description": "Krell's combat power is greatly enhanced"
+                        },
+                        {
                           "key": "wh_pro03_all_summon_krell",
                           "sort_order": 0,
                           "effect_state": "magic",
@@ -269,7 +338,7 @@
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
-                      "target_intercept_range": 50,
+                      "target_intercept_range": 200,
                       "target_self": true
                     }
                   }
@@ -286,9 +355,6 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
-        "parent_required": [
-          "wh_dlc08_skill_node_vmp_heinrich_unique_personal_06"
-        ],
         "right_arrow": true
       },
       {
@@ -299,7 +365,6 @@
         "description": "Life without end; destruction without pause. Excellent!",
         "levels": [
           {
-            "unlocked_at_rank": 6,
             "effects": [
               {
                 "icon": "general_ability.png",
@@ -380,10 +445,8 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "wh_dlc08_skill_node_vmp_heinrich_unique_personal_04",
           "wh_dlc08_skill_node_vmp_heinrich_unique_personal_07"
         ],
-        "right_arrow": true,
         "boxed": true
       },
       {
@@ -429,10 +492,8 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "wh_dlc08_skill_node_vmp_heinrich_unique_personal_05",
           "wh_dlc08_skill_node_vmp_heinrich_unique_personal_07"
         ],
-        "right_arrow": true,
         "boxed": true
       },
       {
@@ -478,10 +539,8 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "wh_dlc08_skill_node_vmp_heinrich_unique_personal_03",
           "wh_dlc08_skill_node_vmp_heinrich_unique_personal_07"
         ],
-        "right_arrow": true,
         "boxed": true
       },
       {
@@ -494,11 +553,11 @@
           {
             "effects": [
               {
-                "icon": "general_ability.png",
-                "priority": 1,
+                "icon": "devastating_flanker.png",
+                "priority": 320,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Wightblades\" for Cairn Wraith and Hexwraiths units (Rank 7 and above)",
-                "key": "wh2_dlc17_effect_cursed_attacks_vmp_rank7_spooky_units",
+                "description": "Attribute: Devastating Flanker for Cairn Wraith and Hexwraith units",
+                "key": "wh3_main_effect_attribute_devastating_flanker_wraiths",
                 "value": 1
               },
               {
@@ -582,9 +641,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -621,7 +680,7 @@
       },
       {
         "key": "wh_dlc08_skill_node_vmp_heinrich_unique_personal_01",
-        "image_path": "character_morale.png",
+        "image_path": "character_replenishment.png",
         "is_background_skill": false,
         "name": "Lord of the Scourge",
         "description": "\"And I'll lead you all in the dance,\" said he - the relentless dance of the tireless Undead hordes.",
@@ -629,12 +688,12 @@
           {
             "effects": [
               {
-                "icon": "attrition.png",
-                "priority": 100,
-                "is_positive_value_good": false,
-                "description": "Attrition: -5% casualties suffered from all attrition",
-                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
-                "value": -5
+                "icon": "health_character.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Battle healing cap: +15%",
+                "key": "wh3_dlc20_effect_healing_cap_modifier",
+                "value": 15
               },
               {
                 "icon": "replenishment.png",
@@ -645,24 +704,25 @@
                 "value": 4
               },
               {
-                "icon": "morale.png",
-                "priority": 410,
-                "is_positive_value_good": true,
-                "description": "Leadership: +3",
-                "key": "wh_main_effect_force_stat_leadership",
-                "value": 3
+                "icon": "military_spending.png",
+                "priority": 105,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -25% for Zombies units",
+                "key": "wh_main_effect_tech_upkeep_cost_reduction_zombies",
+                "value": -25
               }
             ]
           },
           {
+            "unlocked_at_rank": 13,
             "effects": [
               {
-                "icon": "attrition.png",
-                "priority": 100,
-                "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
-                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
-                "value": -10
+                "icon": "health_character.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Battle healing cap: +30%",
+                "key": "wh3_dlc20_effect_healing_cap_modifier",
+                "value": 30
               },
               {
                 "icon": "replenishment.png",
@@ -673,12 +733,20 @@
                 "value": 6
               },
               {
-                "icon": "morale.png",
-                "priority": 410,
-                "is_positive_value_good": true,
-                "description": "Leadership: +6",
-                "key": "wh_main_effect_force_stat_leadership",
-                "value": 6
+                "icon": "military_spending.png",
+                "priority": 105,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -25% for Skeleton Warriors and Skeleton Spearmen units",
+                "key": "wh2_dlc11_effect_upkeep_cost_skeletons",
+                "value": -25
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 105,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -25% for Zombies units",
+                "key": "wh_main_effect_tech_upkeep_cost_reduction_zombies",
+                "value": -25
               }
             ]
           }
@@ -700,20 +768,20 @@
           {
             "effects": [
               {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +7% chance for destroyed units to be restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_chance",
+                "value": 7
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -7%",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -7
-              },
-              {
-                "icon": "experience.png",
-                "priority": 120,
-                "is_positive_value_good": true,
-                "description": "Recruit rank: +2 for Skeletal and Zombie units",
-                "key": "wh_main_effect_tech_unit_xp_levels_skeletons",
-                "value": 2
               },
               {
                 "icon": "treasury.png",
@@ -726,7 +794,16 @@
             ]
           },
           {
+            "unlocked_at_rank": 13,
             "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +15% chance for destroyed units to be restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_chance",
+                "value": 15
+              },
               {
                 "icon": "treasury.png",
                 "priority": 106,
@@ -734,14 +811,6 @@
                 "description": "Recruitment cost: -15%",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -15
-              },
-              {
-                "icon": "experience.png",
-                "priority": 120,
-                "is_positive_value_good": true,
-                "description": "Recruit rank: +4 for Skeletal and Zombie units",
-                "key": "wh_main_effect_tech_unit_xp_levels_skeletons",
-                "value": 4
               },
               {
                 "icon": "treasury.png",
@@ -2331,7 +2400,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   },
@@ -2385,7 +2454,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2461,7 +2530,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   },
@@ -2515,7 +2584,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2611,11 +2680,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2708,6 +2777,14 @@
                 "description": "Character's aura leadership effect: +5",
                 "key": "wh_main_effect_character_stat_aura_leadership_effect",
                 "value": 5
+              },
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": false,
+                "description": "Enemy leadership: -4",
+                "key": "wh_main_effect_force_stat_leadership_enemy_unit",
+                "value": -4
               }
             ]
           }
@@ -2875,7 +2952,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 5% for Cairn Wraiths and Hexwraiths units",
+                "description": "Spell resistance: 5% for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
                 "value": 5
               }
@@ -2887,7 +2964,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Cairn Wraiths and Hexwraiths units",
+                "description": "Melee attack: +4 for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_cairn_wraith_hex_wraith",
                 "value": 4
               },
@@ -2895,7 +2972,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 10% for Cairn Wraiths and Hexwraiths units",
+                "description": "Spell resistance: 10% for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
                 "value": 10
               }
@@ -2907,7 +2984,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Cairn Wraiths and Hexwraiths units",
+                "description": "Melee attack: +8 for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_cairn_wraith_hex_wraith",
                 "value": 8
               },
@@ -2915,7 +2992,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Cairn Wraiths and Hexwraiths units",
+                "description": "Spell resistance: 15% for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
                 "value": 15
               }
@@ -3337,7 +3414,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Crypt Ghouls, Crypt Horrors, Dire Wolves and Varghulfs units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Crypt Ghouls, Crypt Horrors, Mournguls, Dire Wolves and Varghulfs units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_crypt_horrors_ghouls_dire_wolves_varghulfs_rank7",
                 "value": 5
               },
@@ -3345,7 +3422,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Crypt Ghouls, Crypt Horrors, Dire Wolves and Varghulfs units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Crypt Ghouls, Crypt Horrors, Mournguls, Dire Wolves and Varghulfs units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_crypt_horrors_ghouls_dire_wolves_varghulfs_rank7",
                 "value": 12
               },
@@ -3353,7 +3430,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Crypt Ghouls, Crypt Horrors, Dire Wolves and Varghulfs units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Crypt Ghouls, Crypt Horrors, Mournguls, Dire Wolves and Varghulfs units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_crypt_horrors_ghouls_dire_wolves_varghulfs_rank7",
                 "value": 10
               }
@@ -3528,11 +3605,11 @@
             "effects": [
               {
                 "icon": "campaign_movement.png",
-                "priority": 13,
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Campaign movement range: +10% after winning a battle",
-                "key": "wh3_main_effect_force_all_campaign_movement_range_post_battle_win",
-                "value": 10
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
               }
             ]
           }
@@ -3558,6 +3635,14 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +5% hit points for destroyed units restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_hp",
+                "value": 5
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
                 "description": "Casualty replenishment rate: +2%",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 2
@@ -3570,6 +3655,14 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +10% hit points for destroyed units restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_hp",
+                "value": 10
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
                 "description": "Casualty replenishment rate: +4%",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 4
@@ -3578,6 +3671,14 @@
           },
           {
             "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +15% hit points for destroyed units restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_hp",
+                "value": 15
+              },
               {
                 "icon": "replenishment.png",
                 "priority": 101,
@@ -3610,60 +3711,60 @@
           {
             "effects": [
               {
-                "icon": "treasury.png",
-                "priority": 105,
+                "icon": "experience.png",
+                "priority": 14,
+                "is_positive_value_good": true,
+                "description": "Character experience gain: +10%",
+                "key": "wh3_main_effect_character_campaign_experience_mod",
+                "value": 10
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Hero recruitment cost: -10%",
-                "key": "wh_main_effect_agent_recruitment_cost_mod",
-                "value": -10
+                "description": "Upkeep: -3%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -3
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "vampire.png",
-                "priority": 102,
+                "icon": "experience.png",
+                "priority": 14,
                 "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Vampires",
-                "key": "wh_main_effect_agent_cap_increase_dignitary_vampire",
-                "value": 1
+                "description": "Character experience gain: +20%",
+                "key": "wh3_main_effect_character_campaign_experience_mod",
+                "value": 20
               },
               {
-                "icon": "treasury.png",
-                "priority": 105,
+                "icon": "military_spending.png",
+                "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Hero recruitment cost: -10%",
-                "key": "wh_main_effect_agent_recruitment_cost_mod",
-                "value": -10
+                "description": "Upkeep: -6%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -6
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "treasury.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Hero action cost: -10%",
-                "key": "wh_main_effect_agent_action_cost_mod",
-                "value": -10
-              },
-              {
-                "icon": "vampire.png",
-                "priority": 102,
+                "icon": "experience.png",
+                "priority": 14,
                 "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Vampires",
-                "key": "wh_main_effect_agent_cap_increase_dignitary_vampire",
-                "value": 1
+                "description": "Character experience gain: +30%",
+                "key": "wh3_main_effect_character_campaign_experience_mod",
+                "value": 30
               },
               {
-                "icon": "treasury.png",
-                "priority": 105,
+                "icon": "military_spending.png",
+                "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Hero recruitment cost: -10%",
-                "key": "wh_main_effect_agent_recruitment_cost_mod",
-                "value": -10
+                "description": "Upkeep: -9%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -9
               }
             ]
           }
@@ -3806,6 +3907,14 @@
                 "description": "Casualty replenishment rate: +30% for this Lord",
                 "key": "wh2_main_effect_replenishment_lords",
                 "value": 30
+              },
+              {
+                "icon": "health_character.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Battle healing cap: +50%",
+                "key": "wh3_dlc20_effect_healing_cap_modifier",
+                "value": 50
               },
               {
                 "icon": "wound_time.png",
@@ -4071,6 +4180,30 @@
           {
             "effects": [
               {
+                "icon": "magic_campaign.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve minimum: +15",
+                "key": "wh3_main_effect_winds_of_magic_pool_min",
+                "value": 15
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 1000,
                 "is_positive_value_good": false,
@@ -4179,28 +4312,20 @@
         {
           "effects": [
             {
-              "icon": "attrition.png",
-              "priority": 1,
+              "icon": "replenishment.png",
+              "priority": 5,
               "is_positive_value_good": true,
-              "description": "All units in Heinrich Kemmler's army are immune to non-Vampire Count territory attrition",
-              "key": "wh2_dlc11_effect_force_army_campaign_attrition_immunity_land_of_living",
+              "description": "Enables replenishment in foreign territory",
+              "key": "wh_main_effect_force_army_campaign_enable_replenishment_in_foreign_territory",
               "value": 1
             },
             {
-              "icon": "magic.png",
+              "icon": "magic_character.png",
               "priority": 68,
               "is_positive_value_good": false,
-              "description": "Winds of Magic cost: -20% for Lore of Vampires",
+              "description": "Winds of Magic cost: -10% for Lore of Vampires",
               "key": "wh2_dlc17_effect_magic__reduce_wom_cost_vampires_percentage",
-              "value": -20
-            },
-            {
-              "icon": "magic_cooldown_character.png",
-              "priority": 293,
-              "is_positive_value_good": false,
-              "description": "Cooldown: -20% to Lore of Vampires spells",
-              "key": "wh_main_effect_ability_cooldown_lore_of_vampires",
-              "value": -20
+              "value": -10
             },
             {
               "icon": "general_ability.png",
@@ -4230,16 +4355,10 @@
                         "description": "Summons Krell"
                       },
                       {
-                        "key": "wh_dlc08_spell_upgraded_degrade_for_krell",
-                        "sort_order": 1,
+                        "key": "wh_dlc08_spell_removed_degrade_for_krell",
+                        "sort_order": 5,
                         "effect_state": "magic",
-                        "description": "Krell will degrade at half-speed"
-                      },
-                      {
-                        "key": "wh_main_all_direct_damage_unbinding",
-                        "sort_order": 203,
-                        "effect_state": "negative",
-                        "description": "Summoned units degrade over time"
+                        "description": "Krell will not degrade"
                       }
                     ],
                     "num_uses": 1,
@@ -4532,14 +4651,6 @@
           ],
           "value": 1,
           "key": "wh_main_effect_ability_enable_chaos_tomb_blade"
-        },
-        {
-          "icon": "attrition.png",
-          "priority": 800,
-          "is_positive_value_good": true,
-          "description": "Immune to Chaos Undivided corruption and Chaos Wastes attrition",
-          "value": 1,
-          "key": "wh2_dlc11_effect_attrition_immunity_chaos"
         }
       ],
       "name": "Chaos Tomb Blade",
@@ -4702,16 +4813,16 @@
           "icon": "magic_character.png",
           "priority": 294,
           "is_positive_value_good": false,
-          "description": "Winds of Magic cost: -1 for \"Vanhel's Danse Macabre\"",
-          "value": -1,
+          "description": "Winds of Magic cost: -2 for \"Vanhel's Danse Macabre\"",
+          "value": -2,
           "key": "wh2_main_effect_ability_wom_cost_vanhels_danse_macabre"
         },
         {
           "icon": "magic_character.png",
           "priority": 295,
           "is_positive_value_good": false,
-          "description": "Winds of Magic cost: -1 for \"Vanhel's Danse Macabre Upgraded\"",
-          "value": -1,
+          "description": "Winds of Magic cost: -2 for \"Vanhel's Danse Macabre Upgraded\"",
+          "value": -2,
           "key": "wh2_main_effect_ability_wom_cost_vanhels_danse_macabre_upgraded"
         },
         {

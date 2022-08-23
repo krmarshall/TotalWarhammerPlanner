@@ -5,8 +5,8 @@
         "key": "wh_dlc05_skill_node_wef_spellsinger_life_unique_01",
         "image_path": "mount_warhorse.png",
         "is_background_skill": false,
-        "name": "Elven Steed ",
-        "description": "The bond between rider and steed goes beyond friendship or family; they act as one.",
+        "name": "Barded Ithilmar Steed",
+        "description": "An extremely light yet resilient material, Ithilmar gives the same protection as heavy steel, but without slowing down its wearer.",
         "levels": [
           {
             "effects": [
@@ -149,7 +149,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -159,7 +158,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -209,7 +209,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 12,
+                      "active_time": 1,
                       "recharge_time": 31,
                       "wind_up_time": 1,
                       "passive": false,
@@ -267,7 +267,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 12,
+                      "active_time": 1,
                       "recharge_time": 31,
                       "wind_up_time": 1,
                       "passive": false,
@@ -1572,7 +1572,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1632,7 +1632,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1678,7 +1678,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1746,7 +1746,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1792,7 +1792,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2293,11 +2293,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2916,9 +2916,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -3020,6 +3020,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -3124,9 +3132,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3160,17 +3168,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -3193,20 +3201,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -3292,7 +3292,7 @@
                         "description": "Large explosion area"
                       }
                     ],
-                    "active_time": 12,
+                    "active_time": 1,
                     "recharge_time": 31,
                     "wind_up_time": 1,
                     "passive": false,

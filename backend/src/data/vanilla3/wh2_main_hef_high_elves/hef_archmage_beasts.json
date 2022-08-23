@@ -3,10 +3,10 @@
     [
       {
         "key": "wh2_dlc15_skill_node_hef_archmage_beasts_mount_1",
-        "image_path": "mount_elven_steed.png",
+        "image_path": "mount_barded_ithilmar_steed.png",
         "is_background_skill": false,
-        "name": "Elven Steed",
-        "description": "The best of all horse breeds found anywhere in the world, Elven steeds are noble, intelligent, graceful, and swift.",
+        "name": "Barded Ithilmar Steed",
+        "description": "An extremely light yet resilient material, Ithilmar gives the same protection as heavy steel, but without slowing down its wearer.",
         "levels": [
           {
             "effects": [
@@ -127,9 +127,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +5%",
+                "description": "Speed: +10%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 5
+                "value": 10
               },
               {
                 "icon": "defence_character.png",
@@ -280,7 +280,7 @@
                 "value": -10
               },
               {
-                "icon": "spell_ability.png",
+                "icon": "magic_character.png",
                 "priority": 66,
                 "is_positive_value_good": false,
                 "description": "Winds of Magic cost: -10% for all spells",
@@ -305,7 +305,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -315,7 +314,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -357,9 +357,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +5%",
+                "description": "Speed: +15%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 5
+                "value": 15
               },
               {
                 "icon": "morale.png",
@@ -2497,11 +2497,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +15% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 15
+                "description": "Winds of Magic power reserve capacity: +10",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 10
               },
               {
                 "icon": "battle_movement_character.png",
@@ -3003,9 +3003,9 @@
                       "icon_name": "wh_dlc03_spell_beasts_transformation_of_kadon",
                       "overpower_option": "",
                       "type": {
-                        "key": "wh_type_augment",
+                        "key": "wh_type_summon_unit",
                         "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
+                        "description": "Summon Unit"
                       },
                       "is_hidden_in_ui": false,
                       "description": "Transformation of Kadon",
@@ -3118,11 +3118,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3189,9 +3189,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -3499,7 +3499,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Chariot and Dragon Princes units",
+                "description": "Charge bonus: +6 for Chariot, War Lion and Dragon Princes units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_hef_chariots_dragonprinces",
                 "value": 6
               }
@@ -3511,7 +3511,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chariot and Dragon Princes units",
+                "description": "Melee attack: +4 for Chariot, War Lion and Dragon Princes units",
                 "key": "wh2_main_effect_force_stat_melee_attack_hef_chariots_dragonprinces",
                 "value": 4
               },
@@ -3519,7 +3519,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Chariot and Dragon Princes units",
+                "description": "Charge bonus: +9 for Chariot, War Lion and Dragon Princes units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_hef_chariots_dragonprinces",
                 "value": 9
               },
@@ -3539,7 +3539,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Chariot and Dragon Princes units",
+                "description": "Melee attack: +6 for Chariot, War Lion and Dragon Princes units",
                 "key": "wh2_main_effect_force_stat_melee_attack_hef_chariots_dragonprinces",
                 "value": 6
               },
@@ -3547,7 +3547,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Chariot and Dragon Princes units",
+                "description": "Charge bonus: +12 for Chariot, War Lion and Dragon Princes units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_hef_chariots_dragonprinces",
                 "value": 12
               },
@@ -3810,7 +3810,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Spearmen, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Spearmen, Silverin Guard, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_melee_defence_hef_spear_silver_swordmaster_lions_rank7",
                 "value": 5
               },
@@ -3818,7 +3818,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Spearmen, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Spearmen, Silverin Guard, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_hef_spear_silver_swordmaster_lions_rank7",
                 "value": 10
               },
@@ -3826,7 +3826,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Spearmen, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
+                "description": "Spell resistance: 15% for Spearmen, Silverin Guard, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_magic_resistance_spear_silver_swordmaster_lions_rank7",
                 "value": 15
               }
@@ -3904,7 +3904,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Great Eagle, Chariot and Ellyrian Reavers units (Rank 7 and above)",
+                "description": "Speed: +10% for Rangers, Great Eagle, War Lion, Chariot and Ellyrian Reavers units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_speed_hef_eagle_chariot_reavers_rank7",
                 "value": 10
               },
@@ -3912,7 +3912,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Great Eagle, Chariot and Ellyrian Reavers units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Rangers, Great Eagle, War Lion, Chariot and Ellyrian Reavers units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_hef_eagle_chariot_reavers_rank7",
                 "value": 12
               },
@@ -3920,7 +3920,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Great Eagle, Chariot and Ellyrian Reavers units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Rangers, Great Eagle, War Lion, Chariot and Ellyrian Reavers units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_missile_resistance_hef_eagle_chariot_reavers_rank7",
                 "value": 15
               }
@@ -4648,6 +4648,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -5517,20 +5563,20 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
-              "priority": 8,
-              "is_positive_value_good": false,
-              "description": "Miscast base chance: -10%",
-              "key": "wh_main_effect_character_stat_mod_miscast_chance",
-              "value": -10
-            },
-            {
               "icon": "magic_campaign.png",
               "priority": 100,
               "is_positive_value_good": true,
               "description": "Winds of Magic power reserve change: +5% when increasing",
               "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
               "value": 5
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -10%",
+              "key": "wh_main_effect_character_stat_miscast",
+              "value": -10
             }
           ]
         }
@@ -5553,14 +5599,6 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
-              "priority": 8,
-              "is_positive_value_good": false,
-              "description": "Miscast base chance: -15%",
-              "key": "wh_main_effect_character_stat_mod_miscast_chance",
-              "value": -15
-            },
-            {
               "icon": "magic_campaign.png",
               "priority": 100,
               "is_positive_value_good": true,
@@ -5570,11 +5608,141 @@
             },
             {
               "icon": "magic_character.png",
-              "priority": 295,
-              "is_positive_value_good": false,
-              "description": "Winds of Magic cost: 1 for \"Urannon's Thunderbolt Upgraded\"",
-              "key": "wh2_main_effect_ability_wom_cost_urannons_thunderbolt_upgraded",
+              "priority": 292,
+              "is_positive_value_good": true,
+              "description": "Overcast spell: \"Urannon's Thunderbolt Upgraded\"",
+              "related_abilities": [
+                {
+                  "effect": "wh2_main_effect_ability_overcast_urannons_thunderbolt",
+                  "bonus_value_id": "enable_overchage",
+                  "unit_ability": {
+                    "key": "wh_main_spell_heavens_urannons_thunderbolt",
+                    "icon_name": "wh_main_spell_heavens_urannons_thunderbolt",
+                    "overpower_option": "wh_main_spell_heavens_urannons_thunderbolt_upgraded",
+                    "type": {
+                      "key": "wh_type_bombardment",
+                      "icon_path": "icon_spell_bombardment.png",
+                      "description": "Bombardment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Urannon's Thunderbolt",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_major",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes major magical damage"
+                      },
+                      {
+                        "key": "wh_main_bombardment_small_strike_aoe",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Small strike area"
+                      },
+                      {
+                        "key": "wh2_main_all_good_against_armour",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Good against armour"
+                      },
+                      {
+                        "key": "wh_main_all_good_vs_artillery",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Good against artillery pieces"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      }
+                    ],
+                    "active_time": 4,
+                    "recharge_time": 42,
+                    "wind_up_time": 3,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 300,
+                    "mana_cost": 6,
+                    "target_self": false
+                  }
+                },
+                {
+                  "effect": "wh2_main_effect_ability_overcast_urannons_thunderbolt",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_heavens_urannons_thunderbolt",
+                    "icon_name": "wh_main_spell_heavens_urannons_thunderbolt",
+                    "overpower_option": "wh_main_spell_heavens_urannons_thunderbolt_upgraded",
+                    "type": {
+                      "key": "wh_type_bombardment",
+                      "icon_path": "icon_spell_bombardment.png",
+                      "description": "Bombardment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Urannon's Thunderbolt",
+                    "ui_effects": [
+                      {
+                        "key": "wh2_main_all_magical_damage_major",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes major magical damage"
+                      },
+                      {
+                        "key": "wh_main_bombardment_small_strike_aoe",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Small strike area"
+                      },
+                      {
+                        "key": "wh2_main_all_good_against_armour",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Good against armour"
+                      },
+                      {
+                        "key": "wh_main_all_good_vs_artillery",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Good against artillery pieces"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_multiple",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs multiple combatants"
+                      }
+                    ],
+                    "active_time": 4,
+                    "recharge_time": 42,
+                    "wind_up_time": 3,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": true,
+                    "target_intercept_range": 300,
+                    "mana_cost": 6,
+                    "target_self": false
+                  }
+                }
+              ],
+              "key": "wh2_main_effect_ability_overcast_urannons_thunderbolt",
               "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -15%",
+              "key": "wh_main_effect_character_stat_miscast",
+              "value": -15
             }
           ]
         }

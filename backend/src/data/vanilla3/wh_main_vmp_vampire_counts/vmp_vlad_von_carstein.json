@@ -14,9 +14,9 @@
                 "icon": "item_ability.png",
                 "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Magic item drop chance: +15%",
+                "description": "Magic item drop chance: +50%",
                 "key": "wh_main_effect_character_mod_ancillary_drop",
-                "value": 15
+                "value": 50
               }
             ]
           }
@@ -68,9 +68,9 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +8 when attacking",
+                "description": "Leadership: +5 when attacking",
                 "key": "wh_main_effect_force_stat_leadership_attacking",
-                "value": 8
+                "value": 5
               }
             ]
           }
@@ -217,7 +217,6 @@
         "description": "Vlad shares his aberrant immortality with those he trusts, ensuring his legacy endures eternally.",
         "levels": [
           {
-            "unlocked_at_rank": 4,
             "effects": [
               {
                 "icon": "experience.png",
@@ -257,7 +256,6 @@
         "description": "The Lord of the von Carsteins exudes a distracting and sensational air, giving all before him pause.",
         "levels": [
           {
-            "unlocked_at_rank": 7,
             "effects": [
               {
                 "icon": "general_ability.png",
@@ -332,7 +330,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -33 for \"Master of Beguilement\"",
+                "description": "Cooldown: -33% for \"Master of Beguilement\"",
                 "key": "wh2_dlc17_effect_ability_mod_cooldown_beguilement",
                 "value": -33
               }
@@ -395,7 +393,6 @@
         "parent_required": [
           "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_4"
         ],
-        "right_arrow": true,
         "boxed": true
       },
       {
@@ -448,10 +445,10 @@
                         }
                       ],
                       "num_uses": 3,
-                      "active_time": 17,
+                      "active_time": 22,
                       "recharge_time": 90,
                       "passive": false,
-                      "effect_range": 20,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
@@ -460,12 +457,21 @@
                       "target_self": false,
                       "phases": [
                         {
-                          "duration": 17,
+                          "duration": 22,
                           "effect_type": "negative",
-                          "cant_move": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 0.4,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.4 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -507,7 +513,7 @@
                 "value": 1
               },
               {
-                "icon": "weapon_damage.png",
+                "icon": "icon_stat_damage_base_force.png",
                 "priority": 460,
                 "is_positive_value_good": true,
                 "description": "Base weapon damage: +5",
@@ -531,10 +537,8 @@
         "points_on_creation": 0,
         "required_num_parents": 2,
         "visible_in_ui": true,
-        "parent_required": [
-          "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_2"
-        ],
         "parent_subset_required": [
+          "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_2",
           "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_3",
           "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_5",
           "wh2_dlc17_skill_node_vmp_vlad_von_carstein_unique_6"
@@ -1852,147 +1856,228 @@
       },
       {
         "key": "wh_dlc04_skill_node_vmp_vlad_von_carstein_magic1_04",
-        "image_path": "wh_main_spell_vampires_gaze_of_nagash.png",
+        "image_path": "wh_dlc03_spell_beasts_flock_of_doom.png",
         "is_background_skill": false,
-        "name": "Gaze of Nagash",
-        "description": " ",
+        "name": "Flock of Doom",
+        "description": "With a mighty bellow, the caster invokes Corvus the Crow Lord, summoning his servants to peck at the foe's eyes.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "magic_character.png",
-                "priority": 292,
+                "priority": 290,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Gaze of Nagash Upgraded\"",
+                "description": "Spell: \"Flock of Doom\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_gaze_of_nagash",
-                    "bonus_value_id": "enable_overchage",
-                    "unit_ability": {
-                      "key": "wh_main_spell_vampires_gaze_of_nagash",
-                      "icon_name": "wh_main_spell_vampires_gaze_of_nagash",
-                      "overpower_option": "wh_main_spell_vampires_gaze_of_nagash_upgraded",
-                      "type": {
-                        "key": "wh_type_magic_missiles",
-                        "icon_path": "icon_spell_magic_missiles.png",
-                        "description": "Magic Missiles"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Gaze of Nagash",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_damage_moderate",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes moderate magical damage"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_good_vs_large",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against large combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
-                          "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
-                        }
-                      ],
-                      "recharge_time": 44,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
-                    }
-                  },
-                  {
-                    "effect": "wh2_main_effect_ability_overcast_gaze_of_nagash",
+                    "effect": "wh_dlc03_effect_ability_enable_flock_of_doom",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_vampires_gaze_of_nagash",
-                      "icon_name": "wh_main_spell_vampires_gaze_of_nagash",
-                      "overpower_option": "wh_main_spell_vampires_gaze_of_nagash_upgraded",
+                      "key": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missiles",
-                        "icon_path": "icon_spell_magic_missiles.png",
-                        "description": "Magic Missiles"
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Gaze of Nagash",
+                      "description": "Flock of Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_damage_moderate",
+                          "key": "wh_main_all_direct_damage",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical damage"
+                          "description": "Causes damage to combatants"
                         },
                         {
-                          "key": "wh2_main_all_good_against_armour",
+                          "key": "wh_dlc08_direct_damage_medium_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs 25 men unit or above"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Good against armour"
+                          "description": "Strong vs multiple combatants"
                         },
                         {
-                          "key": "wh_main_all_good_vs_large",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against large combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "recharge_time": 44,
-                      "wind_up_time": 3,
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_gaze_of_nagash",
+                "key": "wh_dlc03_effect_ability_enable_flock_of_doom",
+                "value": 1
+              },
+              {
+                "icon": "magic_character.png",
+                "priority": 292,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Flock of Doom Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_ability_overcast_flock_of_doom",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flock of Doom",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_dlc08_direct_damage_medium_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs 25 men unit or above"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "effect_state": "negative",
+                          "description": "Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_ability_overcast_flock_of_doom",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
+                      "type": {
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flock of Doom",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_dlc08_direct_damage_medium_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs 25 men unit or above"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs multiple combatants"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
+                          "effect_state": "negative",
+                          "description": "Weak vs a single combatant"
+                        }
+                      ],
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 35,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_ability_overcast_flock_of_doom",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -30% to \"Gaze of Nagash\"",
-                "key": "wh_main_effect_ability_cooldown_gaze_of_nagash",
+                "description": "Cooldown: -30% to \"Flock of Doom\"",
+                "key": "wh_dlc03_effect_ability_cooldown_flock_of_doom",
                 "value": -30
               }
             ]
@@ -2003,166 +2088,174 @@
                 "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Gaze of Nagash Upgraded\"",
+                "description": "Overcast spell: \"Flock of Doom Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_gaze_of_nagash",
+                    "effect": "wh2_main_effect_ability_overcast_flock_of_doom",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_vampires_gaze_of_nagash",
-                      "icon_name": "wh_main_spell_vampires_gaze_of_nagash",
-                      "overpower_option": "wh_main_spell_vampires_gaze_of_nagash_upgraded",
+                      "key": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missiles",
-                        "icon_path": "icon_spell_magic_missiles.png",
-                        "description": "Magic Missiles"
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Gaze of Nagash",
+                      "description": "Flock of Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_damage_moderate",
+                          "key": "wh_main_all_direct_damage",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical damage"
+                          "description": "Causes damage to combatants"
                         },
                         {
-                          "key": "wh2_main_all_good_against_armour",
+                          "key": "wh_dlc08_direct_damage_medium_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs 25 men unit or above"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Good against armour"
+                          "description": "Strong vs multiple combatants"
                         },
                         {
-                          "key": "wh_main_all_good_vs_large",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against large combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "recharge_time": 44,
-                      "wind_up_time": 3,
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_gaze_of_nagash",
+                    "effect": "wh2_main_effect_ability_overcast_flock_of_doom",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_vampires_gaze_of_nagash",
-                      "icon_name": "wh_main_spell_vampires_gaze_of_nagash",
-                      "overpower_option": "wh_main_spell_vampires_gaze_of_nagash_upgraded",
+                      "key": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "icon_name": "wh_dlc03_spell_beasts_flock_of_doom",
+                      "overpower_option": "wh_dlc03_spell_beasts_flock_of_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missiles",
-                        "icon_path": "icon_spell_magic_missiles.png",
-                        "description": "Magic Missiles"
+                        "key": "wh_type_area_of_direct_damage",
+                        "icon_path": "icon_spell_area_of_direct_damage.png",
+                        "description": "Direct Damage (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Gaze of Nagash",
+                      "description": "Flock of Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_damage_moderate",
+                          "key": "wh_main_all_direct_damage",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical damage"
+                          "description": "Causes damage to combatants"
                         },
                         {
-                          "key": "wh2_main_all_good_against_armour",
+                          "key": "wh_dlc08_direct_damage_medium_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs 25 men unit or above"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_multiple",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Good against armour"
+                          "description": "Strong vs multiple combatants"
                         },
                         {
-                          "key": "wh_main_all_good_vs_large",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against large combatants"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_single",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single combatant"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "recharge_time": 44,
-                      "wind_up_time": 3,
+                      "active_time": 7,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 250,
-                      "mana_cost": 7,
-                      "target_self": false
+                      "target_ground": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 7,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_gaze_of_nagash",
+                "key": "wh2_main_effect_ability_overcast_flock_of_doom",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -50% to \"Gaze of Nagash\"",
-                "key": "wh_main_effect_ability_cooldown_gaze_of_nagash",
+                "description": "Cooldown: -50% to \"Flock of Doom\"",
+                "key": "wh_dlc03_effect_ability_cooldown_flock_of_doom",
                 "value": -50
               },
               {
                 "icon": "magic_character.png",
                 "priority": 294,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -2 for \"Gaze of Nagash\"",
-                "key": "wh2_main_effect_ability_wom_cost_gaze_of_nagash",
-                "value": -2
+                "description": "Winds of Magic cost: -1 for \"Flock of Doom\"",
+                "key": "wh2_main_effect_ability_wom_cost_flock_of_doom",
+                "value": -1
               },
               {
                 "icon": "magic_character.png",
                 "priority": 295,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -3 for \"Gaze of Nagash Upgraded\"",
-                "key": "wh2_main_effect_ability_wom_cost_gaze_of_nagash_upgraded",
-                "value": -3
+                "description": "Winds of Magic cost: -2 for \"Flock of Doom Upgraded\"",
+                "key": "wh2_main_effect_ability_wom_cost_flock_of_doom_upgraded",
+                "value": -2
               },
               {
                 "icon": "magic.png",
                 "priority": 298,
                 "is_positive_value_good": false,
-                "description": "Miscast base chance: -15% for \"Gaze of Nagash Upgraded\"",
-                "key": "wh2_main_effect_ability_miscast_gaze_of_nagash_upgraded",
+                "description": "Miscast base chance: -15% for \"Flock of Doom Upgraded\"",
+                "key": "wh2_main_effect_ability_miscast_flock_of_doom_upgraded",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_vmp_magic_vampires_04_gaze_of_nagash_lord",
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_von_carstein_magic_flock_of_doom",
         "tier": 3,
         "indent": 3,
         "points_on_creation": 0,
@@ -2538,10 +2631,10 @@
       },
       {
         "key": "wh_dlc04_skill_node_vmp_vlad_von_carstein_magic1_09",
-        "image_path": "wh_main_spell_vampires_curse_of_years.png",
+        "image_path": "wh_dlc03_spell_beasts_transformation_of_kadon.png",
         "is_background_skill": false,
-        "name": "Curse of Years",
-        "description": " ",
+        "name": "Transformation of Kadon",
+        "description": "Kadon, a master of forms, was able to shift his shape into anything he chose. Here, his magic is used to summon a Varghulf, as if Kadon himself fights for you.",
         "levels": [
           {
             "effects": [
@@ -2549,88 +2642,61 @@
                 "icon": "magic_character.png",
                 "priority": 290,
                 "is_positive_value_good": true,
-                "description": "Spell: \"Curse of Years\"",
+                "description": "Spell: \"Transformation of Kadon\"",
                 "related_abilities": [
                   {
-                    "effect": "wh_main_effect_ability_enable_curse_of_years",
+                    "effect": "wh2_dlc11_effect_ability_enable_transformation_of_kadon_varghulf",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_vampires_curse_of_years",
-                      "icon_name": "wh_main_spell_vampires_curse_of_years",
+                      "key": "wh2_dlc11_spell_beasts_transformation_of_kadon",
+                      "icon_name": "wh_dlc03_spell_beasts_transformation_of_kadon",
                       "overpower_option": "",
                       "type": {
-                        "key": "wh_type_area_of_hexes",
-                        "icon_path": "icon_spell_area_of_hexes.png",
-                        "description": "Hex (Area)"
+                        "key": "wh_type_summon_unit",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Summon Unit"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Curse of Years",
-                      "active_time": 32,
-                      "recharge_time": 47,
+                      "description": "Transformation of Kadon",
+                      "ui_effects": [
+                        {
+                          "key": "wh2_dlc11_summon_varghulf",
+                          "sort_order": 103,
+                          "effect_state": "positive",
+                          "description": "Summons a Varghulf"
+                        }
+                      ],
+                      "num_uses": 2,
+                      "active_time": 1,
+                      "recharge_time": 45,
                       "wind_up_time": 5,
                       "passive": false,
-                      "effect_range": 35,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": true,
+                      "target_enemies": false,
                       "target_ground": true,
-                      "target_intercept_range": 200,
-                      "mana_cost": 11,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 32,
-                          "effect_type": "negative",
-                          "ability_recharge_change": 15,
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 0.8,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x0.8 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": -24,
-                              "stat": "stat_melee_attack",
-                              "how": "add",
-                              "description": "-24 Melee Attack",
-                              "sort_order": 2,
-                              "icon": "icon_stat_attack.png"
-                            }
-                          ]
-                        }
-                      ]
+                      "target_intercept_range": 50,
+                      "mana_cost": 18,
+                      "target_self": true
                     }
                   }
                 ],
-                "key": "wh_main_effect_ability_enable_curse_of_years",
+                "key": "wh2_dlc11_effect_ability_enable_transformation_of_kadon_varghulf",
                 "value": 1
-              },
-              {
-                "icon": "magic_cooldown.png",
-                "priority": 293,
-                "is_positive_value_good": false,
-                "description": "Cooldown: -50% to \"Curse of Years\"",
-                "key": "wh_main_effect_ability_cooldown_curse_of_years",
-                "value": -50
               },
               {
                 "icon": "magic_character.png",
                 "priority": 294,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -2 for \"Curse of Years\"",
-                "key": "wh2_main_effect_ability_wom_cost_curse_of_years",
-                "value": -2
+                "description": "Winds of Magic cost: -6 for \"Transformation of Kadon\"",
+                "key": "wh2_dlc11_effect_ability_wom_cost_transformation_of_kadon_varghulf",
+                "value": -6
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_vmp_magic_vampires_09_curse_of_years_lord",
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_von_carstein_magic_transformation_of_kadon",
         "tier": 6,
         "indent": 3,
         "points_on_creation": 0,
@@ -2706,7 +2772,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   },
@@ -2760,7 +2826,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2836,7 +2902,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   },
@@ -2890,7 +2956,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2986,11 +3052,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3094,6 +3160,14 @@
                 "description": "Character's aura leadership effect: +5",
                 "key": "wh_main_effect_character_stat_aura_leadership_effect",
                 "value": 5
+              },
+              {
+                "icon": "morale.png",
+                "priority": 411,
+                "is_positive_value_good": false,
+                "description": "Enemy leadership: -4",
+                "key": "wh_main_effect_force_stat_leadership_enemy_unit",
+                "value": -4
               }
             ]
           }
@@ -3261,7 +3335,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 5% for Cairn Wraiths and Hexwraiths units",
+                "description": "Spell resistance: 5% for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
                 "value": 5
               }
@@ -3273,7 +3347,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Cairn Wraiths and Hexwraiths units",
+                "description": "Melee attack: +4 for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_cairn_wraith_hex_wraith",
                 "value": 4
               },
@@ -3281,7 +3355,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 10% for Cairn Wraiths and Hexwraiths units",
+                "description": "Spell resistance: 10% for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
                 "value": 10
               }
@@ -3293,7 +3367,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Cairn Wraiths and Hexwraiths units",
+                "description": "Melee attack: +8 for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_cairn_wraith_hex_wraith",
                 "value": 8
               },
@@ -3301,7 +3375,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Cairn Wraiths and Hexwraiths units",
+                "description": "Spell resistance: 15% for Cairn Wraiths, Mournguls and Hexwraiths units",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
                 "value": 15
               }
@@ -3723,7 +3797,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Crypt Ghouls, Crypt Horrors, Dire Wolves and Varghulfs units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Crypt Ghouls, Crypt Horrors, Mournguls, Dire Wolves and Varghulfs units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_crypt_horrors_ghouls_dire_wolves_varghulfs_rank7",
                 "value": 5
               },
@@ -3731,7 +3805,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Crypt Ghouls, Crypt Horrors, Dire Wolves and Varghulfs units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Crypt Ghouls, Crypt Horrors, Mournguls, Dire Wolves and Varghulfs units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_crypt_horrors_ghouls_dire_wolves_varghulfs_rank7",
                 "value": 12
               },
@@ -3739,7 +3813,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Crypt Ghouls, Crypt Horrors, Dire Wolves and Varghulfs units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Crypt Ghouls, Crypt Horrors, Mournguls, Dire Wolves and Varghulfs units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_crypt_horrors_ghouls_dire_wolves_varghulfs_rank7",
                 "value": 10
               }
@@ -3914,11 +3988,11 @@
             "effects": [
               {
                 "icon": "campaign_movement.png",
-                "priority": 13,
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Campaign movement range: +10% after winning a battle",
-                "key": "wh3_main_effect_force_all_campaign_movement_range_post_battle_win",
-                "value": 10
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
               }
             ]
           }
@@ -3944,6 +4018,14 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +5% hit points for destroyed units restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_hp",
+                "value": 5
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
                 "description": "Casualty replenishment rate: +2%",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 2
@@ -3956,6 +4038,14 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +10% hit points for destroyed units restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_hp",
+                "value": 10
+              },
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
                 "description": "Casualty replenishment rate: +4%",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 4
@@ -3964,6 +4054,14 @@
           },
           {
             "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "The Dead Rise Again: +15% hit points for destroyed units restored after battle",
+                "key": "wh3_main_effect_post_battle_unit_saving_hp",
+                "value": 15
+              },
               {
                 "icon": "replenishment.png",
                 "priority": 101,
@@ -3996,60 +4094,60 @@
           {
             "effects": [
               {
-                "icon": "treasury.png",
-                "priority": 105,
+                "icon": "experience.png",
+                "priority": 14,
+                "is_positive_value_good": true,
+                "description": "Character experience gain: +10%",
+                "key": "wh3_main_effect_character_campaign_experience_mod",
+                "value": 10
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Hero recruitment cost: -10%",
-                "key": "wh_main_effect_agent_recruitment_cost_mod",
-                "value": -10
+                "description": "Upkeep: -3%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -3
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "vampire.png",
-                "priority": 102,
+                "icon": "experience.png",
+                "priority": 14,
                 "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Vampires",
-                "key": "wh_main_effect_agent_cap_increase_dignitary_vampire",
-                "value": 1
+                "description": "Character experience gain: +20%",
+                "key": "wh3_main_effect_character_campaign_experience_mod",
+                "value": 20
               },
               {
-                "icon": "treasury.png",
-                "priority": 105,
+                "icon": "military_spending.png",
+                "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Hero recruitment cost: -10%",
-                "key": "wh_main_effect_agent_recruitment_cost_mod",
-                "value": -10
+                "description": "Upkeep: -6%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -6
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "treasury.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Hero action cost: -10%",
-                "key": "wh_main_effect_agent_action_cost_mod",
-                "value": -10
-              },
-              {
-                "icon": "vampire.png",
-                "priority": 102,
+                "icon": "experience.png",
+                "priority": 14,
                 "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Vampires",
-                "key": "wh_main_effect_agent_cap_increase_dignitary_vampire",
-                "value": 1
+                "description": "Character experience gain: +30%",
+                "key": "wh3_main_effect_character_campaign_experience_mod",
+                "value": 30
               },
               {
-                "icon": "treasury.png",
-                "priority": 105,
+                "icon": "military_spending.png",
+                "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Hero recruitment cost: -10%",
-                "key": "wh_main_effect_agent_recruitment_cost_mod",
-                "value": -10
+                "description": "Upkeep: -9%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -9
               }
             ]
           }
@@ -4192,6 +4290,14 @@
                 "description": "Casualty replenishment rate: +30% for this Lord",
                 "key": "wh2_main_effect_replenishment_lords",
                 "value": 30
+              },
+              {
+                "icon": "health_character.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Battle healing cap: +50%",
+                "key": "wh3_dlc20_effect_healing_cap_modifier",
+                "value": 50
               },
               {
                 "icon": "wound_time.png",
@@ -4457,6 +4563,30 @@
           {
             "effects": [
               {
+                "icon": "magic_campaign.png",
+                "priority": 4,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve minimum: +15",
+                "key": "wh3_main_effect_winds_of_magic_pool_min",
+                "value": 15
+              },
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 1000,
                 "is_positive_value_good": false,
@@ -4494,12 +4624,12 @@
         {
           "effects": [
             {
-              "icon": "melee_character.png",
-              "priority": 87,
+              "icon": "health_character.png",
+              "priority": 85,
               "is_positive_value_good": true,
-              "description": "Undying Love: +15 to Melee Attack and Melee Defence when Vlad and Isabella are reinforcing each other",
-              "key": "wh_pro02_faction_trait_isabella_vlad_dummy",
-              "value": 15
+              "description": "Battle healing cap: +50% when in an army with Isabella von Carstein",
+              "key": "wh3_main_effect_battle_heal_cap_vlad_to_isabella",
+              "value": 50
             },
             {
               "icon": "attribute_can_siege.png",

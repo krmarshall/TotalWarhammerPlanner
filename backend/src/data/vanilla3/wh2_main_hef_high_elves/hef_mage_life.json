@@ -5,8 +5,8 @@
         "key": "wh2_main_skill_node_hef_mage_life_mount_1",
         "image_path": "mount_elven_steed.png",
         "is_background_skill": false,
-        "name": "Elven Steed",
-        "description": "The best of all horse breeds found anywhere in the world, Elven steeds are noble, intelligent, graceful, and swift.",
+        "name": "Barded Ithilmar Steed",
+        "description": "An extremely light yet resilient material, Ithilmar gives the same protection as heavy steel, but without slowing down its wearer.",
         "levels": [
           {
             "effects": [
@@ -149,7 +149,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -159,7 +158,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -209,7 +209,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 12,
+                      "active_time": 1,
                       "recharge_time": 31,
                       "wind_up_time": 1,
                       "passive": false,
@@ -267,7 +267,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 12,
+                      "active_time": 1,
                       "recharge_time": 31,
                       "wind_up_time": 1,
                       "passive": false,
@@ -1572,7 +1572,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1632,7 +1632,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1678,7 +1678,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1746,7 +1746,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1792,7 +1792,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2293,11 +2293,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2868,7 +2868,7 @@
                         "description": "Large explosion area"
                       }
                     ],
-                    "active_time": 12,
+                    "active_time": 1,
                     "recharge_time": 31,
                     "wind_up_time": 1,
                     "passive": false,
@@ -3061,14 +3061,6 @@
               "description": "Income from all buildings: +15%",
               "key": "wh_main_effect_economy_gdp_mod_all",
               "value": 15
-            },
-            {
-              "icon": "income.png",
-              "priority": 162,
-              "is_positive_value_good": true,
-              "description": "Income from all buildings: +10%",
-              "key": "wh_main_effect_economy_gdp_mod_all_adjacent_provinces",
-              "value": 10
             }
           ]
         }

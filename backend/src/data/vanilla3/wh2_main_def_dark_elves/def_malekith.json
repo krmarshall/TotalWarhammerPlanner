@@ -371,27 +371,11 @@
             "effects": [
               {
                 "icon": "income.png",
-                "priority": 187,
+                "priority": 170,
                 "is_positive_value_good": true,
-                "description": "Income from slaves: +20%",
-                "key": "wh2_main_effect_slave_income_modifier",
-                "value": 20
-              },
-              {
-                "icon": "slaves.png",
-                "priority": 188,
-                "is_positive_value_good": false,
-                "description": "Slave decline rate: -10%",
-                "key": "wh2_main_effect_slave_decline_modifier",
-                "value": -10
-              },
-              {
-                "icon": "public_order.png",
-                "priority": 189,
-                "is_positive_value_good": false,
-                "description": "Slave control penalty: -15%",
-                "key": "wh2_main_effect_slave_public_order_modifier",
-                "value": -15
+                "description": "Income from slaves: +5%",
+                "key": "wh3_main_effect_economy_gdp_mod_slaves",
+                "value": 5
               }
             ]
           }
@@ -428,9 +412,9 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +10",
+                "description": "Control: +4",
                 "key": "wh_main_effect_public_order_characters",
-                "value": 10
+                "value": 4
               },
               {
                 "icon": "corruption.png",
@@ -475,9 +459,9 @@
                 "icon": "treasury.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Construction cost: -20% for all buildings",
+                "description": "Construction cost: -15% for all buildings",
                 "key": "wh_main_effect_building_construction_cost_mod",
-                "value": -20
+                "value": -15
               },
               {
                 "icon": "construction.png",
@@ -1651,7 +1635,7 @@
                           "description": "Causes damage to self"
                         }
                       ],
-                      "num_uses": 3,
+                      "num_uses": 2,
                       "active_time": 20,
                       "recharge_time": 28,
                       "wind_up_time": 1,
@@ -1669,7 +1653,7 @@
                           "duration": 20,
                           "effect_type": "positive",
                           "mana_regen_mod": 0.8,
-                          "mana_max_depletion_mod": 1,
+                          "mana_max_depletion_mod": 0.7,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2946,8 +2930,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
-                      "mana_cost": 18,
-                      "miscast_chance": 0.1,
+                      "mana_cost": 16,
                       "target_self": false,
                       "phases": [
                         {
@@ -3036,11 +3019,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3319,7 +3302,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 6
               }
@@ -3331,7 +3314,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +3 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Melee defence: +3 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_shade_darkriders",
                 "value": 3
               },
@@ -3339,7 +3322,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 9
               },
@@ -3347,7 +3330,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Shades and Dark Riders units",
+                "description": "Missile strength: +6% for Shades, Dark Riders and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_shades_darkriders",
                 "value": 6
               }
@@ -3359,7 +3342,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Melee defence: +5 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_shade_darkriders",
                 "value": 5
               },
@@ -3367,7 +3350,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 12
               },
@@ -3375,7 +3358,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Shades and Dark Riders units",
+                "description": "Missile strength: +8% for Shades, Dark Riders and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_shades_darkriders",
                 "value": 8
               }
@@ -3406,7 +3389,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 6
               }
@@ -3415,18 +3398,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +9% for Bloodwrack Medusae units",
-                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
-                "value": 9
-              },
-              {
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 9
               },
@@ -3434,8 +3409,16 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_monsters",
+                "value": 9
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +9% for Bloodwrack Medusae units",
+                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
                 "value": 9
               }
             ]
@@ -3443,18 +3426,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +12% for Bloodwrack Medusae units",
-                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
-                "value": 12
-              },
-              {
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 12
               },
@@ -3462,8 +3437,16 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_monsters",
+                "value": 12
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +12% for Bloodwrack Medusae units",
+                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
                 "value": 12
               }
             ]
@@ -3774,7 +3757,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders and Doomfire Warlock units (Rank 7 and above)",
+                "description": "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_armour_corsairs_shades_riders_rank7",
                 "value": 10
               },
@@ -3782,7 +3765,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders and Doomfire Warlock units (Rank 7 and above)",
+                "description": "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_speed_corsairs_shades_riders_rank7",
                 "value": 10
               },
@@ -3790,7 +3773,7 @@
                 "icon": "accuracy.png",
                 "priority": 532,
                 "is_positive_value_good": true,
-                "description": "Range: +15% for Black Ark Corsairs, Shades and Dark Riders units (Rank 7 and above)",
+                "description": "Range: +15% for Black Ark Corsairs, Shades Dark Riders and Scourgerunner Chariot units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_range_def_corsairs_shades_riders_rank7",
                 "value": 15
               }
@@ -3868,7 +3851,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Speed: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_speed_def_beasts_witchelfs_rank7",
                 "value": 10
               },
@@ -3876,7 +3859,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_beasts_witchelfs_rank7",
                 "value": 12
               },
@@ -3884,7 +3867,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_physical_resistance_def_beasts_witchelfs_rank7",
                 "value": 10
               }
@@ -4153,7 +4136,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -4165,7 +4148,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -4177,7 +4160,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
@@ -4631,6 +4614,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -4658,28 +4687,28 @@
         {
           "effects": [
             {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": false,
-              "description": "[HIDDEN]Increased chance of loyalty loss for Lords outranking the faction leader.",
-              "key": "wh2_main_effect_loyalty_penalty_faction_leader_outranked",
-              "value": 3
-            },
-            {
-              "icon": "",
-              "priority": 0,
+              "icon": "public_order.png",
+              "priority": 6,
               "is_positive_value_good": true,
-              "description": "[HIDDEN] Gives a percentage of XP received by this character to other characters of the same type. XP is evenly distributed as far as possible with fall-back priority given to higher ranked characters",
-              "key": "wh2_main_effect_percentage_of_xp_to_give_other_characters_of_same_type_hidden",
-              "value": 10
+              "description": "Control: +8",
+              "key": "wh_main_effect_public_order_characters",
+              "value": 8
             },
             {
-              "icon": "military_spending.png",
-              "priority": 105,
+              "icon": "treasury.png",
+              "priority": 101,
               "is_positive_value_good": false,
-              "description": "Upkeep: -50% for Black Guard of Naggarond, Dreadspears, Bleakswords and Darkshards units",
-              "key": "wh2_main_effect_upkeep_reduction_malekith_witch_king",
-              "value": -50
+              "description": "Construction cost: -15% for all buildings",
+              "key": "wh_main_effect_building_construction_cost_mod",
+              "value": -15
+            },
+            {
+              "icon": "morale.png",
+              "priority": 411,
+              "is_positive_value_good": false,
+              "description": "Enemy leadership: -8",
+              "key": "wh_main_effect_force_stat_leadership_enemy_unit",
+              "value": -8
             }
           ]
         }
@@ -4787,7 +4816,7 @@
                         "description": "Causes damage to self"
                       }
                     ],
-                    "num_uses": 3,
+                    "num_uses": 2,
                     "active_time": 20,
                     "recharge_time": 28,
                     "wind_up_time": 1,
@@ -4805,7 +4834,7 @@
                         "duration": 20,
                         "effect_type": "positive",
                         "mana_regen_mod": 0.8,
-                        "mana_max_depletion_mod": 1,
+                        "mana_max_depletion_mod": 0.7,
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
                         "recharge_time": null
@@ -4931,15 +4960,15 @@
                 "icon_name": "wh2_main_item_passive_circlet_of_iron",
                 "overpower_option": "",
                 "type": {
-                  "key": "wh_type_area_of_hexes",
-                  "icon_path": "icon_spell_area_of_hexes.png",
-                  "description": "Hex (Area)"
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
                 },
                 "is_hidden_in_ui": false,
                 "description": "Circlet of Iron",
                 "passive": true,
-                "effect_range": -1,
-                "affect_self": false,
+                "effect_range": 0,
+                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -4948,16 +4977,17 @@
                 "phases": [
                   {
                     "duration": -1,
-                    "effect_type": "negative",
+                    "effect_type": "positive",
+                    "mana_regen_mod": 0.8,
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
                     "recharge_time": null,
                     "stat_effects": [
                       {
-                        "value": 2,
+                        "value": 0.5,
                         "stat": "scalar_miscast_chance",
                         "how": "mult",
-                        "description": "x2Miscast Chance",
+                        "description": "x0.5Miscast Chance",
                         "sort_order": 10,
                         "icon": "icon_stat_miscast.png"
                       }
@@ -5050,7 +5080,17 @@
                     "ability_recharge_change": 15,
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
-                    "recharge_time": null
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": -20,
+                        "stat": "stat_resistance_magic",
+                        "how": "add",
+                        "description": "-20 Spell Resistance",
+                        "sort_order": 10,
+                        "icon": "resistance_magic.png"
+                      }
+                    ]
                   }
                 ]
               }
@@ -5140,7 +5180,7 @@
                 ],
                 "passive": true,
                 "effect_range": 35,
-                "affect_self": false,
+                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -5149,11 +5189,20 @@
                 "phases": [
                   {
                     "duration": -1,
-                    "effect_type": "negative",
-                    "mana_regen_mod": -0.1,
+                    "effect_type": "positive",
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
-                    "recharge_time": null
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 20,
+                        "stat": "stat_resistance_magic",
+                        "how": "add",
+                        "description": "+20 Spell Resistance",
+                        "sort_order": 10,
+                        "icon": "resistance_magic.png"
+                      }
+                    ]
                   }
                 ]
               }

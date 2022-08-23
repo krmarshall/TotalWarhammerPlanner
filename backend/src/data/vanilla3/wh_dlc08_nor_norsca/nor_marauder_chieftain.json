@@ -97,11 +97,11 @@
             "effects": [
               {
                 "icon": "weapon_damage_character.png",
-                "priority": 161,
+                "priority": 160,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
               }
             ]
           }
@@ -115,7 +115,7 @@
       },
       {
         "key": "wh_dlc08_skill_node_nor_marauder_chieftan_unique_06",
-        "image_path": "battle_general_ability.png",
+        "image_path": "character_general_ability.png",
         "is_background_skill": false,
         "name": "Voice of the Dark Gods",
         "description": "This Lord speaks with a dread booming voice - a gift from his Dark Masters to ensure obedience.",
@@ -148,7 +148,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -158,7 +157,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -310,9 +310,14 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Berserk",
-                      "active_time": 90,
-                      "recharge_time": 30,
-                      "initial_recharge": 30,
+                      "ui_effects": [
+                        {
+                          "key": "wh3_dlc20_ability_intensity_time_in_melee",
+                          "sort_order": 1,
+                          "effect_state": "positive",
+                          "description": "Effect intensity increases with time spent engaged in melee."
+                        }
+                      ],
                       "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
@@ -323,24 +328,7 @@
                       "target_self": false,
                       "phases": [
                         {
-                          "duration": 30,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 20,
-                              "stat": "stat_resistance_physical",
-                              "how": "add",
-                              "description": "+20 Physical Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_physical.png"
-                            }
-                          ]
-                        },
-                        {
-                          "duration": 30,
+                          "duration": 60,
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
@@ -1026,6 +1014,14 @@
         "levels": [
           {
             "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
               {
                 "icon": "morale_character.png",
                 "priority": 260,
@@ -2043,7 +2039,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -2055,7 +2051,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -2067,7 +2063,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
@@ -2250,8 +2246,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -2267,12 +2263,12 @@
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -2287,12 +2283,12 @@
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }
@@ -2500,8 +2496,8 @@
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +40% when attacking",
-              "key": "wh_main_effect_character_stat_leadership_aura_size_attacking",
+              "description": "Leadership aura size: +40%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 40
             }
           ]
@@ -2510,34 +2506,6 @@
       "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_marauder_chieftain",
       "character_skill_key": "wh2_main_skill_innate_chs_diabolic_spendour",
       "tier": 0,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc08_skill_node_set_nor_marauder_chieftan_innate_02",
-      "image_path": "trait_chaos.png",
-      "is_background_skill": true,
-      "name": "Infernal Dominance ",
-      "description": "\"Mine desire is all, mortal wretch!\"",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "melee.png",
-              "priority": 430,
-              "is_positive_value_good": true,
-              "description": "Melee attack: +5",
-              "key": "wh_main_effect_force_stat_melee_attack",
-              "value": 5
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_marauder_chieftain",
-      "character_skill_key": "wh2_main_skill_innate_chs_dominance",
-      "tier": 1,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
@@ -2556,9 +2524,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2660,6 +2628,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -2764,9 +2740,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -2800,17 +2776,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -2836,25 +2812,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -2880,17 +2856,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -2944,17 +2920,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -3216,8 +3192,8 @@
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +40% when attacking",
-              "key": "wh_main_effect_character_stat_leadership_aura_size_attacking",
+              "description": "Leadership aura size: +40%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 40
             }
           ]
@@ -3260,9 +3236,14 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Rage",
-                    "active_time": 135,
-                    "recharge_time": 45,
-                    "initial_recharge": 45,
+                    "ui_effects": [
+                      {
+                        "key": "wh3_dlc20_ability_intensity_time_in_melee",
+                        "sort_order": 1,
+                        "effect_state": "positive",
+                        "description": "Effect intensity increases with time spent engaged in melee."
+                      }
+                    ],
                     "passive": true,
                     "effect_range": 0,
                     "affect_self": true,
@@ -3273,49 +3254,7 @@
                     "target_self": false,
                     "phases": [
                       {
-                        "duration": 45,
-                        "effect_type": "positive",
-                        "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null,
-                        "stat_effects": [
-                          {
-                            "value": 8,
-                            "stat": "stat_morale",
-                            "how": "add",
-                            "description": "+8 Leadership",
-                            "sort_order": 1,
-                            "icon": "icon_stat_morale.png"
-                          }
-                        ]
-                      },
-                      {
-                        "duration": 45,
-                        "effect_type": "positive",
-                        "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null,
-                        "stat_effects": [
-                          {
-                            "value": 8,
-                            "stat": "stat_morale",
-                            "how": "add",
-                            "description": "+8 Leadership",
-                            "sort_order": 1,
-                            "icon": "icon_stat_morale.png"
-                          },
-                          {
-                            "value": 10,
-                            "stat": "stat_resistance_physical",
-                            "how": "add",
-                            "description": "+10 Physical Resistance",
-                            "sort_order": 10,
-                            "icon": "resistance_physical.png"
-                          }
-                        ]
-                      },
-                      {
-                        "duration": 45,
+                        "duration": -1,
                         "effect_type": "positive",
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,

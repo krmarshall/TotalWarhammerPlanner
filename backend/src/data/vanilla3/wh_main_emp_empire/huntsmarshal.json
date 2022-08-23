@@ -145,7 +145,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -155,7 +154,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -409,9 +409,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +4%",
+                "description": "Speed: +8%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 4
+                "value": 8
               },
               {
                 "icon": "ammo_character.png",
@@ -429,9 +429,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +12%",
+                "description": "Speed: +15%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 12
+                "value": 15
               },
               {
                 "icon": "ammo_character.png",
@@ -1382,7 +1382,7 @@
             "effects": [
               {
                 "icon": "ranged_damage.png",
-                "priority": 101,
+                "priority": 541,
                 "is_positive_value_good": true,
                 "description": "Missile strength: +4% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
@@ -1393,33 +1393,25 @@
           {
             "effects": [
               {
-                "icon": "ranged_damage.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
-                "value": 6
-              },
-              {
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
                 "description": "Ammunition: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders missile units",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_missile_infantry_cavalry",
                 "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
+                "value": 6
               }
             ]
           },
           {
             "effects": [
-              {
-                "icon": "ranged_damage.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
-                "value": 8
-              },
               {
                 "icon": "ammo.png",
                 "priority": 511,
@@ -1427,6 +1419,14 @@
                 "description": "Ammunition: +20% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders missile units",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_missile_infantry_cavalry",
                 "value": 20
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +8% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
+                "value": 8
               }
             ]
           }
@@ -2572,6 +2572,22 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
@@ -2875,9 +2891,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2979,6 +2995,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -3083,9 +3107,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3119,17 +3143,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -3155,25 +3179,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -3199,17 +3223,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -3263,17 +3287,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

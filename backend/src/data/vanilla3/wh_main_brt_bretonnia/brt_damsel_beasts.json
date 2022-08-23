@@ -5,8 +5,8 @@
         "key": "wh_dlc07_skill_node_brt_damsel_beasts_unique_01",
         "image_path": "mount_warhorse.png",
         "is_background_skill": false,
-        "name": "Warhorse",
-        "description": "The finest horses in the Old World, bred for their endurance and fiery temperament.",
+        "name": "Barded Warhorse",
+        "description": "The finest horses in the Old World, bred for their endurance and fiery temperament, barded for further protection.",
         "levels": [
           {
             "effects": [
@@ -14,8 +14,8 @@
                 "icon": "mount.png",
                 "priority": 50,
                 "is_positive_value_good": true,
-                "description": "Mount: Warhorse",
-                "key": "wh_main_effect_enable_mount_warhorse",
+                "description": "Mount: Barded Warhorse",
+                "key": "wh_main_effect_enable_mount_barded_warhorse",
                 "value": 1
               }
             ],
@@ -166,7 +166,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -176,7 +175,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -2620,11 +2620,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2716,20 +2716,20 @@
     [
       {
         "key": "wh_dlc07_skill_node_brt_damsel_beasts_campaign_01",
-        "image_path": "campaign_item.png",
+        "image_path": "campaign_replenishment.png",
         "is_background_skill": false,
-        "name": "Scouting",
-        "description": "Spellcasters can oft-sense when magic is close or being drawn from the Winds.",
+        "name": "Replenish Troops",
+        "description": "Those in the army can find succour or be replenished by the power of this champion.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "item_ability.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Scouting action: Magic item drop chance is increased by an additional 5%",
-                "key": "wh2_main_effect_agent_action_assist_army_scouting_buff",
-                "value": 5
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 3%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 3
               }
             ]
           },
@@ -2737,12 +2737,12 @@
             "unlocked_at_rank": 5,
             "effects": [
               {
-                "icon": "item_ability.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Scouting action: Magic item drop chance is increased by an additional 10%",
-                "key": "wh2_main_effect_agent_action_assist_army_scouting_buff",
-                "value": 10
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 6%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 6
               }
             ]
           },
@@ -2750,17 +2750,17 @@
             "unlocked_at_rank": 10,
             "effects": [
               {
-                "icon": "item_ability.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Scouting action: Magic item drop chance is increased by an additional 15%",
-                "key": "wh2_main_effect_agent_action_assist_army_scouting_buff",
-                "value": 15
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 9%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 9
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_all_hero_assist_army_scouting",
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_replenish_troops",
         "tier": 0,
         "indent": 5,
         "points_on_creation": 0,
@@ -3104,7 +3104,7 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
-              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
+              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_replenish_troops",
               "value": 1
             },
             {
@@ -3171,9 +3171,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -3275,6 +3275,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -3379,9 +3387,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3415,17 +3423,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -3448,20 +3456,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }

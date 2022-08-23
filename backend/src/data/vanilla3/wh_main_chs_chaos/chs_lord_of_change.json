@@ -2311,11 +2311,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2382,9 +2382,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -2424,6 +2424,14 @@
           {
             "effects": [
               {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
+              {
                 "icon": "morale_character.png",
                 "priority": 260,
                 "is_positive_value_good": true,
@@ -2444,7 +2452,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_battle_02",
-        "image_path": "battle_defence.png",
+        "image_path": "battle_attack.png",
         "is_background_skill": false,
         "name": "Chaos Vanguard",
         "description": "To the Northmen, there is no greater honour than to fight and perish under the gaze of the Gods.",
@@ -2452,11 +2460,11 @@
           {
             "effects": [
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +4 for all non-Daemonic infantry units",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 4
               }
             ]
@@ -2467,17 +2475,17 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_armour_marauder_aspiring_champions_forsaken",
+                "description": "Armour: +6 for all non-Daemonic infantry units",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units",
                 "value": 6
               },
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
-                "value": 4
+                "description": "Melee attack: +6 for all non-Daemonic infantry units",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
+                "value": 6
               }
             ]
           },
@@ -2487,17 +2495,17 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_armour_marauder_aspiring_champions_forsaken",
+                "description": "Armour: +12 for all non-Daemonic infantry units",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units",
                 "value": 12
               },
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
-                "value": 6
+                "description": "Melee attack: +8 for all non-Daemonic infantry units",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
+                "value": 8
               }
             ]
           }
@@ -2518,56 +2526,56 @@
         "image_path": "battle_charge.png",
         "is_background_skill": false,
         "name": "Savage Bloodlust",
-        "description": "Khorne’s will imbues his creatures with a vicious, unslakeable hunger for battle.",
+        "description": "The Daemons of Chaos bay for blood, spurred on by a chorus of agonised screams.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "charge.png",
-                "priority": 501,
+                "icon": "armour.png",
+                "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
-                "value": 6
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Armour: +4 for all Daemonic non-flying melee units",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
                 "value": 4
-              },
-              {
-                "icon": "charge.png",
-                "priority": 501,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
-                "value": 9
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "armour.png",
+                "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Armour: +8 for all Daemonic non-flying melee units",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
                 "value": 8
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Charge bonus: +8 for all Daemonic non-flying melee units",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_melee_daemons",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for all Daemonic non-flying melee units",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for all Daemonic non-flying melee units",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_melee_daemons",
                 "value": 12
               }
             ]
@@ -2586,10 +2594,10 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_battle_04",
-        "image_path": "battle_defence.png",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Blessed by Chaos",
-        "description": "Unnatural strength, an aura of dark menace, an unwavering devotion to the Chaos Gods – some warriors have undoubtedly been touched by the Ruinous Ones.",
+        "name": "Warp Fire",
+        "description": "As dark wings take to the skies and Daemon arrows bear down, the enemies of Chaos know their end is near.",
         "levels": [
           {
             "effects": [
@@ -2597,8 +2605,8 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
+                "description": "Melee defence: +4 for all Daemonic missile and flying units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
                 "value": 4
               }
             ]
@@ -2606,45 +2614,61 @@
           {
             "effects": [
               {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +4% for all Daemonic flying units",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_ranged_flying_daemons",
+                "value": 4
+              },
+              {
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
+                "description": "Melee defence: +6 for all Daemonic missile and flying units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
                 "value": 6
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "ranged_damage.png",
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_chosen_spawn_chaos_warriors",
-                "value": 6
+                "description": "Missile strength: +8% for all Daemonic missile units",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_ranged_flying_daemons",
+                "value": 8
               }
             ]
           },
           {
             "effects": [
               {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for all Daemonic flying units",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_ranged_flying_daemons",
+                "value": 6
+              },
+              {
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
+                "description": "Melee defence: +8 for all Daemonic missile and flying units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
                 "value": 8
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "ranged_damage.png",
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_chosen_spawn_chaos_warriors",
+                "description": "Missile strength: +12% for all Daemonic missile units",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_ranged_flying_daemons",
                 "value": 12
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_chs_army_buff_blessed_by_chaos",
+        "character_skill_key": "wh3_dlc20_skill_chs_army_buff_warpfire",
         "tier": 3,
         "indent": 4,
         "points_on_creation": 0,
@@ -2668,8 +2692,8 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +6 for all non-Daemonic cavalry and chariot units",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 6
               }
             ]
@@ -2677,19 +2701,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogres_chaos_knights_chariots",
-                "value": 4
+                "description": "Melee defence: +6 for all non-Daemonic cavalry and chariot units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_knights_chariots_units",
+                "value": 6
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +6 for all non-Daemonic cavalry and chariot units",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 6
               }
             ]
@@ -2697,19 +2721,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogres_chaos_knights_chariots",
-                "value": 6
+                "description": "Melee defence: +8 for all non-Daemonic cavalry and chariot units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_knights_chariots_units",
+                "value": 8
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +12 for all non-Daemonic cavalry and chariot units",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 12
               }
             ]
@@ -2728,7 +2752,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_battle_06",
-        "image_path": "battle_attack.png",
+        "image_path": "battle_defence.png",
         "is_background_skill": false,
         "name": "Monstrous Strength",
         "description": "Hulks of pure muscle, held upright by unsullied hatred, can crush a man with a frightening lack of effort.",
@@ -2736,11 +2760,11 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "battle_movement.png",
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Weapon strength: +4% for all non-Daemonic war beasts, monstrous and monster units",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
                 "value": 4
               }
             ]
@@ -2748,19 +2772,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "battle_movement.png",
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 4
+                "description": "Weapon strength: +6% for all non-Daemonic war beasts, monstrous and monster units",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
+                "value": 6
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Melee attack: +6 for all non-Daemonic war beasts, monstrous, and monster units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_monsters_beasts",
                 "value": 6
               }
             ]
@@ -2768,19 +2792,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "battle_movement.png",
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 6
+                "description": "Weapon strength: +10% for all non-Daemonic war beasts, monstrous and monster units",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
+                "value": 10
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Melee attack: +8 for all non-Daemonic war beasts, monstrous, and monster units",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_monsters_beasts",
                 "value": 8
               }
             ]
@@ -2802,7 +2826,7 @@
         "image_path": "battle_ammo.png",
         "is_background_skill": false,
         "name": "Doomfire",
-        "description": "Doomfire is a gift from Khorne, to ensure the Hellcannons speak with extra fury.",
+        "description": "Subdue the enemy with savage fire, as flaming projectiles burn a trail across the sky.",
         "levels": [
           {
             "effects": [
@@ -2810,8 +2834,8 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +10% for all non-Daemonic missile cavalry and artillery units",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 10
               }
             ]
@@ -2822,17 +2846,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +15% for all non-Daemonic missile cavalry and artillery units",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 15
               },
               {
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Hellcannon units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon",
-                "value": 6
+                "description": "Missile strength: +8% for all non-Daemonic missile cavalry and artillery units",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_artillery_missile_units",
+                "value": 8
               }
             ]
           },
@@ -2842,17 +2866,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +20% for all non-Daemonic missile cavalry and artillery units",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 20
               },
               {
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Hellcannon units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon",
-                "value": 8
+                "description": "Missile strength: +12% for all non-Daemonic missile cavalry and artillery units",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_artillery_missile_units",
+                "value": 12
               }
             ]
           }
@@ -2954,7 +2978,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_battle_09",
-        "image_path": "battle_damage.png",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
         "name": "Legion of Doom",
         "description": "The legions march forth under the Lord's inscrutable gaze, eager to kill for fear of his wrath.",
@@ -2962,28 +2986,28 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 432,
+                "icon": "armour.png",
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
+                "description": "Armour: +10 for all infantry units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units_rank7",
+                "value": 10
+              },
+              {
+                "icon": "defence.png",
+                "priority": 452,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5 for all infantry units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_infantry_units_rank7",
                 "value": 5
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 462,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
-                "value": 12
-              },
-              {
                 "icon": "resistance_magic.png",
-                "priority": 582,
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_magic_resistance_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
-                "value": 15
+                "description": "Spell resistance: 20% for all infantry units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_spell_resistance_chs_infantry_units_rank7",
+                "value": 20
               }
             ]
           }
@@ -3004,7 +3028,7 @@
         "image_path": "battle_speed.png",
         "is_background_skill": false,
         "name": "Speed & Malice",
-        "description": "The worthiest of Chaos' vanguard are blessed with the most elaborate mutations, which also enable them to run faster for longer.",
+        "description": "The worthiest of Chaos' vanguard are blessed with the most elaborate mutations, which also enable them to move faster for longer.",
         "levels": [
           {
             "effects": [
@@ -3012,24 +3036,24 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_speed_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
+                "description": "Speed: +10% for all cavalry, chariots and flying units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
                 "value": 10
               },
               {
-                "icon": "charge.png",
-                "priority": 502,
+                "icon": "melee.png",
+                "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
-                "value": 12
+                "description": "Melee attack: +5 for all cavalry, chariots and flying units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
+                "value": 5
               },
               {
                 "icon": "resistance_missile.png",
-                "priority": 582,
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_missile_resistance_chs_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
+                "description": "Missile resistance: 15% for all cavalry, chariots and flying units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_missile_resistance_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
                 "value": 15
               }
             ]
@@ -3048,7 +3072,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_battle_11",
-        "image_path": "battle_damage.png",
+        "image_path": "battle_attack.png",
         "is_background_skill": false,
         "name": "Freakish Mutations",
         "description": "Mutations awarded by the Chaos Gods to their followers may look horrific to southerners, but such gifts are prized.",
@@ -3056,28 +3080,28 @@
           {
             "effects": [
               {
+                "icon": "morale.png",
+                "priority": 412,
+                "is_positive_value_good": true,
+                "description": "Leadership: +8 for all war beasts, monstrous and monster units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_leadership_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
+                "value": 8
+              },
+              {
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
+                "description": "Melee attack: +5 for all war beasts, monstrous, and monster units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
                 "value": 5
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 462,
+                "icon": "resistance_ward_save.png",
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
-                "value": 12
-              },
-              {
-                "icon": "resistance_physical.png",
-                "priority": 582,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_physical_resistance_chs_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
-                "value": 10
+                "description": "Ward save: 5% for all war beasts, monstrous and monster units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_physical_resistance_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
+                "value": 5
               }
             ]
           }
@@ -3095,36 +3119,36 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_battle_12",
-        "image_path": "battle_ranged_damage.png",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
-        "name": "Guided by Tzeentch",
-        "description": "Impossible foresight is granted to a few among the ranks of the Ruinous armies, allowing them to land the critical blow upon their foes.",
+        "name": "Malevolent Ranger",
+        "description": "To devastate one's enemies from afar is the key to controlling the battlefield.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "ammo.png",
-                "priority": 512,
+                "icon": "armour.png",
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_ammunition_chs_hellcannon_marauder_horsemen_rank7",
-                "value": 15
-              },
-              {
-                "icon": "ranged_damage.png",
-                "priority": 542,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +12% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon_marauder_horsemen_rank7",
-                "value": 12
+                "description": "Armour: +10 for all missile units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_artillery_missile_units_rank7",
+                "value": 10
               },
               {
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_chs_hellcannon_marauder_horsemen_rank7",
+                "description": "Reload time reduction: +10% for all missile units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_reload_time_chs_artillery_missile_units_rank7",
                 "value": 10
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 581,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for all missile units (Rank 7 and above)",
+                "key": "wh3_dlc20_effect_force_stat_missile_resistance_chs_artillery_missile_units_rank7",
+                "value": 15
               }
             ]
           }
@@ -3298,11 +3322,11 @@
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +3%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 3
+                "description": "Income from sacking settlements: +5%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 5
               }
             ]
           },
@@ -3318,11 +3342,11 @@
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +8%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 8
+                "description": "Income from sacking settlements: +10%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 10
               }
             ]
           }
@@ -3352,7 +3376,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -3360,11 +3384,19 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Warband upgrades cost: -5% for all units",
+                "key": "wh3_dlc20_effect_unit_upgrade_cost",
+                "value": -5
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -3372,17 +3404,25 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Warband upgrades cost: -10% for all units",
+                "key": "wh3_dlc20_effect_unit_upgrade_cost",
+                "value": -10
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_serve_or_die",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_serve_or_die",
         "tier": 2,
         "indent": 5,
         "points_on_creation": 0,
@@ -3395,19 +3435,19 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_campaign_04",
-        "image_path": "campaign_growth.png",
+        "image_path": "campaign_army.png",
         "is_background_skill": false,
-        "name": "Tribes of Chaos",
-        "description": "A Lord that was once part of the tribes - one who rode the great Norscan migrations - can summon his kin.",
+        "name": "Devoted of Chaos",
+        "description": "No act of faith can rival reaving the souls of the slain; a dark and twisted offering in honour of the Ruinous Powers.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "experience.png",
+                "priority": 611,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
-                "key": "wh_main_effect_province_growth_characters",
+                "description": "Increased experience gain: +10% for units when fighting against the Forces of Order",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
                 "value": 10
               }
             ]
@@ -3415,29 +3455,45 @@
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "souls.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
-                "key": "wh_main_effect_province_growth_characters",
-                "value": 20
+                "description": "Souls gained from battles: +10%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 10
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Increased experience gain: +15% for units when fighting against the Forces of Order",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
+                "value": 15
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "souls.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Growth: +30",
-                "key": "wh_main_effect_province_growth_characters",
-                "value": 30
+                "description": "Souls gained from battles: +15%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 15
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Increased experience gain: +20% for units when fighting against the Forces of Order",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
+                "value": 20
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_tribes_of_chaos",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_devoted_of_chaos",
         "tier": 3,
         "indent": 5,
         "points_on_creation": 0,
@@ -3461,8 +3517,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -3478,12 +3534,12 @@
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -3498,12 +3554,12 @@
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }
@@ -3629,8 +3685,8 @@
         "key": "wh_main_skill_node_chs_lord_of_change_campaign_08",
         "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Dark Apothecary",
-        "description": "The Dark Apothecaries mix their fell unguents, ensuring those that can continue to serve.",
+        "name": "Foetid Gallipot",
+        "description": "A pungent mix of fell unguents ensures the unholy vitality of one’s minions.",
         "levels": [
           {
             "effects": [
@@ -3706,65 +3762,65 @@
       },
       {
         "key": "wh_main_skill_node_chs_lord_of_change_campaign_09",
-        "image_path": "campaign_army.png",
+        "image_path": "campaign_military_spending.png",
         "is_background_skill": false,
-        "name": "Gathering of Might",
-        "description": "The masses flock to the Lord of Chaos - a dread time will soon fall on the weaklings in the south.",
+        "name": "Blessed by Evil",
+        "description": "For one fighting with the favour of the Ruinous Powers, glory and riches come naturally.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +5%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "experience.png",
-                "priority": 117,
+                "icon": "item_ability.png",
+                "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
-                "value": 1
+                "description": "Post battle chance of stealing a magic item: +5%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 5
               },
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +10%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 10
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "experience.png",
-                "priority": 117,
+                "icon": "item_ability.png",
+                "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +2",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
-                "value": 2
+                "description": "Post battle chance of stealing a magic item: +10%",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 10
               },
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +15%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_gathering_of_might",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_blessed_by_evil",
         "tier": 8,
         "indent": 5,
         "points_on_creation": 0,
@@ -3780,7 +3836,7 @@
         "image_path": "campaign_ambush.png",
         "is_background_skill": false,
         "name": "Premonition",
-        "description": "This being must be touched by Tzeentch, seeing things before they happen.",
+        "description": "Visions cloud the mind, prophesising the arrival of the enemy and uncovering every shadow in which they lurk.",
         "levels": [
           {
             "effects": [
@@ -3788,9 +3844,9 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +6%",
+                "description": "Ambush defence chance: +10%",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 6
+                "value": 10
               }
             ]
           },
@@ -3800,17 +3856,17 @@
                 "icon": "subterranean.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +8%",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
                 "key": "wh_main_effect_general_mod_tunnel_interception_chance",
-                "value": 8
+                "value": 10
               },
               {
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
+                "description": "Ambush defence chance: +20%",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 16
+                "value": 20
               }
             ]
           },
@@ -3820,9 +3876,9 @@
                 "icon": "subterranean.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +15%",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%",
                 "key": "wh_main_effect_general_mod_tunnel_interception_chance",
-                "value": 15
+                "value": 20
               },
               {
                 "icon": "icon_effects_ambush.png",
@@ -3835,7 +3891,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_lord_campaign_premonition",
+        "character_skill_key": "wh3_dlc20_skill_all_lord_campaign_premonition",
         "tier": 9,
         "indent": 5,
         "points_on_creation": 0,
@@ -3851,23 +3907,47 @@
         "key": "wh_main_skill_node_chs_lord_of_change_campaign_11",
         "image_path": "campaign_chaos_corruption.png",
         "is_background_skill": false,
-        "name": "Corruption",
-        "description": "With the servants of Chaos comes the corruption - as the landscape twists, this one speeds the transformation.",
+        "name": "Chaos Unchained",
+        "description": "All will bow before such a harbinger of pure, unbridled Chaos, oozing with the energies of corruption.",
         "levels": [
           {
             "effects": [
               {
+                "icon": "campaign_movement.png",
+                "priority": 13,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_force_all_campaign_movement_range",
+                "value": 5
+              },
+              {
+                "icon": "souls.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Souls gained from battles: +10%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 10
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +10%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 10
+              },
+              {
                 "icon": "corruption_chaos.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +4",
+                "description": "Chaos Undivided corruption: +1",
                 "key": "wh3_main_effect_corruption_chaos_characters",
-                "value": 4
+                "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_corruption",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_corruption_undivided",
         "tier": 10,
         "indent": 5,
         "points_on_creation": 0,

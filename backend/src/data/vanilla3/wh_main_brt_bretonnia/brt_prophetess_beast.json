@@ -2,34 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh_dlc07_skill_node_brt_prophetess_beast_unique_01",
-        "image_path": "mount_warhorse.png",
-        "is_background_skill": false,
-        "name": "Warhorse",
-        "description": "The finest horses in the Old World, bred for their endurance and fiery temperament.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "mount.png",
-                "priority": 50,
-                "is_positive_value_good": true,
-                "description": "Mount: Warhorse",
-                "key": "wh_main_effect_enable_mount_warhorse",
-                "value": 1
-              }
-            ],
-            "auto_unlock_at_rank": 5
-          }
-        ],
-        "character_skill_key": "wh_dlc07_skill_brt_prophetess_beasts_unique_warhorse",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh_dlc07_skill_node_brt_prophetess_beasts_unique_08",
         "image_path": "mount_barded_warhorse.png",
         "is_background_skill": false,
@@ -47,7 +19,7 @@
                 "value": 1
               }
             ],
-            "auto_unlock_at_rank": 8
+            "auto_unlock_at_rank": 7
           }
         ],
         "character_skill_key": "wh_dlc07_skill_brt_prophetess_beasts_unique_barded_warhorse",
@@ -275,7 +247,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -285,7 +256,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -2645,11 +2617,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -4124,12 +4096,36 @@
           {
             "effects": [
               {
-                "icon": "income.png",
-                "priority": 2,
+                "icon": "campaign_movement.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Income from Industry: +10%",
-                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
-                "value": 10
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
               }
             ]
           }
@@ -4164,9 +4160,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "morale_character.png",
@@ -4248,9 +4244,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "agent.png",
@@ -4292,9 +4288,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "income.png",
@@ -4328,9 +4324,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "agent.png",
@@ -4372,9 +4368,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "public_order.png",
@@ -4416,9 +4412,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "agent.png",
@@ -4432,9 +4428,9 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +5",
+              "description": "Melee attack: +6",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 5
+              "value": 6
             }
           ]
         }
@@ -4460,9 +4456,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +5",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 5
+              "description": "Chivalry: +2 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 2
             },
             {
               "icon": "agent.png",

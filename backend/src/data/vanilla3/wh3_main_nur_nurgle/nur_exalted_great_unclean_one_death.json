@@ -73,7 +73,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -83,7 +82,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -99,18 +99,18 @@
         "key": "wh3_main_skill_node_nur_exalted_great_unclean_one_death_combat_0",
         "image_path": "character_damage.png",
         "is_background_skill": false,
-        "name": "Eye of the Gods",
+        "name": "Infernal Champion",
         "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "weapon_damage_character.png",
-                "priority": 161,
+                "priority": 160,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
               }
             ]
           }
@@ -1089,6 +1089,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -1143,6 +1148,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -1221,6 +1231,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -1275,6 +1290,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2610,11 +2630,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2752,7 +2772,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +3 for Plague Toad and Pox Rider units",
+                "description": "Charge bonus: +3 for Plague Toad, Knights of Nurgle, Chaos Chariots of Nurgle and Pox Rider units",
                 "key": "wh3_main_effect_force_stat_charge_bonus_add_nur_plague_toads_pox_riders",
                 "value": 3
               }
@@ -2764,7 +2784,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Plague Toad and Pox Rider units",
+                "description": "Melee defence: +4 for Plague Toad, Knights of Nurgle, Chaos Chariots of Nurgle and Pox Rider units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_plague_toads_pox_riders",
                 "value": 4
               },
@@ -2772,7 +2792,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Plague Toad and Pox Rider units",
+                "description": "Charge bonus: +6 for Plague Toad, Knights of Nurgle, Chaos Chariots of Nurgle and Pox Rider units",
                 "key": "wh3_main_effect_force_stat_charge_bonus_add_nur_plague_toads_pox_riders",
                 "value": 6
               }
@@ -2784,7 +2804,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Plague Toad and Pox Rider units",
+                "description": "Melee defence: +6 for Plague Toad, Knights of Nurgle, Chaos Chariots of Nurgle and Pox Rider units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_plague_toads_pox_riders",
                 "value": 6
               },
@@ -2792,7 +2812,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Plague Toad and Pox Rider units",
+                "description": "Charge bonus: +9 for Plague Toad, Knights of Nurgle, Chaos Chariots of Nurgle and Pox Rider units",
                 "key": "wh3_main_effect_force_stat_charge_bonus_add_nur_plague_toads_pox_riders",
                 "value": 9
               }
@@ -2823,7 +2843,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +4 for Plaguebearers of Nurgle, Spawn of Nurgle and Forsaken of Nurgle units",
+                "description": "Armour: +4 for Plaguebearers of Nurgle, Spawn of Nurgle, Marauders of Nurgle, Chaos Warriors, Chosen and Forsaken of Nurgle units",
                 "key": "wh3_main_effect_force_stat_armour_nur_chaos_spawn_forsaken",
                 "value": 4
               }
@@ -2835,7 +2855,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +8 for Plaguebearers of Nurgle, Spawn of Nurgle and Forsaken of Nurgle units",
+                "description": "Armour: +8 for Plaguebearers of Nurgle, Spawn of Nurgle, Marauders of Nurgle, Chaos Warriors, Chosen and Forsaken of Nurgle units",
                 "key": "wh3_main_effect_force_stat_armour_nur_chaos_spawn_forsaken",
                 "value": 8
               },
@@ -2843,7 +2863,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Plaguebearers of Nurgle, Spawn of Nurgle and Forsaken of Nurgle units",
+                "description": "Melee defence: +4 for Plaguebearers of Nurgle, Spawn of Nurgle, Marauders of Nurgle, Chaos Warriors, Chosen and Forsaken of Nurgle units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_chaos_spawn_forsaken",
                 "value": 4
               }
@@ -2855,7 +2875,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Plaguebearers of Nurgle, Spawn of Nurgle and Forsaken of Nurgle units",
+                "description": "Armour: +12 for Plaguebearers of Nurgle, Spawn of Nurgle, Marauders of Nurgle, Chaos Warriors, Chosen and Forsaken of Nurgle units",
                 "key": "wh3_main_effect_force_stat_armour_nur_chaos_spawn_forsaken",
                 "value": 12
               },
@@ -2863,7 +2883,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Plaguebearers of Nurgle, Spawn of Nurgle and Forsaken of Nurgle units",
+                "description": "Melee defence: +6 for Plaguebearers of Nurgle, Spawn of Nurgle, Marauders of Nurgle, Chaos Warriors, Chosen and Forsaken of Nurgle units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_chaos_spawn_forsaken",
                 "value": 6
               }
@@ -2894,7 +2914,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +3% for Beast of Nurgle and Nurglings units",
+                "description": "Speed: +3% for Beast of Nurgle, Warhounds and Nurglings units",
                 "key": "wh3_main_effect_force_stat_speed_nur_beast_of_nurgle_nurglings",
                 "value": 3
               }
@@ -2906,7 +2926,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +5% for Beast of Nurgle and Nurglings units",
+                "description": "Speed: +5% for Beast of Nurgle, Warhounds and Nurglings units",
                 "key": "wh3_main_effect_force_stat_speed_nur_beast_of_nurgle_nurglings",
                 "value": 5
               },
@@ -2914,7 +2934,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 3% for Beast of Nurgle and Nurglings units",
+                "description": "Physical resistance: 3% for Beast of Nurgle, Warhounds and Nurglings units",
                 "key": "wh3_main_effect_force_stat_physical_resistance_nur_beast_of_nurgle_nurglings",
                 "value": 3
               }
@@ -2926,7 +2946,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Beast of Nurgle and Nurglings units",
+                "description": "Speed: +10% for Beast of Nurgle, Warhounds and Nurglings units",
                 "key": "wh3_main_effect_force_stat_speed_nur_beast_of_nurgle_nurglings",
                 "value": 10
               },
@@ -2934,7 +2954,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 6% for Beast of Nurgle and Nurglings units",
+                "description": "Physical resistance: 6% for Beast of Nurgle, Warhounds and Nurglings units",
                 "key": "wh3_main_effect_force_stat_physical_resistance_nur_beast_of_nurgle_nurglings",
                 "value": 6
               }
@@ -3036,7 +3056,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Great Unclean One and Soul Grinder of Nurgle units",
+                "description": "Melee defence: +4 for Great Unclean One, Chaos Warshrine of Nurgle and Soul Grinder of Nurgle units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_soul_grinder_great_unclean_one",
                 "value": 4
               }
@@ -3048,7 +3068,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Great Unclean One and Soul Grinder of Nurgle units",
+                "description": "Armour: +10 for Great Unclean One, Chaos Warshrine of Nurgle and Soul Grinder of Nurgle units",
                 "key": "wh3_main_effect_force_stat_armour_nur_soul_grinder_great_unclean_one",
                 "value": 10
               },
@@ -3056,7 +3076,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Great Unclean One and Soul Grinder of Nurgle units",
+                "description": "Melee defence: +4 for Great Unclean One, Chaos Warshrine of Nurgle and Soul Grinder of Nurgle units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_soul_grinder_great_unclean_one",
                 "value": 4
               }
@@ -3068,7 +3088,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +15 for Great Unclean One and Soul Grinder of Nurgle units",
+                "description": "Armour: +15 for Great Unclean One, Chaos Warshrine of Nurgle and Soul Grinder of Nurgle units",
                 "key": "wh3_main_effect_force_stat_armour_nur_soul_grinder_great_unclean_one",
                 "value": 15
               },
@@ -3076,7 +3096,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Great Unclean One and Soul Grinder of Nurgle units",
+                "description": "Melee defence: +6 for Great Unclean One, Chaos Warshrine of Nurgle and Soul Grinder of Nurgle units",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_soul_grinder_great_unclean_one",
                 "value": 6
               }
@@ -3129,7 +3149,7 @@
                           "key": "wh3_main_all_enemy_spreading_radius_30m",
                           "sort_order": 101,
                           "effect_state": "positive",
-                          "description": "Will spread to enemies within 30 metres of affected unit"
+                          "description": "Will spread to enemies within the Spread Range metres of affected unit"
                         },
                         {
                           "key": "wh3_main_all_max_five_affected_units",
@@ -3214,7 +3234,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Nurglings, Plaguebearers of Nurgle, Exalted Plaguebearers of Nurgle and Forsaken of Nurgle units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Nurglings, Plaguebearers of Nurgle, Exalted Plaguebearers of Nurgle, Marauders of Nurgle, Chaos Warshrine and Forsaken of Nurgle units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_melee_attack_nur_nurglings_plaguebearers_forsaken_rank7",
                 "value": 5
               },
@@ -3222,7 +3242,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Nurglings, Plaguebearers of Nurgle, Exalted Plaguebearers of Nurgle and Forsaken of Nurgle units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Nurglings, Plaguebearers of Nurgle, Exalted Plaguebearers of Nurgle, Marauders of Nurgle, Chaos Warshrine and Forsaken of Nurgle units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_missile_resistance_nur_nurglings_plaguebearers_forsaken_rank7",
                 "value": 15
               }
@@ -3253,7 +3273,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Pox Riders of Nurgle, Plague Toads of Nurgle and Spawn of Nurgle units (Rank 7 and above)",
+                "description": "Speed: +10% for Pox Riders of Nurgle, Plague Toads of Nurgle, Warhounds, Chaos Knights, Marauder Horsemen, Chaos Chariots and Spawn of Nurgle units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_speed_nur_pox_riders_plague_toads_spawn_rank7",
                 "value": 10
               },
@@ -3261,7 +3281,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Pox Riders of Nurgle, Plague Toads of Nurgle and Spawn of Nurgle units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Pox Riders of Nurgle, Plague Toads of Nurgle, Chaos Knights, Marauder Horsemen, Chaos Warhounds, Chaos Chariots and Spawn of Nurgle units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_melee_defence_nur_pox_riders_plague_toads_spawn_rank7",
                 "value": 5
               },
@@ -3269,7 +3289,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Pox Riders of Nurgle, Plague Toads of Nurgle and Spawn of Nurgle units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Pox Riders of Nurgle, Plague Toads of Nurgle, Warhounds, Chaos Knights, Marauder Horsemen, Chaos Chariots and Spawn of Nurgle units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_physical_resistance_nur_pox_riders_plague_toads_spawn_rank7",
                 "value": 10
               }
@@ -3347,7 +3367,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +7 for Beast of Nurgle, Soul Grinder and Great Unclean One units (Rank 7 and above)",
+                "description": "Melee attack: +7 for Beast of Nurgle, Chaos Warriors of Nurgle, Chosen of Nurgle, Soul Grinder and Great Unclean One units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_melee_attack_nur_beast_soul_grinder_great_unclean_one_rank7",
                 "value": 7
               },
@@ -3355,7 +3375,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Beast of Nurgle, Soul Grinder and Great Unclean One units (Rank 7 and above)",
+                "description": "Spell resistance: 15% for Beast of Nurgle, Chaos Warriors of Nurgle, Chosen of Nurgle, Soul Grinder and Great Unclean One units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_magic_resistance_nur_beast_soul_grinder_great_unclean_one_rank7",
                 "value": 15
               },
@@ -3363,7 +3383,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Beast of Nurgle, Soul Grinder and Great Unclean One units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Beast of Nurgle, Chaos Warriors of Nurgle, Chosen of Nurgle, Soul Grinder and Great Unclean One units (Rank 7 and above)",
                 "key": "wh3_main_effect_force_stat_missile_resistance_nur_beast_soul_grinder_great_unclean_one_rank7",
                 "value": 15
               }
@@ -3416,7 +3436,7 @@
                           "key": "wh3_main_all_enemy_spreading_radius_30m",
                           "sort_order": 101,
                           "effect_state": "positive",
-                          "description": "Will spread to enemies within 30 metres of affected unit"
+                          "description": "Will spread to enemies within the Spread Range metres of affected unit"
                         },
                         {
                           "key": "wh3_main_all_max_five_affected_units",
@@ -3657,11 +3677,11 @@
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +3%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 3
+                "description": "Income from sacking settlements: +5%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 5
               }
             ]
           },
@@ -3677,11 +3697,11 @@
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +8%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 8
+                "description": "Income from sacking settlements: +10%",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 10
               }
             ]
           }
@@ -4107,9 +4127,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -4139,6 +4159,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -4243,9 +4271,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4312,20 +4340,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -4379,25 +4399,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4423,17 +4443,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -4459,17 +4479,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -4495,17 +4515,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -4772,6 +4792,11 @@
                         "freeze_recharge": false,
                         "recharge_time": null,
                         "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          },
                           {
                             "key": "causes_terror",
                             "description": " Can Cause Terror",

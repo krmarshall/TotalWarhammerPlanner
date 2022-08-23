@@ -190,12 +190,12 @@
             "unlocked_at_rank": 12,
             "effects": [
               {
-                "icon": "magic_campaign.png",
-                "priority": 1,
+                "icon": "corruption_khorne.png",
+                "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve: -5 per turn",
-                "key": "wh3_main_effect_winds_of_magic_character",
-                "value": -5
+                "description": "Khorne corruption: +5",
+                "key": "wh3_main_effect_corruption_khorne_characters",
+                "value": 5
               },
               {
                 "icon": "resistance_magic.png",
@@ -415,24 +415,16 @@
             "effects": [
               {
                 "icon": "general_ability.png",
-                "priority": 600,
+                "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Passive ability: Gorefeast for Minotaur units (replaces Bloodgreed)",
-                "key": "wh2_dlc17_effect_ability_enable_bloodgreed_upgraded_minotaurs",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Strength From Flesh\"",
+                "description": "Passive ability: \"Gorefeast\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_dlc17_effect_ability_enable_strength_from_flesh",
+                    "effect": "wh3_main_effect_ability_enable_gorefeast",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh2_dlc17_unit_passive_strength_from_flesh",
-                      "icon_name": "wh2_dlc17_unit_passive_strength_from_flesh",
+                      "key": "wh3_main_unit_passive_gorefeast",
+                      "icon_name": "wh3_main_unit_passive_gorefeast",
                       "overpower_option": "",
                       "type": {
                         "key": "wh_type_regeneration",
@@ -440,7 +432,15 @@
                         "description": "Regeneration"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Strength From Flesh",
+                      "description": "Gorefeast",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_replenish",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Replenishes hit points of combatants"
+                        }
+                      ],
                       "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
@@ -461,7 +461,15 @@
                     }
                   }
                 ],
-                "key": "wh2_dlc17_effect_ability_enable_strength_from_flesh",
+                "key": "wh3_main_effect_ability_enable_gorefeast",
+                "value": 1
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Goregreed\" for Minotaur units (replaces Bloodgreed)",
+                "key": "wh2_dlc17_effect_ability_enable_bloodgreed_upgraded_minotaurs",
                 "value": 1
               }
             ]
@@ -1289,7 +1297,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +6 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 6
               }
@@ -1309,7 +1317,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Weapon strength: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_centigors_chariot",
                 "value": 6
               },
@@ -1317,7 +1325,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +9 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 9
               }
@@ -1337,7 +1345,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Weapon strength: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_centigors_chariot",
                 "value": 12
               },
@@ -1345,7 +1353,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 12
               }
@@ -1385,14 +1393,6 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
-                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
-                "value": 5
-              },
-              {
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
@@ -1407,19 +1407,19 @@
                 "description": "Ammunition: +15% for Ungor Raiders and Centigors (Throwing Axes) units",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 15
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
+                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
-              {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
-                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
-                "value": 10
-              },
               {
                 "icon": "battle_movement.png",
                 "priority": 421,
@@ -1435,6 +1435,14 @@
                 "description": "Ammunition: +20% for Ungor Raiders and Centigors (Throwing Axes) units",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 20
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
+                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
+                "value": 10
               }
             ]
           }
@@ -1534,7 +1542,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Minotaurs and Cygor units",
+                "description": "Melee defence: +4 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 4
               }
@@ -1546,7 +1554,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Minotaurs and Cygor units",
+                "description": "Melee attack: +4 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_minotaurs_cygor",
                 "value": 4
               },
@@ -1554,7 +1562,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Minotaurs and Cygor units",
+                "description": "Melee defence: +4 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 4
               }
@@ -1566,7 +1574,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Minotaurs and Cygor units",
+                "description": "Melee attack: +6 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_minotaurs_cygor",
                 "value": 6
               },
@@ -1574,7 +1582,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Minotaurs and Cygor units",
+                "description": "Melee defence: +6 for Minotaurs units",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 6
               }
@@ -1605,7 +1613,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +6% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 6
               }
@@ -1617,7 +1625,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Spawn and Giant units",
+                "description": "Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_spawn_giant",
                 "value": 4
               },
@@ -1625,7 +1633,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +6% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 6
               }
@@ -1637,7 +1645,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Spawn and Giant units",
+                "description": "Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_spawn_giant",
                 "value": 4
               },
@@ -1645,7 +1653,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +9% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 9
               }
@@ -1807,7 +1815,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_speed_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 10
               },
@@ -1815,7 +1823,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_pct_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 12
               },
@@ -1823,7 +1831,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_bst_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 15
               }
@@ -1870,7 +1878,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Chaos Spawn, Minotaurs, and Giant units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_minotaur_giant_rank7",
                 "value": 12
               }
@@ -1901,7 +1909,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +12% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)",
+                "description": "Missile strength: +12% for Ungor Raiders, Centigors (Throwing Axes) and Cygor units (Rank 7 and above)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_bst_ungor_raider_centigors_throwing_axes_cygor_rank7",
                 "value": 12
               },
@@ -2216,8 +2224,8 @@
         "key": "wh2_dlc17_skill_node_set_bst_taurox_campaign_04",
         "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Dark Apothecary",
-        "description": "The Dark Apothecaries mix their fell unguents, ensuring those that can continue to serve.",
+        "name": "Foetid Gallipot",
+        "description": "A pungent mix of fell unguents ensures the unholy vitality of one’s minions.",
         "levels": [
           {
             "effects": [
@@ -2304,8 +2312,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -2321,12 +2329,12 @@
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -2341,12 +2349,12 @@
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }

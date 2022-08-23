@@ -486,7 +486,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 12,
+                      "active_time": 1,
                       "recharge_time": 31,
                       "wind_up_time": 1,
                       "passive": false,
@@ -544,7 +544,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 12,
+                      "active_time": 1,
                       "recharge_time": 31,
                       "wind_up_time": 1,
                       "passive": false,
@@ -1837,7 +1837,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1893,7 +1893,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1939,7 +1939,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2007,7 +2007,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2053,7 +2053,7 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2550,11 +2550,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -4038,12 +4038,36 @@
           {
             "effects": [
               {
-                "icon": "income.png",
-                "priority": 2,
+                "icon": "campaign_movement.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Income from Industry: +10%",
-                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
-                "value": 10
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
               }
             ]
           }
@@ -4078,9 +4102,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "general_ability.png",
@@ -4220,7 +4244,7 @@
                         "description": "Large explosion area"
                       }
                     ],
-                    "active_time": 12,
+                    "active_time": 1,
                     "recharge_time": 31,
                     "wind_up_time": 1,
                     "passive": false,
@@ -4357,8 +4381,8 @@
   ],
   "items": [
     {
-      "key": "wh2_dlc12_anc_arcane_item_brt_morgianas_mirror",
-      "type": "wh_main_anc_arcane_item",
+      "key": "wh2_dlc12_anc_enchanted_item_brt_morgianas_mirror",
+      "type": "wh_main_anc_enchanted_item",
       "effects": [
         {
           "icon": "resistance_magic.png",
@@ -4381,7 +4405,7 @@
       "description": "Through which the Lady's worldly representative peers directly into the hearts and minds of enemy Wizards, so she might prepare her defence.",
       "unlocked_at_rank": 3,
       "instant": false,
-      "image_path": "item_arcane_item.png"
+      "image_path": "item_enchanted_item.png"
     },
     {
       "key": "wh_dlc07_anc_arcane_item_the_chalice_of_potions",

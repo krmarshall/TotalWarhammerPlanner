@@ -121,16 +121,7 @@
         "description": " ",
         "levels": [
           {
-            "unlocked_at_rank": 4,
             "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 294,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Raise Dead\"",
-                "key": "wh2_main_effect_ability_wom_cost_raise_dead",
-                "value": -1
-              },
               {
                 "icon": "magic_character.png",
                 "priority": 295,
@@ -140,12 +131,84 @@
                 "value": 2
               },
               {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Master of the Dead\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_master_of_the_dead",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_passive_master_of_the_dead",
+                      "icon_name": "wh_main_character_passive_master_of_the_dead",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_regeneration",
+                        "icon_path": "icon_spell_area_of_regeneration.png",
+                        "description": "Regeneration (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Master of the Dead",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_replenish",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Replenishes hit points of combatants"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_master_of_the_dead",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "magic_character.png",
+                "priority": 60,
+                "is_positive_value_good": true,
+                "description": "Effect range: +35% for \"Master of the Dead\"",
+                "key": "wh3_main_effect_ability_effect_range_master_of_the_dead",
+                "value": 35
+              },
+              {
+                "icon": "magic_character.png",
+                "priority": 60,
+                "is_positive_value_good": true,
+                "description": "Targeting range: +200% for \"Raise Dead\" and \"Raise Dead Upgraded\"",
+                "key": "wh3_main_effect_ability_targeting_range_raise_dead",
+                "value": 200
+              },
+              {
                 "icon": "magic_character.png",
                 "priority": 295,
-                "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Raise Dead Upgraded\"",
-                "key": "wh2_main_effect_ability_wom_cost_raise_dead_upgraded",
-                "value": -1
+                "is_positive_value_good": true,
+                "description": "Spell number of uses: +2 for \"Raise Dead\" and \"Raise Dead Upgraded\"",
+                "key": "wh2_main_effect_ability_uses_raise_dead_raise_dead_upgraded",
+                "value": 2
               },
               {
                 "icon": "general_ability.png",
@@ -204,7 +267,7 @@
         "character_skill_key": "wh_main_skill_vmp_all_unique_master_of_the_dead",
         "tier": 5,
         "indent": 0,
-        "points_on_creation": 0,
+        "points_on_creation": 1,
         "required_num_parents": 0,
         "visible_in_ui": true
       },
@@ -244,7 +307,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -254,7 +316,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -2110,7 +2173,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2178,7 +2241,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   },
@@ -2232,7 +2295,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2308,7 +2371,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   },
@@ -2362,7 +2425,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 20,
+                      "mana_cost": 15,
                       "target_self": false
                     }
                   }
@@ -2458,11 +2521,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2554,20 +2617,20 @@
     [
       {
         "key": "wh_main_skill_node_vmp_necromancer_campaign_01",
-        "image_path": "campaign_item.png",
+        "image_path": "campaign_replenishment.png",
         "is_background_skill": false,
-        "name": "Scouting",
-        "description": "Spellcasters can oft-sense when magic is close or being drawn from the Winds.",
+        "name": "Replenish Troops",
+        "description": "Those in the army can find succour or be replenished by the power of this champion.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "item_ability.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Scouting action: Magic item drop chance is increased by an additional 5%",
-                "key": "wh2_main_effect_agent_action_assist_army_scouting_buff",
-                "value": 5
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 3%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 3
               }
             ]
           },
@@ -2575,12 +2638,12 @@
             "unlocked_at_rank": 5,
             "effects": [
               {
-                "icon": "item_ability.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Scouting action: Magic item drop chance is increased by an additional 10%",
-                "key": "wh2_main_effect_agent_action_assist_army_scouting_buff",
-                "value": 10
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 6%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 6
               }
             ]
           },
@@ -2588,17 +2651,17 @@
             "unlocked_at_rank": 10,
             "effects": [
               {
-                "icon": "item_ability.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Scouting action: Magic item drop chance is increased by an additional 15%",
-                "key": "wh2_main_effect_agent_action_assist_army_scouting_buff",
-                "value": 15
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 9%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 9
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_all_hero_assist_army_scouting",
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_replenish_troops",
         "tier": 0,
         "indent": 5,
         "points_on_creation": 0,
@@ -2966,7 +3029,7 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
-              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_scouting",
+              "key": "wh2_main_effect_agent_action_enable_wizard_assist_army_replenish_troops",
               "value": 1
             },
             {
@@ -3146,20 +3209,20 @@
         {
           "effects": [
             {
-              "icon": "technology.png",
-              "priority": 60,
+              "icon": "magic_campaign.png",
+              "priority": 1,
               "is_positive_value_good": true,
-              "description": "Research rate: +10%",
-              "key": "wh_main_effect_technology_research_points",
-              "value": 10
+              "description": "Winds of Magic power reserve: +1 per turn",
+              "key": "wh3_main_effect_winds_of_magic_character",
+              "value": 1
             },
             {
-              "icon": "treasury.png",
-              "priority": 101,
-              "is_positive_value_good": false,
-              "description": "Construction cost: -10% for all buildings",
-              "key": "wh_main_effect_building_construction_cost_mod",
-              "value": -10
+              "icon": "magic_campaign.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve capacity: +8",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 8
             }
           ]
         }
@@ -3260,9 +3323,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -3364,6 +3427,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -3468,9 +3539,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3504,17 +3575,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -3537,20 +3608,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }

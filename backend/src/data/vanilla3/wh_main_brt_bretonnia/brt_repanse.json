@@ -508,10 +508,10 @@
                               "icon": "icon_stat_charge_bonus.png"
                             },
                             {
-                              "value": 8,
+                              "value": 10,
                               "stat": "stat_melee_attack",
                               "how": "add",
-                              "description": "+8 Melee Attack",
+                              "description": "+10 Melee Attack",
                               "sort_order": 2,
                               "icon": "icon_stat_attack.png"
                             },
@@ -2510,12 +2510,36 @@
           {
             "effects": [
               {
-                "icon": "income.png",
-                "priority": 2,
+                "icon": "campaign_movement.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Income from Industry: +10%",
-                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
-                "value": 10
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
               }
             ]
           }
@@ -2550,9 +2574,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "resistance_physical.png",
@@ -2639,11 +2663,11 @@
       "effects": [
         {
           "icon": "resistance_magic.png",
-          "priority": 280,
+          "priority": 580,
           "is_positive_value_good": true,
           "description": "Spell resistance: -15%",
           "value": -15,
-          "key": "wh_main_effect_character_stat_magic_resistance"
+          "key": "wh_main_effect_force_stat_magic_resistance"
         },
         {
           "icon": "general_ability.png",

@@ -3,34 +3,6 @@
     [
       {
         "key": "wh2_dlc10_skill_node_hef_handmaiden_mount_1",
-        "image_path": "mount_elven_steed.png",
-        "is_background_skill": false,
-        "name": "Elven Steed",
-        "description": "The best of all horse breeds found anywhere in the world, Elven steeds are noble, intelligent, graceful, and swift.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "mount.png",
-                "priority": 50,
-                "is_positive_value_good": true,
-                "description": "Mount: Elven Steed",
-                "key": "wh_dlc05_effect_enable_mount_elven_steed",
-                "value": 1
-              }
-            ],
-            "auto_unlock_at_rank": 4
-          }
-        ],
-        "character_skill_key": "wh2_dlc10_skill_hef_handmaiden_elven_steed",
-        "tier": 1,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh2_dlc10_skill_node_hef_handmaiden_mount_2",
         "image_path": "mount_barded_ithilmar_steed.png",
         "is_background_skill": false,
         "name": "Barded Ithilmar Steed",
@@ -47,11 +19,11 @@
                 "value": 1
               }
             ],
-            "auto_unlock_at_rank": 7
+            "auto_unlock_at_rank": 4
           }
         ],
         "character_skill_key": "wh2_dlc10_skill_hef_handmaiden_barded_ithilmar_steed",
-        "tier": 2,
+        "tier": 1,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -71,9 +43,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +5%",
+                "description": "Speed: +10%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 5
+                "value": 10
               },
               {
                 "icon": "defence_character.png",
@@ -166,6 +138,22 @@
                 "description": "Control: +1",
                 "key": "wh2_main_effect_public_order_characters_factionwide",
                 "value": 1
+              },
+              {
+                "icon": "corruption.png",
+                "priority": 104,
+                "is_positive_value_good": false,
+                "description": "Corruption: -3",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -3
+              },
+              {
+                "icon": "resistance_ward_save.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Ward save: 5%",
+                "key": "wh_main_effect_character_stat_ward_save",
+                "value": 5
               }
             ]
           }
@@ -185,7 +173,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -195,7 +182,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -292,7 +280,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from trade: +5%",
+                "description": "Income from trade tariffs: +5%",
                 "key": "wh_main_effect_economy_trade_tariff_mod",
                 "value": 5
               }
@@ -704,60 +692,7 @@
                 "icon": "general_ability.png",
                 "priority": 311,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Hawkish Precision\" for Archers, Lothern Seaguard, Shadow-walkers, Shadow Warriors, and Sister of Averlorn units",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc10_effect_ability_enable_hawkish_precision_for_hef_ranged",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc05_hero_passive_hawkish_precision",
-                      "icon_name": "wh_dlc05_hero_passive_hawkish_precision",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Hawkish Precision",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_ability_range",
-                          "sort_order": 101,
-                          "effect_state": "positive",
-                          "description": "Ability range 70m"
-                        }
-                      ],
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 70,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_missile_damage_ap",
-                              "how": "mult",
-                              "description": "x1.1 Armour-Piercing Missile Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing_ranged.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
+                "description": "Passive ability: \"Hawkish Precision\" for Archers, Lothern Seaguard, Shadow-walkers, Shadow Warriors, and Sister of Avelorn units",
                 "key": "wh2_dlc10_effect_ability_enable_hawkish_precision_for_hef_ranged",
                 "value": 1
               }
@@ -2272,20 +2207,20 @@
         {
           "effects": [
             {
-              "icon": "charge.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Charge bonus: +10",
-              "key": "wh2_dlc14_effect_force_charge_bonus_add",
-              "value": 10
-            },
-            {
               "icon": "weapon_damage.png",
               "priority": 461,
               "is_positive_value_good": true,
               "description": "Weapon strength: +5%",
               "key": "wh_main_effect_force_stat_weapon_strength",
               "value": 5
+            },
+            {
+              "icon": "charge.png",
+              "priority": 500,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +10",
+              "key": "wh2_dlc14_effect_force_charge_bonus_add",
+              "value": 10
             }
           ]
         }
@@ -2722,14 +2657,6 @@
               "description": "Income from all buildings: +15%",
               "key": "wh_main_effect_economy_gdp_mod_all",
               "value": 15
-            },
-            {
-              "icon": "income.png",
-              "priority": 162,
-              "is_positive_value_good": true,
-              "description": "Income from all buildings: +3%",
-              "key": "wh_main_effect_economy_gdp_mod_all_adjacent_provinces",
-              "value": 3
             }
           ]
         }

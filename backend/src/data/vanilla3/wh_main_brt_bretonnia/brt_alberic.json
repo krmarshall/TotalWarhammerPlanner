@@ -413,16 +413,16 @@
                 "icon": "treasury.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Construction cost: -40% for coastal Province Capital/Settlement buildings",
-                "key": "wh2_main_effect_building_construction_cost_mod_coastal_settlement_brt",
+                "description": "Construction cost: -40% for Ports",
+                "key": "wh2_main_effect_building_construction_cost_mod_ports",
                 "value": -40
               },
               {
                 "icon": "construction.png",
                 "priority": 102,
                 "is_positive_value_good": false,
-                "description": "Construction time: -1 for coastal Province Capital/Settlement buildings",
-                "key": "wh2_main_effect_building_construction_time_mod_coastal_settlement_brt",
+                "description": "Construction time: -1 for Ports",
+                "key": "wh2_main_effect_building_construction_time_mod_ports",
                 "value": -1
               }
             ]
@@ -2150,9 +2150,9 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from trade: +2%",
+                "description": "Income from trade tariffs: +10%",
                 "key": "wh_main_effect_economy_trade_tariff_mod",
-                "value": 2
+                "value": 10
               },
               {
                 "icon": "income.png",
@@ -2170,9 +2170,9 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from trade: +3%",
+                "description": "Income from trade tariffs: +20%",
                 "key": "wh_main_effect_economy_trade_tariff_mod",
-                "value": 3
+                "value": 20
               },
               {
                 "icon": "income.png",
@@ -2190,9 +2190,9 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from trade: +4%",
+                "description": "Income from trade tariffs: +30%",
                 "key": "wh_main_effect_economy_trade_tariff_mod",
-                "value": 4
+                "value": 30
               },
               {
                 "icon": "income.png",
@@ -2577,12 +2577,36 @@
           {
             "effects": [
               {
-                "icon": "income.png",
-                "priority": 2,
+                "icon": "campaign_movement.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Income from Industry: +10%",
-                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
-                "value": 10
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
               }
             ]
           }
@@ -2617,9 +2641,17 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
+            },
+            {
+              "icon": "defence.png",
+              "priority": 451,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +5 for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+              "key": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+              "value": 5
             },
             {
               "icon": "defence.png",
@@ -2715,14 +2747,6 @@
       "key": "wh_dlc07_anc_weapon_trident_of_manann",
       "type": "wh_main_anc_weapon",
       "effects": [
-        {
-          "icon": "attrition.png",
-          "priority": 100,
-          "is_positive_value_good": false,
-          "description": "Attrition: -75% casualties suffered from high seas attrition",
-          "value": -75,
-          "key": "wh_main_effect_force_navy_campaign_attrition_high_seas_resistance"
-        },
         {
           "icon": "melee_character.png",
           "priority": 130,

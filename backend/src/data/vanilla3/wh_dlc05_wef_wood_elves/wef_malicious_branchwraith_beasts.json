@@ -109,7 +109,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -119,7 +118,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -2378,9 +2378,9 @@
                       "icon_name": "wh_dlc03_spell_beasts_transformation_of_kadon",
                       "overpower_option": "",
                       "type": {
-                        "key": "wh_type_augment",
+                        "key": "wh_type_summon_unit",
                         "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
+                        "description": "Summon Unit"
                       },
                       "is_hidden_in_ui": false,
                       "description": "Transformation of Kadon",
@@ -2447,9 +2447,9 @@
                       "icon_name": "wh_dlc03_spell_beasts_transformation_of_kadon",
                       "overpower_option": "",
                       "type": {
-                        "key": "wh_type_augment",
+                        "key": "wh_type_summon_unit",
                         "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
+                        "description": "Summon Unit"
                       },
                       "is_hidden_in_ui": false,
                       "description": "Transformation of Kadon",
@@ -2562,11 +2562,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3859,7 +3859,7 @@
               "icon": "general_ability.png",
               "priority": 300,
               "is_positive_value_good": true,
-              "description": "Ability: \"Lamentation of Despair\"",
+              "description": "Ability: \"Lamentation of Despairs\"",
               "related_abilities": [
                 {
                   "effect": "wh2_main_effect_ability_enable_lamentation_of_despair",
@@ -4295,7 +4295,7 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
+              "icon": "magic_character.png",
               "priority": 66,
               "is_positive_value_good": true,
               "description": "Winds of Magic cost: +2 for all enemy spells",

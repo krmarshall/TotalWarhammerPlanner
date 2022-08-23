@@ -415,11 +415,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 4,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +8% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 8
+                "description": "Winds of Magic power reserve minimum: +10",
+                "key": "wh3_main_effect_winds_of_magic_pool_min",
+                "value": 10
               }
             ]
           }
@@ -446,9 +446,9 @@
                 "icon": "magic_campaign.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Enemy Winds of Magic power reserve change: -15% when increasing",
+                "description": "Enemy Winds of Magic power reserve change: -50% when increasing",
                 "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-                "value": -15
+                "value": -50
               }
             ]
           }
@@ -499,7 +499,7 @@
     [
       {
         "key": "wh2_main_skill_node_lzd_lord_kroak_discipline_2_0",
-        "image_path": "character_ward_save.png",
+        "image_path": "tzeench_barrier_skill_char.png",
         "is_background_skill": false,
         "name": "Unfathomable Presence",
         "description": "The Mage-Priest's thought patterns are so alien that they are even beyond the perception of enemy Wizards.",
@@ -508,12 +508,12 @@
             "unlocked_at_rank": 4,
             "effects": [
               {
-                "icon": "resistance_magic.png",
-                "priority": 280,
+                "icon": "barrier.png",
+                "priority": 320,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15%",
-                "key": "wh_main_effect_character_stat_magic_resistance",
-                "value": 15
+                "description": "Barrier hit points: +800",
+                "key": "wh3_main_effect_battle_barrier_health_add",
+                "value": 800
               }
             ]
           }
@@ -653,7 +653,7 @@
       },
       {
         "key": "wh2_main_skill_node_lzd_lord_kroak_discipline_2_3",
-        "image_path": "character_ward_save.png",
+        "image_path": "tzeench_barrier_skill_char.png",
         "is_background_skill": false,
         "name": "Higher State of Consciousness",
         "description": "\"Everywhere we shine, death and life burn into something new…\"",
@@ -662,12 +662,12 @@
             "unlocked_at_rank": 20,
             "effects": [
               {
-                "icon": "resistance_physical.png",
-                "priority": 280,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 25%",
-                "key": "wh_main_effect_character_stat_physical_resistance",
-                "value": 25
+                "icon": "barrier.png",
+                "priority": 92,
+                "is_positive_value_good": false,
+                "description": "Barrier replenishment delay: -50%",
+                "key": "wh3_main_effect_battle_barrier_replenish_delay_mod",
+                "value": -50
               }
             ]
           }
@@ -733,7 +733,7 @@
                           "description": "Strong vs a single unit"
                         }
                       ],
-                      "active_time": 15,
+                      "active_time": 2,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -802,7 +802,7 @@
                           "description": "Strong vs a single unit"
                         }
                       ],
-                      "active_time": 15,
+                      "active_time": 2,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -887,7 +887,7 @@
                           "description": "Strong vs multiple units"
                         }
                       ],
-                      "active_time": 15,
+                      "active_time": 2,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -956,7 +956,7 @@
                           "description": "Strong vs multiple units"
                         }
                       ],
-                      "active_time": 15,
+                      "active_time": 2,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -1050,7 +1050,7 @@
                           "description": "Strong vs multiple units"
                         }
                       ],
-                      "active_time": 15,
+                      "active_time": 2,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -1125,7 +1125,7 @@
                           "description": "Strong vs multiple units"
                         }
                       ],
-                      "active_time": 15,
+                      "active_time": 2,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -1214,9 +1214,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -1527,9 +1527,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
+                "description": "Training action: Experience per turn is increased by an additional 20",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "value": 20
               }
             ]
           },
@@ -1540,9 +1540,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
+                "description": "Training action: Experience per turn is increased by an additional 35",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "value": 35
               }
             ]
           },
@@ -1553,9 +1553,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
+                "description": "Training action: Experience per turn is increased by an additional 50",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "value": 50
               }
             ]
           }
@@ -1962,9 +1962,9 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +10",
+              "description": "Leadership: +5",
               "key": "wh_main_effect_force_stat_leadership",
-              "value": 10
+              "value": 5
             }
           ]
         }

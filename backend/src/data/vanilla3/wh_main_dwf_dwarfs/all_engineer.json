@@ -260,7 +260,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -270,7 +269,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -479,8 +479,7 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "wh_main_skill_node_dwf_engineer_self_01",
-          "wh_main_skill_node_dwf_engineer_self_06"
+          "wh_main_skill_node_dwf_engineer_self_01"
         ],
         "boxed": true
       },
@@ -535,8 +534,7 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "wh_main_skill_node_dwf_engineer_self_01",
-          "wh_main_skill_node_dwf_engineer_self_06"
+          "wh_main_skill_node_dwf_engineer_self_01"
         ],
         "right_arrow": true,
         "boxed": true
@@ -592,227 +590,7 @@
           "wh_main_skill_node_dwf_engineer_self_04",
           "wh_main_skill_node_dwf_engineer_self_07",
           "wh_main_skill_node_dwf_engineer_self_10"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "wh_main_skill_node_dwf_engineer_self_08",
-        "image_path": "character_ranged_damage.png",
-        "is_background_skill": false,
-        "name": "Defensive Coordinator",
-        "description": "Master Engineers familiar with defensive formations use their centuries of experience in sieges.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 561,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +3% for towers during siege battles",
-                "key": "wh_main_effect_force_stat_reload_time_reduction_tower_siege",
-                "value": 3
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 561,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +8% for towers during siege battles",
-                "key": "wh_main_effect_force_stat_reload_time_reduction_tower_siege",
-                "value": 8
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 561,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +15% for towers during siege battles",
-                "key": "wh_main_effect_force_stat_reload_time_reduction_tower_siege",
-                "value": 15
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_dwf_engineer_self_defensive_coordinator",
-        "tier": 7,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "wh_main_skill_node_dwf_engineer_self_06"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "wh_main_skill_node_dwf_engineer_self_09",
-        "image_path": "character_range.png",
-        "is_background_skill": false,
-        "name": "Ballistics Instructor",
-        "description": "Those Engineers conversant in ballistics know how best to increase the ranges of their weapons.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 1,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Ballistics Instructor\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh2_dlc15_effect_ability_enable_ballistics_instructor",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh2_dlc15_hero_passive_ballistics_instructor",
-                      "icon_name": "wh_main_unit_abilities_outrider_grenade",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Ballistics Instructor",
-                      "passive": true,
-                      "effect_range": -1,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_missile_range",
-                              "how": "mult",
-                              "description": "x1.1 Range",
-                              "sort_order": 7,
-                              "icon": "icon_stat_range.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh2_dlc15_effect_ability_enable_ballistics_instructor",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_dwf_engineer_self_ballistics_instructor",
-        "tier": 8,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "wh_main_skill_node_dwf_engineer_self_06"
-        ],
-        "right_arrow": true,
-        "boxed": true
-      },
-      {
-        "key": "wh_main_skill_node_dwf_engineer_self_11",
-        "image_path": "wh_main_hero_passive_extra_powder.png",
-        "is_background_skill": false,
-        "name": "Extra Powder",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 310,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Extra Powder\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_extra_powder",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_hero_passive_extra_powder",
-                      "icon_name": "wh_main_hero_passive_extra_powder",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Extra Powder",
-                      "passive": true,
-                      "effect_range": 35,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_missile_explosion_damage_ap",
-                              "how": "mult",
-                              "description": "x1.1 Armour-Piercing Explosive Damage",
-                              "sort_order": 0,
-                              "icon": "icon_stat_explosive_armour_piercing_damage.png"
-                            },
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_missile_explosion_damage_base",
-                              "how": "mult",
-                              "description": "x1.1 Base Explosive Damage",
-                              "sort_order": 0,
-                              "icon": "icon_explosive_damage.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_extra_powder",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_dwf_engineer_self_extra_powder",
-        "tier": 10,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 4,
-        "visible_in_ui": true,
-        "parent_subset_required": [
-          "wh_main_skill_node_dwf_engineer_self_07",
-          "wh_main_skill_node_dwf_engineer_self_08",
-          "wh_main_skill_node_dwf_engineer_self_09",
-          "wh_main_skill_node_dwf_engineer_self_10"
-        ],
-        "boxed": true
+        ]
       }
     ],
     [
@@ -1028,12 +806,9 @@
         "tier": 3,
         "indent": 2,
         "points_on_creation": 0,
-        "required_num_parents": 4,
+        "required_num_parents": 0,
         "visible_in_ui": true,
-        "parent_subset_required": [
-          "wh_main_skill_node_dwf_engineer_self_02",
-          "wh_main_skill_node_dwf_engineer_self_03",
-          "wh_main_skill_node_dwf_engineer_self_04",
+        "parent_required": [
           "wh_main_skill_node_dwf_engineer_self_05"
         ],
         "right_arrow": true,
@@ -1342,8 +1117,7 @@
           "wh2_dlc17_skill_dwf_master_engineer_carry_a_big_stick",
           "wh2_dlc17_skill_dwf_master_engineer_percussive_maintenance",
           "wh_main_skill_node_dwf_engineer_self_03"
-        ],
-        "boxed": true
+        ]
       }
     ],
     [],
@@ -1953,9 +1727,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2057,6 +1831,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -2161,9 +1943,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -2197,17 +1979,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -2233,25 +2015,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -2277,17 +2059,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -2341,17 +2123,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

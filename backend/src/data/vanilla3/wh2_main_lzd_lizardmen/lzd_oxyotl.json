@@ -6,10 +6,10 @@
         "image_path": "wh2_dlc17_skill_poison_daemonbane.png",
         "is_background_skill": false,
         "name": "The Enemy's Weapons",
-        "description": " ",
+        "description": "The ground crystals of Tzeentch's realm can imbue darts with the power to pierce any ward and find the weakest points on the most formidable foes.",
         "levels": [
           {
-            "unlocked_at_rank": 6
+            "auto_unlock_at_rank": 7
           }
         ],
         "character_skill_key": "wh2_dlc17_skill_lzd_oxyotl_poisons_1",
@@ -24,10 +24,10 @@
         "image_path": "wh2_dlc17_skill_poison_slow_death.png",
         "is_background_skill": false,
         "name": "Poisons of the Warp",
-        "description": " ",
+        "description": "Harvested from a rare flower found only in the most toxic corners of Nurgle's gardens, this poison ensures a long and painful death.",
         "levels": [
           {
-            "unlocked_at_rank": 9
+            "auto_unlock_at_rank": 10
           }
         ],
         "character_skill_key": "wh2_dlc17_skill_lzd_oxyotl_poisons_2",
@@ -151,26 +151,26 @@
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "morale.png",
-                "priority": 61,
+                "icon": "corruption.png",
+                "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Enemy leadership: -8 for Warriors of Chaos, Beastmen, and Norsca",
-                "key": "wh2_dlc17_effect_enemy_leadership_forces_of_chaos",
-                "value": -8
+                "description": "Corruption: -4",
+                "key": "wh3_main_effect_corruption_reduction_characters",
+                "value": -4
               },
               {
-                "icon": "religion.png",
-                "priority": 104,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Untainted: +4",
-                "key": "wh_main_effect_religion_conversion_untainted",
-                "value": 4
+                "description": "Melee attack: +6 when fighting against Warriors of Chaos, Daemons of Chaos and Norsca",
+                "key": "wh3_main_effect_force_stat_melee_attack_vs_chaos_daemons_norsca",
+                "value": 6
               },
               {
                 "icon": "attribute_immune_to_psychology.png",
                 "priority": 620,
                 "is_positive_value_good": true,
-                "description": "Attribute: Immune to Psychology when fighting Warriors of Chaos, Beastmen, and Norsca",
+                "description": "Attribute: Immune to Psychology when fighting Daemons of Chaos, Warriors of Chaos, Beastmen and Norsca",
                 "key": "wh2_dlc17_effect_enable_attribute_immpsy_when_fighting_chaos",
                 "value": 1
               }
@@ -204,7 +204,7 @@
                 "is_positive_value_good": true,
                 "description": "Greatly reduced chance of being detected while in ambush stance",
                 "key": "wh2_dlc17_effect_ambush_visibility_reduced",
-                "value": 1
+                "value": -50
               },
               {
                 "icon": "attribute_stalk.png",
@@ -1119,7 +1119,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Salamander Hunting Pack units",
+                "description": "Weapon strength: +6% for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_weapon_strength_lzd_salamander_hunting_packs",
                 "value": 6
               },
@@ -1127,7 +1127,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Weapon strength: +6% for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_skinks",
                 "value": 6
               },
@@ -1135,7 +1135,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Salamander Hunting Pack units",
+                "description": "Missile strength: +6% for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_missile_damage_lzd_salamander_hunting_packs",
                 "value": 6
               },
@@ -1143,7 +1143,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +4% for Skink and Chameleon Skink units",
+                "description": "Missile strength: +4% for Skink, Chameleon Skink and Chameleon Stalker units",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_skinks",
                 "value": 4
               }
@@ -1155,7 +1155,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Salamander Hunting Pack units",
+                "description": "Melee defence: +4 for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_melee_defence_lzd_salamander_hunting_packs",
                 "value": 4
               },
@@ -1163,7 +1163,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Melee defence: +4 for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_skinks",
                 "value": 4
               },
@@ -1171,7 +1171,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Salamander Hunting Pack units",
+                "description": "Weapon strength: +9% for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_weapon_strength_lzd_salamander_hunting_packs",
                 "value": 9
               },
@@ -1179,7 +1179,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Weapon strength: +9% for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_skinks",
                 "value": 9
               },
@@ -1187,7 +1187,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Salamander Hunting Pack units",
+                "description": "Missile strength: +6% for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_missile_damage_lzd_salamander_hunting_packs",
                 "value": 6
               },
@@ -1195,7 +1195,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Skink and Chameleon Skink units",
+                "description": "Missile strength: +6% for Skink, Chameleon Skink and Chameleon Stalker units",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_skinks",
                 "value": 6
               }
@@ -1207,7 +1207,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Salamander Hunting Pack units",
+                "description": "Melee defence: +6 for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_melee_defence_lzd_salamander_hunting_packs",
                 "value": 6
               },
@@ -1215,7 +1215,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Melee defence: +6 for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_skinks",
                 "value": 6
               },
@@ -1223,7 +1223,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Salamander Hunting Pack units",
+                "description": "Weapon strength: +12% for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_weapon_strength_lzd_salamander_hunting_packs",
                 "value": 12
               },
@@ -1231,7 +1231,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Weapon strength: +12% for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_skinks",
                 "value": 12
               },
@@ -1239,7 +1239,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Salamander Hunting Pack units",
+                "description": "Missile strength: +8% for Salamander and Razordon Hunting Pack units",
                 "key": "wh2_dlc12_effect_force_stat_missile_damage_lzd_salamander_hunting_packs",
                 "value": 8
               },
@@ -1247,7 +1247,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Skink and Chameleon Skink units",
+                "description": "Missile strength: +8% for Skink, Chameleon Skink and Chameleon Stalker units",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_skinks",
                 "value": 8
               }
@@ -1278,7 +1278,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +5% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Speed: +5% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units",
                 "key": "wh2_main_effect_force_stat_speed_lzd_terradon_cold_one",
                 "value": 5
               }
@@ -1290,7 +1290,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +7% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Speed: +7% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units",
                 "key": "wh2_main_effect_force_stat_speed_lzd_terradon_cold_one",
                 "value": 7
               },
@@ -1298,7 +1298,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Weapon strength: +6% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_terradon_cold_one",
                 "value": 6
               },
@@ -1318,7 +1318,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Speed: +10% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units",
                 "key": "wh2_main_effect_force_stat_speed_lzd_terradon_cold_one",
                 "value": 10
               },
@@ -1326,7 +1326,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Weapon strength: +8% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_terradon_cold_one",
                 "value": 8
               },
@@ -1365,7 +1365,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Kroxigors and Temple Guards units",
+                "description": "Melee attack: +4 for Kroxigor, Sacred Kroxigor and Temple Guard units",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_kroxigor_temple_guard",
                 "value": 4
               }
@@ -1377,7 +1377,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Kroxigors and Temple Guards units",
+                "description": "Melee attack: +4 for Kroxigor, Sacred Kroxigor and Temple Guard units",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_kroxigor_temple_guard",
                 "value": 4
               },
@@ -1385,7 +1385,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Kroxigors and Temple Guards units",
+                "description": "Melee defence: +4 for Kroxigor, Sacred Kroxigor and Temple Guard units",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_kroxigor_temple_guard",
                 "value": 4
               }
@@ -1397,7 +1397,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Kroxigors and Temple Guards units",
+                "description": "Melee attack: +6 for Kroxigor, Sacred Kroxigor and Temple Guard units",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_kroxigor_temple_guard",
                 "value": 6
               },
@@ -1405,7 +1405,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Kroxigors and Temple Guards units",
+                "description": "Melee defence: +6 for Kroxigor, Sacred Kroxigor and Temple Guard units",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_kroxigor_temple_guard",
                 "value": 6
               }
@@ -1436,7 +1436,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Feral Carnosaur units",
+                "description": "Melee attack: +4 for Feral Carnosaur and Dread Saurian units",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_carnosaur",
                 "value": 4
               }
@@ -1448,7 +1448,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Feral Carnosaur units",
+                "description": "Melee attack: +6 for Feral Carnosaur and Dread Saurian units",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_carnosaur",
                 "value": 6
               },
@@ -1456,7 +1456,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Feral Carnosaur units",
+                "description": "Weapon strength: +9% for Feral Carnosaur and Dread Saurian units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_carnosaur",
                 "value": 9
               }
@@ -1468,7 +1468,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Feral Carnosaur units",
+                "description": "Melee attack: +8 for Feral Carnosaur and Dread Saurian units",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_carnosaur",
                 "value": 8
               },
@@ -1476,7 +1476,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Feral Carnosaur units",
+                "description": "Weapon strength: +12% for Feral Carnosaur and Dread Saurian units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_carnosaur",
                 "value": 12
               }
@@ -1507,7 +1507,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Weapon strength: +6% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_stegadon_bastiladon",
                 "value": 6
               },
@@ -1515,7 +1515,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +4% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Missile strength: +4% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_stegadon_bastiladon",
                 "value": 4
               }
@@ -1527,7 +1527,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Melee defence: +4 for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_stegadon_bastiladon",
                 "value": 4
               },
@@ -1535,7 +1535,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Weapon strength: +9% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_stegadon_bastiladon",
                 "value": 9
               },
@@ -1543,7 +1543,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Missile strength: +6% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_stegadon_bastiladon",
                 "value": 6
               }
@@ -1555,7 +1555,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Melee defence: +6 for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_stegadon_bastiladon",
                 "value": 6
               },
@@ -1563,7 +1563,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Weapon strength: +12% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_stegadon_bastiladon",
                 "value": 12
               },
@@ -1571,7 +1571,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Missile strength: +8% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_stegadon_bastiladon",
                 "value": 8
               }
@@ -1733,7 +1733,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander Hunting Pack and Kroxigors units (Rank 7 and above)",
+                "description": "Leadership: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander and Razordon Hunting Packs, Kroxigor and Sacred Kroxigor units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_leadership_skink_kroxigor_rank7",
                 "value": 5
               },
@@ -1741,7 +1741,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander Hunting Pack and Kroxigors units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander and Razordon Hunting Packs, Kroxigor and Sacred Kroxigor units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_skink_kroxigor_rank7",
                 "value": 5
               },
@@ -1749,7 +1749,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander Hunting Pack and Kroxigors units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander and Razordon Hunting Packs, Kroxigor and Sacred Kroxigor units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_missile_resistance_lzd_skink_kroxigor_rank7",
                 "value": 15
               }
@@ -1780,7 +1780,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Cold One, Terradon Riders and Ripperdactyl units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Cold One, Terradon Riders, Ripperdactyl Riders, and Coatl units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_coldones_terradons_rank7",
                 "value": 5
               },
@@ -1788,7 +1788,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Cold One, Terradon Riders and Ripperdactyl Riders units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Cold One, Terradon Riders, Ripperdactyl Riders, and Coatl units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_coldones_terradons_rank7",
                 "value": 5
               },
@@ -1796,7 +1796,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Cold One, Terradon Riders and Ripperdactyl Riders units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Cold One, Terradon Riders, Ripperdactyl Riders, and Coatl units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_missile_resistance_lzd_coldones_terradons_rank7",
                 "value": 15
               }
@@ -1827,7 +1827,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Ancient Salamander, Bastiladon, Stegadon and Feral Carnosaur units (Rank 7 and above)",
+                "description": "Armour: +10 for Ancient Salamander, Bastiladon, Stegadon, Feral Carnosaur, Feral Troglodon and Dread Saurian units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_armour_lzd_beasts_rank7",
                 "value": 10
               },
@@ -1835,7 +1835,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Ancient Salamander, Bastiladon, Stegadon and Feral Carnosaur units (Rank 7 and above)",
+                "description": "Leadership: +5 for Ancient Salamander, Bastiladon, Stegadon, Feral Carnosaur, Feral Troglodon and Dread Saurian units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_leadership_lzd_beasts_rank7",
                 "value": 5
               },
@@ -1843,7 +1843,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Ancient Salamander, Bastiladon, Stegadon and Feral Carnosaur units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Ancient Salamander, Bastiladon, Stegadon, Feral Carnosaur, Feral Troglodon and Dread Saurian units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_lzd_beasts_rank7",
                 "value": 12
               }
@@ -2510,6 +2510,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -2564,9 +2610,9 @@
               "icon": "experience.png",
               "priority": 611,
               "is_positive_value_good": true,
-              "description": "Experience gain for units: +200% when fighting against Beastmen, Chaos and Norsca",
+              "description": "Experience gain for units: +100% when fighting against the Forces of Chaos",
               "key": "wh2_dlc17_effect_xp_gain_against_bst_chs_nor",
-              "value": 200
+              "value": 100
             }
           ]
         }
@@ -2581,15 +2627,6 @@
     }
   ],
   "items": [
-    {
-      "key": "wh2_dlc17_anc_banner_lzd_poison_daemonbane",
-      "type": "wh2_dlc17_anc_banner_lzd_poison_daemonbane",
-      "name": "Daemonbane",
-      "description": "The ground crystals of Tzeentch's realm can imbue darts with the power to pierce any ward and find the weakest points on the most formidable foes.",
-      "unlocked_at_rank": 0,
-      "instant": false,
-      "image_path": "0_placeholder_skill.png"
-    },
     {
       "key": "wh2_dlc17_anc_weapon_the_golden_blowpipe_of_ptoohee",
       "type": "wh_main_anc_weapon",
@@ -2687,15 +2724,6 @@
       "unlocked_at_rank": 7,
       "instant": false,
       "image_path": "item_weapon.png"
-    },
-    {
-      "key": "wh2_dlc17_anc_banner_lzd_poison_slow_death",
-      "type": "wh2_dlc17_anc_banner_lzd_poison_slow_death",
-      "name": "Slow Death",
-      "description": "Harvested from a rare flower found only in the most toxic corners of Nurgle's gardens, this poison ensures a long and painful death.",
-      "unlocked_at_rank": 9,
-      "instant": false,
-      "image_path": "0_placeholder_skill.png"
     }
   ]
 }

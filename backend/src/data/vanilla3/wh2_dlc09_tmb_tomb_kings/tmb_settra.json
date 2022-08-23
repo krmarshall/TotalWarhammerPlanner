@@ -395,14 +395,6 @@
                 "description": "Recruit rank: +1",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
-              },
-              {
-                "icon": "army.png",
-                "priority": 270,
-                "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
               }
             ]
           }
@@ -560,9 +552,9 @@
                 "icon": "battle_movement.png",
                 "priority": 420,
                 "is_positive_value_good": true,
-                "description": "Speed: +8%",
+                "description": "Speed: +15%",
                 "key": "wh_main_effect_force_stat_speed",
-                "value": 8
+                "value": 15
               },
               {
                 "icon": "charge.png",
@@ -3478,11 +3470,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -5101,9 +5093,9 @@
               "icon": "replenishment.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Casualty replenishment rate: +9% for Tomb Guard and Skeleton Chariot units",
-              "key": "wh2_dlc09_effect_replenishment_tomb_guard_chariots",
-              "value": 9
+              "description": "Casualty replenishment rate: +10%",
+              "key": "wh_main_effect_force_all_campaign_replenishment_rate",
+              "value": 10
             },
             {
               "icon": "general_ability.png",
@@ -5112,6 +5104,14 @@
               "description": "Leadership aura size: +100%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 100
+            },
+            {
+              "icon": "army.png",
+              "priority": 270,
+              "is_positive_value_good": true,
+              "description": "Local recruitment capacity: +1",
+              "key": "wh_main_effect_unit_recruitment_points",
+              "value": 1
             }
           ]
         }
@@ -5543,6 +5543,7 @@
                   {
                     "duration": 43,
                     "effect_type": "positive",
+                    "imbue_magical": true,
                     "imbue_ignition": 10,
                     "imbue_contact": "wh_dlc06_unit_contact_blinded",
                     "is_hidden_in_ui": false,

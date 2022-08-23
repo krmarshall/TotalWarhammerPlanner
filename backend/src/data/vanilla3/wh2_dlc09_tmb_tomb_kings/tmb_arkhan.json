@@ -1723,6 +1723,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -1777,6 +1782,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -1855,6 +1865,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -1909,6 +1924,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": "Can  Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -3244,11 +3264,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3269,22 +3289,22 @@
         "key": "wh2_dlc09_skill_tmb_arkhan_lore_10",
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
-        "name": "Arcane Conduit",
-        "description": " ",
+        "name": "Greater Arcane Conduit",
+        "description": "",
         "levels": [
           {
             "effects": [
               {
                 "icon": "general_ability.png",
-                "priority": 300,
+                "priority": 310,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Arcane Conduit\"",
+                "description": "Passive ability: \"Greater Arcane Conduit\"",
                 "related_abilities": [
                   {
-                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                    "effect": "wh_dlc08_effect_ability_enable_greater_arcane_conduit",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_character_abilities_arcane_conduit",
+                      "key": "wh2_main_character_passive_grand_arcane_conduit",
                       "icon_name": "wh_main_character_abilities_arcane_conduit",
                       "overpower_option": "",
                       "type": {
@@ -3293,7 +3313,7 @@
                         "description": "Augment of the Winds"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Arcane Conduit",
+                      "description": "Greater Arcane Conduit",
                       "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
@@ -3306,22 +3326,32 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.4,
+                          "mana_regen_mod": 0.6,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_spell_mastery",
+                              "how": "mult",
+                              "description": "x1.1 Spell Mastery",
+                              "sort_order": 0,
+                              "icon": "spell_mastery.png"
+                            }
+                          ]
                         }
                       ]
                     }
                   }
                 ],
-                "key": "wh_main_effect_ability_enable_arcane_conduit",
+                "key": "wh_dlc08_effect_ability_enable_greater_arcane_conduit",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_all_11_arcane_conduit",
+        "character_skill_key": "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
         "tier": 10,
         "indent": 3,
         "points_on_creation": 0,
@@ -4864,19 +4894,19 @@
         {
           "effects": [
             {
-              "icon": "melee.png",
-              "priority": 431,
+              "icon": "magic_campaign.png",
+              "priority": 3,
               "is_positive_value_good": true,
-              "description": "Melee attack: +5 for embedded Heroes",
-              "key": "wh2_dlc09_effect_force_stat_melee_attack_heroes",
-              "value": 5
+              "description": "Winds of Magic power reserve capacity: +10",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 10
             },
             {
-              "icon": "defence.png",
-              "priority": 451,
+              "icon": "melee.png",
+              "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee defence: +5 for embedded Heroes",
-              "key": "wh2_dlc09_effect_force_stat_melee_defence_tmb_characters",
+              "description": "Melee attack: +5",
+              "key": "wh_main_effect_force_stat_melee_attack",
               "value": 5
             }
           ]
@@ -5037,6 +5067,11 @@
                         "freeze_recharge": false,
                         "recharge_time": null,
                         "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": "Can  Cause Fear",
+                            "attribute_type": "positive"
+                          },
                           {
                             "key": "causes_terror",
                             "description": " Can Cause Terror",

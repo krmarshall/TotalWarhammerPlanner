@@ -233,7 +233,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -243,7 +242,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -2050,11 +2050,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3039,7 +3039,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 6
               }
@@ -3051,7 +3051,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +3 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Melee defence: +3 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_shade_darkriders",
                 "value": 3
               },
@@ -3059,7 +3059,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 9
               },
@@ -3067,7 +3067,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Shades and Dark Riders units",
+                "description": "Missile strength: +6% for Shades, Dark Riders and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_shades_darkriders",
                 "value": 6
               }
@@ -3079,7 +3079,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Melee defence: +5 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_shade_darkriders",
                 "value": 5
               },
@@ -3087,7 +3087,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 12
               },
@@ -3095,7 +3095,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +8% for Shades and Dark Riders units",
+                "description": "Missile strength: +8% for Shades, Dark Riders and Scourgerunner Chariot units",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_shades_darkriders",
                 "value": 8
               }
@@ -3126,7 +3126,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 6
               }
@@ -3135,18 +3135,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +9% for Bloodwrack Medusae units",
-                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
-                "value": 9
-              },
-              {
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 9
               },
@@ -3154,8 +3146,16 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_monsters",
+                "value": 9
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +9% for Bloodwrack Medusae units",
+                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
                 "value": 9
               }
             ]
@@ -3163,18 +3163,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +12% for Bloodwrack Medusae units",
-                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
-                "value": 12
-              },
-              {
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 12
               },
@@ -3182,8 +3174,16 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_monsters",
+                "value": 12
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +12% for Bloodwrack Medusae units",
+                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
                 "value": 12
               }
             ]
@@ -3492,7 +3492,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders and Doomfire Warlock units (Rank 7 and above)",
+                "description": "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_armour_corsairs_shades_riders_rank7",
                 "value": 10
               },
@@ -3500,7 +3500,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders and Doomfire Warlock units (Rank 7 and above)",
+                "description": "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_speed_corsairs_shades_riders_rank7",
                 "value": 10
               },
@@ -3508,7 +3508,7 @@
                 "icon": "accuracy.png",
                 "priority": 532,
                 "is_positive_value_good": true,
-                "description": "Range: +15% for Black Ark Corsairs, Shades and Dark Riders units (Rank 7 and above)",
+                "description": "Range: +15% for Black Ark Corsairs, Shades Dark Riders and Scourgerunner Chariot units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_range_def_corsairs_shades_riders_rank7",
                 "value": 15
               }
@@ -3586,7 +3586,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Speed: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_speed_def_beasts_witchelfs_rank7",
                 "value": 10
               },
@@ -3594,7 +3594,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_beasts_witchelfs_rank7",
                 "value": 12
               },
@@ -3602,7 +3602,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)",
                 "key": "wh2_main_effect_force_stat_physical_resistance_def_beasts_witchelfs_rank7",
                 "value": 10
               }
@@ -3869,7 +3869,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -3881,7 +3881,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -3893,7 +3893,7 @@
                 "priority": 106,
                 "is_positive_value_good": false,
                 "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
@@ -4347,6 +4347,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -4549,9 +4595,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4653,6 +4699,14 @@
       "levels": [
         {
           "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
             {
               "icon": "morale.png",
               "priority": 410,
@@ -4757,9 +4811,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -4793,17 +4847,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -4829,25 +4883,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4873,17 +4927,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -4937,17 +4991,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
