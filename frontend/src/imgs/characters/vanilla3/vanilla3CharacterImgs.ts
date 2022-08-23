@@ -42,13 +42,36 @@ import skrag from './ogr_skrag_0.webp';
 import slaughtermaster from './ogr_slaughtermaster_campaign_01_0.webp';
 import tyrant from './ogr_tyrant_campaign_01_0.webp';
 import norMarauderChieftain from '../vanilla2/nor_marauder_chieftain_campaign_01_0.webp';
+import norFimirBalefiend from '../vanilla3/nor_cha_fimir_balefiend_campaign_01_0.webp';
+import norShamanSorc from '../vanilla3/nor_cha_shaman_sorcerer_campaign_01_0.webp';
+import norSkinWolf from '../vanilla3/nor_cha_skin_wolf_werekin_campaign_01_0.webp';
+import norThrogg from '../vanilla3/nor_cha_throgg_0.webp';
+import norSorcLord from '../vanilla3/nor_chaos_sorcerer_lord_0.webp';
+import norWulfrik from '../vanilla3/nor_cha_wulfrik_0.webp';
+import chsArchaon from '../vanilla3/chs_ch_archaon_0.webp';
+import chsSigvald from '../vanilla3/chs_ch_sigvald_0.webp';
+import chsKholek from '../vanilla3/chs_kholek_suneater_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 
 const vanilla3CharacterImgs = {
   ...vanilla2CharacterImgs,
+
   nor_marauder_chieftain: norMarauderChieftain,
+  nor_fimir_balefiend_fire: norFimirBalefiend,
+  nor_fimir_balefiend_shadow: norFimirBalefiend,
+  nor_shaman_sorcerer_death: norShamanSorc,
+  nor_shaman_sorcerer_fire: norShamanSorc,
+  nor_shaman_sorcerer_metal: norShamanSorc,
+  nor_skin_wolf_werekin: norSkinWolf,
+  nor_throgg: norThrogg,
+  nor_wulfrik: norWulfrik,
+
+  chs_archaon: chsArchaon,
+  chs_sigvald: chsSigvald,
+  chs_kholek: chsKholek,
+
   cth_dragon_blooded_shugengan_yang: shugengan,
   cth_dragon_blooded_shugengan_yin: shugengan,
   cth_lord_caravan_master: magistrate,

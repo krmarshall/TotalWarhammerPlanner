@@ -30,3 +30,9 @@ Check ui/skins/<faction folders>/text_tree_bg(_front/_mid) for potential charact
 - Find/create an icon for the mod, put into ./src/imgs/games and link with gameImage.ts
 - Create appropriate entry in frontend ./src/data/gameData
 - Create appropriate entry in backend ./__tests__/characterApi.js gameList to add it to the test suite
+
+## Adding Base Game Characters
+- Copy over json data to backend ./src/data
+- Copy over portrait to ./src/imgs/characters/<gameFolder>, be sure to crop and mask portrait to 164x164
+- Update characterImgs export in ./src/imgs/characters/<gameFolder>
+- Update character list in ./src/data, may have to look around rpfm for actual character names

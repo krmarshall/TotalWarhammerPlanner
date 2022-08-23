@@ -12,10 +12,10 @@ const About = () => {
         <p className="text-center text-gray-200 text-2xl">
           Total Warhammer Planner is a tool for exploring, building, and sharing character skill trees in Total
           Warhammer 2/3 and various mods.
-          <br /> Want to figure what all the various lords and heroes actually do without recruiting each of them?
+          <br /> Want to figure out what all the various lords and heroes actually do without recruiting each of them?
           <br /> Check what various overhaul mods have done to your favorite units?
           <br /> Help someone new to Total Warhammer figure out how to build characters?
-          <br /> Or maybe your just a giant nerd like me and want to plan out what skills your going to have to skip.
+          <br /> Or maybe you are just a giant nerd like me and want to plan out what skills your going to have to skip.
           <br /> These are some of the things I wanted to address with this tool and hopefully you find it useful!
         </p>
 

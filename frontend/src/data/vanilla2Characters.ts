@@ -778,6 +778,9 @@ const vanilla2Characters = {
     },
   },
   wh_main_chs_chaos_heroes: {
+    chs_exalted_hero: {
+      name: 'Exalted Hero',
+    },
     chs_chaos_sorcerer_death: {
       name: 'Chaos Sorcerer (Death)',
       spellLore: 'death',
@@ -793,9 +796,6 @@ const vanilla2Characters = {
     chs_sorcerer_shadow: {
       name: 'Chaos Sorcerer (Shadows)',
       spellLore: 'shadows',
-    },
-    chs_exalted_hero: {
-      name: 'Exalted Hero',
     },
   },
   wh_main_dwf_dwarfs_lords: {

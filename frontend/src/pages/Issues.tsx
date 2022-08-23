@@ -68,6 +68,10 @@ const Issues = () => {
           <li className="text-gray-200 text-2xl">
             Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>
+          <li className="text-gray-200 text-2xl">
+            Vanilla 3 Might be missing some new lords/heroes that are in multiple factions, eg. not sure who has access
+            to Daemon Princes
+          </li>
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
           <li className="text-gray-200 text-2xl">Radious 2/3 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>

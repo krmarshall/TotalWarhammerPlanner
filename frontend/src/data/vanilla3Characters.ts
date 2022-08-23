@@ -5,6 +5,10 @@ const vanilla3Characters = {
 
   // Chieftain spelled properly in 3
   wh_dlc08_nor_norsca_lords: {
+    nor_burplesmirk_spewpit: {
+      name: 'Burplesmirk Spewpit???',
+      spellLore: 'mixed',
+    },
     nor_throgg: {
       name: 'Throgg',
     },
@@ -18,62 +22,183 @@ const vanilla3Characters = {
       name: 'Marauder Chieftain',
     },
   },
-
-  // No Black Ark Blessed Dread
-  wh2_main_def_dark_elves_lords: {
-    def_crone: {
-      name: 'Crone Hellebron',
+  wh_dlc08_nor_norsca_heroes: {
+    nor_kihar: {
+      name: 'Kihar the Tormentor',
     },
-    def_lokhir: {
-      name: 'Lokhir Fellheart',
+    nor_killgore_slaymaim: {
+      name: 'Killgore Slaymaim???',
     },
-    def_malus: {
-      name: 'Malus Darkblade',
-    },
-    def_malekith: {
-      name: 'Malekith',
-      spellLore: 'dark',
-    },
-    def_morathi: {
-      name: 'Morathi',
-      spellLore: 'mixed',
-    },
-    def_rakarth: {
-      name: 'Rakarth',
-    },
-    def_black_ark: {
-      name: 'Black Ark',
-    },
-    def_dreadlord: {
-      name: 'Dreadlord (Sword & Crossbow)',
-    },
-    def_dreadlord_fem: {
-      name: 'Dreadlord (Sword & Shield)',
-    },
-    def_high_beastmaster: {
-      name: 'High Beastmaster',
-    },
-    def_supreme_sorceress_beasts: {
-      name: 'Supreme Sorceress (Beasts)',
-      spellLore: 'beasts',
-    },
-    def_supreme_sorceress_dark: {
-      name: 'Supreme Sorceress (Dark)',
-      spellLore: 'dark',
-    },
-    def_supreme_sorceress_death: {
-      name: 'Supreme Sorceress (Death)',
-      spellLore: 'death',
-    },
-    def_supreme_sorceress_fire: {
-      name: 'Supreme Sorceress (Fire)',
+    nor_fimir_balefiend_fire: {
+      name: 'Fimir Balefiend (Fire)',
       spellLore: 'fire',
     },
-    def_supreme_sorceress_shadow: {
-      name: 'Supreme Sorceress (Shadows)',
+    nor_fimir_balefiend_shadow: {
+      name: 'Fimir Balefiend (Shadows)',
       spellLore: 'shadows',
     },
+    nor_shaman_sorcerer_death: {
+      name: 'Shaman-Sorcerer (Death)',
+      spellLore: 'death',
+    },
+    nor_shaman_sorcerer_fire: {
+      name: 'Shaman-Sorcerer (Fire)',
+      spellLore: 'fire',
+    },
+    nor_shaman_sorcerer_metal: {
+      name: 'Shaman-Sorcerer (Metal)',
+      spellLore: 'metal',
+    },
+    nor_skin_wolf_werekin: {
+      name: 'Skin Wolf Werekin',
+    },
   },
+
+  wh_main_vmp_vampire_counts_lords: {
+    vmp_heinrich: {
+      name: 'Heinrich Kemmler',
+      spellLore: 'vampires',
+    },
+    vmp_helman_ghorst: {
+      name: 'Helman Ghorst',
+      spellLore: 'vampires',
+    },
+    vmp_isabella_von_carstein: {
+      name: 'Isabella von Carstein',
+      spellLore: 'vampires',
+    },
+    vmp_mannfred: {
+      name: 'Mannlet von Carstein',
+      spellLore: 'vampires',
+    },
+    vmp_vlad_von_carstein: {
+      name: 'Chad von Carstein',
+      spellLore: 'vampires',
+    },
+    vmp_red_duke: {
+      name: 'The Red Duke',
+      spellLore: 'vampires',
+    },
+    vmp_bloodline_blood_dragon_lord: {
+      name: 'Blood Dragon Vampire Lord',
+      spellLore: 'vampires',
+    },
+    vmp_bloodline_lahmian_lord: {
+      name: 'Lahmian Vampire Lord',
+      spellLore: 'mixed',
+    },
+    vmp_bloodline_necrarch_lord: {
+      name: 'Necrarch Vampire Lord',
+      spellLore: 'mixed',
+    },
+    vmp_bloodline_strigoi_lord: {
+      name: 'Strigoi Vampire Lord',
+      spellLore: 'mixed',
+    },
+    vmp_bloodline_von_carstein_lord: {
+      name: 'Von Carstein Vampire Lord',
+      spellLore: 'mixed',
+    },
+    vmp_master_necromancer: {
+      name: 'Master Necromancer',
+      spellLore: 'vampires',
+    },
+    vmp_strigoi_ghoul_king: {
+      name: 'Strigoi Ghoul King',
+      spellLore: 'mixed',
+    },
+    vmp_lord: {
+      name: 'Vampire Lord',
+      spellLore: 'vampires',
+    },
+  },
+  wh_main_vmp_vampire_counts_heroes: {
+    vmp_isabella_von_carstein_hero: {
+      name: 'Isabella von Carstein (Hero)',
+      spellLore: 'vampires',
+    },
+    vmp_vlad_von_carstein_hero: {
+      name: 'Chad von Carstein (Hero)',
+      spellLore: 'vampires',
+    },
+    vmp_kevon_lloydstein: {
+      name: 'Kevin von Lloydstein',
+    },
+    vmp_banshee: {
+      name: 'Banshee',
+    },
+    vmp_necromancer: {
+      name: 'Necromancer',
+      spellLore: 'vampires',
+    },
+    vmp_vampire: {
+      name: 'Vampire (Death)',
+      spellLore: 'death',
+    },
+    vmp_vampire_shadow: {
+      name: 'Vampire (Shadows)',
+      spellLore: 'shadows',
+    },
+    vmp_wight_king: {
+      name: 'Wight King',
+    },
+  },
+
+  // // No Black Ark Blessed Dread
+  // wh2_main_def_dark_elves_lords: {
+  //   def_crone: {
+  //     name: 'Crone Hellebron',
+  //   },
+  //   def_lokhir: {
+  //     name: 'Lokhir Fellheart',
+  //   },
+  //   def_malus: {
+  //     name: 'Malus Darkblade',
+  //   },
+  //   def_malekith: {
+  //     name: 'Malekith',
+  //     spellLore: 'dark',
+  //   },
+  //   def_morathi: {
+  //     name: 'Morathi',
+  //     spellLore: 'mixed',
+  //   },
+  //   def_rakarth: {
+  //     name: 'Rakarth',
+  //   },
+  //   def_black_ark: {
+  //     name: 'Black Ark',
+  //   },
+  //   def_dreadlord: {
+  //     name: 'Dreadlord (Sword & Crossbow)',
+  //   },
+  //   def_dreadlord_fem: {
+  //     name: 'Dreadlord (Sword & Shield)',
+  //   },
+  //   def_high_beastmaster: {
+  //     name: 'High Beastmaster',
+  //   },
+  //   def_supreme_sorceress_beasts: {
+  //     name: 'Supreme Sorceress (Beasts)',
+  //     spellLore: 'beasts',
+  //   },
+  //   def_supreme_sorceress_dark: {
+  //     name: 'Supreme Sorceress (Dark)',
+  //     spellLore: 'dark',
+  //   },
+  //   def_supreme_sorceress_death: {
+  //     name: 'Supreme Sorceress (Death)',
+  //     spellLore: 'death',
+  //   },
+  //   def_supreme_sorceress_fire: {
+  //     name: 'Supreme Sorceress (Fire)',
+  //     spellLore: 'fire',
+  //   },
+  //   def_supreme_sorceress_shadow: {
+  //     name: 'Supreme Sorceress (Shadows)',
+  //     spellLore: 'shadows',
+  //   },
+  // },
 
   wh3_main_cth_cathay_lords: {
     cth_miao_ying: {
@@ -114,6 +239,7 @@ const vanilla3Characters = {
       spellLore: 'heavens',
     },
   },
+  // TO DO: Check what CoC lord/heroes are available to Daemon Prince, check for WoC version of Belakor?
   wh3_main_dae_daemons_lords: {
     dae_cha_be_lakor_0: {
       name: "Be'lakor",
@@ -162,6 +288,10 @@ const vanilla3Characters = {
     kho_bloodreaper: {
       name: 'Bloodreaper',
     },
+    // Updated
+    chs_exalted_hero_mkho: {
+      name: 'Exalted Hero of Khorne',
+    },
     tze_iridescent_horror_metal: {
       name: 'Iridescent Horror (Metal)',
       spellLore: 'metal',
@@ -189,6 +319,10 @@ const vanilla3Characters = {
     kho_herald_of_khorne: {
       name: 'Herald of Khorne',
     },
+    // Updated
+    chs_lord_mkho: {
+      name: 'Chaos Lord of Khorne',
+    },
   },
   wh3_main_kho_khorne_heroes: {
     kho_bloodreaper: {
@@ -196,6 +330,10 @@ const vanilla3Characters = {
     },
     kho_cultist: {
       name: 'Cultist of Khorne',
+    },
+    // Updated
+    chs_exalted_hero_mkho: {
+      name: 'Exalted Hero of Khorne',
     },
   },
   wh3_main_ksl_kislev_lords: {
@@ -258,10 +396,24 @@ const vanilla3Characters = {
       name: 'Herald of Nurgle (Nurgle)',
       spellLore: 'nurgle',
     },
+    // Updated
+    chs_sorcerer_lord_death_mnur: {
+      name: 'Chaos Sorcerer Lord (Death)',
+      spellLore: 'death',
+    },
+    // Updated
+    chs_sorcerer_lord_nurgle_mnur: {
+      name: 'Chaos Sorcerer Lord (Nurgle)',
+      spellLore: 'nurgle',
+    },
   },
   wh3_main_nur_nurgle_heroes: {
     nur_cultist: {
       name: 'Cultist of Nurgle',
+    },
+    // Updated
+    chs_exalted_hero_mnur: {
+      name: 'Exalted Hero of Nurgle',
     },
     nur_plagueridden_death: {
       name: 'Plagueridden (Death)',
@@ -330,6 +482,10 @@ const vanilla3Characters = {
       name: 'Herald of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
+    // Updated
+    chs_lord_msla: {
+      name: 'Chaos Lord of Slaanesh',
+    },
   },
   wh3_main_sla_slaanesh_heroes: {
     sla_alluress_shadow: {
@@ -342,6 +498,16 @@ const vanilla3Characters = {
     },
     sla_cultist: {
       name: 'Cultist of Slaanesh',
+    },
+    // Updated
+    chs_sorcerer_shadows_msla: {
+      name: 'Chaos Sorcerer (Shadows)',
+      spellLore: 'shadows',
+    },
+    // Updated
+    chs_sorcerer_slaanesh_msla: {
+      name: 'Chaos Sorcerer (Slaanesh)',
+      spellLore: 'slaanesh',
     },
   },
   wh3_main_tze_tzeentch_lords: {
@@ -365,6 +531,16 @@ const vanilla3Characters = {
       name: 'Herald of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
     },
+    // Updated
+    chs_sorcerer_lord_metal_mtze: {
+      name: 'Chaos Sorcerer Lord (Metal)',
+      spellLore: 'metal',
+    },
+    // Updated
+    chs_sorcerer_lord_tzeentch_mtze: {
+      name: 'Chaos Sorcerer Lord (Tzeentch)',
+      spellLore: 'tzeentch',
+    },
   },
   wh3_main_tze_tzeentch_heroes: {
     tze_cultist: {
@@ -377,6 +553,144 @@ const vanilla3Characters = {
     },
     tze_iridescent_horror_tzeentch: {
       name: 'Iridescent Horror (Tzeentch)',
+      spellLore: 'tzeentch',
+    },
+    // Updated
+    chs_sorcerer_metal_mtze: {
+      name: 'Chaos Sorcerer (Metal)',
+      spellLore: 'metal',
+    },
+    // Updated
+    chs_sorcerer_tzeentch_mtze: {
+      name: 'Chaos Sorcerer (Tzeentch)',
+      spellLore: 'tzeentch',
+    },
+  },
+
+  wh_main_chs_chaos_lords: {
+    chs_archaon: {
+      name: 'Archaon the Everchosen',
+      spellLore: 'mixed',
+    },
+    // Updated
+    sla_azazel: {
+      name: 'Azazel',
+      spellLore: 'slaanesh',
+    },
+    // Guess
+    dae_cha_be_lakor_0: {
+      name: "Be'lakor",
+      spellLore: 'shadows',
+    },
+    // Updated
+    nur_festus: {
+      name: 'Festus the Chinlord',
+      spellLore: 'mixed',
+    },
+    chs_kholek: {
+      name: 'Kholek Suneater',
+    },
+    chs_sigvald: {
+      name: 'Prince Sigvald the Magnificent',
+    },
+    // Updated
+    kho_valkia: {
+      name: 'Valkia the Bloody',
+    },
+    // Updated
+    tze_vilitch: {
+      name: 'Vilitch the Curseling',
+      spellLore: 'tzeentch',
+    },
+    chs_lord_of_change: {
+      name: 'Sarthorael the Everwatcher',
+      spellLore: 'metal',
+    },
+    chs_lord: {
+      name: 'Chaos Lord',
+    },
+    // // Guess
+    // chs_lord_of_khorne: {
+    //   name: 'Chaos Lord of Khorne',
+    // },
+    // // Guess
+    // chs_lord_of_slaanesh: {
+    //   name: 'Chaos Lord of Slaanesh',
+    // },
+    chs_sorcerer_lord_death: {
+      name: 'Chaos Sorcerer Lord (Death)',
+      spellLore: 'death',
+    },
+    chs_sorcerer_lord_fire: {
+      name: 'Chaos Sorcerer Lord (Fire)',
+      spellLore: 'fire',
+    },
+    chs_sorcerer_lord_metal: {
+      name: 'Chaos Sorcerer Lord (Metal)',
+      spellLore: 'metal',
+    },
+    // // Guess
+    // chs_sorcerer_lord_nurgle: {
+    //   name: 'Chaos Sorcerer Lord (Nurgle)',
+    //   spellLore: 'nurgle',
+    // },
+    chs_sorcerer_lord_shadow: {
+      name: 'Chaos Sorcerer Lord (Shadows)',
+      spellLore: 'shadows',
+    },
+    // // Guess
+    // chs_sorcerer_lord_tzeentch: {
+    //   name: 'Chaos Sorcerer Lord (Tzeentch)',
+    //   spellLore: 'tzeentch',
+    // },
+  },
+
+  wh_main_chs_chaos_heroes: {
+    chs_exalted_hero: {
+      name: 'Exalted Hero',
+    },
+    // Updated
+    chs_exalted_hero_mkho: {
+      name: 'Exalted Hero of Khorne',
+    },
+    // Updated
+    chs_exalted_hero_mnur: {
+      name: 'Exalted Hero of Nurgle',
+    },
+    chs_chaos_sorcerer_death: {
+      name: 'Chaos Sorcerer (Death)',
+      spellLore: 'death',
+    },
+    chs_chaos_sorcerer_fire: {
+      name: 'Chaos Sorcerer (Fire)',
+      spellLore: 'fire',
+    },
+    chs_chaos_sorcerer_metal: {
+      name: 'Chaos Sorcerer (Metal)',
+      spellLore: 'metal',
+    },
+    chs_sorcerer_shadow: {
+      name: 'Chaos Sorcerer (Shadows)',
+      spellLore: 'shadows',
+    },
+    // Updated
+    chs_sorcerer_shadows_msla: {
+      name: 'Chaos Sorcerer (Shadows)',
+      spellLore: 'shadows',
+    },
+    // Updated
+    chs_sorcerer_slaanesh_msla: {
+      name: 'Chaos Sorcerer (Slaanesh)',
+      spellLore: 'slaanesh',
+    },
+    // Updated
+    chs_sorcerer_metal_mtze: {
+      name: 'Chaos Sorcerer (Metal)',
+      spellLore: 'metal',
+    },
+    // Updated
+    chs_sorcerer_tzeentch_mtze: {
+      name: 'Chaos Sorcerer (Tzeentch)',
       spellLore: 'tzeentch',
     },
   },
