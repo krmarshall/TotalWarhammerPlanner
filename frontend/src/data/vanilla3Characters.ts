@@ -585,7 +585,7 @@ const vanilla3Characters = {
     // Updated
     nur_festus: {
       name: 'Festus the Chinlord',
-      spellLore: 'mixed',
+      spellLore: 'nurgle',
     },
     chs_kholek: {
       name: 'Kholek Suneater',
@@ -605,6 +605,26 @@ const vanilla3Characters = {
     chs_lord_of_change: {
       name: 'Sarthorael the Everwatcher',
       spellLore: 'metal',
+    },
+    // Updated
+    chs_daemon_prince_undivided: {
+      name: 'Daemon Prince (Undivided)',
+    },
+    // Updated
+    chs_daemon_prince_khorne: {
+      name: 'Daemon Prince (Khorne)',
+    },
+    // Updated
+    chs_daemon_prince_nurgle: {
+      name: 'Daemon Prince (Nurgle)',
+    },
+    // Updated
+    chs_daemon_prince_slaanesh: {
+      name: 'Daemon Prince (Slaanesh)',
+    },
+    // Updated
+    chs_daemon_prince_tzeentch: {
+      name: 'Daemon Prince (Tzeentch)',
     },
     chs_lord: {
       name: 'Chaos Lord',

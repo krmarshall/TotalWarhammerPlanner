@@ -41,22 +41,55 @@ import hunter from './ogr_hunter_campaign_01_0.webp';
 import skrag from './ogr_skrag_0.webp';
 import slaughtermaster from './ogr_slaughtermaster_campaign_01_0.webp';
 import tyrant from './ogr_tyrant_campaign_01_0.webp';
-import norMarauderChieftain from '../vanilla2/nor_marauder_chieftain_campaign_01_0.webp';
-import norFimirBalefiend from '../vanilla3/nor_cha_fimir_balefiend_campaign_01_0.webp';
-import norShamanSorc from '../vanilla3/nor_cha_shaman_sorcerer_campaign_01_0.webp';
-import norSkinWolf from '../vanilla3/nor_cha_skin_wolf_werekin_campaign_01_0.webp';
-import norThrogg from '../vanilla3/nor_cha_throgg_0.webp';
-import norSorcLord from '../vanilla3/nor_chaos_sorcerer_lord_0.webp';
-import norWulfrik from '../vanilla3/nor_cha_wulfrik_0.webp';
-import chsArchaon from '../vanilla3/chs_ch_archaon_0.webp';
-import chsSigvald from '../vanilla3/chs_ch_sigvald_0.webp';
-import chsKholek from '../vanilla3/chs_kholek_suneater_0.webp';
+
+import vmpIsabellaHero from '../vanilla2/vmp_ch_isabella_0.webp';
+import vmpVladHero from '../vanilla2/vmp_ch_vlad_0.webp';
+import norMarauderChieftain from './nor_marauder_chieftain_campaign_01_0.webp';
+import norFimirBalefiend from './nor_cha_fimir_balefiend_campaign_01_0.webp';
+import norShamanSorc from './nor_cha_shaman_sorcerer_campaign_01_0.webp';
+import norSkinWolf from './nor_cha_skin_wolf_werekin_campaign_01_0.webp';
+import norThrogg from './nor_cha_throgg_0.webp';
+import norSorcLord from './nor_chaos_sorcerer_lord_0.webp';
+import norWulfrik from './nor_cha_wulfrik_0.webp';
+import norKillmaim from './dae_kho_chaos_lord_killmaim_0.webp';
+import norBurplesmirk from './dae_exalted_great_unclean_one_burplesmirk_0.webp';
+import chsArchaon from './chs_ch_archaon_0.webp';
+import chsSigvald from './chs_ch_sigvald_0.webp';
+import chsKholek from './chs_kholek_suneater_0.webp';
+import chsArzik from './chs_ch_arzik_0.webp';
+import chsKihar from './chs_ch_kihar_0.webp';
+import chsLord from './chs_chaos_lord_campaign_02_0.webp';
+import chsShaggoth from './chs_dragon_ogre_shaggoth_0.webp';
+import chsExaltedHero from './chs_exalted_hero_campaign_01_0.webp';
+import chsLordOfChange from './chs_lord_of_change_0.webp';
+import chsSorcerer from './chs_sorcerer_campaign_03_0.webp';
+import chsSorcererLord from './chs_sorcerer_lord_campaign_01_0.webp';
+import daeAzazel from './dae_azazel_0.webp';
+import daeFestus from './dae_festus_0.webp';
+import daeValkia from './dae_valkia_0.webp';
+import daeVilitch from './dae_vilitch_0.webp';
+import daeDaemonPrinceUnd from './dae_chs_daemon_prince_1_0.webp';
+import daeDaemonPrinceKho from './dae_kho_daemon_prince_1_0.webp';
+import daeDaemonPrinceNur from './dae_nur_daemon_prince_1_0.webp';
+import daeDaemonPrinceSla from './dae_sla_daemon_prince_1_0.webp';
+import daeDaemonPrinceTze from './dae_tze_daemon_prince_1_0.webp';
+import chsLordKho from './dae_kho_chaos_lord_campaign_01_0.webp';
+import chsLordSla from './dae_sla_chaos_lord_campaign_01_0.webp';
+import chsExaltedHeroKho from './dae_kho_exalted_hero_campaign_01_0.webp';
+import chsExaltedHeroNur from './dae_nur_exalted_hero_campaign_01_0.webp';
+import chsSorcLordNur from './dae_nur_chaos_sorcerer_lord_campaign_01_0.webp';
+import chsSorcLordTze from './dae_tze_chaos_sorcerer_lord_campaign_01_0.webp';
+import chsSorcSla from './dae_sla_chaos_sorcerer_campaign_01_0.webp';
+import chsSorcTze from './dae_tze_chaos_sorcerer_campaign_01_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 
 const vanilla3CharacterImgs = {
   ...vanilla2CharacterImgs,
+
+  vmp_isabella_von_carstein_hero: vmpIsabellaHero,
+  vmp_vlad_von_carstein_hero: vmpVladHero,
 
   nor_marauder_chieftain: norMarauderChieftain,
   nor_fimir_balefiend_fire: norFimirBalefiend,
@@ -67,10 +100,46 @@ const vanilla3CharacterImgs = {
   nor_skin_wolf_werekin: norSkinWolf,
   nor_throgg: norThrogg,
   nor_wulfrik: norWulfrik,
+  nor_arzik: chsArzik,
+  nor_kihar: chsKihar,
+  nor_killgore_slaymaim: norKillmaim,
+  nor_burplesmirk_spewpit: norBurplesmirk,
 
   chs_archaon: chsArchaon,
   chs_sigvald: chsSigvald,
   chs_kholek: chsKholek,
+  chs_lord_of_change: chsLordOfChange,
+  chs_lord: chsLord,
+  chs_exalted_hero: chsExaltedHero,
+  chs_chaos_sorcerer_death: chsSorcerer,
+  chs_chaos_sorcerer_fire: chsSorcerer,
+  chs_chaos_sorcerer_metal: chsSorcerer,
+  chs_sorcerer_shadow: chsSorcerer,
+  chs_sorcerer_lord_death: chsSorcererLord,
+  chs_sorcerer_lord_fire: chsSorcererLord,
+  chs_sorcerer_lord_metal: chsSorcererLord,
+  chs_sorcerer_lord_shadow: chsSorcererLord,
+  sla_azazel: daeAzazel,
+  nur_festus: daeFestus,
+  kho_valkia: daeValkia,
+  tze_vilitch: daeVilitch,
+  chs_daemon_prince_undivided: daeDaemonPrinceUnd,
+  chs_daemon_prince_khorne: daeDaemonPrinceKho,
+  chs_daemon_prince_nurgle: daeDaemonPrinceNur,
+  chs_daemon_prince_slaanesh: daeDaemonPrinceSla,
+  chs_daemon_prince_tzeentch: daeDaemonPrinceTze,
+  chs_lord_mkho: chsLordKho,
+  chs_lord_msla: chsLordSla,
+  chs_sorcerer_lord_death_mnur: chsSorcLordNur,
+  chs_sorcerer_lord_nurgle_mnur: chsSorcLordNur,
+  chs_sorcerer_lord_metal_mtze: chsSorcLordTze,
+  chs_sorcerer_lord_tzeentch_mtze: chsSorcLordTze,
+  chs_exalted_hero_mkho: chsExaltedHeroKho,
+  chs_exalted_hero_mnur: chsExaltedHeroNur,
+  chs_sorcerer_shadows_msla: chsSorcSla,
+  chs_sorcerer_slaanesh_msla: chsSorcSla,
+  chs_sorcerer_metal_mtze: chsSorcTze,
+  chs_sorcerer_tzeentch_mtze: chsSorcTze,
 
   cth_dragon_blooded_shugengan_yang: shugengan,
   cth_dragon_blooded_shugengan_yin: shugengan,
