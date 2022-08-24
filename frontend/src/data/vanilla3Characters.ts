@@ -5,10 +5,6 @@ const vanilla3Characters = {
 
   // Chieftain spelled properly in 3
   wh_dlc08_nor_norsca_lords: {
-    nor_burplesmirk_spewpit: {
-      name: 'Burplesmirk Spewpit???',
-      spellLore: 'mixed',
-    },
     nor_throgg: {
       name: 'Throgg',
     },
@@ -17,6 +13,10 @@ const vanilla3Characters = {
     },
     nor_arzik: {
       name: 'Azrik the Maze Keeper',
+    },
+    nor_burplesmirk_spewpit: {
+      name: 'Burplesmirk Spewpit???',
+      spellLore: 'mixed',
     },
     nor_marauder_chieftain: {
       name: 'Marauder Chieftain',
@@ -398,12 +398,12 @@ const vanilla3Characters = {
     },
     // Updated
     chs_sorcerer_lord_death_mnur: {
-      name: 'Chaos Sorcerer Lord (Death)',
+      name: 'Chaos Sorcerer Lord of Nurgle (Death)',
       spellLore: 'death',
     },
     // Updated
     chs_sorcerer_lord_nurgle_mnur: {
-      name: 'Chaos Sorcerer Lord (Nurgle)',
+      name: 'Chaos Sorcerer Lord of Nurgle (Nurgle)',
       spellLore: 'nurgle',
     },
   },
@@ -501,12 +501,12 @@ const vanilla3Characters = {
     },
     // Updated
     chs_sorcerer_shadows_msla: {
-      name: 'Chaos Sorcerer (Shadows)',
+      name: 'Chaos Sorcerer of Slaanesh (Shadows)',
       spellLore: 'shadows',
     },
     // Updated
     chs_sorcerer_slaanesh_msla: {
-      name: 'Chaos Sorcerer (Slaanesh)',
+      name: 'Chaos Sorcerer of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
   },
@@ -533,12 +533,12 @@ const vanilla3Characters = {
     },
     // Updated
     chs_sorcerer_lord_metal_mtze: {
-      name: 'Chaos Sorcerer Lord (Metal)',
+      name: 'Chaos Sorcerer Lord of Tzeentch (Metal)',
       spellLore: 'metal',
     },
     // Updated
     chs_sorcerer_lord_tzeentch_mtze: {
-      name: 'Chaos Sorcerer Lord (Tzeentch)',
+      name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
     },
   },
@@ -557,12 +557,12 @@ const vanilla3Characters = {
     },
     // Updated
     chs_sorcerer_metal_mtze: {
-      name: 'Chaos Sorcerer (Metal)',
+      name: 'Chaos Sorcerer of Tzeentch (Metal)',
       spellLore: 'metal',
     },
     // Updated
     chs_sorcerer_tzeentch_mtze: {
-      name: 'Chaos Sorcerer (Tzeentch)',
+      name: 'Chaos Sorcerer of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
     },
   },
@@ -608,35 +608,27 @@ const vanilla3Characters = {
     },
     // Updated
     chs_daemon_prince_undivided: {
-      name: 'Daemon Prince (Undivided)',
+      name: 'Daemon Prince (Chaos Undivided)',
     },
     // Updated
     chs_daemon_prince_khorne: {
-      name: 'Daemon Prince (Khorne)',
+      name: 'Daemon Prince of Khorne',
     },
     // Updated
     chs_daemon_prince_nurgle: {
-      name: 'Daemon Prince (Nurgle)',
+      name: 'Daemon Prince of Nurgle',
     },
     // Updated
     chs_daemon_prince_slaanesh: {
-      name: 'Daemon Prince (Slaanesh)',
+      name: 'Daemon Prince of Slaanesh',
     },
     // Updated
     chs_daemon_prince_tzeentch: {
-      name: 'Daemon Prince (Tzeentch)',
+      name: 'Daemon Prince of Tzeentch',
     },
     chs_lord: {
       name: 'Chaos Lord',
     },
-    // // Guess
-    // chs_lord_of_khorne: {
-    //   name: 'Chaos Lord of Khorne',
-    // },
-    // // Guess
-    // chs_lord_of_slaanesh: {
-    //   name: 'Chaos Lord of Slaanesh',
-    // },
     chs_sorcerer_lord_death: {
       name: 'Chaos Sorcerer Lord (Death)',
       spellLore: 'death',
@@ -649,20 +641,10 @@ const vanilla3Characters = {
       name: 'Chaos Sorcerer Lord (Metal)',
       spellLore: 'metal',
     },
-    // // Guess
-    // chs_sorcerer_lord_nurgle: {
-    //   name: 'Chaos Sorcerer Lord (Nurgle)',
-    //   spellLore: 'nurgle',
-    // },
     chs_sorcerer_lord_shadow: {
       name: 'Chaos Sorcerer Lord (Shadows)',
       spellLore: 'shadows',
     },
-    // // Guess
-    // chs_sorcerer_lord_tzeentch: {
-    //   name: 'Chaos Sorcerer Lord (Tzeentch)',
-    //   spellLore: 'tzeentch',
-    // },
   },
 
   wh_main_chs_chaos_heroes: {
@@ -695,22 +677,22 @@ const vanilla3Characters = {
     },
     // Updated
     chs_sorcerer_shadows_msla: {
-      name: 'Chaos Sorcerer (Shadows)',
+      name: 'Chaos Sorcerer of Slaanesh (Shadows)',
       spellLore: 'shadows',
     },
     // Updated
     chs_sorcerer_slaanesh_msla: {
-      name: 'Chaos Sorcerer (Slaanesh)',
+      name: 'Chaos Sorcerer of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
     // Updated
     chs_sorcerer_metal_mtze: {
-      name: 'Chaos Sorcerer (Metal)',
+      name: 'Chaos Sorcerer of Tzeentch (Metal)',
       spellLore: 'metal',
     },
     // Updated
     chs_sorcerer_tzeentch_mtze: {
-      name: 'Chaos Sorcerer (Tzeentch)',
+      name: 'Chaos Sorcerer of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
     },
   },

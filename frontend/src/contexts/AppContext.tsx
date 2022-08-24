@@ -12,8 +12,8 @@ interface ContextStateInterface {
 }
 
 const initialState: ContextStateInterface = {
-  selectedGame: '2',
-  selectedMod: 'vanilla2',
+  selectedGame: '3',
+  selectedMod: 'vanilla3',
   selectedFaction: 'wh_dlc03_bst_beastmen',
   characterData: null,
   characterBuild: null,
