@@ -61,7 +61,7 @@ describe('Bulk character API test', () => {
     factionKeys.forEach((factionKey) => {
       const characterKeys = Object.keys(game.charList[factionKey]);
       characterKeys.forEach((characterKey) => {
-        test(`${factionKey} - ${characterKey}`, async () => {
+        test(`${game.name} - ${factionKey} - ${characterKey}`, async () => {
           const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
           const response = await request.get(`/api/${game.name}.${strippedFactionKey}.${characterKey}`);
           expect(response.status).toBe(200);
