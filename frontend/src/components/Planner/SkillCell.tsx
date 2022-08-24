@@ -66,28 +66,28 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   }, [characterBuild?.blockedSkills]);
 
   useEffect(() => {
-    // TS check values exist
-    if (
-      characterBuild?.rank !== undefined &&
-      characterBuild?.startingSkillPoints !== undefined &&
-      characterBuild?.autoUnlockSkillPoints !== undefined &&
-      skill.levels?.[0].auto_unlock_at_rank !== undefined
-    ) {
-      // Auto rank up/down skill when at appropriate character rank.
+    skill.levels?.forEach((skillLevel, index) => {
       if (
-        characterBuild.buildData[yIndex][xIndex] === 0 &&
-        skill.levels?.[0].auto_unlock_at_rank <=
-          characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+        characterBuild?.rank !== undefined &&
+        characterBuild?.startingSkillPoints !== undefined &&
+        characterBuild?.autoUnlockSkillPoints !== undefined &&
+        skillLevel.auto_unlock_at_rank !== undefined
       ) {
-        rankUpSkill(true);
-      } else if (
-        characterBuild.buildData[yIndex][xIndex] > 0 &&
-        skill.levels?.[0].auto_unlock_at_rank >
-          characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
-      ) {
-        rankDownSkill(true);
+        if (
+          characterBuild.buildData[yIndex][xIndex] === index &&
+          skillLevel.auto_unlock_at_rank <=
+            characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+        ) {
+          rankUpSkill(true);
+        } else if (
+          characterBuild.buildData[yIndex][xIndex] > index &&
+          skillLevel.auto_unlock_at_rank >
+            characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+        ) {
+          rankDownSkill(true);
+        }
       }
-    }
+    });
   }, [characterBuild?.rank]);
 
   const rankUpSkill = (autoRankSkill: boolean) => {
@@ -186,26 +186,21 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   const skillClickHandler = (event: MouseEvent) => {
     // 0 = LMB, 2 = RMB
-    // Rank up an auto rank skill with more than 1 skill level
-    if (
-      event.button === 0 &&
-      skill.levels?.[0]?.auto_unlock_at_rank !== undefined &&
-      thisSkillsCurrentPoints > 0 &&
-      skill.levels?.[thisSkillsCurrentPoints] !== undefined
-    ) {
-      rankUpSkill(false);
-      // Rank down an auto rank skill with more than 1 skill level
-    } else if (
-      event.button === 2 &&
-      skill.levels?.[0]?.auto_unlock_at_rank !== undefined &&
-      thisSkillsCurrentPoints > 1
-    ) {
-      rankDownSkill(false);
-      // Don't allow changing auto rank skills first skill level
-    } else if (skill.levels?.[0]?.auto_unlock_at_rank !== undefined) {
-      toast.error(`This skill is automatically leveled up/down at rank ${skill.levels?.[0]?.auto_unlock_at_rank}`, {
-        id: `${skillKey} autorank`,
-      });
+    // Don't allow changing auto rank skills
+    if (skill.levels?.[thisSkillsCurrentPoints]?.auto_unlock_at_rank !== undefined) {
+      toast.error(
+        `This skill is automatically leveled up/down at rank ${skill.levels?.[thisSkillsCurrentPoints]?.auto_unlock_at_rank}`,
+        {
+          id: `${skillKey} autorank`,
+        }
+      );
+    } else if (skill.levels?.[thisSkillsCurrentPoints - 1]?.auto_unlock_at_rank !== undefined && event.button === 2) {
+      toast.error(
+        `This skill is automatically leveled up/down at rank ${skill.levels?.[thisSkillsCurrentPoints]?.auto_unlock_at_rank}`,
+        {
+          id: `${skillKey} autorank`,
+        }
+      );
       // Normal skill rank up
     } else if (event.button === 0) {
       rankUpSkill(false);
