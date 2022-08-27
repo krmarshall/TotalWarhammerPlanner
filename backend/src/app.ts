@@ -22,11 +22,12 @@ const { size } = statSync('./bulkDataDebug.json');
 console.log(`${Math.floor(size / (1024 * 1024))}mb of skill trees loaded`);
 rmSync('./bulkDataDebug.json');
 
-app.use(
-  cors({
-    origin: origin,
-  })
-);
+// Opening page from google result causes fetches to error on cors even tho origins match z.z disable till find fix
+// app.use(
+//   cors({
+//     origin: origin,
+//   })
+// );
 app.use(helmet());
 app.use(compression());
 
