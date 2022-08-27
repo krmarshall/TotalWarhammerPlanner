@@ -28,6 +28,7 @@ rmSync('./bulkDataDebug.json');
 //     origin: origin,
 //   })
 // );
+app.use(cors());
 app.use(helmet());
 app.use(compression());
 
