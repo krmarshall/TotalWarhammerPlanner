@@ -43,7 +43,7 @@ const gameData: GameInterface = {
     factions: factions3,
     characters: vanilla3Characters,
     characterImages: vanilla3CharacterImgs,
-    updated: '23 August 2022',
+    updated: '6 September 2022',
   },
   radious3: {
     text: 'Radious 3',
