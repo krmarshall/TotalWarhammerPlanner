@@ -21,6 +21,7 @@ const SkillPhaseAttribute = ({ attribute, index }: PropInterface) => {
           `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/attribute_${attribute.key}.webp`,
           `/imgs/${selectedMod}/battle_ui/ability_icons/${attribute.key}.webp`,
           `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${attribute.key}.webp`,
+          `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
         ]}
         className="w-6 h-6"
         alt={`${attribute.key} icon`}

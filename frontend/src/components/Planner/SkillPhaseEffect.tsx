@@ -19,6 +19,9 @@ const SkillPhaseEffect = ({ effect }: PropInterface) => {
         srcList={[
           `/imgs/${selectedMod}/skins/default/${imagePath}`,
           `/imgs/${vanillaGamePath}/skins/default/${imagePath}`,
+          `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
+          `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${imagePath}`,
+          `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
         ]}
         className="w-6 h-6"
         alt={`${effect.stat} icon`}
