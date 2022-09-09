@@ -21,7 +21,7 @@ const About = () => {
 
         <div className="flex flex-row place-content-center mt-12">
           <hr className="grow mt-[1.6rem] opacity-50" />
-          <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">Patreon</h1>
+          <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">Ko-Fi</h1>
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
         <p className="text-center text-gray-200 text-2xl">
@@ -29,8 +29,15 @@ const About = () => {
           server costs, keep this tool ad and tracking free, or just buy me a coffee by donating it is greatly
           appreciated.
         </p>
-        <a href="https://patreon.com/twplanner" target="_blank" rel="noopener noreferrer" className="mx-auto mt-2">
-          <img src={patreonButton} alt="Become a Patron" className="w-auto h-12 rounded-xl" width="300" height="100" />
+
+        <a href="https://ko-fi.com/D1D6EX4Y6" target="_blank" rel="noopener noreferrer" className="mx-auto mt-2">
+          <img
+            height="36"
+            width="141"
+            className="h-10"
+            src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3"
+            alt="Buy Me a Coffee at ko-fi.com"
+          />
         </a>
 
         <div className="flex flex-row place-content-center mt-12">
