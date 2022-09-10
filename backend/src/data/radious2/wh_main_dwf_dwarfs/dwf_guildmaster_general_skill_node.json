@@ -2,35 +2,117 @@
   "skillTree": [
     [
       {
-        "key": "lvs_skill_unique_hef_anointed_001",
-        "image_path": "character_speed.png",
+        "key": "lvs_skill_unique_guildmaster_001",
+        "image_path": "character_oathgold.png",
         "is_background_skill": false,
-        "name": "Speed of Asuryan",
-        "description": "The High Elves possess a natural skill that far outstrips the prowess of ordinary mortals.",
+        "name": "Oath of Forging",
+        "description": "To fire the forges and bring true craft and artifice back into the world.",
         "levels": [
           {
-            "unlocked_at_rank": 4,
+            "unlocked_at_rank": 3,
             "effects": [
               {
-                "icon": "battle_movement_character.png",
-                "priority": 55,
+                "icon": "oathgold.png",
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Speed: +5%",
-                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
-                "value": 5
-              },
-              {
-                "icon": "defence_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee defence: +3",
-                "key": "wh_main_effect_character_stat_mod_melee_defence",
-                "value": 3
+                "description": "Oathgold from Buildings: +100%\n\t(local province)",
+                "key": "wh2_dlc17_pooled_resource_oathgold_buildings_mod",
+                "value": 100
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_generic_speed_of_asuryan",
+        "character_skill_key": "wh2_dlc10_skill_dwf_generic_oath_of_forging",
+        "tier": 0,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "lvs_skill_unique_guildmaster_010",
+        "image_path": "wh_pro01_lord_abilities_flash_bomb.png",
+        "is_background_skill": false,
+        "name": "Flash Bomb",
+        "description": " ",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 600,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Flash Bomb\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_pro01_effect_ability_enable_flash_bang",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_pro01_lord_abilities_flash_bomb",
+                      "icon_name": "wh_pro01_lord_abilities_flash_bomb",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Flash Bomb",
+                      "active_time": 35,
+                      "recharge_time": 135,
+                      "passive": false,
+                      "effect_range": 30,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 75,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 35,
+                          "effect_type": "negative",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.3,
+                              "stat": "scalar_charge_speed",
+                              "how": "mult",
+                              "description": "x0.3 Charge Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 0.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -25,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-25 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_pro01_effect_ability_enable_flash_bang",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_pro01_skill_grombrindal_flash_bang",
         "tier": 1,
         "indent": 0,
         "points_on_creation": 0,
@@ -38,11 +120,66 @@
         "visible_in_ui": true
       },
       {
-        "key": "lvs_skill_unique_hef_anointed_002",
+        "key": "lvs_skill_unique_guildmaster_004",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Obstinacy",
+        "description": "This stubborn Dwarf refuses to yield or tire, and ensures his followers are of the same ilk.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "vigour.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Vigour loss reduction: -25%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_unit_stat_fatigue_resistance_large",
+                "value": -25
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_dwf_lord_battle_obstinacy",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "lvs_skill_unique_guildmaster_005",
+        "image_path": "character_general_ability.png",
+        "is_background_skill": false,
+        "name": "Brass-Lunged",
+        "description": "This Lord belts out orders and can be heard even across a battlefield smothered in the grim noise of war.",
+        "levels": [
+          {
+            "unlocked_at_rank": 4,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 5,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +25%",
+                "key": "wh_main_effect_character_stat_mod_personal_aura_size",
+                "value": 25
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_battle_brass-lunged",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "lvs_skill_unique_guildmaster_006",
         "image_path": "character_ward_save.png",
         "is_background_skill": false,
-        "name": "Ward of Loec",
-        "description": "The Trickster God knows all manner of ploys and ruses that can be used to counter missile attacks.",
+        "name": "Rune of Grimnir",
+        "description": "The endless courage of the Warrior God, directed to bolster this Dawi’s own reserves.",
         "levels": [
           {
             "unlocked_at_rank": 8,
@@ -58,43 +195,15 @@
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_generic_warding_of_loec",
-        "tier": 2,
+        "character_skill_key": "wh_main_skill_dwf_all_unique_rune_of_grimnir",
+        "tier": 5,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
       },
       {
-        "key": "lvs_skill_unique_hef_anointed_003",
-        "image_path": "character_ward_save.png",
-        "is_background_skill": false,
-        "name": "Ward of Hoeth",
-        "description": "Knowledge can be used as a shield against magical attack.",
-        "levels": [
-          {
-            "unlocked_at_rank": 8,
-            "effects": [
-              {
-                "icon": "resistance_magic.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Magic resistance: 10%",
-                "key": "wh_main_effect_character_stat_mod_ward_save_magic",
-                "value": 10
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_hef_generic_warding_of_hoeth",
-        "tier": 3,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "lvs_skill_unique_hef_anointed_immortality",
+        "key": "lvs_skill_unique_guildmaster_immortality",
         "image_path": "character_wound_time.png",
         "is_background_skill": false,
         "name": "Immortality",
@@ -115,99 +224,6 @@
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
-        "tier": 4,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "lvs_skill_unique_hef_anointed_004",
-        "image_path": "wh2_hef_asuryan.png",
-        "is_background_skill": false,
-        "name": "Will of Asuryan",
-        "description": "The radiant glory of the Eldest God burns away the darkness",
-        "levels": [
-          {
-            "unlocked_at_rank": 12,
-            "effects": [
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 111,
-                "is_positive_value_good": true,
-                "description": "Ward Save: +5% for Phoenix and Phoenix Guard units",
-                "key": "lvs_effect_ward_will_of_asuryan",
-                "value": 5
-              },
-              {
-                "icon": "modifier_icon_flaming.png",
-                "priority": 200,
-                "is_positive_value_good": true,
-                "description": "Activates Flaming Attacks (Excluding Monsters)",
-                "key": "lvs_effect_flaming_will_of_asuryan",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "unlocked_at_rank": 12,
-            "effects": [
-              {
-                "icon": "resistance_ward_save.png",
-                "priority": 111,
-                "is_positive_value_good": true,
-                "description": "Ward Save: +10% for Phoenix and Phoenix Guard units",
-                "key": "lvs_effect_ward_will_of_asuryan",
-                "value": 10
-              },
-              {
-                "icon": "modifier_icon_flaming.png",
-                "priority": 200,
-                "is_positive_value_good": true,
-                "description": "Activates Flaming Attacks (Excluding Monsters)",
-                "key": "lvs_effect_flaming_will_of_asuryan",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "lvs_skill_unique_hef_anointed_will_of_asuryan",
-        "tier": 5,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "lvs_skill_unique_hef_anointed_005",
-        "image_path": "character_magic.png",
-        "is_background_skill": false,
-        "name": "Knowledge of Things to Come",
-        "description": "An Anointed of Asuryan has known for centuries exactly how and when he will die. Accepting that unavoidable fate has made him completely unafraid of everyone and everything",
-        "levels": [
-          {
-            "unlocked_at_rank": 12,
-            "effects": [
-              {
-                "icon": "bonus_vs_large_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Bonus vs Large: +15",
-                "key": "wh_main_effect_character_stat_mod_bonus_v_large",
-                "value": 15
-              },
-              {
-                "icon": "attribute_unbreakable.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Unbreakable",
-                "key": "wh_dlc03_effect_unit_enable_attribute_unbreakable",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "lvs_skill_unique_hef_knowledge_of_things_to_come",
         "tier": 6,
         "indent": 0,
         "points_on_creation": 0,
@@ -215,72 +231,129 @@
         "visible_in_ui": true
       },
       {
-        "key": "rws_skill_unique_mount_hef_anointed_forstheart",
-        "image_path": "mount_great_eagle.png",
+        "key": "lvs_skill_unique_guildmaster_007",
+        "image_path": "campaign_military_spending.png",
         "is_background_skill": false,
-        "name": "Frostheart Phoenix (Mount)",
-        "description": "The mystical Frostheart Phoenix is a creature of legends, and forms a deadly pairing with the Anointed.",
+        "name": "Steam-Powered Economy",
+        "description": "The Guild of Engineers provides other Guilds with state-of-the-art machines and tools that dramatically increase the efficiency of any construction project",
         "levels": [
           {
-            "unlocked_at_rank": 10,
+            "unlocked_at_rank": 12,
             "effects": [
               {
-                "icon": "mount.png",
-                "priority": 200,
+                "icon": "income.png",
+                "priority": 2,
                 "is_positive_value_good": true,
-                "description": "Enables the Frostheart Phoenix mount for the Anointed",
-                "key": "lvs_effect_mount_phoenix_frostheart",
-                "value": 1
+                "description": "Income from Industry: +10%\n\t(local province)",
+                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
+                "value": 10
               },
               {
-                "icon": "general_ability.png",
-                "priority": 600,
+                "icon": "construction.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Construction time: -15% for all buildings\n\t(local province)",
+                "key": "wh2_main_effect_building_construction_time_mod_all",
+                "value": -15
+              },
+              {
+                "icon": "income.png",
+                "priority": 161,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"For the Phoenix King\", while this Mount is equipped, for Cavalry units",
-                "key": "op3_effect_enable_ability_dummy_hef_ancillary_steed",
-                "value": 1
+                "description": "Income +10% from resource buildings\n\t(local province)",
+                "key": "lvs_effect_resource_gdp_steam_powered",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "income.png",
+                "priority": 2,
+                "is_positive_value_good": true,
+                "description": "Income from Industry: +20%\n\t(local province)",
+                "key": "wh_dlc07_effect_economy_gdp_mod_industry",
+                "value": 20
+              },
+              {
+                "icon": "construction.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Construction time: -25% for all buildings\n\t(local province)",
+                "key": "wh2_main_effect_building_construction_time_mod_all",
+                "value": -25
+              },
+              {
+                "icon": "income.png",
+                "priority": 161,
+                "is_positive_value_good": true,
+                "description": "Income +20% from resource buildings\n\t(local province)",
+                "key": "lvs_effect_resource_gdp_steam_powered",
+                "value": 20
               }
             ]
           }
         ],
-        "character_skill_key": "lvs_skill_mount_hef_anointed_frostheart",
-        "tier": 7,
+        "character_skill_key": "lvs_skill_unique_guildmaster_1_steam",
+        "tier": 8,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
       },
       {
-        "key": "rws_skill_unique_mount_hef_anointed_flamespyre",
-        "image_path": "mount_great_eagle.png",
+        "key": "lvs_skill_unique_guildmaster_008",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Flamespyre Phoenix (Mount)",
-        "description": "The mystical Flamespyre Phoenix is a creature of legends, and forms a deadly pairing with the Anointed.",
+        "name": "Runic Artillery",
+        "description": "The addition of the Rune of Fire to any war machine makes it extremely useful against trolls, spirits of the forests or many kinds of undead",
         "levels": [
           {
-            "unlocked_at_rank": 10,
+            "unlocked_at_rank": 12,
             "effects": [
               {
-                "icon": "mount.png",
-                "priority": 200,
+                "icon": "ranged_damage.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Enables the Frlamespyre Phoenix mount for the Anointed",
-                "key": "lvs_effect_mount_phoenix_flamespyre",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive Ability: \"For the Phoenix King\", while this Mount is equipped, for Cavalry units",
-                "key": "op3_effect_enable_ability_dummy_hef_ancillary_steed",
+                "description": "Flaming Attacks for Artillery\n\t(Lord's army)",
+                "key": "lvs_effect_flame_attacks_runic_artillery",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "lvs_skill_mount_hef_anointed_flamespyre",
-        "tier": 8,
+        "character_skill_key": "lvs_skill_unique_guildmaster_2_artillery",
+        "tier": 9,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "lvs_skill_unique_guildmaster_009",
+        "image_path": "character_replenishment.png",
+        "is_background_skill": false,
+        "name": "Field Repairs",
+        "description": "During a campaign, a Guildmaster will always make sure to have all tools, supplies and crew needed to keep their artillery working for a very long time.",
+        "levels": [
+          {
+            "unlocked_at_rank": 12,
+            "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Replenishment: +20% for Artillery and Flying units\n\t(Lord's army)",
+                "key": "sm_rws_effect_replenishment_field_repairs",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "lvs_skill_unique_guildmaster_3_field_repairs",
+        "tier": 10,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -289,42 +362,77 @@
     ],
     [
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_0",
-        "image_path": "character_attack.png",
+        "key": "lvs_skill_yellow_guildmaster_tier_0",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Swordplayer",
-        "description": "The sword is the axis of the world and its power is absolute.",
+        "name": "Eagle Eyed",
+        "description": "Nothing can escape the Guildmaster's eyes and he has the ammo to hit it",
         "levels": [
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "armour_piercing_character.png",
-                "priority": 55,
+                "icon": "ammo.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Armour-piercing weapon damage: +12",
-                "key": "wh_main_effect_character_stat_mod_ap_damage",
-                "value": 12
-              },
-              {
-                "icon": "charge_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +5",
-                "key": "wh_main_effect_character_stat_mod_charge_add",
-                "value": 5
-              },
-              {
-                "icon": "melee_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +3",
-                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "description": "Ammunition: +3%",
+                "key": "wh_main_effect_force_unit_stat_ammunition",
                 "value": 3
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +3%",
+                "key": "wh_main_effect_force_unit_stat_missile_damage",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +6%",
+                "key": "wh_main_effect_force_unit_stat_ammunition",
+                "value": 6
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +6%",
+                "key": "wh_main_effect_force_unit_stat_missile_damage",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "ammo.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Ammunition: +10%",
+                "key": "wh_main_effect_force_unit_stat_ammunition",
+                "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +10%",
+                "key": "wh_main_effect_force_unit_stat_missile_damage",
+                "value": 10
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_combat_graceful_strikes",
+        "character_skill_key": "lvs_skill_yellow_tier_0",
         "tier": 0,
         "indent": 1,
         "points_on_creation": 0,
@@ -333,84 +441,40 @@
         "right_arrow": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_1_1",
-        "image_path": "character_damage.png",
+        "key": "lvs_skill_yellow_guildmaster_tier_1_1",
+        "image_path": "battle_defence.png",
         "is_background_skill": false,
-        "name": "Valour of Ages",
-        "description": "Panic and fear are things that happen to others.",
+        "name": "Battle Hardened",
+        "description": "The Guildmaster has lived through more than his fair share of tavern brawls",
         "levels": [
           {
-            "effects": [
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +3%",
-                "key": "wh_main_effect_character_stat_mod_melee_damage",
-                "value": 3
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 201,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +10% when fighting against Dark Elves",
-                "key": "wh2_main_effect_character_stat_mod_melee_damage_versus_dark_elves",
-                "value": 10
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +8%",
-                "key": "wh_main_effect_character_stat_mod_melee_damage",
-                "value": 8
-              },
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 108,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +15% when fighting against Greenskins, Skaven, Dark Elves, Warriors of Chaos, Norsca and Beastmen",
-                "key": "wh2_main_effect_character_stat_mod_melee_damage_versus_forces_of_destruction",
-                "value": 15
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_hef_combat_valour_of_ages",
-        "tier": 1,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_yellow_hef_anointed_tier_1_2",
-        "image_path": "character_defence.png",
-        "is_background_skill": false,
-        "name": "Hard to Hit",
-        "description": "Hand-to-hand combat is a lethal match of cut and thrust. However, it’s not all about offensive strikes; parries and other defensive moves can also win the day.",
-        "levels": [
-          {
+            "unlocked_at_rank": 1,
             "effects": [
               {
                 "icon": "defence_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6",
+                "description": "Melee defence: +4",
                 "key": "wh_main_effect_character_stat_mod_melee_defence",
-                "value": 6
+                "value": 4
               }
             ]
           },
           {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_character_stat_mod_melee_defence",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
             "effects": [
               {
                 "icon": "defence_character.png",
@@ -423,110 +487,198 @@
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_all_lord_self_hard_to_hit",
+        "character_skill_key": "lvs_skill_yellow_tier_1_1",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_yellow_guildmaster_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_yellow_guildmaster_tier_1_2",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Determined",
+        "description": "Who needs cavalry when you have stout Dwarven legs",
+        "levels": [
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Speed: +5%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Speed: +10%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Speed: +15%",
+                "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "lvs_skill_yellow_tier_1_2",
         "tier": 2,
         "indent": 1,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_0"
+          "lvs_skill_yellow_guildmaster_tier_0"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_1_3",
-        "image_path": "character_attack.png",
+        "key": "lvs_skill_yellow_guildmaster_tier_1_3",
+        "image_path": "character_general_ability.png",
         "is_background_skill": false,
-        "name": "Blade Master",
-        "description": "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
+        "name": "Brimstone Rifle",
+        "description": "The Guildmaster's rifle is a true example of his craft",
         "levels": [
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "melee_character.png",
+                "icon": "accuracy_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6",
-                "key": "wh_main_effect_character_stat_mod_melee_attack",
-                "value": 6
+                "description": "Range: +3%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 3
+              },
+              {
+                "icon": "modifier_icon_flaming.png",
+                "priority": 61,
+                "is_positive_value_good": true,
+                "description": "Enables flaming attacks",
+                "key": "wh2_main_effect_character_stat_enable_flaming_attacks",
+                "value": 1
               }
             ]
           },
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "melee_character.png",
+                "icon": "accuracy_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +12",
-                "key": "wh_main_effect_character_stat_mod_melee_attack",
-                "value": 12
+                "description": "Range: +6%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 6
+              },
+              {
+                "icon": "modifier_icon_flaming.png",
+                "priority": 61,
+                "is_positive_value_good": true,
+                "description": "Enables flaming attacks",
+                "key": "wh2_main_effect_character_stat_enable_flaming_attacks",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "accuracy_character.png",
+                "priority": 55,
+                "is_positive_value_good": true,
+                "description": "Range: +10%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 10
+              },
+              {
+                "icon": "modifier_icon_flaming.png",
+                "priority": 61,
+                "is_positive_value_good": true,
+                "description": "Enables flaming attacks",
+                "key": "wh2_main_effect_character_stat_enable_flaming_attacks",
+                "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_master",
+        "character_skill_key": "lvs_skill_yellow_tier_1_3",
         "tier": 3,
         "indent": 1,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_0"
+          "lvs_skill_yellow_guildmaster_tier_0"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_1_4",
-        "image_path": "character_morale.png",
+        "key": "lvs_skill_yellow_guildmaster_tier_1_4",
+        "image_path": "character_range.png",
         "is_background_skill": false,
-        "name": "Indomitable",
-        "description": "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
+        "name": "Dead Eye",
+        "description": "A dead eye shot is an Engineer or Thunderer that can hit a target at over five hundred (Dwarfen) paces.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "morale_character.png",
+                "icon": "accuracy_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6",
-                "key": "wh_main_effect_character_stat_mod_morale",
-                "value": 6
+                "description": "Range: +15%",
+                "key": "wh_main_effect_character_stat_mod_range",
+                "value": 15
               }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "morale_character.png",
-                "priority": 55,
-                "is_positive_value_good": true,
-                "description": "Leadership: +12",
-                "key": "wh_main_effect_character_stat_mod_morale",
-                "value": 12
-              }
+            ],
+            "blocks_character_skill_key": [
+              "wh2_dlc17_skill_dwf_master_engineer_grudge_raker"
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_all_lord_self_self_indomitable",
+        "character_skill_key": "wh_main_skill_dwf_engineer_self_dead_eye",
         "tier": 4,
         "indent": 1,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_0"
+          "lvs_skill_yellow_guildmaster_tier_0"
         ],
         "right_arrow": true,
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_2",
-        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "key": "lvs_skill_yellow_guildmaster_tier_2",
+        "image_path": "wh_main_hero_abilities_ballistics_calibration.png",
         "is_background_skill": false,
-        "name": "Foe-Seeker",
-        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "name": "Ballistics Calibration",
+        "description": " ",
         "levels": [
           {
             "effects": [
@@ -534,26 +686,26 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Foe-Seeker\"",
+                "description": "Ability: \"Ballistics Calibration\"",
                 "related_abilities": [
                   {
-                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "effect": "wh_main_effect_ability_enable_ballistics_calibration",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_character_abilities_foe_seeker",
-                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "key": "wh_main_hero_abilities_ballistics_calibration",
+                      "icon_name": "wh_main_hero_abilities_ballistics_calibration",
                       "overpower_option": "",
                       "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Foe-Seeker",
-                      "active_time": 30,
+                      "description": "Ballistics Calibration",
+                      "active_time": 50,
                       "recharge_time": 70,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 40,
                       "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
@@ -562,27 +714,26 @@
                       "target_self": false,
                       "phases": [
                         {
-                          "duration": 30,
+                          "duration": 50,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.2,
                           "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
-                              "value": 1.3,
-                              "stat": "scalar_speed",
+                              "value": 1.2,
+                              "stat": "stat_accuracy",
                               "how": "mult",
-                              "description": "x1.3 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
+                              "description": "x1.2 Accuracy",
+                              "sort_order": 9,
+                              "icon": "icon_stat_range.png"
                             },
                             {
-                              "value": 1.2,
-                              "stat": "stat_charge_bonus",
+                              "value": 1.4,
+                              "stat": "stat_reloading",
                               "how": "mult",
-                              "description": "x1.2 Charge Bonus",
-                              "sort_order": 4,
-                              "icon": "icon_stat_charge_bonus.png"
+                              "description": "x1.4 Reload Skill",
+                              "sort_order": 8,
+                              "icon": "icon_stat_reload_time.png"
                             }
                           ]
                         }
@@ -590,28 +741,28 @@
                     }
                   }
                 ],
-                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "key": "wh_main_effect_ability_enable_ballistics_calibration",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "character_skill_key": "wh_main_skill_dwf_engineer_self_ballistics_calibration",
         "tier": 5,
         "indent": 1,
         "points_on_creation": 0,
         "required_num_parents": 4,
         "visible_in_ui": true,
         "parent_subset_required": [
-          "lvs_skill_yellow_hef_anointed_tier_1_1",
-          "lvs_skill_yellow_hef_anointed_tier_1_2",
-          "lvs_skill_yellow_hef_anointed_tier_1_3",
-          "lvs_skill_yellow_hef_anointed_tier_1_4"
+          "lvs_skill_yellow_guildmaster_tier_1_1",
+          "lvs_skill_yellow_guildmaster_tier_1_2",
+          "lvs_skill_yellow_guildmaster_tier_1_3",
+          "lvs_skill_yellow_guildmaster_tier_1_4"
         ],
         "right_arrow": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_3_1",
+        "key": "lvs_skill_yellow_guildmaster_tier_3_1",
         "image_path": "character_damage.png",
         "is_background_skill": false,
         "name": "Wound-Maker",
@@ -649,55 +800,55 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_2"
+          "lvs_skill_yellow_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_3_2",
-        "image_path": "character_armour.png",
+        "key": "lvs_skill_yellow_guildmaster_tier_3_2",
+        "image_path": "character_attack.png",
         "is_background_skill": false,
-        "name": "Full Plate Armour",
-        "description": "Full-Plate armour protects the wearer from head-to-foot. Many such suits are blessed or imbued with arcane abilities.",
+        "name": "Blade Master",
+        "description": "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "armour_character.png",
+                "icon": "melee_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Armour: +7",
-                "key": "wh_main_effect_character_stat_mod_armour",
-                "value": 7
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 6
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "armour_character.png",
+                "icon": "melee_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Armour: +15",
-                "key": "wh_main_effect_character_stat_mod_armour",
-                "value": 15
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_mod_melee_attack",
+                "value": 12
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_all_lord_self_full_plate_armour",
+        "character_skill_key": "wh2_dlc11_skill_all_lord_self_blade_master",
         "tier": 7,
         "indent": 1,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_2"
+          "lvs_skill_yellow_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_3_3",
+        "key": "lvs_skill_yellow_guildmaster_tier_3_3",
         "image_path": "character_defence.png",
         "is_background_skill": false,
         "name": "Blade Shield",
@@ -735,16 +886,16 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_2"
+          "lvs_skill_yellow_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_3_4",
+        "key": "lvs_skill_yellow_guildmaster_tier_3_4",
         "image_path": "character_speed.png",
         "is_background_skill": false,
-        "name": "Expeditious Endeavour",
-        "description": "What the enemy cannot see, it cannot hit. What the enemy cannot see, it cannot survive.",
+        "name": "Relentless",
+        "description": "Dwarfs are not fast, yet they will soldier on, always moving despite any hazards encountered.",
         "levels": [
           {
             "effects": [
@@ -771,20 +922,20 @@
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_wef_lord_self_expeditious_endeavour",
+        "character_skill_key": "wh_main_skill_dwf_lord_self_relentless",
         "tier": 9,
         "indent": 1,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_yellow_hef_anointed_tier_2"
+          "lvs_skill_yellow_guildmaster_tier_2"
         ],
         "right_arrow": true,
         "boxed": true
       },
       {
-        "key": "lvs_skill_yellow_hef_anointed_tier_4",
+        "key": "lvs_skill_yellow_guildmaster_tier_4",
         "image_path": "wh_main_character_abilities_deadly_onslaught.png",
         "is_background_skill": false,
         "name": "Deadly Onslaught",
@@ -875,10 +1026,10 @@
         "required_num_parents": 4,
         "visible_in_ui": true,
         "parent_subset_required": [
-          "lvs_skill_yellow_hef_anointed_tier_3_1",
-          "lvs_skill_yellow_hef_anointed_tier_3_2",
-          "lvs_skill_yellow_hef_anointed_tier_3_3",
-          "lvs_skill_yellow_hef_anointed_tier_3_4"
+          "lvs_skill_yellow_guildmaster_tier_3_1",
+          "lvs_skill_yellow_guildmaster_tier_3_2",
+          "lvs_skill_yellow_guildmaster_tier_3_3",
+          "lvs_skill_yellow_guildmaster_tier_3_4"
         ]
       }
     ],
@@ -886,43 +1037,79 @@
     [],
     [
       {
-        "key": "lvs_skill_red_hef_anointed_tier_0",
-        "image_path": "wh2_hef_asuryan.png",
+        "key": "lvs_skill_red_guildmaster_tier_0",
+        "image_path": "battle_ammo.png",
         "is_background_skill": false,
-        "name": "Blessings of Asuryan",
-        "description": "Where the Anointed tread, the doubts and fears of their allies vanish like mist on the wind. Blows that should prove fatal are turned aside at the last moment, enemy axes shatter on contact with shields and dark sorceries collapse inward at the moment of casting",
+        "name": "Optimised Aim",
+        "description": "To the left... just one more inch... Fire!",
         "levels": [
           {
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "resistance_ward_save.png",
+                "icon": "ammo_character.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Ward save: 5%",
-                "key": "wh_main_effect_character_stat_mod_ward_save",
-                "value": 5
+                "description": "Ammunition: +20%\n\t(Lord's army)",
+                "key": "wh_main_effect_character_stat_mod_ammunition",
+                "value": 20
               },
               {
-                "icon": "religion.png",
-                "priority": 104,
+                "icon": "accuracy.png",
+                "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Untainted: +3",
-                "key": "wh_main_effect_religion_conversion_untainted",
-                "value": 3
-              },
-              {
-                "icon": "charge_reflector.png",
-                "priority": 620,
-                "is_positive_value_good": true,
-                "description": "Attribute: Expert Charge Defence",
-                "key": "wh_main_effect_unit_enable_attribute_expert_charge_defence",
+                "description": "Enables 'Optimised Aim' granting bonus accuracy to units around the Guildmaster",
+                "related_abilities": [
+                  {
+                    "effect": "lvs_effect_ability_optimised_aim",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "lvs_ability_guildmaster_optimised_aim",
+                      "icon_name": "snipe",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Optimised Aim",
+                      "passive": true,
+                      "effect_range": 40,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "recharge_time": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 20,
+                              "stat": "stat_accuracy",
+                              "how": "add",
+                              "description": "+20 Accuracy",
+                              "sort_order": 9,
+                              "icon": "icon_stat_range.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "lvs_effect_ability_optimised_aim",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "lvs_skill_red_hef_anointed_tier_0_blessings_of_asuryan",
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_0_optimised_aim",
         "tier": 0,
         "indent": 4,
         "points_on_creation": 0,
@@ -931,179 +1118,193 @@
         "right_arrow": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_1_1",
-        "image_path": "battle_attack.png",
+        "key": "lvs_skill_red_guildmaster_tier_1_1",
+        "image_path": "battle_damage.png",
         "is_background_skill": false,
-        "name": "Militia Master",
-        "description": "Turning an untrained bunch of regular citizens into effective fighting units requires a special kind of talent, and oodles of patience. ",
+        "name": "Superior Alloys",
+        "description": "The Guilds of Weaponsmiths, Armoursmiths and Engineers sometimes work together to improve their Clans-kin´s tools of war",
         "levels": [
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "defence.png",
-                "priority": 111,
+                "icon": "weapon_damage.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Spearmen, Silverin Guard, Rangers, Archers and Lothern Sea Guard units",
-                "key": "wh2_main_effect_skill_melee_defence_increase_hef_spears_seaguard_archers",
-                "value": 4
+                "description": "Weapon Strength: +3% for Miner, Warrior and Longbeard units\n\t(Lord's army)",
+                "key": "lvs_effect_damage_superior_alloys",
+                "value": 3
+              },
+              {
+                "icon": "armour.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "\"Armour: +3 for Miner, Warrior and Longbeard units\"\n\t(Lord's army)",
+                "key": "lvs_effect_armour_superior_alloys",
+                "value": 3
               }
             ]
           },
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 109,
+                "icon": "weapon_damage.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Spearmen, Silverin Guard, Rangers, Archers and Lothern Sea Guard units",
-                "key": "wh2_main_effect_skill_melee_attack_increase_hef_spears_seaguard_archers",
+                "description": "Weapon Strength: +6% for Miner, Warrior and Longbeard units\n\t(Lord's army)",
+                "key": "lvs_effect_damage_superior_alloys",
                 "value": 6
               },
               {
-                "icon": "defence.png",
-                "priority": 111,
+                "icon": "armour.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Spearmen, Silverin Guard, Rangers, Archers and Lothern Sea Guard units",
-                "key": "wh2_main_effect_skill_melee_defence_increase_hef_spears_seaguard_archers",
+                "description": "\"Armour: +6 for Miner, Warrior and Longbeard units\"\n\t(Lord's army)",
+                "key": "lvs_effect_armour_superior_alloys",
                 "value": 6
               }
             ]
           },
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 109,
+                "icon": "weapon_damage.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Spearmen, Silverin Guard, Rangers, Archers and Lothern Sea Guard units",
-                "key": "wh2_main_effect_skill_melee_attack_increase_hef_spears_seaguard_archers",
-                "value": 8
+                "description": "Weapon Strength: +9% for Miner, Warrior and Longbeard units\n\t(Lord's army)",
+                "key": "lvs_effect_damage_superior_alloys",
+                "value": 9
               },
               {
-                "icon": "defence.png",
-                "priority": 111,
+                "icon": "armour.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Spearmen, Silverin Guard, Rangers, Archers and Lothern Sea Guard units",
-                "key": "wh2_main_effect_skill_melee_defence_increase_hef_spears_seaguard_archers",
-                "value": 8
+                "description": "\"Armour: +10 for Miner, Warrior and Longbeard units\"\n\t(Lord's army)",
+                "key": "lvs_effect_armour_superior_alloys",
+                "value": 10
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_army_buff_basic_infantry",
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_1_superior_alloys",
         "tier": 1,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_0"
+          "lvs_skill_red_guildmaster_tier_0"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_1_2",
-        "image_path": "battle_ammo.png",
+        "key": "lvs_skill_red_guildmaster_tier_1_2",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Bow Master",
-        "description": "Missile combat isn't always about attacking; knowing how to defend also pays dividends.",
+        "name": "First Rank, Fire! Second Rank, Fire!",
+        "description": "Dont let any grobi reach our lines!",
         "levels": [
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "ammo.png",
-                "priority": 201,
+                "icon": "ranged_damage.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +8% for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units",
-                "key": "wh2_main_effect_tech_ammunition_increase_hef_archer_seaguard_boltthrower_sister_shadow",
-                "value": 8
+                "description": "Missile Strength: +4% for ranged Infantry units\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_first_rank",
+                "value": 4
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload Time Reduction: +5% for ranged Infantry units\n\t(Lord's army)",
+                "key": "lvs_effect_reload_first_rank",
+                "value": 5
               }
             ]
           },
           {
+            "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "ammo.png",
-                "priority": 201,
+                "icon": "ranged_damage.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +12% for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units",
-                "key": "wh2_main_effect_tech_ammunition_increase_hef_archer_seaguard_boltthrower_sister_shadow",
+                "description": "Missile Strength: +8% for ranged Infantry units\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_first_rank",
+                "value": 8
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload Time Reduction: +10% for ranged Infantry units\n\t(Lord's army)",
+                "key": "lvs_effect_reload_first_rank",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile Strength: +12% for ranged Infantry units\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_first_rank",
                 "value": 12
               },
               {
-                "icon": "icon_stat_reload_time_force.png",
+                "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +7% for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units",
-                "key": "wh2_main_effect_tech_missile_rate_of_fire_increase_hef_archer_seaguard_boltthrower_sisters_shadow",
-                "value": 7
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "ammo.png",
-                "priority": 201,
-                "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units",
-                "key": "wh2_main_effect_tech_ammunition_increase_hef_archer_seaguard_boltthrower_sister_shadow",
-                "value": 20
-              },
-              {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units",
-                "key": "wh2_main_effect_tech_missile_rate_of_fire_increase_hef_archer_seaguard_boltthrower_sisters_shadow",
-                "value": 10
+                "description": "Reload Time Reduction: +15% for ranged Infantry units\n\t(Lord's army)",
+                "key": "lvs_effect_reload_first_rank",
+                "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_army_buff_missile",
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_1_first_rank",
         "tier": 2,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_0"
+          "lvs_skill_red_guildmaster_tier_0"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_1_3",
-        "image_path": "mount_ithilmar_chariot.png",
+        "key": "lvs_skill_red_guildmaster_tier_1_3",
+        "image_path": "battle_general_ability.png",
         "is_background_skill": false,
-        "name": "Cavalry Master",
-        "description": "The Anointed has learned to utilise the might of the Ithlimar Chariots effectively, there is not much that can stand in their way.",
+        "name": "Tested and Reliable",
+        "description": "Not everything new is bad, but Dwarfs never stop improving their oldest weapons",
         "levels": [
           {
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "charge.png",
+                "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +3 for Ellyrian Reavers and Chariots",
-                "key": "lvs_effect_charge_chariots",
-                "value": 3
+                "description": "\"Missile damage: +4% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_tested_reliable",
+                "value": 4
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 110,
+                "icon": "accuracy.png",
+                "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Ellyrian Reavers and Chariot units",
-                "key": "lvs_effect_damage_chariots",
-                "value": 3
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +3% for Chariot units",
-                "key": "lvs_effect_speed_chariots",
+                "description": "\"Range: +3% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
+                "key": "lvs_effect_range_tested_reliable",
                 "value": 3
               }
             ]
@@ -1112,27 +1313,19 @@
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "charge.png",
+                "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +6 for Ellyrian Reavers and Chariots",
-                "key": "lvs_effect_charge_chariots",
-                "value": 6
+                "description": "\"Missile damage: +8% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_tested_reliable",
+                "value": 8
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 110,
+                "icon": "accuracy.png",
+                "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Ellyrian Reavers and Chariot units",
-                "key": "lvs_effect_damage_chariots",
-                "value": 6
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +6% for Chariot units",
-                "key": "lvs_effect_speed_chariots",
+                "description": "\"Range: +6% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
+                "key": "lvs_effect_range_tested_reliable",
                 "value": 6
               }
             ]
@@ -1141,279 +1334,59 @@
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "charge.png",
+                "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +10 for Ellyrian Reavers and Chariots",
-                "key": "lvs_effect_charge_chariots",
-                "value": 10
+                "description": "\"Missile damage: +12% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_tested_reliable",
+                "value": 12
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 110,
+                "icon": "accuracy.png",
+                "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for Ellyrian Reavers and Chariot units",
-                "key": "lvs_effect_damage_chariots",
-                "value": 10
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +10% for Chariot units",
-                "key": "lvs_effect_speed_chariots",
-                "value": 10
+                "description": "\"Range: +9% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
+                "key": "lvs_effect_range_tested_reliable",
+                "value": 9
               }
             ]
           }
         ],
-        "character_skill_key": "lvs_skill_red_hef_anointed_tier_1_chariot_master",
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_1_tested_reliable",
         "tier": 3,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_0"
+          "lvs_skill_red_guildmaster_tier_0"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_1_4",
-        "image_path": "wh2_hef_vaul.png",
+        "key": "lvs_skill_red_guildmaster_tier_1_4",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Boons of Vaul",
-        "description": "Those that risk their lives charging against the most hardened and destructive of their enemies need the best gear if they want to survive for long. Fortunately, Ulthuan´s gods are always willing to help the children of Asuryan",
+        "name": "Alchemical Fury",
+        "description": "No dragon can breath a flame hotter than this one",
         "levels": [
           {
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "charge.png",
+                "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +5 for Silver Helms and Dragon Princes",
-                "key": "lvs_effect_charge_vaul",
-                "value": 5
+                "description": "Missile damage: +4% for Irondrakes and Flame Cannons\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_alchemical_fury",
+                "value": 4
               },
               {
-                "icon": "armour.png",
-                "priority": 110,
+                "icon": "accuracy.png",
+                "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Armour: +3 for Silver Helms and Dragon Princes units",
-                "key": "lvs_effect_armour_vaul",
-                "value": 3
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +3% for Silver Helms and Dragon Princes units",
-                "key": "lvs_effect_speed_vaul",
-                "value": 3
-              }
-            ]
-          },
-          {
-            "unlocked_at_rank": 1,
-            "effects": [
-              {
-                "icon": "charge.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Charge Bonus: +10 for Silver Helms and Dragon Princes",
-                "key": "lvs_effect_charge_vaul",
-                "value": 10
-              },
-              {
-                "icon": "armour.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Armour: +6 for Silver Helms and Dragon Princes units",
-                "key": "lvs_effect_armour_vaul",
-                "value": 6
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +6% for Silver Helms and Dragon Princes units",
-                "key": "lvs_effect_speed_vaul",
-                "value": 6
-              }
-            ]
-          },
-          {
-            "unlocked_at_rank": 1,
-            "effects": [
-              {
-                "icon": "charge.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Charge Bonus: +15 for Silver Helms and Dragon Princes",
-                "key": "lvs_effect_charge_vaul",
-                "value": 15
-              },
-              {
-                "icon": "armour.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Armour: +10 for Silver Helms and Dragon Princes units",
-                "key": "lvs_effect_armour_vaul",
-                "value": 10
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +10% for Silver Helms and Dragon Princes units",
-                "key": "lvs_effect_speed_vaul",
-                "value": 10
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "lvs_skill_red_hef_anointed_tier_1_boons_of_vaul",
-        "tier": 4,
-        "indent": 4,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_red_hef_anointed_tier_1_5",
-        "image_path": "mount_great_eagle.png",
-        "is_background_skill": false,
-        "name": "Allies of Old",
-        "description": "When the island continent is in danger, not only the Asur march to defend their nation. For thousands of years, their stalwart allies have fought as hard as them to preserve the balance and harmony of Ulthuan",
-        "levels": [
-          {
-            "unlocked_at_rank": 1,
-            "effects": [
-              {
-                "icon": "charge.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Charge Bonus: +5 for Flying and Lion units",
-                "key": "lvs_effect_charge_sky_masters",
-                "value": 5
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Flying and Lion units",
-                "key": "lvs_effect_damage_sky_masters",
-                "value": 3
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +3% for Flying and Lion units",
-                "key": "lvs_effect_speed_sky_masters",
-                "value": 3
-              }
-            ]
-          },
-          {
-            "unlocked_at_rank": 1,
-            "effects": [
-              {
-                "icon": "charge.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Charge Bonus: +10 for Flying and Lion units",
-                "key": "lvs_effect_charge_sky_masters",
-                "value": 10
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Flying and Lion units",
-                "key": "lvs_effect_damage_sky_masters",
-                "value": 6
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +6% for Flying and Lion units",
-                "key": "lvs_effect_speed_sky_masters",
-                "value": 6
-              }
-            ]
-          },
-          {
-            "unlocked_at_rank": 1,
-            "effects": [
-              {
-                "icon": "charge.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Charge Bonus: +15 for Flying and Lion units",
-                "key": "lvs_effect_charge_sky_masters",
-                "value": 15
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for Flying and Lion units",
-                "key": "lvs_effect_damage_sky_masters",
-                "value": 10
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 115,
-                "is_positive_value_good": true,
-                "description": "Speed: +10% for Flying and Lion units",
-                "key": "lvs_effect_speed_sky_masters",
-                "value": 10
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "lvs_skill_red_hef_anointed_tier_1_sky_master",
-        "tier": 5,
-        "indent": 4,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_red_hef_anointed_tier_1_6",
-        "image_path": "mount_great_eagle.png",
-        "is_background_skill": false,
-        "name": "Protectors of Ulthuan",
-        "description": "After fighting countless battles alongside the elite infantry of Ulthuan no Anointed of Asuryan will ever forget the lessons he has learned nor he will waste any chance to put them to good use",
-        "levels": [
-          {
-            "unlocked_at_rank": 1,
-            "effects": [
-              {
-                "icon": "armour.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Armour: +3 for elite Infantry units",
-                "key": "lvs_effect_armour_protectors",
-                "value": 3
-              },
-              {
-                "icon": "weapon_damage.png",
-                "priority": 110,
-                "is_positive_value_good": true,
-                "description": "Weapon Strength: +4% for elite Infantry units",
-                "key": "lvs_effect_damage_protectors",
+                "description": "Range: +4% for Irondrakes and Flame Cannons\n\t(Lord's army)",
+                "key": "lvs_effect_range_alchemical_fury",
                 "value": 4
               }
             ]
@@ -1422,20 +1395,20 @@
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "armour.png",
-                "priority": 110,
+                "icon": "ranged_damage.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for elite Infantry units",
-                "key": "lvs_effect_armour_protectors",
-                "value": 6
+                "description": "Missile damage: +8% for Irondrakes and Flame Cannons\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_alchemical_fury",
+                "value": 8
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 110,
+                "icon": "accuracy.png",
+                "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +7% for elite Infantry units",
-                "key": "lvs_effect_damage_protectors",
-                "value": 7
+                "description": "Range: +8% for Irondrakes and Flame Cannons\n\t(Lord's army)",
+                "key": "lvs_effect_range_alchemical_fury",
+                "value": 8
               }
             ]
           },
@@ -1443,38 +1416,202 @@
             "unlocked_at_rank": 1,
             "effects": [
               {
-                "icon": "armour.png",
-                "priority": 110,
+                "icon": "ranged_damage.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for elite Infantry units",
-                "key": "lvs_effect_armour_protectors",
-                "value": 10
+                "description": "Missile damage: +12% for Irondrakes and Flame Cannons\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_alchemical_fury",
+                "value": 12
               },
+              {
+                "icon": "accuracy.png",
+                "priority": 203,
+                "is_positive_value_good": true,
+                "description": "Range: +12% for Irondrakes and Flame Cannons\n\t(Lord's army)",
+                "key": "lvs_effect_range_alchemical_fury",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_1_alchemical_fury",
+        "tier": 4,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_red_guildmaster_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_red_guildmaster_tier_1_5",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Consummate Craftmanship",
+        "description": "It´s Dwarf-crafted! What did you expect?",
+        "levels": [
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
               {
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for elite Infantry units",
-                "key": "lvs_effect_damage_protectors",
+                "description": "Weapon Strength: +3% for Slayer, Hammerer and Ironbreaker units\n\t(Lord's army)",
+                "key": "lvs_effect_damage_consummate_craftmanship",
+                "value": 3
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3 for Slayers, Hammerers and Ironbreakers\n\t(Lord's army)",
+                "key": "lvs_effect_defence_consummate_craftmanship",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Weapon Strength: +6% for Slayer, Hammerer and Ironbreaker units\n\t(Lord's army)",
+                "key": "lvs_effect_damage_consummate_craftmanship",
+                "value": 6
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6 for Slayers, Hammerers and Ironbreakers\n\t(Lord's army)",
+                "key": "lvs_effect_defence_consummate_craftmanship",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Weapon Strength: +9% for Slayer, Hammerer and Ironbreaker units\n\t(Lord's army)",
+                "key": "lvs_effect_damage_consummate_craftmanship",
+                "value": 9
+              },
+              {
+                "icon": "defence.png",
+                "priority": 111,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +10 for Slayers, Hammerers and Ironbreakers\n\t(Lord's army)",
+                "key": "lvs_effect_defence_consummate_craftmanship",
                 "value": 10
               }
             ]
           }
         ],
-        "character_skill_key": "lvs_skill_red_hef_anointed_tier_1_protectors_of_ulthuan",
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_1_consummate_craftmanship",
+        "tier": 5,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_red_guildmaster_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_red_guildmaster_tier_1_6",
+        "image_path": "battle_speed.png",
+        "is_background_skill": false,
+        "name": "Bring More Gundpowder!",
+        "description": "Treat it with respect! This cannon has been killing grobi since your grandfather was a Shortbeard!",
+        "levels": [
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile damage: +4% for Canons and Organ Guns\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_more_gundpowder",
+                "value": 4
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload Time Reduction: +5% for Canons and Organ Guns units\n\t(Lord's army)",
+                "key": "lvs_effect_reload_more_gunpowder",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile damage: +8% for Canons and Organ Guns\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_more_gundpowder",
+                "value": 8
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload Time Reduction: +10% for Canons and Organ Guns units\n\t(Lord's army)",
+                "key": "lvs_effect_reload_more_gunpowder",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 1,
+            "effects": [
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile damage: +12% for Canons and Organ Guns\n\t(Lord's army)",
+                "key": "lvs_effect_ranged_damage_more_gundpowder",
+                "value": 12
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload Time Reduction: +15% for Canons and Organ Guns units\n\t(Lord's army)",
+                "key": "lvs_effect_reload_more_gunpowder",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "lvs_skill_red_guildmaster_tier_1_bring_more_gunpowder",
         "tier": 6,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_0"
+          "lvs_skill_red_guildmaster_tier_0"
         ],
         "right_arrow": true,
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_2",
+        "key": "lvs_skill_red_guildmaster_tier_2",
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
@@ -1546,206 +1683,206 @@
         "required_num_parents": 6,
         "visible_in_ui": true,
         "parent_subset_required": [
-          "lvs_skill_red_hef_anointed_tier_1_1",
-          "lvs_skill_red_hef_anointed_tier_1_2",
-          "lvs_skill_red_hef_anointed_tier_1_3",
-          "lvs_skill_red_hef_anointed_tier_1_4",
-          "lvs_skill_red_hef_anointed_tier_1_5",
-          "lvs_skill_red_hef_anointed_tier_1_6"
+          "lvs_skill_red_guildmaster_tier_1_1",
+          "lvs_skill_red_guildmaster_tier_1_2",
+          "lvs_skill_red_guildmaster_tier_1_3",
+          "lvs_skill_red_guildmaster_tier_1_4",
+          "lvs_skill_red_guildmaster_tier_1_5",
+          "lvs_skill_red_guildmaster_tier_1_6"
         ],
         "right_arrow": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_3_1",
-        "image_path": "battle_damage.png",
+        "key": "lvs_skill_red_guildmaster_tier_3_1",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
-        "name": "Immovable Force",
-        "description": "Like a wall of the hardest stone imaginable - such is their ability to withstand attack.",
+        "name": "Blessed by Grungni",
+        "description": "Those who pass the trials of the Ancestor God have proven their honour without question.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "weapon_damage.png",
-                "priority": 700,
+                "icon": "armour.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Spearmen, Silverin Guard, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_melee_damage_increase_hef_spear_silver_swordmaster_lions_rank7",
-                "value": 8
+                "description": "Armour: +12 for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_armour_increase_dwf_miners_warriors_longbeards_rank7",
+                "value": 12
               },
               {
                 "icon": "defence.png",
-                "priority": 702,
+                "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Spearmen, Silverin Guard, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_melee_defence_increase_hef_spear_silver_swordmaster_lions_rank7",
+                "description": "Melee defence: +5 for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_melee_defence_increase_dwf_miners_warriors_longbeards_rank7",
                 "value": 5
               },
               {
                 "icon": "resistance_magic.png",
                 "priority": 704,
                 "is_positive_value_good": true,
-                "description": "Magic resistance: 15% for Spearmen, Silverin Guard, Silver Helms, Swordmasters of Hoeth and White Lions of Chrace units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_magic_resistance_hef_spear_silver_swordmaster_lions_rank7",
+                "description": "Magic resistance: 15% for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_magic_resistance_increase_dwf_miners_warriors_longbeards_rank7",
                 "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_army_buff_avalanche_of_granite",
+        "character_skill_key": "wh2_dlc11_skill_dwf_army_buff_blessed_by_grungni",
         "tier": 8,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_2"
+          "lvs_skill_red_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_3_2",
+        "key": "lvs_skill_red_guildmaster_tier_3_2",
         "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Favourable Winds",
-        "description": "When the gale always blows in the direction of your choosing, failure becomes a rare event indeed.",
+        "name": "Dawi Firepower",
+        "description": "None know the strength of the Dawi better than those who've suffered their firepower firsthand.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "ranged_damage.png",
-                "priority": 701,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Archers and Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_missile_damage_increase_hef_archers_seaguard_sister_shadow_rank7",
-                "value": 10
-              },
-              {
-                "icon": "armour.png",
-                "priority": 702,
-                "is_positive_value_good": true,
-                "description": "Armour: +10 for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_armour_increase_hef_archers_seaguard_boltthrower_sister_shadow_rank7",
-                "value": 10
-              },
-              {
                 "icon": "resistance_missile.png",
-                "priority": 706,
+                "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 10% for Archers, Lothern Sea Guard, Shadow Warriors, Shadow-walkers, Sisters of Avelorn and Bolt Thrower units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_ward_save_missile_hef_archers_seaguard_boltthrower_sister_shadow_rank7",
+                "description": "Missile resistance: 15% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_missile_resistance_increase_dwf_rangers_quarrellers_thunderers_irondrakes_gyrocopters_rank7",
+                "value": 15
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +10% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter and Gyrobomber units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_missile_damage_increase_dwf_rangers_quarrellers_thunderers_irondrakes_gyrocopters_rank7",
+                "value": 10
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 202,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_reload_increase_dwf_rangers_quarrellers_thunderers_irondrakes_gyrocopters_rank7",
                 "value": 10
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_army_buff_favourable_winds",
+        "character_skill_key": "wh2_dlc11_skill_dwf_army_buff_dawi_firepower",
         "tier": 9,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_2"
+          "lvs_skill_red_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_3_3",
-        "image_path": "battle_speed.png",
+        "key": "lvs_skill_red_guildmaster_tier_3_3",
+        "image_path": "battle_damage.png",
         "is_background_skill": false,
-        "name": "Silver Torrent",
-        "description": "Speed, agility and control - all must be mastered if your crushing tide is to break perfectly upon enemy shores.",
+        "name": "Honoured by Grimnir",
+        "description": "All Dwarfs worship Grimnir, but only a select few warriors receive his personal recognition.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "battle_movement.png",
-                "priority": 700,
+                "icon": "resistance_physical.png",
+                "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Rangers, Great Eagle, War Lion, Chariot and Ellyrian Reavers units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_movement_speed_hef_eagle_chariot_reavers_rank7",
-                "value": 10
+                "description": "Physical resistance: 15% for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_physical_resistance_increase_dwf_slayers_hammerers_ironbreakers_rank7",
+                "value": 15
               },
               {
                 "icon": "weapon_damage.png",
-                "priority": 703,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Rangers, Great Eagle, War Lion, Chariot and Ellyrian Reavers units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_melee_damage_increase_hef_eagle_chariot_reavers_rank7",
+                "description": "Weapon strength: +10% for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_weapon_damage_increase_dwf_slayers_hammerers_ironbreakers_rank7",
                 "value": 10
               },
               {
-                "icon": "resistance_missile.png",
-                "priority": 706,
+                "icon": "melee.png",
+                "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Rangers, Great Eagle, War Lion, Chariot and Ellyrian Reavers units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_ward_save_missile_hef_eagle_chariot_reavers_rank7",
-                "value": 15
+                "description": "Melee attack: +5 for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_melee_attack_increase_dwf_slayers_hammerers_ironbreakers_rank7",
+                "value": 5
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_army_buff_silver_torrent",
+        "character_skill_key": "wh2_dlc11_skill_dwf_army_buff_honoured_by_grimnir",
         "tier": 10,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_2"
+          "lvs_skill_red_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_3_4",
-        "image_path": "battle_defence.png",
+        "key": "lvs_skill_red_guildmaster_tier_3_4",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Heart of the Flame",
-        "description": "The very centre of the fire always burns the hottest.",
+        "name": "Morgrim’s Favoured",
+        "description": "Morgrim's favour is not handed out on a whim; this god blesses only the truest disciples of Dawi engineering.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "armour.png",
-                "priority": 701,
+                "icon": "ranged_damage.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Dragon, Phoenixes, Dragon Princes and Phoenix Guard units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_armour_increase_hef_dragon_phoenix_related_rank7",
+                "description": "Missile strength: +10% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun and Flame Cannon units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_missile_damage_increase_dwf_all_artillery_rank7",
                 "value": 10
               },
               {
-                "icon": "defence.png",
-                "priority": 702,
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Dragon, Phoenixes, Dragon Princes and Phoenix Guard units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_melee_defence_increase_hef_dragon_phoenix_related_rank7",
-                "value": 5
+                "description": "Reload time reduction: +10% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_reload_increase_dwf_all_artillery_rank7",
+                "value": 10
               },
               {
-                "icon": "resistance_physical.png",
-                "priority": 706,
+                "icon": "ammo.png",
+                "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 5% for Dragon, Phoenixes, Dragon Princes and Phoenix Guard units (Rank 7 and above)",
-                "key": "wh2_main_effect_skill_ward_save_physical_hef_dragon_phoenix_related_rank7",
-                "value": 5
+                "description": "Ammunition: +20% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_skill_ammo_increase_dwf_all_artillery_rank7",
+                "value": 20
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_army_buff_heart_of_the_flame",
+        "character_skill_key": "wh2_dlc11_skill_dwf_army_buff_morgrims_favoured",
         "tier": 11,
         "indent": 4,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_red_hef_anointed_tier_2"
+          "lvs_skill_red_guildmaster_tier_2"
         ],
         "right_arrow": true,
         "boxed": true
       },
       {
-        "key": "lvs_skill_red_hef_anointed_tier_4",
+        "key": "lvs_skill_red_guildmaster_tier_4",
         "image_path": "wh_main_character_abilities_stand_your_ground.png",
         "is_background_skill": false,
         "name": "Stand Your Ground!",
@@ -1833,14 +1970,14 @@
         "required_num_parents": 1,
         "visible_in_ui": true,
         "parent_subset_required": [
-          "lvs_skill_red_hef_anointed_tier_3_1",
-          "lvs_skill_red_hef_anointed_tier_3_2",
-          "lvs_skill_red_hef_anointed_tier_3_3",
-          "lvs_skill_red_hef_anointed_tier_3_4"
+          "lvs_skill_red_guildmaster_tier_3_1",
+          "lvs_skill_red_guildmaster_tier_3_2",
+          "lvs_skill_red_guildmaster_tier_3_3",
+          "lvs_skill_red_guildmaster_tier_3_4"
         ]
       },
       {
-        "key": "fsd_0000257",
+        "key": "fsd_0000256",
         "image_path": "character_health.png",
         "is_background_skill": false,
         "name": "Radious Fake Skill Dump",
@@ -3058,7 +3195,7 @@
     ],
     [
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_0",
+        "key": "lvs_skill_blue_guildmaster_tier_0",
         "image_path": "campaign_movement.png",
         "is_background_skill": false,
         "name": "Route Marcher",
@@ -3086,213 +3223,32 @@
         "right_arrow": true
       },
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_1_1",
-        "image_path": "campaign_public_order.png",
+        "key": "lvs_skill_blue_guildmaster_tier_1_1",
+        "image_path": "campaign_subterranean.png",
         "is_background_skill": false,
-        "name": "Iron Disciplinarian",
-        "description": "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
+        "name": "Miner's Instinct",
+        "description": "This Dwarf spent time in the pits, gaining a Miner's intuition of the dangers and prey to be found in the dark.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +1",
-                "key": "wh_main_effect_public_order_characters",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +2",
-                "key": "wh_main_effect_public_order_characters",
-                "value": 2
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "public_order.png",
-                "priority": 6,
-                "is_positive_value_good": true,
-                "description": "Public order: +3",
-                "key": "wh_main_effect_public_order_characters",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_emp_lord_campaign_iron_disciplinarian",
-        "tier": 1,
-        "indent": 5,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_blue_hef_anointed_tier_1_2",
-        "image_path": "campaign_trade.png",
-        "is_background_skill": false,
-        "name": "Merchant Lord",
-        "description": "“Underlying most arguments against the free market is a lack of belief in freedom itself.”",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "trade_agreement.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Additional tradable resources produced: +2%",
-                "key": "wh_main_effect_economy_trade_good_commodity_mod",
-                "value": 2
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "trade_agreement.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Additional tradable resources produced: +5%",
-                "key": "wh_main_effect_economy_trade_good_commodity_mod",
-                "value": 5
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "trade_agreement.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Additional tradable resources produced: +9%",
-                "key": "wh_main_effect_economy_trade_good_commodity_mod",
-                "value": 9
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh2_main_skill_hef_campaign_merchant_lord",
-        "tier": 2,
-        "indent": 5,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_blue_hef_anointed_tier_1_3",
-        "image_path": "campaign_military_spending.png",
-        "is_background_skill": false,
-        "name": "Bonded Service",
-        "description": "The Lords rule, the peasants toil. Nothing has changed in over a thousand years.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "treasury.png",
-                "priority": 106,
-                "is_positive_value_good": false,
-                "description": "Recruitment cost: -3%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
-                "value": -3
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "treasury.png",
-                "priority": 106,
-                "is_positive_value_good": false,
-                "description": "Recruitment cost: -8%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
-                "value": -8
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "treasury.png",
-                "priority": 106,
-                "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
-                "value": -15
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_brt_lord_campaign_bonded_service",
-        "tier": 3,
-        "indent": 5,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_blue_hef_anointed_tier_1_4",
-        "image_path": "campaign_ambush.png",
-        "is_background_skill": false,
-        "name": "Wary",
-        "description": "This warrior has been ambushed previously and got themselves and many of their compatriots away safely. Such things make one naturally suspicious.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "agent.png",
+                "icon": "subterranean.png",
                 "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -3%",
-                "key": "wh_main_effect_agent_action_success_chance_enemy",
-                "value": -3
-              },
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +8%",
-                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 8
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +6%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 6
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "agent.png",
+                "icon": "subterranean.png",
                 "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -8%",
-                "key": "wh_main_effect_agent_action_success_chance_enemy",
-                "value": -8
-              },
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
-                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +16%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
                 "value": 16
               }
             ]
@@ -3300,45 +3256,250 @@
           {
             "effects": [
               {
-                "icon": "agent.png",
+                "icon": "subterranean.png",
                 "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -15%",
-                "key": "wh_main_effect_agent_action_success_chance_enemy",
-                "value": -15
-              },
-              {
-                "icon": "icon_effects_ambush.png",
-                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +30%",
-                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +30%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
                 "value": 30
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_def_campaign_wary",
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_miners_instinct",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_blue_guildmaster_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_blue_guildmaster_tier_1_2",
+        "image_path": "campaign_siege_attack.png",
+        "is_background_skill": false,
+        "name": "Wall Breaker",
+        "description": "\"I have seen better lavatory walls than this - I'll have it down by the morrow, that's a pledge!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "siege_attack.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Enemy siege holdout time: -1 (minimum 1 turn)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_holdout_time",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "disaster.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Attrition suffered by defender: +8% when laying siege\n\t(local region)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
+                "value": 8
+              },
+              {
+                "icon": "siege_attack.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Enemy siege holdout time: -1 (minimum 1 turn)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_holdout_time",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "disaster.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Attrition suffered by defender: +15% when laying siege\n\t(local region)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
+                "value": 15
+              },
+              {
+                "icon": "siege_attack.png",
+                "priority": 102,
+                "is_positive_value_good": false,
+                "description": "Enemy siege holdout time: -1 (minimum 1 turn)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_holdout_time",
+                "value": -1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_wall_breaker",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_blue_guildmaster_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_blue_guildmaster_tier_1_3",
+        "image_path": "campaign_untainted.png",
+        "is_background_skill": false,
+        "name": "Pure-Beard",
+        "description": "A Dwarf with a fine beard is as Dawi as they come.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "religion.png",
+                "priority": 104,
+                "is_positive_value_good": true,
+                "description": "Untainted: +1\n\t(local province)",
+                "key": "wh_main_effect_religion_conversion_untainted",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "religion.png",
+                "priority": 104,
+                "is_positive_value_good": true,
+                "description": "Untainted: +2\n\t(local province)",
+                "key": "wh_main_effect_religion_conversion_untainted",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "religion.png",
+                "priority": 104,
+                "is_positive_value_good": true,
+                "description": "Untainted: +3\n\t(local province)",
+                "key": "wh_main_effect_religion_conversion_untainted",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_pure-beard",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_blue_guildmaster_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_blue_guildmaster_tier_1_4",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Mason",
+        "description": "Lords close to the powerful Masons' Guild will get discounts for labour and materials.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Construction cost: -2% for Province Capital/Settlement buildings\n\t(local region)",
+                "key": "wh_main_effect_building_construction_cost_mod_settlement",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +1\n\t(local province)",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 1
+              },
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Construction cost: -5% for Province Capital/Settlement buildings\n\t(local region)",
+                "key": "wh_main_effect_building_construction_cost_mod_settlement",
+                "value": -5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 6,
+                "is_positive_value_good": true,
+                "description": "Public order: +2\n\t(local province)",
+                "key": "wh_main_effect_public_order_characters",
+                "value": 2
+              },
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Construction cost: -9% for Province Capital/Settlement buildings\n\t(local region)",
+                "key": "wh_main_effect_building_construction_cost_mod_settlement",
+                "value": -9
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_mason",
         "tier": 4,
         "indent": 5,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_0"
+          "lvs_skill_blue_guildmaster_tier_0"
         ],
         "right_arrow": true,
         "boxed": true
       },
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_2",
-        "image_path": "campaign_experience.png",
+        "key": "lvs_skill_blue_guildmaster_tier_2",
+        "image_path": "campaign_wound_time.png",
         "is_background_skill": false,
-        "name": "Draftmaster",
-        "description": "Someone has to ensure the numbers and quality of recruits remain high.",
+        "name": "Iron-Willed",
+        "description": "Such a Dawi does not care for being wounded - by his will alone he continues to fight.",
         "levels": [
           {
             "effects": [
+              {
+                "icon": "replenishment.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Casualty replenishment rate: +30% for Lords\n\t(Lord's army)",
+                "key": "wh2_main_effect_replenishment_lords",
+                "value": 30
+              },
+              {
+                "icon": "wound_time.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Wound recovery time: -1",
+                "key": "wh_main_effect_character_wound_recovery_time_mod",
+                "value": -1
+              },
               {
                 "icon": "experience.png",
                 "priority": 117,
@@ -3346,34 +3507,26 @@
                 "description": "Recruit rank: +1 for all units",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
-              },
-              {
-                "icon": "army.png",
-                "priority": 270,
-                "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_def_campaign_draftmaster",
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_iron-willed",
         "tier": 5,
         "indent": 5,
         "points_on_creation": 0,
         "required_num_parents": 4,
         "visible_in_ui": true,
         "parent_subset_required": [
-          "lvs_skill_blue_hef_anointed_tier_1_1",
-          "lvs_skill_blue_hef_anointed_tier_1_2",
-          "lvs_skill_blue_hef_anointed_tier_1_3",
-          "lvs_skill_blue_hef_anointed_tier_1_4"
+          "lvs_skill_blue_guildmaster_tier_1_1",
+          "lvs_skill_blue_guildmaster_tier_1_2",
+          "lvs_skill_blue_guildmaster_tier_1_3",
+          "lvs_skill_blue_guildmaster_tier_1_4"
         ],
         "right_arrow": true
       },
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_3_1",
+        "key": "lvs_skill_blue_guildmaster_tier_3_1",
         "image_path": "campaign_subterfuge.png",
         "is_background_skill": false,
         "name": "Lightning Strike",
@@ -3407,71 +3560,16 @@
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_2"
+          "lvs_skill_blue_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_3_2",
-        "image_path": "campaign_military_spending.png",
+        "key": "lvs_skill_blue_guildmaster_tier_3_2",
+        "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Quartermaster",
-        "description": "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "military_spending.png",
-                "priority": 70,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -3% for all units",
-                "key": "wh_main_effect_force_all_campaign_upkeep",
-                "value": -3
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "military_spending.png",
-                "priority": 70,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -8% for all units",
-                "key": "wh_main_effect_force_all_campaign_upkeep",
-                "value": -8
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "military_spending.png",
-                "priority": 70,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -15% for all units",
-                "key": "wh_main_effect_force_all_campaign_upkeep",
-                "value": -15
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_emp_lord_campaign_quartermaster",
-        "tier": 7,
-        "indent": 5,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_2"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "lvs_skill_blue_hef_anointed_tier_3_3",
-        "image_path": "campaign_replenishment.png",
-        "is_background_skill": false,
-        "name": "Elven Healing",
-        "description": "The ancient Asur arts teach one how to heal as well as how to harm.",
+        "name": "Reassuring Presence",
+        "description": "The presence of this Lord ensures a measure of calm, reducing panic and desertion amongst followers.",
         "levels": [
           {
             "effects": [
@@ -3479,15 +3577,62 @@
                 "icon": "disaster.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -3% casualties suffered from all attrition",
+                "description": "Attrition: -3% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -3
-              },
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "disaster.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Attrition: -8% casualties suffered from all attrition\n\t(Lord's army)",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "disaster.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Attrition: -15% casualties suffered from all attrition\n\t(Lord's army)",
+                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_lord_all_campaign_reassuring_presence",
+        "tier": 7,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "lvs_skill_blue_guildmaster_tier_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "lvs_skill_blue_guildmaster_tier_3_3",
+        "image_path": "campaign_replenishment.png",
+        "is_background_skill": false,
+        "name": "Inspirational Leader",
+        "description": "\"All Dwarfs to me! We have grudges to settle - Grimnir demands it!\"",
+        "levels": [
+          {
+            "effects": [
               {
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -3496,18 +3641,10 @@
           {
             "effects": [
               {
-                "icon": "disaster.png",
-                "priority": 100,
-                "is_positive_value_good": false,
-                "description": "Attrition: -8% casualties suffered from all attrition",
-                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
-                "value": -8
-              },
-              {
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               }
@@ -3516,131 +3653,115 @@
           {
             "effects": [
               {
-                "icon": "disaster.png",
-                "priority": 100,
-                "is_positive_value_good": false,
-                "description": "Attrition: -15% casualties suffered from all attrition",
-                "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
-                "value": -15
-              },
-              {
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +15%",
+                "description": "Casualty replenishment rate: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_campaign_elven_healing",
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_inspirational_leader",
         "tier": 8,
         "indent": 5,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_2"
+          "lvs_skill_blue_guildmaster_tier_2"
         ],
         "boxed": true
       },
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_3_4",
-        "image_path": "campaign_technology.png",
+        "key": "lvs_skill_blue_guildmaster_tier_3_4",
+        "image_path": "campaign_ambush.png",
         "is_background_skill": false,
-        "name": "Elven Scholar",
-        "description": "Far removed from the petty squabbles of other races, many High Elves are able to devote themselves to learning, magic and the arts.",
+        "name": "Alert",
+        "description": "Countless conflicts and a keen sense of awareness have made this Lord difficult to entrap.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "item_ability.png",
-                "priority": 8,
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Magic item drop chance: +8%",
-                "key": "wh_main_effect_character_mod_ancillary_drop",
-                "value": 8
-              },
+                "description": "Ambush defence chance: +6%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
               {
-                "icon": "technology.png",
-                "priority": 60,
+                "icon": "subterranean.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Research rate: +5%",
-                "key": "wh_main_effect_technology_research_points",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +5%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
                 "value": 5
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
-                "icon": "item_ability.png",
-                "priority": 8,
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Magic item drop chance: +16%",
-                "key": "wh_main_effect_character_mod_ancillary_drop",
+                "description": "Ambush defence chance: +16%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 16
-              },
-              {
-                "icon": "technology.png",
-                "priority": 60,
-                "is_positive_value_good": true,
-                "description": "Research rate: +10%",
-                "key": "wh_main_effect_technology_research_points",
-                "value": 10
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "item_ability.png",
-                "priority": 8,
+                "icon": "subterranean.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Magic item drop chance: +24%",
-                "key": "wh_main_effect_character_mod_ancillary_drop",
-                "value": 24
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
+                "key": "wh_main_effect_general_mod_tunnel_interception_chance",
+                "value": 10
               },
               {
-                "icon": "technology.png",
-                "priority": 60,
+                "icon": "icon_effects_ambush.png",
+                "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Research rate: +15%",
-                "key": "wh_main_effect_technology_research_points",
-                "value": 15
+                "description": "Ambush defence chance: +30%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+                "value": 30
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_hef_campaign_elven_scholar",
+        "character_skill_key": "wh_main_skill_all_lord_campaign_alert",
         "tier": 9,
         "indent": 5,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
         "parent_required": [
-          "lvs_skill_blue_hef_anointed_tier_2"
+          "lvs_skill_blue_guildmaster_tier_2"
         ],
         "right_arrow": true,
         "boxed": true
       },
       {
-        "key": "lvs_skill_blue_hef_anointed_tier_4",
-        "image_path": "campaign_agent.png",
+        "key": "lvs_skill_blue_guildmaster_tier_4",
+        "image_path": "campaign_technology.png",
         "is_background_skill": false,
-        "name": "Renowned & Feared",
-        "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "name": "Enquiring Mind",
+        "description": "A wise Lord will gather Engineers to his service, ensuring the Dwarfs maintain their technological edge.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "military_spending.png",
-                "priority": 70,
-                "is_positive_value_good": false,
-                "description": "Upkeep: -8% for all units",
-                "key": "wh_main_effect_force_all_campaign_upkeep",
-                "value": -8
+                "icon": "technology.png",
+                "priority": 60,
+                "is_positive_value_good": true,
+                "description": "Research rate: +10%\n\t(factionwide)",
+                "key": "wh_main_effect_technology_research_points",
+                "value": 10
               },
               {
                 "icon": "campaign_movement.png",
@@ -3651,92 +3772,48 @@
                 "value": 5
               },
               {
-                "icon": "agent.png",
-                "priority": 101,
-                "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -10%",
-                "key": "wh_main_effect_agent_action_success_chance_enemy",
-                "value": -10
-              },
-              {
-                "icon": "agent.png",
-                "priority": 101,
+                "icon": "army.png",
+                "priority": 270,
                 "is_positive_value_good": true,
-                "description": "Hero self-defence: +25% chance of wounding aggressors",
-                "key": "wh_main_effect_agent_defence_wound_chance_mod",
-                "value": 25
-              },
-              {
-                "icon": "experience.png",
-                "priority": 117,
-                "is_positive_value_good": true,
-                "description": "Recruit rank: +1 for all units",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "description": "Local recruitment capacity: +1\n\t(local province)",
+                "key": "wh_main_effect_unit_recruitment_points",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_LL_self_defense",
+        "character_skill_key": "wh_main_skill_dwf_lord_campaign_enquiring_mind",
         "tier": 10,
         "indent": 5,
         "points_on_creation": 0,
         "required_num_parents": 4,
         "visible_in_ui": true,
         "parent_subset_required": [
-          "lvs_skill_blue_hef_anointed_tier_3_1",
-          "lvs_skill_blue_hef_anointed_tier_3_2",
-          "lvs_skill_blue_hef_anointed_tier_3_3",
-          "lvs_skill_blue_hef_anointed_tier_3_4"
+          "lvs_skill_blue_guildmaster_tier_3_1",
+          "lvs_skill_blue_guildmaster_tier_3_2",
+          "lvs_skill_blue_guildmaster_tier_3_3",
+          "lvs_skill_blue_guildmaster_tier_3_4"
         ]
       }
     ]
   ],
-  "key": "hef_anointed_general",
+  "key": "dwf_guildmaster_general_skill_node",
   "backgroundSkills": [
     {
-      "key": "lvs_skill_innate_hef_anointed_013",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_001",
+      "image_path": "trait_dwarf.png",
       "is_background_skill": true,
-      "name": "Squishy",
-      "description": "Some warriors are like rocks - hard and immovable. This one is like jelly…",
+      "name": "Ancestral Blood - Grimnir",
+      "description": "This brave Dawi can trace his lineage back to Grimnir, the Warrior-God.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "defence_character.png",
+              "icon": "melee_character.png",
               "priority": 55,
               "is_positive_value_good": true,
-              "description": "Melee defence: -5",
-              "key": "wh_main_effect_character_stat_mod_melee_defence",
-              "value": -5
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_battle_0_squishy",
-      "tier": 0,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "lvs_skill_innate_hef_anointed_014",
-      "image_path": "trait_high_elves.png",
-      "is_background_skill": true,
-      "name": "Elusive",
-      "description": "This one moves like lightning, ducking and twisting to avoid their opponent's blows.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "battle_movement_character.png",
-              "priority": 55,
-              "is_positive_value_good": true,
-              "description": "Speed: +5%",
-              "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+              "description": "Melee attack: +5\n\t(all units in army)",
+              "key": "wh_main_effect_character_stat_mod_melee_attack",
               "value": 5
             },
             {
@@ -3746,91 +3823,7 @@
               "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_mod_melee_defence",
               "value": 5
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_battle_3_elusive",
-      "tier": 1,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "lvs_skill_innate_hef_anointed_015",
-      "image_path": "trait_high_elves.png",
-      "is_background_skill": true,
-      "name": "Resilient",
-      "description": "Armour is just a formality when you're as hard as nails and as tough as old boots.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "resistance_physical.png",
-              "priority": 55,
-              "is_positive_value_good": true,
-              "description": "Physical resistance: 20%",
-              "key": "wh2_main_effect_physical_resistance_increase",
-              "value": 20
             },
-            {
-              "icon": "attribute_unbreakable.png",
-              "priority": 620,
-              "is_positive_value_good": true,
-              "description": "Attribute: Unbreakable",
-              "key": "wh_main_effect_unit_enable_attribute_unbreakable",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_battle_7_resilient",
-      "tier": 2,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "lvs_skill_innate_hef_anointed_016",
-      "image_path": "trait_high_elves.png",
-      "is_background_skill": true,
-      "name": "Pigeon-Chested",
-      "description": "Bones are not supposed to be on the outside.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "resistance_physical.png",
-              "priority": 55,
-              "is_positive_value_good": true,
-              "description": "Physical resistance: -10%",
-              "key": "wh_main_effect_character_stat_mod_ward_save_physical",
-              "value": -10
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_battle_0_pigeon_chested",
-      "tier": 3,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "lvs_skill_innate_hef_anointed_017",
-      "image_path": "trait_high_elves.png",
-      "is_background_skill": true,
-      "name": "Hale & Hearty",
-      "description": "The very picture of good health. Clearly, there's many years still ahead of them.",
-      "levels": [
-        {
-          "effects": [
             {
               "icon": "resistance_physical.png",
               "priority": 55,
@@ -3842,20 +3835,56 @@
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_battle_3_hale_and_hearty",
-      "tier": 4,
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_dwf_ancestral_blood_grimnir",
+      "tier": 0,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_018",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_002",
+      "image_path": "trait_dwarf.png",
       "is_background_skill": true,
-      "name": "Vigorous",
-      "description": "This one is not at all easy to kill, and many have tried, believe me.",
+      "name": "Ancestral Blood - Grungni",
+      "description": "This industrious Dawi can trace his lineage back to Grungni, God of Mines and Smiths.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "treasury.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Construction cost: -15% for all buildings\n\t(local region)",
+              "key": "wh_main_effect_building_construction_cost_mod",
+              "value": -15
+            },
+            {
+              "icon": "technology.png",
+              "priority": 998,
+              "is_positive_value_good": true,
+              "description": "Research rate: +5%\n\t(factionwide)",
+              "key": "wh_dlc03_effect_technology_research_points",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_dwf_ancestral_blood_grungni",
+      "tier": 1,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "lvs_skill_innate_guildmaster_003",
+      "image_path": "trait_dwarf.png",
+      "is_background_skill": true,
+      "name": "Ancestral Blood - Valaya",
+      "description": "This loyal Dawi can trace his lineage back to Valaya, Goddess of Healing and Protection.",
       "levels": [
         {
           "effects": [
@@ -3863,23 +3892,139 @@
               "icon": "resistance_ward_save.png",
               "priority": 55,
               "is_positive_value_good": true,
-              "description": "Ward save: 15%",
+              "description": "Ward save: 5%",
               "key": "wh_main_effect_character_stat_mod_ward_save",
-              "value": 15
+              "value": 5
             },
             {
-              "icon": "attribute_fatigue_immune.png",
+              "icon": "resistance_magic.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Magic resistance: 10%\n\t(all units in army)",
+              "key": "wh_main_effect_character_stat_mod_ward_save_magic",
+              "value": 10
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Enemy Hero action success chance: -20%",
+              "key": "wh_main_effect_agent_action_success_chance_enemy",
+              "value": -20
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_dwf_ancestral_blood_valaya",
+      "tier": 2,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "lvs_skill_innate_guildmaster_004",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Fleet-Footed",
+      "description": "Being fleet of foot is useful in a fight… or when trying to get away afterwards!",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "battle_movement_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Speed: +20%",
+              "key": "wh_main_effect_character_stat_mod_battle_movement_speed",
+              "value": 20
+            },
+            {
+              "icon": "attribute_ignore_forest_penalties.png",
               "priority": 620,
               "is_positive_value_good": true,
-              "description": "Attribute: Perfect Vigour",
-              "key": "wh2_dlc10_effect_unit_enable_attribute_perfect_vigour",
+              "description": "Attribute: Strider",
+              "key": "wh_main_effect_unit_enable_attribute_strider",
               "value": 1
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_battle_7_vigorous",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_fleet_footed",
+      "tier": 3,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "lvs_skill_innate_guildmaster_005",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Cunning",
+      "description": "Deceit is a perfectly acceptable means of attack.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "phase_posion.png",
+              "priority": 61,
+              "is_positive_value_good": true,
+              "description": "Enables poison attacks",
+              "key": "wh_main_effect_character_stat_enable_poison_attacks",
+              "value": 1
+            },
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Ambush success chance: +10%\n\t(local armies)",
+              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_cunning",
+      "tier": 4,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "lvs_skill_innate_guildmaster_006",
+      "image_path": "trait_personality.png",
+      "is_background_skill": true,
+      "name": "Determined",
+      "description": "Having a modicum of resolve is useful in a world that continually tests it.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "morale_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Leadership: +3",
+              "key": "wh_main_effect_character_stat_mod_morale",
+              "value": 3
+            },
+            {
+              "icon": "attribute_immune_to_psychology.png",
+              "priority": 620,
+              "is_positive_value_good": true,
+              "description": "Attribute: Immune to Psychology",
+              "key": "wh_main_effect_unit_enable_attribute_immune_to_psychology",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_determined",
       "tier": 5,
       "indent": 6,
       "points_on_creation": 0,
@@ -3887,27 +4032,27 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_019",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_007",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Scornful",
-      "description": "\"Strategy? Tactics? Piffle, more like. Charrrrgggge!!!\"",
+      "name": "Confident",
+      "description": "Self-belief is a fine thing when not misplaced.",
       "levels": [
         {
           "effects": [
             {
               "icon": "morale.png",
-              "priority": 61,
+              "priority": 102,
               "is_positive_value_good": true,
-              "description": "Leadership: -10% for White Lions of Chrace, Swordmasters of Hoeth and Phoenix Guard units",
-              "key": "wh2_main_effect_tech_battle_morale_increase_hef_white_lions_swordmasters_phoenix_guard",
-              "value": -10
+              "description": "Leadership: +4\n\t(all units in army)",
+              "key": "wh_main_effect_force_unit_stat_morale",
+              "value": 4
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_0_scornful",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_confident",
       "tier": 6,
       "indent": 6,
       "points_on_creation": 0,
@@ -3915,27 +4060,35 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_020",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_008",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Respectful",
-      "description": "\"Our forefathers followed the way and overcame great adversity. We should not ignore their lessons.\"",
+      "name": "Disciplined",
+      "description": "Always in control, this one leaves no stone unturned and nothing to chance.",
       "levels": [
         {
           "effects": [
             {
               "icon": "morale.png",
-              "priority": 61,
+              "priority": 102,
               "is_positive_value_good": true,
-              "description": "Leadership: +10% for White Lions of Chrace, Swordmasters of Hoeth and Phoenix Guard units",
-              "key": "wh2_main_effect_tech_battle_morale_increase_hef_white_lions_swordmasters_phoenix_guard",
-              "value": 10
+              "description": "Leadership: +2\n\t(all units in army)",
+              "key": "wh_main_effect_force_unit_stat_morale",
+              "value": 2
+            },
+            {
+              "icon": "melee.png",
+              "priority": 109,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +2\n\t(all units in army)",
+              "key": "wh_main_effect_force_unit_stat_melee_attack",
+              "value": 2
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_3_respectful",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_disciplined",
       "tier": 7,
       "indent": 6,
       "points_on_creation": 0,
@@ -3943,43 +4096,35 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_021",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_009",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Doctrinal",
-      "description": "\"Right, are you listening? Good. There's only one way to do things and that's by the book.\"",
+      "name": "Perceptive",
+      "description": "Although actually reading minds is not in their skillset, this one has extraordinary insight into the motives of others.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "morale.png",
-              "priority": 61,
+              "icon": "item_ability.png",
+              "priority": 8,
               "is_positive_value_good": true,
-              "description": "Leadership: +10% for White Lions of Chrace, Swordmasters of Hoeth and Phoenix Guard units",
-              "key": "wh2_main_effect_tech_battle_morale_increase_hef_white_lions_swordmasters_phoenix_guard",
+              "description": "Magic item drop chance: +15%",
+              "key": "wh_main_effect_character_mod_ancillary_drop",
+              "value": 15
+            },
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Campaign line of sight: +10%",
+              "key": "wh_main_effect_agent_field_line_of_sight_mod",
               "value": 10
-            },
-            {
-              "icon": "weapon_damage.png",
-              "priority": 108,
-              "is_positive_value_good": true,
-              "description": "Weapon strength: +8% for White Lions of Chrace, Swordmasters of Hoeth and Phoenix Guard units",
-              "key": "wh2_main_effect_tech_melee_damage_increase_hef_white_lions_swordmasters_phoenix_guard",
-              "value": 8
-            },
-            {
-              "icon": "melee.png",
-              "priority": 109,
-              "is_positive_value_good": true,
-              "description": "Melee attack: +5 for White Lions of Chrace, Swordmasters of Hoeth and Phoenix Guard units",
-              "key": "wh2_main_effect_tech_melee_attack_increase_hef_white_lions_swordmasters_phoenix_guard",
-              "value": 5
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_7_doctrinal",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_perceptive",
       "tier": 8,
       "indent": 6,
       "points_on_creation": 0,
@@ -3987,27 +4132,35 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_022",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_010",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Fay",
-      "description": "There's something of the other world about this one; this cruel plane has failed to engage them.",
+      "name": "Aggressive",
+      "description": "If you're gonna die, you may as well die with your boots on.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "resistance_magic.png",
+              "icon": "charge_character.png",
               "priority": 55,
               "is_positive_value_good": true,
-              "description": "Magic resistance: -10% for all units",
-              "key": "wh2_main_effect_unit_stat_mod_ward_save_magic_all_units",
-              "value": -10
+              "description": "Charge bonus: +8",
+              "key": "wh_main_effect_character_stat_mod_charge_add",
+              "value": 8
+            },
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10%",
+              "key": "wh_main_effect_character_stat_mod_melee_damage",
+              "value": 10
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_0_fay",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_aggressive",
       "tier": 9,
       "indent": 6,
       "points_on_creation": 0,
@@ -4015,27 +4168,35 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_023",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_011",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Strong-Willed",
-      "description": "Some minds are more susceptible to magical influence than others, but this one is strong indeed.",
+      "name": "Tough",
+      "description": "Rugged, resistant, and almost unbreakable, this being can and will take on all comers.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "resistance_magic.png",
+              "icon": "armour_character.png",
               "priority": 55,
               "is_positive_value_good": true,
-              "description": "Magic resistance: 5% for all units",
-              "key": "wh2_main_effect_unit_stat_mod_ward_save_magic_all_units",
+              "description": "Armour: +25",
+              "key": "wh_main_effect_character_stat_mod_armour",
+              "value": 25
+            },
+            {
+              "icon": "defence_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Melee defence: +5",
+              "key": "wh_main_effect_character_stat_mod_melee_defence",
               "value": 5
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_3_strong_willed",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_tough",
       "tier": 10,
       "indent": 6,
       "points_on_creation": 0,
@@ -4043,43 +4204,43 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_024",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_012",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Dragon-Willed",
-      "description": "Immovable and resolute in their will, this one is as determined as the World Dragon himself!",
+      "name": "Strong",
+      "description": "Well built, robust. Powerful.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "resistance_magic.png",
+              "icon": "armour_character.png",
               "priority": 55,
               "is_positive_value_good": true,
-              "description": "Magic resistance: 10% for all units",
-              "key": "wh2_main_effect_unit_stat_mod_ward_save_magic_all_units",
+              "description": "Armour: +15",
+              "key": "wh_main_effect_character_stat_mod_armour",
+              "value": 15
+            },
+            {
+              "icon": "melee_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +5",
+              "key": "wh_main_effect_character_stat_mod_melee_attack",
+              "value": 5
+            },
+            {
+              "icon": "weapon_damage_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Weapon strength: +10%",
+              "key": "wh_main_effect_character_stat_mod_melee_damage",
               "value": 10
-            },
-            {
-              "icon": "military_spending.png",
-              "priority": 105,
-              "is_positive_value_good": false,
-              "description": "Upkeep: -15% for Dragon units",
-              "key": "wh2_main_effect_tech_upkeep_reduction_hef_dragons",
-              "value": -15
-            },
-            {
-              "icon": "turns.png",
-              "priority": 130,
-              "is_positive_value_good": false,
-              "description": "Recruitment duration: -1 turn for Dragon units (minimum 1)",
-              "key": "wh2_main_effect_trait_unit_recruitment_duration_hef_dragons",
-              "value": -1
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_7_dragon_willed",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_strong",
       "tier": 11,
       "indent": 6,
       "points_on_creation": 0,
@@ -4087,27 +4248,35 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_025",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_013",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Ill-Prepared",
-      "description": "This one would forget their head if it wasn't, er, attached.",
+      "name": "Weapon Master",
+      "description": "If you can swing, slash, stab, gouge, or shoot it, this warrior has mastered every aspect of its use.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "agent.png",
-              "priority": 101,
+              "icon": "armour_piercing_character.png",
+              "priority": 55,
               "is_positive_value_good": true,
-              "description": "Campaign line of sight: -20%",
-              "key": "wh_main_effect_agent_field_line_of_sight_mod",
-              "value": -20
+              "description": "Armour-piercing weapon damage: +35",
+              "key": "wh_main_effect_character_stat_mod_ap_damage",
+              "value": 35
+            },
+            {
+              "icon": "melee_character.png",
+              "priority": 55,
+              "is_positive_value_good": true,
+              "description": "Melee attack: +8",
+              "key": "wh_main_effect_character_stat_mod_melee_attack",
+              "value": 8
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_0_ill_prepared",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_weapon_master",
       "tier": 12,
       "indent": 6,
       "points_on_creation": 0,
@@ -4115,27 +4284,27 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_026",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_014",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Competent",
-      "description": "This one understands tactics, and how to vary them, well enough to generally defeat the foe.",
+      "name": "Strategist",
+      "description": "This being has a plan - not just a game plan, but a master plan to achieve their long-term aims.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "defence.png",
-              "priority": 101,
+              "icon": "campaign_movement.png",
+              "priority": 100,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
-              "key": "wh_main_effect_force_unit_stat_melee_defence",
-              "value": 3
+              "description": "Campaign movement range: +5%",
+              "key": "wh_main_effect_agent_movement_range_mod",
+              "value": 5
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_3_competent",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_strategist",
       "tier": 13,
       "indent": 6,
       "points_on_creation": 0,
@@ -4143,43 +4312,35 @@
       "visible_in_ui": false
     },
     {
-      "key": "lvs_skill_innate_hef_anointed_027",
-      "image_path": "trait_high_elves.png",
+      "key": "lvs_skill_innate_guildmaster_015",
+      "image_path": "trait_personality.png",
       "is_background_skill": true,
-      "name": "Resistant",
-      "description": "Action, inaction, change - you name it, this one will work against the prevailing wind.",
+      "name": "Tactician",
+      "description": "Careful planning, knowledge of the terrain and the weaknesses of the enemy are the key to victory.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "resistance_magic.png",
-              "priority": 55,
+              "icon": "general_ability.png",
+              "priority": 5,
               "is_positive_value_good": true,
-              "description": "Magic resistance: 15% for all units",
-              "key": "wh2_main_effect_unit_stat_mod_ward_save_magic_all_units",
-              "value": 15
+              "description": "Leadership aura size: +25%",
+              "key": "wh_main_effect_character_stat_mod_personal_aura_size",
+              "value": 25
             },
             {
-              "icon": "resistance_missile.png",
-              "priority": 65,
+              "icon": "morale_character.png",
+              "priority": 6,
               "is_positive_value_good": true,
-              "description": "Missile resistance: 10% for infantry units",
-              "key": "wh2_main_effect_tech_ward_save_missile_infantry",
-              "value": 10
-            },
-            {
-              "icon": "defence.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Melee defence: +5",
-              "key": "wh_main_effect_force_unit_stat_melee_defence",
-              "value": 5
+              "description": "Character's aura leadership effect: +4",
+              "key": "wh_main_effect_character_stat_mod_personal_aura_morale_effect",
+              "value": 4
             }
           ]
         }
       ],
-      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_hef_anointed_general_skill_node",
-      "character_skill_key": "wh2_main_skill_innate_hef_prince_army_7_resistant",
+      "character_skill_node_set_key": "sm_radious_lord_variety_agent_subtype_dwf_guildmaster_general_skill_node",
+      "character_skill_key": "wh2_main_skill_innate_all_tactician",
       "tier": 14,
       "indent": 6,
       "points_on_creation": 0,
