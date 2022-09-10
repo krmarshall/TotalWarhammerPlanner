@@ -18,6 +18,7 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 
 ## Known Issues
 - Work on overall page style
+- Daemons of Chaos have Exalted Heroes of Khorne linked to them, test suite will complain 1 instance of chs_exalted_hero_mkho wasn't served until fixed.
 
 ## On IE Release
 Check ui/skins/<faction folders>/text_tree_bg(_front/_mid) for potential character planner page backgrounds that are factional.

@@ -239,7 +239,6 @@ const vanilla3Characters = {
       spellLore: 'heavens',
     },
   },
-  // TO DO: Check what CoC lord/heroes are available to Daemon Prince, check for WoC version of Belakor?
   wh3_main_dae_daemons_lords: {
     dae_cha_be_lakor_0: {
       name: "Be'lakor",
@@ -251,12 +250,23 @@ const vanilla3Characters = {
     kho_herald_of_khorne: {
       name: 'Herald of Khorne',
     },
+    kho_exalted_bloodthirster: {
+      name: 'Exalted Bloodthirster',
+    },
     nur_herald_of_nurgle_death: {
       name: 'Herald of Nurgle (Death)',
       spellLore: 'death',
     },
     nur_herald_of_nurgle_nurgle: {
       name: 'Herald of Nurgle (Nurgle)',
+      spellLore: 'nurgle',
+    },
+    nur_exalted_great_unclean_one_death: {
+      name: 'Exalted Great Unclean One (Death)',
+      spellLore: 'death',
+    },
+    nur_exalted_great_unclean_one_nurgle: {
+      name: 'Exalted Great Unclean One (Nurgle)',
       spellLore: 'nurgle',
     },
     sla_herald_of_slaanesh_shadow: {
@@ -267,12 +277,28 @@ const vanilla3Characters = {
       name: 'Herald of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
+    sla_exalted_keeper_of_secrets_shadow: {
+      name: 'Exalted Keeper of Secrets (Shadow)',
+      spellLore: 'shadows',
+    },
+    sla_exalted_keeper_of_secrets_slaanesh: {
+      name: 'Exalted Keeper of Secrets (Slaanesh)',
+      spellLore: 'slaanesh',
+    },
     tze_herald_of_tzeentch_metal: {
       name: 'Herald of Tzeentch (Metal)',
       spellLore: 'metal',
     },
     tze_herald_of_tzeentch_tzeentch: {
       name: 'Herald of Tzeentch (Tzeentch)',
+      spellLore: 'tzeentch',
+    },
+    tze_exalted_lord_of_change_metal: {
+      name: 'Exalted Lord of Change (Metal)',
+      spellLore: 'metal',
+    },
+    tze_exalted_lord_of_change_tzeentch: {
+      name: 'Exalted Lord of Change (Tzeentch)',
       spellLore: 'tzeentch',
     },
   },
@@ -287,10 +313,6 @@ const vanilla3Characters = {
     },
     kho_bloodreaper: {
       name: 'Bloodreaper',
-    },
-    // Updated
-    chs_exalted_hero_mkho: {
-      name: 'Exalted Hero of Khorne',
     },
     tze_iridescent_horror_metal: {
       name: 'Iridescent Horror (Metal)',
@@ -313,15 +335,17 @@ const vanilla3Characters = {
     kho_skarbrand: {
       name: 'Skarbrand the Exiled',
     },
-    kho_exalted_bloodthirster: {
-      name: 'Exalted Bloodthirster',
-    },
     kho_herald_of_khorne: {
       name: 'Herald of Khorne',
     },
-    // Updated
+    kho_exalted_bloodthirster: {
+      name: 'Exalted Bloodthirster',
+    },
     chs_lord_mkho: {
       name: 'Chaos Lord of Khorne',
+    },
+    chs_daemon_prince_khorne: {
+      name: 'Daemon Prince of Khorne',
     },
   },
   wh3_main_kho_khorne_heroes: {
@@ -331,7 +355,6 @@ const vanilla3Characters = {
     kho_cultist: {
       name: 'Cultist of Khorne',
     },
-    // Updated
     chs_exalted_hero_mkho: {
       name: 'Exalted Hero of Khorne',
     },
@@ -380,14 +403,6 @@ const vanilla3Characters = {
       name: "Ku'gath Plaguefather",
       spellLore: 'nurgle',
     },
-    nur_exalted_great_unclean_one_death: {
-      name: 'Exalted Great Unclean One (Death)',
-      spellLore: 'death',
-    },
-    nur_exalted_great_unclean_one_nurgle: {
-      name: 'Exalted Great Unclean One (Nurgle)',
-      spellLore: 'nurgle',
-    },
     nur_herald_of_nurgle_death: {
       name: 'Herald of Nurgle (Death)',
       spellLore: 'death',
@@ -396,22 +411,30 @@ const vanilla3Characters = {
       name: 'Herald of Nurgle (Nurgle)',
       spellLore: 'nurgle',
     },
-    // Updated
+    nur_exalted_great_unclean_one_death: {
+      name: 'Exalted Great Unclean One (Death)',
+      spellLore: 'death',
+    },
+    nur_exalted_great_unclean_one_nurgle: {
+      name: 'Exalted Great Unclean One (Nurgle)',
+      spellLore: 'nurgle',
+    },
     chs_sorcerer_lord_death_mnur: {
       name: 'Chaos Sorcerer Lord of Nurgle (Death)',
       spellLore: 'death',
     },
-    // Updated
     chs_sorcerer_lord_nurgle_mnur: {
       name: 'Chaos Sorcerer Lord of Nurgle (Nurgle)',
       spellLore: 'nurgle',
+    },
+    chs_daemon_prince_nurgle: {
+      name: 'Daemon Prince of Nurgle',
     },
   },
   wh3_main_nur_nurgle_heroes: {
     nur_cultist: {
       name: 'Cultist of Nurgle',
     },
-    // Updated
     chs_exalted_hero_mnur: {
       name: 'Exalted Hero of Nurgle',
     },
@@ -466,14 +489,6 @@ const vanilla3Characters = {
       name: "N'Kari",
       spellLore: 'slaanesh',
     },
-    sla_exalted_keeper_of_secrets_shadow: {
-      name: 'Exalted Keeper of Secrets (Shadow)',
-      spellLore: 'shadows',
-    },
-    sla_exalted_keeper_of_secrets_slaanesh: {
-      name: 'Exalted Keeper of Secrets (Slaanesh)',
-      spellLore: 'slaanesh',
-    },
     sla_herald_of_slaanesh_shadow: {
       name: 'Herald of Slaanesh (Shadow)',
       spellLore: 'shadows',
@@ -482,9 +497,19 @@ const vanilla3Characters = {
       name: 'Herald of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
-    // Updated
+    sla_exalted_keeper_of_secrets_shadow: {
+      name: 'Exalted Keeper of Secrets (Shadow)',
+      spellLore: 'shadows',
+    },
+    sla_exalted_keeper_of_secrets_slaanesh: {
+      name: 'Exalted Keeper of Secrets (Slaanesh)',
+      spellLore: 'slaanesh',
+    },
     chs_lord_msla: {
       name: 'Chaos Lord of Slaanesh',
+    },
+    chs_daemon_prince_slaanesh: {
+      name: 'Daemon Prince of Slaanesh',
     },
   },
   wh3_main_sla_slaanesh_heroes: {
@@ -499,12 +524,10 @@ const vanilla3Characters = {
     sla_cultist: {
       name: 'Cultist of Slaanesh',
     },
-    // Updated
     chs_sorcerer_shadows_msla: {
       name: 'Chaos Sorcerer of Slaanesh (Shadows)',
       spellLore: 'shadows',
     },
-    // Updated
     chs_sorcerer_slaanesh_msla: {
       name: 'Chaos Sorcerer of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
@@ -515,14 +538,6 @@ const vanilla3Characters = {
       name: 'Kairos Fateweaver',
       spellLore: 'mixed',
     },
-    tze_exalted_lord_of_change_metal: {
-      name: 'Exalted Lord of Change (Metal)',
-      spellLore: 'metal',
-    },
-    tze_exalted_lord_of_change_tzeentch: {
-      name: 'Exalted Lord of Change (Tzeentch)',
-      spellLore: 'tzeentch',
-    },
     tze_herald_of_tzeentch_metal: {
       name: 'Herald of Tzeentch (Metal)',
       spellLore: 'metal',
@@ -531,15 +546,24 @@ const vanilla3Characters = {
       name: 'Herald of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
     },
-    // Updated
+    tze_exalted_lord_of_change_metal: {
+      name: 'Exalted Lord of Change (Metal)',
+      spellLore: 'metal',
+    },
+    tze_exalted_lord_of_change_tzeentch: {
+      name: 'Exalted Lord of Change (Tzeentch)',
+      spellLore: 'tzeentch',
+    },
     chs_sorcerer_lord_metal_mtze: {
       name: 'Chaos Sorcerer Lord of Tzeentch (Metal)',
       spellLore: 'metal',
     },
-    // Updated
     chs_sorcerer_lord_tzeentch_mtze: {
       name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
+    },
+    chs_daemon_prince_tzeentch: {
+      name: 'Daemon Prince of Tzeentch',
     },
   },
   wh3_main_tze_tzeentch_heroes: {
@@ -555,12 +579,10 @@ const vanilla3Characters = {
       name: 'Iridescent Horror (Tzeentch)',
       spellLore: 'tzeentch',
     },
-    // Updated
     chs_sorcerer_metal_mtze: {
       name: 'Chaos Sorcerer of Tzeentch (Metal)',
       spellLore: 'metal',
     },
-    // Updated
     chs_sorcerer_tzeentch_mtze: {
       name: 'Chaos Sorcerer of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
@@ -572,7 +594,6 @@ const vanilla3Characters = {
       name: 'Archaon the Everchosen',
       spellLore: 'mixed',
     },
-    // Updated
     sla_azazel: {
       name: 'Azazel',
       spellLore: 'slaanesh',
@@ -582,7 +603,6 @@ const vanilla3Characters = {
       name: "Be'lakor",
       spellLore: 'shadows',
     },
-    // Updated
     nur_festus: {
       name: 'Festus the Chinlord',
       spellLore: 'nurgle',
@@ -593,11 +613,9 @@ const vanilla3Characters = {
     chs_sigvald: {
       name: 'Prince Sigvald the Magnificent',
     },
-    // Updated
     kho_valkia: {
       name: 'Valkia the Bloody',
     },
-    // Updated
     tze_vilitch: {
       name: 'Vilitch the Curseling',
       spellLore: 'tzeentch',
@@ -606,28 +624,14 @@ const vanilla3Characters = {
       name: 'Sarthorael the Everwatcher',
       spellLore: 'metal',
     },
-    // Updated
-    chs_daemon_prince_undivided: {
-      name: 'Daemon Prince (Chaos Undivided)',
-    },
-    // Updated
-    chs_daemon_prince_khorne: {
-      name: 'Daemon Prince of Khorne',
-    },
-    // Updated
-    chs_daemon_prince_nurgle: {
-      name: 'Daemon Prince of Nurgle',
-    },
-    // Updated
-    chs_daemon_prince_slaanesh: {
-      name: 'Daemon Prince of Slaanesh',
-    },
-    // Updated
-    chs_daemon_prince_tzeentch: {
-      name: 'Daemon Prince of Tzeentch',
-    },
     chs_lord: {
       name: 'Chaos Lord',
+    },
+    chs_lord_mkho: {
+      name: 'Chaos Lord of Khorne',
+    },
+    chs_lord_msla: {
+      name: 'Chaos Lord of Slaanesh',
     },
     chs_sorcerer_lord_death: {
       name: 'Chaos Sorcerer Lord (Death)',
@@ -645,17 +649,46 @@ const vanilla3Characters = {
       name: 'Chaos Sorcerer Lord (Shadows)',
       spellLore: 'shadows',
     },
+    chs_sorcerer_lord_death_mnur: {
+      name: 'Chaos Sorcerer Lord of Nurgle (Death)',
+      spellLore: 'death',
+    },
+    chs_sorcerer_lord_nurgle_mnur: {
+      name: 'Chaos Sorcerer Lord of Nurgle (Nurgle)',
+      spellLore: 'nurgle',
+    },
+    chs_sorcerer_lord_metal_mtze: {
+      name: 'Chaos Sorcerer Lord of Tzeentch (Metal)',
+      spellLore: 'metal',
+    },
+    chs_sorcerer_lord_tzeentch_mtze: {
+      name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
+      spellLore: 'tzeentch',
+    },
+    chs_daemon_prince_undivided: {
+      name: 'Daemon Prince (Chaos Undivided)',
+    },
+    chs_daemon_prince_khorne: {
+      name: 'Daemon Prince of Khorne',
+    },
+    chs_daemon_prince_nurgle: {
+      name: 'Daemon Prince of Nurgle',
+    },
+    chs_daemon_prince_slaanesh: {
+      name: 'Daemon Prince of Slaanesh',
+    },
+    chs_daemon_prince_tzeentch: {
+      name: 'Daemon Prince of Tzeentch',
+    },
   },
 
   wh_main_chs_chaos_heroes: {
     chs_exalted_hero: {
       name: 'Exalted Hero',
     },
-    // Updated
     chs_exalted_hero_mkho: {
       name: 'Exalted Hero of Khorne',
     },
-    // Updated
     chs_exalted_hero_mnur: {
       name: 'Exalted Hero of Nurgle',
     },
@@ -675,22 +708,18 @@ const vanilla3Characters = {
       name: 'Chaos Sorcerer (Shadows)',
       spellLore: 'shadows',
     },
-    // Updated
     chs_sorcerer_shadows_msla: {
       name: 'Chaos Sorcerer of Slaanesh (Shadows)',
       spellLore: 'shadows',
     },
-    // Updated
     chs_sorcerer_slaanesh_msla: {
       name: 'Chaos Sorcerer of Slaanesh (Slaanesh)',
       spellLore: 'slaanesh',
     },
-    // Updated
     chs_sorcerer_metal_mtze: {
       name: 'Chaos Sorcerer of Tzeentch (Metal)',
       spellLore: 'metal',
     },
-    // Updated
     chs_sorcerer_tzeentch_mtze: {
       name: 'Chaos Sorcerer of Tzeentch (Tzeentch)',
       spellLore: 'tzeentch',
