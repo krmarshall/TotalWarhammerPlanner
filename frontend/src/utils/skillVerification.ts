@@ -73,9 +73,11 @@ const missingRequiredPoints = (
     for (let i = 0; i < skill.parent_subset_required.length; i++) {
       const parentSkill = findSkill(characterData, characterBuild, skill.parent_subset_required[i]);
       if (parentSkill === undefined) {
-        return true;
+        // Some skills like Kairos Bewitching Potency have parent subset required entries that dont exist in the tree.
+        // console.log(`${skill.parent_subset_required[i]} not in tree.`);
+      } else {
+        spentPoints += parentSkill.points;
       }
-      spentPoints += parentSkill.points;
     }
     if (spentPoints >= skill.required_num_parents) {
       return false;
