@@ -6,7 +6,7 @@
         "image_path": "mount_chaos_steed.png",
         "is_background_skill": false,
         "name": "Chaos Steed",
-        "description": "A Chaos Steed makes a fierce and intimidating mount for any conniving Sorcerer Lord.",
+        "description": "The dread steeds of Chaos are more than mere horses, but creatures tainted by Daemon blood, said to be gifts from the Dark Gods themselves.",
         "levels": [
           {
             "effects": [
@@ -30,11 +30,11 @@
         "visible_in_ui": true
       },
       {
-        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_unique_06",
-        "image_path": "mount_barded_chaos_steed.png",
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_mount_warshrine",
+        "image_path": "mount_warshrine.png",
         "is_background_skill": false,
-        "name": "Barded Chaos Steed",
-        "description": "The already-fierce Chaos Steeds are often covered in heavy armour, making them even deadlier.",
+        "name": "Chaos Warshrine",
+        "description": "A vast, mobile altar allows the souls of the slain to be ritualistically condemned directly from the field of slaughter.",
         "levels": [
           {
             "effects": [
@@ -42,16 +42,16 @@
                 "icon": "mount.png",
                 "priority": 50,
                 "is_positive_value_good": true,
-                "description": "Mount: Barded Chaos Steed",
-                "key": "wh_main_effect_enable_mount_barded_chaos_steed",
+                "description": "Mount: Warshrine",
+                "key": "wh_main_effect_enable_mount_warshrine",
                 "value": 1
               }
             ],
-            "auto_unlock_at_rank": 11
+            "auto_unlock_at_rank": 14
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_unique_chaos_sorcerer_lord_fire_barded_chaos_steed",
-        "tier": 1,
+        "character_skill_key": "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_lord_fire_warshrine",
+        "tier": 2,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -79,7 +79,7 @@
           }
         ],
         "character_skill_key": "wh_main_skill_chs_lord_unique_chaos_sorcerer_lord_fire_manticore",
-        "tier": 2,
+        "tier": 3,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -107,34 +107,6 @@
           }
         ],
         "character_skill_key": "wh_main_skill_chs_lord_unique_chaos_sorcerer_lord_fire_chaos_dragon",
-        "tier": 3,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_unique_04",
-        "image_path": "character_damage.png",
-        "is_background_skill": false,
-        "name": "Eye of the Gods",
-        "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
-        "levels": [
-          {
-            "unlocked_at_rank": 15,
-            "effects": [
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 161,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_chs_all_unique_eye_of_the_gods",
         "tier": 4,
         "indent": 0,
         "points_on_creation": 0,
@@ -142,8 +114,113 @@
         "visible_in_ui": true
       },
       {
+        "key": "wh3_dlc20_skill_node_chs_sorcerer_lord_fire_authority",
+        "image_path": "character_chaos_corruption.png",
+        "is_background_skill": false,
+        "name": "Undivided Authority",
+        "description": "The Ruinous Powers tighten their grip on the land, as dark sorcery paves the way for their fell influence.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption_khorne.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Khorne Authority: -2\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character",
+                "value": -2
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +3\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption_khorne.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Khorne Authority: -2\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character",
+                "value": -2
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +4\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 4
+              }
+            ],
+            "auto_unlock_at_rank": 11
+          },
+          {
+            "unlocked_at_rank": 21,
+            "effects": [
+              {
+                "icon": "corruption_khorne.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Khorne Authority: -2\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character",
+                "value": -2
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +5\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_authority_und_lord_wizard",
+        "tier": 5,
+        "indent": 0,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_unique_04",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Infernal Champion",
+        "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
+        "levels": [
+          {
+            "unlocked_at_rank": 15,
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_chs_all_unique_eye_of_the_gods",
+        "tier": 6,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_unique_07",
-        "image_path": "battle_speed.png",
+        "image_path": "character_speed.png",
         "is_background_skill": false,
         "name": "Hearts of Iron",
         "description": "The followers of Chaos need not to rest, they march on with iron hearts desperate to harvest souls.",
@@ -154,7 +231,7 @@
                 "icon": "vigour.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -15%",
+                "description": "Vigour loss reduction: -15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -15
               }
@@ -162,7 +239,7 @@
           }
         ],
         "character_skill_key": "wh_main_skill_chs_lord_battle_hearts_of_iron",
-        "tier": 5,
+        "tier": 7,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -170,7 +247,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_unique_08",
-        "image_path": "battle_general_ability.png",
+        "image_path": "character_general_ability.png",
         "is_background_skill": false,
         "name": "Voice of the Dark Gods",
         "description": "This Lord speaks with a dread booming voice - a gift from his Dark Masters to ensure obedience.",
@@ -189,7 +266,7 @@
           }
         ],
         "character_skill_key": "wh_main_skill_chs_lord_battle_voice_of_the_dark_gods",
-        "tier": 6,
+        "tier": 8,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -217,7 +294,7 @@
           }
         ],
         "character_skill_key": "wh_main_skill_chs_all_unique_aura_of_chaos",
-        "tier": 7,
+        "tier": 9,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -231,7 +308,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -241,25 +317,356 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
-        "tier": 8,
+        "tier": 10,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
       }
     ],
-    [],
+    [
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_special_1",
+        "image_path": "character_magic.png",
+        "is_background_skill": false,
+        "name": "Corrupt Mage",
+        "description": "Magic and Chaos are eternally intertwined in a symbiotic storm of malevolent power.",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "magic_campaign.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve: +3 per turn\n\t(Lord's army)",
+                "key": "wh3_main_effect_winds_of_magic_character",
+                "value": 3
+              },
+              {
+                "icon": "magic.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Miscast base chance: +15% for all enemy spellcasters\n\t(enemy armies in local province)",
+                "key": "wh3_main_effect_force_stat_miscast_enemy",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_chs_sorcerer_lord_generic_1",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_special_2",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Malefic Sorcerer",
+        "description": "Magic need not only wreak havoc at range—half the fun of battle, after all, is seeing the fear in your enemy's eyes.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_chs_sorcerer_lord_generic_2",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_main_skill_node_chs_sorcerer_lord_fire_special_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_special_3",
+        "image_path": "wh2_skill_perfect_vigour.png",
+        "is_background_skill": false,
+        "name": "Vile Enchanter",
+        "description": "The Forsaken heed the commands of the powerful, and thrive on the excess of their energy.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee.png",
+                "priority": 431,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5 for Forsaken, Chaos Spawn and Chaos Feral Manticore units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_chaos_monsters",
+                "value": 5
+              },
+              {
+                "icon": "attribute_fatigue_immune.png",
+                "priority": 620,
+                "is_positive_value_good": true,
+                "description": "Attribute: Perfect Vigour for Forsaken\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_attribute_enable_perfect_vigour_chs_forsaken",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_chs_sorcerer_lord_generic_3",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_main_skill_node_chs_sorcerer_lord_fire_special_1"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_special_4",
+        "image_path": "wh3_main_daemon_arms_abilities_mortal_blow.png",
+        "is_background_skill": false,
+        "name": "Chaos Marked",
+        "description": "Kill, crush, destroy—these are the tenets of Chaos!",
+        "levels": [
+          {
+            "unlocked_at_rank": 16,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Mortal Blow\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_main_effect_ability_enable_mortal_blow",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_daemon_arms_abilities_mortal_blow",
+                      "icon_name": "wh3_main_daemon_arms_abilities_mortal_blow",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Mortal Blow",
+                      "active_time": 25,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.3 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_main_effect_ability_enable_mortal_blow",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_chs_undivided_unique_1",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_special_5",
+        "image_path": "character_chaos_corruption.png",
+        "is_background_skill": false,
+        "name": "Ruinous Seal",
+        "description": "Pain is a trivial price to pay in assuring the complete annihilation of Order!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +1\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 1
+              },
+              {
+                "icon": "resistance_physical.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10%",
+                "key": "wh_main_effect_character_stat_physical_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_chs_undivided_unique_2",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_main_skill_node_chs_sorcerer_lord_fire_special_4"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "wh_main_skill_node_chs_sorcerer_lord_fire_special_6",
+        "image_path": "wh3_dlc20_lord_passive_paragon_of_ruin.png",
+        "is_background_skill": false,
+        "name": "Brand of Turmoil",
+        "description": "The brand of the Ruinous Powers is seared into the skin, a mark of absolute dedication to the cause of corruption.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Paragon of Ruin\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_dlc20_effect_ability_paragon_of_ruin",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_dlc20_lord_passive_paragon_of_ruin",
+                      "icon_name": "wh3_dlc20_lord_passive_paragon_of_ruin",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Paragon of Ruin",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "positive"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.1 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_dlc20_effect_ability_paragon_of_ruin",
+                "value": 1
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 580,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 5%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_stat_missile_resistance",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_chs_undivided_unique_3",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "wh_main_skill_node_chs_sorcerer_lord_fire_special_4"
+        ],
+        "boxed": true
+      }
+    ],
     [
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_magic1_01",
         "image_path": "wh_main_spell_fire_fireball.png",
         "is_background_skill": false,
         "name": "Fireball",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -579,7 +986,7 @@
         "image_path": "wh_main_lore_passive_kindleflame.png",
         "is_background_skill": false,
         "name": "Kindleflame",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -664,7 +1071,7 @@
         "image_path": "wh_main_spell_fire_cascading_fire_cloak.png",
         "is_background_skill": false,
         "name": "Cascading Fire-Cloak",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -768,7 +1175,7 @@
         "image_path": "wh_main_spell_fire_flaming_sword_of_rhuin.png",
         "is_background_skill": false,
         "name": "Flaming Sword of Rhuin",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1150,7 +1557,7 @@
         "image_path": "wh_main_spell_fire_the_burning_head.png",
         "is_background_skill": false,
         "name": "The Burning Head",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1518,7 +1925,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1605,7 +2012,7 @@
         "image_path": "wh_main_spell_fire_piercing_bolts_of_burning.png",
         "is_background_skill": false,
         "name": "Piercing Bolts of Burning",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1972,7 +2379,7 @@
         "image_path": "wh_main_spell_fire_flame_storm.png",
         "is_background_skill": false,
         "name": "Flame Storm",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2376,11 +2783,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2402,7 +2809,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2438,7 +2845,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3311,6 +3718,14 @@
           {
             "effects": [
               {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
+              {
                 "icon": "morale_character.png",
                 "priority": 260,
                 "is_positive_value_good": true,
@@ -3331,7 +3746,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_battle_02",
-        "image_path": "battle_defence.png",
+        "image_path": "battle_attack.png",
         "is_background_skill": false,
         "name": "Chaos Vanguard",
         "description": "To the Northmen, there is no greater honour than to fight and perish under the gaze of the Gods.",
@@ -3339,11 +3754,11 @@
           {
             "effects": [
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +4 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 4
               }
             ]
@@ -3354,16 +3769,16 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_armour_marauder_aspiring_champions_forsaken",
+                "description": "Armour: +6 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units",
                 "value": 6
               },
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +6 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 6
               }
             ]
@@ -3374,16 +3789,16 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_armour_marauder_aspiring_champions_forsaken",
+                "description": "Armour: +12 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units",
                 "value": 12
               },
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +8 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 8
               }
             ]
@@ -3405,56 +3820,56 @@
         "image_path": "battle_charge.png",
         "is_background_skill": false,
         "name": "Savage Bloodlust",
-        "description": "Khorne’s will imbues his creatures with a vicious, unslakeable hunger for battle.",
+        "description": "The Daemons of Chaos bay for blood, spurred on by a chorus of agonised screams.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "charge.png",
-                "priority": 501,
+                "icon": "armour.png",
+                "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
-                "value": 6
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Armour: +4 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
                 "value": 4
-              },
-              {
-                "icon": "charge.png",
-                "priority": 501,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
-                "value": 9
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "armour.png",
+                "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Armour: +8 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
                 "value": 8
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Charge bonus: +8 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_melee_daemons",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_melee_daemons",
                 "value": 12
               }
             ]
@@ -3473,10 +3888,10 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_battle_04",
-        "image_path": "battle_defence.png",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Blessed by Chaos",
-        "description": "Unnatural strength, an aura of dark menace, an unwavering devotion to the Chaos Gods – some warriors have undoubtedly been touched by the Ruinous Ones.",
+        "name": "Warp Fire",
+        "description": "As dark wings take to the skies and Daemon arrows bear down, the enemies of Chaos know their end is near.",
         "levels": [
           {
             "effects": [
@@ -3484,54 +3899,70 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
-                "value": 5
+                "description": "Melee defence: +4 for all Daemonic missile and flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
+                "value": 4
               }
             ]
           },
           {
             "effects": [
               {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +4% for all Daemonic flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_ranged_flying_daemons",
+                "value": 4
+              },
+              {
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +7 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
-                "value": 7
+                "description": "Melee defence: +6 for all Daemonic missile and flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
+                "value": 6
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "ranged_damage.png",
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_chosen_spawn_chaos_warriors",
-                "value": 5
+                "description": "Missile strength: +8% for all Daemonic missile units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_ranged_flying_daemons",
+                "value": 8
               }
             ]
           },
           {
             "effects": [
               {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for all Daemonic flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_ranged_flying_daemons",
+                "value": 6
+              },
+              {
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +9 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
-                "value": 9
+                "description": "Melee defence: +8 for all Daemonic missile and flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
+                "value": 8
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "ranged_damage.png",
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_chosen_spawn_chaos_warriors",
-                "value": 10
+                "description": "Missile strength: +12% for all Daemonic missile units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_ranged_flying_daemons",
+                "value": 12
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_chs_army_buff_blessed_by_chaos",
+        "character_skill_key": "wh3_dlc20_skill_chs_army_buff_warpfire",
         "tier": 3,
         "indent": 4,
         "points_on_creation": 0,
@@ -3555,8 +3986,8 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +6 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 6
               }
             ]
@@ -3564,19 +3995,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogres_chaos_knights_chariots",
-                "value": 4
+                "description": "Melee defence: +6 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_knights_chariots_units",
+                "value": 6
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +6 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 6
               }
             ]
@@ -3584,19 +4015,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogres_chaos_knights_chariots",
-                "value": 6
+                "description": "Melee defence: +8 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_knights_chariots_units",
+                "value": 8
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +12 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 12
               }
             ]
@@ -3623,52 +4054,52 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "weapon_damage.png",
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Weapon strength: +4% for all non-Daemonic war beasts, monstrous and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
                 "value": 4
               }
             ]
           },
           {
             "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 4
-              },
               {
                 "icon": "weapon_damage.png",
-                "priority": 461,
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 5
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Weapon strength: +6% for all non-Daemonic war beasts, monstrous and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
                 "value": 6
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "melee.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 7
+                "description": "Melee attack: +6 for all non-Daemonic war beasts, monstrous, and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_monsters_beasts",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for all non-Daemonic war beasts, monstrous and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
+                "value": 10
+              },
+              {
+                "icon": "melee.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for all non-Daemonic war beasts, monstrous, and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_monsters_beasts",
+                "value": 8
               }
             ]
           }
@@ -3689,7 +4120,7 @@
         "image_path": "battle_ammo.png",
         "is_background_skill": false,
         "name": "Doomfire",
-        "description": "Doomfire is a gift from Khorne, to ensure the Hellcannons speak with extra fury.",
+        "description": "Subdue the enemy with savage fire, as flaming projectiles burn a trail across the sky.",
         "levels": [
           {
             "effects": [
@@ -3697,8 +4128,8 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +10% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 10
               }
             ]
@@ -3709,17 +4140,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +15% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 15
               },
               {
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +4% for Hellcannon units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon",
-                "value": 4
+                "description": "Missile strength: +5% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_artillery_missile_units",
+                "value": 5
               }
             ]
           },
@@ -3729,17 +4160,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +20% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 20
               },
               {
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Hellcannon units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon",
-                "value": 6
+                "description": "Missile strength: +10% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_artillery_missile_units",
+                "value": 10
               }
             ]
           }
@@ -3761,7 +4192,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3841,7 +4272,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_battle_09",
-        "image_path": "battle_damage.png",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
         "name": "Legion of Doom",
         "description": "The legions march forth under the Lord's inscrutable gaze, eager to kill for fear of his wrath.",
@@ -3849,28 +4280,28 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 432,
+                "icon": "armour.png",
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
+                "description": "Armour: +5 for all infantry units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units_rank7",
                 "value": 5
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 462,
+                "icon": "defence.png",
+                "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
-                "value": 10
+                "description": "Melee defence: +5 for all infantry units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_infantry_units_rank7",
+                "value": 5
               },
               {
                 "icon": "resistance_magic.png",
-                "priority": 582,
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_magic_resistance_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
-                "value": 15
+                "description": "Spell resistance: 10% for all infantry units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_spell_resistance_chs_infantry_units_rank7",
+                "value": 10
               }
             ]
           }
@@ -3891,7 +4322,7 @@
         "image_path": "battle_speed.png",
         "is_background_skill": false,
         "name": "Speed & Malice",
-        "description": "The worthiest of Chaos' vanguard are blessed with the most elaborate mutations, which also enable them to run faster for longer.",
+        "description": "The worthiest of Chaos' vanguard are blessed with the most elaborate mutations, which also enable them to move faster for longer.",
         "levels": [
           {
             "effects": [
@@ -3899,25 +4330,25 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_speed_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
+                "description": "Speed: +10% for all cavalry, chariots and flying units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
                 "value": 10
               },
               {
-                "icon": "charge.png",
-                "priority": 502,
+                "icon": "melee.png",
+                "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
-                "value": 12
+                "description": "Melee attack: +5 for all cavalry, chariots and flying units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
+                "value": 5
               },
               {
                 "icon": "resistance_missile.png",
-                "priority": 582,
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_missile_resistance_chs_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
-                "value": 15
+                "description": "Missile resistance: 10% for all cavalry, chariots and flying units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_resistance_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
+                "value": 10
               }
             ]
           }
@@ -3935,7 +4366,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_battle_11",
-        "image_path": "battle_damage.png",
+        "image_path": "battle_attack.png",
         "is_background_skill": false,
         "name": "Freakish Mutations",
         "description": "Mutations awarded by the Chaos Gods to their followers may look horrific to southerners, but such gifts are prized.",
@@ -3943,28 +4374,28 @@
           {
             "effects": [
               {
+                "icon": "morale.png",
+                "priority": 412,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6 for all war beasts, monstrous and monster units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_leadership_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
+                "value": 6
+              },
+              {
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
+                "description": "Melee attack: +5 for all war beasts, monstrous, and monster units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
                 "value": 5
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 462,
+                "icon": "resistance_ward_save.png",
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
-                "value": 10
-              },
-              {
-                "icon": "resistance_physical.png",
-                "priority": 582,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_physical_resistance_chs_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
-                "value": 10
+                "description": "Ward save: 5% for all war beasts, monstrous and monster units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_physical_resistance_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
+                "value": 5
               }
             ]
           }
@@ -3982,36 +4413,36 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_battle_12",
-        "image_path": "battle_ranged_damage.png",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
-        "name": "Guided by Tzeentch",
-        "description": "Impossible foresight is granted to a few among the ranks of the Ruinous armies, allowing them to land the critical blow upon their foes.",
+        "name": "Malevolent Ranger",
+        "description": "To devastate one's enemies from afar is the key to controlling the battlefield.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "ammo.png",
-                "priority": 512,
+                "icon": "armour.png",
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_ammunition_chs_hellcannon_marauder_horsemen_rank7",
-                "value": 15
-              },
-              {
-                "icon": "ranged_damage.png",
-                "priority": 542,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon_marauder_horsemen_rank7",
+                "description": "Armour: +10 for all missile units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_artillery_missile_units_rank7",
                 "value": 10
               },
               {
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_chs_hellcannon_marauder_horsemen_rank7",
+                "description": "Reload time reduction: +10% for all missile units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_reload_time_chs_artillery_missile_units_rank7",
                 "value": 10
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 581,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for all missile units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_resistance_chs_artillery_missile_units_rank7",
+                "value": 15
               }
             ]
           }
@@ -4033,7 +4464,7 @@
         "image_path": "wh_main_character_abilities_stand_or_die.png",
         "is_background_skill": false,
         "name": "Stand or Die!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4167,7 +4598,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +10%",
+                "description": "Income from raiding: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 10
               }
@@ -4179,17 +4610,17 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +3%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 3
+                "description": "Income from sacking settlements: +5%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 5
               }
             ]
           },
@@ -4199,17 +4630,17 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +30%",
+                "description": "Income from raiding: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 30
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +8%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 8
+                "description": "Income from sacking settlements: +10%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 10
               }
             ]
           }
@@ -4238,8 +4669,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -4247,11 +4678,19 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Warband upgrades cost: -5% for all units",
+                "key": "wh3_dlc20_effect_unit_upgrade_cost",
+                "value": -5
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -4259,17 +4698,25 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Warband upgrades cost: -10% for all units",
+                "key": "wh3_dlc20_effect_unit_upgrade_cost",
+                "value": -10
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_serve_or_die",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_serve_or_die",
         "tier": 2,
         "indent": 5,
         "points_on_creation": 0,
@@ -4282,19 +4729,19 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_campaign_04",
-        "image_path": "campaign_growth.png",
+        "image_path": "campaign_army.png",
         "is_background_skill": false,
-        "name": "Tribes of Chaos",
-        "description": "A Lord that was once part of the tribes - one who rode the great Norscan migrations - can summon his kin.",
+        "name": "Devoted of Chaos",
+        "description": "No act of faith can rival reaving the souls of the slain; a dark and twisted offering in honour of the Ruinous Powers.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "experience.png",
+                "priority": 611,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
-                "key": "wh_main_effect_province_growth_characters",
+                "description": "Increased experience gain: +10% for units when fighting against the Forces of Order\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
                 "value": 10
               }
             ]
@@ -4302,29 +4749,45 @@
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "souls.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
-                "key": "wh_main_effect_province_growth_characters",
-                "value": 20
+                "description": "Souls gained from battles: +10%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 10
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Increased experience gain: +15% for units when fighting against the Forces of Order\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
+                "value": 15
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "souls.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Growth: +30",
-                "key": "wh_main_effect_province_growth_characters",
-                "value": 30
+                "description": "Souls gained from battles: +15%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 15
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Increased experience gain: +20% for units when fighting against the Forces of Order\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
+                "value": 20
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_tribes_of_chaos",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_devoted_of_chaos",
         "tier": 3,
         "indent": 5,
         "points_on_creation": 0,
@@ -4348,8 +4811,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling\n\t(local region)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -4360,17 +4823,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +10% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +10% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -4380,17 +4843,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +15% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +15% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }
@@ -4436,7 +4899,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               }
@@ -4548,8 +5011,8 @@
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_campaign_08",
         "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Dark Apothecary",
-        "description": "The Dark Apothecaries mix their fell unguents, ensuring those that can continue to serve.",
+        "name": "Foetid Gallipot",
+        "description": "A pungent mix of fell unguents ensures the unholy vitality of one’s minions.",
         "levels": [
           {
             "effects": [
@@ -4557,7 +5020,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               },
@@ -4565,7 +5028,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 3
               }
@@ -4577,7 +5040,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               },
@@ -4585,7 +5048,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 6
               }
@@ -4597,7 +5060,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -30% casualties suffered from all attrition",
+                "description": "Attrition: -30% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -30
               },
@@ -4605,7 +5068,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 9
               }
@@ -4625,65 +5088,65 @@
       },
       {
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_campaign_09",
-        "image_path": "campaign_army.png",
+        "image_path": "campaign_military_spending.png",
         "is_background_skill": false,
-        "name": "Gathering of Might",
-        "description": "The masses flock to the Lord of Chaos - a dread time will soon fall on the weaklings in the south.",
+        "name": "Blessed by Evil",
+        "description": "For one fighting with the favour of the Ruinous Powers, glory and riches come naturally.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +5%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "experience.png",
-                "priority": 117,
+                "icon": "item_ability.png",
+                "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
-                "value": 1
+                "description": "Post battle chance of stealing a magic item: +5%\n\t(Lord's army)",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 5
               },
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +10%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 10
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "experience.png",
-                "priority": 117,
+                "icon": "item_ability.png",
+                "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +2",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
-                "value": 2
+                "description": "Post battle chance of stealing a magic item: +10%\n\t(Lord's army)",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 10
               },
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +15%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_gathering_of_might",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_blessed_by_evil",
         "tier": 8,
         "indent": 5,
         "points_on_creation": 0,
@@ -4699,7 +5162,7 @@
         "image_path": "campaign_ambush.png",
         "is_background_skill": false,
         "name": "Premonition",
-        "description": "This being must be touched by Tzeentch, seeing things before they happen.",
+        "description": "Visions cloud the mind, prophesising the arrival of the enemy and uncovering every shadow in which they lurk.",
         "levels": [
           {
             "effects": [
@@ -4707,9 +5170,9 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +6%",
+                "description": "Ambush defence chance: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 6
+                "value": 10
               }
             ]
           },
@@ -4719,17 +5182,17 @@
                 "icon": "subterranean.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +8%",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
                 "key": "wh_main_effect_general_mod_tunnel_interception_chance",
-                "value": 8
+                "value": 10
               },
               {
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
+                "description": "Ambush defence chance: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 16
+                "value": 20
               }
             ]
           },
@@ -4739,22 +5202,22 @@
                 "icon": "subterranean.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +15%",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%",
                 "key": "wh_main_effect_general_mod_tunnel_interception_chance",
-                "value": 15
+                "value": 20
               },
               {
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +30%",
+                "description": "Ambush defence chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 30
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_lord_campaign_premonition",
+        "character_skill_key": "wh3_dlc20_skill_all_lord_campaign_premonition",
         "tier": 9,
         "indent": 5,
         "points_on_creation": 0,
@@ -4770,39 +5233,47 @@
         "key": "wh_main_skill_node_chs_sorcerer_lord_fire_campaign_11",
         "image_path": "campaign_chaos_corruption.png",
         "is_background_skill": false,
-        "name": "Corruption",
-        "description": "With the servants of Chaos comes the corruption - as the landscape twists, this one speeds the transformation.",
+        "name": "Chaos Unchained",
+        "description": "All will bow before such a harbinger of pure, unbridled Chaos, oozing with the energies of corruption.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "campaign_movement.png",
-                "priority": 100,
+                "priority": 13,
                 "is_positive_value_good": true,
                 "description": "Campaign movement range: +5%",
-                "key": "wh_main_effect_agent_movement_range_mod",
+                "key": "wh_main_effect_force_all_campaign_movement_range",
                 "value": 5
+              },
+              {
+                "icon": "souls.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Souls gained from battles: +10%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 10
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +10%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 10
               },
               {
                 "icon": "corruption_chaos.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +4",
+                "description": "Chaos Undivided corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_chaos_characters",
-                "value": 4
-              },
-              {
-                "icon": "experience.png",
-                "priority": 117,
-                "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_corruption",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_corruption_undivided",
         "tier": 10,
         "indent": 5,
         "points_on_creation": 0,
@@ -4820,6 +5291,731 @@
   "key": "chs_sorcerer_lord_fire",
   "backgroundSkills": [
     {
+      "key": "wh3_dlc20_skill_node_chs_sorcerer_lord_fire_path_to_glory_cost_mod_hidden",
+      "image_path": "trait_human.png",
+      "is_background_skill": false,
+      "name": "",
+      "description": "Secret skill that automatically levels up as the character progresses and reduces cost of Path to Glory",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -1% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -2% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -2
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -3% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -4% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -4
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -5% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -5
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -6% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -6
+            }
+          ],
+          "auto_unlock_at_rank": 11
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -7% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -7
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -8% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -8
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -9% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -9
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -10% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -10
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -11% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -11
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -12% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -12
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -13% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -13
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -14% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -14
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -15% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -15
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -16% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -16
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -17% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -17
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -18% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -18
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -19% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -19
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -20% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -20
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -21% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -21
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -22% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -22
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -23% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -23
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -24% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -24
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -25
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -1% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -26% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -26
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -2% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -2
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -27% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -27
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -3% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -28% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -28
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -4% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -4
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -29% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -29
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -5% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -5
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -30% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -30
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -6% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -6
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -31% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -31
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -7% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -7
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -32% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -32
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -8% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -8
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -33% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -33
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -9% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -9
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -34% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -34
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -10% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -10
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -35% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -35
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -11% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -11
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -36% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -36
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -12% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -12
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -37% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -37
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -13% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -13
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -38% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -38
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -14% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -14
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -39% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -39
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -15% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -15
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -40% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -40
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -16% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -16
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -41% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -41
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -17% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -17
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -42% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -42
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -18% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -18
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -43% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -43
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -19% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -19
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -44% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -44
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -20% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -20
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -45% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -45
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -21% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -21
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
+      "character_skill_key": "wh3_dlc20_skill_path_to_glory_cost_modifier",
+      "tier": 0,
+      "indent": 12,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_01",
       "image_path": "trait_chaos.png",
       "is_background_skill": true,
@@ -4832,8 +6028,8 @@
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +40% when attacking",
-              "key": "wh_main_effect_character_stat_leadership_aura_size_attacking",
+              "description": "Leadership aura size: +40%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 40
             }
           ]
@@ -4857,12 +6053,12 @@
         {
           "effects": [
             {
-              "icon": "melee.png",
-              "priority": 430,
+              "icon": "corruption_chaos.png",
+              "priority": 1,
               "is_positive_value_good": true,
-              "description": "Melee attack: +5",
-              "key": "wh_main_effect_force_stat_melee_attack",
-              "value": 5
+              "description": "Undivided Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+              "value": 1
             }
           ]
         }
@@ -4877,34 +6073,34 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_03",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Fleet-Footed",
-      "description": "Being fleet of foot is useful in a fight… or when trying to get away afterwards!",
+      "name": "Burning Body",
+      "description": "The champion is surrounded by crackling flames that burn his enemies whilst leaving his own body untouched.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "battle_movement_character.png",
-              "priority": 120,
+              "icon": "modifier_icon_flaming.png",
+              "priority": 140,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
-              "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "description": "Enables flaming attacks",
+              "key": "wh2_main_effect_character_stat_enable_flaming_attacks",
+              "value": 1
             },
             {
-              "icon": "attribute_ignore_forest_penalties.png",
-              "priority": 320,
+              "icon": "resistance_fire.png",
+              "priority": 280,
               "is_positive_value_good": true,
-              "description": "Attribute: Strider",
-              "key": "wh_main_effect_attribute_enable_strider",
-              "value": 1
+              "description": "Fire resistance: 50%",
+              "key": "wh_main_effect_character_stat_fire_resistance",
+              "value": 50
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_fleet_footed",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_burning_body",
       "tier": 2,
       "indent": 6,
       "points_on_creation": 0,
@@ -4913,34 +6109,26 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_04",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Cunning",
-      "description": "Deceit is a perfectly acceptable means of attack.",
+      "name": "Chaos Familiar",
+      "description": "A Chaos Familiar memorises spells on its master's behalf, constantly rehearsing for its big moment until it is called upon to share its arcane knowledge.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "icon_effects_ambush.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
-              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
-              "value": 10
-            },
-            {
-              "icon": "phase_posion.png",
-              "priority": 140,
-              "is_positive_value_good": true,
-              "description": "Enables poison attacks",
-              "key": "wh_main_effect_character_stat_enable_poison_attacks",
-              "value": 1
+              "icon": "magic_cooldown.png",
+              "priority": 60,
+              "is_positive_value_good": false,
+              "description": "Cooldown: -5% to all spells",
+              "key": "wh2_dlc12_effect_magic_cooldown_all_lores",
+              "value": -5
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_cunning",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_chaos_familiar",
       "tier": 3,
       "indent": 6,
       "points_on_creation": 0,
@@ -4949,34 +6137,34 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_05",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Determined",
-      "description": "Having a modicum of resolve is useful in a world that continually tests it.",
+      "name": "Dark Fury",
+      "description": "Fatigue is no issue when one is driven by the darkest rage imaginable.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "morale_character.png",
-              "priority": 110,
-              "is_positive_value_good": true,
-              "description": "Leadership: +3",
-              "key": "wh_main_effect_character_stat_leadership",
-              "value": 3
+              "icon": "vigour.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Vigour loss reduction: -25%",
+              "key": "wh_main_effect_force_stat_vigour_loss_reduction",
+              "value": -25
             },
             {
-              "icon": "attribute_immune_to_psychology.png",
-              "priority": 320,
+              "icon": "charge_character.png",
+              "priority": 200,
               "is_positive_value_good": true,
-              "description": "Attribute: Immune to Psychology",
-              "key": "wh_main_effect_attribute_enable_immune_to_psychology",
-              "value": 1
+              "description": "Charge bonus: +35",
+              "key": "wh_main_effect_character_stat_charge_bonus_add",
+              "value": 35
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_determined",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_dark_fury",
       "tier": 4,
       "indent": 6,
       "points_on_creation": 0,
@@ -4985,26 +6173,34 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_06",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Confident",
-      "description": "Self-belief is a fine thing when not misplaced.",
+      "name": "Evil Eyeball",
+      "description": "Those blessed by Chaos see not only what is before them, but also what lurks in shadow, hiding in the periphery.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "morale.png",
-              "priority": 410,
+              "icon": "agent.png",
+              "priority": 101,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
-              "key": "wh_main_effect_force_stat_leadership",
-              "value": 2
+              "description": "Campaign line of sight: +25%",
+              "key": "wh_main_effect_agent_field_line_of_sight_mod",
+              "value": 25
+            },
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Ambush defence chance: +10%\n\t(own army)",
+              "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+              "value": 10
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_confident",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_evil_eyeball",
       "tier": 5,
       "indent": 6,
       "points_on_creation": 0,
@@ -5013,34 +6209,34 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_07",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Disciplined",
-      "description": "Always in control, this one leaves no stone unturned and nothing to chance.",
+      "name": "Hideous Visage",
+      "description": "The champion has been rewarded with a hideous appearance, grotesque enough to wither the hearts of men.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "morale.png",
-              "priority": 410,
-              "is_positive_value_good": true,
-              "description": "Leadership: +2",
-              "key": "wh_main_effect_force_stat_leadership",
-              "value": 2
+              "icon": "public_order.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Control: -8\n\t(local enemy province)",
+              "key": "wh_main_effect_public_order_characters_negative",
+              "value": -8
             },
             {
-              "icon": "melee.png",
-              "priority": 430,
+              "icon": "attribute_causes_fear.png",
+              "priority": 320,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
-              "key": "wh_main_effect_force_stat_melee_attack",
-              "value": 2
+              "description": "Attribute: Causes Fear",
+              "key": "wh_main_effect_attribute_enable_causes_fear",
+              "value": 1
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_disciplined",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_hideous_visage",
       "tier": 6,
       "indent": 6,
       "points_on_creation": 0,
@@ -5049,34 +6245,34 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_08",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Perceptive",
-      "description": "Although actually reading minds is not in their skillset, this one has extraordinary insight into the motives of others.",
+      "name": "Iron Skin",
+      "description": "Granted skin as strong as iron plate, there is little that can penetrate the champion's defences.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "item_ability.png",
-              "priority": 8,
+              "icon": "armour_character.png",
+              "priority": 100,
               "is_positive_value_good": true,
-              "description": "Magic item drop chance: +15%",
-              "key": "wh_main_effect_character_mod_ancillary_drop",
-              "value": 15
+              "description": "Armour: +25",
+              "key": "wh_main_effect_character_stat_armour",
+              "value": 25
             },
             {
-              "icon": "agent.png",
-              "priority": 101,
+              "icon": "mass_character.png",
+              "priority": 130,
               "is_positive_value_good": true,
-              "description": "Campaign line of sight: +10%",
-              "key": "wh_main_effect_agent_field_line_of_sight_mod",
-              "value": 10
+              "description": "Unit mass: +25%",
+              "key": "wh3_main_effect_character_stat_unit_mass_percentage_mod",
+              "value": 25
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_perceptive",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_iron_skin",
       "tier": 7,
       "indent": 6,
       "points_on_creation": 0,
@@ -5085,34 +6281,34 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_09",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Aggressive",
-      "description": "If you're gonna die, you may as well die with your boots on.",
+      "name": "Scaled Skin",
+      "description": "The champion's skin is covered with a thousand reptilian scales, each as tough as Dragonhide.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "weapon_damage_character.png",
-              "priority": 160,
+              "icon": "resistance_missile.png",
+              "priority": 280,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
-              "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "description": "Missile resistance: 25%",
+              "key": "wh_main_effect_character_stat_missile_resistance",
+              "value": 25
             },
             {
-              "icon": "charge_character.png",
-              "priority": 200,
+              "icon": "resistance_physical.png",
+              "priority": 280,
               "is_positive_value_good": true,
-              "description": "Charge bonus: +8",
-              "key": "wh_main_effect_character_stat_charge_bonus_add",
-              "value": 8
+              "description": "Physical resistance: 5%",
+              "key": "wh_main_effect_character_stat_physical_resistance",
+              "value": 5
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_aggressive",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_scaled_skin",
       "tier": 8,
       "indent": 6,
       "points_on_creation": 0,
@@ -5121,34 +6317,26 @@
     },
     {
       "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_10",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Tough",
-      "description": "Rugged, resistant, and almost unbreakable, this being can and will take on all comers.",
+      "name": "Opened Eyes",
+      "description": "Some are blessed by a dark understanding, able to gleam knowledge from every experience.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "armour_character.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
-              "key": "wh_main_effect_character_stat_armour",
-              "value": 5
-            },
-            {
-              "icon": "defence_character.png",
-              "priority": 150,
-              "is_positive_value_good": true,
-              "description": "Melee defence: +3",
-              "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_tough",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_the_eye_opens",
       "tier": 9,
       "indent": 6,
       "points_on_creation": 0,
@@ -5156,72 +6344,180 @@
       "visible_in_ui": false
     },
     {
-      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_12",
-      "image_path": "trait_personality.png",
+      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_archaon_01",
+      "image_path": "trait_tzeentch.png",
       "is_background_skill": true,
-      "name": "Knowledgeable",
-      "description": "What this being doesn't know probably isn't worth knowing, so deep is their interest in the world and its ways.",
+      "name": "Third Eye of Tzeentch",
+      "description": "A third eye opens in the favoured one's forehead that can see the shifting strands of fate.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "corruption_tzeentch.png",
+              "priority": 1,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
+              "description": "Tzeentch Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_tzeentch_character",
+              "value": 1
             },
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "souls.png",
+              "priority": 104,
               "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Path to Glory: -25% Souls cost to devote to Tzeentch",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_tzeentch",
+              "value": -25
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_knowledgeable",
-      "tier": 11,
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_third_eye_of_tzeentch",
+      "tier": 13,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
       "visible_in_ui": false
     },
     {
-      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_13",
-      "image_path": "trait_personality.png",
+      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_festus_faction_01",
+      "image_path": "trait_nurgle.png",
       "is_background_skill": true,
-      "name": "Intelligent",
-      "description": "Sharp minds make sharp blades sharper still.",
+      "name": "Nurgle's Rot",
+      "description": "Nurgle's Rot is the most dreaded and contagious of all diseases, for it gnaws at the victim's soul as well as his mortal body.",
       "levels": [
         {
           "effects": [
             {
-              "icon": "agent.png",
-              "priority": 101,
+              "icon": "corruption_nurgle.png",
+              "priority": 1,
               "is_positive_value_good": true,
-              "description": "Hero self-defence: +5% chance of wounding aggressors",
-              "key": "wh_main_effect_agent_defence_wound_chance_mod",
-              "value": 5
+              "description": "Nurgle Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_nurgle_character",
+              "value": 1
             },
             {
-              "icon": "icon_effects_ambush.png",
-              "priority": 110,
-              "is_positive_value_good": true,
-              "description": "Ambush defence chance: +10%",
-              "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-              "value": 10
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Nurgle",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_nurgle",
+              "value": -25
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
-      "character_skill_key": "wh2_main_skill_innate_all_intelligent",
-      "tier": 12,
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_nurgles_rot",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_kholek_01",
+      "image_path": "trait_tzeentch.png",
+      "is_background_skill": true,
+      "name": "Third Eye of Tzeentch",
+      "description": "A third eye opens in the favoured one's forehead that can see the shifting strands of fate.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_tzeentch.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Tzeentch Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_tzeentch_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Tzeentch",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_tzeentch",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_third_eye_of_tzeentch",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_sigvald_01",
+      "image_path": "trait_tzeentch.png",
+      "is_background_skill": true,
+      "name": "Third Eye of Tzeentch",
+      "description": "A third eye opens in the favoured one's forehead that can see the shifting strands of fate.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_tzeentch.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Tzeentch Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_tzeentch_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Tzeentch",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_tzeentch",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_third_eye_of_tzeentch",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_lord_fire_innate_vilitch_faction_01",
+      "image_path": "trait_tzeentch.png",
+      "is_background_skill": true,
+      "name": "Third Eye of Tzeentch",
+      "description": "A third eye opens in the favoured one's forehead that can see the shifting strands of fate.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_tzeentch.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Tzeentch Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_tzeentch_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Tzeentch",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_tzeentch",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_main_skill_node_set_chs_sorcerer_lord_fire",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_third_eye_of_tzeentch",
+      "tier": 13,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
@@ -5232,7 +6528,7 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Fireball [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [

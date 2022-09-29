@@ -101,7 +101,6 @@
         "description": "This complex distillation not only preserves the drinker in glorious Unlife, it also increases their physical resistance to attack.",
         "levels": [
           {
-            "unlocked_at_rank": 12,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -119,7 +118,8 @@
                 "key": "wh_main_effect_character_stat_physical_resistance",
                 "value": 5
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 12
           }
         ],
         "character_skill_key": "wh2_dlc09_skill_tmb_tomb_king_elixir_of_immortality",
@@ -145,7 +145,7 @@
                 "icon": "",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "[HIDDEN - do not translate] Used to increase lord rank when replacing a lord (target the effect at forces factionwide) - use in conjunction with a shown effect that targets provinces factionwide",
+                "description": "[HIDDEN - do not translate] Used to increase lord rank when replacing a lord (target the effect at forces factionwide) - use in conjunction with a shown effect that targets provinces factionwide\n\t(all armies)",
                 "key": "wh_main_faction_xp_increase_generals_hidden",
                 "value": 1
               },
@@ -153,7 +153,7 @@
                 "icon": "army.png",
                 "priority": 51,
                 "is_positive_value_good": true,
-                "description": "Lord recruit rank: +1",
+                "description": "Lord recruit rank: +1\n\t(factionwide)",
                 "key": "wh_main_faction_xp_increase_generals",
                 "value": 1
               },
@@ -161,7 +161,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Hero's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
@@ -233,7 +233,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +5%",
+                "description": "Ambush success chance: +5%\n\t(Hero's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 5
               },
@@ -241,7 +241,7 @@
                 "icon": "agent.png",
                 "priority": 102,
                 "is_positive_value_good": false,
-                "description": "Enemy Hero action success chance: -5%",
+                "description": "Enemy Hero action success chance: -5%\n\t(enemy characters in region)",
                 "key": "wh2_main_effect_agent_action_success_chance_enemies_in_region",
                 "value": -5
               }
@@ -1808,7 +1808,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2649,11 +2649,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2675,7 +2675,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2711,7 +2711,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3641,7 +3641,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -1
               },
@@ -3662,7 +3662,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -2
               },
@@ -3683,7 +3683,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -3
               },
@@ -3999,18 +3999,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -4048,6 +4040,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_wizard_passive_spread_corruption",
               "value": 1
             },
@@ -4055,7 +4055,7 @@
               "icon": "corruption.png",
               "priority": 0,
               "is_positive_value_good": false,
-              "description": "Corruption: -2",
+              "description": "Corruption: -2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
               "value": -2
             }
@@ -4083,9 +4083,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -4119,9 +4119,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4155,7 +4155,7 @@
               "icon": "corruption.png",
               "priority": 104,
               "is_positive_value_good": false,
-              "description": "Corruption: -2",
+              "description": "Corruption: -2\n\t(local province)",
               "key": "wh3_main_effect_corruption_reduction_characters",
               "value": -2
             }
@@ -4183,7 +4183,7 @@
               "icon": "agent.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Hero action success chance: +5%",
+              "description": "Hero action success chance: +5%\n\t(Heroes in local province)",
               "key": "wh_main_effect_agent_action_success_chance",
               "value": 5
             },
@@ -4191,7 +4191,7 @@
               "icon": "melee.png",
               "priority": 431,
               "is_positive_value_good": true,
-              "description": "Melee attack: +5 for Tomb Scorpion units",
+              "description": "Melee attack: +5 for Tomb Scorpion units\n\t(Lord's army)",
               "key": "wh2_dlc09_effect_force_stat_melee_attack_scorpions",
               "value": 5
             },
@@ -4199,7 +4199,7 @@
               "icon": "defence.png",
               "priority": 451,
               "is_positive_value_good": true,
-              "description": "Melee defence: +5 for Tomb Scorpion units",
+              "description": "Melee defence: +5 for Tomb Scorpion units\n\t(Lord's army)",
               "key": "wh2_dlc09_effect_force_stat_melee_defence_tmb_scorpions",
               "value": 5
             }
@@ -4235,7 +4235,7 @@
               "icon": "experience.png",
               "priority": 117,
               "is_positive_value_good": true,
-              "description": "Recruit rank: +1",
+              "description": "Recruit rank: +1\n\t(Hero's army)",
               "key": "wh_main_effect_force_all_campaign_experience_base_all",
               "value": 1
             }
@@ -4344,12 +4344,12 @@
         {
           "effects": [
             {
-              "icon": "magic_cooldown.png",
-              "priority": 293,
-              "is_positive_value_good": false,
-              "description": "Cooldown: -25% to \"Arcane Conduit\"",
-              "key": "wh2_dlc09_effect_ability_cooldown_arcane_conduit",
-              "value": -25
+              "icon": "magic_campaign.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve capacity: +6",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 6
             }
           ]
         }
@@ -4375,25 +4375,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4419,17 +4419,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -4452,20 +4452,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -4491,7 +4483,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -4519,7 +4511,7 @@
       "image_path": "wh2_dlc09_spell_nehekhara_djafs_incantation_of_cursed_blades.png",
       "is_background_skill": false,
       "name": "Djaf's Incantation of Cursed Blades [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [

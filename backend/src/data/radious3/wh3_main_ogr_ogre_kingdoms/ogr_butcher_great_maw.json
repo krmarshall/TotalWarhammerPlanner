@@ -171,7 +171,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -181,7 +180,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -2321,7 +2321,7 @@
                           "duration": 40,
                           "effect_type": "positive",
                           "mana_regen_mod": 1.6,
-                          "mana_max_depletion_mod": 0.3,
+                          "mana_max_depletion_mod": 0.2,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3342,7 +3342,7 @@
                 "icon": "morale.png",
                 "priority": 410,
                 "is_positive_value_good": true,
-                "description": "Leadership: +2",
+                "description": "Leadership: +2\n\t(Hero's army)",
                 "key": "wh_main_effect_force_stat_leadership",
                 "value": 2
               }
@@ -3515,7 +3515,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -1
               },
@@ -3536,7 +3536,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -2
               },
@@ -3557,7 +3557,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -3
               },
@@ -3821,7 +3821,7 @@
       "key": "wh3_main_skill_node_ogr_butcher_great_maw_campaign_dummy",
       "image_path": "battle_attack.png",
       "is_background_skill": false,
-      "name": " ",
+      "name": "",
       "description": "",
       "levels": [
         {
@@ -3878,7 +3878,7 @@
               "icon": "corruption.png",
               "priority": 0,
               "is_positive_value_good": false,
-              "description": "Corruption: -2",
+              "description": "Corruption: -2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
               "value": -2
             }
@@ -3906,9 +3906,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3939,10 +3939,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -3970,7 +3978,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -4042,7 +4050,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -4050,7 +4058,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -4078,9 +4086,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4147,20 +4155,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -4214,25 +4214,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4258,17 +4258,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -4294,17 +4294,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -4330,17 +4330,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -4366,9 +4366,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +4%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 4
+              "value": 20
             }
           ]
         }
@@ -4450,7 +4450,7 @@
               "icon": "corruption.png",
               "priority": 104,
               "is_positive_value_good": false,
-              "description": "Corruption: -1",
+              "description": "Corruption: -1\n\t(local province)",
               "key": "wh3_main_effect_corruption_reduction_characters",
               "value": -1
             }
@@ -4469,7 +4469,7 @@
       "key": "wh3_main_skill_node_ogr_butcher_great_maw_magic_dummy",
       "image_path": "trait_human.png",
       "is_background_skill": false,
-      "name": " ",
+      "name": "",
       "description": "",
       "levels": [
         {

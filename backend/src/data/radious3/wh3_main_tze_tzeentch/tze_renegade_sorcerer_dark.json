@@ -73,7 +73,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -83,7 +82,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -414,7 +414,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 280,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 10%",
+                "description": "Spell resistance: 10%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_magic_resistance",
                 "value": 10
               }
@@ -499,7 +499,7 @@
         "image_path": "wh2_main_spell_dark_magic_chillwind.png",
         "is_background_skill": false,
         "name": "Chillwind",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -544,7 +544,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -553,7 +553,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   },
@@ -592,7 +592,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -601,7 +601,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   }
@@ -662,7 +662,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -671,7 +671,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   },
@@ -710,7 +710,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -719,7 +719,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   }
@@ -775,7 +775,7 @@
         "image_path": "wh2_main_lore_passive_spiteful_conjuration.png",
         "is_background_skill": false,
         "name": "Spiteful Conjuration",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -860,7 +860,7 @@
         "image_path": "wh2_main_spell_dark_magic_power_of_darkness.png",
         "is_background_skill": false,
         "name": "Power of Darkness",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -910,7 +910,7 @@
                           "duration": 35,
                           "effect_type": "positive",
                           "mana_regen_mod": 0.8,
-                          "mana_max_depletion_mod": 1,
+                          "mana_max_depletion_mod": 0.7,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -972,7 +972,7 @@
                           "duration": 35,
                           "effect_type": "positive",
                           "mana_regen_mod": 0.8,
-                          "mana_max_depletion_mod": 1,
+                          "mana_max_depletion_mod": 0.7,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1019,7 +1019,7 @@
         "image_path": "wh2_main_spell_dark_magic_word_of_pain.png",
         "is_background_skill": false,
         "name": "Word of Pain",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1064,10 +1064,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1133,10 +1133,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1188,10 +1188,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1265,10 +1265,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1320,10 +1320,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1395,7 +1395,7 @@
         "image_path": "wh2_main_spell_dark_magic_bladewind.png",
         "is_background_skill": false,
         "name": "Bladewind",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1707,7 +1707,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1794,7 +1794,7 @@
         "image_path": "wh2_main_spell_dark_magic_doombolt.png",
         "is_background_skill": false,
         "name": "Doombolt",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2195,7 +2195,7 @@
         "image_path": "wh2_main_spell_dark_magic_soul_stealer.png",
         "is_background_skill": false,
         "name": "Soul Stealer",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2262,7 +2262,6 @@
                       "target_ground": true,
                       "target_intercept_range": 100,
                       "mana_cost": 15,
-                      "miscast_chance": 0.1,
                       "target_self": false,
                       "phases": [
                         {
@@ -2346,7 +2345,6 @@
                       "target_ground": true,
                       "target_intercept_range": 100,
                       "mana_cost": 15,
-                      "miscast_chance": 0.1,
                       "target_self": false,
                       "phases": [
                         {
@@ -2435,11 +2433,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2461,7 +2459,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2497,7 +2495,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3374,7 +3372,7 @@
                 "icon": "morale_character.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Leadership: +9",
+                "description": "Leadership: +9\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_leadership",
                 "value": 9
               },
@@ -3382,7 +3380,7 @@
                 "icon": "ammo_character.png",
                 "priority": 210,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20%",
+                "description": "Ammunition: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_ammunition",
                 "value": 20
               }
@@ -3411,7 +3409,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack: +2 for Marauder, Rider, and Initiate units",
+                "description": "Melee Attack: +2 for Marauder, Rider, and Initiate units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_craving_for_power_melee_attack",
                 "value": 2
               },
@@ -3419,7 +3417,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence: +4 for Marauder, Rider, and Initiate units",
+                "description": "Melee Defence: +4 for Marauder, Rider, and Initiate units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_craving_for_power_melee_defence",
                 "value": 4
               }
@@ -3431,7 +3429,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack: +4 for Marauder, Rider, and Initiate units",
+                "description": "Melee Attack: +4 for Marauder, Rider, and Initiate units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_craving_for_power_melee_attack",
                 "value": 4
               },
@@ -3439,7 +3437,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence: +6 for Marauder, Rider, and Initiate units",
+                "description": "Melee Defence: +6 for Marauder, Rider, and Initiate units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_craving_for_power_melee_defence",
                 "value": 6
               }
@@ -3451,7 +3449,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack: +6 for Marauder, Rider, and Initiate units",
+                "description": "Melee Attack: +6 for Marauder, Rider, and Initiate units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_craving_for_power_melee_attack",
                 "value": 6
               },
@@ -3459,7 +3457,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence: +8 for Marauder, Rider, and Initiate units",
+                "description": "Melee Defence: +8 for Marauder, Rider, and Initiate units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_craving_for_power_melee_defence",
                 "value": 8
               }
@@ -3491,7 +3489,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +6 for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units",
+                "description": "Charge Bonus: +6 for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_mindless_slaves_charge",
                 "value": 6
               },
@@ -3499,7 +3497,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +5% for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units",
+                "description": "Weapon Strength: +5% for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_mindless_slaves_weapon_strength",
                 "value": 5
               }
@@ -3511,7 +3509,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +8 for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units",
+                "description": "Charge Bonus: +8 for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_mindless_slaves_charge",
                 "value": 8
               },
@@ -3519,7 +3517,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +7% for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units",
+                "description": "Weapon Strength: +7% for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_mindless_slaves_weapon_strength",
                 "value": 7
               }
@@ -3531,7 +3529,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +10 for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units",
+                "description": "Charge Bonus: +10 for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_mindless_slaves_charge",
                 "value": 10
               },
@@ -3539,7 +3537,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units",
+                "description": "Weapon Strength: +9% for Chaos Fury, Screamer, Spawn, Forsaken, and Warp Stalker units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_mindless_slaves_weapon_strength",
                 "value": 9
               }
@@ -3571,7 +3569,7 @@
                 "icon": "accuracy.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Range: +6% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units",
+                "description": "Range: +6% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_unnatural_flame_range",
                 "value": 6
               },
@@ -3579,7 +3577,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +6% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units",
+                "description": "Reload Time Reduction: +6% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_unnatural_flame_reload",
                 "value": 6
               }
@@ -3591,7 +3589,7 @@
                 "icon": "accuracy.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Range: +8% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units",
+                "description": "Range: +8% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_unnatural_flame_range",
                 "value": 8
               },
@@ -3599,7 +3597,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +8% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units",
+                "description": "Reload Time Reduction: +8% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_unnatural_flame_reload",
                 "value": 8
               }
@@ -3611,7 +3609,7 @@
                 "icon": "accuracy.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Range: +10% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units",
+                "description": "Range: +10% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_unnatural_flame_range",
                 "value": 10
               },
@@ -3619,7 +3617,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +10% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units",
+                "description": "Reload Time Reduction: +10% for Horror, Flamer, Exalted Flamer, Burning Chariot, and Soul Grinder units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_unnatural_flame_reload",
                 "value": 10
               }
@@ -3651,7 +3649,7 @@
                 "icon": "barrier.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Barrier: +6% for Chaos Warrior and Tzaangor units",
+                "description": "Barrier: +6% for Chaos Warrior and Tzaangor units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_touched_by_change_barrier",
                 "value": 6
               },
@@ -3659,7 +3657,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack: +4 for Chaos Warrior and Tzaangor units",
+                "description": "Melee Attack: +4 for Chaos Warrior and Tzaangor units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_touched_by_change_melee_attack",
                 "value": 4
               }
@@ -3671,7 +3669,7 @@
                 "icon": "barrier.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Barrier: +8% for Chaos Warrior and Tzaangor units",
+                "description": "Barrier: +8% for Chaos Warrior and Tzaangor units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_touched_by_change_barrier",
                 "value": 8
               },
@@ -3679,7 +3677,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack: +6 for Chaos Warrior and Tzaangor units",
+                "description": "Melee Attack: +6 for Chaos Warrior and Tzaangor units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_touched_by_change_melee_attack",
                 "value": 6
               }
@@ -3691,7 +3689,7 @@
                 "icon": "barrier.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Barrier: +10% for Chaos Warrior and Tzaangor units",
+                "description": "Barrier: +10% for Chaos Warrior and Tzaangor units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_touched_by_change_barrier",
                 "value": 10
               },
@@ -3699,7 +3697,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack: +8 for Chaos Warrior and Tzaangor units",
+                "description": "Melee Attack: +8 for Chaos Warrior and Tzaangor units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_touched_by_change_melee_attack",
                 "value": 8
               }
@@ -3731,7 +3729,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence: +4 for Aspiring Champion and Chaos Knight units",
+                "description": "Melee Defence: +4 for Aspiring Champion and Chaos Knight units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_way_to_ascension_melee_defence",
                 "value": 4
               },
@@ -3739,7 +3737,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +5% for Aspiring Champion and Chaos Knight units",
+                "description": "Weapon Strength: +5% for Aspiring Champion and Chaos Knight units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_way_to_ascension_weapon_strength",
                 "value": 5
               }
@@ -3751,7 +3749,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence: +6 for Aspiring Champion and Chaos Knight units",
+                "description": "Melee Defence: +6 for Aspiring Champion and Chaos Knight units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_way_to_ascension_melee_defence",
                 "value": 6
               },
@@ -3759,7 +3757,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +7% for Aspiring Champion and Chaos Knight units",
+                "description": "Weapon Strength: +7% for Aspiring Champion and Chaos Knight units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_way_to_ascension_weapon_strength",
                 "value": 7
               }
@@ -3771,7 +3769,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence: +8 for Aspiring Champion and Chaos Knight units",
+                "description": "Melee Defence: +8 for Aspiring Champion and Chaos Knight units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_way_to_ascension_melee_defence",
                 "value": 8
               },
@@ -3779,7 +3777,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Aspiring Champion and Chaos Knight units",
+                "description": "Weapon Strength: +9% for Aspiring Champion and Chaos Knight units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_way_to_ascension_weapon_strength",
                 "value": 9
               }
@@ -3811,7 +3809,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Chosen, Chosen Knight, Doom Knight, and Lord of Change units",
+                "description": "Armour: +6 for Chosen, Chosen Knight, Doom Knight, and Lord of Change units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_ninth_legion_armour",
                 "value": 6
               },
@@ -3819,7 +3817,7 @@
                 "icon": "barrier.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Barrier: +6% for Chosen, Chosen Knight, Doom Knight, and Lord of Change units",
+                "description": "Barrier: +6% for Chosen, Chosen Knight, Doom Knight, and Lord of Change units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_ninth_legion_barrier",
                 "value": 6
               }
@@ -3831,7 +3829,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +8 for Chosen, Chosen Knight, Doom Knight, and Lord of Change units",
+                "description": "Armour: +8 for Chosen, Chosen Knight, Doom Knight, and Lord of Change units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_ninth_legion_armour",
                 "value": 8
               },
@@ -3839,7 +3837,7 @@
                 "icon": "barrier.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Barrier: +8% for Chosen, Chosen Knight, Doom Knight, and Lord of Change units",
+                "description": "Barrier: +8% for Chosen, Chosen Knight, Doom Knight, and Lord of Change units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_ninth_legion_barrier",
                 "value": 8
               }
@@ -3851,7 +3849,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Chosen, Chosen Knight, Doom Knight, and Lord of Change units",
+                "description": "Armour: +10 for Chosen, Chosen Knight, Doom Knight, and Lord of Change units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_ninth_legion_armour",
                 "value": 10
               },
@@ -3859,7 +3857,7 @@
                 "icon": "barrier.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Barrier: +10% for Chosen, Chosen Knight, Doom Knight, and Lord of Change units",
+                "description": "Barrier: +10% for Chosen, Chosen Knight, Doom Knight, and Lord of Change units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_tze_the_ninth_legion_barrier",
                 "value": 10
               }
@@ -3980,7 +3978,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 for Blue Horrors of Tzeentch, Pink Horrors of Tzeentch and Exalted Pink Horrors of Tzeentch units (Rank 7 and above)",
+                "description": "Leadership: +6 for Marauders, Chaos Warshrines, Blue Horrors of Tzeentch, Pink Horrors of Tzeentch and Exalted Pink Horrors of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_leadership_tze_horrors_rank7",
                 "value": 6
               },
@@ -3988,7 +3986,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Blue Horrors of Tzeentch, Pink Horrors of Tzeentch and Exalted Pink Horrors of Tzeentch units (Rank 7 and above)",
+                "description": "Speed: +10% for Marauders, Chaos Warshrines, Blue Horrors of Tzeentch, Pink Horrors of Tzeentch and Exalted Pink Horrors of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_speed_tze_horrors_rank7",
                 "value": 10
               },
@@ -3996,9 +3994,9 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Blue Horrors of Tzeentch, Pink Horrors of Tzeentch and Exalted Pink Horrors of Tzeentch units (Rank 7 and above)",
+                "description": "Missile resistance: 10% for Marauders, Chaos Warshrines, Blue Horrors of Tzeentch, Pink Horrors of Tzeentch and Exalted Pink Horrors of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_missile_resistance_tze_horrors_rank7",
-                "value": 15
+                "value": 10
               }
             ]
           }
@@ -4027,7 +4025,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Forsaken of Tzeentch, Spawn of Tzeentch, Lord of Change and Soul Grinder units (Rank 7 and above)",
+                "description": "Weapon strength: +8% for Forsaken of Tzeentch, Spawn of Tzeentch, Lord of Change and Soul Grinder units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_weapon_strength_tze_forsaken_spawn_lord_of_change_soul_grinder_rank7",
                 "value": 8
               },
@@ -4035,17 +4033,17 @@
                 "icon": "bonus_vs_small.png",
                 "priority": 482,
                 "is_positive_value_good": true,
-                "description": "Bonus vs Infantry: +6 for Forsaken of Tzeentch, Spawn of Tzeentch, Lord of Change and Soul Grinder units (Rank 7 and above)",
+                "description": "Bonus vs Infantry: +5 for Forsaken of Tzeentch, Spawn of Tzeentch, Lord of Change and Soul Grinder units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_bonus_vs_infantry_tze_forsaken_spawn_lord_of_change_soul_grinder_rank7",
-                "value": 6
+                "value": 5
               },
               {
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Forsaken of Tzeentch, Spawn of Tzeentch, Lord of Change and Soul Grinder units (Rank 7 and above)",
+                "description": "Spell resistance: 10% for Forsaken of Tzeentch, Spawn of Tzeentch, Lord of Change and Soul Grinder units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_magic_resistance_tze_forsaken_spawn_lord_of_change_soul_grinder_rank7",
-                "value": 15
+                "value": 10
               }
             ]
           }
@@ -4074,15 +4072,15 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 for Flamers of Tzeentch, Exalted Flamer of Tzeentch and Burning Chariot of Tzeentch units (Rank 7 and above)",
+                "description": "Leadership: +5 for Flamers of Tzeentch, Exalted Flamer of Tzeentch and Burning Chariot of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_leadership_tze_flamers_chariot_rank7",
-                "value": 6
+                "value": 5
               },
               {
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +15% for Flamers of Tzeentch, Exalted Flamer of Tzeentch and Burning Chariot of Tzeentch units (Rank 7 and above)",
+                "description": "Weapon strength: +15% for Flamers of Tzeentch, Exalted Flamer of Tzeentch and Burning Chariot of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_weapon_strength_tze_flamers_chariot_rank7",
                 "value": 15
               },
@@ -4090,9 +4088,9 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Flamers of Tzeentch, Exalted Flamer of Tzeentch and Burning Chariot of Tzeentch units (Rank 7 and above)",
+                "description": "Spell resistance: 10% for Flamers of Tzeentch, Exalted Flamer of Tzeentch and Burning Chariot of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_magic_resistance_tze_flamers_chariot_rank7",
-                "value": 15
+                "value": 10
               }
             ]
           }
@@ -4119,27 +4117,27 @@
             "effects": [
               {
                 "icon": "armour.png",
-                "priority": 402,
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Chaos Knights of Tzeentch, Doom Knights of Tzeentch, Chaos Furies and Screamers of Tzeentch units (Rank 7 and above)",
+                "description": "Armour: +10 for Chaos Warriors of Tzeentch, Chaos Knights of Tzeentch, Doom Knights of Tzeentch, Chaos Furies and Screamers of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_armour_tze_knights_furies_screamers_rank7",
-                "value": 12
+                "value": 10
               },
               {
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 for Chaos Knights of Tzeentch, Doom Knights of Tzeentch, Chaos Furies and Screamers of Tzeentch units (Rank 7 and above)",
+                "description": "Leadership: +5 for Chaos Warriors of Tzeentch, Chaos Knights of Tzeentch, Doom Knights of Tzeentch, Chaos Furies and Screamers of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_leadership_tze_knights_furies_screamers_rank7",
-                "value": 6
+                "value": 5
               },
               {
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Chaos Knights of Tzeentch, Doom Knights of Tzeentch, Chaos Furies and Screamers of Tzeentch units (Rank 7 and above)",
+                "description": "Missile resistance: 10% for Chaos Warriors of Tzeentch, Chaos Knights of Tzeentch, Doom Knights of Tzeentch, Chaos Furies and Screamers of Tzeentch units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_missile_resistance_tze_knights_furies_screamers_rank7",
-                "value": 15
+                "value": 10
               }
             ]
           }
@@ -4293,8 +4291,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -4305,8 +4303,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -4317,8 +4315,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
@@ -4348,7 +4346,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of Winds of Magic changing in strength: +5%",
+                "description": "Chance of Winds of Magic changing in strength: +5%\n\t(local province)",
                 "key": "wh3_main_effect_winds_of_magic_change_chance_mod",
                 "value": 5
               },
@@ -4356,7 +4354,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 102,
                 "is_positive_value_good": true,
-                "description": "Chance of Winds of Magic increasing in strength when changing: +5%",
+                "description": "Chance of Winds of Magic increasing in strength when changing: +5%\n\t(local province)",
                 "key": "wh3_main_effect_winds_of_magic_increase_chance_mod",
                 "value": 5
               }
@@ -4368,7 +4366,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of Winds of Magic changing in strength: +10%",
+                "description": "Chance of Winds of Magic changing in strength: +10%\n\t(local province)",
                 "key": "wh3_main_effect_winds_of_magic_change_chance_mod",
                 "value": 10
               },
@@ -4376,7 +4374,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 102,
                 "is_positive_value_good": true,
-                "description": "Chance of Winds of Magic increasing in strength when changing: +10%",
+                "description": "Chance of Winds of Magic increasing in strength when changing: +10%\n\t(local province)",
                 "key": "wh3_main_effect_winds_of_magic_increase_chance_mod",
                 "value": 10
               }
@@ -4388,7 +4386,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of Winds of Magic changing in strength: +15%",
+                "description": "Chance of Winds of Magic changing in strength: +15%\n\t(local province)",
                 "key": "wh3_main_effect_winds_of_magic_change_chance_mod",
                 "value": 15
               },
@@ -4396,7 +4394,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 102,
                 "is_positive_value_good": true,
-                "description": "Chance of Winds of Magic increasing in strength when changing: +15%",
+                "description": "Chance of Winds of Magic increasing in strength when changing: +15%\n\t(local province)",
                 "key": "wh3_main_effect_winds_of_magic_increase_chance_mod",
                 "value": 15
               }
@@ -4427,7 +4425,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +10%",
+                "description": "Income from raiding: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 10
               }
@@ -4439,17 +4437,17 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +3%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 3
+                "description": "Income from sacking settlements: +5%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 5
               }
             ]
           },
@@ -4459,17 +4457,17 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +30%",
+                "description": "Income from raiding: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 30
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +8%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 8
+                "description": "Income from sacking settlements: +10%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 10
               }
             ]
           }
@@ -4498,7 +4496,7 @@
                 "icon": "corruption_tzeentch.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Tzeentch corruption: +1",
+                "description": "Tzeentch corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_tzeentch_characters",
                 "value": 1
               }
@@ -4510,7 +4508,7 @@
                 "icon": "corruption_tzeentch.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Tzeentch corruption: +2",
+                "description": "Tzeentch corruption: +2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_tzeentch_characters",
                 "value": 2
               }
@@ -4522,7 +4520,7 @@
                 "icon": "corruption_tzeentch.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Tzeentch corruption: +4",
+                "description": "Tzeentch corruption: +4\n\t(local province)",
                 "key": "wh3_main_effect_corruption_tzeentch_characters",
                 "value": 4
               }
@@ -4554,7 +4552,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               },
@@ -4562,7 +4560,7 @@
                 "icon": "army.png",
                 "priority": 270,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
+                "description": "Local recruitment capacity: +1\n\t(local province)",
                 "key": "wh_main_effect_unit_recruitment_points",
                 "value": 1
               }
@@ -4675,7 +4673,7 @@
         "image_path": "campaign_military_spending.png",
         "is_background_skill": false,
         "name": "Called by Change",
-        "description": "The promise of Change, though it may amount to nothing more than the cruellest of tricks, ensures the forces of Tzeen'neth are fed and nourished.",
+        "description": "The promise of Change, though it may amount to nothing more than the cruellest of tricks, ensures the forces of Tzeeneth are fed and nourished.",
         "levels": [
           {
             "effects": [
@@ -4683,7 +4681,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -4695,7 +4693,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -4707,7 +4705,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -4758,7 +4756,7 @@
                 "icon": "grimoires_bundle.png",
                 "priority": 199,
                 "is_positive_value_good": true,
-                "description": "Grimoires from all buildings: +50%",
+                "description": "Grimoires from all buildings: +50%\n\t(local province)",
                 "key": "wh3_main_effect_building_tze_grimoires_mod",
                 "value": 50
               }
@@ -4778,7 +4776,7 @@
                 "icon": "grimoires_bundle.png",
                 "priority": 199,
                 "is_positive_value_good": true,
-                "description": "Grimoires from all buildings: +100%",
+                "description": "Grimoires from all buildings: +100%\n\t(local province)",
                 "key": "wh3_main_effect_building_tze_grimoires_mod",
                 "value": 100
               }
@@ -4809,7 +4807,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -4821,7 +4819,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 6
               }
@@ -4833,7 +4831,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 9
               }
@@ -4865,7 +4863,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -8%",
+                "description": "Upkeep: -8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -8
               },
@@ -4897,7 +4895,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
@@ -4971,7 +4969,7 @@
                       }
                     ],
                     "active_time": 3,
-                    "recharge_time": 30,
+                    "recharge_time": 35,
                     "wind_up_time": 1,
                     "passive": false,
                     "effect_range": 0,
@@ -4980,7 +4978,7 @@
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 150,
-                    "mana_cost": 5,
+                    "mana_cost": 7,
                     "target_self": false
                   }
                 }
@@ -5012,9 +5010,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -5045,10 +5043,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -5076,7 +5082,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -5112,7 +5118,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -5120,7 +5126,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -5148,9 +5154,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -5217,20 +5223,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -5284,25 +5282,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -5328,17 +5326,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -5364,17 +5362,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -5400,17 +5398,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -5464,7 +5462,7 @@
       "image_path": "trait_tzeentch.png",
       "is_background_skill": true,
       "name": "Pinioned",
-      "description": "Blessed with the transformative boons of Tzeen'neth, this one can travel further by his feathered wings, whether they be figurative or literal.",
+      "description": "Blessed with the transformative boons of Tzeeneth, this one can travel further by his feathered wings, whether they be figurative or literal.",
       "levels": [
         {
           "effects": [
@@ -5520,7 +5518,7 @@
       "image_path": "trait_tzeentch.png",
       "is_background_skill": true,
       "name": "Channeller",
-      "description": "This one has become the conduit through which the Great Conspirator weaves his sorcerous webs, affecting glorious Change through magical means.",
+      "description": "This one has become the conduit through which the Great Conspirator weaves His sorcerous webs, affecting glorious Change through magical means.",
       "levels": [
         {
           "effects": [
@@ -5528,7 +5526,7 @@
               "icon": "magic_campaign.png",
               "priority": 102,
               "is_positive_value_good": true,
-              "description": "Chance of Winds of Magic increasing in strength when changing: +10%",
+              "description": "Chance of Winds of Magic increasing in strength when changing: +10%\n\t(local province)",
               "key": "wh3_main_effect_winds_of_magic_increase_chance_mod",
               "value": 10
             }
@@ -5584,7 +5582,7 @@
               "icon": "corruption_tzeentch.png",
               "priority": 104,
               "is_positive_value_good": true,
-              "description": "Tzeentch corruption: +1",
+              "description": "Tzeentch corruption: +1\n\t(local province)",
               "key": "wh3_main_effect_corruption_tzeentch_characters",
               "value": 1
             }

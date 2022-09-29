@@ -123,7 +123,7 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 during subterranean siege battles",
+                "description": "Leadership: +6 during subterranean siege battles\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_leadership_during_siege_subterranean",
                 "value": 6
               },
@@ -131,7 +131,7 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 during subterranean intercept battles",
+                "description": "Leadership: +6 during subterranean intercept battles\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_leadership_during_subterranean",
                 "value": 6
               }
@@ -216,7 +216,7 @@
                 "icon": "military_spending.png",
                 "priority": 105,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -25% for all Orc and Big ‘Uns infantry and cavalry units",
+                "description": "Upkeep: -25% for all Orc and Big ‘Uns infantry and cavalry units\n\t(Lord's army)",
                 "key": "wh2_dlc15_effect_upkeep_reduction_boyz_big_uns",
                 "value": -25
               },
@@ -224,7 +224,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Frenzy\" for all Orc and Big ‘Uns infantry and cavalry units",
+                "description": "Passive ability: \"Frenzy\" for all Orc and Big ‘Uns infantry and cavalry units\n\t(Lord's army)",
                 "key": "wh2_dlc15_effect_army_enable_ability_frenzy_boyz_big_uns",
                 "value": 1
               }
@@ -252,7 +252,7 @@
                 "icon": "defence.png",
                 "priority": 61,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for all Orc and Big ‘Uns infantry and cavalry units",
+                "description": "Melee defence: +8 for all Orc and Big ‘Uns infantry and cavalry units\n\t(Lord's army)",
                 "key": "wh2_dlc15_effect_melee_defence_boyz_big_uns",
                 "value": 8
               },
@@ -260,15 +260,15 @@
                 "icon": "battle_movement.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Speed: +12% for all Orc and Big ‘Uns infantry and cavalry units",
+                "description": "Speed: +12% for all Orc and Big ‘Uns infantry and cavalry units\n\t(Lord's army)",
                 "key": "wh2_dlc15_effect_movement_speed_boyz_big_uns",
                 "value": 12
               },
               {
-                "icon": "ranged_damage.png",
+                "icon": "icon_stat_ranged_damage_base_force.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Base missile damage: +12% for Orc Arrer Boyz and Savage Orc Arrer Boyz units",
+                "description": "Base missile damage: +12% for Orc Arrer Boyz and Savage Orc Arrer Boyz units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_missile_damage_arrer_boyz",
                 "value": 12
               }
@@ -307,7 +307,7 @@
                 "icon": "wizard.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Hero recruit rank: +4 for Shamans",
+                "description": "Hero recruit rank: +4 for Shamans\n\t(local province)",
                 "key": "wh_main_effect_agent_recruitment_xp_wizard_greenskins",
                 "value": 4
               }
@@ -338,7 +338,7 @@
                 "icon": "attribute_guerrilla_deploy.png",
                 "priority": 15,
                 "is_positive_value_good": true,
-                "description": "Attribute: Vanguard Deployment for all Orc and Big ‘Uns infantry and cavalry units",
+                "description": "Attribute: Vanguard Deployment for all Orc and Big ‘Uns infantry and cavalry units\n\t(Lord's army)",
                 "key": "wh2_dlc15_effect_army_grn_vanguard_deployment_boyz_big_uns",
                 "value": 1
               },
@@ -346,7 +346,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
+                "description": "Attrition: +15% when under siege\n\t(enemy armies in local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
                 "value": 15
               },
@@ -1973,7 +1973,7 @@
         "image_path": "wh_main_spell_death_spirit_leech.png",
         "is_background_skill": false,
         "name": "Spirit Leech",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2309,7 +2309,7 @@
         "image_path": "wh_main_lore_passive_life_leeching.png",
         "is_background_skill": false,
         "name": "Life-Leeching",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2354,7 +2354,7 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "mana_max_depletion_mod": 0.2,
+                          "mana_max_depletion_mod": 0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2385,7 +2385,7 @@
         "image_path": "wh_main_spell_death_aspect_of_the_dreadknight.png",
         "is_background_skill": false,
         "name": "Aspect of the Dread Knight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2430,6 +2430,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2493,6 +2498,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2579,6 +2589,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -2641,6 +2656,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2724,7 +2744,7 @@
         "image_path": "wh_main_spell_death_soulblight.png",
         "is_background_skill": false,
         "name": "Soulblight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3136,7 +3156,7 @@
         "image_path": "wh_main_spell_death_doom_and_darkness.png",
         "is_background_skill": false,
         "name": "Doom & Darkness",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3509,7 +3529,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3596,7 +3616,7 @@
         "image_path": "wh_main_spell_death_the_fate_of_bjuna.png",
         "is_background_skill": false,
         "name": "The Fate of Bjuna",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3708,7 +3728,7 @@
         "image_path": "wh_main_spell_death_the_purple_sun_of_xereus.png",
         "is_background_skill": false,
         "name": "The Purple Sun of Xereus",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4024,11 +4044,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -4050,7 +4070,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4086,7 +4106,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -4129,7 +4149,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +75",
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 75
               },
@@ -4165,7 +4185,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Goblin and Night Goblin infantry units",
+                "description": "Melee defence: +4 for Goblin and Night Goblin infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_grn_all_goblin_infantry",
                 "value": 4
               },
@@ -4173,7 +4193,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Goblin and Night Goblin missile infantry units",
+                "description": "Ammunition: +10% for Goblin and Night Goblin missile infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_all_goblin_ranged_infantry",
                 "value": 10
               }
@@ -4185,7 +4205,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Goblin and Night Goblin infantry units",
+                "description": "Melee attack: +4 for Goblin and Night Goblin infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_grn_all_goblin_infantry",
                 "value": 4
               },
@@ -4193,7 +4213,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Goblin and Night Goblin infantry units",
+                "description": "Melee defence: +6 for Goblin and Night Goblin infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_grn_all_goblin_infantry",
                 "value": 6
               },
@@ -4201,7 +4221,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Goblin and Night Goblin missile infantry units",
+                "description": "Ammunition: +15% for Goblin and Night Goblin missile infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_all_goblin_ranged_infantry",
                 "value": 15
               },
@@ -4209,7 +4229,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Goblin and Night Goblin missile infantry units",
+                "description": "Missile strength: +5% for Goblin and Night Goblin missile infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_all_goblin_ranged_infantry",
                 "value": 5
               }
@@ -4221,7 +4241,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Goblin and Night Goblin infantry units",
+                "description": "Melee attack: +6 for Goblin and Night Goblin infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_grn_all_goblin_infantry",
                 "value": 6
               },
@@ -4229,7 +4249,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Goblin and Night Goblin infantry units",
+                "description": "Melee defence: +8 for Goblin and Night Goblin infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_grn_all_goblin_infantry",
                 "value": 8
               },
@@ -4237,7 +4257,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Goblin and Night Goblin missile infantry units",
+                "description": "Ammunition: +20% for Goblin and Night Goblin missile infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_all_goblin_ranged_infantry",
                 "value": 20
               },
@@ -4245,7 +4265,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Goblin and Night Goblin missile infantry units",
+                "description": "Missile strength: +7% for Goblin and Night Goblin missile infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_all_goblin_ranged_infantry",
                 "value": 7
               }
@@ -4276,7 +4296,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +6% for melee cavalry, Orc Boar Chariot, and Squig Herd units",
+                "description": "Speed: +6% for melee cavalry, Orc Boar Chariot, and Squig Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_grn_all_melee_cav_orc_boar_chariot_squig_herd",
                 "value": 6
               }
@@ -4288,7 +4308,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +9% for melee cavalry, Orc Boar Chariot, and Squig Herd units",
+                "description": "Speed: +9% for melee cavalry, Orc Boar Chariot, and Squig Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_grn_all_melee_cav_orc_boar_chariot_squig_herd",
                 "value": 9
               },
@@ -4296,7 +4316,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for melee cavalry, Orc Boar Chariot, and Squig Herd units",
+                "description": "Charge bonus: +6 for melee cavalry, Orc Boar Chariot, and Squig Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_grn_all_melee_cav_orc_boar_chariot_squig_herd",
                 "value": 6
               }
@@ -4308,7 +4328,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +12% for melee cavalry, Orc Boar Chariot, and Squig Herd units",
+                "description": "Speed: +12% for melee cavalry, Orc Boar Chariot, and Squig Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_grn_all_melee_cav_orc_boar_chariot_squig_herd",
                 "value": 12
               },
@@ -4316,7 +4336,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for melee cavalry, Orc Boar Chariot, and Squig Herd units",
+                "description": "Charge bonus: +12 for melee cavalry, Orc Boar Chariot, and Squig Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_grn_all_melee_cav_orc_boar_chariot_squig_herd",
                 "value": 12
               }
@@ -4347,15 +4367,15 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Orc infantry units",
+                "description": "Weapon strength: +5% for Orc infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_all_orc_infantry",
                 "value": 5
               },
               {
-                "icon": "ranged_damage.png",
+                "icon": "icon_stat_ranged_damage_base_force.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Base missile damage: +3% for Orc Arrer Boyz and Savage Orc Arrer Boyz units",
+                "description": "Base missile damage: +3% for Orc Arrer Boyz and Savage Orc Arrer Boyz units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_missile_damage_arrer_boyz",
                 "value": 3
               }
@@ -4367,7 +4387,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Orc infantry units",
+                "description": "Melee attack: +4 for Orc infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_grn_all_orc_infantry",
                 "value": 4
               },
@@ -4375,15 +4395,15 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Orc infantry units",
+                "description": "Weapon strength: +7% for Orc infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_all_orc_infantry",
                 "value": 7
               },
               {
-                "icon": "ranged_damage.png",
+                "icon": "icon_stat_ranged_damage_base_force.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Base missile damage: +5% for Orc Arrer Boyz and Savage Orc Arrer Boyz units",
+                "description": "Base missile damage: +5% for Orc Arrer Boyz and Savage Orc Arrer Boyz units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_missile_damage_arrer_boyz",
                 "value": 5
               },
@@ -4391,7 +4411,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 561,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +4% for Orc Arrer Boyz and Savage Orc Arrer Boyz units",
+                "description": "Reload time reduction: +4% for Orc Arrer Boyz and Savage Orc Arrer Boyz units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_grn_orc_arrer_boyz_savage_orc_arrer_boyz",
                 "value": 4
               }
@@ -4403,7 +4423,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Orc infantry units",
+                "description": "Melee attack: +6 for Orc infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_grn_all_orc_infantry",
                 "value": 6
               },
@@ -4411,15 +4431,15 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Orc infantry units",
+                "description": "Weapon strength: +9% for Orc infantry units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_all_orc_infantry",
                 "value": 9
               },
               {
-                "icon": "ranged_damage.png",
+                "icon": "icon_stat_ranged_damage_base_force.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Base missile damage: +7% for Orc Arrer Boyz and Savage Orc Arrer Boyz units",
+                "description": "Base missile damage: +7% for Orc Arrer Boyz and Savage Orc Arrer Boyz units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_missile_damage_arrer_boyz",
                 "value": 7
               },
@@ -4427,7 +4447,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 561,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +8% for Orc Arrer Boyz and Savage Orc Arrer Boyz units",
+                "description": "Reload time reduction: +8% for Orc Arrer Boyz and Savage Orc Arrer Boyz units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_grn_orc_arrer_boyz_savage_orc_arrer_boyz",
                 "value": 8
               }
@@ -4458,7 +4478,7 @@
                 "icon": "armour.png",
                 "priority": 37,
                 "is_positive_value_good": true,
-                "description": "Armour: +4 for Chariots and Pump Wagon units",
+                "description": "Armour: +4 for Chariots and Pump Wagon units\n\t(Lord's army)",
                 "key": "wh_dlc15_effect_force_unit_stat_armour_grn_chariots_pumpwagons",
                 "value": 4
               },
@@ -4466,7 +4486,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for missile cavalry and chariot units",
+                "description": "Missile strength: +3% for missile cavalry and chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_all_ranged_cavalry_chariots",
                 "value": 3
               }
@@ -4478,15 +4498,23 @@
                 "icon": "armour.png",
                 "priority": 37,
                 "is_positive_value_good": true,
-                "description": "Armour: +8 for Chariots and Pump Wagon units",
+                "description": "Armour: +8 for Chariots and Pump Wagon units\n\t(Lord's army)",
                 "key": "wh_dlc15_effect_force_unit_stat_armour_grn_chariots_pumpwagons",
                 "value": 8
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +4% for Pump Wagon units\n\t(Lord's army)",
+                "key": "wh2_dlc15_tech_effect_melee_damage_mod_pump_wagons",
+                "value": 4
               },
               {
                 "icon": "accuracy.png",
                 "priority": 531,
                 "is_positive_value_good": true,
-                "description": "Range: +5% for missile cavalry and chariot units",
+                "description": "Range: +5% for missile cavalry and chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_range_grn_all_ranged_cavalry_chariots",
                 "value": 5
               },
@@ -4494,7 +4522,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for missile cavalry and chariot units",
+                "description": "Missile strength: +5% for missile cavalry and chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_all_ranged_cavalry_chariots",
                 "value": 5
               }
@@ -4506,15 +4534,23 @@
                 "icon": "armour.png",
                 "priority": 37,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Chariots and Pump Wagon units",
+                "description": "Armour: +12 for Chariots and Pump Wagon units\n\t(Lord's army)",
                 "key": "wh_dlc15_effect_force_unit_stat_armour_grn_chariots_pumpwagons",
                 "value": 12
+              },
+              {
+                "icon": "weapon_damage.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +6% for Pump Wagon units\n\t(Lord's army)",
+                "key": "wh2_dlc15_tech_effect_melee_damage_mod_pump_wagons",
+                "value": 6
               },
               {
                 "icon": "accuracy.png",
                 "priority": 531,
                 "is_positive_value_good": true,
-                "description": "Range: +10% for missile cavalry and chariot units",
+                "description": "Range: +10% for missile cavalry and chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_range_grn_all_ranged_cavalry_chariots",
                 "value": 10
               },
@@ -4522,7 +4558,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for missile cavalry and chariot units",
+                "description": "Missile strength: +7% for missile cavalry and chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_all_ranged_cavalry_chariots",
                 "value": 7
               }
@@ -4553,7 +4589,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Trolls, Giant, and Arachnarok Spider units",
+                "description": "Weapon strength: +6% for Trolls, Giant, Rogue Idol and Arachnarok Spider units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_trolls_gaint_arachnarok",
                 "value": 6
               }
@@ -4565,7 +4601,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Trolls, Giant, and Arachnarok Spider units",
+                "description": "Melee attack: +4 for Trolls, Giant, Rogue Idol and Arachnarok Spider units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_trolls_giant_arachnarok",
                 "value": 4
               },
@@ -4573,7 +4609,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Trolls, Giant, and Arachnarok Spider units",
+                "description": "Weapon strength: +8% for Trolls, Giant, Rogue Idol and Arachnarok Spider units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_trolls_gaint_arachnarok",
                 "value": 8
               }
@@ -4585,7 +4621,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Trolls, Giant, and Arachnarok Spider units",
+                "description": "Melee attack: +6 for Trolls, Giant, Rogue Idol and Arachnarok Spider units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_trolls_giant_arachnarok",
                 "value": 6
               },
@@ -4593,7 +4629,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Trolls, Giant, and Arachnarok Spider units",
+                "description": "Weapon strength: +10% for Trolls, Giant, Rogue Idol and Arachnarok Spider units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_trolls_gaint_arachnarok",
                 "value": 10
               }
@@ -4624,7 +4660,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Goblin Rock Lobber and Doom Diver Catapult units",
+                "description": "Ammunition: +10% for Goblin Rock Lobber and Doom Diver Catapult units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_rock_lobber_doom_diver",
                 "value": 10
               }
@@ -4636,7 +4672,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Goblin Rock Lobber and Doom Diver Catapult units",
+                "description": "Ammunition: +15% for Goblin Rock Lobber and Doom Diver Catapult units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_rock_lobber_doom_diver",
                 "value": 15
               },
@@ -4644,7 +4680,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Goblin Rock Lobber and Doom Diver Catapult units",
+                "description": "Missile strength: +5% for Goblin Rock Lobber and Doom Diver Catapult units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_rock_lobber_doom_diver",
                 "value": 5
               }
@@ -4656,7 +4692,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Goblin Rock Lobber and Doom Diver Catapult units",
+                "description": "Ammunition: +20% for Goblin Rock Lobber and Doom Diver Catapult units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_rock_lobber_doom_diver",
                 "value": 20
               },
@@ -4664,7 +4700,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Goblin Rock Lobber and Doom Diver Catapult units",
+                "description": "Missile strength: +7% for Goblin Rock Lobber and Doom Diver Catapult units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_rock_lobber_doom_diver",
                 "value": 7
               }
@@ -4688,7 +4724,7 @@
         "image_path": "wh_main_character_abilities_get_back_ere.png",
         "is_background_skill": false,
         "name": "Get Back 'Ere!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4779,7 +4815,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Goblin, Night Goblin and Squig Herd units (Rank 7 and above)",
+                "description": "Leadership: +5 for all Goblin, Pump Wagon, Night Goblin and Squig Herd units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_leadership_goblin_squig_rank7",
                 "value": 5
               },
@@ -4787,7 +4823,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Goblin, Night Goblin and Squig Herd units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for all Goblin, Pump Wagon, Night Goblin and Squig Herd units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_all_goblin_rank7",
                 "value": 10
               },
@@ -4795,7 +4831,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Goblin, Night Goblin and Squig Herd units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for all Goblin, Pump Wagon, Night Goblin and Squig Herd units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_grn_all_goblin_squig_rank7",
                 "value": 10
               }
@@ -4826,7 +4862,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Orc units (Rank 7 and above)",
+                "description": "Armour: +12 for Orc units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_orc_rank7",
                 "value": 12
               },
@@ -4834,7 +4870,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Orc units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Orc units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_grn_all_orc_rank7",
                 "value": 5
               },
@@ -4842,7 +4878,7 @@
                 "icon": "resistance_ward_save.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Ward save: 8% for Orc units (Rank 7 and above)",
+                "description": "Ward save: 8% for Orc units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ward_save_orc_rank7",
                 "value": 8
               }
@@ -4873,7 +4909,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Trolls, Giant, and Arachnarok Spider units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Trolls, Giant, Rogue Idol and Arachnarok Spider units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_grn_trolls_giant_arachnarok_rank7",
                 "value": 5
               },
@@ -4881,7 +4917,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Trolls, Giant, and Arachnarok Spider units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Trolls, Giant, Rogue Idol and Arachnarok Spider units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_grn_trolls_giant_arachnarok_rank7",
                 "value": 10
               },
@@ -4889,7 +4925,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Trolls, Giant, and Arachnarok Spider units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Trolls, Giant, Rogue Idol and Arachnarok Spider units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_grn_trolls_giant_arachnarok_rank7",
                 "value": 15
               }
@@ -4920,7 +4956,7 @@
                 "icon": "ammo.png",
                 "priority": 512,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Goblin Rock Lobber and Doom Diver Catapult units (Rank 7 and above)",
+                "description": "Ammunition: +20% for Goblin Rock Lobber and Doom Diver Catapult units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_grn_rock_lobber_doom_diver_rank7",
                 "value": 20
               },
@@ -4928,7 +4964,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Goblin Rock Lobber and Doom Diver Catapult units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Goblin Rock Lobber and Doom Diver Catapult units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_grn_rock_lobber_doom_diver_rank7",
                 "value": 10
               },
@@ -4936,7 +4972,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Goblin Rock Lobber and Doom Diver Catapult units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Goblin Rock Lobber and Doom Diver Catapult units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_grn_rock_lobber_doom_diver_rank7",
                 "value": 10
               }
@@ -4960,7 +4996,7 @@
         "image_path": "wh2_dlc15_skill_grn_smash_em_faster.png",
         "is_background_skill": false,
         "name": "Smash 'Em Faster",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -5149,7 +5185,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -5% casualties suffered from all attrition",
+                "description": "Attrition: -5% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -5
               },
@@ -5157,7 +5193,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +10%",
+                "description": "Income from raiding: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 10
               }
@@ -5169,7 +5205,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               },
@@ -5177,7 +5213,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               }
@@ -5189,7 +5225,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -15% casualties suffered from all attrition",
+                "description": "Attrition: -15% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -15
               },
@@ -5197,7 +5233,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +30%",
+                "description": "Income from raiding: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 30
               }
@@ -5236,7 +5272,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from looting settlements: +3%",
+                "description": "Income from looting settlements: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_loot_income",
                 "value": 3
               }
@@ -5256,7 +5292,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from looting settlements: +8%",
+                "description": "Income from looting settlements: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_loot_income",
                 "value": 8
               }
@@ -5276,7 +5312,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from looting settlements: +15%",
+                "description": "Income from looting settlements: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_loot_income",
                 "value": 15
               }
@@ -5307,7 +5343,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +5% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               },
@@ -5315,7 +5351,7 @@
                 "icon": "income.png",
                 "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +3%",
+                "description": "Income from sacking settlements: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_sacking_income",
                 "value": 3
               }
@@ -5327,7 +5363,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +10% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +10% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 10
               },
@@ -5335,7 +5371,7 @@
                 "icon": "income.png",
                 "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +8%",
+                "description": "Income from sacking settlements: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_sacking_income",
                 "value": 8
               }
@@ -5347,7 +5383,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +15% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +15% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 15
               },
@@ -5355,7 +5391,7 @@
                 "icon": "income.png",
                 "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +15%",
+                "description": "Income from sacking settlements: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_sacking_income",
                 "value": 15
               }
@@ -5387,7 +5423,7 @@
                 "icon": "replenishment.png",
                 "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +30% for this Lord",
+                "description": "Casualty replenishment rate: +30% for this Lord\n\t(Lord's army)",
                 "key": "wh2_main_effect_replenishment_lords",
                 "value": 30
               },
@@ -5524,7 +5560,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +6%",
+                "description": "Ambush success chance: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 6
               }
@@ -5536,7 +5572,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +16%",
+                "description": "Ambush success chance: +16%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 16
               }
@@ -5548,7 +5584,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +30%",
+                "description": "Ambush success chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 30
               }
@@ -5579,7 +5615,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -5591,7 +5627,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -5603,7 +5639,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -5634,7 +5670,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -1
               }
@@ -5646,7 +5682,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               }
@@ -5658,7 +5694,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -3
               }
@@ -5683,6 +5719,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -5766,6 +5848,11 @@
                         "freeze_recharge": false,
                         "recharge_time": null,
                         "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": " Can Cause Fear",
+                            "attribute_type": "positive"
+                          },
                           {
                             "key": "causes_terror",
                             "description": " Can Cause Terror",
@@ -5905,12 +5992,12 @@
           "key": "wh_main_effect_ancillary_crown_of_sorcery"
         },
         {
-          "icon": "spell_ability.png",
-          "priority": 8,
-          "is_positive_value_good": false,
-          "description": "Miscast base chance: -25%",
-          "value": -25,
-          "key": "wh_main_effect_character_stat_mod_miscast_chance"
+          "icon": "public_order.png",
+          "priority": 6,
+          "is_positive_value_good": true,
+          "description": "Control: +5",
+          "value": 5,
+          "key": "wh_main_effect_public_order_characters"
         },
         {
           "icon": "attrition.png",
@@ -5921,12 +6008,12 @@
           "key": "wh2_dlc14_effect_attrition_immunity_undead"
         },
         {
-          "icon": "public_order.png",
-          "priority": 100,
+          "icon": "magic_character.png",
+          "priority": 298,
           "is_positive_value_good": false,
-          "description": "Control: -50% penalty due to presence or lack of corruption",
-          "value": -50,
-          "key": "wh_main_effect_public_order_penalty_other_religions"
+          "description": "Miscast base chance: -25%",
+          "value": -25,
+          "key": "wh_main_effect_character_stat_miscast"
         },
         {
           "icon": "spell_ability.png",

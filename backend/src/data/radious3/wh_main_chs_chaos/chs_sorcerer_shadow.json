@@ -6,7 +6,7 @@
         "image_path": "mount_warhorse.png",
         "is_background_skill": false,
         "name": "Chaos Steed",
-        "description": "To ride a steed touched by Chaos is the right of any Sorcerer dedicated to spreading corruption.",
+        "description": "The dread steeds of Chaos are more than mere horses, but creatures tainted by Daemon blood, said to be gifts from the Dark Gods themselves.",
         "levels": [
           {
             "effects": [
@@ -30,11 +30,11 @@
         "visible_in_ui": true
       },
       {
-        "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_unique_05",
-        "image_path": "mount_barded_chaos_steed.png",
+        "key": "wh3_dlc20_skill_node_chs_cha_chaos_sorcerer_shadows_warshrine",
+        "image_path": "mount_warshrine.png",
         "is_background_skill": false,
-        "name": "Barded Chaos Steed",
-        "description": "The already-fierce Chaos Steeds are often covered in heavy armour, making them even deadlier.",
+        "name": "Chaos Warshrine",
+        "description": "A vast, mobile altar allows the souls of the slain to be ritualistically condemned directly from the field of slaughter.",
         "levels": [
           {
             "effects": [
@@ -42,15 +42,15 @@
                 "icon": "mount.png",
                 "priority": 50,
                 "is_positive_value_good": true,
-                "description": "Mount: Barded Chaos Steed",
-                "key": "wh_main_effect_enable_mount_barded_chaos_steed",
+                "description": "Mount: Warshrine",
+                "key": "wh_main_effect_enable_mount_warshrine",
                 "value": 1
               }
             ],
-            "auto_unlock_at_rank": 11
+            "auto_unlock_at_rank": 14
           }
         ],
-        "character_skill_key": "wh_dlc01_skill_chs_wizard_unique_chaos_sorcerer_shadow_barded_chaos_steed",
+        "character_skill_key": "wh3_dlc20_skill_mount_chs_cha_chaos_sorcerer_shadows_warshrine",
         "tier": 1,
         "indent": 0,
         "points_on_creation": 0,
@@ -86,6 +86,111 @@
         "visible_in_ui": true
       },
       {
+        "key": "wh3_dlc20_skill_node_chs_sorcerer_shadows_authority",
+        "image_path": "character_chaos_corruption.png",
+        "is_background_skill": false,
+        "name": "Mage's Influence",
+        "description": "Chaos magic consumes the land, hastening the spreading influence of Ruin.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "corruption_khorne.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Khorne Authority: -1\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character",
+                "value": -1
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +2\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption_khorne.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Khorne Authority: -1\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character",
+                "value": -1
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +3\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 3
+              }
+            ],
+            "auto_unlock_at_rank": 11
+          },
+          {
+            "unlocked_at_rank": 21,
+            "effects": [
+              {
+                "icon": "corruption_khorne.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Khorne Authority: -1\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character",
+                "value": -1
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +4\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 4
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_authority_und_hero_wizard",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 1,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_unique_02",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Infernal Champion",
+        "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
+        "levels": [
+          {
+            "unlocked_at_rank": 15,
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_chs_all_unique_eye_of_the_gods",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
         "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_unique_03",
         "image_path": "character_ward_save.png",
         "is_background_skill": false,
@@ -107,35 +212,7 @@
           }
         ],
         "character_skill_key": "wh_main_skill_chs_all_unique_aura_of_chaos",
-        "tier": 3,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_unique_02",
-        "image_path": "character_damage.png",
-        "is_background_skill": false,
-        "name": "Eye of the Gods",
-        "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
-        "levels": [
-          {
-            "unlocked_at_rank": 15,
-            "effects": [
-              {
-                "icon": "weapon_damage_character.png",
-                "priority": 161,
-                "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_chs_all_unique_eye_of_the_gods",
-        "tier": 4,
+        "tier": 5,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -149,7 +226,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -159,11 +235,12 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
-        "tier": 5,
+        "tier": 6,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -1732,7 +1809,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1865,7 +1942,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -1927,7 +2004,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -1975,7 +2052,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2045,7 +2122,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2093,7 +2170,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2578,11 +2655,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2604,7 +2681,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2640,7 +2717,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3501,8 +3578,267 @@
         "visible_in_ui": true
       }
     ],
-    [],
-    [],
+    [
+      {
+        "key": "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_01",
+        "image_path": "character_magic.png",
+        "is_background_skill": false,
+        "name": "Warrior Wizard",
+        "description": "\"Robes? Fool! We're going to battle, not a ball. Hand me my armour! ARMOUR!\"",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 5
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+              "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+              "wh3_dlc20_skills_shared_slaanesh_direct_destruction",
+              "wh3_dlc20_skills_shared_slaanesh_energy",
+              "wh3_dlc20_skills_shared_slaanesh_soul_feeder"
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+        "tier": 0,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_02",
+        "image_path": "character_cooldown.png",
+        "is_background_skill": false,
+        "name": "Spellslinger",
+        "description": "Spell after spell, grant the enemy no reprieve!",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "magic_cooldown_character.png",
+                "priority": 293,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -15% to spells",
+                "key": "wh2_main_effect_ability_cooldown_spells",
+                "value": -15
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+              "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+              "wh3_dlc20_skills_shared_slaanesh_direct_destruction",
+              "wh3_dlc20_skills_shared_slaanesh_energy",
+              "wh3_dlc20_skills_shared_slaanesh_soul_feeder"
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+        "tier": 1,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_03",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Unmoving Mage",
+        "description": "Magic is little threat to one so well-versed in its dark and terrible intricacies.",
+        "levels": [
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "resistance_magic.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Spell resistance: 10%",
+                "key": "wh_main_effect_character_stat_magic_resistance",
+                "value": 10
+              },
+              {
+                "icon": "magic_character.png",
+                "priority": 298,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15%",
+                "key": "wh_main_effect_character_stat_miscast",
+                "value": -15
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_battlemage",
+              "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_quick",
+              "wh3_dlc20_skills_shared_slaanesh_direct_destruction",
+              "wh3_dlc20_skills_shared_slaanesh_energy",
+              "wh3_dlc20_skills_shared_slaanesh_soul_feeder"
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+        "tier": 2,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_04",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Ruinous Wrath",
+        "description": "Unleash pure Chaos at close quarters, slicing and dicing all within reach.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "magical_attacks.png",
+                "priority": 140,
+                "is_positive_value_good": true,
+                "description": "Enables magical attacks",
+                "key": "wh_main_effect_character_stat_enable_magic_attacks",
+                "value": 1
+              },
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_dlc20_skills_shared_undivided_leadership",
+              "wh3_dlc20_skills_shared_undivided_unity"
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skills_shared_undivided_wrath",
+        "tier": 0,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_05",
+        "image_path": "battle_morale.png",
+        "is_background_skill": false,
+        "name": "Ruinous Leadership",
+        "description": "A true tactician inspires all around them, encouraging allies to acts of vicious abandon.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Leadership aura size: +25%",
+                "key": "wh_main_effect_character_stat_leadership_aura_size",
+                "value": 25
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_dlc20_skills_shared_undivided_unity",
+              "wh3_dlc20_skills_shared_undivided_wrath"
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skills_shared_undivided_leadership",
+        "tier": 1,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_dlc20_skill_node_chs_chaos_sorcerer_shadow_shared_06",
+        "image_path": "character_chaos_corruption.png",
+        "is_background_skill": false,
+        "name": "Ruinous Unity",
+        "description": "Domination is the only goal, under the banner of Chaos Undivided.",
+        "levels": [
+          {
+            "unlocked_at_rank": 7,
+            "effects": [
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +1\n\t(Hero's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 1
+              },
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +10",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 10
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh3_dlc20_skills_shared_undivided_leadership",
+              "wh3_dlc20_skills_shared_undivided_wrath"
+            ]
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skills_shared_undivided_unity",
+        "tier": 2,
+        "indent": 4,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
     [
       {
         "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_campaign_01",
@@ -3570,7 +3906,7 @@
                 "icon": "corruption_chaos.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +1",
+                "description": "Chaos Undivided corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_chaos_effect",
                 "value": 1
               },
@@ -3591,7 +3927,7 @@
                 "icon": "corruption_chaos.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +2",
+                "description": "Chaos Undivided corruption: +2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_chaos_effect",
                 "value": 2
               },
@@ -3612,7 +3948,7 @@
                 "icon": "corruption_chaos.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +3",
+                "description": "Chaos Undivided corruption: +3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_chaos_effect",
                 "value": 3
               },
@@ -3873,22 +4209,739 @@
   "key": "chs_sorcerer_shadow",
   "backgroundSkills": [
     {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_campaign_actions_dummy",
-      "image_path": "battle_attack.png",
+      "key": "wh3_dlc20_skill_node_chs_sorcerer_shadows_path_to_glory_cost_mod_hidden",
+      "image_path": "trait_human.png",
       "is_background_skill": false,
-      "name": "Actions [HIDDEN]",
-      "description": " ",
+      "name": "",
+      "description": "Secret skill that automatically levels up as the character progresses and reduces cost of Path to Glory",
       "levels": [
         {
           "effects": [
             {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
-              "value": 1
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -1% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -2% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -2
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -3% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -4% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -4
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -5% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -5
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -6% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -6
+            }
+          ],
+          "auto_unlock_at_rank": 11
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -7% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -7
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -8% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -8
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -9% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -9
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -10% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -10
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -11% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -11
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -12% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -12
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -13% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -13
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -14% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -14
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -15% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -15
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -16% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -16
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -17% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -17
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -18% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -18
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -19% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -19
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -20% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -20
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -21% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -21
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -22% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -22
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -23% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -23
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -24% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -24
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -25
             },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -1% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -26% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -26
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -2% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -2
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -27% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -27
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -3% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -28% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -28
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -4% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -4
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -29% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -29
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -5% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -5
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -30% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -30
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -6% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -6
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -31% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -31
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -7% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -7
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -32% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -32
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -8% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -8
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -33% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -33
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -9% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -9
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -34% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -34
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -10% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -10
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -35% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -35
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -11% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -11
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -36% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -36
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -12% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -12
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -37% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -37
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -13% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -13
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -38% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -38
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -14% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -14
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -39% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -39
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -15% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -15
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -40% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -40
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -16% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -16
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -41% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -41
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -17% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -17
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -42% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -42
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -18% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -18
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -43% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -43
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -19% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -19
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -44% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -44
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -20% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -20
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "icon": "souls.png",
+              "priority": 1,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -45% Souls cost to devote to a God",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_all_path_to_glory_except_daemon_prince_hidden",
+              "value": -45
+            },
+            {
+              "icon": "souls.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -21% Souls cost to upgrade characters to a Daemon Prince",
+              "key": "wh3_dlc20_effect_character_ascension_mod_all_daemon_prince",
+              "value": -21
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_path_to_glory_cost_modifier",
+      "tier": 0,
+      "indent": 12,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
             {
               "icon": "",
               "priority": 0,
@@ -3918,6 +4971,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
               "value": 1
             },
@@ -3933,7 +4994,7 @@
               "icon": "corruption_chaos.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Chaos Undivided corruption: +2",
+              "description": "Chaos Undivided corruption: +2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_chaos_effect",
               "value": 2
             }
@@ -3961,8 +5022,8 @@
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +40% when attacking",
-              "key": "wh_main_effect_character_stat_leadership_aura_size_attacking",
+              "description": "Leadership aura size: +40%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 40
             }
           ]
@@ -3986,12 +5047,12 @@
         {
           "effects": [
             {
-              "icon": "melee.png",
-              "priority": 430,
+              "icon": "corruption_chaos.png",
+              "priority": 1,
               "is_positive_value_good": true,
-              "description": "Melee attack: +5",
-              "key": "wh_main_effect_force_stat_melee_attack",
-              "value": 5
+              "description": "Undivided Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+              "value": 1
             }
           ]
         }
@@ -4006,10 +5067,282 @@
     },
     {
       "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_03",
-      "image_path": "trait_personality.png",
+      "image_path": "trait_chaos.png",
       "is_background_skill": true,
-      "name": "Fleet-Footed",
-      "description": "Being fleet of foot is useful in a fight… or when trying to get away afterwards!",
+      "name": "Burning Body",
+      "description": "The champion is surrounded by crackling flames that burn his enemies whilst leaving his own body untouched.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "modifier_icon_flaming.png",
+              "priority": 140,
+              "is_positive_value_good": true,
+              "description": "Enables flaming attacks",
+              "key": "wh2_main_effect_character_stat_enable_flaming_attacks",
+              "value": 1
+            },
+            {
+              "icon": "resistance_fire.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Fire resistance: 50%",
+              "key": "wh_main_effect_character_stat_fire_resistance",
+              "value": 50
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_burning_body",
+      "tier": 2,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_04",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Chaos Familiar",
+      "description": "A Chaos Familiar memorises spells on its master's behalf, constantly rehearsing for its big moment until it is called upon to share its arcane knowledge.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "magic_cooldown.png",
+              "priority": 60,
+              "is_positive_value_good": false,
+              "description": "Cooldown: -5% to all spells",
+              "key": "wh2_dlc12_effect_magic_cooldown_all_lores",
+              "value": -5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_chaos_familiar",
+      "tier": 3,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_05",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Dark Fury",
+      "description": "Fatigue is no issue when one is driven by the darkest rage imaginable.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "vigour.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Vigour loss reduction: -25%",
+              "key": "wh_main_effect_force_stat_vigour_loss_reduction",
+              "value": -25
+            },
+            {
+              "icon": "charge_character.png",
+              "priority": 200,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +35",
+              "key": "wh_main_effect_character_stat_charge_bonus_add",
+              "value": 35
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_dark_fury",
+      "tier": 4,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_06",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Evil Eyeball",
+      "description": "Those blessed by Chaos see not only what is before them, but also what lurks in shadow, hiding in the periphery.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "agent.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Campaign line of sight: +25%",
+              "key": "wh_main_effect_agent_field_line_of_sight_mod",
+              "value": 25
+            },
+            {
+              "icon": "icon_effects_ambush.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Ambush defence chance: +10%\n\t(own army)",
+              "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_evil_eyeball",
+      "tier": 5,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_07",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Hideous Visage",
+      "description": "The champion has been rewarded with a hideous appearance, grotesque enough to wither the hearts of men.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "public_order.png",
+              "priority": 101,
+              "is_positive_value_good": false,
+              "description": "Control: -8\n\t(local enemy province)",
+              "key": "wh_main_effect_public_order_characters_negative",
+              "value": -8
+            },
+            {
+              "icon": "attribute_causes_fear.png",
+              "priority": 320,
+              "is_positive_value_good": true,
+              "description": "Attribute: Causes Fear",
+              "key": "wh_main_effect_attribute_enable_causes_fear",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_hideous_visage",
+      "tier": 6,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_08",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Iron Skin",
+      "description": "Granted skin as strong as iron plate, there is little that can penetrate the champion's defences.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "armour_character.png",
+              "priority": 100,
+              "is_positive_value_good": true,
+              "description": "Armour: +25",
+              "key": "wh_main_effect_character_stat_armour",
+              "value": 25
+            },
+            {
+              "icon": "mass_character.png",
+              "priority": 130,
+              "is_positive_value_good": true,
+              "description": "Unit mass: +25%",
+              "key": "wh3_main_effect_character_stat_unit_mass_percentage_mod",
+              "value": 25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_iron_skin",
+      "tier": 7,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_09",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Scaled Skin",
+      "description": "The champion's skin is covered with a thousand reptilian scales, each as tough as Dragonhide.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "resistance_missile.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Missile resistance: 25%",
+              "key": "wh_main_effect_character_stat_missile_resistance",
+              "value": 25
+            },
+            {
+              "icon": "resistance_physical.png",
+              "priority": 280,
+              "is_positive_value_good": true,
+              "description": "Physical resistance: 5%",
+              "key": "wh_main_effect_character_stat_physical_resistance",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_scaled_skin",
+      "tier": 8,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_10",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Opened Eyes",
+      "description": "Some are blessed by a dark understanding, able to gleam knowledge from every experience.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "experience.png",
+              "priority": 14,
+              "is_positive_value_good": true,
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_the_eye_opens",
+      "tier": 9,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_13",
+      "image_path": "trait_chaos.png",
+      "is_background_skill": true,
+      "name": "Unearthly Reflexes",
+      "description": "A foe may strike fast, but those evolved by Chaos move faster still.",
       "levels": [
         {
           "effects": [
@@ -4022,335 +5355,19 @@
               "value": 15
             },
             {
-              "icon": "attribute_ignore_forest_penalties.png",
-              "priority": 320,
+              "icon": "defence_character.png",
+              "priority": 150,
               "is_positive_value_good": true,
-              "description": "Attribute: Strider",
-              "key": "wh_main_effect_attribute_enable_strider",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_fleet_footed",
-      "tier": 2,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_04",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Cunning",
-      "description": "Deceit is a perfectly acceptable means of attack.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "icon_effects_ambush.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
-              "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
-              "value": 10
-            },
-            {
-              "icon": "phase_posion.png",
-              "priority": 140,
-              "is_positive_value_good": true,
-              "description": "Enables poison attacks",
-              "key": "wh_main_effect_character_stat_enable_poison_attacks",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_cunning",
-      "tier": 3,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_05",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Determined",
-      "description": "Having a modicum of resolve is useful in a world that continually tests it.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "morale_character.png",
-              "priority": 110,
-              "is_positive_value_good": true,
-              "description": "Leadership: +3",
-              "key": "wh_main_effect_character_stat_leadership",
-              "value": 3
-            },
-            {
-              "icon": "attribute_immune_to_psychology.png",
-              "priority": 320,
-              "is_positive_value_good": true,
-              "description": "Attribute: Immune to Psychology",
-              "key": "wh_main_effect_attribute_enable_immune_to_psychology",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_determined",
-      "tier": 4,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_06",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Confident",
-      "description": "Self-belief is a fine thing when not misplaced.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "morale.png",
-              "priority": 410,
-              "is_positive_value_good": true,
-              "description": "Leadership: +2",
-              "key": "wh_main_effect_force_stat_leadership",
-              "value": 2
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_confident",
-      "tier": 5,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_07",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Disciplined",
-      "description": "Always in control, this one leaves no stone unturned and nothing to chance.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "morale.png",
-              "priority": 410,
-              "is_positive_value_good": true,
-              "description": "Leadership: +2",
-              "key": "wh_main_effect_force_stat_leadership",
-              "value": 2
-            },
-            {
-              "icon": "melee.png",
-              "priority": 430,
-              "is_positive_value_good": true,
-              "description": "Melee attack: +2",
-              "key": "wh_main_effect_force_stat_melee_attack",
-              "value": 2
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_disciplined",
-      "tier": 6,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_08",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Perceptive",
-      "description": "Although actually reading minds is not in their skillset, this one has extraordinary insight into the motives of others.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "item_ability.png",
-              "priority": 8,
-              "is_positive_value_good": true,
-              "description": "Magic item drop chance: +15%",
-              "key": "wh_main_effect_character_mod_ancillary_drop",
-              "value": 15
-            },
-            {
-              "icon": "agent.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Campaign line of sight: +10%",
-              "key": "wh_main_effect_agent_field_line_of_sight_mod",
-              "value": 10
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_perceptive",
-      "tier": 7,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_09",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Aggressive",
-      "description": "If you're gonna die, you may as well die with your boots on.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "weapon_damage_character.png",
-              "priority": 160,
-              "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
-              "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
-            },
-            {
-              "icon": "charge_character.png",
-              "priority": 200,
-              "is_positive_value_good": true,
-              "description": "Charge bonus: +8",
-              "key": "wh_main_effect_character_stat_charge_bonus_add",
+              "description": "Melee defence: +8",
+              "key": "wh_main_effect_character_stat_melee_defence",
               "value": 8
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_aggressive",
-      "tier": 8,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_10",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Tough",
-      "description": "Rugged, resistant, and almost unbreakable, this being can and will take on all comers.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "armour_character.png",
-              "priority": 100,
-              "is_positive_value_good": true,
-              "description": "Armour: +5",
-              "key": "wh_main_effect_character_stat_armour",
-              "value": 5
-            },
-            {
-              "icon": "defence_character.png",
-              "priority": 150,
-              "is_positive_value_good": true,
-              "description": "Melee defence: +3",
-              "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_tough",
-      "tier": 9,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_13",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Knowledgeable",
-      "description": "What this being doesn't know probably isn't worth knowing, so deep is their interest in the world and its ways.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_knowledgeable",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_unearthly_reflexes",
       "tier": 12,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc07_skill_node_chs_chaos_sorcerer_shadow_innate_14",
-      "image_path": "trait_personality.png",
-      "is_background_skill": true,
-      "name": "Intelligent",
-      "description": "Sharp minds make sharp blades sharper still.",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "agent.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Hero self-defence: +5% chance of wounding aggressors",
-              "key": "wh_main_effect_agent_defence_wound_chance_mod",
-              "value": 5
-            },
-            {
-              "icon": "icon_effects_ambush.png",
-              "priority": 110,
-              "is_positive_value_good": true,
-              "description": "Ambush defence chance: +10%",
-              "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-              "value": 10
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
-      "character_skill_key": "wh2_main_skill_innate_all_intelligent",
-      "tier": 13,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
@@ -4456,6 +5473,186 @@
       "tier": 11,
       "indent": 2,
       "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_shadow_innate_archaon_01",
+      "image_path": "trait_slaanesh.png",
+      "is_background_skill": true,
+      "name": "Allure of Slaanesh",
+      "description": "Slaanesh's favoured champions are so attractively captivating that few can find the will to raise a blade against them.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_slaanesh.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Slaanesh Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_slaanesh_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Slaanesh",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_slaanesh",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_allure_of_slaanesh",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_shadow_innate_azazel_faction_01",
+      "image_path": "trait_slaanesh.png",
+      "is_background_skill": true,
+      "name": "Allure of Slaanesh",
+      "description": "Slaanesh's favoured champions are so attractively captivating that few can find the will to raise a blade against them.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_slaanesh.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Slaanesh Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_slaanesh_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Slaanesh",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_slaanesh",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_allure_of_slaanesh",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_shadow_innate_kholek_01",
+      "image_path": "trait_slaanesh.png",
+      "is_background_skill": true,
+      "name": "Allure of Slaanesh",
+      "description": "Slaanesh's favoured champions are so attractively captivating that few can find the will to raise a blade against them.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_slaanesh.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Slaanesh Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_slaanesh_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Slaanesh",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_slaanesh",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_allure_of_slaanesh",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_shadow_innate_sigvald_01",
+      "image_path": "trait_slaanesh.png",
+      "is_background_skill": true,
+      "name": "Allure of Slaanesh",
+      "description": "Slaanesh's favoured champions are so attractively captivating that few can find the will to raise a blade against them.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_slaanesh.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Slaanesh Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_slaanesh_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Slaanesh",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_slaanesh",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_allure_of_slaanesh",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "wh_main_skill_node_chs_sorcerer_shadow_innate_vilitch_faction_01",
+      "image_path": "trait_tzeentch.png",
+      "is_background_skill": true,
+      "name": "Third Eye of Tzeentch",
+      "description": "A third eye opens in the favoured one's forehead that can see the shifting strands of fate.",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "corruption_tzeentch.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Tzeentch Authority: +1\n\t(own army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_tzeentch_character",
+              "value": 1
+            },
+            {
+              "icon": "souls.png",
+              "priority": 104,
+              "is_positive_value_good": false,
+              "description": "Path to Glory: -25% Souls cost to devote to Tzeentch",
+              "key": "wh3_dlc20_effect_initiative_cost_reduction_mark_of_tzeentch",
+              "value": -25
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "wh_dlc07_skill_node_set_chs_sorcerer_shadow",
+      "character_skill_key": "wh3_dlc20_skill_innate_chs_third_eye_of_tzeentch",
+      "tier": 13,
+      "indent": 6,
+      "points_on_creation": 0,
       "required_num_parents": 0,
       "visible_in_ui": false
     }

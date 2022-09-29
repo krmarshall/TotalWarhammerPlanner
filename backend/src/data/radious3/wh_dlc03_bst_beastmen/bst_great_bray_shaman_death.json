@@ -71,7 +71,7 @@
                 "icon": "vigour.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -15%",
+                "description": "Vigour loss reduction: -15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -15
               },
@@ -79,7 +79,7 @@
                 "icon": "battle_movement.png",
                 "priority": 115,
                 "is_positive_value_good": true,
-                "description": "Speed: +5% for all units",
+                "description": "Speed: +5% for all units\n\t(Lord's army)",
                 "key": "wh_dlc03_effect_tech_movement_speed_all",
                 "value": 5
               }
@@ -321,10 +321,10 @@
             "unlocked_at_rank": 12,
             "effects": [
               {
-                "icon": "spell_ability.png",
+                "icon": "magic_character.png",
                 "priority": 66,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic cost: +2 for all enemy spells",
+                "description": "Winds of Magic cost: +2 for all enemy spells\n\t(enemy armies in local province)",
                 "key": "wh2_dlc16_effect_magic_cost_all_lores_enemy",
                 "value": 2
               },
@@ -410,7 +410,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -420,7 +419,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -485,7 +485,7 @@
                 "icon": "armour.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Chaos Warhounds, Harpies, Razorgor Herd, Chaos Spawn, Giant, Jabberslythe, Ghorgon, Cygor, and Manticore units",
+                "description": "Armour: +10 for Chaos Warhounds, Harpies, Razorgor Herd, Chaos Spawn, Giant, Jabberslythe, Ghorgon, Cygor, and Manticore units\n\t(all units in army)",
                 "key": "wh2_dlc17_effect_skill_armour_increase_bst_monsters_and_beasts",
                 "value": 10
               }
@@ -555,7 +555,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 119,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for Chaos Warhounds, Harpies, Razorgor Herd, Chaos Spawn, Giant, Jabberslythe, Ghorgon, Cygor, and Manticore units",
+                "description": "Weapon Strength: +10% for Chaos Warhounds, Harpies, Razorgor Herd, Chaos Spawn, Giant, Jabberslythe, Ghorgon, Cygor, and Manticore units\n\t(all units in army)",
                 "key": "wh2_dlc17_effect_skill_weapon_damage_increase_bst_monsters_and_beasts",
                 "value": 10
               }
@@ -915,7 +915,7 @@
         "image_path": "wh_main_spell_death_aspect_of_the_dreadknight.png",
         "is_background_skill": false,
         "name": "Aspect of the Dread Knight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -960,6 +960,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -1023,6 +1028,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -1109,6 +1119,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -1171,6 +1186,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -1254,7 +1274,7 @@
         "image_path": "wh_main_lore_passive_life_leeching.png",
         "is_background_skill": false,
         "name": "Life-Leeching",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1299,7 +1319,7 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "mana_max_depletion_mod": 0.2,
+                          "mana_max_depletion_mod": 0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1330,7 +1350,7 @@
         "image_path": "wh_main_spell_death_soulblight.png",
         "is_background_skill": false,
         "name": "Soulblight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1742,7 +1762,7 @@
         "image_path": "wh_main_spell_death_doom_and_darkness.png",
         "is_background_skill": false,
         "name": "Doom & Darkness",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2115,7 +2135,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2202,7 +2222,7 @@
         "image_path": "wh_main_spell_death_the_fate_of_bjuna.png",
         "is_background_skill": false,
         "name": "The Fate of Bjuna",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2314,7 +2334,7 @@
         "image_path": "wh_main_spell_death_the_purple_sun_of_xereus.png",
         "is_background_skill": false,
         "name": "The Purple Sun of Xereus",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2630,11 +2650,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2656,7 +2676,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2692,7 +2712,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3596,7 +3616,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units",
+                "description": "Melee defence: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_ungor_gor_bestigor",
                 "value": 4
               }
@@ -3608,7 +3628,7 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units",
+                "description": "Leadership: +4 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_leadership_ungor_gor_bestigor",
                 "value": 4
               },
@@ -3616,7 +3636,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units",
+                "description": "Melee defence: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_ungor_gor_bestigor",
                 "value": 6
               }
@@ -3628,7 +3648,7 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units",
+                "description": "Leadership: +6 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_leadership_ungor_gor_bestigor",
                 "value": 6
               },
@@ -3636,7 +3656,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units",
+                "description": "Melee defence: +8 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_ungor_gor_bestigor",
                 "value": 8
               }
@@ -3667,7 +3687,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +6 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 6
               }
@@ -3679,7 +3699,7 @@
                 "icon": "battle_movement.png",
                 "priority": 115,
                 "is_positive_value_good": true,
-                "description": "Speed: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
+                "description": "Speed: +6% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc17_effect_skill_speed_increase_bst_centigors_chariot",
                 "value": 6
               },
@@ -3687,7 +3707,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Weapon strength: +5% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_centigors_chariot",
                 "value": 5
               },
@@ -3695,7 +3715,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +9 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 9
               }
@@ -3707,7 +3727,7 @@
                 "icon": "battle_movement.png",
                 "priority": 115,
                 "is_positive_value_good": true,
-                "description": "Speed: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units",
+                "description": "Speed: +12% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc17_effect_skill_speed_increase_bst_centigors_chariot",
                 "value": 12
               },
@@ -3715,7 +3735,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Weapon strength: +10% for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_centigors_chariot",
                 "value": 10
               },
@@ -3723,7 +3743,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), and Razorgor Chariot units",
+                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), Tuskgor Chariots, and Razorgor Chariot units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_centigors_chariot",
                 "value": 12
               }
@@ -3754,7 +3774,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Ungor Raiders and Centigors (Throwing Axes) units",
+                "description": "Ammunition: +10% for Ungor Raiders and Centigors (Throwing Axes) units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 10
               }
@@ -3763,18 +3783,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
-                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
-                "value": 5
-              },
-              {
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +6% for Ungor Raiders and Centigors (Throwing Axes) units",
+                "description": "Speed: +6% for Ungor Raiders and Centigors (Throwing Axes) units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_ungor_raiders_centigors_throwing_axes",
                 "value": 6
               },
@@ -3782,27 +3794,27 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Ungor Raiders and Centigors (Throwing Axes) units",
+                "description": "Ammunition: +15% for Ungor Raiders and Centigors (Throwing Axes) units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 15
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +5% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n\t(Lord's army)",
+                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units",
-                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
-                "value": 10
-              },
-              {
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +12% for Ungor Raiders and Centigors (Throwing Axes) units",
+                "description": "Speed: +12% for Ungor Raiders and Centigors (Throwing Axes) units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_ungor_raiders_centigors_throwing_axes",
                 "value": 12
               },
@@ -3810,9 +3822,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Ungor Raiders and Centigors (Throwing Axes) units",
+                "description": "Ammunition: +20% for Ungor Raiders and Centigors (Throwing Axes) units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_bst_ungor_raiders_centigors_throwing_axes",
                 "value": 20
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units\n\t(Lord's army)",
+                "key": "wh2_dlc17_effect_skill_reload_time_bst_ungor_raiders_centigors_throwing_axes_cygor",
+                "value": 10
               }
             ]
           }
@@ -3841,7 +3861,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Chaos Warhounds, Razorgor Herd, and Harpies units",
+                "description": "Charge bonus: +6 for Chaos Warhounds, Razorgor Herd, and Harpies units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_warhounds_razorgor_herd_harpies",
                 "value": 6
               }
@@ -3853,7 +3873,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Warhounds, Razorgor Herd, and Harpies units",
+                "description": "Melee attack: +4 for Chaos Warhounds, Razorgor Herd, and Harpies units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_warhounds_razorgor_herd_harpies",
                 "value": 4
               },
@@ -3861,7 +3881,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Chaos Warhounds, Razorgor Herd, and Harpies units",
+                "description": "Charge bonus: +9 for Chaos Warhounds, Razorgor Herd, and Harpies units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_warhounds_razorgor_herd_harpies",
                 "value": 9
               }
@@ -3873,7 +3893,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Chaos Warhounds, Razorgor Herd, and Harpies units",
+                "description": "Melee attack: +6 for Chaos Warhounds, Razorgor Herd, and Harpies units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_warhounds_razorgor_herd_harpies",
                 "value": 6
               },
@@ -3881,7 +3901,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Chaos Warhounds, Razorgor Herd, and Harpies units",
+                "description": "Charge bonus: +12 for Chaos Warhounds, Razorgor Herd, and Harpies units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_bst_warhounds_razorgor_herd_harpies",
                 "value": 12
               }
@@ -3912,7 +3932,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Minotaurs and Cygor units",
+                "description": "Melee defence: +4 for Minotaurs units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 4
               }
@@ -3924,7 +3944,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Minotaurs and Cygor units",
+                "description": "Melee attack: +4 for Minotaurs units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_minotaurs_cygor",
                 "value": 4
               },
@@ -3932,7 +3952,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Minotaurs and Cygor units",
+                "description": "Melee defence: +6 for Minotaurs units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 6
               }
@@ -3944,7 +3964,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Minotaurs and Cygor units",
+                "description": "Melee attack: +6 for Minotaurs units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_minotaurs_cygor",
                 "value": 6
               },
@@ -3952,7 +3972,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Minotaurs and Cygor units",
+                "description": "Melee defence: +8 for Minotaurs units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_minotaurs_cygor",
                 "value": 8
               }
@@ -3983,7 +4003,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +5% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 5
               }
@@ -3995,7 +4015,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Spawn and Giant units",
+                "description": "Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_spawn_giant",
                 "value": 4
               },
@@ -4003,7 +4023,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +7% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 7
               }
@@ -4015,7 +4035,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Chaos Spawn and Giant units",
+                "description": "Melee attack: +4 for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_spawn_giant",
                 "value": 4
               },
@@ -4023,7 +4043,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Chaos Spawn and Giant units",
+                "description": "Weapon strength: +9% for Chaos Spawn, Giant, Jabberslythe, and Ghorgon units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_giant",
                 "value": 9
               }
@@ -4138,7 +4158,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_ungor_gor_bestigor_rank7",
                 "value": 5
               },
@@ -4146,7 +4166,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_bst_ungor_gor_bestigor_rank7",
                 "value": 5
               },
@@ -4154,7 +4174,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Ungor Spearmen Herd, Ungor Herd, Gor Herd, and Bestigor Herd units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_bst_ungor_gor_bestigor_rank7",
                 "value": 10
               }
@@ -4185,7 +4205,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Speed: +10% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 10
               },
@@ -4193,7 +4213,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_pct_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 12
               },
@@ -4201,7 +4221,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Centigors, Centigors (Great Weapons), Razorgor Herd, Razorgor Chariot, Tuskgor Chariot, Chaos Warhounds, and Harpies units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_bst_warhounds_razorgors_centigors_chariots_harpies_rank7",
                 "value": 15
               }
@@ -4232,7 +4252,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 55,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc17_effect_skill_missile_resist_increase_bst_spawn_minotaur_giant_ghorgon_jabberslythe_rank7",
                 "value": 15
               },
@@ -4240,7 +4260,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc17_effect_skill_melee_attack_increase_bst_spawn_minotaur_giant_ghorgon_jabberslythe_rank7",
                 "value": 5
               },
@@ -4248,7 +4268,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Spawn, Minotaurs, and Giant units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Chaos Spawn, Minotaurs, Giant, Jabberslythe, and Ghorgon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_bst_spawn_minotaur_giant_rank7",
                 "value": 10
               }
@@ -4279,7 +4299,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Ungor Raiders, Centigors (Throwing Axes) and Cygor units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_bst_ungor_raider_centigors_throwing_axes_cygor_rank7",
                 "value": 10
               },
@@ -4287,7 +4307,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_bst_ungor_raider_centigors_throwing_axes_cygor_rank7",
                 "value": 10
               },
@@ -4295,7 +4315,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)",
+                "description": "Spell resistance: 15% for Ungor Raiders, Centigors (Throwing Axes), and Cygor units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_ungor_raider_centigors_throwing_axes_cygor_rank7",
                 "value": 15
               }
@@ -4453,7 +4473,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +10%",
+                "description": "Income from raiding: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 10
               }
@@ -4465,7 +4485,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               },
@@ -4473,7 +4493,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +5%",
+                "description": "Income from razing settlements: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_razing_income",
                 "value": 5
               }
@@ -4485,7 +4505,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +30%",
+                "description": "Income from raiding: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 30
               },
@@ -4493,7 +4513,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +10%",
+                "description": "Income from razing settlements: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_razing_income",
                 "value": 10
               }
@@ -4594,8 +4614,8 @@
         "key": "wh2_dlc17_skill_node_set_bst_great_bray_shaman_death_campaign_04",
         "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Dark Apothecary",
-        "description": "The Dark Apothecaries mix their fell unguents, ensuring those that can continue to serve.",
+        "name": "Foetid Gallipot",
+        "description": "A pungent mix of fell unguents ensures the unholy vitality of one’s minions.",
         "levels": [
           {
             "effects": [
@@ -4603,7 +4623,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               },
@@ -4611,7 +4631,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 3
               }
@@ -4623,7 +4643,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               },
@@ -4631,7 +4651,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 6
               }
@@ -4643,7 +4663,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -30% casualties suffered from all attrition",
+                "description": "Attrition: -30% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -30
               },
@@ -4651,7 +4671,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 9
               }
@@ -4682,8 +4702,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling\n\t(local region)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -4694,17 +4714,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +10% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +10% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -4714,17 +4734,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +15% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +15% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }
@@ -4754,7 +4774,7 @@
                 "icon": "replenishment.png",
                 "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +30% for this Lord",
+                "description": "Casualty replenishment rate: +30% for this Lord\n\t(Lord's army)",
                 "key": "wh2_main_effect_replenishment_lords",
                 "value": 30
               },
@@ -4770,7 +4790,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               }
@@ -4899,7 +4919,7 @@
                 "icon": "corruption_chaos.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +1",
+                "description": "Chaos Undivided corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_chaos_characters",
                 "value": 1
               }
@@ -4919,7 +4939,7 @@
                 "icon": "corruption_chaos.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +2",
+                "description": "Chaos Undivided corruption: +2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_chaos_characters",
                 "value": 2
               }
@@ -4939,7 +4959,7 @@
                 "icon": "corruption_chaos.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +4",
+                "description": "Chaos Undivided corruption: +4\n\t(local province)",
                 "key": "wh3_main_effect_corruption_chaos_characters",
                 "value": 4
               }
@@ -5073,7 +5093,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +5%",
+                "description": "Ambush success chance: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 5
               },
@@ -5089,7 +5109,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +5%",
+                "description": "Ambush defence chance: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 5
               }
@@ -5101,7 +5121,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +10%",
+                "description": "Ambush success chance: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 10
               },
@@ -5117,7 +5137,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +10%",
+                "description": "Ambush defence chance: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 10
               }
@@ -5129,7 +5149,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +15%",
+                "description": "Ambush success chance: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 15
               },
@@ -5145,7 +5165,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +15%",
+                "description": "Ambush defence chance: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 15
               }
@@ -5177,7 +5197,7 @@
                 "icon": "bestial_rage.png",
                 "priority": 25,
                 "is_positive_value_good": true,
-                "description": "Bestial rage: +1",
+                "description": "Bestial rage: +1\n\t(Lord's army)",
                 "key": "wh_dlc03_effect_bloodlust_modifier_characters",
                 "value": 1
               },
@@ -5217,7 +5237,7 @@
                 "icon": "growth.png",
                 "priority": 141,
                 "is_positive_value_good": true,
-                "description": "Horde growth: +3",
+                "description": "Horde growth: +3\n\t(Lord's army)",
                 "key": "wh_main_effect_hordebuilding_growth_characters",
                 "value": 3
               }
@@ -5446,7 +5466,7 @@
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": false,
-              "description": "Enemy leadership: -4",
+              "description": "Enemy leadership: -4\n\t(local region)",
               "key": "wh_main_effect_force_stat_leadership_enemy_unit",
               "value": -4
             }
@@ -5474,7 +5494,7 @@
               "icon": "income.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Income from raiding: +20%",
+              "description": "Income from raiding: +20%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_raid_income",
               "value": 20
             },
@@ -5482,7 +5502,7 @@
               "icon": "income.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Income from razing settlements: +10%",
+              "description": "Income from razing settlements: +10%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_razing_income",
               "value": 10
             }
@@ -5510,7 +5530,7 @@
               "icon": "weapon_damage.png",
               "priority": 461,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +10% for Minotaur units",
+              "description": "Weapon strength: +10% for Minotaur units\n\t(all units in army)",
               "key": "wh_dlc03_effect_force_stat_weapon_strength_minotaurs",
               "value": 10
             }
@@ -5538,7 +5558,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -5607,10 +5627,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -5638,7 +5666,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -5646,7 +5674,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -5710,9 +5738,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -5746,17 +5774,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -5782,25 +5810,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -5826,17 +5854,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -5890,17 +5918,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -5918,7 +5946,7 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Spirit Leech [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
@@ -5963,6 +5991,11 @@
                         "freeze_recharge": false,
                         "recharge_time": null,
                         "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": " Can Cause Fear",
+                            "attribute_type": "positive"
+                          },
                           {
                             "key": "causes_terror",
                             "description": " Can Cause Terror",

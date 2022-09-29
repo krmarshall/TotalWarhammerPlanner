@@ -233,7 +233,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -243,7 +242,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -375,7 +375,7 @@
                 "icon": "vigour.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -50%",
+                "description": "Vigour loss reduction: -50%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -50
               },
@@ -1280,7 +1280,7 @@
         "image_path": "wh2_main_spell_dark_magic_chillwind.png",
         "is_background_skill": false,
         "name": "Chillwind",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1325,7 +1325,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -1334,7 +1334,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   },
@@ -1373,7 +1373,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -1382,7 +1382,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   }
@@ -1443,7 +1443,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -1452,7 +1452,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   },
@@ -1491,7 +1491,7 @@
                         }
                       ],
                       "active_time": 3,
-                      "recharge_time": 30,
+                      "recharge_time": 35,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
@@ -1500,7 +1500,7 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 5,
+                      "mana_cost": 7,
                       "target_self": false
                     }
                   }
@@ -1556,7 +1556,7 @@
         "image_path": "wh2_main_lore_passive_spiteful_conjuration.png",
         "is_background_skill": false,
         "name": "Spiteful Conjuration",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1641,7 +1641,7 @@
         "image_path": "wh2_main_spell_dark_magic_power_of_darkness.png",
         "is_background_skill": false,
         "name": "Power of Darkness",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1691,7 +1691,7 @@
                           "duration": 35,
                           "effect_type": "positive",
                           "mana_regen_mod": 0.8,
-                          "mana_max_depletion_mod": 1,
+                          "mana_max_depletion_mod": 0.7,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1738,7 +1738,7 @@
         "image_path": "wh2_main_spell_dark_magic_word_of_pain.png",
         "is_background_skill": false,
         "name": "Word of Pain",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1783,10 +1783,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1848,10 +1848,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1903,10 +1903,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -1980,10 +1980,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -2035,10 +2035,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 0.5,
+                              "value": -30,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x0.5 Accuracy",
+                              "how": "add",
+                              "description": "-30 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
@@ -2110,7 +2110,7 @@
         "image_path": "wh2_main_spell_dark_magic_bladewind.png",
         "is_background_skill": false,
         "name": "Bladewind",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2418,7 +2418,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2505,7 +2505,7 @@
         "image_path": "wh2_main_spell_dark_magic_doombolt.png",
         "is_background_skill": false,
         "name": "Doombolt",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2902,7 +2902,7 @@
         "image_path": "wh2_main_spell_dark_magic_soul_stealer.png",
         "is_background_skill": false,
         "name": "Soul Stealer",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2969,7 +2969,6 @@
                       "target_ground": true,
                       "target_intercept_range": 100,
                       "mana_cost": 15,
-                      "miscast_chance": 0.1,
                       "target_self": false,
                       "phases": [
                         {
@@ -3058,11 +3057,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3084,7 +3083,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3120,7 +3119,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3163,7 +3162,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +75",
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 75
               },
@@ -3199,7 +3198,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units",
+                "description": "Melee defence: +4 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_spears_swords_crossbow_corsair",
                 "value": 4
               }
@@ -3211,7 +3210,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units",
+                "description": "Melee attack: +4 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_def_spears_swords_crossbow_corsairs",
                 "value": 4
               },
@@ -3219,7 +3218,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units",
+                "description": "Melee defence: +6 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_spears_swords_crossbow_corsair",
                 "value": 6
               }
@@ -3231,7 +3230,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units",
+                "description": "Melee attack: +6 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_def_spears_swords_crossbow_corsairs",
                 "value": 6
               },
@@ -3239,7 +3238,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units",
+                "description": "Melee defence: +8 for Dreadspears, Bleakswords, Black Ark Corsairs and Darkshards units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_spears_swords_crossbow_corsair",
                 "value": 8
               }
@@ -3270,7 +3269,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units",
+                "description": "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_ammunition_def_crossbow_boltthrower_corsair",
                 "value": 8
               }
@@ -3282,7 +3281,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +12% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units",
+                "description": "Ammunition: +12% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_ammunition_def_crossbow_boltthrower_corsair",
                 "value": 12
               },
@@ -3290,7 +3289,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 561,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +4% for Darkshards, Black Ark Corsairs and Bolt Thrower units",
+                "description": "Reload time reduction: +4% for Darkshards, Black Ark Corsairs and Bolt Thrower units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_reload_time_reduction_crossbow_boltthrower_corsair",
                 "value": 4
               }
@@ -3302,7 +3301,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units",
+                "description": "Ammunition: +20% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_ammunition_def_crossbow_boltthrower_corsair",
                 "value": 20
               },
@@ -3310,7 +3309,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 561,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +8% for Darkshards, Black Ark Corsairs and Bolt Thrower units",
+                "description": "Reload time reduction: +8% for Darkshards, Black Ark Corsairs and Bolt Thrower units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_reload_time_reduction_crossbow_boltthrower_corsair",
                 "value": 8
               }
@@ -3341,7 +3340,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 6
               }
@@ -3353,7 +3352,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Melee defence: +5 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_shade_darkriders",
                 "value": 5
               },
@@ -3361,7 +3360,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 9
               },
@@ -3369,7 +3368,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +4% for Shades and Dark Riders units",
+                "description": "Missile strength: +4% for Shades, Dark Riders and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_shades_darkriders",
                 "value": 4
               }
@@ -3381,7 +3380,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +7 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Melee defence: +7 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_shade_darkriders",
                 "value": 7
               },
@@ -3389,7 +3388,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Shades, Dark Riders and Doomfire Warlock units",
+                "description": "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_shade_darkrider",
                 "value": 12
               },
@@ -3397,7 +3396,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Shades and Dark Riders units",
+                "description": "Missile strength: +6% for Shades, Dark Riders and Scourgerunner Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_shades_darkriders",
                 "value": 6
               }
@@ -3428,7 +3427,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +5% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 5
               }
@@ -3437,18 +3436,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +9% for Bloodwrack Medusae units",
-                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
-                "value": 9
-              },
-              {
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +7% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 7
               },
@@ -3456,8 +3447,16 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_monsters",
+                "value": 9
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +9% for Bloodwrack Medusae units\n\t(Lord's army)",
+                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
                 "value": 9
               }
             ]
@@ -3465,18 +3464,10 @@
           {
             "effects": [
               {
-                "icon": "icon_stat_reload_time_force.png",
-                "priority": 202,
-                "is_positive_value_good": true,
-                "description": "Reload time reduction: +12% for Bloodwrack Medusae units",
-                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
-                "value": 12
-              },
-              {
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_monsters",
                 "value": 9
               },
@@ -3484,8 +3475,16 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon and Feral Manticore units",
+                "description": "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_monsters",
+                "value": 12
+              },
+              {
+                "icon": "icon_stat_reload_time_force.png",
+                "priority": 561,
+                "is_positive_value_good": true,
+                "description": "Reload time reduction: +12% for Bloodwrack Medusae units\n\t(Lord's army)",
+                "key": "wh2_dlc14_effect_skill_reload_time_decrease_def_medusa",
                 "value": 12
               }
             ]
@@ -3515,7 +3514,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units",
+                "description": "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_cold_ones",
                 "value": 4
               }
@@ -3527,7 +3526,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units",
+                "description": "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_cold_ones",
                 "value": 4
               },
@@ -3535,7 +3534,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units",
+                "description": "Melee defence: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_coldones",
                 "value": 6
               }
@@ -3547,7 +3546,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units",
+                "description": "Melee attack: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_cold_ones",
                 "value": 6
               },
@@ -3555,7 +3554,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units",
+                "description": "Melee defence: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_coldones",
                 "value": 8
               }
@@ -3586,7 +3585,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units",
+                "description": "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_witchelf_blackguard_executioner",
                 "value": 4
               }
@@ -3598,7 +3597,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units",
+                "description": "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_witchelf_blackguard_executioner",
                 "value": 4
               },
@@ -3606,7 +3605,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units",
+                "description": "Melee defence: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_witchelf_blackguard_executioner",
                 "value": 6
               }
@@ -3618,7 +3617,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units",
+                "description": "Melee attack: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_witchelf_blackguard_executioner",
                 "value": 6
               },
@@ -3626,7 +3625,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units",
+                "description": "Melee defence: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_def_witchelf_blackguard_executioner",
                 "value": 8
               }
@@ -3650,7 +3649,7 @@
         "image_path": "wh2_main_lord_passive_strength_through_spite.png",
         "is_background_skill": false,
         "name": "Strength Through Spite",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3739,7 +3738,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units (Rank 7 and above)",
+                "description": "Armour: +10 for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_militia_boltthrower_rank7",
                 "value": 10
               },
@@ -3747,7 +3746,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_militia_boltthrower_rank7",
                 "value": 10
               },
@@ -3755,7 +3754,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Darkshards and Reaper Bolt Thrower units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Darkshards and Reaper Bolt Thrower units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_def_militia_boltthrower_rank7",
                 "value": 10
               },
@@ -3763,7 +3762,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_resistance_def_militia_boltthrower_rank7",
                 "value": 15
               }
@@ -3794,7 +3793,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders and Doomfire Warlock units (Rank 7 and above)",
+                "description": "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_corsairs_shades_riders_rank7",
                 "value": 10
               },
@@ -3802,7 +3801,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders and Doomfire Warlock units (Rank 7 and above)",
+                "description": "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_speed_corsairs_shades_riders_rank7",
                 "value": 10
               },
@@ -3810,7 +3809,7 @@
                 "icon": "accuracy.png",
                 "priority": 532,
                 "is_positive_value_good": true,
-                "description": "Range: +15% for Black Ark Corsairs, Shades and Dark Riders units (Rank 7 and above)",
+                "description": "Range: +15% for Black Ark Corsairs, Shades Dark Riders and Scourgerunner Chariot units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_range_def_corsairs_shades_riders_rank7",
                 "value": 15
               }
@@ -3841,7 +3840,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +5 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units (Rank 7 and above)",
+                "description": "Armour: +5 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_blackguard_executioner_coldones_rank7",
                 "value": 5
               },
@@ -3849,7 +3848,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariots units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariots units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_blackguard_executioner_coldones_rank7",
                 "value": 10
               },
@@ -3857,7 +3856,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariots units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariots units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_def_blackguard_executioner_coldones_rank7",
                 "value": 12
               }
@@ -3888,7 +3887,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Speed: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_speed_def_beasts_witchelfs_rank7",
                 "value": 10
               },
@@ -3896,7 +3895,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_def_beasts_witchelfs_rank7",
                 "value": 10
               },
@@ -3904,7 +3903,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Sisters of Slaughter units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and Bloodwrack Medusae units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_physical_resistance_def_beasts_witchelfs_rank7",
                 "value": 10
               }
@@ -3928,7 +3927,7 @@
         "image_path": "wh2_main_lord_passive_kindle_the_fury.png",
         "is_background_skill": false,
         "name": "Kindle the Fury",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4060,7 +4059,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               }
@@ -4072,7 +4071,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               }
@@ -4084,7 +4083,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               }
@@ -4170,8 +4169,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -4182,8 +4181,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -4194,8 +4193,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
@@ -4225,7 +4224,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from looting settlements: +4%",
+                "description": "Income from looting settlements: +4%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_loot_income",
                 "value": 4
               },
@@ -4233,7 +4232,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +10%",
+                "description": "Income from raiding: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 10
               },
@@ -4241,7 +4240,7 @@
                 "icon": "income.png",
                 "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +4%",
+                "description": "Income from sacking settlements: +4%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_sacking_income",
                 "value": 4
               }
@@ -4253,7 +4252,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from looting settlements: +9%",
+                "description": "Income from looting settlements: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_loot_income",
                 "value": 9
               },
@@ -4261,7 +4260,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               },
@@ -4269,7 +4268,7 @@
                 "icon": "income.png",
                 "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +9%",
+                "description": "Income from sacking settlements: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_sacking_income",
                 "value": 9
               }
@@ -4281,7 +4280,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from looting settlements: +15%",
+                "description": "Income from looting settlements: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_loot_income",
                 "value": 15
               },
@@ -4289,7 +4288,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +30%",
+                "description": "Income from raiding: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 30
               },
@@ -4297,7 +4296,7 @@
                 "icon": "income.png",
                 "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from sacking settlements: +15%",
+                "description": "Income from sacking settlements: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_sacking_income",
                 "value": 15
               }
@@ -4329,7 +4328,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               },
@@ -4337,7 +4336,7 @@
                 "icon": "army.png",
                 "priority": 270,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
+                "description": "Local recruitment capacity: +1\n\t(local province)",
                 "key": "wh_main_effect_unit_recruitment_points",
                 "value": 1
               }
@@ -4458,7 +4457,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -4470,7 +4469,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -4482,7 +4481,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -4513,7 +4512,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +6%",
+                "description": "Ambush success chance: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 6
               },
@@ -4521,7 +4520,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +5%",
+                "description": "Ambush defence chance: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 5
               }
@@ -4533,7 +4532,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +16%",
+                "description": "Ambush success chance: +16%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 16
               },
@@ -4541,7 +4540,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +10%",
+                "description": "Ambush defence chance: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 10
               }
@@ -4553,7 +4552,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +30%",
+                "description": "Ambush success chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 30
               },
@@ -4561,7 +4560,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +20%",
+                "description": "Ambush defence chance: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 20
               },
@@ -4600,7 +4599,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               },
@@ -4608,7 +4607,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -4620,7 +4619,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               },
@@ -4628,7 +4627,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 6
               }
@@ -4640,7 +4639,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -30% casualties suffered from all attrition",
+                "description": "Attrition: -30% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -30
               },
@@ -4648,7 +4647,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 9
               }
@@ -4673,6 +4672,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -4703,7 +4748,7 @@
               "icon": "income.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Income from raiding: +10%",
+              "description": "Income from raiding: +10%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_raid_income",
               "value": 10
             },
@@ -4711,7 +4756,7 @@
               "icon": "income.png",
               "priority": 108,
               "is_positive_value_good": true,
-              "description": "Income from sacking settlements: +5%",
+              "description": "Income from sacking settlements: +5%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_sacking_income",
               "value": 5
             }
@@ -4739,7 +4784,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -4747,7 +4792,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -4811,9 +4856,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -4847,17 +4892,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -4883,25 +4928,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4927,17 +4972,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -4991,17 +5036,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -5055,7 +5100,7 @@
               "icon": "treasury.png",
               "priority": 102,
               "is_positive_value_good": false,
-              "description": "Construction cost: -40% for Cult of Khaine or Cult of Pleasure buildings",
+              "description": "Construction cost: -40% for Cult of Khaine or Cult of Pleasure buildings\n\t(local region)",
               "key": "wh_main_effect_building_construction_cost_mod_worship_def",
               "value": -40
             },
@@ -5063,7 +5108,7 @@
               "icon": "death_hag.png",
               "priority": 104,
               "is_positive_value_good": true,
-              "description": "Hero recruit rank: +2 for Death Hags",
+              "description": "Hero recruit rank: +2 for Death Hags\n\t(local province)",
               "key": "wh2_main_effect_agent_recruitment_xp_def_death_hag",
               "value": 2
             }
@@ -5091,7 +5136,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +3\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 3
             },
@@ -5099,7 +5144,7 @@
               "icon": "weapon_damage.png",
               "priority": 461,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +4%",
+              "description": "Weapon strength: +4%\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_weapon_strength",
               "value": 4
             }
@@ -5163,9 +5208,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -5199,7 +5244,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -5268,10 +5313,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -5336,7 +5389,7 @@
                       }
                     ],
                     "active_time": 3,
-                    "recharge_time": 30,
+                    "recharge_time": 35,
                     "wind_up_time": 1,
                     "passive": false,
                     "effect_range": 0,
@@ -5345,7 +5398,7 @@
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 150,
-                    "mana_cost": 5,
+                    "mana_cost": 7,
                     "target_self": false
                   }
                 }
@@ -5399,7 +5452,7 @@
                         "duration": 35,
                         "effect_type": "positive",
                         "mana_regen_mod": 0.8,
-                        "mana_max_depletion_mod": 1,
+                        "mana_max_depletion_mod": 0.7,
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
                         "recharge_time": null

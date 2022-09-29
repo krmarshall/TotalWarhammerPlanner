@@ -169,7 +169,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -179,7 +178,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -509,7 +509,7 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
-        "parent_subset_required": [
+        "parent_required": [
           "wh_dlc06_skill_node_dwf_ghost_2_champion_self_01"
         ],
         "boxed": true
@@ -564,7 +564,7 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
-        "parent_subset_required": [
+        "parent_required": [
           "wh_dlc06_skill_node_dwf_ghost_2_champion_self_01"
         ],
         "boxed": true
@@ -619,7 +619,7 @@
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true,
-        "parent_subset_required": [
+        "parent_required": [
           "wh_dlc06_skill_node_dwf_ghost_2_champion_self_01"
         ],
         "right_arrow": true,
@@ -1827,7 +1827,7 @@
                 "icon": "vigour.png",
                 "priority": 105,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -33% for Hammerers units",
+                "description": "Vigour loss reduction: -33% for Hammerers units\n\t(all units in army)",
                 "key": "wh2_dlc17_effect_vigour_loss_reduction_hammerers",
                 "value": -33
               },
@@ -1928,7 +1928,7 @@
                 "icon": "ammo.png",
                 "priority": 105,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +50% for Irondrakes, Ironbreakers and Miners units",
+                "description": "Ammunition: +50% for Irondrakes, Ironbreakers and Miners units\n\t(all units in army)",
                 "key": "wh2_dlc17_effect_ammo_irondrakes_ironbreakers",
                 "value": 50
               },
@@ -1968,7 +1968,7 @@
                 "icon": "snipe.png",
                 "priority": 105,
                 "is_positive_value_good": true,
-                "description": "Attribute: Snipe for Rangers units",
+                "description": "Attribute: Snipe for Rangers units\n\t(all units in army)",
                 "key": "wh2_dlc17_effect_enable_attribute_snipe_rangers",
                 "value": 1
               },
@@ -2018,9 +2018,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
+                "description": "Training action: Experience per turn is increased by an additional 20",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "value": 20
               }
             ]
           },
@@ -2031,9 +2031,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
+                "description": "Training action: Experience per turn is increased by an additional 35",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "value": 35
               }
             ]
           },
@@ -2044,9 +2044,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
+                "description": "Training action: Experience per turn is increased by an additional 50",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "value": 50
               }
             ]
           }
@@ -2071,7 +2071,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -1",
+                "description": "Control: -1\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -1
               },
@@ -2079,7 +2079,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 1
               },
@@ -2100,7 +2100,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -2",
+                "description": "Control: -2\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -2
               },
@@ -2108,7 +2108,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 2
               },
@@ -2129,7 +2129,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -3",
+                "description": "Control: -3\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -3
               },
@@ -2137,7 +2137,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 3
               },
@@ -2402,18 +2402,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -2451,6 +2443,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_champion_passive_spread_public_order",
               "value": 1
             },
@@ -2458,7 +2458,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: -1",
+              "description": "Control: -1\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
               "value": -1
             },
@@ -2466,7 +2466,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: +1",
+              "description": "Control: +1\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
               "value": 1
             }

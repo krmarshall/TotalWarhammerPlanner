@@ -15,7 +15,7 @@
                 "icon": "oathgold.png",
                 "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Oathgold from Buildings: +150%",
+                "description": "Oathgold from buildings: +150%\n\t(local province)",
                 "key": "wh2_dlc17_pooled_resource_oathgold_buildings_mod",
                 "value": 150
               }
@@ -28,7 +28,7 @@
                 "icon": "oathgold.png",
                 "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Oathgold from Buildings: +200%",
+                "description": "Oathgold from buildings: +200%\n\t(local province)",
                 "key": "wh2_dlc17_pooled_resource_oathgold_buildings_mod",
                 "value": 200
               }
@@ -210,7 +210,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -220,7 +219,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -403,11 +403,11 @@
             "unlocked_at_rank": 15,
             "effects": [
               {
-                "icon": "magic.png",
-                "priority": 15,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve: -10",
-                "key": "wh_main_effect_military_force_winds_of_magic_depletion_mod_other",
+                "icon": "magic_campaign.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Enemy Winds of Magic power reserve change: -10% when increasing\n\t(local region)",
+                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
                 "value": -10
               },
               {
@@ -890,7 +890,7 @@
         "image_path": "wh_main_rune_abilities_rune_of_oath_and_steel.png",
         "is_background_skill": false,
         "name": "Rune of Oath & Steel",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -898,7 +898,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Oath & Steel\"",
+                "description": "Rune Magic: \"Rune of Oath & Steel\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_oath_and_steel",
@@ -959,7 +959,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Master Rune of Oath & Steel\"",
+                "description": "Overcast Rune Magic: \"Master Rune of Oath & Steel\"",
                 "related_abilities": [
                   {
                     "effect": "wh_dlc06_effect_ability_enable_master_rune_of_oath_and_steel",
@@ -1000,62 +1000,6 @@
                               "stat": "stat_armour",
                               "how": "add",
                               "description": "+20 Armour",
-                              "sort_order": 6,
-                              "icon": "icon_stat_armour.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "effect": "wh_dlc06_effect_ability_enable_master_rune_of_oath_and_steel",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc06_rune_abilities_master_rune_of_oath_and_steel",
-                      "icon_name": "wh_main_rune_abilities_rune_of_oath_and_steel",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Master Rune of Oath & Steel",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_spell_upgraded_armour",
-                          "sort_order": 1,
-                          "effect_state": "magic",
-                          "description": "Greater effect on armour"
-                        }
-                      ],
-                      "active_time": 45,
-                      "recharge_time": 120,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 35,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "miscast_chance": 0.5,
-                      "target_self": false,
-                      "shared_recharge_time": 90,
-                      "phases": [
-                        {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 30,
-                              "stat": "stat_armour",
-                              "how": "add",
-                              "description": "+30 Armour",
                               "sort_order": 6,
                               "icon": "icon_stat_armour.png"
                             }
@@ -1119,7 +1063,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Oath & Steel\"",
+                "description": "Rune Magic: \"Rune of Oath & Steel\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_oath_and_steel",
@@ -1180,7 +1124,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Master Rune of Oath & Steel\"",
+                "description": "Overcast Rune Magic: \"Master Rune of Oath & Steel\"",
                 "related_abilities": [
                   {
                     "effect": "wh_dlc06_effect_ability_enable_master_rune_of_oath_and_steel",
@@ -1221,62 +1165,6 @@
                               "stat": "stat_armour",
                               "how": "add",
                               "description": "+20 Armour",
-                              "sort_order": 6,
-                              "icon": "icon_stat_armour.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "effect": "wh_dlc06_effect_ability_enable_master_rune_of_oath_and_steel",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc06_rune_abilities_master_rune_of_oath_and_steel",
-                      "icon_name": "wh_main_rune_abilities_rune_of_oath_and_steel",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Master Rune of Oath & Steel",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_spell_upgraded_armour",
-                          "sort_order": 1,
-                          "effect_state": "magic",
-                          "description": "Greater effect on armour"
-                        }
-                      ],
-                      "active_time": 45,
-                      "recharge_time": 120,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 35,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "miscast_chance": 0.5,
-                      "target_self": false,
-                      "shared_recharge_time": 90,
-                      "phases": [
-                        {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 30,
-                              "stat": "stat_armour",
-                              "how": "add",
-                              "description": "+30 Armour",
                               "sort_order": 6,
                               "icon": "icon_stat_armour.png"
                             }
@@ -1340,7 +1228,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Oath & Steel\"",
+                "description": "Rune Magic: \"Rune of Oath & Steel\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_oath_and_steel",
@@ -1420,7 +1308,7 @@
         "image_path": "wh_main_rune_abilities_rune_of_wrath_and_ruin.png",
         "is_background_skill": false,
         "name": "Rune of Wrath & Ruin",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1428,7 +1316,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Wrath & Ruin\"",
+                "description": "Rune Magic: \"Rune of Wrath & Ruin\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_wrath_&_ruin",
@@ -1490,7 +1378,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Master Rune of Wrath & Ruin\"",
+                "description": "Overcast Rune Magic: \"Master Rune of Wrath & Ruin\"",
                 "related_abilities": [
                   {
                     "effect": "wh_dlc06_effect_ability_enable_master_rune_of_wrath_&_ruin",
@@ -1538,67 +1426,6 @@
                       "target_intercept_range": 100,
                       "target_self": false,
                       "shared_recharge_time": 60
-                    }
-                  },
-                  {
-                    "effect": "wh_dlc06_effect_ability_enable_master_rune_of_wrath_&_ruin",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc06_rune_abilities_master_rune_of_wrath_and_ruin",
-                      "icon_name": "wh_main_rune_abilities_rune_of_wrath_and_ruin",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_explosion",
-                        "icon_path": "icon_spell_explosion.png",
-                        "description": "Explosion"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Master Rune of Wrath & Ruin",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_spell_upgraded_ap_damage_explosion",
-                          "sort_order": 1,
-                          "effect_state": "magic",
-                          "description": "Greater armour-piercing explosion damage"
-                        },
-                        {
-                          "key": "wh2_main_all_flaming",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes fire damage"
-                        },
-                        {
-                          "key": "wh_main_vortex_large_static_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Large explosion area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 10,
-                      "recharge_time": 120,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "miscast_chance": 0.5,
-                      "target_self": false,
-                      "shared_recharge_time": 90
                     }
                   },
                   {
@@ -1657,7 +1484,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Wrath & Ruin\"",
+                "description": "Rune Magic: \"Rune of Wrath & Ruin\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_wrath_&_ruin",
@@ -1719,7 +1546,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Master Rune of Wrath & Ruin\"",
+                "description": "Overcast Rune Magic: \"Master Rune of Wrath & Ruin\"",
                 "related_abilities": [
                   {
                     "effect": "wh_dlc06_effect_ability_enable_master_rune_of_wrath_&_ruin",
@@ -1767,67 +1594,6 @@
                       "target_intercept_range": 100,
                       "target_self": false,
                       "shared_recharge_time": 60
-                    }
-                  },
-                  {
-                    "effect": "wh_dlc06_effect_ability_enable_master_rune_of_wrath_&_ruin",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_dlc06_rune_abilities_master_rune_of_wrath_and_ruin",
-                      "icon_name": "wh_main_rune_abilities_rune_of_wrath_and_ruin",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_explosion",
-                        "icon_path": "icon_spell_explosion.png",
-                        "description": "Explosion"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Master Rune of Wrath & Ruin",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_spell_upgraded_ap_damage_explosion",
-                          "sort_order": 1,
-                          "effect_state": "magic",
-                          "description": "Greater armour-piercing explosion damage"
-                        },
-                        {
-                          "key": "wh2_main_all_flaming",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes fire damage"
-                        },
-                        {
-                          "key": "wh_main_vortex_large_static_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Large explosion area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 10,
-                      "recharge_time": 120,
-                      "wind_up_time": 3,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 100,
-                      "miscast_chance": 0.5,
-                      "target_self": false,
-                      "shared_recharge_time": 90
                     }
                   },
                   {
@@ -1886,7 +1652,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Wrath & Ruin\"",
+                "description": "Rune Magic: \"Rune of Wrath & Ruin\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_wrath_&_ruin",
@@ -1975,7 +1741,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
+                "description": "Enemy Winds of Magic power reserve change: -10% when increasing\n\t(local region)",
                 "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
                 "value": -10
               }
@@ -2529,7 +2295,7 @@
         "image_path": "wh_main_hero_passive_forgefire.png",
         "is_background_skill": false,
         "name": "Forgefire",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3089,7 +2855,7 @@
         "image_path": "wh_main_rune_abilities_rune_of_negation.png",
         "is_background_skill": false,
         "name": "Rune of Negation",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3097,7 +2863,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Negation\"",
+                "description": "Rune Magic: \"Rune of Negation\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_negation",
@@ -3158,7 +2924,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Negation\"",
+                "description": "Rune Magic: \"Rune of Negation\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_negation",
@@ -3323,7 +3089,7 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Rune of Negation\"",
+                "description": "Rune Magic: \"Rune of Negation\"",
                 "related_abilities": [
                   {
                     "effect": "wh_main_effect_ability_enable_rune_of_negation",
@@ -3543,6 +3309,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null,
@@ -3588,7 +3355,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 580,
                 "is_positive_value_good": false,
-                "description": "Spell resistance: -10%",
+                "description": "Spell resistance: -10%\n\t(enemy armies in local province)",
                 "key": "wh_main_effect_force_stat_magic_resistance_bad",
                 "value": -10
               },
@@ -3596,7 +3363,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 580,
                 "is_positive_value_good": false,
-                "description": "Missile resistance: -10%",
+                "description": "Missile resistance: -10%\n\t(enemy armies in local province)",
                 "key": "wh_main_effect_force_stat_missile_resistance_bad",
                 "value": -10
               }
@@ -4693,7 +4460,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -1
               },
@@ -4714,7 +4481,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -2
               },
@@ -4735,7 +4502,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -3
               },
@@ -4999,8 +4766,8 @@
       "key": "wh2_dlc17_skill_node_dwf_runesmith_magic_hidden",
       "image_path": "0_placeholder_skill.png",
       "is_background_skill": false,
-      "name": " ",
-      "description": " ",
+      "name": "",
+      "description": "",
       "levels": [
         {
           "effects": [
@@ -5085,18 +4852,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_runesmith_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -5134,6 +4893,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_runesmith_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_runesmith_passive_spread_corruption",
               "value": 1
             },
@@ -5141,7 +4908,7 @@
               "icon": "corruption.png",
               "priority": 0,
               "is_positive_value_good": false,
-              "description": "Corruption: -2",
+              "description": "Corruption: -2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
               "value": -2
             }
@@ -5221,7 +4988,7 @@
               "icon": "treasury.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Construction cost: -15% for all buildings",
+              "description": "Construction cost: -15% for all buildings\n\t(local region)",
               "key": "wh_main_effect_building_construction_cost_mod",
               "value": -15
             }
@@ -5285,9 +5052,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -5321,7 +5088,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -5390,10 +5157,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -5421,7 +5196,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -5429,7 +5204,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -5493,9 +5268,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -5529,17 +5304,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }

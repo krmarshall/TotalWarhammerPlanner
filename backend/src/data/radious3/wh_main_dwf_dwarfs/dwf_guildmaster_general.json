@@ -15,7 +15,7 @@
                 "icon": "oathgold.png",
                 "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Oathgold from Buildings: +100%",
+                "description": "Oathgold from buildings: +100%\n\t(local province)",
                 "key": "wh2_dlc17_pooled_resource_oathgold_buildings_mod",
                 "value": 100
               }
@@ -34,7 +34,7 @@
         "image_path": "wh_pro01_lord_abilities_flash_bomb.png",
         "is_background_skill": false,
         "name": "Flash Bomb",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "unlocked_at_rank": 6,
@@ -133,7 +133,7 @@
                 "icon": "vigour.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -25%",
+                "description": "Vigour loss reduction: -25%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -25
               }
@@ -211,7 +211,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -221,7 +220,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -245,7 +245,7 @@
                 "icon": "income.png",
                 "priority": 2,
                 "is_positive_value_good": true,
-                "description": "Income from Industry: +10%",
+                "description": "Income from Industry: +10%\n\t(local province)",
                 "key": "wh_dlc07_effect_economy_gdp_mod_industry",
                 "value": 10
               },
@@ -253,7 +253,7 @@
                 "icon": "construction.png",
                 "priority": 102,
                 "is_positive_value_good": false,
-                "description": "Construction time: -15% for all buildings",
+                "description": "Construction time: -15% for all buildings\n\t(local province)",
                 "key": "wh2_main_effect_building_construction_time_mod_all",
                 "value": -15
               },
@@ -261,7 +261,7 @@
                 "icon": "income.png",
                 "priority": 161,
                 "is_positive_value_good": true,
-                "description": "Income +10% from resource buildings",
+                "description": "Income +10% from resource buildings\n\t(local province)",
                 "key": "lvs_effect_resource_gdp_steam_powered",
                 "value": 10
               }
@@ -274,7 +274,7 @@
                 "icon": "income.png",
                 "priority": 2,
                 "is_positive_value_good": true,
-                "description": "Income from Industry: +20%",
+                "description": "Income from Industry: +20%\n\t(local province)",
                 "key": "wh_dlc07_effect_economy_gdp_mod_industry",
                 "value": 20
               },
@@ -282,7 +282,7 @@
                 "icon": "construction.png",
                 "priority": 102,
                 "is_positive_value_good": false,
-                "description": "Construction time: -25% for all buildings",
+                "description": "Construction time: -25% for all buildings\n\t(local province)",
                 "key": "wh2_main_effect_building_construction_time_mod_all",
                 "value": -25
               },
@@ -290,7 +290,7 @@
                 "icon": "income.png",
                 "priority": 161,
                 "is_positive_value_good": true,
-                "description": "Income +20% from resource buildings",
+                "description": "Income +20% from resource buildings\n\t(local province)",
                 "key": "lvs_effect_resource_gdp_steam_powered",
                 "value": 20
               }
@@ -318,7 +318,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Flaming Attacks for Artillery",
+                "description": "Flaming Attacks for Artillery\n\t(Lord's army)",
                 "key": "lvs_effect_flame_attacks_runic_artillery",
                 "value": 1
               }
@@ -346,7 +346,7 @@
                 "icon": "replenishment.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Replenishment: +20% for Artillery and Flying units",
+                "description": "Replenishment: +20% for Artillery and Flying units\n\t(Lord's army)",
                 "key": "sm_rws_effect_replenishment_field_repairs",
                 "value": 20
               }
@@ -679,7 +679,7 @@
         "image_path": "wh_main_hero_abilities_ballistics_calibration.png",
         "is_background_skill": false,
         "name": "Ballistics Calibration",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -722,18 +722,18 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 1.2,
+                              "value": 50,
                               "stat": "stat_accuracy",
-                              "how": "mult",
-                              "description": "x1.2 Accuracy",
+                              "how": "add",
+                              "description": "+50 Accuracy",
                               "sort_order": 9,
                               "icon": "icon_stat_range.png"
                             },
                             {
-                              "value": 1.4,
+                              "value": 20,
                               "stat": "stat_reloading",
-                              "how": "mult",
-                              "description": "x1.4 Reload Skill",
+                              "how": "add",
+                              "description": "+20 Reload Skill",
                               "sort_order": 8,
                               "icon": "icon_stat_reload_time.png"
                             }
@@ -1036,7 +1036,840 @@
         ]
       }
     ],
-    [],
+    [
+      {
+        "key": "Rad_Skill_Dump_Attack_000414",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Martial Mastery (Skill Dump)",
+        "description": "When everything else fails, there is always studying the blade. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +1",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +2",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +9",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +10",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +11",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +13",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +14",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +15",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +16",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +17",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +18",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +19",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +20",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Attack",
+        "tier": 20,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "Rad_Skill_Dump_Defence_000412",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Defensive Dedication (Skill Dump)",
+        "description": "Wielding the shield is better than returning on it. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +1",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +2",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +9",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +10",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +11",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +13",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +14",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +15",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +16",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +17",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +18",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +19",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +20",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Defence",
+        "tier": 21,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
     [],
     [
       {
@@ -1106,7 +1939,7 @@
                 "icon": "ammo_character.png",
                 "priority": 210,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20%",
+                "description": "Ammunition: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_ammunition",
                 "value": 20
               }
@@ -1135,7 +1968,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Miner, Warrior and Longbeard units",
+                "description": "Weapon Strength: +3% for Miner, Warrior and Longbeard units\n\t(Lord's army)",
                 "key": "lvs_effect_damage_superior_alloys",
                 "value": 3
               },
@@ -1143,7 +1976,7 @@
                 "icon": "armour.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "\"Armour: +3 for Miner, Warrior and Longbeard units\"",
+                "description": "\"Armour: +3 for Miner, Warrior and Longbeard units\"\n\t(Lord's army)",
                 "key": "lvs_effect_armour_superior_alloys",
                 "value": 3
               }
@@ -1156,7 +1989,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Miner, Warrior and Longbeard units",
+                "description": "Weapon Strength: +6% for Miner, Warrior and Longbeard units\n\t(Lord's army)",
                 "key": "lvs_effect_damage_superior_alloys",
                 "value": 6
               },
@@ -1164,7 +1997,7 @@
                 "icon": "armour.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "\"Armour: +6 for Miner, Warrior and Longbeard units\"",
+                "description": "\"Armour: +6 for Miner, Warrior and Longbeard units\"\n\t(Lord's army)",
                 "key": "lvs_effect_armour_superior_alloys",
                 "value": 6
               }
@@ -1177,7 +2010,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Miner, Warrior and Longbeard units",
+                "description": "Weapon Strength: +9% for Miner, Warrior and Longbeard units\n\t(Lord's army)",
                 "key": "lvs_effect_damage_superior_alloys",
                 "value": 9
               },
@@ -1185,7 +2018,7 @@
                 "icon": "armour.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "\"Armour: +10 for Miner, Warrior and Longbeard units\"",
+                "description": "\"Armour: +10 for Miner, Warrior and Longbeard units\"\n\t(Lord's army)",
                 "key": "lvs_effect_armour_superior_alloys",
                 "value": 10
               }
@@ -1217,7 +2050,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +4% for ranged Infantry units",
+                "description": "Missile Strength: +4% for ranged Infantry units\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_first_rank",
                 "value": 4
               },
@@ -1225,7 +2058,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +5% for ranged Infantry units",
+                "description": "Reload Time Reduction: +5% for ranged Infantry units\n\t(Lord's army)",
                 "key": "lvs_effect_reload_first_rank",
                 "value": 5
               }
@@ -1238,7 +2071,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +8% for ranged Infantry units",
+                "description": "Missile Strength: +8% for ranged Infantry units\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_first_rank",
                 "value": 8
               },
@@ -1246,7 +2079,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +10% for ranged Infantry units",
+                "description": "Reload Time Reduction: +10% for ranged Infantry units\n\t(Lord's army)",
                 "key": "lvs_effect_reload_first_rank",
                 "value": 10
               }
@@ -1259,7 +2092,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +12% for ranged Infantry units",
+                "description": "Missile Strength: +12% for ranged Infantry units\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_first_rank",
                 "value": 12
               },
@@ -1267,7 +2100,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +15% for ranged Infantry units",
+                "description": "Reload Time Reduction: +15% for ranged Infantry units\n\t(Lord's army)",
                 "key": "lvs_effect_reload_first_rank",
                 "value": 15
               }
@@ -1299,7 +2132,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "\"Missile damage: +4% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"",
+                "description": "\"Missile damage: +4% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_tested_reliable",
                 "value": 4
               },
@@ -1307,7 +2140,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "\"Range: +3% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"",
+                "description": "\"Range: +3% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
                 "key": "lvs_effect_range_tested_reliable",
                 "value": 3
               }
@@ -1320,7 +2153,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "\"Missile damage: +8% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"",
+                "description": "\"Missile damage: +8% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_tested_reliable",
                 "value": 8
               },
@@ -1328,7 +2161,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "\"Range: +6% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"",
+                "description": "\"Range: +6% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
                 "key": "lvs_effect_range_tested_reliable",
                 "value": 6
               }
@@ -1341,7 +2174,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "\"Missile damage: +12% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"",
+                "description": "\"Missile damage: +12% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_tested_reliable",
                 "value": 12
               },
@@ -1349,7 +2182,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "\"Range: +9% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"",
+                "description": "\"Range: +9% for Gyrocopters, Gyrobombers, Bolt Throwers and Grudge Throwers\"\n\t(Lord's army)",
                 "key": "lvs_effect_range_tested_reliable",
                 "value": 9
               }
@@ -1381,7 +2214,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile damage: +4% for Irondrakes and Flame Cannons",
+                "description": "Missile damage: +4% for Irondrakes and Flame Cannons\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_alchemical_fury",
                 "value": 4
               },
@@ -1389,7 +2222,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Range: +4% for Irondrakes and Flame Cannons",
+                "description": "Range: +4% for Irondrakes and Flame Cannons\n\t(Lord's army)",
                 "key": "lvs_effect_range_alchemical_fury",
                 "value": 4
               }
@@ -1402,7 +2235,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile damage: +8% for Irondrakes and Flame Cannons",
+                "description": "Missile damage: +8% for Irondrakes and Flame Cannons\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_alchemical_fury",
                 "value": 8
               },
@@ -1410,7 +2243,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Range: +8% for Irondrakes and Flame Cannons",
+                "description": "Range: +8% for Irondrakes and Flame Cannons\n\t(Lord's army)",
                 "key": "lvs_effect_range_alchemical_fury",
                 "value": 8
               }
@@ -1423,7 +2256,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile damage: +12% for Irondrakes and Flame Cannons",
+                "description": "Missile damage: +12% for Irondrakes and Flame Cannons\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_alchemical_fury",
                 "value": 12
               },
@@ -1431,7 +2264,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "Range: +12% for Irondrakes and Flame Cannons",
+                "description": "Range: +12% for Irondrakes and Flame Cannons\n\t(Lord's army)",
                 "key": "lvs_effect_range_alchemical_fury",
                 "value": 12
               }
@@ -1463,7 +2296,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Slayer, Hammerer and Ironbreaker units",
+                "description": "Weapon Strength: +3% for Slayer, Hammerer and Ironbreaker units\n\t(Lord's army)",
                 "key": "lvs_effect_damage_consummate_craftmanship",
                 "value": 3
               },
@@ -1471,7 +2304,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +3 for Slayers, Hammerers and Ironbreakers",
+                "description": "Melee defence: +3 for Slayers, Hammerers and Ironbreakers\n\t(Lord's army)",
                 "key": "lvs_effect_defence_consummate_craftmanship",
                 "value": 3
               }
@@ -1484,7 +2317,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Slayer, Hammerer and Ironbreaker units",
+                "description": "Weapon Strength: +6% for Slayer, Hammerer and Ironbreaker units\n\t(Lord's army)",
                 "key": "lvs_effect_damage_consummate_craftmanship",
                 "value": 6
               },
@@ -1492,7 +2325,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Slayers, Hammerers and Ironbreakers",
+                "description": "Melee defence: +6 for Slayers, Hammerers and Ironbreakers\n\t(Lord's army)",
                 "key": "lvs_effect_defence_consummate_craftmanship",
                 "value": 6
               }
@@ -1505,7 +2338,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Slayer, Hammerer and Ironbreaker units",
+                "description": "Weapon Strength: +9% for Slayer, Hammerer and Ironbreaker units\n\t(Lord's army)",
                 "key": "lvs_effect_damage_consummate_craftmanship",
                 "value": 9
               },
@@ -1513,7 +2346,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +10 for Slayers, Hammerers and Ironbreakers",
+                "description": "Melee defence: +10 for Slayers, Hammerers and Ironbreakers\n\t(Lord's army)",
                 "key": "lvs_effect_defence_consummate_craftmanship",
                 "value": 10
               }
@@ -1545,7 +2378,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile damage: +4% for Canons and Organ Guns",
+                "description": "Missile damage: +4% for Canons and Organ Guns\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_more_gundpowder",
                 "value": 4
               },
@@ -1553,7 +2386,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +5% for Canons and Organ Guns units",
+                "description": "Reload Time Reduction: +5% for Canons and Organ Guns units\n\t(Lord's army)",
                 "key": "lvs_effect_reload_more_gunpowder",
                 "value": 5
               }
@@ -1566,7 +2399,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile damage: +8% for Canons and Organ Guns",
+                "description": "Missile damage: +8% for Canons and Organ Guns\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_more_gundpowder",
                 "value": 8
               },
@@ -1574,7 +2407,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +10% for Canons and Organ Guns units",
+                "description": "Reload Time Reduction: +10% for Canons and Organ Guns units\n\t(Lord's army)",
                 "key": "lvs_effect_reload_more_gunpowder",
                 "value": 10
               }
@@ -1587,7 +2420,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Missile damage: +12% for Canons and Organ Guns",
+                "description": "Missile damage: +12% for Canons and Organ Guns\n\t(Lord's army)",
                 "key": "lvs_effect_ranged_damage_more_gundpowder",
                 "value": 12
               },
@@ -1595,7 +2428,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 202,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +15% for Canons and Organ Guns units",
+                "description": "Reload Time Reduction: +15% for Canons and Organ Guns units\n\t(Lord's army)",
                 "key": "lvs_effect_reload_more_gunpowder",
                 "value": 15
               }
@@ -1619,7 +2452,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1710,7 +2543,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)",
+                "description": "Armour: +12 for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_miners_warriors_longbeards_rank7",
                 "value": 12
               },
@@ -1718,7 +2551,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_dwf_miners_warriors_longbeards_rank7",
                 "value": 5
               },
@@ -1726,7 +2559,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)",
+                "description": "Spell resistance: 15% for Miners, Dwarf Warriors, and Longbeards units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_miners_warriors_longbeards_rank7",
                 "value": 15
               }
@@ -1757,7 +2590,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_dwf_rangers_quarrellers_thunderers_irondrakes_gyrocopters_rank7",
                 "value": 10
               },
@@ -1765,7 +2598,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_dwf_rangers_quarrellers_thunderers_irondrakes_gyrocopters_rank7",
                 "value": 10
               },
@@ -1773,7 +2606,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Quarrellers, Thunderers, Rangers, Irondrakes, Gyrocopter, and Gyrobomber units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_dwf_rangers_quarrellers_thunderers_irondrakes_gyrocopters_rank7",
                 "value": 15
               }
@@ -1804,7 +2637,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_slayers_hammerers_ironbreakers_rank7",
                 "value": 5
               },
@@ -1812,7 +2645,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_dwf_slayers_hammerers_ironbreakers_rank7",
                 "value": 10
               },
@@ -1820,7 +2653,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Slayers, Giant Slayers, Hammerers, and Ironbreakers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_dwf_slayers_hammerers_ironbreakers_rank7",
                 "value": 10
               }
@@ -1851,7 +2684,7 @@
                 "icon": "ammo.png",
                 "priority": 512,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)",
+                "description": "Ammunition: +20% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_dwf_all_artillery_rank7",
                 "value": 20
               },
@@ -1859,7 +2692,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_dwf_all_artillery_rank7",
                 "value": 10
               },
@@ -1867,7 +2700,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Bolt Thrower, Grudge Thrower, Cannon, Organ Gun, and Flame Cannon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_dwf_artillery_rank7",
                 "value": 10
               }
@@ -1891,7 +2724,7 @@
         "image_path": "wh_main_character_abilities_stand_your_ground.png",
         "is_background_skill": false,
         "name": "Stand Your Ground!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2080,7 +2913,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
+                "description": "Attrition: +5% when under siege\n\t(enemy armies in local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
                 "value": 5
               }
@@ -2092,7 +2925,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +8% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +8% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 8
               },
@@ -2100,7 +2933,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
+                "description": "Attrition: +5% when under siege\n\t(enemy armies in local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
                 "value": 5
               }
@@ -2112,7 +2945,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +15% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +15% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 15
               },
@@ -2120,7 +2953,7 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
+                "description": "Attrition: +5% when under siege\n\t(enemy armies in local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
                 "value": 5
               }
@@ -2151,7 +2984,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -1
               }
@@ -2163,7 +2996,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               }
@@ -2175,7 +3008,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -3
               }
@@ -2206,7 +3039,7 @@
                 "icon": "treasury.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Construction cost: -2% for Province Capital/Settlement buildings",
+                "description": "Construction cost: -2% for Province Capital/Settlement buildings\n\t(local region)",
                 "key": "wh_main_effect_building_construction_cost_mod_settlement",
                 "value": -2
               }
@@ -2218,7 +3051,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               },
@@ -2226,7 +3059,7 @@
                 "icon": "treasury.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Construction cost: -5% for Province Capital/Settlement buildings",
+                "description": "Construction cost: -5% for Province Capital/Settlement buildings\n\t(local region)",
                 "key": "wh_main_effect_building_construction_cost_mod_settlement",
                 "value": -5
               }
@@ -2238,7 +3071,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               },
@@ -2246,7 +3079,7 @@
                 "icon": "treasury.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Construction cost: -9% for Province Capital/Settlement buildings",
+                "description": "Construction cost: -9% for Province Capital/Settlement buildings\n\t(local region)",
                 "key": "wh_main_effect_building_construction_cost_mod_settlement",
                 "value": -9
               }
@@ -2278,7 +3111,7 @@
                 "icon": "replenishment.png",
                 "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +30% for this Lord",
+                "description": "Casualty replenishment rate: +30% for this Lord\n\t(Lord's army)",
                 "key": "wh2_main_effect_replenishment_lords",
                 "value": 30
               },
@@ -2415,7 +3248,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               }
@@ -2427,7 +3260,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               }
@@ -2439,7 +3272,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -30% casualties suffered from all attrition",
+                "description": "Attrition: -30% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -30
               }
@@ -2470,7 +3303,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -2482,7 +3315,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 6
               }
@@ -2494,7 +3327,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 9
               }
@@ -2525,7 +3358,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +6%",
+                "description": "Ambush defence chance: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 6
               }
@@ -2545,7 +3378,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
+                "description": "Ambush defence chance: +16%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 16
               }
@@ -2565,7 +3398,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +30%",
+                "description": "Ambush defence chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 30
               }
@@ -2602,6 +3435,14 @@
                 "value": 10
               },
               {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
                 "icon": "campaign_movement.png",
                 "priority": 100,
                 "is_positive_value_good": true,
@@ -2610,10 +3451,34 @@
                 "value": 5
               },
               {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              },
+              {
                 "icon": "army.png",
                 "priority": 270,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
+                "description": "Local recruitment capacity: +1\n\t(local province)",
                 "key": "wh_main_effect_unit_recruitment_points",
                 "value": 1
               }
@@ -2702,7 +3567,7 @@
               "icon": "treasury.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Construction cost: -15% for all buildings",
+              "description": "Construction cost: -15% for all buildings\n\t(local region)",
               "key": "wh_main_effect_building_construction_cost_mod",
               "value": -15
             }
@@ -2766,9 +3631,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2802,7 +3667,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -2871,10 +3736,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -2902,7 +3775,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -2910,7 +3783,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -2974,9 +3847,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3010,17 +3883,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -3046,25 +3919,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -3090,17 +3963,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -3154,17 +4027,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

@@ -71,7 +71,7 @@
                 "icon": "loyalty.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "On turn start, Lords have a chance to gain 2 loyalty",
+                "description": "On turn start, Lords have a chance to gain 2 loyalty\n\t(accompanying Lord)",
                 "key": "wh2_main_effect_character_mod_loyalty_new_turn",
                 "value": 2
               }
@@ -93,7 +93,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -103,7 +102,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -120,7 +120,7 @@
         "image_path": "wh2_main_character_abilities_dark_venom.png",
         "is_background_skill": false,
         "name": "Dark Venom",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "unlocked_at_rank": 6,
@@ -833,7 +833,7 @@
         "image_path": "wh2_main_character_abilities_assassins_trophy.png",
         "is_background_skill": false,
         "name": "Assassin's Trophy",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1988,17 +1988,9 @@
             "effects": [
               {
                 "icon": "slaves.png",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "Income from slaves: +3%",
-                "key": "wh2_main_effect_agent_action_passive_increase_slave_income_effect",
-                "value": 3
-              },
-              {
-                "icon": "slaves.png",
                 "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Increase Slave Income action: Income from slaves is increased by an additional +3%",
+                "description": "Increase Slave Income action: Slaves generated per turn is increased by an additional 3",
                 "key": "wh2_main_effect_agent_action_passive_increase_slave_income_buff",
                 "value": 3
               }
@@ -2009,17 +2001,9 @@
             "effects": [
               {
                 "icon": "slaves.png",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "Income from slaves: +6%",
-                "key": "wh2_main_effect_agent_action_passive_increase_slave_income_effect",
-                "value": 6
-              },
-              {
-                "icon": "slaves.png",
                 "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Increase Slave Income action: Income from slaves is increased by an additional +6%",
+                "description": "Increase Slave Income action: Slaves generated per turn is increased by an additional 6",
                 "key": "wh2_main_effect_agent_action_passive_increase_slave_income_buff",
                 "value": 6
               }
@@ -2030,17 +2014,9 @@
             "effects": [
               {
                 "icon": "slaves.png",
-                "priority": 0,
-                "is_positive_value_good": true,
-                "description": "Income from slaves: +10%",
-                "key": "wh2_main_effect_agent_action_passive_increase_slave_income_effect",
-                "value": 10
-              },
-              {
-                "icon": "slaves.png",
                 "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Increase Slave Income action: Income from slaves is increased by an additional +10%",
+                "description": "Increase Slave Income action: Slaves generated per turn is increased by an additional 10",
                 "key": "wh2_main_effect_agent_action_passive_increase_slave_income_buff",
                 "value": 10
               }
@@ -2297,18 +2273,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_spy_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -2346,16 +2314,16 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
-              "key": "wh2_main_effect_agent_action_enable_spy_passive_increase_slave_income",
+              "key": "wh2_main_effect_agent_action_enable_spy_hinder_settlement_scout_settlement",
               "value": 1
             },
             {
-              "icon": "slaves.png",
+              "icon": "",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Income from slaves: +10%",
-              "key": "wh2_main_effect_agent_action_passive_increase_slave_income_effect",
-              "value": 10
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_passive_increase_slave_income",
+              "value": 1
             }
           ]
         }
@@ -2381,7 +2349,7 @@
               "icon": "income.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Income from raiding: +10%",
+              "description": "Income from raiding: +10%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_raid_income",
               "value": 10
             },
@@ -2389,7 +2357,7 @@
               "icon": "income.png",
               "priority": 108,
               "is_positive_value_good": true,
-              "description": "Income from sacking settlements: +5%",
+              "description": "Income from sacking settlements: +5%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_sacking_income",
               "value": 5
             }
@@ -2445,7 +2413,7 @@
               "icon": "treasury.png",
               "priority": 102,
               "is_positive_value_good": false,
-              "description": "Construction cost: -40% for Cult of Khaine or Cult of Pleasure buildings",
+              "description": "Construction cost: -40% for Cult of Khaine or Cult of Pleasure buildings\n\t(local region)",
               "key": "wh_main_effect_building_construction_cost_mod_worship_def",
               "value": -40
             },
@@ -2453,7 +2421,7 @@
               "icon": "death_hag.png",
               "priority": 104,
               "is_positive_value_good": true,
-              "description": "Hero recruit rank: +2 for Death Hags",
+              "description": "Hero recruit rank: +2 for Death Hags\n\t(local province)",
               "key": "wh2_main_effect_agent_recruitment_xp_def_death_hag",
               "value": 2
             }
@@ -2517,9 +2485,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2553,7 +2521,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -2622,10 +2590,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -2653,7 +2629,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -2661,7 +2637,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -2725,9 +2701,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -2761,17 +2737,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -2797,25 +2773,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -2841,17 +2817,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -2905,17 +2881,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

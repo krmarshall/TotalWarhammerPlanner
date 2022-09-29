@@ -161,7 +161,7 @@
                 "icon": "growth_juice.png",
                 "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Growth Juice gained from battles: +5%",
+                "description": "Growth Juice gained from battles: +5%\n\t(factionwide)",
                 "key": "wh2_dlc16_throt_flesh_lab_growth_vat_post_battle_income",
                 "value": 5
               },
@@ -169,7 +169,7 @@
                 "icon": "experience.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1 for Monstrous Infantry and Monster units",
+                "description": "Recruit rank: +1 for Monstrous Infantry and Monster units\n\t(all units in army)",
                 "key": "wh2_dlc16_recruit_xp_monster_units",
                 "value": 1
               },
@@ -177,7 +177,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Monster units",
+                "description": "Melee attack: +8 for Monster units\n\t(all units in army)",
                 "key": "wh2_dlc09_effect_force_stat_melee_attack_monsters",
                 "value": 8
               }
@@ -318,9 +318,14 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Rage",
-                      "active_time": 135,
-                      "recharge_time": 45,
-                      "initial_recharge": 45,
+                      "ui_effects": [
+                        {
+                          "key": "wh3_dlc20_ability_intensity_time_in_melee",
+                          "sort_order": 1,
+                          "effect_state": "positive",
+                          "description": "Effect intensity increases with time spent engaged in melee."
+                        }
+                      ],
                       "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
@@ -331,49 +336,7 @@
                       "target_self": false,
                       "phases": [
                         {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 6,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+6 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        },
-                        {
-                          "duration": 45,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 8,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+8 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            },
-                            {
-                              "value": 10,
-                              "stat": "stat_resistance_physical",
-                              "how": "add",
-                              "description": "+10 Physical Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_physical.png"
-                            }
-                          ]
-                        },
-                        {
-                          "duration": 45,
+                          "duration": -1,
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
@@ -388,18 +351,18 @@
                               "icon": "icon_stat_attack.png"
                             },
                             {
-                              "value": 10,
+                              "value": 5,
                               "stat": "stat_morale",
                               "how": "add",
-                              "description": "+10 Leadership",
+                              "description": "+5 Leadership",
                               "sort_order": 1,
                               "icon": "icon_stat_morale.png"
                             },
                             {
-                              "value": 12,
+                              "value": 10,
                               "stat": "stat_resistance_physical",
                               "how": "add",
-                              "description": "+12 Physical Resistance",
+                              "description": "+10 Physical Resistance",
                               "sort_order": 10,
                               "icon": "resistance_physical.png"
                             }
@@ -440,7 +403,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               },
@@ -448,7 +411,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +150",
+                "description": "Unit experience gain per turn: +150\n\t(all units in army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 150
               }
@@ -568,7 +531,7 @@
                 "icon": "loyalty.png",
                 "priority": 99,
                 "is_positive_value_good": true,
-                "description": "Loyalty: +1 for new recruits",
+                "description": "Loyalty: +1 for new recruits\n\t(factionwide)",
                 "key": "wh2_main_effect_character_mod_loyalty_all",
                 "value": 1
               },
@@ -2268,9 +2231,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
+                "description": "Training action: Experience per turn is increased by an additional 20",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "value": 20
               }
             ]
           },
@@ -2281,9 +2244,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
+                "description": "Training action: Experience per turn is increased by an additional 35",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "value": 35
               }
             ]
           },
@@ -2294,9 +2257,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
+                "description": "Training action: Experience per turn is increased by an additional 50",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "value": 50
               }
             ]
           }
@@ -2374,7 +2337,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -1",
+                "description": "Control: -1\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -1
               },
@@ -2382,7 +2345,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 1
               },
@@ -2403,7 +2366,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -2",
+                "description": "Control: -2\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -2
               },
@@ -2411,7 +2374,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 2
               },
@@ -2432,7 +2395,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -3",
+                "description": "Control: -3\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -3
               },
@@ -2440,7 +2403,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 3
               },
@@ -2546,18 +2509,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -2611,6 +2566,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_champion_passive_spread_public_order",
               "value": 1
             },
@@ -2618,7 +2581,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: -1",
+              "description": "Control: -1\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
               "value": -1
             },
@@ -2626,7 +2589,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: +1",
+              "description": "Control: +1\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
               "value": 1
             }
@@ -2659,20 +2622,20 @@
               "value": 1
             },
             {
-              "icon": "charge.png",
-              "priority": 101,
-              "is_positive_value_good": true,
-              "description": "Charge bonus: +8",
-              "key": "wh2_dlc14_effect_force_charge_bonus_add",
-              "value": 8
-            },
-            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +5",
+              "description": "Leadership: +5\n\t(Hero's army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 5
+            },
+            {
+              "icon": "charge.png",
+              "priority": 500,
+              "is_positive_value_good": true,
+              "description": "Charge bonus: +8\n\t(Hero's army)",
+              "key": "wh2_dlc14_effect_force_charge_bonus_add",
+              "value": 8
             },
             {
               "icon": "general_ability.png",

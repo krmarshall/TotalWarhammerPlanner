@@ -22,7 +22,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"Blood for the Hound\", while this Mount is equipped, for Cavary units",
+                "description": "Passive Ability: \"Blood for the Hound\", while this Mount is equipped, for Cavary units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_nor_ancillary_horse",
                 "value": 1
               }
@@ -58,7 +58,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \" Devour the Weaklings\", while this Mount is equipped, for Chariot, Warhound, and Manticore units",
+                "description": "Passive Ability: \" Devour the Weaklings\", while this Mount is equipped, for Chariot, Warhound, and Manticore units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_nor_ancillary_chariot_manticore",
                 "value": 1
               }
@@ -113,11 +113,11 @@
             "effects": [
               {
                 "icon": "weapon_damage_character.png",
-                "priority": 161,
+                "priority": 160,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
               }
             ]
           }
@@ -131,7 +131,7 @@
       },
       {
         "key": "wh_dlc08_skill_node_nor_marauder_chieftan_unique_06",
-        "image_path": "battle_general_ability.png",
+        "image_path": "character_general_ability.png",
         "is_background_skill": false,
         "name": "Voice of the Dark Gods",
         "description": "This Lord speaks with a dread booming voice - a gift from his Dark Masters to ensure obedience.",
@@ -164,7 +164,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -174,7 +173,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -326,9 +326,14 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Berserk",
-                      "active_time": 90,
-                      "recharge_time": 30,
-                      "initial_recharge": 30,
+                      "ui_effects": [
+                        {
+                          "key": "wh3_dlc20_ability_intensity_time_in_melee",
+                          "sort_order": 1,
+                          "effect_state": "positive",
+                          "description": "Effect intensity increases with time spent engaged in melee."
+                        }
+                      ],
                       "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
@@ -339,24 +344,7 @@
                       "target_self": false,
                       "phases": [
                         {
-                          "duration": 30,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 20,
-                              "stat": "stat_resistance_physical",
-                              "how": "add",
-                              "description": "+20 Physical Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_physical.png"
-                            }
-                          ]
-                        },
-                        {
-                          "duration": 30,
+                          "duration": 60,
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
@@ -371,10 +359,10 @@
                               "icon": "icon_stat_attack.png"
                             },
                             {
-                              "value": 22,
+                              "value": 20,
                               "stat": "stat_resistance_physical",
                               "how": "add",
-                              "description": "+22 Physical Resistance",
+                              "description": "+20 Physical Resistance",
                               "sort_order": 10,
                               "icon": "resistance_physical.png"
                             }
@@ -403,10 +391,10 @@
                               "icon": "icon_stat_attack.png"
                             },
                             {
-                              "value": 24,
+                              "value": 22,
                               "stat": "stat_resistance_physical",
                               "how": "add",
-                              "description": "+24 Physical Resistance",
+                              "description": "+22 Physical Resistance",
                               "sort_order": 10,
                               "icon": "resistance_physical.png"
                             }
@@ -642,7 +630,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus: +10 when Attacking",
+                "description": "Charge Bonus: +10 when Attacking\n\t(Lord's army)",
                 "key": "sm_rso_effect_all_charge_when_attacking",
                 "value": 10
               },
@@ -650,7 +638,7 @@
                 "icon": "morale.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Morale: +5 when Attacking",
+                "description": "Morale: +5 when Attacking\n\t(Lord's army)",
                 "key": "sm_rso_effect_nor_morale_when_attacking",
                 "value": 5
               }
@@ -707,7 +695,7 @@
                 "icon": "vigour.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -15%",
+                "description": "Vigour loss reduction: -15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -15
               }
@@ -1904,18 +1892,18 @@
         "key": "sm_rws_skill_self_nor_marauder_chieftan_tier_0",
         "image_path": "character_damage.png",
         "is_background_skill": false,
-        "name": "Eye of the Gods",
+        "name": "Infernal Champion",
         "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "weapon_damage_character.png",
-                "priority": 161,
+                "priority": 160,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
               }
             ]
           }
@@ -2474,6 +2462,14 @@
           {
             "effects": [
               {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
+              {
                 "icon": "morale_character.png",
                 "priority": 260,
                 "is_positive_value_good": true,
@@ -2505,7 +2501,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "description": "Melee attack: +4 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_marauders_spearmen_berserkers_champions",
                 "value": 4
               }
@@ -2517,7 +2513,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "description": "Melee attack: +6 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_marauders_spearmen_berserkers_champions",
                 "value": 6
               },
@@ -2525,7 +2521,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "description": "Weapon strength: +5% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_marauders_spearmen_berserkers_champions",
                 "value": 5
               }
@@ -2537,7 +2533,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "description": "Melee attack: +8 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_marauders_spearmen_berserkers_champions",
                 "value": 8
               },
@@ -2545,7 +2541,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units",
+                "description": "Weapon strength: +10% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_marauders_spearmen_berserkers_champions",
                 "value": 10
               }
@@ -2576,7 +2572,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "description": "Missile strength: +3% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen",
                 "value": 3
               }
@@ -2588,7 +2584,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "description": "Ammunition: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_nor_marauder_hunters_marauder_horsemen",
                 "value": 10
               },
@@ -2596,7 +2592,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "description": "Missile strength: +5% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen",
                 "value": 5
               }
@@ -2608,7 +2604,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "description": "Ammunition: +20% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_nor_marauder_hunters_marauder_horsemen",
                 "value": 20
               },
@@ -2616,7 +2612,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units",
+                "description": "Missile strength: +7% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen",
                 "value": 7
               }
@@ -2647,7 +2643,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +6% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "description": "Speed: +6% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_nor_warhounds_ice_wolves_chariots",
                 "value": 6
               }
@@ -2659,7 +2655,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +9% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "description": "Speed: +9% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_nor_warhounds_ice_wolves_chariots",
                 "value": 9
               },
@@ -2667,7 +2663,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "description": "Charge bonus: +6 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_nor_warhounds_ice_wolves_chariots",
                 "value": 6
               }
@@ -2679,7 +2675,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +12% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "description": "Speed: +12% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_speed_nor_warhounds_ice_wolves_chariots",
                 "value": 12
               },
@@ -2687,7 +2683,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units",
+                "description": "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_nor_warhounds_ice_wolves_chariots",
                 "value": 12
               }
@@ -2718,7 +2714,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "description": "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_skin_wolves_trolls",
                 "value": 4
               }
@@ -2730,7 +2726,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "description": "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_skin_wolves_trolls",
                 "value": 4
               },
@@ -2738,7 +2734,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "description": "Weapon strength: +5% for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_skin_wolves_trolls",
                 "value": 5
               }
@@ -2750,7 +2746,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "description": "Melee attack: +6 for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_skin_wolves_trolls",
                 "value": 6
               },
@@ -2758,7 +2754,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units",
+                "description": "Weapon strength: +10% for Skin Wolves, Norscan Trolls, and Norscan Ice Trolls units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_skin_wolves_trolls",
                 "value": 10
               }
@@ -2789,7 +2785,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Manticore and Frost Wyrm units",
+                "description": "Melee attack: +4 for Manticore and Frost Wyrm units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_manticore_frost_wyrm",
                 "value": 4
               }
@@ -2801,7 +2797,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Manticore and Frost Wyrm units",
+                "description": "Armour: +6 for Manticore and Frost Wyrm units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_manticore_frost_wyrm",
                 "value": 6
               },
@@ -2809,7 +2805,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Manticore and Frost Wyrm units",
+                "description": "Melee attack: +4 for Manticore and Frost Wyrm units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_manticore_frost_wyrm",
                 "value": 4
               }
@@ -2821,7 +2817,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Manticore and Frost Wyrm units",
+                "description": "Armour: +12 for Manticore and Frost Wyrm units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_manticore_frost_wyrm",
                 "value": 12
               },
@@ -2829,7 +2825,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Manticore and Frost Wyrm units",
+                "description": "Melee attack: +6 for Manticore and Frost Wyrm units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_manticore_frost_wyrm",
                 "value": 6
               }
@@ -2860,7 +2856,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "description": "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_fimir_giant_mammoth",
                 "value": 4
               }
@@ -2872,7 +2868,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "description": "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_fimir_giant_mammoth",
                 "value": 4
               },
@@ -2880,7 +2876,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "description": "Melee defence: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_nor_fimir_giant_mammoth",
                 "value": 6
               }
@@ -2892,7 +2888,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "description": "Melee attack: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_nor_fimir_giant_mammoth",
                 "value": 6
               },
@@ -2900,7 +2896,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units",
+                "description": "Melee defence: +8 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_nor_fimir_giant_mammoth",
                 "value": 8
               }
@@ -2924,7 +2920,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3015,7 +3011,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)",
+                "description": "Armour: +12 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_marauders_spearmen_berserkers_champions_rank7",
                 "value": 12
               },
@@ -3023,7 +3019,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_nor_marauders_spearmen_berserkers_champions_rank7",
                 "value": 5
               },
@@ -3031,7 +3027,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_nor_marauders_spearmen_berserkers_champions_rank7",
                 "value": 10
               }
@@ -3062,7 +3058,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_nor_marauder_hunters_marauder_horsemen_rank7",
                 "value": 10
               },
@@ -3070,7 +3066,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_nor_marauder_hunters_marauder_horsemen_rank7",
                 "value": 10
               },
@@ -3078,7 +3074,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_nor_marauder_hunters_marauder_horsemen_rank7",
                 "value": 15
               }
@@ -3109,7 +3105,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_warhounds_ice_wolves_manticore_skin_wolves_chariots_rank7",
                 "value": 5
               },
@@ -3117,7 +3113,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_warhounds_ice_wolves_manticore_skin_wolves_chariots_rank7",
                 "value": 10
               },
@@ -3125,7 +3121,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_nor_warhounds_ice_wolves_manticore_skin_wolves_chariots_rank7",
                 "value": 12
               }
@@ -3156,7 +3152,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)",
+                "description": "Armour: +12 for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_trolls_frost_wyrm_giant_mammoth_fimir_rank7",
                 "value": 12
               },
@@ -3164,7 +3160,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_nor_trolls_frost_wyrm_giant_mammoth_fimir_rank7",
                 "value": 10
               },
@@ -3172,7 +3168,7 @@
                 "icon": "resistance_ward_save.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Ward save: 8% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)",
+                "description": "Ward save: 8% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ward_save_trolls_frost_wyrm_giant_mammoth_fimir_rank7",
                 "value": 8
               }
@@ -3489,8 +3485,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -3501,8 +3497,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -3513,8 +3509,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
@@ -3544,7 +3540,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +5%",
+                "description": "Casualty replenishment rate: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 5
               }
@@ -3575,7 +3571,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +8",
+                "description": "Growth: +8\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 8
               }
@@ -3587,7 +3583,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
+                "description": "Growth: +20\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 20
               }
@@ -3599,7 +3595,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +36",
+                "description": "Growth: +36\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 36
               }
@@ -3721,8 +3717,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling\n\t(local region)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -3733,17 +3729,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +10% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +10% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -3753,17 +3749,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +15% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +15% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }
@@ -3800,7 +3796,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
@@ -3820,7 +3816,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +2",
+                "description": "Recruit rank: +2\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 2
               }
@@ -3840,7 +3836,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +2",
+                "description": "Recruit rank: +2\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 2
               }
@@ -3871,7 +3867,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -5% casualties suffered from all attrition",
+                "description": "Attrition: -5% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -5
               },
@@ -3879,7 +3875,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               }
@@ -3910,7 +3906,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -3922,7 +3918,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -3934,7 +3930,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -3966,7 +3962,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +150",
+                "description": "Unit experience gain per turn: +150\n\t(Lord's army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 150
               },
@@ -4011,8 +4007,8 @@
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +40% when attacking",
-              "key": "wh_main_effect_character_stat_leadership_aura_size_attacking",
+              "description": "Leadership aura size: +40%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 40
             }
           ]
@@ -4021,34 +4017,6 @@
       "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_marauder_chieftain",
       "character_skill_key": "wh2_main_skill_innate_chs_diabolic_spendour",
       "tier": 0,
-      "indent": 6,
-      "points_on_creation": 0,
-      "required_num_parents": 0,
-      "visible_in_ui": false
-    },
-    {
-      "key": "wh_dlc08_skill_node_set_nor_marauder_chieftan_innate_02",
-      "image_path": "trait_chaos.png",
-      "is_background_skill": true,
-      "name": "Infernal Dominance ",
-      "description": "\"Mine desire is all, mortal wretch!\"",
-      "levels": [
-        {
-          "effects": [
-            {
-              "icon": "melee.png",
-              "priority": 430,
-              "is_positive_value_good": true,
-              "description": "Melee attack: +5",
-              "key": "wh_main_effect_force_stat_melee_attack",
-              "value": 5
-            }
-          ]
-        }
-      ],
-      "character_skill_node_set_key": "wh_dlc08_skill_node_set_nor_marauder_chieftain",
-      "character_skill_key": "wh2_main_skill_innate_chs_dominance",
-      "tier": 1,
       "indent": 6,
       "points_on_creation": 0,
       "required_num_parents": 0,
@@ -4067,9 +4035,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4103,7 +4071,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -4172,10 +4140,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -4203,7 +4179,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -4211,7 +4187,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -4275,9 +4251,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -4311,17 +4287,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -4347,25 +4323,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4391,17 +4367,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -4455,17 +4431,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -4491,7 +4467,7 @@
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": false,
-              "description": "Enemy leadership: -5",
+              "description": "Enemy leadership: -5\n\t(local region)",
               "key": "wh_main_effect_force_stat_leadership_enemy_unit",
               "value": -5
             }
@@ -4567,7 +4543,7 @@
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": false,
-              "description": "Enemy leadership: -3",
+              "description": "Enemy leadership: -3\n\t(local region)",
               "key": "wh_main_effect_force_stat_leadership_enemy_unit",
               "value": -3
             }
@@ -4643,7 +4619,7 @@
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": false,
-              "description": "Enemy leadership: -3",
+              "description": "Enemy leadership: -3\n\t(local region)",
               "key": "wh_main_effect_force_stat_leadership_enemy_unit",
               "value": -3
             }
@@ -4727,8 +4703,8 @@
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +40% when attacking",
-              "key": "wh_main_effect_character_stat_leadership_aura_size_attacking",
+              "description": "Leadership aura size: +40%",
+              "key": "wh_main_effect_character_stat_leadership_aura_size",
               "value": 40
             }
           ]
@@ -4771,9 +4747,14 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Rage",
-                    "active_time": 135,
-                    "recharge_time": 45,
-                    "initial_recharge": 45,
+                    "ui_effects": [
+                      {
+                        "key": "wh3_dlc20_ability_intensity_time_in_melee",
+                        "sort_order": 1,
+                        "effect_state": "positive",
+                        "description": "Effect intensity increases with time spent engaged in melee."
+                      }
+                    ],
                     "passive": true,
                     "effect_range": 0,
                     "affect_self": true,
@@ -4784,49 +4765,7 @@
                     "target_self": false,
                     "phases": [
                       {
-                        "duration": 45,
-                        "effect_type": "positive",
-                        "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null,
-                        "stat_effects": [
-                          {
-                            "value": 6,
-                            "stat": "stat_morale",
-                            "how": "add",
-                            "description": "+6 Leadership",
-                            "sort_order": 1,
-                            "icon": "icon_stat_morale.png"
-                          }
-                        ]
-                      },
-                      {
-                        "duration": 45,
-                        "effect_type": "positive",
-                        "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null,
-                        "stat_effects": [
-                          {
-                            "value": 8,
-                            "stat": "stat_morale",
-                            "how": "add",
-                            "description": "+8 Leadership",
-                            "sort_order": 1,
-                            "icon": "icon_stat_morale.png"
-                          },
-                          {
-                            "value": 10,
-                            "stat": "stat_resistance_physical",
-                            "how": "add",
-                            "description": "+10 Physical Resistance",
-                            "sort_order": 10,
-                            "icon": "resistance_physical.png"
-                          }
-                        ]
-                      },
-                      {
-                        "duration": 45,
+                        "duration": -1,
                         "effect_type": "positive",
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
@@ -4841,18 +4780,18 @@
                             "icon": "icon_stat_attack.png"
                           },
                           {
-                            "value": 10,
+                            "value": 5,
                             "stat": "stat_morale",
                             "how": "add",
-                            "description": "+10 Leadership",
+                            "description": "+5 Leadership",
                             "sort_order": 1,
                             "icon": "icon_stat_morale.png"
                           },
                           {
-                            "value": 12,
+                            "value": 10,
                             "stat": "stat_resistance_physical",
                             "how": "add",
-                            "description": "+12 Physical Resistance",
+                            "description": "+10 Physical Resistance",
                             "sort_order": 10,
                             "icon": "resistance_physical.png"
                           }

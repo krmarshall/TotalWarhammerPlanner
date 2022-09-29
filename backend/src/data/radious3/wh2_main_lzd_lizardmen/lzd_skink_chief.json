@@ -22,7 +22,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \" Rulers of the Skies\", while this Mount is equipped, for Flying units",
+                "description": "Passive Ability: \" Rulers of the Skies\", while this Mount is equipped, for Flying units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_lzd_ancillary_ripperdactyl_terradon",
                 "value": 1
               }
@@ -107,9 +107,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +5%",
+                "description": "Speed: +10%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 5
+                "value": 10
               },
               {
                 "icon": "attribute_guerrilla_deploy.png",
@@ -144,9 +144,9 @@
                 "icon": "battle_movement_character.png",
                 "priority": 120,
                 "is_positive_value_good": true,
-                "description": "Speed: +5%",
+                "description": "Speed: +10%",
                 "key": "wh_main_effect_character_stat_speed",
-                "value": 5
+                "value": 10
               },
               {
                 "icon": "attribute_stalk.png",
@@ -233,7 +233,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -243,7 +242,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -749,7 +749,7 @@
         "image_path": "wh_main_hero_abilities_slippery.png",
         "is_background_skill": false,
         "name": "Slippery",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1734,7 +1734,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: -2%",
+                "description": "Income from all buildings: -2%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
                 "value": -2
               },
@@ -1742,7 +1742,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +2%",
+                "description": "Income from all buildings: +2%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
                 "value": 2
               },
@@ -1763,7 +1763,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: -4%",
+                "description": "Income from all buildings: -4%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
                 "value": -4
               },
@@ -1771,7 +1771,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +4%",
+                "description": "Income from all buildings: +4%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
                 "value": 4
               },
@@ -1792,7 +1792,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: -6%",
+                "description": "Income from all buildings: -6%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
                 "value": -6
               },
@@ -1800,7 +1800,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +6%",
+                "description": "Income from all buildings: +6%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
                 "value": 6
               },
@@ -2065,18 +2065,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_spy_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -2114,6 +2106,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_spy_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_spy_passive_boost_income",
               "value": 1
             },
@@ -2121,7 +2121,7 @@
               "icon": "income.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: -5%",
+              "description": "Income from all buildings: -5%\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
               "value": -5
             },
@@ -2129,7 +2129,7 @@
               "icon": "income.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: +5%",
+              "description": "Income from all buildings: +5%\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
               "value": 5
             }
@@ -2193,7 +2193,7 @@
               "icon": "",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "[HIDDEN]Hero recruit rank: +2",
+              "description": "[HIDDEN]Hero recruit rank: +2\n\t(armies in local province)",
               "key": "wh2_dlc11_agent_recruit_xp_tech_coast",
               "value": 2
             },
@@ -2201,7 +2201,7 @@
               "icon": "agent.png",
               "priority": 56,
               "is_positive_value_good": true,
-              "description": "Hero recruit rank: +2",
+              "description": "Hero recruit rank: +2\n\t(local province)",
               "key": "wh_main_effect_agent_recruitment_xp_all_agents",
               "value": 2
             }
@@ -2229,7 +2229,7 @@
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": false,
-              "description": "Enemy leadership: -4",
+              "description": "Enemy leadership: -4\n\t(local region)",
               "key": "wh_main_effect_force_stat_leadership_enemy_unit",
               "value": -4
             }
@@ -2285,9 +2285,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2321,7 +2321,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -2390,10 +2390,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -2421,7 +2429,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -2429,7 +2437,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -2493,9 +2501,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -2529,17 +2537,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -2565,25 +2573,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -2609,17 +2617,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -2673,17 +2681,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

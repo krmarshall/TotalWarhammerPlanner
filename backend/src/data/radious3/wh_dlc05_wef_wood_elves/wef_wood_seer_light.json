@@ -5,8 +5,8 @@
         "key": "sm_rws_skill_mount_wef_spellweaver_light_01",
         "image_path": "mount_elven_steed.png",
         "is_background_skill": false,
-        "name": "",
-        "description": "",
+        "name": "Elven Steed (Mount)",
+        "description": "The best of all horse breeds found anywhere in the world, Elven steeds are noble, intelligent, graceful, and swift.",
         "levels": [
           {
             "effects": [
@@ -41,8 +41,8 @@
         "key": "sm_rws_skill_mount_wef_spellweaver_light_02",
         "image_path": "mount_unicorn.png",
         "is_background_skill": false,
-        "name": "",
-        "description": "",
+        "name": "Unicorn (Mount)",
+        "description": "Its forehead adorned with a spiral horn, this noble mount carries the Wood Seer where their magical gifts are needed most.",
         "levels": [
           {
             "effects": [
@@ -77,8 +77,8 @@
         "key": "sm_rws_skill_mount_wef_spellweaver_light_03",
         "image_path": "mount_great_eagle.png",
         "is_background_skill": false,
-        "name": "",
-        "description": "",
+        "name": "Great Eagle (Mount)",
+        "description": "Ulthuan's Great Eagles are the firm allies of the Elves, fighting their causes since the coming of Chaos.",
         "levels": [
           {
             "effects": [
@@ -131,7 +131,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Enemy Winds of Magic power reserve change: -5% when increasing",
+                "description": "Enemy Winds of Magic power reserve change: -5% when increasing\n\t(local region)",
                 "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
                 "value": -5
               }
@@ -152,7 +152,7 @@
                 "icon": "magic_campaign.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
+                "description": "Enemy Winds of Magic power reserve change: -10% when increasing\n\t(local region)",
                 "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
                 "value": -10
               }
@@ -161,6 +161,34 @@
         ],
         "character_skill_key": "sm_rws_skill_unique_wef_spellweaver_cluster_of_radiants",
         "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "sm_rws_skill_unique_wef_spellweaver_light_02",
+        "image_path": "character_wound_time.png",
+        "is_background_skill": false,
+        "name": "Immortality",
+        "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "When normally killed in battle, this Lord will be wounded instead",
+                "key": "wh2_main_effect_grant_immortality_lord",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 20
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_immortality_lord",
+        "tier": 4,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -180,9 +208,9 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +6% for Elven units",
+                "description": "Speed: +15% for Elven units\n\t(Lord's army)",
                 "key": "wh_dlc05_effect_force_stat_speed_elven",
-                "value": 6
+                "value": 15
               }
             ]
           }
@@ -208,7 +236,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 560,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +8%",
+                "description": "Reload time reduction: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_reload_time_reduction",
                 "value": 8
               }
@@ -271,10 +299,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 6,
+                              "value": 8,
                               "stat": "stat_melee_attack",
                               "how": "add",
-                              "description": "+6 Melee Attack",
+                              "description": "+8 Melee Attack",
                               "sort_order": 2,
                               "icon": "icon_stat_attack.png"
                             }
@@ -1093,6 +1121,838 @@
           "sm_rws_skill_yellow_wef_spellweaver_light_tier_3_1",
           "sm_rws_skill_yellow_wef_spellweaver_light_tier_3_2"
         ]
+      },
+      {
+        "key": "Rad_Skill_Dump_Attack_000433",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Martial Mastery (Skill Dump)",
+        "description": "When everything else fails, there is always studying the blade. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +1",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +2",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +4",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +6",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +9",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +10",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +11",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +13",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +14",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +15",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +16",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +17",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +18",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +19",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +20",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Attack",
+        "tier": 20,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "Rad_Skill_Dump_Defence_000431",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Defensive Dedication (Skill Dump)",
+        "description": "Wielding the shield is better than returning on it. (This skill can accept up to 20 Skill Points)",
+        "levels": [
+          {
+            "unlocked_at_rank": 25,
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +1%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 1
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +1",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +2%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 2
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +2",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +4%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 4
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +4",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +5%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 5
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +5",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +6%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 6
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +6",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +7%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 7
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +9%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 9
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +9",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +10",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +11%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 11
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +11",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +12%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 12
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +13%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 13
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +13",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 13
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +14%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 14
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +14",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +15",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +16%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 16
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +16",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +17%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 17
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +17",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +18%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 18
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +18",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 18
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +19%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 19
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +19",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +20",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "Rad_Skill_Dump_Defence",
+        "tier": 21,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
       }
     ],
     [
@@ -1101,7 +1961,7 @@
         "image_path": "wh_main_spell_light_shems_burning_gaze.png",
         "is_background_skill": false,
         "name": "Shem's Burning Gaze",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1418,102 +2278,10 @@
       },
       {
         "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_1_1",
-        "image_path": "wh_main_lore_passive_exorcism.png",
-        "is_background_skill": false,
-        "name": "Exorcism",
-        "description": " ",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 310,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Exorcism\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_exorcism",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_lore_passive_exorcism",
-                      "icon_name": "wh_main_lore_passive_exorcism",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_area_of_augments",
-                        "icon_path": "icon_spell_area_of_augments.png",
-                        "description": "Augment (Area)"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Exorcism",
-                      "ui_effects": [
-                        {
-                          "key": "wh_dlc05_spell_trigger_when_casting",
-                          "sort_order": 1,
-                          "effect_state": "positive",
-                          "description": "Triggers when casting spell"
-                        }
-                      ],
-                      "active_time": 11,
-                      "passive": true,
-                      "effect_range": -1,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 25,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "attributes": [
-                            {
-                              "key": "immune_to_psychology",
-                              "description": " Immune to Psychology",
-                              "attribute_type": "positive"
-                            }
-                          ],
-                          "stat_effects": [
-                            {
-                              "value": 4,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+4 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_exorcism",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_all_magic_light_03_exorcism",
-        "tier": 1,
-        "indent": 3,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "sm_rws_skill_magic_wef_spellweaver_light_tier_0"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_1_2",
         "image_path": "wh_main_spell_light_phas_protection.png",
         "is_background_skill": false,
         "name": "Pha's Protection",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1581,11 +2349,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_phas_protection",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -1873,7 +2637,99 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_light_02_phas_protection",
+        "character_skill_key": "wh2_main_skill_all_magic_light_02_phas_protection_lord",
+        "tier": 1,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "sm_rws_skill_magic_wef_spellweaver_light_tier_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_1_2",
+        "image_path": "wh_main_lore_passive_exorcism.png",
+        "is_background_skill": false,
+        "name": "Exorcism",
+        "description": "",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Exorcism\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_exorcism",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_lore_passive_exorcism",
+                      "icon_name": "wh_main_lore_passive_exorcism",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Exorcism",
+                      "ui_effects": [
+                        {
+                          "key": "wh_dlc05_spell_trigger_when_casting",
+                          "sort_order": 1,
+                          "effect_state": "positive",
+                          "description": "Triggers when casting spell"
+                        }
+                      ],
+                      "active_time": 11,
+                      "passive": true,
+                      "effect_range": -1,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "positive"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": 4,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+4 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_exorcism",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_light_03_exorcism",
         "tier": 2,
         "indent": 3,
         "points_on_creation": 0,
@@ -1889,7 +2745,7 @@
         "image_path": "wh_main_spell_light_light_of_battle.png",
         "is_background_skill": false,
         "name": "Light of Battle",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1946,11 +2802,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_light_of_battle",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -2194,7 +3046,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_light_04_light_of_battle",
+        "character_skill_key": "wh_main_skill_all_magic_light_04_light_of_battle_lord",
         "tier": 3,
         "indent": 3,
         "points_on_creation": 0,
@@ -2210,7 +3062,7 @@
         "image_path": "wh_main_spell_light_net_of_amyntok.png",
         "is_background_skill": false,
         "name": "Net of Amyntok",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2261,11 +3113,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_net_of_amyntok",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -2485,7 +3333,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_light_05_net_of_amyntok",
+        "character_skill_key": "wh2_main_skill_all_magic_light_05_net_of_amyntok_lord",
         "tier": 4,
         "indent": 3,
         "points_on_creation": 0,
@@ -2499,78 +3347,33 @@
       },
       {
         "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_2",
-        "image_path": "wh_main_character_passive_evasion.png",
+        "image_path": "character_magic.png",
         "is_background_skill": false,
-        "name": "Evasion",
-        "description": " ",
+        "name": "Potential Energy",
+        "description": "The Archmage crackles and flows with energies that would unmake any mortal practitioner.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "general_ability.png",
-                "priority": 310,
+                "icon": "magic_campaign.png",
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Evasion\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_evasion",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_character_passive_evasion",
-                      "icon_name": "wh_main_character_passive_evasion",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Evasion",
-                      "passive": true,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": false,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 0,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": -1,
-                          "effect_type": "positive",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 1.1,
-                              "stat": "scalar_speed",
-                              "how": "mult",
-                              "description": "x1.1 Speed",
-                              "sort_order": 10,
-                              "icon": "icon_stat_speed.png"
-                            },
-                            {
-                              "value": 5,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+5 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_evasion",
-                "value": 1
+                "description": "Winds of Magic power reserve capacity: +10\n\t(Lord's army)",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 10
+              },
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +10%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 10
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_all_06_evasion",
+        "character_skill_key": "wh2_dlc15_skill_hef_archmage_potential_energy",
         "tier": 5,
         "indent": 3,
         "points_on_creation": 0,
@@ -2586,10 +3389,72 @@
       },
       {
         "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_1",
+        "image_path": "character_magic.png",
+        "is_background_skill": false,
+        "name": "Earthing",
+        "description": "By stabbing a staff or some arcane conduit into the ground, an accomplished magic-user can earth or tether the Winds and hopefully reduce a chance of miscasting.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic_character.png",
+                "priority": 298,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15%",
+                "key": "wh_main_effect_character_stat_miscast",
+                "value": -15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_all_07_earthing",
+        "tier": 6,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "sm_rws_skill_magic_wef_spellweaver_light_tier_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_2",
+        "image_path": "character_magic.png",
+        "is_background_skill": false,
+        "name": "Magical Reserves",
+        "description": "A few magic-users have the ability to store the Winds of Magic for later use, increasing their spellcasting power when it really counts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "magic_campaign.png",
+                "priority": 3,
+                "is_positive_value_good": true,
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_magic_all_08_power_drain",
+        "tier": 7,
+        "indent": 3,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "sm_rws_skill_magic_wef_spellweaver_light_tier_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_3",
         "image_path": "wh_main_spell_light_banishment.png",
         "is_background_skill": false,
         "name": "Banishment",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2650,11 +3515,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_banishment",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -2914,8 +3775,8 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_light_09_banishment",
-        "tier": 6,
+        "character_skill_key": "wh2_dlc10_skill_hef_magic_alarielle_banishment",
+        "tier": 8,
         "indent": 3,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -2926,11 +3787,11 @@
         "boxed": true
       },
       {
-        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_2",
+        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_4",
         "image_path": "wh_main_spell_light_bironas_timewarp.png",
         "is_background_skill": false,
         "name": "Birona's Timewarp",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2998,11 +3859,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_bironas_timewarp",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -3290,69 +4147,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_light_10_bironas_timewarp",
-        "tier": 7,
-        "indent": 3,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "sm_rws_skill_magic_wef_spellweaver_light_tier_2"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_3",
-        "image_path": "character_magic.png",
-        "is_background_skill": false,
-        "name": "Earthing",
-        "description": "By stabbing a staff or some arcane conduit into the ground, an accomplished magic-user can earth or tether the Winds and hopefully reduce a chance of miscasting.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 298,
-                "is_positive_value_good": false,
-                "description": "Miscast base chance: -15%",
-                "key": "wh_main_effect_character_stat_miscast",
-                "value": -15
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_all_magic_all_07_earthing",
-        "tier": 8,
-        "indent": 3,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true,
-        "parent_required": [
-          "sm_rws_skill_magic_wef_spellweaver_light_tier_2"
-        ],
-        "boxed": true
-      },
-      {
-        "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_3_4",
-        "image_path": "character_magic.png",
-        "is_background_skill": false,
-        "name": "Magical Reserves",
-        "description": "A few magic-users have the ability to store the Winds of Magic for later use, increasing their spellcasting power when it really counts.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_campaign.png",
-                "priority": 100,
-                "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_main_skill_all_magic_all_08_power_drain",
+        "character_skill_key": "wh2_main_skill_all_magic_light_10_bironas_timewarp_lord",
         "tier": 9,
         "indent": 3,
         "points_on_creation": 0,
@@ -3368,22 +4163,22 @@
         "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_4",
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
-        "name": "Arcane Conduit",
-        "description": " ",
+        "name": "Greater Arcane Conduit",
+        "description": "",
         "levels": [
           {
             "effects": [
               {
                 "icon": "general_ability.png",
-                "priority": 300,
+                "priority": 310,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Arcane Conduit\"",
+                "description": "Passive ability: \"Greater Arcane Conduit\"",
                 "related_abilities": [
                   {
-                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                    "effect": "wh_dlc08_effect_ability_enable_greater_arcane_conduit",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_character_abilities_arcane_conduit",
+                      "key": "wh2_main_character_passive_grand_arcane_conduit",
                       "icon_name": "wh_main_character_abilities_arcane_conduit",
                       "overpower_option": "",
                       "type": {
@@ -3392,7 +4187,7 @@
                         "description": "Augment of the Winds"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Arcane Conduit",
+                      "description": "Greater Arcane Conduit",
                       "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
@@ -3405,22 +4200,32 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.6,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_spell_mastery",
+                              "how": "mult",
+                              "description": "x1.1 Spell Mastery",
+                              "sort_order": 0,
+                              "icon": "spell_mastery.png"
+                            }
+                          ]
                         }
                       ]
                     }
                   }
                 ],
-                "key": "wh_main_effect_ability_enable_arcane_conduit",
+                "key": "wh_dlc08_effect_ability_enable_greater_arcane_conduit",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_all_11_arcane_conduit",
+        "character_skill_key": "wh2_dlc14_skilll_all_magic_all_greater_arcane_conduit",
         "tier": 10,
         "indent": 3,
         "points_on_creation": 0,
@@ -3448,7 +4253,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +75",
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 75
               },
@@ -3485,7 +4290,7 @@
                 "icon": "melee.png",
                 "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +3 for Eternal Guard units",
+                "description": "Melee Attack +3 for Eternal Guard units\n\t(Lord's army)",
                 "key": "sm_rws_effect_attack_the_hidden_blade",
                 "value": 3
               },
@@ -3493,7 +4298,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +3 for Eternal Guard units",
+                "description": "Melee Defence +3 for Eternal Guard units\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_the_hidden_blade",
                 "value": 3
               }
@@ -3506,7 +4311,7 @@
                 "icon": "melee.png",
                 "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +6 for Eternal Guard units",
+                "description": "Melee Attack +6 for Eternal Guard units\n\t(Lord's army)",
                 "key": "sm_rws_effect_attack_the_hidden_blade",
                 "value": 6
               },
@@ -3514,7 +4319,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +6 for Eternal Guard units",
+                "description": "Melee Defence +6 for Eternal Guard units\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_the_hidden_blade",
                 "value": 6
               }
@@ -3527,7 +4332,7 @@
                 "icon": "melee.png",
                 "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +8 for Eternal Guard units",
+                "description": "Melee Attack +8 for Eternal Guard units\n\t(Lord's army)",
                 "key": "sm_rws_effect_attack_the_hidden_blade",
                 "value": 8
               },
@@ -3535,7 +4340,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +8 for Eternal Guard units",
+                "description": "Melee Defence +8 for Eternal Guard units\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_the_hidden_blade",
                 "value": 8
               }
@@ -3567,7 +4372,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "\"Ranged Weapom Strength +4% for Glade Guard, Deepwood Scout and Waywatcher units\"",
+                "description": "Ranged Weapon Strength +4% for Glade Guard, Deepwood Scout and Waywatcher units\n\t(Lord's army)",
                 "key": "sm_rws_effect_ranged_damage_eyes_everywhere",
                 "value": 4
               },
@@ -3575,7 +4380,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "\"Range Bonus +5 for Glade Guard, Deepwood Scout and Waywatcher units\"",
+                "description": "Range Bonus +5 for Glade Guard, Deepwood Scout and Waywatcher units\n\t(Lord's army)",
                 "key": "sm_rws_effect_range_eyes_everywhere",
                 "value": 5
               },
@@ -3583,7 +4388,7 @@
                 "icon": "ammo_character.png",
                 "priority": 210,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +3%",
+                "description": "Ammunition: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_ammunition",
                 "value": 3
               }
@@ -3596,7 +4401,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "\"Ranged Weapom Strength +7% for Glade Guard, Deepwood Scout and Waywatcher units\"",
+                "description": "Ranged Weapon Strength +7% for Glade Guard, Deepwood Scout and Waywatcher units\n\t(Lord's army)",
                 "key": "sm_rws_effect_ranged_damage_eyes_everywhere",
                 "value": 7
               },
@@ -3604,7 +4409,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "\"Range Bonus +10 for Glade Guard, Deepwood Scout and Waywatcher units\"",
+                "description": "Range Bonus +10 for Glade Guard, Deepwood Scout and Waywatcher units\n\t(Lord's army)",
                 "key": "sm_rws_effect_range_eyes_everywhere",
                 "value": 10
               },
@@ -3612,7 +4417,7 @@
                 "icon": "ammo_character.png",
                 "priority": 210,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +6%",
+                "description": "Ammunition: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_ammunition",
                 "value": 6
               }
@@ -3625,7 +4430,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "\"Ranged Weapom Strength +10% for Glade Guard, Deepwood Scout and Waywatcher units\"",
+                "description": "Ranged Weapon Strength +10% for Glade Guard, Deepwood Scout and Waywatcher units\n\t(Lord's army)",
                 "key": "sm_rws_effect_ranged_damage_eyes_everywhere",
                 "value": 10
               },
@@ -3633,7 +4438,7 @@
                 "icon": "accuracy.png",
                 "priority": 203,
                 "is_positive_value_good": true,
-                "description": "\"Range Bonus +10 for Glade Guard, Deepwood Scout and Waywatcher units\"",
+                "description": "Range Bonus +10 for Glade Guard, Deepwood Scout and Waywatcher units\n\t(Lord's army)",
                 "key": "sm_rws_effect_range_eyes_everywhere",
                 "value": 10
               },
@@ -3641,7 +4446,7 @@
                 "icon": "ammo_character.png",
                 "priority": 210,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10%",
+                "description": "Ammunition: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_ammunition",
                 "value": 10
               }
@@ -3673,7 +4478,7 @@
                 "icon": "charge.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus +4 for Dryad and all Cavalry units",
+                "description": "Charge Bonus +4 for Dryad and all Cavalry units\n\t(Lord's army)",
                 "key": "sm_rws_effect_charge_swift_strike",
                 "value": 4
               },
@@ -3681,7 +4486,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +4% for Dryad and all Cavalry units",
+                "description": "Weapon Strength: +4% for Dryad and all Cavalry units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_swift_strike",
                 "value": 4
               }
@@ -3694,7 +4499,7 @@
                 "icon": "charge.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus +8 for Dryad and all Cavalry units",
+                "description": "Charge Bonus +8 for Dryad and all Cavalry units\n\t(Lord's army)",
                 "key": "sm_rws_effect_charge_swift_strike",
                 "value": 8
               },
@@ -3702,7 +4507,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +7% for Dryad and all Cavalry units",
+                "description": "Weapon Strength: +7% for Dryad and all Cavalry units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_swift_strike",
                 "value": 7
               }
@@ -3715,7 +4520,7 @@
                 "icon": "charge.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus +12 for Dryad and all Cavalry units",
+                "description": "Charge Bonus +12 for Dryad and all Cavalry units\n\t(Lord's army)",
                 "key": "sm_rws_effect_charge_swift_strike",
                 "value": 12
               },
@@ -3723,7 +4528,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for Dryad and all Cavalry units",
+                "description": "Weapon Strength: +10% for Dryad and all Cavalry units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_swift_strike",
                 "value": 10
               }
@@ -3755,7 +4560,7 @@
                 "icon": "melee.png",
                 "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +4 for Hawk Rider and Great Eagle units",
+                "description": "Melee Attack +4 for Hawk Rider and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_attack_friends_in_high_places",
                 "value": 4
               },
@@ -3763,7 +4568,7 @@
                 "icon": "battle_movement.png",
                 "priority": 115,
                 "is_positive_value_good": true,
-                "description": "Speed: +4% for Hawk Riders and Great Eagle units",
+                "description": "Speed: +4% for Hawk Riders and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_speed_friends_in_high_places",
                 "value": 4
               },
@@ -3771,7 +4576,7 @@
                 "icon": "ammo.png",
                 "priority": 201,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +4% for Hawk Riders and Great Eagle units",
+                "description": "Reload Time Reduction: +4% for Hawk Riders and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_reload_friends_in_high_places",
                 "value": 4
               }
@@ -3784,7 +4589,7 @@
                 "icon": "melee.png",
                 "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +8 for Hawk Rider and Great Eagle units",
+                "description": "Melee Attack +8 for Hawk Rider and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_attack_friends_in_high_places",
                 "value": 8
               },
@@ -3792,7 +4597,7 @@
                 "icon": "battle_movement.png",
                 "priority": 115,
                 "is_positive_value_good": true,
-                "description": "Speed: +8% for Hawk Riders and Great Eagle units",
+                "description": "Speed: +8% for Hawk Riders and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_speed_friends_in_high_places",
                 "value": 8
               },
@@ -3800,7 +4605,7 @@
                 "icon": "ammo.png",
                 "priority": 201,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +8% for Hawk Riders and Great Eagle units",
+                "description": "Reload Time Reduction: +8% for Hawk Riders and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_reload_friends_in_high_places",
                 "value": 8
               }
@@ -3813,7 +4618,7 @@
                 "icon": "melee.png",
                 "priority": 109,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +12 for Hawk Rider and Great Eagle units",
+                "description": "Melee Attack +12 for Hawk Rider and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_attack_friends_in_high_places",
                 "value": 12
               },
@@ -3821,7 +4626,7 @@
                 "icon": "battle_movement.png",
                 "priority": 115,
                 "is_positive_value_good": true,
-                "description": "Speed: +12% for Hawk Riders and Great Eagle units",
+                "description": "Speed: +12% for Hawk Riders and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_speed_friends_in_high_places",
                 "value": 12
               },
@@ -3829,7 +4634,7 @@
                 "icon": "ammo.png",
                 "priority": 201,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +12% for Hawk Riders and Great Eagle units",
+                "description": "Reload Time Reduction: +12% for Hawk Riders and Great Eagle units\n\t(Lord's army)",
                 "key": "sm_rws_effect_reload_friends_in_high_places",
                 "value": 12
               }
@@ -3861,7 +4666,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +4% for Wardancers and Wildwood Rangers units",
+                "description": "Weapon Strength: +4% for Wardancers and Wildwood Rangers units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_the_last_strike",
                 "value": 4
               },
@@ -3869,7 +4674,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +4 for Wardancer and Wildwood Ranger units",
+                "description": "Melee Defence +4 for Wardancer and Wildwood Ranger units\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_the_last_strike",
                 "value": 4
               }
@@ -3882,7 +4687,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +7% for Wardancers and Wildwood Rangers units",
+                "description": "Weapon Strength: +7% for Wardancers and Wildwood Rangers units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_the_last_strike",
                 "value": 7
               },
@@ -3890,7 +4695,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +8 for Wardancer and Wildwood Ranger units",
+                "description": "Melee Defence +8 for Wardancer and Wildwood Ranger units\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_the_last_strike",
                 "value": 8
               }
@@ -3903,7 +4708,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for Wardancers and Wildwood Rangers units",
+                "description": "Weapon Strength: +10% for Wardancers and Wildwood Rangers units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_the_last_strike",
                 "value": 10
               },
@@ -3911,7 +4716,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +12 for Wardancer and Wildwood Ranger units",
+                "description": "Melee Defence +12 for Wardancer and Wildwood Ranger units\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_the_last_strike",
                 "value": 12
               }
@@ -3943,7 +4748,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +4% for Treekin, Treemen and Forest Dragon units",
+                "description": "Weapon Strength: +4% for Treekin, Treemen and Forest Dragon units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_keepers_of_the_grove",
                 "value": 4
               },
@@ -3951,7 +4756,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "\"Melee Defence +4 for Treekin, Treemen and Forest Dragon units\"",
+                "description": "\"Melee Defence +4 for Treekin, Treemen and Forest Dragon units\"\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_keepers_of_the_grove",
                 "value": 4
               }
@@ -3964,7 +4769,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +7% for Treekin, Treemen and Forest Dragon units",
+                "description": "Weapon Strength: +7% for Treekin, Treemen and Forest Dragon units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_keepers_of_the_grove",
                 "value": 7
               },
@@ -3972,7 +4777,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "\"Melee Defence +8 for Treekin, Treemen and Forest Dragon units\"",
+                "description": "\"Melee Defence +8 for Treekin, Treemen and Forest Dragon units\"\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_keepers_of_the_grove",
                 "value": 8
               }
@@ -3985,7 +4790,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +10% for Treekin, Treemen and Forest Dragon units",
+                "description": "Weapon Strength: +10% for Treekin, Treemen and Forest Dragon units\n\t(Lord's army)",
                 "key": "sm_rws_effect_damage_keepers_of_the_grove",
                 "value": 10
               },
@@ -3993,7 +4798,7 @@
                 "icon": "defence.png",
                 "priority": 111,
                 "is_positive_value_good": true,
-                "description": "\"Melee Defence +12 for Treekin, Treemen and Forest Dragon units\"",
+                "description": "\"Melee Defence +12 for Treekin, Treemen and Forest Dragon units\"\n\t(Lord's army)",
                 "key": "sm_rws_effect_defence_keepers_of_the_grove",
                 "value": 12
               }
@@ -4017,7 +4822,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4108,7 +4913,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units (Rank 7 and above)",
+                "description": "Armour: +12 for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Rangers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_eternal_guard_dryads_wardancers_wildwood_rangers_rank7",
                 "value": 12
               },
@@ -4116,7 +4921,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Rangers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_wef_eternal_guard_dryads_wardancers_wildwood_rangers_rank7",
                 "value": 5
               },
@@ -4124,7 +4929,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Rangers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_wef_eternal_guard_dryads_wardancers_wildwood_rangers_rank7",
                 "value": 10
               }
@@ -4155,7 +4960,7 @@
                 "icon": "ammo.png",
                 "priority": 512,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)",
+                "description": "Ammunition: +20% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_wef_glade_guard_deepwod_scouts_waywatcher_rank7",
                 "value": 20
               },
@@ -4163,7 +4968,7 @@
                 "icon": "accuracy.png",
                 "priority": 532,
                 "is_positive_value_good": true,
-                "description": "Range: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)",
+                "description": "Range: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_range_wef_glade_guard_deepwod_scouts_waywatcher_rank7",
                 "value": 10
               },
@@ -4171,7 +4976,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Glade Guard, Deepwood Scouts, and Waywatchers units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_wef_glade_guard_deepwod_scouts_waywatcher_rank7",
                 "value": 15
               }
@@ -4202,7 +5007,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units (Rank 7 and above)",
+                "description": "Melee defence: +5 Glade Riders, Wild Riders, Great Stag Knights, Zoats, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_wef_wild_riders_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
                 "value": 5
               },
@@ -4210,7 +5015,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units (Rank 7 and above)",
+                "description": "Weapon strength: +10% Glade Riders, Wild Riders, Great Stag Knights, Zoats, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_wef_wild_riders_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
                 "value": 10
               },
@@ -4218,7 +5023,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Glade Riders, Wild Riders, Great Stag Knights, Zoats, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_wef_wild_riders_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
                 "value": 12
               },
@@ -4226,7 +5031,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Glade Riders, Sisters of the Thorn, and Hawk Riders units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Glade Riders, Sisters of the Thorn and Hawk Riders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_wef_glade_riders_sisters_of_the_thorn_hawk_riders_rank7",
                 "value": 10
               }
@@ -4257,7 +5062,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_tree_kin_treeman_forest_dragon_great_eagle_rank7",
                 "value": 5
               },
@@ -4265,7 +5070,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_wef_tree_kin_treeman_forest_dragon_great_eagle_rank7",
                 "value": 5
               },
@@ -4273,7 +5078,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Tree Kin, Treeman, Great Eagle, and Forest Dragon units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_wef_tree_kin_treeman_forest_dragon_great_eagle_rank7",
                 "value": 15
               }
@@ -4297,7 +5102,7 @@
         "image_path": "wh_main_character_abilities_stand_your_ground.png",
         "is_background_skill": false,
         "name": "Stand Your Ground!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4439,7 +5244,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +5%",
+                "description": "Income from raiding: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 5
               },
@@ -4467,7 +5272,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +12%",
+                "description": "Income from raiding: +12%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 12
               },
@@ -4495,7 +5300,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               },
@@ -4534,7 +5339,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               },
@@ -4542,7 +5347,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -1
               }
@@ -4554,7 +5359,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               },
@@ -4562,7 +5367,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               }
@@ -4574,7 +5379,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               },
@@ -4582,7 +5387,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -3
               }
@@ -4613,7 +5418,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +5%",
+                "description": "Ambush success chance: +5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 5
               }
@@ -4625,7 +5430,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 62,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +5% during ambushes",
+                "description": "Missile Strength: +5% during ambushes\n\t(Lord's army)",
                 "key": "wh2_dlc16_effect_force_army_battle_unit_missile_strength_during_ambushes",
                 "value": 5
               },
@@ -4633,7 +5438,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +10%",
+                "description": "Ambush success chance: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 10
               }
@@ -4645,7 +5450,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 62,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +10% during ambushes",
+                "description": "Missile Strength: +10% during ambushes\n\t(Lord's army)",
                 "key": "wh2_dlc16_effect_force_army_battle_unit_missile_strength_during_ambushes",
                 "value": 10
               },
@@ -4653,7 +5458,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +20%",
+                "description": "Ambush success chance: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 20
               }
@@ -4684,7 +5489,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               },
@@ -4692,7 +5497,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +5",
+                "description": "Growth: +5\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 5
               }
@@ -4704,7 +5509,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               },
@@ -4712,7 +5517,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +12",
+                "description": "Growth: +12\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 12
               }
@@ -4724,7 +5529,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               },
@@ -4732,7 +5537,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
+                "description": "Growth: +20\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 20
               }
@@ -4764,7 +5569,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
+                "description": "Growth: +10\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 10
               },
@@ -4893,9 +5698,9 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +4%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
-                "value": 9
+                "value": 4
               }
             ]
           },
@@ -4905,7 +5710,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               }
@@ -4917,7 +5722,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +15%",
+                "description": "Casualty replenishment rate: +15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 15
               }
@@ -4948,7 +5753,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -8%",
+                "description": "Upkeep: -8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -8
               },
@@ -4980,7 +5785,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
@@ -5095,11 +5900,76 @@
       "key": "sm_rws_skill_magic_wef_spellweaver_light_tier_5",
       "image_path": "battle_attack.png",
       "is_background_skill": false,
-      "name": "Shem's Burning Gaze [HIDDEN]",
-      "description": " ",
+      "name": "shem's burning gaze and pha's protection [HIDDEN]",
+      "description": "",
       "levels": [
         {
           "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Pha's Protection\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_phas_protection",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_light_phas_protection",
+                    "icon_name": "wh_main_spell_light_phas_protection",
+                    "overpower_option": "wh_main_spell_light_phas_protection_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Pha's Protection",
+                    "active_time": 20,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 5,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "stat_effects": [
+                          {
+                            "value": 10,
+                            "stat": "stat_armour",
+                            "how": "add",
+                            "description": "+10 Armour",
+                            "sort_order": 6,
+                            "icon": "icon_stat_armour.png"
+                          },
+                          {
+                            "value": 25,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "+25 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_phas_protection",
+              "value": 1
+            },
             {
               "icon": "magic_character.png",
               "priority": 290,
@@ -5173,7 +6043,7 @@
         }
       ],
       "character_skill_node_set_key": "op3_skill_node_wef_wood_seer_light",
-      "character_skill_key": "wh_main_skill_all_magic_light_dummy_shems_burning_gaze",
+      "character_skill_key": "wh_main_skill_all_magic_light_dummy_shems_burning_gaze_phas_protection",
       "tier": 11,
       "indent": 3,
       "points_on_creation": 1,
@@ -5185,7 +6055,7 @@
       "image_path": "character_armour.png",
       "is_background_skill": true,
       "name": "Glamourweaver",
-      "description": "The Spellweaver belongs ot the Kindred of Yenayla. Sometimes known as Tree-singers or Grove-kin, they are very close to the forest, often acting as emissaries and ambassadors between the Wood Elves and the older spirits of the Athel Loren itself",
+      "description": "The Wood Seer belongs ot the Kindred of Yenayla. Sometimes known as Tree-singers or Grove-kin, they are very close to the forest, often acting as emissaries and ambassadors between the Wood Elves and the older spirits of the Athel Loren itself",
       "levels": [
         {
           "effects": [
@@ -5200,8 +6070,8 @@
             {
               "icon": "treasury.png",
               "priority": 106,
-              "is_positive_value_good": true,
-              "description": "Recruitment Cost -5 for Treekin and Treemen units",
+              "is_positive_value_good": false,
+              "description": "Recruitment Cost -5% for Treekin and Treemen units\n\t(local province)",
               "key": "sm_rws_effect_recruitment_cost_glamourweaver",
               "value": -5
             },
@@ -5228,8 +6098,8 @@
             {
               "icon": "treasury.png",
               "priority": 106,
-              "is_positive_value_good": true,
-              "description": "Recruitment Cost -10 for Treekin and Treemen units",
+              "is_positive_value_good": false,
+              "description": "Recruitment Cost -10% for Treekin and Treemen units\n\t(local province)",
               "key": "sm_rws_effect_recruitment_cost_glamourweaver",
               "value": -10
             },

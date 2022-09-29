@@ -22,7 +22,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \" Let's Capture Some Slaves\", while this Mount is equipped, for Dark Elf units on horses",
+                "description": "Passive Ability: \" Let's Capture Some Slaves\", while this Mount is equipped, for Dark Elf units on horses\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_def_ancillary_dark_steed",
                 "value": 1
               }
@@ -58,7 +58,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \" Now, now! Slaughter Them All\", while this Mount is equipped, for Cold One units",
+                "description": "Passive Ability: \" Now, now! Slaughter Them All\", while this Mount is equipped, for Cold One units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_def_ancillary_cold_one",
                 "value": 1
               }
@@ -94,7 +94,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"Trample Them Under Our Wheels\", while this Mount is equipped, for Chariot units",
+                "description": "Passive Ability: \"Trample Them Under Our Wheels\", while this Mount is equipped, for Chariot units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_def_ancillary_chariot",
                 "value": 1
               }
@@ -130,7 +130,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \" Hunt Them Down\", while this Mount is equipped, for Flying units except Dragons",
+                "description": "Passive Ability: \" Hunt Them Down\", while this Mount is equipped, for Flying units except Dragons\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_def_ancillary_pegasus_manticore",
                 "value": 1
               }
@@ -181,7 +181,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -191,7 +190,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -253,25 +253,17 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               },
               {
-                "icon": "slaves.png",
-                "priority": 188,
-                "is_positive_value_good": false,
-                "description": "Slave decline rate: -10%",
-                "key": "wh2_main_effect_slave_decline_modifier",
-                "value": -10
-              },
-              {
-                "icon": "public_order.png",
-                "priority": 189,
-                "is_positive_value_good": false,
-                "description": "Slave control penalty: -20%",
-                "key": "wh2_main_effect_slave_public_order_modifier",
-                "value": -20
+                "icon": "income.png",
+                "priority": 170,
+                "is_positive_value_good": true,
+                "description": "Income from slaves: +10%\n\t(local province)",
+                "key": "wh3_main_effect_economy_gdp_mod_slaves",
+                "value": 10
               }
             ]
           }
@@ -1872,9 +1864,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
+                "description": "Training action: Experience per turn is increased by an additional 20",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "value": 20
               }
             ]
           },
@@ -1885,9 +1877,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
+                "description": "Training action: Experience per turn is increased by an additional 35",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "value": 35
               }
             ]
           },
@@ -1898,9 +1890,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
+                "description": "Training action: Experience per turn is increased by an additional 50",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "value": 50
               }
             ]
           }
@@ -1925,7 +1917,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -10",
+                "description": "Growth: -10\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -10
               },
@@ -1933,7 +1925,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
+                "description": "Growth: +10\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 10
               },
@@ -1954,7 +1946,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -20",
+                "description": "Growth: -20\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -20
               },
@@ -1962,7 +1954,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
+                "description": "Growth: +20\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 20
               },
@@ -1983,7 +1975,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -30",
+                "description": "Growth: -30\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -30
               },
@@ -1991,7 +1983,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +30",
+                "description": "Growth: +30\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 30
               },
@@ -2256,18 +2248,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -2305,6 +2289,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_champion_passive_stimulate_growth",
               "value": 1
             },
@@ -2312,7 +2304,7 @@
               "icon": "growth.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Growth: -10",
+              "description": "Growth: -10\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
               "value": -10
             },
@@ -2320,7 +2312,7 @@
               "icon": "growth.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Growth: +10",
+              "description": "Growth: +10\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
               "value": 10
             }
@@ -2348,7 +2340,7 @@
               "icon": "income.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Income from raiding: +10%",
+              "description": "Income from raiding: +10%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_raid_income",
               "value": 10
             },
@@ -2356,7 +2348,7 @@
               "icon": "income.png",
               "priority": 108,
               "is_positive_value_good": true,
-              "description": "Income from sacking settlements: +5%",
+              "description": "Income from sacking settlements: +5%\n\t(Lord's army)",
               "key": "wh_main_effect_force_all_campaign_sacking_income",
               "value": 5
             }
@@ -2412,7 +2404,7 @@
               "icon": "treasury.png",
               "priority": 102,
               "is_positive_value_good": false,
-              "description": "Construction cost: -40% for Cult of Khaine or Cult of Pleasure buildings",
+              "description": "Construction cost: -40% for Cult of Khaine or Cult of Pleasure buildings\n\t(local region)",
               "key": "wh_main_effect_building_construction_cost_mod_worship_def",
               "value": -40
             },
@@ -2420,7 +2412,7 @@
               "icon": "death_hag.png",
               "priority": 104,
               "is_positive_value_good": true,
-              "description": "Hero recruit rank: +2 for Death Hags",
+              "description": "Hero recruit rank: +2 for Death Hags\n\t(local province)",
               "key": "wh2_main_effect_agent_recruitment_xp_def_death_hag",
               "value": 2
             }
@@ -2448,7 +2440,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +3\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 3
             },
@@ -2456,7 +2448,7 @@
               "icon": "weapon_damage.png",
               "priority": 461,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +4%",
+              "description": "Weapon strength: +4%\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_weapon_strength",
               "value": 4
             }
@@ -2520,9 +2512,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2556,7 +2548,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -2625,10 +2617,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -2656,7 +2656,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -2664,7 +2664,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -2728,9 +2728,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -2764,17 +2764,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -2800,25 +2800,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -2844,17 +2844,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -2908,17 +2908,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

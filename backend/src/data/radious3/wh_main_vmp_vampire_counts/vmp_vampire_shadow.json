@@ -22,7 +22,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \" No Escape From Death\", while this Mount is equipped, for Cavalry units",
+                "description": "Passive Ability: \" No Escape From Death\", while this Mount is equipped, for Cavalry units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_vmp_ancillary_steed_nightmare",
                 "value": 1
               }
@@ -58,7 +58,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"Feel the Hunger\", while this Mount is equipped, for Bat and Vargheist units",
+                "description": "Passive Ability: \"Feel the Hunger\", while this Mount is equipped, for Bat and Vargheist units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_vmp_ancillary_hellsteed",
                 "value": 1
               }
@@ -78,7 +78,7 @@
         "image_path": "wh_main_lord_passive_the_hunger.png",
         "is_background_skill": false,
         "name": "The Hunger",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "unlocked_at_rank": 8,
@@ -180,7 +180,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -190,7 +189,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -456,7 +456,7 @@
         "image_path": "wh_main_hero_abilities_immortal_will.png",
         "is_background_skill": false,
         "name": "Immortal Will",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -756,7 +756,7 @@
         "image_path": "wh_main_character_passive_dark_benediction.png",
         "is_background_skill": false,
         "name": "Dark Benediction",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2391,7 +2391,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2524,7 +2524,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2586,7 +2586,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2634,7 +2634,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2704,7 +2704,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -2752,7 +2752,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 90,
-                      "wind_up_time": 5,
+                      "wind_up_time": 6,
                       "passive": false,
                       "effect_range": 0,
                       "affect_self": false,
@@ -3237,11 +3237,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3263,7 +3263,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3299,7 +3299,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -4229,7 +4229,7 @@
                 "icon": "corruption_vampiric.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Vampiric corruption: +1",
+                "description": "Vampiric corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_vampiric_effect",
                 "value": 1
               },
@@ -4250,7 +4250,7 @@
                 "icon": "corruption_vampiric.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Vampiric corruption: +2",
+                "description": "Vampiric corruption: +2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_vampiric_effect",
                 "value": 2
               },
@@ -4271,7 +4271,7 @@
                 "icon": "corruption_vampiric.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Vampiric corruption: +3",
+                "description": "Vampiric corruption: +3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_vampiric_effect",
                 "value": 3
               },
@@ -4639,18 +4639,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_dignitary_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -4688,6 +4680,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_dignitary_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_dignitary_passive_spread_corruption_vmp",
               "value": 1
             },
@@ -4695,7 +4695,7 @@
               "icon": "corruption_vampiric.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Vampiric corruption: +2",
+              "description": "Vampiric corruption: +2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_vampiric_effect",
               "value": 2
             }
@@ -4759,7 +4759,7 @@
               "icon": "treasury.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Hero action cost: -10%",
+              "description": "Hero action cost: -10%\n\t(Heroes in local province)",
               "key": "wh_main_effect_agent_action_cost_mod",
               "value": -10
             },
@@ -4767,7 +4767,7 @@
               "icon": "agent.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Hero action success chance: +5%",
+              "description": "Hero action success chance: +5%\n\t(Heroes in local province)",
               "key": "wh_main_effect_agent_action_success_chance",
               "value": 5
             }
@@ -4803,7 +4803,7 @@
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": false,
-              "description": "Enemy leadership: -4",
+              "description": "Enemy leadership: -4\n\t(enemy armies in local province)",
               "key": "wh_main_effect_force_stat_leadership_enemy_unit",
               "value": -4
             }
@@ -4828,20 +4828,20 @@
         {
           "effects": [
             {
-              "icon": "technology.png",
-              "priority": 60,
+              "icon": "magic_campaign.png",
+              "priority": 1,
               "is_positive_value_good": true,
-              "description": "Research rate: +10%",
-              "key": "wh_main_effect_technology_research_points",
-              "value": 10
+              "description": "Winds of Magic power reserve: +1 per turn\n\t(own army)",
+              "key": "wh3_main_effect_winds_of_magic_character",
+              "value": 1
             },
             {
-              "icon": "treasury.png",
-              "priority": 101,
-              "is_positive_value_good": false,
-              "description": "Construction cost: -10% for all buildings",
-              "key": "wh_main_effect_building_construction_cost_mod",
-              "value": -10
+              "icon": "magic_campaign.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve capacity: +8\n\t(own army)",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 8
             }
           ]
         }
@@ -4867,7 +4867,7 @@
               "icon": "magic.png",
               "priority": 100,
               "is_positive_value_good": false,
-              "description": "Miscast base chance: -10% for all spellcasters",
+              "description": "Miscast base chance: -10% for all spellcasters\n\t(local region)",
               "key": "wh2_main_effect_force_stat_miscast",
               "value": -10
             },
@@ -4942,9 +4942,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4978,7 +4978,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -5047,10 +5047,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -5078,7 +5086,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -5086,7 +5094,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -5150,9 +5158,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -5186,17 +5194,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -5219,20 +5227,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }

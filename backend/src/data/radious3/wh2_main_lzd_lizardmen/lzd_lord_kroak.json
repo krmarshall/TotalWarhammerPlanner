@@ -223,7 +223,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               },
@@ -231,7 +231,7 @@
                 "icon": "resistance_ward_save.png",
                 "priority": 580,
                 "is_positive_value_good": true,
-                "description": "Ward save: 5%",
+                "description": "Ward save: 5%\n\t(Hero's army)",
                 "key": "wh_main_effect_force_stat_ward_save",
                 "value": 5
               }
@@ -295,7 +295,7 @@
                 "icon": "public_order.png",
                 "priority": 5,
                 "is_positive_value_good": true,
-                "description": "Control: +5",
+                "description": "Control: +5\n\t(local province)",
                 "key": "wh_main_effect_public_order_base",
                 "value": 5
               },
@@ -415,11 +415,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 4,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +8% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 8
+                "description": "Winds of Magic power reserve minimum: +10",
+                "key": "wh3_main_effect_winds_of_magic_pool_min",
+                "value": 10
               }
             ]
           }
@@ -446,9 +446,9 @@
                 "icon": "magic_campaign.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Enemy Winds of Magic power reserve change: -15% when increasing",
+                "description": "Enemy Winds of Magic power reserve change: -50% when increasing\n\t(local region)",
                 "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-                "value": -15
+                "value": -50
               }
             ]
           }
@@ -499,7 +499,7 @@
     [
       {
         "key": "wh2_main_skill_node_lzd_lord_kroak_discipline_2_0",
-        "image_path": "character_ward_save.png",
+        "image_path": "tzeench_barrier_skill_char.png",
         "is_background_skill": false,
         "name": "Unfathomable Presence",
         "description": "The Mage-Priest's thought patterns are so alien that they are even beyond the perception of enemy Wizards.",
@@ -508,12 +508,12 @@
             "unlocked_at_rank": 4,
             "effects": [
               {
-                "icon": "resistance_magic.png",
-                "priority": 280,
+                "icon": "barrier.png",
+                "priority": 320,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15%",
-                "key": "wh_main_effect_character_stat_magic_resistance",
-                "value": 15
+                "description": "Barrier hit points: +800",
+                "key": "wh3_main_effect_battle_barrier_health_add",
+                "value": 800
               }
             ]
           }
@@ -540,7 +540,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               },
@@ -653,7 +653,7 @@
       },
       {
         "key": "wh2_main_skill_node_lzd_lord_kroak_discipline_2_3",
-        "image_path": "character_ward_save.png",
+        "image_path": "tzeench_barrier_skill_char.png",
         "is_background_skill": false,
         "name": "Higher State of Consciousness",
         "description": "\"Everywhere we shine, death and life burn into something new…\"",
@@ -662,12 +662,12 @@
             "unlocked_at_rank": 20,
             "effects": [
               {
-                "icon": "resistance_physical.png",
-                "priority": 280,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 25%",
-                "key": "wh_main_effect_character_stat_physical_resistance",
-                "value": 25
+                "icon": "barrier.png",
+                "priority": 92,
+                "is_positive_value_good": false,
+                "description": "Barrier replenishment delay: -50%",
+                "key": "wh3_main_effect_battle_barrier_replenish_delay_mod",
+                "value": -50
               }
             ]
           }
@@ -2037,7 +2037,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.7,
+                          "mana_regen_mod": 0.6,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null,
@@ -2046,9 +2046,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -2078,7 +2078,7 @@
         "image_path": "wh_main_lore_passive_roiling_skies.png",
         "is_background_skill": false,
         "name": "Roiling Skies",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2171,7 +2171,7 @@
         "image_path": "wh_main_lore_passive_exorcism.png",
         "is_background_skill": false,
         "name": "Exorcism",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2263,7 +2263,7 @@
         "image_path": "wh2_main_lore_passive_shield_of_saphery.png",
         "is_background_skill": false,
         "name": "Shield of Saphery",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2359,9 +2359,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
+                "description": "Training action: Experience per turn is increased by an additional 20",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "value": 20
               }
             ]
           },
@@ -2372,9 +2372,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
+                "description": "Training action: Experience per turn is increased by an additional 35",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "value": 35
               }
             ]
           },
@@ -2385,9 +2385,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
+                "description": "Training action: Experience per turn is increased by an additional 50",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "value": 50
               }
             ]
           }
@@ -2465,7 +2465,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -10",
+                "description": "Growth: -10\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -10
               },
@@ -2473,7 +2473,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
+                "description": "Growth: +10\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 10
               },
@@ -2494,7 +2494,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -20",
+                "description": "Growth: -20\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -20
               },
@@ -2502,7 +2502,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
+                "description": "Growth: +20\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 20
               },
@@ -2523,7 +2523,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -30",
+                "description": "Growth: -30\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -30
               },
@@ -2531,7 +2531,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +30",
+                "description": "Growth: +30\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 30
               },
@@ -2566,7 +2566,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: -2%",
+                "description": "Income from all buildings: -2%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
                 "value": -2
               },
@@ -2574,7 +2574,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +2%",
+                "description": "Income from all buildings: +2%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
                 "value": 2
               },
@@ -2595,7 +2595,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: -4%",
+                "description": "Income from all buildings: -4%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
                 "value": -4
               },
@@ -2603,7 +2603,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +4%",
+                "description": "Income from all buildings: +4%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
                 "value": 4
               },
@@ -2624,7 +2624,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: -6%",
+                "description": "Income from all buildings: -6%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
                 "value": -6
               },
@@ -2632,7 +2632,7 @@
                 "icon": "income.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +6%",
+                "description": "Income from all buildings: +6%\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
                 "value": 6
               },
@@ -2778,7 +2778,7 @@
               "icon": "growth.png",
               "priority": 30,
               "is_positive_value_good": true,
-              "description": "Growth: +20",
+              "description": "Growth: +20\n\t(local province)",
               "key": "wh_main_effect_province_growth_characters",
               "value": 20
             },
@@ -2786,7 +2786,7 @@
               "icon": "corruption.png",
               "priority": 104,
               "is_positive_value_good": false,
-              "description": "Corruption: -3",
+              "description": "Corruption: -3\n\t(local province)",
               "key": "wh3_main_effect_corruption_reduction_characters",
               "value": -3
             },
@@ -2794,9 +2794,9 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +10",
+              "description": "Leadership: +5\n\t(Hero's army)",
               "key": "wh_main_effect_force_stat_leadership",
-              "value": 10
+              "value": 5
             }
           ]
         }
@@ -2814,18 +2814,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -2859,10 +2851,18 @@
               "value": 1
             },
             {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
               "icon": "income.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: -5%",
+              "description": "Income from all buildings: -5%\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_boost_income_effect_negative",
               "value": -5
             },
@@ -2870,7 +2870,7 @@
               "icon": "income.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: +5%",
+              "description": "Income from all buildings: +5%\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_boost_income_effect_positive",
               "value": 5
             },
@@ -2878,7 +2878,7 @@
               "icon": "growth.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Growth: -10",
+              "description": "Growth: -10\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
               "value": -10
             },
@@ -2886,7 +2886,7 @@
               "icon": "growth.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Growth: +10",
+              "description": "Growth: +10\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
               "value": 10
             },

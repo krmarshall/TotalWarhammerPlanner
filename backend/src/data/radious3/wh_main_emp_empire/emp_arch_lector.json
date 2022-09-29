@@ -2,42 +2,6 @@
   "skillTree": [
     [
       {
-        "key": "wh_dlc04_skill_node_emp_arch_lector_unique_01",
-        "image_path": "mount_warhorse.png",
-        "is_background_skill": false,
-        "name": "Warhorse",
-        "description": "A general's horse can be their most trusted and daring companion. Just don't name him 'Daisy'.",
-        "levels": [
-          {
-            "effects": [
-              {
-                "icon": "mount.png",
-                "priority": 50,
-                "is_positive_value_good": true,
-                "description": "Mount: Warhorse",
-                "key": "wh_main_effect_enable_mount_warhorse",
-                "value": 1
-              },
-              {
-                "icon": "general_ability.png",
-                "priority": 600,
-                "is_positive_value_good": true,
-                "description": "Passive Ability: \"Onwards, Sons of the Empire\", while this Mount is equipped, for Melee Cavalry units",
-                "key": "op3_effect_enable_ability_dummy_emp_ancillary_horse",
-                "value": 1
-              }
-            ],
-            "auto_unlock_at_rank": 4
-          }
-        ],
-        "character_skill_key": "wh_dlc04_skill_emp_lord_unique_arch_lector_warhorse",
-        "tier": 0,
-        "indent": 0,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
         "key": "wh_dlc04_skill_node_emp_arch_lector_unique_11",
         "image_path": "mount_barded_warhorse.png",
         "is_background_skill": false,
@@ -58,12 +22,12 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"Onwards, Sons of the Empire\", while this Mount is equipped, for Melee Cavalry units",
+                "description": "Passive Ability: \"Onwards, Sons of the Empire\", while this Mount is equipped, for Melee Cavalry units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_emp_ancillary_horse",
                 "value": 1
               }
             ],
-            "auto_unlock_at_rank": 7
+            "auto_unlock_at_rank": 4
           }
         ],
         "character_skill_key": "wh_dlc04_skill_emp_lord_unique_arch_lector_barded_warhorse",
@@ -106,7 +70,7 @@
         "image_path": "wh_main_lord_abilities_hold_the_line.png",
         "is_background_skill": false,
         "name": "Hold the Line!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -217,7 +181,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -227,7 +190,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -247,7 +211,6 @@
         "description": "The Warrior Priest implores Sigmar to imbue him with a modicum of divine strength, and now his hammer glows bright with power!",
         "levels": [
           {
-            "unlocked_at_rank": 8,
             "effects": [
               {
                 "icon": "magic_character.png",
@@ -331,7 +294,6 @@
         "description": "The Warrior Priest’s faith manifests in the form of a shield as hard as castle-forged steel.",
         "levels": [
           {
-            "unlocked_at_rank": 11,
             "effects": [
               {
                 "icon": "magic_character.png",
@@ -418,7 +380,6 @@
         "description": "A battle prayer that bathes the Warrior Priest in white, holy fire sears Sigmar’s foes but leaves the supplicant unharmed.",
         "levels": [
           {
-            "unlocked_at_rank": 15,
             "effects": [
               {
                 "icon": "magic_character.png",
@@ -509,116 +470,20 @@
         ]
       },
       {
-        "key": "wh_dlc04_skill_node_emp_arch_lector_unique_08",
-        "image_path": "battle_damage.png",
-        "is_background_skill": false,
-        "name": "Blessed Holy War",
-        "description": "Blessings upon the just war, and the tools with which it is fought.",
-        "levels": [
-          {
-            "unlocked_at_rank": 10,
-            "effects": [
-              {
-                "icon": "agent.png",
-                "priority": 5,
-                "is_positive_value_good": true,
-                "description": "Hero action success chance: +10% for Warrior Priests and Witch Hunters",
-                "key": "wh2_dlc17_effect_agent_action_success_chance_emp_witch_hunter_warrior_priest",
-                "value": 10
-              },
-              {
-                "icon": "warrior_priest.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Warrior Priests",
-                "key": "wh_main_effect_agent_cap_increase_dignitary_warrior_priest",
-                "value": 1
-              },
-              {
-                "icon": "witch_hunter.png",
-                "priority": 102,
-                "is_positive_value_good": true,
-                "description": "Hero capacity: +1 for Witch Hunters",
-                "key": "wh_main_effect_agent_cap_increase_spy_witch_hunter",
-                "value": 1
-              },
-              {
-                "icon": "religion.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Untainted: +2",
-                "key": "wh_main_effect_religion_conversion_untainted",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_flagellants_boost_1",
-        "tier": 3,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh_dlc04_skill_node_emp_arch_lector_unique_09",
-        "image_path": "battle_charge.png",
-        "is_background_skill": false,
-        "name": "War Eternal",
-        "description": "A frenzied beating before battle focuses the mind on the brutal, bloody task at hand.",
-        "levels": [
-          {
-            "unlocked_at_rank": 10,
-            "effects": [
-              {
-                "icon": "general_ability.png",
-                "priority": 121,
-                "is_positive_value_good": true,
-                "description": "Passive ability: \"Wayfarer\" for Flagellants, Empire knights and Free Company Militia units",
-                "key": "wh2_dlc17_effect_ability_enable_wayfarer_clerical_units",
-                "value": 1
-              },
-              {
-                "icon": "charge.png",
-                "priority": 121,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +10 for Flagellants, Empire knights and Free Company Militia units",
-                "key": "wh2_dlc17_effect_charge_bonus_increase_clerical_units",
-                "value": 10
-              },
-              {
-                "icon": "battle_movement.png",
-                "priority": 121,
-                "is_positive_value_good": true,
-                "description": "Speed: +20% for Flagellants, Empire knights and Free Company Militia units",
-                "key": "wh2_dlc17_effect_speed_increase_clerical_units",
-                "value": 20
-              }
-            ]
-          }
-        ],
-        "character_skill_key": "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_flagellants_boost_2",
-        "tier": 4,
-        "indent": 1,
-        "points_on_creation": 0,
-        "required_num_parents": 0,
-        "visible_in_ui": true
-      },
-      {
-        "key": "wh_dlc04_skill_node_emp_arch_lector_unique_10",
+        "key": "rad_skill_key_emp_arch_lector_001",
         "image_path": "battle_ward_save.png",
         "is_background_skill": false,
         "name": "The Work of God",
         "description": "Those who have sacrificed all to do the gods’ work enjoy more than a modicum of their protection.",
         "levels": [
           {
-            "unlocked_at_rank": 10,
+            "unlocked_at_rank": 8,
             "effects": [
               {
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +20%",
+                "description": "Casualty replenishment rate: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 20
               },
@@ -626,7 +491,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive ability: \"Strength of the Penitent\"",
+                "description": "Passive ability: \"Strength of the Penitent\"\n\t(Lord's army)",
                 "related_abilities": [
                   {
                     "effect": "wh2_dlc17_effect_ability_enable_strength_of_the_penitent",
@@ -689,11 +554,11 @@
             ]
           }
         ],
-        "character_skill_key": "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_flagellants_boost_3",
-        "tier": 5,
+        "character_skill_key": "rad_wh3_part3_skill_emp_the_work_of_god",
+        "tier": 8,
         "indent": 1,
         "points_on_creation": 0,
-        "required_num_parents": 0,
+        "required_num_parents": 2,
         "visible_in_ui": true
       }
     ],
@@ -904,7 +769,7 @@
         "image_path": "wh_main_hero_abilities_faiths_bastion.png",
         "is_background_skill": false,
         "name": "Faith's Bastion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1158,7 +1023,7 @@
         "image_path": "wh_main_character_passive_benediction.png",
         "is_background_skill": false,
         "name": "Benediction",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2079,7 +1944,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +75",
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 75
               },
@@ -2115,7 +1980,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Spearmen, Swordsmen, Flagellants, and Halberdiers units",
+                "description": "Melee defence: +4 for Spearmen, Swordsmen, Flagellants, and Halberdiers units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
                 "value": 4
               }
@@ -2127,7 +1992,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Spearmen, Swordsmen, Flagellants, and Halberdiers units",
+                "description": "Melee attack: +4 for Spearmen, Swordsmen, Flagellants, and Halberdiers units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
                 "value": 4
               },
@@ -2135,7 +2000,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Spearmen, Swordsmen, Flagellants, and Halberdiers units",
+                "description": "Melee defence: +6 for Spearmen, Swordsmen, Flagellants, and Halberdiers units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
                 "value": 6
               }
@@ -2147,7 +2012,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Spearmen, Swordsmen, Flagellants, and Halberdiers units",
+                "description": "Melee attack: +6 for Spearmen, Swordsmen, Flagellants, and Halberdiers units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
                 "value": 6
               },
@@ -2155,7 +2020,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Spearmen, Swordsmen, Flagellants, and Halberdiers units",
+                "description": "Melee defence: +8 for Spearmen, Swordsmen, Flagellants, and Halberdiers units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
                 "value": 8
               }
@@ -2186,7 +2051,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units",
+                "description": "Charge bonus: +6 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_emp_empire_knights_reiksguard_knights_of_the_blazing_sun",
                 "value": 6
               }
@@ -2198,7 +2063,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units",
+                "description": "Armour: +6 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_empire_knights_reiksguard_knights_of_the_blazing_sun",
                 "value": 6
               },
@@ -2206,7 +2071,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units",
+                "description": "Charge bonus: +6 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_emp_empire_knights_reiksguard_knights_of_the_blazing_sun",
                 "value": 6
               }
@@ -2218,7 +2083,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +9 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units",
+                "description": "Armour: +9 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_empire_knights_reiksguard_knights_of_the_blazing_sun",
                 "value": 9
               },
@@ -2226,7 +2091,7 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units",
+                "description": "Charge bonus: +9 for Empire Knights, Reiksguard, and Knights of the Blazing Sun units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_emp_empire_knights_reiksguard_knights_of_the_blazing_sun",
                 "value": 9
               }
@@ -2255,9 +2120,9 @@
             "effects": [
               {
                 "icon": "ranged_damage.png",
-                "priority": 101,
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
+                "description": "Missile strength: +3% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
                 "value": 3
               }
@@ -2266,40 +2131,40 @@
           {
             "effects": [
               {
-                "icon": "ranged_damage.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
-                "value": 5
-              },
-              {
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders missile units",
+                "description": "Ammunition: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders missile units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_missile_infantry_cavalry",
                 "value": 10
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +5% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "ranged_damage.png",
-                "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
-                "value": 7
-              },
-              {
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders missile units",
+                "description": "Ammunition: +20% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders missile units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_missile_infantry_cavalry",
                 "value": 20
+              },
+              {
+                "icon": "ranged_damage.png",
+                "priority": 541,
+                "is_positive_value_good": true,
+                "description": "Missile strength: +7% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units\n\t(Lord's army)",
+                "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders",
+                "value": 7
               }
             ]
           }
@@ -2328,7 +2193,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +6% for Greatswords and Demigryph Knights units",
+                "description": "Weapon strength: +6% for Greatswords and Demigryph Knights units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_emp_greatswords_demigryphs",
                 "value": 6
               }
@@ -2340,7 +2205,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Greatswords and Demigryph Knights units",
+                "description": "Armour: +6 for Greatswords and Demigryph Knights units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_greatswords_demigryphs",
                 "value": 6
               },
@@ -2348,7 +2213,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Greatswords and Demigryph Knights units",
+                "description": "Weapon strength: +8% for Greatswords and Demigryph Knights units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_emp_greatswords_demigryphs",
                 "value": 8
               }
@@ -2360,7 +2225,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Greatswords and Demigryph Knights units",
+                "description": "Armour: +12 for Greatswords and Demigryph Knights units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_armour_greatswords_demigryphs",
                 "value": 12
               },
@@ -2368,7 +2233,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Greatswords and Demigryph Knights units",
+                "description": "Weapon strength: +10% for Greatswords and Demigryph Knights units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_weapon_strength_emp_greatswords_demigryphs",
                 "value": 10
               }
@@ -2399,7 +2264,7 @@
                 "icon": "resistance_ward_save.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Ward save: 7% for War Wagon, Steam Tank and Luminark of Hysh units",
+                "description": "Ward save: 7% for War Wagon, Steam Tank and Luminark of Hysh units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ward_save_war_wagon_steam_tank_luminark",
                 "value": 7
               }
@@ -2411,7 +2276,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 561,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +4% for War Wagon, Steam Tank and Luminark of Hysh units",
+                "description": "Reload time reduction: +4% for War Wagon, Steam Tank and Luminark of Hysh units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_emp_war_wagon_steam_tank_luminark",
                 "value": 4
               },
@@ -2419,7 +2284,7 @@
                 "icon": "resistance_ward_save.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Ward save: 11% for War Wagon, Steam Tank and Luminark of Hysh units",
+                "description": "Ward save: 11% for War Wagon, Steam Tank and Luminark of Hysh units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ward_save_war_wagon_steam_tank_luminark",
                 "value": 11
               }
@@ -2431,7 +2296,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 561,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +8% for War Wagon, Steam Tank and Luminark of Hysh units",
+                "description": "Reload time reduction: +8% for War Wagon, Steam Tank and Luminark of Hysh units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_emp_war_wagon_steam_tank_luminark",
                 "value": 8
               },
@@ -2439,7 +2304,7 @@
                 "icon": "resistance_ward_save.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Ward save: 15% for War Wagon, Steam Tank and Luminark of Hysh units",
+                "description": "Ward save: 15% for War Wagon, Steam Tank and Luminark of Hysh units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ward_save_war_wagon_steam_tank_luminark",
                 "value": 15
               }
@@ -2470,7 +2335,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units",
+                "description": "Missile strength: +3% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_artillery",
                 "value": 3
               }
@@ -2482,7 +2347,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units",
+                "description": "Ammunition: +10% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_artillery",
                 "value": 10
               },
@@ -2490,7 +2355,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units",
+                "description": "Missile strength: +5% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_artillery",
                 "value": 5
               }
@@ -2502,7 +2367,7 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units",
+                "description": "Ammunition: +20% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_artillery",
                 "value": 20
               },
@@ -2510,7 +2375,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units",
+                "description": "Missile strength: +7% for Mortar, Great Cannon, Helblaster Voley Gun, and Helstorm Rocket Battery units\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_artillery",
                 "value": 7
               }
@@ -2534,7 +2399,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2625,7 +2490,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Spearmen, Swordsmen, Flagellants, Huntsmen and Empire Knights units (Rank 7 and above)",
+                "description": "Leadership: +5 for Spearmen, Swordsmen, Flagellants, Huntsmen and Empire Knights units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_skill_morale_increase_emp_spearmen_swordsmen_flagellants_huntsmen_empire_knights_rank7",
                 "value": 5
               },
@@ -2633,7 +2498,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Spearmen, Swordsmen, Flagellants, Huntsmen and Empire Knights units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Spearmen, Swordsmen, Flagellants, Huntsmen and Empire Knights units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_skill_melee_defence_increase_emp_spearmen_swordsmen_flagellants_huntsmen_empire_knights_rank7",
                 "value": 5
               },
@@ -2641,7 +2506,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Spearmen, Swordsmen, Flagellants, Huntsmen and Empire Knights units (Rank 7 and above)",
+                "description": "Spell resistance: 15% for Spearmen, Swordsmen, Flagellants, Huntsmen and Empire Knights units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_magic_resistance_spearmen__huntsmen_swordsmen_flagellants_empire_knights_rank7",
                 "value": 15
               }
@@ -2672,7 +2537,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_emp_free_company_crossbowmen_handgunners_pistoliers_outriders_rank7",
                 "value": 10
               },
@@ -2680,7 +2545,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_skill_reload_increase_emp_free_company_crossbowmen_huntsmen_archers_handgunners_pistoliers_outriders_rank7",
                 "value": 10
               },
@@ -2688,7 +2553,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Free Company Militia, Crossbowmen, Huntsmen, Archers, Handgunners, Pistoliers and Outriders units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_resistance_emp_free_company_huntsmen_crossbowmen_handgunners_pistoliers_outriders_rank7",
                 "value": 15
               }
@@ -2719,7 +2584,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Greatswords, Halberdiers, Reiksguard, Knights of the Blazing Sun, and Demigryph Knights units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Greatswords, Halberdiers, Reiksguard, Knights of the Blazing Sun, and Demigryph Knights units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_attack_greatswords_halberds_reiksguard_knights_of_the_blazing_sun_demigryphs_rank7",
                 "value": 5
               },
@@ -2727,7 +2592,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Greatswords, Halberdiers, Reiksguard, Knights of the Blazing Sun, and Demigryph Knights units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Greatswords, Halberdiers, Reiksguard, Knights of the Blazing Sun, and Demigryph Knights units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_melee_defence_emp_greatswords_halberds_reiksguard_knights_of_the_blazing_sun_demigryphs_rank7",
                 "value": 5
               },
@@ -2735,7 +2600,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Greatswords, Halberdiers, Reiksguard, Knights of the Blazing Sun, and Demigryph Knights units (Rank 7 and above)",
+                "description": "Physical resistance: 10% for Greatswords, Halberdiers, Reiksguard, Knights of the Blazing Sun, and Demigryph Knights units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_physical_resistance_increase_emp_greatswords_halberds_reiksguard_knights_of_the_blazing_sun_demigryphs_rank7",
                 "value": 10
               }
@@ -2766,7 +2631,7 @@
                 "icon": "ammo.png",
                 "priority": 512,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Mortar, Great Cannon, Helblaster Volley Gun, Helstorm Rocket Battery, War Wagon, Luminark of Hysh and Steam Tank units (Rank 7 and above)",
+                "description": "Ammunition: +20% for Mortar, Great Cannon, Helblaster Volley Gun, Helstorm Rocket Battery, War Wagon, Luminark of Hysh and Steam Tank units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_ammunition_emp_artillery_war_machine_rank7",
                 "value": 20
               },
@@ -2774,7 +2639,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 542,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Mortar, Great Cannon, Helblaster Volley Gun, Helstorm Rocket Battery, War Wagon, Luminark of Hysh and Steam Tank units (Rank 7 and above)",
+                "description": "Missile strength: +10% for Mortar, Great Cannon, Helblaster Volley Gun, Helstorm Rocket Battery, War Wagon, Luminark of Hysh and Steam Tank units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_missile_damage_increase_emp_artillery_war_wagon_steam_tank_luminark_rank7",
                 "value": 10
               },
@@ -2782,7 +2647,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Mortar, Great Cannon, Helblaster Volley Gun, Helstorm Rocket Battery, War Wagon, Luminark of Hysh and Steam Tank units (Rank 7 and above)",
+                "description": "Reload time reduction: +10% for Mortar, Great Cannon, Helblaster Volley Gun, Helstorm Rocket Battery, War Wagon, Luminark of Hysh and Steam Tank units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_emp_artillery_war_wagon_steam_tank_luminark_rank7",
                 "value": 10
               }
@@ -2806,7 +2671,7 @@
         "image_path": "wh_main_character_abilities_stand_your_ground.png",
         "is_background_skill": false,
         "name": "Stand Your Ground!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2940,7 +2805,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               }
@@ -2952,7 +2817,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               }
@@ -2964,7 +2829,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               }
@@ -2995,7 +2860,7 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -5
               }
@@ -3007,7 +2872,7 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -10
               }
@@ -3019,7 +2884,7 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -15
               }
@@ -3050,7 +2915,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               }
@@ -3062,7 +2927,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               }
@@ -3074,7 +2939,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -30% casualties suffered from all attrition",
+                "description": "Attrition: -30% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -30
               }
@@ -3105,7 +2970,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -1
               }
@@ -3117,7 +2982,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               }
@@ -3129,7 +2994,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -3
               }
@@ -3161,7 +3026,7 @@
                 "icon": "replenishment.png",
                 "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +30% for this Lord",
+                "description": "Casualty replenishment rate: +30% for this Lord\n\t(Lord's army)",
                 "key": "wh2_main_effect_replenishment_lords",
                 "value": 30
               },
@@ -3298,7 +3163,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -3310,7 +3175,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -3322,7 +3187,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -3353,7 +3218,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -3365,7 +3230,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 6
               }
@@ -3377,7 +3242,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 9
               }
@@ -3408,7 +3273,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +6%",
+                "description": "Ambush defence chance: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 6
               }
@@ -3428,7 +3293,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
+                "description": "Ambush defence chance: +16%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 16
               }
@@ -3448,7 +3313,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +30%",
+                "description": "Ambush defence chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 30
               }
@@ -3477,6 +3342,14 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
                 "icon": "campaign_movement.png",
                 "priority": 100,
                 "is_positive_value_good": true,
@@ -3488,7 +3361,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               },
@@ -3496,7 +3369,7 @@
                 "icon": "army.png",
                 "priority": 270,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
+                "description": "Local recruitment capacity: +1\n\t(local province)",
                 "key": "wh_main_effect_unit_recruitment_points",
                 "value": 1
               }
@@ -3533,7 +3406,7 @@
               "icon": "public_order.png",
               "priority": 6,
               "is_positive_value_good": true,
-              "description": "Control: +4",
+              "description": "Control: +4\n\t(local province)",
               "key": "wh_main_effect_public_order_characters",
               "value": 4
             },
@@ -3569,7 +3442,7 @@
               "icon": "construction.png",
               "priority": 102,
               "is_positive_value_good": false,
-              "description": "Construction time: -25% for all buildings",
+              "description": "Construction time: -25% for all buildings\n\t(local region)",
               "key": "wh2_main_effect_building_construction_time_mod_all",
               "value": -25
             },
@@ -3577,7 +3450,7 @@
               "icon": "income.png",
               "priority": 162,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: +10%",
+              "description": "Income from all buildings: +10%\n\t(local region)",
               "key": "wh_main_effect_economy_gdp_mod_all",
               "value": 10
             }
@@ -3705,9 +3578,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -3741,7 +3614,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -3810,10 +3683,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -3841,7 +3722,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -3849,7 +3730,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -3913,9 +3794,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -3949,17 +3830,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -3985,25 +3866,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -4029,17 +3910,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -4093,17 +3974,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }

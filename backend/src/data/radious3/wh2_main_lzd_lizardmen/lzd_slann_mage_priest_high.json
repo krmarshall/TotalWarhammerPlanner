@@ -65,7 +65,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -75,7 +74,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -99,11 +99,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 4,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +8% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 8
+                "description": "Winds of Magic power reserve minimum: +10",
+                "key": "wh3_main_effect_winds_of_magic_pool_min",
+                "value": 10
               }
             ]
           }
@@ -130,9 +130,9 @@
                 "icon": "magic_campaign.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Enemy Winds of Magic power reserve change: -15% when increasing",
+                "description": "Enemy Winds of Magic power reserve change: -50% when increasing\n\t(local region)",
                 "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-                "value": -15
+                "value": -50
               }
             ]
           }
@@ -265,7 +265,7 @@
     [
       {
         "key": "wh2_main_skill_node_lzd_slann_mage_priest_high_discipline_2_0",
-        "image_path": "character_ward_save.png",
+        "image_path": "tzeench_barrier_skill_char.png",
         "is_background_skill": false,
         "name": "Unfathomable Presence",
         "description": "The Mage-Priest's thought patterns are so alien that they are even beyond the perception of enemy Wizards.",
@@ -274,12 +274,12 @@
             "unlocked_at_rank": 4,
             "effects": [
               {
-                "icon": "resistance_magic.png",
-                "priority": 280,
+                "icon": "barrier.png",
+                "priority": 320,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15%",
-                "key": "wh_main_effect_character_stat_magic_resistance",
-                "value": 15
+                "description": "Barrier hit points: +800",
+                "key": "wh3_main_effect_battle_barrier_health_add",
+                "value": 800
               }
             ]
           }
@@ -338,7 +338,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               },
@@ -1341,7 +1341,7 @@
                           "attributes": [
                             {
                               "key": "causes_fear",
-                              "description": "Can  Cause Fear",
+                              "description": " Can Cause Fear",
                               "attribute_type": "positive"
                             }
                           ]
@@ -1393,7 +1393,7 @@
                           "attributes": [
                             {
                               "key": "causes_fear",
-                              "description": "Can  Cause Fear",
+                              "description": " Can Cause Fear",
                               "attribute_type": "positive"
                             }
                           ]
@@ -1467,7 +1467,7 @@
                           "attributes": [
                             {
                               "key": "causes_fear",
-                              "description": "Can  Cause Fear",
+                              "description": " Can Cause Fear",
                               "attribute_type": "positive"
                             }
                           ]
@@ -1519,7 +1519,7 @@
                           "attributes": [
                             {
                               "key": "causes_fear",
-                              "description": "Can  Cause Fear",
+                              "description": " Can Cause Fear",
                               "attribute_type": "positive"
                             }
                           ]
@@ -1579,7 +1579,7 @@
         "image_path": "wh2_main_lore_passive_shield_of_saphery.png",
         "is_background_skill": false,
         "name": "Shield of Saphery",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2431,7 +2431,7 @@
                       "recharge_time": 60,
                       "wind_up_time": 3,
                       "passive": false,
-                      "effect_range": 20,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
@@ -2443,10 +2443,19 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
-                          "cant_move": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2489,7 +2498,7 @@
                       "recharge_time": 60,
                       "wind_up_time": 3,
                       "passive": false,
-                      "effect_range": 20,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
@@ -2501,10 +2510,19 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
-                          "cant_move": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2569,7 +2587,7 @@
                       "recharge_time": 60,
                       "wind_up_time": 3,
                       "passive": false,
-                      "effect_range": 20,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
@@ -2581,10 +2599,19 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
-                          "cant_move": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2627,7 +2654,7 @@
                       "recharge_time": 60,
                       "wind_up_time": 3,
                       "passive": false,
-                      "effect_range": 20,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
@@ -2639,10 +2666,19 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
-                          "cant_move": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2703,7 +2739,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2827,11 +2863,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3673,7 +3709,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.7,
+                          "mana_regen_mod": 0.6,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null,
@@ -3682,9 +3718,9 @@
                               "value": 1.1,
                               "stat": "scalar_spell_mastery",
                               "how": "mult",
-                              "description": "x1.1Spell Mastery",
+                              "description": "x1.1 Spell Mastery",
                               "sort_order": 0,
-                              "icon": "modifier_icon_magical.webp"
+                              "icon": "spell_mastery.png"
                             }
                           ]
                         }
@@ -3726,7 +3762,7 @@
                 "icon": "experience.png",
                 "priority": 10,
                 "is_positive_value_good": true,
-                "description": "Unit experience gain per turn: +75",
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
                 "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
                 "value": 75
               },
@@ -3762,7 +3798,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Saurus units",
+                "description": "Melee attack: +4 for Saurus units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_saurus",
                 "value": 4
               }
@@ -3774,7 +3810,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +4 for Saurus units",
+                "description": "Armour: +4 for Saurus units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_saurus",
                 "value": 4
               },
@@ -3782,7 +3818,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Saurus units",
+                "description": "Melee attack: +4 for Saurus units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_saurus",
                 "value": 4
               }
@@ -3794,7 +3830,7 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +7 for Saurus units",
+                "description": "Armour: +7 for Saurus units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_saurus",
                 "value": 7
               },
@@ -3802,7 +3838,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Saurus units",
+                "description": "Melee attack: +6 for Saurus units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_saurus",
                 "value": 6
               }
@@ -3833,7 +3869,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Salamander Hunting Pack units",
+                "description": "Weapon strength: +5% for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_weapon_strength_lzd_salamander_hunting_packs",
                 "value": 5
               },
@@ -3841,7 +3877,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Weapon strength: +5% for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_skinks",
                 "value": 5
               },
@@ -3849,7 +3885,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for Salamander Hunting Pack units",
+                "description": "Missile strength: +3% for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_missile_damage_lzd_salamander_hunting_packs",
                 "value": 3
               },
@@ -3857,7 +3893,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for Skink and Chameleon Skink units",
+                "description": "Missile strength: +3% for Skink, Chameleon Skink and Chameleon Stalker units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_skinks",
                 "value": 3
               }
@@ -3869,7 +3905,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Salamander Hunting Pack units",
+                "description": "Melee defence: +6 for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_melee_defence_lzd_salamander_hunting_packs",
                 "value": 6
               },
@@ -3877,7 +3913,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Melee defence: +6 for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_skinks",
                 "value": 6
               },
@@ -3885,7 +3921,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Salamander Hunting Pack units",
+                "description": "Weapon strength: +7% for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_weapon_strength_lzd_salamander_hunting_packs",
                 "value": 7
               },
@@ -3893,7 +3929,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Weapon strength: +7% for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_skinks",
                 "value": 7
               },
@@ -3901,7 +3937,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Salamander Hunting Pack units",
+                "description": "Missile strength: +5% for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_missile_damage_lzd_salamander_hunting_packs",
                 "value": 5
               },
@@ -3909,7 +3945,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Skink and Chameleon Skink units",
+                "description": "Missile strength: +5% for Skink, Chameleon Skink and Chameleon Stalker units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_skinks",
                 "value": 5
               }
@@ -3921,7 +3957,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Salamander Hunting Pack units",
+                "description": "Melee defence: +8 for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_melee_defence_lzd_salamander_hunting_packs",
                 "value": 8
               },
@@ -3929,7 +3965,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Melee defence: +8 for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_skinks",
                 "value": 8
               },
@@ -3937,7 +3973,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Salamander Hunting Pack units",
+                "description": "Weapon strength: +9% for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_weapon_strength_lzd_salamander_hunting_packs",
                 "value": 9
               },
@@ -3945,7 +3981,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Skink, Chameleon Skink and Red Crested Skink units",
+                "description": "Weapon strength: +9% for Skink, Chameleon Skink, Chameleon Stalker and Red Crested Skink units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_skinks",
                 "value": 9
               },
@@ -3953,7 +3989,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Salamander Hunting Pack units",
+                "description": "Missile strength: +7% for Salamander and Razordon Hunting Pack units\n\t(Lord's army)",
                 "key": "wh2_dlc12_effect_force_stat_missile_damage_lzd_salamander_hunting_packs",
                 "value": 7
               },
@@ -3961,7 +3997,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Skink and Chameleon Skink units",
+                "description": "Missile strength: +7% for Skink, Chameleon Skink and Chameleon Stalker units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_skinks",
                 "value": 7
               }
@@ -3992,7 +4028,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +5% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Speed: +5% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_speed_lzd_terradon_cold_one",
                 "value": 5
               }
@@ -4004,7 +4040,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +7% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Speed: +7% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_speed_lzd_terradon_cold_one",
                 "value": 7
               },
@@ -4012,7 +4048,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Weapon strength: +5% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_terradon_cold_one",
                 "value": 5
               },
@@ -4020,7 +4056,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Terradon Riders units",
+                "description": "Missile strength: +5% for Terradon Riders units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_terradon",
                 "value": 5
               }
@@ -4032,7 +4068,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Speed: +10% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_speed_lzd_terradon_cold_one",
                 "value": 10
               },
@@ -4040,7 +4076,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Terradon Riders, Ripperdactyl Riders and Cold One units",
+                "description": "Weapon strength: +7% for Terradon Riders, Ripperdactyl Riders, Coatl and Cold One units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_terradon_cold_one",
                 "value": 7
               },
@@ -4048,7 +4084,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Terradon Riders units",
+                "description": "Missile strength: +7% for Terradon Riders units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_terradon",
                 "value": 7
               }
@@ -4079,7 +4115,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Kroxigors and Temple Guards units",
+                "description": "Melee attack: +4 for Kroxigor, Sacred Kroxigor and Temple Guard units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_kroxigor_temple_guard",
                 "value": 4
               }
@@ -4091,7 +4127,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Kroxigors and Temple Guards units",
+                "description": "Melee attack: +4 for Kroxigor, Sacred Kroxigor and Temple Guard units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_kroxigor_temple_guard",
                 "value": 4
               },
@@ -4099,7 +4135,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Kroxigors and Temple Guards units",
+                "description": "Melee defence: +6 for Kroxigor, Sacred Kroxigor and Temple Guard units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_kroxigor_temple_guard",
                 "value": 6
               }
@@ -4111,7 +4147,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Kroxigors and Temple Guards units",
+                "description": "Melee attack: +6 for Kroxigor, Sacred Kroxigor and Temple Guard units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_kroxigor_temple_guard",
                 "value": 6
               },
@@ -4119,7 +4155,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Kroxigors and Temple Guards units",
+                "description": "Melee defence: +8 for Kroxigor, Sacred Kroxigor and Temple Guard units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_kroxigor_temple_guard",
                 "value": 8
               }
@@ -4150,7 +4186,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Feral Carnosaur units",
+                "description": "Melee attack: +4 for Feral Carnosaur and Dread Saurian units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_carnosaur",
                 "value": 4
               }
@@ -4162,7 +4198,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Feral Carnosaur units",
+                "description": "Melee attack: +6 for Feral Carnosaur and Dread Saurian units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_carnosaur",
                 "value": 6
               },
@@ -4170,7 +4206,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +8% for Feral Carnosaur units",
+                "description": "Weapon strength: +8% for Feral Carnosaur and Dread Saurian units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_carnosaur",
                 "value": 8
               }
@@ -4182,7 +4218,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Feral Carnosaur units",
+                "description": "Melee attack: +8 for Feral Carnosaur and Dread Saurian units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_carnosaur",
                 "value": 8
               },
@@ -4190,7 +4226,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Feral Carnosaur units",
+                "description": "Weapon strength: +10% for Feral Carnosaur and Dread Saurian units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_carnosaur",
                 "value": 10
               }
@@ -4221,7 +4257,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Weapon strength: +5% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_stegadon_bastiladon",
                 "value": 5
               },
@@ -4229,7 +4265,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +3% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Missile strength: +3% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_stegadon_bastiladon",
                 "value": 3
               }
@@ -4241,7 +4277,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Melee defence: +6 for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_stegadon_bastiladon",
                 "value": 6
               },
@@ -4249,7 +4285,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Weapon strength: +7% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_stegadon_bastiladon",
                 "value": 7
               },
@@ -4257,7 +4293,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +5% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Missile strength: +5% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_stegadon_bastiladon",
                 "value": 5
               }
@@ -4269,7 +4305,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Melee defence: +8 for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_stegadon_bastiladon",
                 "value": 8
               },
@@ -4277,7 +4313,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +9% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Weapon strength: +9% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_stegadon_bastiladon",
                 "value": 9
               },
@@ -4285,7 +4321,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +7% for Stegadon, Ancient Salamander and Bastiladon units",
+                "description": "Missile strength: +7% for Stegadon, Feral Troglodon, Ancient Salamander and Bastiladon units\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_damage_lzd_stegadon_bastiladon",
                 "value": 7
               }
@@ -4309,7 +4345,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4400,7 +4436,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Saurus and Temple Guards units (Rank 7 and above)",
+                "description": "Armour: +10 for Saurus and Temple Guards units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_saurus_templeg_rank7",
                 "value": 10
               },
@@ -4408,7 +4444,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Saurus and Temple Guards units (Rank 7 and above)",
+                "description": "Weapon strength: +10% for Saurus and Temple Guards units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_weapon_strength_lzd_saurus_templeg_rank7",
                 "value": 10
               },
@@ -4416,7 +4452,7 @@
                 "icon": "resistance_magic.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Saurus and Temple Guards units (Rank 7 and above)",
+                "description": "Spell resistance: 15% for Saurus and Temple Guards units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_magic_resistance_saurus_templeguard_rank7",
                 "value": 15
               }
@@ -4447,7 +4483,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander Hunting Pack and Kroxigors units (Rank 7 and above)",
+                "description": "Leadership: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander and Razordon Hunting Packs, Kroxigor and Sacred Kroxigor units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_leadership_skink_kroxigor_rank7",
                 "value": 5
               },
@@ -4455,7 +4491,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander Hunting Pack and Kroxigors units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander and Razordon Hunting Packs, Kroxigor and Sacred Kroxigor units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_skink_kroxigor_rank7",
                 "value": 5
               },
@@ -4463,7 +4499,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander Hunting Pack and Kroxigors units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Skinks, Chameleon Skinks, Red Crested Skinks, Salamander and Razordon Hunting Packs, Kroxigor and Sacred Kroxigor units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_resistance_lzd_skink_kroxigor_rank7",
                 "value": 15
               }
@@ -4494,7 +4530,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Cold One, Terradon Riders and Ripperdactyl units (Rank 7 and above)",
+                "description": "Melee attack: +5 for Cold One, Terradon Riders, Ripperdactyl Riders, and Coatl units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_attack_lzd_coldones_terradons_rank7",
                 "value": 5
               },
@@ -4502,7 +4538,7 @@
                 "icon": "defence.png",
                 "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Cold One, Terradon Riders and Ripperdactyl Riders units (Rank 7 and above)",
+                "description": "Melee defence: +5 for Cold One, Terradon Riders, Ripperdactyl Riders, and Coatl units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_melee_defence_lzd_coldones_terradons_rank7",
                 "value": 5
               },
@@ -4510,7 +4546,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Cold One, Terradon Riders and Ripperdactyl Riders units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Cold One, Terradon Riders, Ripperdactyl Riders, and Coatl units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_missile_resistance_lzd_coldones_terradons_rank7",
                 "value": 15
               }
@@ -4541,7 +4577,7 @@
                 "icon": "armour.png",
                 "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Ancient Salamander, Bastiladon, Stegadon and Feral Carnosaur units (Rank 7 and above)",
+                "description": "Armour: +10 for Ancient Salamander, Bastiladon, Stegadon, Feral Carnosaur, Feral Troglodon and Dread Saurian units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_armour_lzd_beasts_rank7",
                 "value": 10
               },
@@ -4549,7 +4585,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Ancient Salamander, Bastiladon, Stegadon and Feral Carnosaur units (Rank 7 and above)",
+                "description": "Leadership: +5 for Ancient Salamander, Bastiladon, Stegadon, Feral Carnosaur, Feral Troglodon and Dread Saurian units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_leadership_lzd_beasts_rank7",
                 "value": 5
               },
@@ -4557,7 +4593,7 @@
                 "icon": "charge.png",
                 "priority": 502,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Ancient Salamander, Bastiladon, Stegadon and Feral Carnosaur units (Rank 7 and above)",
+                "description": "Charge bonus: +12 for Ancient Salamander, Bastiladon, Stegadon, Feral Carnosaur, Feral Troglodon and Dread Saurian units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh2_main_effect_force_stat_charge_bonus_add_lzd_beasts_rank7",
                 "value": 12
               }
@@ -4581,7 +4617,7 @@
         "image_path": "wh2_main_character_abilities_slann_forcefield.png",
         "is_background_skill": false,
         "name": "Slann Forcefield",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4715,7 +4751,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               }
@@ -4727,7 +4763,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               }
@@ -4739,7 +4775,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               }
@@ -4770,7 +4806,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -1
               }
@@ -4782,7 +4818,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               }
@@ -4794,7 +4830,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -3
               }
@@ -4825,7 +4861,7 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -5
               }
@@ -4837,7 +4873,7 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -10
               }
@@ -4849,7 +4885,7 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
                 "value": -15
               }
@@ -4880,7 +4916,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +6%",
+                "description": "Ambush success chance: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 6
               }
@@ -4892,7 +4928,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +16%",
+                "description": "Ambush success chance: +16%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 16
               }
@@ -4904,7 +4940,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Ambush success chance: +30%",
+                "description": "Ambush success chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
                 "value": 30
               }
@@ -4936,7 +4972,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               },
@@ -4944,7 +4980,7 @@
                 "icon": "army.png",
                 "priority": 270,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
+                "description": "Local recruitment capacity: +1\n\t(local province)",
                 "key": "wh_main_effect_unit_recruitment_points",
                 "value": 1
               }
@@ -5065,7 +5101,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -5077,7 +5113,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -5089,7 +5125,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -5128,7 +5164,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +8%",
+                "description": "Ambush defence chance: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 8
               }
@@ -5148,7 +5184,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
+                "description": "Ambush defence chance: +16%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 16
               }
@@ -5168,7 +5204,7 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +30%",
+                "description": "Ambush defence chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 30
               }
@@ -5199,7 +5235,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -5211,7 +5247,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 6
               }
@@ -5223,7 +5259,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 9
               }
@@ -5248,6 +5284,52 @@
         "is_background_skill": false,
         "name": "Renowned & Feared",
         "description": "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "military_spending.png",
+                "priority": 70,
+                "is_positive_value_good": false,
+                "description": "Upkeep: -8%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_upkeep",
+                "value": -8
+              },
+              {
+                "icon": "campaign_movement.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Campaign movement range: +5%",
+                "key": "wh_main_effect_agent_movement_range_mod",
+                "value": 5
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Enemy Hero action success chance: -10%",
+                "key": "wh_main_effect_agent_action_success_chance_enemy",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero self-defence: +25% chance of wounding aggressors",
+                "key": "wh_main_effect_agent_defence_wound_chance_mod",
+                "value": 25
+              },
+              {
+                "icon": "experience.png",
+                "priority": 117,
+                "is_positive_value_good": true,
+                "description": "Recruit rank: +1\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_experience_base_all",
+                "value": 1
+              }
+            ]
+          }
+        ],
         "character_skill_key": "wh2_main_skill_LL_self_defense",
         "tier": 10,
         "indent": 5,
@@ -5275,28 +5357,28 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
-              "priority": 8,
-              "is_positive_value_good": false,
-              "description": "Miscast base chance: -30%",
-              "key": "wh_main_effect_character_stat_mod_miscast_chance",
-              "value": -30
+              "icon": "magic_campaign.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve capacity: +5",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 5
             },
             {
               "icon": "experience.png",
               "priority": 11,
               "is_positive_value_good": true,
-              "description": "Unit experience gain per turn: +30",
+              "description": "Unit experience gain per turn: +30\n\t(Lord's army)",
               "key": "wh_dlc05_effect_building_army_xp_gain",
               "value": 30
             },
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +20% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 20
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -30%",
+              "key": "wh_main_effect_character_stat_miscast",
+              "value": -30
             }
           ]
         }
@@ -5319,28 +5401,28 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
-              "priority": 8,
-              "is_positive_value_good": false,
-              "description": "Miscast base chance: -40%",
-              "key": "wh_main_effect_character_stat_mod_miscast_chance",
-              "value": -40
+              "icon": "magic_campaign.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve capacity: +15",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 15
             },
             {
               "icon": "experience.png",
               "priority": 11,
               "is_positive_value_good": true,
-              "description": "Unit experience gain per turn: +40",
+              "description": "Unit experience gain per turn: +40\n\t(Lord's army)",
               "key": "wh_dlc05_effect_building_army_xp_gain",
               "value": 40
             },
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +30% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 30
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -40%",
+              "key": "wh_main_effect_character_stat_miscast",
+              "value": -40
             }
           ]
         }
@@ -5363,28 +5445,28 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
-              "priority": 8,
-              "is_positive_value_good": false,
-              "description": "Miscast base chance: -50%",
-              "key": "wh_main_effect_character_stat_mod_miscast_chance",
-              "value": -50
+              "icon": "magic_campaign.png",
+              "priority": 3,
+              "is_positive_value_good": true,
+              "description": "Winds of Magic power reserve capacity: +20",
+              "key": "wh3_main_effect_winds_of_magic_pool_cap",
+              "value": 20
             },
             {
               "icon": "experience.png",
               "priority": 11,
               "is_positive_value_good": true,
-              "description": "Unit experience gain per turn: +50",
+              "description": "Unit experience gain per turn: +50\n\t(Lord's army)",
               "key": "wh_dlc05_effect_building_army_xp_gain",
               "value": 50
             },
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +40% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 40
+              "icon": "magic_character.png",
+              "priority": 298,
+              "is_positive_value_good": false,
+              "description": "Miscast base chance: -50%",
+              "key": "wh_main_effect_character_stat_miscast",
+              "value": -50
             }
           ]
         }
@@ -5456,7 +5538,7 @@
                         "attributes": [
                           {
                             "key": "causes_fear",
-                            "description": "Can  Cause Fear",
+                            "description": " Can Cause Fear",
                             "attribute_type": "positive"
                           }
                         ]

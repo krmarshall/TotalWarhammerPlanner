@@ -129,7 +129,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -139,7 +138,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -405,18 +405,18 @@
         "key": "wh3_main_skill_node_nur_plagueridden_death_combat_0",
         "image_path": "character_damage.png",
         "is_background_skill": false,
-        "name": "Eye of the Gods",
+        "name": "Infernal Champion",
         "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "weapon_damage_character.png",
-                "priority": 161,
+                "priority": 160,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
               }
             ]
           }
@@ -1898,7 +1898,7 @@
         "image_path": "wh_main_spell_death_spirit_leech.png",
         "is_background_skill": false,
         "name": "Spirit Leech",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2234,7 +2234,7 @@
         "image_path": "wh_main_lore_passive_life_leeching.png",
         "is_background_skill": false,
         "name": "Life-Leeching",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2279,7 +2279,7 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "mana_max_depletion_mod": 0.2,
+                          "mana_max_depletion_mod": 0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2310,7 +2310,7 @@
         "image_path": "wh_main_spell_death_aspect_of_the_dreadknight.png",
         "is_background_skill": false,
         "name": "Aspect of the Dread Knight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2355,6 +2355,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2433,6 +2438,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -2495,6 +2505,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2581,6 +2596,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -2643,6 +2663,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2726,7 +2751,7 @@
         "image_path": "wh_main_spell_death_soulblight.png",
         "is_background_skill": false,
         "name": "Soulblight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3142,7 +3167,7 @@
         "image_path": "wh_main_spell_death_doom_and_darkness.png",
         "is_background_skill": false,
         "name": "Doom & Darkness",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3519,7 +3544,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3606,7 +3631,7 @@
         "image_path": "wh_main_spell_death_the_fate_of_bjuna.png",
         "is_background_skill": false,
         "name": "The Fate of Bjuna",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3795,7 +3820,7 @@
         "image_path": "wh_main_spell_death_the_purple_sun_of_xereus.png",
         "is_background_skill": false,
         "name": "The Purple Sun of Xereus",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4173,11 +4198,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -4199,7 +4224,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4235,7 +4260,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -4268,20 +4293,20 @@
     [
       {
         "key": "wh3_main_skill_node_nur_plagueridden_death_campaign_01",
-        "image_path": "campaign_experience.png",
+        "image_path": "campaign_replenishment.png",
         "is_background_skill": false,
-        "name": "Training",
-        "description": "This champion extols discipline and fear away from the battlefield as much as on it.",
+        "name": "Replenish Troops",
+        "description": "Those in the army can find succour or be replenished by the power of this champion.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "experience.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
-                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 4%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 4
               }
             ]
           },
@@ -4289,12 +4314,12 @@
             "unlocked_at_rank": 5,
             "effects": [
               {
-                "icon": "experience.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
-                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 7%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 7
               }
             ]
           },
@@ -4302,17 +4327,17 @@
             "unlocked_at_rank": 10,
             "effects": [
               {
-                "icon": "experience.png",
+                "icon": "replenishment.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
-                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "description": "Replenish Troops action: Replenishment rate is increased by an additional 10%",
+                "key": "wh2_main_effect_agent_action_assist_army_replenish_troops_buff",
+                "value": 10
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_all_hero_assist_army_training",
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_replenish_troops",
         "tier": 0,
         "indent": 5,
         "points_on_creation": 0,
@@ -4332,7 +4357,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -1",
+                "description": "Control: -1\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -1
               },
@@ -4340,7 +4365,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 1
               },
@@ -4361,7 +4386,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -2",
+                "description": "Control: -2\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -2
               },
@@ -4369,7 +4394,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 2
               },
@@ -4390,7 +4415,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -3",
+                "description": "Control: -3\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -3
               },
@@ -4398,7 +4423,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 3
               },
@@ -4662,7 +4687,7 @@
       "key": "wh3_main_skill_node_nur_plagueridden_death_campaign_actions_dummy",
       "image_path": "battle_attack.png",
       "is_background_skill": false,
-      "name": " ",
+      "name": "",
       "description": "",
       "levels": [
         {
@@ -4672,7 +4697,7 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
-              "key": "wh2_main_effect_agent_action_enable_spy_assist_army_training",
+              "key": "wh2_main_effect_agent_action_enable_spy_assist_army_replenish_troops",
               "value": 1
             },
             {
@@ -4719,7 +4744,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: -1",
+              "description": "Control: -1\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
               "value": -1
             },
@@ -4727,7 +4752,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: +1",
+              "description": "Control: +1\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
               "value": 1
             }
@@ -4755,9 +4780,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -4788,10 +4813,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -4819,7 +4852,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -4855,7 +4888,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -4863,7 +4896,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -4891,9 +4924,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -4960,20 +4993,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -5027,25 +5052,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -5071,17 +5096,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -5107,17 +5132,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -5143,17 +5168,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -5179,7 +5204,7 @@
               "icon": "corruption_nurgle.png",
               "priority": 104,
               "is_positive_value_good": true,
-              "description": "Nurgle corruption: +1",
+              "description": "Nurgle corruption: +1\n\t(local province)",
               "key": "wh3_main_effect_corruption_nurgle_characters",
               "value": 1
             }
@@ -5263,7 +5288,7 @@
               "icon": "public_order.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Control: -3",
+              "description": "Control: -3\n\t(local enemy province)",
               "key": "wh_main_effect_public_order_characters_negative",
               "value": -3
             }
@@ -5311,7 +5336,7 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Spirit Leech [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [

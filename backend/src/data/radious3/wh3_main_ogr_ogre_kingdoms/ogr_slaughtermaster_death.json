@@ -251,7 +251,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -261,7 +260,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -287,7 +287,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               },
@@ -382,7 +382,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               },
@@ -424,7 +424,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               },
@@ -432,7 +432,7 @@
                 "icon": "morale.png",
                 "priority": 410,
                 "is_positive_value_good": true,
-                "description": "Leadership: +2",
+                "description": "Leadership: +2\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_leadership",
                 "value": 2
               }
@@ -466,7 +466,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               },
@@ -1377,7 +1377,7 @@
         "image_path": "wh_main_spell_death_spirit_leech.png",
         "is_background_skill": false,
         "name": "Spirit Leech",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1713,7 +1713,7 @@
         "image_path": "wh_main_lore_passive_life_leeching.png",
         "is_background_skill": false,
         "name": "Life-Leeching",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1758,7 +1758,7 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "mana_max_depletion_mod": 0.2,
+                          "mana_max_depletion_mod": 0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1789,85 +1789,8 @@
         "image_path": "wh_main_spell_death_aspect_of_the_dreadknight.png",
         "is_background_skill": false,
         "name": "Aspect of the Dread Knight",
-        "description": " ",
+        "description": "",
         "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Aspect of the Dread Knight\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_aspect_of_the_dreadknight",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
-                      "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
-                      "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Aspect of the Dread Knight",
-                      "active_time": 20,
-                      "recharge_time": 30,
-                      "wind_up_time": 1,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
-                      "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 4,
-                      "target_self": true,
-                      "phases": [
-                        {
-                          "duration": 20,
-                          "effect_type": "positive",
-                          "imbue_magical": true,
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null,
-                          "attributes": [
-                            {
-                              "key": "causes_terror",
-                              "description": " Can Cause Terror",
-                              "attribute_type": "positive"
-                            }
-                          ],
-                          "stat_effects": [
-                            {
-                              "value": 6,
-                              "stat": "stat_morale",
-                              "how": "add",
-                              "description": "+6 Leadership",
-                              "sort_order": 1,
-                              "icon": "icon_stat_morale.png"
-                            },
-                            {
-                              "value": 25,
-                              "stat": "stat_resistance_magic",
-                              "how": "add",
-                              "description": "+25 Spell Resistance",
-                              "sort_order": 10,
-                              "icon": "resistance_magic.png"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_aspect_of_the_dreadknight",
-                "value": 1
-              }
-            ]
-          },
           {
             "effects": [
               {
@@ -1911,6 +1834,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -1974,6 +1902,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2060,6 +1993,11 @@
                           "recharge_time": null,
                           "attributes": [
                             {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
+                            {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
                               "attribute_type": "positive"
@@ -2122,6 +2060,11 @@
                           "freeze_recharge": false,
                           "recharge_time": null,
                           "attributes": [
+                            {
+                              "key": "causes_fear",
+                              "description": " Can Cause Fear",
+                              "attribute_type": "positive"
+                            },
                             {
                               "key": "causes_terror",
                               "description": " Can Cause Terror",
@@ -2189,7 +2132,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_death_02_aspect_of_the_dreadknight",
+        "character_skill_key": "wh2_main_skill_all_magic_death_02_aspect_of_the_dreadknight_lord",
         "tier": 2,
         "indent": 3,
         "points_on_creation": 0,
@@ -2205,7 +2148,7 @@
         "image_path": "wh_main_spell_death_soulblight.png",
         "is_background_skill": false,
         "name": "Soulblight",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2281,11 +2224,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_soulblight",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -2605,7 +2544,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_death_04_soulblight",
+        "character_skill_key": "wh2_main_skill_all_magic_death_04_soulblight_lord",
         "tier": 3,
         "indent": 3,
         "points_on_creation": 0,
@@ -2621,7 +2560,7 @@
         "image_path": "wh_main_spell_death_doom_and_darkness.png",
         "is_background_skill": false,
         "name": "Doom & Darkness",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2689,11 +2628,7 @@
                 ],
                 "key": "wh_main_effect_ability_enable_doom_and_darkness",
                 "value": 1
-              }
-            ]
-          },
-          {
-            "effects": [
+              },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
@@ -2981,7 +2916,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_death_05_doom_and_darkness",
+        "character_skill_key": "wh2_main_skill_all_magic_death_05_doom_and_darkness_lord",
         "tier": 4,
         "indent": 3,
         "points_on_creation": 0,
@@ -2995,25 +2930,78 @@
       },
       {
         "key": "rad_wh3_part3_skill_node_ogr_slaughtermaster_death_magic_2",
-        "image_path": "character_bonus_vs_infantry.png",
+        "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
-        "name": "Meat Cleaver",
-        "description": "Once the slaughter begins, every foe is but meat yet to be carved.",
+        "name": "Evasion",
+        "description": "",
         "levels": [
           {
             "effects": [
               {
-                "icon": "bonus_vs_small_character.png",
-                "priority": 180,
+                "icon": "general_ability.png",
+                "priority": 310,
                 "is_positive_value_good": true,
-                "description": "Bonus vs Infantry: +8",
-                "key": "wh_main_effect_character_stat_bonus_vs_infantry",
-                "value": 8
+                "description": "Passive ability: \"Evasion\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_evasion",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_passive_evasion",
+                      "icon_name": "wh_main_character_passive_evasion",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Evasion",
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.1,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.1 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+5 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_evasion",
+                "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh3_main_skill_ogr_magic_meat_cleaver",
+        "character_skill_key": "wh_main_skill_all_magic_all_06_evasion",
         "tier": 5,
         "indent": 3,
         "points_on_creation": 0,
@@ -3069,11 +3057,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3094,85 +3082,8 @@
         "image_path": "wh_main_spell_death_the_fate_of_bjuna.png",
         "is_background_skill": false,
         "name": "The Fate of Bjuna",
-        "description": " ",
+        "description": "",
         "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"The Fate of Bjuna\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_the_fate_of_bjuna",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_the_fate_of_bjuna",
-                      "icon_name": "wh_main_spell_death_the_fate_of_bjuna",
-                      "overpower_option": "",
-                      "type": {
-                        "key": "wh_type_direct_damage",
-                        "icon_path": "icon_spell_direct_damage.png",
-                        "description": "Direct Damage"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Fate of Bjuna",
-                      "ui_effects": [
-                        {
-                          "key": "wh_main_all_direct_damage",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes damage to combatants"
-                        },
-                        {
-                          "key": "wh_dlc08_direct_damage_medium_unit",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Strong vs 25 men unit or above"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_multiple",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
-                        }
-                      ],
-                      "active_time": 20,
-                      "recharge_time": 45,
-                      "wind_up_time": 5,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 100,
-                      "mana_cost": 11,
-                      "target_self": false,
-                      "phases": [
-                        {
-                          "duration": 20,
-                          "effect_type": "negative",
-                          "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_the_fate_of_bjuna",
-                "value": 1
-              }
-            ]
-          },
           {
             "effects": [
               {
@@ -3267,7 +3178,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_death_09_the_fate_of_bjuna",
+        "character_skill_key": "wh2_main_skill_all_magic_death_09_the_fate_of_bjuna_lord",
         "tier": 8,
         "indent": 3,
         "points_on_creation": 0,
@@ -3283,70 +3194,8 @@
         "image_path": "wh_main_spell_death_the_purple_sun_of_xereus.png",
         "is_background_skill": false,
         "name": "The Purple Sun of Xereus",
-        "description": " ",
+        "description": "",
         "levels": [
-          {
-            "effects": [
-              {
-                "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"The Purple Sun of Xereus\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_the_purple_sun_of_xereus",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_death_the_purple_sun_of_xereus",
-                      "icon_name": "wh_main_spell_death_the_purple_sun_of_xereus",
-                      "overpower_option": "wh_main_spell_death_the_purple_sun_of_xereus_upgraded",
-                      "type": {
-                        "key": "wh_type_vortex",
-                        "icon_path": "icon_spell_vortex.png",
-                        "description": "Vortex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "The Purple Sun of Xereus",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_spell_huge_vortex",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Huge, randomly-moving area of effect"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_units",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple units"
-                        }
-                      ],
-                      "active_time": 12,
-                      "recharge_time": 90,
-                      "wind_up_time": 5,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 150,
-                      "mana_cost": 19,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_the_purple_sun_of_xereus",
-                "value": 1
-              }
-            ]
-          },
           {
             "effects": [
               {
@@ -3608,7 +3457,7 @@
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_death_10_the_purple_sun_of_xereus",
+        "character_skill_key": "wh2_main_skill_all_magic_death_10_the_purple_sun_of_xereus_lord",
         "tier": 9,
         "indent": 3,
         "points_on_creation": 0,
@@ -3622,9 +3471,9 @@
       },
       {
         "key": "rad_wh3_part3_skill_node_ogr_slaughtermaster_death_magic_4",
-        "image_path": "wh3_main_character_abilities_extra_ingredients.png",
+        "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
-        "name": "Extra Ingredients",
+        "name": "Arcane Conduit",
         "description": "",
         "levels": [
           {
@@ -3633,14 +3482,14 @@
                 "icon": "general_ability.png",
                 "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Ability: \"Extra Ingredients\"",
+                "description": "Passive ability: \"Arcane Conduit\"",
                 "related_abilities": [
                   {
-                    "effect": "wh3_main_effect_ability_enable_extra_ingredients",
+                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh3_main_character_abilities_extra_ingredients",
-                      "icon_name": "wh3_main_character_abilities_extra_ingredients",
+                      "key": "wh_main_character_abilities_arcane_conduit",
+                      "icon_name": "wh_main_character_abilities_arcane_conduit",
                       "overpower_option": "",
                       "type": {
                         "key": "wh_type_augment_of_the_winds",
@@ -3648,10 +3497,8 @@
                         "description": "Augment of the Winds"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Extra Ingredients",
-                      "active_time": 40,
-                      "recharge_time": 90,
-                      "passive": false,
+                      "description": "Arcane Conduit",
+                      "passive": true,
                       "effect_range": 0,
                       "affect_self": true,
                       "target_friends": false,
@@ -3661,10 +3508,9 @@
                       "target_self": false,
                       "phases": [
                         {
-                          "duration": 40,
+                          "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 1.6,
-                          "mana_max_depletion_mod": 0.3,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3673,13 +3519,13 @@
                     }
                   }
                 ],
-                "key": "wh3_main_effect_ability_enable_extra_ingredients",
+                "key": "wh_main_effect_ability_enable_arcane_conduit",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh3_main_skill_ogr_magic_all_11_extra_ingredients",
+        "character_skill_key": "wh_main_skill_all_magic_all_11_arcane_conduit",
         "tier": 10,
         "indent": 3,
         "points_on_creation": 0,
@@ -3707,7 +3553,7 @@
                 "icon": "morale_character.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Leadership: +10",
+                "description": "Leadership: +10\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_leadership",
                 "value": 10
               },
@@ -3715,7 +3561,7 @@
                 "icon": "ammo_character.png",
                 "priority": 210,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20%",
+                "description": "Ammunition: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_character_stat_ammunition",
                 "value": 20
               }
@@ -3743,7 +3589,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Gnoblars, Lucky Gits, Blood Gnoblars (Spears) units",
+                "description": "Weapon Strength: +3% for Gnoblars, Lucky Gits, Blood Gnoblars (Spears) units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_weapon_strength",
                 "value": 3
               },
@@ -3751,7 +3597,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +3 for Gnoblars, Lucky Gits, Blood Gnoblars, and Gnoblar Trappers units",
+                "description": "Armour: +3 for Gnoblars, Lucky Gits, Blood Gnoblars, and Gnoblar Trappers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_armour",
                 "value": 3
               },
@@ -3759,7 +3605,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +3% for Gnoblar Trappers, Scraplaunchers, and Blood Gnoblars (Dual Weapons) units",
+                "description": "Missile Strength: +3% for Gnoblar Trappers, Scraplaunchers, and Blood Gnoblars (Dual Weapons) units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_missile_strength",
                 "value": 3
               }
@@ -3771,7 +3617,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Gnoblars, Lucky Gits, Blood Gnoblars (Spears) units",
+                "description": "Weapon Strength: +6% for Gnoblars, Lucky Gits, Blood Gnoblars (Spears) units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_weapon_strength",
                 "value": 6
               },
@@ -3779,7 +3625,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +4 for Gnoblars, Lucky Gits, Blood Gnoblars, and Gnoblar Trappers units",
+                "description": "Armour: +4 for Gnoblars, Lucky Gits, Blood Gnoblars, and Gnoblar Trappers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_armour",
                 "value": 4
               },
@@ -3787,7 +3633,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +6% for Gnoblar Trappers, Scraplaunchers, and Blood Gnoblars (Dual Weapons) units",
+                "description": "Missile Strength: +6% for Gnoblar Trappers, Scraplaunchers, and Blood Gnoblars (Dual Weapons) units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_missile_strength",
                 "value": 6
               }
@@ -3799,7 +3645,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Gnoblars, Lucky Gits, Blood Gnoblars (Spears) units",
+                "description": "Weapon Strength: +9% for Gnoblars, Lucky Gits, Blood Gnoblars (Spears) units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_weapon_strength",
                 "value": 9
               },
@@ -3807,7 +3653,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +5 for Gnoblars, Lucky Gits, Blood Gnoblars, and Gnoblar Trappers units",
+                "description": "Armour: +5 for Gnoblars, Lucky Gits, Blood Gnoblars, and Gnoblar Trappers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_armour",
                 "value": 5
               },
@@ -3815,7 +3661,7 @@
                 "icon": "ranged_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Missile Strength: +9% for Gnoblar Trappers, Scraplaunchers, and Blood Gnoblars (Dual Weapons) units",
+                "description": "Missile Strength: +9% for Gnoblar Trappers, Scraplaunchers, and Blood Gnoblars (Dual Weapons) units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_quick_snack_missile_strength",
                 "value": 9
               }
@@ -3846,7 +3692,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus +4 for Bulls, Skull Rocks, and Gorgers units",
+                "description": "Charge Bonus +4 for Bulls, Skull Rocks, and Gorgers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_always_hungry_charge",
                 "value": 4
               },
@@ -3854,7 +3700,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Bulls, Skull Rocks, and Gorgers units",
+                "description": "Weapon Strength: +3% for Bulls, Skull Rocks, and Gorgers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_always_hungry_weapon_strength",
                 "value": 3
               }
@@ -3866,7 +3712,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus +8 for Bulls, Skull Rocks, and Gorgers units",
+                "description": "Charge Bonus +8 for Bulls, Skull Rocks, and Gorgers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_always_hungry_charge",
                 "value": 8
               },
@@ -3874,7 +3720,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Bulls, Skull Rocks, and Gorgers units",
+                "description": "Weapon Strength: +6% for Bulls, Skull Rocks, and Gorgers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_always_hungry_weapon_strength",
                 "value": 6
               }
@@ -3886,7 +3732,7 @@
                 "icon": "charge.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Charge Bonus +12 for Bulls, Skull Rocks, and Gorgers units",
+                "description": "Charge Bonus +12 for Bulls, Skull Rocks, and Gorgers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_always_hungry_charge",
                 "value": 12
               },
@@ -3894,7 +3740,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Bulls, Skull Rocks, and Gorgers units",
+                "description": "Weapon Strength: +9% for Bulls, Skull Rocks, and Gorgers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_always_hungry_weapon_strength",
                 "value": 9
               }
@@ -3925,7 +3771,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +4 for Ironguts, Ironskin Ogres, and All Cavalry units",
+                "description": "Armour: +4 for Ironguts, Ironskin Ogres, and All Cavalry units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_gold_is_glitter_armour",
                 "value": 4
               },
@@ -3933,7 +3779,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Ironguts, Ironskin Ogres, and All Cavalry units",
+                "description": "Weapon Strength: +3% for Ironguts, Ironskin Ogres, and All Cavalry units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_gold_is_glitter_weapon_strength",
                 "value": 3
               }
@@ -3945,7 +3791,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Ironguts, Ironskin Ogres, and All Cavalry units",
+                "description": "Armour: +6 for Ironguts, Ironskin Ogres, and All Cavalry units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_gold_is_glitter_armour",
                 "value": 6
               },
@@ -3953,7 +3799,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Ironguts, Ironskin Ogres, and All Cavalry units",
+                "description": "Weapon Strength: +6% for Ironguts, Ironskin Ogres, and All Cavalry units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_gold_is_glitter_weapon_strength",
                 "value": 6
               }
@@ -3965,7 +3811,7 @@
                 "icon": "armour.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Armour: +8 for Ironguts, Ironskin Ogres, and All Cavalry units",
+                "description": "Armour: +8 for Ironguts, Ironskin Ogres, and All Cavalry units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_gold_is_glitter_armour",
                 "value": 8
               },
@@ -3973,7 +3819,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Ironguts, Ironskin Ogres, and All Cavalry units",
+                "description": "Weapon Strength: +9% for Ironguts, Ironskin Ogres, and All Cavalry units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_gold_is_glitter_weapon_strength",
                 "value": 9
               }
@@ -4004,7 +3850,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +2 for All Maneaters, and All Manbiters units",
+                "description": "Melee Attack +2 for All Maneaters, and All Manbiters units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_gastronomic_tour_melee_attack",
                 "value": 2
               },
@@ -4012,7 +3858,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +3 for All Maneaters, and All Manbiters units",
+                "description": "Melee Defence +3 for All Maneaters, and All Manbiters units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_gastronomic_tour_melee_defence",
                 "value": 3
               }
@@ -4024,7 +3870,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +4 for All Maneaters, and All Manbiters units",
+                "description": "Melee Attack +4 for All Maneaters, and All Manbiters units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_gastronomic_tour_melee_attack",
                 "value": 4
               },
@@ -4032,7 +3878,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +6 for All Maneaters, and All Manbiters units",
+                "description": "Melee Defence +6 for All Maneaters, and All Manbiters units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_gastronomic_tour_melee_defence",
                 "value": 6
               }
@@ -4044,7 +3890,7 @@
                 "icon": "melee.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Attack +6 for All Maneaters, and All Manbiters units",
+                "description": "Melee Attack +6 for All Maneaters, and All Manbiters units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_gastronomic_tour_melee_attack",
                 "value": 6
               },
@@ -4052,7 +3898,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +8 for All Maneaters, and All Manbiters units",
+                "description": "Melee Defence +8 for All Maneaters, and All Manbiters units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_a_gastronomic_tour_melee_defence",
                 "value": 8
               }
@@ -4083,7 +3929,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +3% for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units",
+                "description": "Weapon Strength: +3% for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_the_big_hunters_weapon_strength",
                 "value": 3
               },
@@ -4091,7 +3937,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +4 for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units",
+                "description": "Melee Defence +4 for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_the_big_hunters_melee_defence",
                 "value": 4
               }
@@ -4103,7 +3949,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +6% for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units",
+                "description": "Weapon Strength: +6% for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_the_big_hunters_weapon_strength",
                 "value": 6
               },
@@ -4111,7 +3957,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +6 for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units",
+                "description": "Melee Defence +6 for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_the_big_hunters_melee_defence",
                 "value": 6
               }
@@ -4123,7 +3969,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Weapon Strength: +9% for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units",
+                "description": "Weapon Strength: +9% for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_the_big_hunters_weapon_strength",
                 "value": 9
               },
@@ -4131,7 +3977,7 @@
                 "icon": "defence.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Melee Defence +8 for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units",
+                "description": "Melee Defence +8 for Sons of the Mountain, Sabretusks, Stonehorns, and Giants units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_the_big_hunters_melee_defence",
                 "value": 8
               }
@@ -4162,7 +4008,7 @@
                 "icon": "icon_stat_reload_time_character.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +6% for Ironblasters, Leadbelchers, and Firebelchers units",
+                "description": "Reload Time Reduction: +6% for Ironblasters, Leadbelchers, and Firebelchers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_angry_fists_teachings_reload",
                 "value": 6
               }
@@ -4174,7 +4020,7 @@
                 "icon": "icon_stat_reload_time_character.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +9% for Ironblasters, Leadbelchers, and Firebelchers units",
+                "description": "Reload Time Reduction: +9% for Ironblasters, Leadbelchers, and Firebelchers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_angry_fists_teachings_reload",
                 "value": 9
               }
@@ -4186,7 +4032,7 @@
                 "icon": "icon_stat_reload_time_character.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Reload Time Reduction: +12% for Ironblasters, Leadbelchers, and Firebelchers units",
+                "description": "Reload Time Reduction: +12% for Ironblasters, Leadbelchers, and Firebelchers units\n\t(Lord's army)",
                 "key": "rad_wh3_part3_effect_ogr_angry_fists_teachings_reload",
                 "value": 12
               }
@@ -4210,7 +4056,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4299,9 +4145,9 @@
             "effects": [
               {
                 "icon": "armour.png",
-                "priority": 402,
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Armour: +10 for Ironguts, Gnoblars, and Ogre Bulls units (Rank 7 and above)",
+                "description": "Armour: +10 for Ironguts, Gnoblars, and Ogre Bulls units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_armour_ogr_ironguts_gnoblars_ogres_rank7",
                 "value": 10
               },
@@ -4309,7 +4155,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +5 for Ironguts, Gnoblars and Ogre Bulls units (Rank 7 and above)",
+                "description": "Leadership: +5 for Ironguts, Gnoblars and Ogre Bulls units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_leadership_ogr_ironguts_gnoblars_ogres_rank7",
                 "value": 5
               },
@@ -4317,7 +4163,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Ironguts, Gnoblars and Ogre Bulls units (Rank 7 and above)",
+                "description": "Weapon strength: +7% for Ironguts, Gnoblars and Ogre Bulls units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_weapon_strength_ogr_ironguts_gnoblars_ogres_rank7",
                 "value": 7
               }
@@ -4348,7 +4194,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Gnoblar Trappers, Leadbelchers, Gnoblar Scraplauncher and Ironblasters units (Rank 7 and above)",
+                "description": "Speed: +10% for Gnoblar Trappers, Leadbelchers, Gnoblar Scraplauncher and Ironblasters units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_speed_ogr_gnoblars_leadbelchers_artillery_rank7",
                 "value": 10
               },
@@ -4356,7 +4202,7 @@
                 "icon": "accuracy.png",
                 "priority": 532,
                 "is_positive_value_good": true,
-                "description": "Range: +10% for Gnoblar Trappers, Leadbelchers, Gnoblar Scraplauncher and Ironblasters units (Rank 7 and above)",
+                "description": "Range: +10% for Gnoblar Trappers, Leadbelchers, Gnoblar Scraplauncher and Ironblasters units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_range_ogr_gnoblars_leadbelchers_artillery_rank7",
                 "value": 10
               },
@@ -4364,7 +4210,7 @@
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +15% for Gnoblar Trappers, Leadbelchers, Gnoblar Scraplauncher and Ironblasters units (Rank 7 and above)",
+                "description": "Reload time reduction: +15% for Gnoblar Trappers, Leadbelchers, Gnoblar Scraplauncher and Ironblasters units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_reload_time_reduction_ogr_gnoblars_leadbelchers_artillery_rank7",
                 "value": 15
               }
@@ -4395,7 +4241,7 @@
                 "icon": "morale.png",
                 "priority": 412,
                 "is_positive_value_good": true,
-                "description": "Leadership: +4 for Mournfang Cavalry, Crushers, Stonehorn and Sabretusk Pack units (Rank 7 and above)",
+                "description": "Leadership: +4 for Mournfang Cavalry, Crushers, Stonehorn and Sabretusk Pack units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_leadership_ogr_mournfangs_crushers_stonehorns_sabretusks_rank7",
                 "value": 4
               },
@@ -4403,7 +4249,7 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Mournfang Cavalry, Crushers, Stonehorn and Sabretusk Pack units (Rank 7 and above)",
+                "description": "Speed: +10% for Mournfang Cavalry, Crushers, Stonehorn and Sabretusk Pack units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_speed_ogr_mournfangs_crushers_stonehorns_sabretusks_rank7",
                 "value": 10
               },
@@ -4411,7 +4257,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +7 for Mournfang Cavalry, Crushers, Stonehorn and Sabretusk Pack units (Rank 7 and above)",
+                "description": "Melee attack: +7 for Mournfang Cavalry, Crushers, Stonehorn and Sabretusk Pack units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_melee_attack_ogr_mournfangs_crushers_stonehorns_sabretusks_rank7",
                 "value": 7
               }
@@ -4442,7 +4288,7 @@
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +7 for Maneaters, Gorgers and Giant units (Rank 7 and above)",
+                "description": "Melee attack: +7 for Maneaters, Gorgers and Giant units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_melee_attack_ogr_maneaters_gorgers_giants_rank7",
                 "value": 7
               },
@@ -4450,7 +4296,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 462,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Maneaters, Gorgers and Giant units (Rank 7 and above)",
+                "description": "Weapon strength: +7% for Maneaters, Gorgers and Giant units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_weapon_strength_ogr_maneaters_gorgers_giants_rank7",
                 "value": 7
               },
@@ -4458,7 +4304,7 @@
                 "icon": "resistance_missile.png",
                 "priority": 582,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Maneaters, Gorgers and Giant units (Rank 7 and above)",
+                "description": "Missile resistance: 15% for Maneaters, Gorgers and Giant units (Rank 7 and above)\n\t(Lord's army)",
                 "key": "wh3_main_effect_force_stat_missile_resistance_ogr_maneaters_gorgers_giants_rank7",
                 "value": 15
               }
@@ -4482,7 +4328,7 @@
         "image_path": "wh_main_character_abilities_stand_your_ground.png",
         "is_background_skill": false,
         "name": "Stand Your Ground!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4616,7 +4462,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 3
               }
@@ -4628,7 +4474,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 6
               }
@@ -4640,7 +4486,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 9
               }
@@ -4671,7 +4517,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
+                "description": "Growth: +10\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 10
               }
@@ -4683,7 +4529,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +25",
+                "description": "Growth: +25\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 25
               }
@@ -4695,7 +4541,7 @@
                 "icon": "growth.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Growth: +40",
+                "description": "Growth: +40\n\t(local province)",
                 "key": "wh_main_effect_province_growth_characters",
                 "value": 40
               }
@@ -4726,7 +4572,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -1
               }
@@ -4738,7 +4584,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -2
               }
@@ -4750,7 +4596,7 @@
                 "icon": "corruption.png",
                 "priority": 104,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_corruption_reduction_characters",
                 "value": -3
               }
@@ -4781,7 +4627,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 1
               }
@@ -4793,7 +4639,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 2
               }
@@ -4805,7 +4651,7 @@
                 "icon": "public_order.png",
                 "priority": 6,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh_main_effect_public_order_characters",
                 "value": 3
               }
@@ -4958,7 +4804,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -3%",
+                "description": "Upkeep: -3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -3
               }
@@ -4970,7 +4816,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -6%",
+                "description": "Upkeep: -6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -6
               }
@@ -4982,7 +4828,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -9%",
+                "description": "Upkeep: -9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -9
               }
@@ -5013,7 +4859,7 @@
                 "icon": "meat_bundle.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Meat provided by camps +50%",
+                "description": "Meat provided by camps +50%\n\t(Lord's army)",
                 "key": "wh3_main_effect_ogr_camp_meat_local_sphere_of_influence_mod",
                 "value": 50
               }
@@ -5025,7 +4871,7 @@
                 "icon": "meat_bundle.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Meat provided by camps +100%",
+                "description": "Meat provided by camps +100%\n\t(Lord's army)",
                 "key": "wh3_main_effect_ogr_camp_meat_local_sphere_of_influence_mod",
                 "value": 100
               }
@@ -5037,7 +4883,7 @@
                 "icon": "meat_bundle.png",
                 "priority": 30,
                 "is_positive_value_good": true,
-                "description": "Meat provided by camps +150%",
+                "description": "Meat provided by camps +150%\n\t(Lord's army)",
                 "key": "wh3_main_effect_ogr_camp_meat_local_sphere_of_influence_mod",
                 "value": 150
               }
@@ -5068,7 +4914,7 @@
                 "icon": "income.png",
                 "priority": 162,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +3%",
+                "description": "Income from all buildings: +3%\n\t(local province)",
                 "key": "wh_main_effect_economy_gdp_mod_all",
                 "value": 3
               }
@@ -5080,7 +4926,7 @@
                 "icon": "income.png",
                 "priority": 162,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +6%",
+                "description": "Income from all buildings: +6%\n\t(local province)",
                 "key": "wh_main_effect_economy_gdp_mod_all",
                 "value": 6
               }
@@ -5092,7 +4938,7 @@
                 "icon": "income.png",
                 "priority": 162,
                 "is_positive_value_good": true,
-                "description": "Income from all buildings: +9%",
+                "description": "Income from all buildings: +9%\n\t(local province)",
                 "key": "wh_main_effect_economy_gdp_mod_all",
                 "value": 9
               }
@@ -5124,7 +4970,7 @@
                 "icon": "military_spending.png",
                 "priority": 70,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -8%",
+                "description": "Upkeep: -8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_upkeep",
                 "value": -8
               },
@@ -5156,7 +5002,7 @@
                 "icon": "experience.png",
                 "priority": 117,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
+                "description": "Recruit rank: +1\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
@@ -5185,10 +5031,88 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Spirit Leech [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Aspect of the Dread Knight\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_aspect_of_the_dreadknight",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "icon_name": "wh_main_spell_death_aspect_of_the_dreadknight",
+                    "overpower_option": "wh_main_spell_death_aspect_of_the_dreadknight_upgraded",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Aspect of the Dread Knight",
+                    "active_time": 20,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": true,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 200,
+                    "mana_cost": 4,
+                    "target_self": true,
+                    "phases": [
+                      {
+                        "duration": 20,
+                        "effect_type": "positive",
+                        "imbue_magical": true,
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "attributes": [
+                          {
+                            "key": "causes_fear",
+                            "description": " Can Cause Fear",
+                            "attribute_type": "positive"
+                          },
+                          {
+                            "key": "causes_terror",
+                            "description": " Can Cause Terror",
+                            "attribute_type": "positive"
+                          }
+                        ],
+                        "stat_effects": [
+                          {
+                            "value": 6,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "+6 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          },
+                          {
+                            "value": 25,
+                            "stat": "stat_resistance_magic",
+                            "how": "add",
+                            "description": "+25 Spell Resistance",
+                            "sort_order": 10,
+                            "icon": "resistance_magic.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_aspect_of_the_dreadknight",
+              "value": 1
+            },
             {
               "icon": "magic_character.png",
               "priority": 290,
@@ -5266,7 +5190,7 @@
         }
       ],
       "character_skill_node_set_key": "rad_wh3_part3_agent_skill_node_ogr_slaughtermaster_death",
-      "character_skill_key": "wh_main_skill_all_magic_death_dummy_spirit_leech",
+      "character_skill_key": "wh2_main_skill_all_magic_death_dummy_spirit_leech_aspect_of_the_dreadknight",
       "tier": 11,
       "indent": 3,
       "points_on_creation": 1,
@@ -5286,9 +5210,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -5319,10 +5243,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -5350,7 +5282,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -5422,7 +5354,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -5430,7 +5362,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -5458,9 +5390,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -5527,20 +5459,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -5594,25 +5518,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -5638,17 +5562,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -5674,17 +5598,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -5710,17 +5634,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -5782,7 +5706,7 @@
               "icon": "meat_bundle.png",
               "priority": 31,
               "is_positive_value_good": true,
-              "description": "Meat gained from battles: +10%",
+              "description": "Meat gained from battles: +10%\n\t(Lord's army)",
               "key": "wh3_main_tech_ogr_postbattle_meat",
               "value": 10
             }
@@ -5810,9 +5734,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +4%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 4
+              "value": 20
             }
           ]
         }
@@ -5894,7 +5818,7 @@
               "icon": "corruption.png",
               "priority": 104,
               "is_positive_value_good": false,
-              "description": "Corruption: -1",
+              "description": "Corruption: -1\n\t(local province)",
               "key": "wh3_main_effect_corruption_reduction_characters",
               "value": -1
             }

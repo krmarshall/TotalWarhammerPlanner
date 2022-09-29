@@ -22,46 +22,79 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"Souls for the True Gods\", while this Mount is equipped, for Cavalry units",
+                "description": "Passive Ability: \"Souls for the True Gods\", while this Mount is equipped, for Cavalry units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_chs_ancillary_horse",
                 "value": 1
+              },
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 500,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +1",
+                "value": 1,
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_faction"
               }
             ],
             "auto_unlock_at_rank": 10
           }
         ],
         "character_skill_key": "wh_main_skill_chs_lord_unique_archaon_dorghar",
-        "tier": 4,
+        "tier": 3,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
         "visible_in_ui": true
       },
       {
-        "key": "wh_main_skill_node_chs_archaon_unique_06",
-        "image_path": "character_charge.png",
+        "key": "wh_main_skill_node_chs_archaon_unique_auth",
+        "image_path": "character_chaos_corruption.png",
         "is_background_skill": false,
-        "name": "The Swords of Chaos",
-        "description": "The Swords of Chaos are Archaon's warband, a cadre of hardened companions that have been forged over many dread quests.",
+        "name": "Rule of Chaos",
+        "description": "The dominion of Chaos grows larger each day; soon the whole world will be under its sway.",
         "levels": [
           {
-            "unlocked_at_rank": 6,
             "effects": [
               {
-                "icon": "charge.png",
-                "priority": 501,
+                "icon": "corruption_chaos.png",
+                "priority": 1,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +9% for Chaos Knights units",
-                "key": "wh_main_effect_force_stat_charge_bonus_pct_chaos_knights",
-                "value": 9
+                "description": "Undivided Authority: +3\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +4\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 4
+              }
+            ],
+            "auto_unlock_at_rank": 11
+          },
+          {
+            "unlocked_at_rank": 21,
+            "effects": [
+              {
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "Undivided Authority: +5\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_character",
+                "value": 5
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_unique_archaon_the_swords_of_chaos",
-        "tier": 5,
+        "character_skill_key": "wh3_dlc20_skill_authority_und_lord",
+        "tier": 4,
         "indent": 0,
-        "points_on_creation": 0,
+        "points_on_creation": 2,
         "required_num_parents": 0,
         "visible_in_ui": true
       },
@@ -139,7 +172,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_unique_10",
-        "image_path": "battle_speed.png",
+        "image_path": "character_speed.png",
         "is_background_skill": false,
         "name": "Hearts of Iron",
         "description": "The followers of Chaos need not to rest, they march on with iron hearts desperate to harvest souls.",
@@ -150,7 +183,7 @@
                 "icon": "vigour.png",
                 "priority": 101,
                 "is_positive_value_good": false,
-                "description": "Vigour loss reduction: -15%",
+                "description": "Vigour loss reduction: -15%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_vigour_loss_reduction",
                 "value": -15
               }
@@ -208,17 +241,25 @@
                 "icon": "",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "[HIDDEN - do not translate] Used to increase lord rank when replacing a lord (target the effect at forces factionwide) - use in conjunction with a shown effect that targets provinces factionwide",
+                "description": "[HIDDEN - do not translate] Used to increase lord rank when replacing a lord (target the effect at forces factionwide) - use in conjunction with a shown effect that targets provinces factionwide\n\t(all armies)",
                 "key": "wh_main_faction_xp_increase_generals_hidden",
-                "value": 2
+                "value": 3
               },
               {
                 "icon": "army.png",
                 "priority": 51,
                 "is_positive_value_good": true,
-                "description": "Lord recruit rank: +2",
+                "description": "Lord recruit rank: +3\n\t(factionwide)",
                 "key": "wh_main_faction_xp_increase_generals",
-                "value": 2
+                "value": 3
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain: +15%\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_xp_gain_all_units",
+                "value": 15
               }
             ]
           }
@@ -244,16 +285,16 @@
                 "icon": "military_spending.png",
                 "priority": 105,
                 "is_positive_value_good": false,
-                "description": "Upkeep: -15% for Chaos Warrior units",
+                "description": "Upkeep: -15% for Chaos Warriors units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_skill_upkeep_chaos_warriors",
                 "value": -15
               },
               {
-                "icon": "treasury.png",
-                "priority": 106,
+                "icon": "military_spending.png",
+                "priority": 120,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -20% for Chaos Warrior units",
-                "key": "wh_main_effect_recruitment_cost_reduction_chaos_warriors",
+                "description": "Warband upgrade cost: -20% for Undivided units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_upgrade_cost_und",
                 "value": -20
               }
             ]
@@ -283,7 +324,7 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Chaos Chosen units",
+                "description": "Melee defence: +8 for Chaos Chosen units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_melee_defence_chosen",
                 "value": 8
               },
@@ -291,7 +332,7 @@
                 "icon": "resistance_physical.png",
                 "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Physical resistance: 12% for Chaos Chosen units",
+                "description": "Physical resistance: 12% for Chaos Chosen units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_physical_resistance_chosen",
                 "value": 12
               }
@@ -322,7 +363,7 @@
                 "icon": "battle_movement.png",
                 "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Speed: +15% for Chaos Knights units",
+                "description": "Speed: +15% for Chaos Knights units\n\t(Lord's army)",
                 "key": "wh_dlc08_effect_force_stat_speed_chaos_knights",
                 "value": 15
               },
@@ -330,7 +371,7 @@
                 "icon": "weapon_damage.png",
                 "priority": 461,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +12% for Chaos Knights units",
+                "description": "Weapon strength: +12% for Chaos Knights units\n\t(Lord's army)",
                 "key": "wh_main_effect_force_stat_weapon_strength_chaos_knights",
                 "value": 12
               }
@@ -369,7 +410,7 @@
                 "icon": "exalted_hero.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Hero recruit rank: +4 for Exalted Heroes",
+                "description": "Hero recruit rank: +4 for Exalted Heroes\n\t(factionwide)",
                 "key": "wh_main_effect_agent_recruitment_xp_champion_chaos",
                 "value": 4
               }
@@ -398,28 +439,104 @@
           {
             "effects": [
               {
-                "icon": "magic_campaign.png",
+                "icon": "corruption_chaos.png",
+                "priority": 1,
+                "is_positive_value_good": true,
+                "description": "All Authority: +1\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_all_character",
+                "value": 1
+              },
+              {
+                "icon": "daemonic.png",
                 "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +15% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 15
-              },
-              {
-                "icon": "corruption_chaos.png",
-                "priority": 104,
-                "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +2",
-                "key": "wh3_main_effect_corruption_chaos_characters",
-                "value": 2
-              },
-              {
-                "icon": "resistance_physical.png",
-                "priority": 280,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 10%",
-                "key": "wh_main_effect_character_stat_physical_resistance",
-                "value": 10
+                "description": "Attribute: \"Daemonic\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh3_dlc20_effect_daemonic_undivided",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_unit_passive_daemonic_instability_daemon",
+                      "icon_name": "wh3_main_unit_passive_daemonic_instability",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Daemonic Instability",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_self",
+                          "sort_order": 201,
+                          "effect_state": "negative",
+                          "description": "Causes damage to self"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh3_dlc20_effect_daemonic_undivided",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh3_main_unit_passive_daemonic_instability_daemon_ii",
+                      "icon_name": "wh3_main_unit_passive_daemonic_instability_ii",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Banished!",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage_self_high",
+                          "sort_order": 201,
+                          "effect_state": "negative",
+                          "description": "Causes severe damage to self"
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh3_dlc20_effect_daemonic_undivided",
+                "value": 20
               }
             ]
           }
@@ -443,18 +560,18 @@
         "key": "wh_main_skill_node_chs_archaon_self_01",
         "image_path": "character_damage.png",
         "is_background_skill": false,
-        "name": "Eye of the Gods",
+        "name": "Infernal Champion",
         "description": "The Warriors of Chaos are the playthings of Gods and given many gifts, including formidable fighting skills.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "weapon_damage_character.png",
-                "priority": 161,
+                "priority": 160,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% when attacking",
-                "key": "wh_main_effect_character_stat_weapon_strength_attacking",
-                "value": 7
+                "description": "Weapon strength: +10%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 10
               }
             ]
           }
@@ -1837,10 +1954,10 @@
     [
       {
         "key": "wh_main_skill_node_chs_archaon_magic1_01",
-        "image_path": "wh_main_spell_fire_fireball.png",
+        "image_path": "wh_main_spell_metal_searing_doom.png",
         "is_background_skill": false,
-        "name": "Fireball",
-        "description": " ",
+        "name": "Searing Doom",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1848,54 +1965,49 @@
                 "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Fireball Upgraded\"",
+                "description": "Overcast spell: \"Searing Doom Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_fireball",
+                    "effect": "wh2_main_effect_ability_overcast_searing_doom",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_fireball",
-                      "icon_name": "wh_main_spell_fire_fireball",
-                      "overpower_option": "wh_main_spell_fire_fireball_upgraded",
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
+                        "key": "wh_type_bombardment",
+                        "icon_path": "icon_spell_bombardment.png",
+                        "description": "Bombardment"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Fireball",
+                      "description": "Searing Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_medium",
+                          "key": "wh2_main_all_magical_damage_moderate",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical & fire damage"
+                          "description": "Causes moderate magical damage"
                         },
                         {
-                          "key": "wh_main_projectile_powerful_explosion",
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Powerful explosion"
+                          "description": "Medium strike area"
                         },
                         {
-                          "key": "wh_main_all_strong_against_multiple",
+                          "key": "wh_main_all_strong_against_unit",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
+                          "description": "Strong vs a single unit"
                         },
                         {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
+                      "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
                       "passive": false,
@@ -1903,58 +2015,53 @@
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 300,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
                       "mana_cost": 5,
                       "target_self": false
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_fireball",
+                    "effect": "wh2_main_effect_ability_overcast_searing_doom",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_fireball",
-                      "icon_name": "wh_main_spell_fire_fireball",
-                      "overpower_option": "wh_main_spell_fire_fireball_upgraded",
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
+                        "key": "wh_type_bombardment",
+                        "icon_path": "icon_spell_bombardment.png",
+                        "description": "Bombardment"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Fireball",
+                      "description": "Searing Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_medium",
+                          "key": "wh2_main_all_magical_damage_moderate",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical & fire damage"
+                          "description": "Causes moderate magical damage"
                         },
                         {
-                          "key": "wh_main_projectile_powerful_explosion",
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Powerful explosion"
+                          "description": "Medium strike area"
                         },
                         {
-                          "key": "wh_main_all_strong_against_multiple",
+                          "key": "wh_main_all_strong_against_unit",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
+                          "description": "Strong vs a single unit"
                         },
                         {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
+                      "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
                       "passive": false,
@@ -1962,22 +2069,22 @@
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 300,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
                       "mana_cost": 5,
                       "target_self": false
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_fireball",
+                "key": "wh2_main_effect_ability_overcast_searing_doom",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -30% to \"Fireball\"",
-                "key": "wh_main_effect_ability_cooldown_fireball",
+                "description": "Cooldown: -30% to \"Searing Doom\"",
+                "key": "wh_main_effect_ability_cooldown_searing_doom",
                 "value": -30
               }
             ]
@@ -1988,54 +2095,49 @@
                 "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Fireball Upgraded\"",
+                "description": "Overcast spell: \"Searing Doom Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_fireball",
+                    "effect": "wh2_main_effect_ability_overcast_searing_doom",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_fireball",
-                      "icon_name": "wh_main_spell_fire_fireball",
-                      "overpower_option": "wh_main_spell_fire_fireball_upgraded",
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
+                        "key": "wh_type_bombardment",
+                        "icon_path": "icon_spell_bombardment.png",
+                        "description": "Bombardment"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Fireball",
+                      "description": "Searing Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_medium",
+                          "key": "wh2_main_all_magical_damage_moderate",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical & fire damage"
+                          "description": "Causes moderate magical damage"
                         },
                         {
-                          "key": "wh_main_projectile_powerful_explosion",
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Powerful explosion"
+                          "description": "Medium strike area"
                         },
                         {
-                          "key": "wh_main_all_strong_against_multiple",
+                          "key": "wh_main_all_strong_against_unit",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
+                          "description": "Strong vs a single unit"
                         },
                         {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
+                      "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
                       "passive": false,
@@ -2043,58 +2145,53 @@
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 300,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
                       "mana_cost": 5,
                       "target_self": false
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_fireball",
+                    "effect": "wh2_main_effect_ability_overcast_searing_doom",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_fireball",
-                      "icon_name": "wh_main_spell_fire_fireball",
-                      "overpower_option": "wh_main_spell_fire_fireball_upgraded",
+                      "key": "wh_main_spell_metal_searing_doom",
+                      "icon_name": "wh_main_spell_metal_searing_doom",
+                      "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
                       "type": {
-                        "key": "wh_type_magic_missile",
-                        "icon_path": "icon_spell_magic_missile.png",
-                        "description": "Magic Missile"
+                        "key": "wh_type_bombardment",
+                        "icon_path": "icon_spell_bombardment.png",
+                        "description": "Bombardment"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Fireball",
+                      "description": "Searing Doom",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_medium",
+                          "key": "wh2_main_all_magical_damage_moderate",
                           "sort_order": 104,
                           "effect_state": "positive",
-                          "description": "Causes moderate magical & fire damage"
+                          "description": "Causes moderate magical damage"
                         },
                         {
-                          "key": "wh_main_projectile_powerful_explosion",
+                          "key": "wh2_main_bombardment_medium_strike_aoe",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Powerful explosion"
+                          "description": "Medium strike area"
                         },
                         {
-                          "key": "wh_main_all_strong_against_multiple",
+                          "key": "wh_main_all_strong_against_unit",
                           "sort_order": 106,
                           "effect_state": "positive",
-                          "description": "Strong vs multiple combatants"
+                          "description": "Strong vs a single unit"
                         },
                         {
-                          "key": "wh_main_projectile_effective_long_range",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Effective at long range"
-                        },
-                        {
-                          "key": "wh3_main_projectile_requires_line_of_sight",
-                          "sort_order": 215,
+                          "key": "wh_main_all_weak_against_single",
+                          "sort_order": 203,
                           "effect_state": "negative",
-                          "description": "Requires line of sight to the target"
+                          "description": "Weak vs a single combatant"
                         }
                       ],
+                      "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
                       "passive": false,
@@ -2102,52 +2199,52 @@
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
-                      "target_ground": false,
-                      "target_intercept_range": 300,
+                      "target_ground": true,
+                      "target_intercept_range": 200,
                       "mana_cost": 5,
                       "target_self": false
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_fireball",
+                "key": "wh2_main_effect_ability_overcast_searing_doom",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -50% to \"Fireball\"",
-                "key": "wh_main_effect_ability_cooldown_fireball",
+                "description": "Cooldown: -50% to \"Searing Doom\"",
+                "key": "wh_main_effect_ability_cooldown_searing_doom",
                 "value": -50
               },
               {
                 "icon": "magic_character.png",
                 "priority": 294,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Fireball\"",
-                "key": "wh2_main_effect_ability_wom_cost_fireball",
+                "description": "Winds of Magic cost: -1 for \"Searing Doom\"",
+                "key": "wh2_main_effect_ability_wom_cost_searing_doom",
                 "value": -1
               },
               {
                 "icon": "magic_character.png",
                 "priority": 295,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -2 for \"Fireball Upgraded\"",
-                "key": "wh2_main_effect_ability_wom_cost_fireball_upgraded",
+                "description": "Winds of Magic cost: -2 for \"Searing Doom Upgraded\"",
+                "key": "wh2_main_effect_ability_wom_cost_searing_doom_upgraded",
                 "value": -2
               },
               {
                 "icon": "magic.png",
                 "priority": 298,
                 "is_positive_value_good": false,
-                "description": "Miscast base chance: -15% for \"Fireball Upgraded\"",
-                "key": "wh2_main_effect_ability_miscast_fireball_upgraded",
+                "description": "Miscast base chance: -15% for \"Searing Doom Upgraded\"",
+                "key": "wh2_main_effect_ability_miscast_searing_doom_upgraded",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_fire_01_fireball",
+        "character_skill_key": "wh_main_skill_all_magic_metal_01_searing_doom",
         "tier": 0,
         "indent": 3,
         "points_on_creation": 0,
@@ -2160,7 +2257,7 @@
         "image_path": "wh_main_lore_passive_kindleflame.png",
         "is_background_skill": false,
         "name": "Kindleflame",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2242,98 +2339,333 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_magic1_03",
-        "image_path": "wh_main_spell_fire_cascading_fire_cloak.png",
+        "image_path": "wh_main_spell_death_spirit_leech.png",
         "is_background_skill": false,
-        "name": "Cascading Fire-Cloak",
-        "description": " ",
+        "name": "Spirit Leech",
+        "description": "",
         "levels": [
           {
             "effects": [
               {
                 "icon": "magic_character.png",
-                "priority": 290,
+                "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Spell: \"Cascading Fire Cloak\"",
+                "description": "Overcast spell: \"Spirit Leech Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh_main_effect_ability_enable_cascading_fire_cloak",
-                    "bonus_value_id": "enable",
+                    "effect": "wh2_main_effect_ability_overcast_spirit_leech",
+                    "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_cascading_fire_cloak",
-                      "icon_name": "wh_main_spell_fire_cascading_fire_cloak",
-                      "overpower_option": "",
+                      "key": "wh_main_spell_death_spirit_leech",
+                      "icon_name": "wh_main_spell_death_spirit_leech",
+                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
                       "type": {
-                        "key": "wh_type_augment",
-                        "icon_path": "icon_spell_augment.png",
-                        "description": "Augment"
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Cascading Fire Cloak",
-                      "active_time": 30,
+                      "description": "Spirit Leech",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_dlc08_direct_damage_character_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs character"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_multiple",
+                          "sort_order": 203,
+                          "effect_state": "negative",
+                          "description": "Weak vs multiple combatants"
+                        }
+                      ],
+                      "active_time": 15,
                       "recharge_time": 30,
                       "wind_up_time": 1,
                       "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
-                      "target_friends": true,
-                      "target_enemies": false,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
                       "target_ground": false,
-                      "target_intercept_range": 200,
-                      "mana_cost": 5,
-                      "target_self": true,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
                       "phases": [
                         {
-                          "duration": 30,
-                          "effect_type": "positive",
+                          "duration": 15,
+                          "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
-                          "stat_effects": [
-                            {
-                              "value": 1.3,
-                              "stat": "stat_melee_damage_ap",
-                              "how": "mult",
-                              "description": "x1.3 Armour-Piercing Weapon Damage",
-                              "sort_order": 0,
-                              "icon": "modifier_icon_armour_piercing.png"
-                            },
-                            {
-                              "value": 25,
-                              "stat": "stat_melee_defence",
-                              "how": "add",
-                              "description": "+25 Melee Defence",
-                              "sort_order": 3,
-                              "icon": "icon_stat_defence.png"
-                            }
-                          ]
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_ability_overcast_spirit_leech",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_spirit_leech",
+                      "icon_name": "wh_main_spell_death_spirit_leech",
+                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Spirit Leech",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_dlc08_direct_damage_character_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs character"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_multiple",
+                          "sort_order": 203,
+                          "effect_state": "negative",
+                          "description": "Weak vs multiple combatants"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 15,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
                         }
                       ]
                     }
                   }
                 ],
-                "key": "wh_main_effect_ability_enable_cascading_fire_cloak",
+                "key": "wh2_main_effect_ability_overcast_spirit_leech",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -50% to \"Cascading Fire Cloak\"",
-                "key": "wh_main_effect_ability_cooldown_cascading_fire_cloak",
+                "description": "Cooldown: -30% to \"Spirit Leech\"",
+                "key": "wh_main_effect_ability_cooldown_spirit_leech",
+                "value": -30
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "magic_character.png",
+                "priority": 292,
+                "is_positive_value_good": true,
+                "description": "Overcast spell: \"Spirit Leech Upgraded\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh2_main_effect_ability_overcast_spirit_leech",
+                    "bonus_value_id": "enable_overchage",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_spirit_leech",
+                      "icon_name": "wh_main_spell_death_spirit_leech",
+                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Spirit Leech",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_dlc08_direct_damage_character_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs character"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_multiple",
+                          "sort_order": 203,
+                          "effect_state": "negative",
+                          "description": "Weak vs multiple combatants"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 15,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "effect": "wh2_main_effect_ability_overcast_spirit_leech",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_spell_death_spirit_leech",
+                      "icon_name": "wh_main_spell_death_spirit_leech",
+                      "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                      "type": {
+                        "key": "wh_type_direct_damage",
+                        "icon_path": "icon_spell_direct_damage.png",
+                        "description": "Direct Damage"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Spirit Leech",
+                      "ui_effects": [
+                        {
+                          "key": "wh_main_all_direct_damage",
+                          "sort_order": 104,
+                          "effect_state": "positive",
+                          "description": "Causes damage to combatants"
+                        },
+                        {
+                          "key": "wh_dlc08_direct_damage_character_unit",
+                          "sort_order": 105,
+                          "effect_state": "positive",
+                          "description": "Strong vs character"
+                        },
+                        {
+                          "key": "wh_main_all_strong_against_single",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Strong vs a single combatant"
+                        },
+                        {
+                          "key": "wh_main_all_weak_against_multiple",
+                          "sort_order": 203,
+                          "effect_state": "negative",
+                          "description": "Weak vs multiple combatants"
+                        }
+                      ],
+                      "active_time": 15,
+                      "recharge_time": 30,
+                      "wind_up_time": 1,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": false,
+                      "target_friends": false,
+                      "target_enemies": true,
+                      "target_ground": false,
+                      "target_intercept_range": 100,
+                      "mana_cost": 6,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 15,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh2_main_effect_ability_overcast_spirit_leech",
+                "value": 1
+              },
+              {
+                "icon": "magic_cooldown.png",
+                "priority": 293,
+                "is_positive_value_good": false,
+                "description": "Cooldown: -50% to \"Spirit Leech\"",
+                "key": "wh_main_effect_ability_cooldown_spirit_leech",
                 "value": -50
               },
               {
                 "icon": "magic_character.png",
                 "priority": 294,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -1 for \"Cascading Fire Cloak\"",
-                "key": "wh2_main_effect_ability_wom_cost_cascading_fire_cloak",
-                "value": -1
+                "description": "Winds of Magic cost: -2 for \"Spirit Leech\"",
+                "key": "wh2_main_effect_ability_wom_cost_spirit_leech",
+                "value": -2
+              },
+              {
+                "icon": "magic_character.png",
+                "priority": 295,
+                "is_positive_value_good": false,
+                "description": "Winds of Magic cost: -2 for \"Spirit Leech Upgraded\"",
+                "key": "wh2_main_effect_ability_wom_cost_spirit_leech_upgraded",
+                "value": -2
+              },
+              {
+                "icon": "magic.png",
+                "priority": 298,
+                "is_positive_value_good": false,
+                "description": "Miscast base chance: -15% for \"Spirit Leech Upgraded\"",
+                "key": "wh2_main_effect_ability_miscast_spirit_leech_upgraded",
+                "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_all_magic_fire_02_cascading_fire-cloak_lord",
+        "character_skill_key": "wh_main_skill_all_magic_death_01_spirit_leech",
         "tier": 2,
         "indent": 3,
         "points_on_creation": 0,
@@ -2349,7 +2681,7 @@
         "image_path": "wh_main_spell_fire_flaming_sword_of_rhuin.png",
         "is_background_skill": false,
         "name": "Flaming Sword of Rhuin",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2731,7 +3063,7 @@
         "image_path": "wh_main_spell_fire_the_burning_head.png",
         "is_background_skill": false,
         "name": "The Burning Head",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3099,7 +3431,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3183,10 +3515,10 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_magic1_09",
-        "image_path": "wh_main_spell_fire_piercing_bolts_of_burning.png",
+        "image_path": "wh_main_spell_metal_transmutation_of_lead.png",
         "is_background_skill": false,
-        "name": "Piercing Bolts of Burning",
-        "description": " ",
+        "name": "Transmutation of Lead",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -3194,190 +3526,193 @@
                 "icon": "magic_character.png",
                 "priority": 290,
                 "is_positive_value_good": true,
-                "description": "Spell: \"Piercing Bolts of Burning\"",
+                "description": "Spell: \"Transmutation of Lead\"",
                 "related_abilities": [
                   {
-                    "effect": "wh_main_effect_ability_enable_piercing_bolts_of_burning",
+                    "effect": "wh_main_effect_ability_enable_transmutation_of_lead",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "icon_name": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "overpower_option": "wh_main_spell_fire_piercing_bolts_of_burning_upgraded",
+                      "key": "wh_main_spell_metal_transmutation_of_lead",
+                      "icon_name": "wh_main_spell_metal_transmutation_of_lead",
+                      "overpower_option": "wh_main_spell_metal_transmutation_of_lead_upgraded",
                       "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Piercing Bolts of Burning",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Medium strike area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 9,
-                      "recharge_time": 45,
+                      "description": "Transmutation of Lead",
+                      "active_time": 40,
+                      "recharge_time": 40,
                       "wind_up_time": 5,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
-                      "mana_cost": 9,
-                      "target_self": false
+                      "mana_cost": 10,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -25,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "-25 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 ],
-                "key": "wh_main_effect_ability_enable_piercing_bolts_of_burning",
+                "key": "wh_main_effect_ability_enable_transmutation_of_lead",
                 "value": 1
               },
               {
                 "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Piercing Bolts of Burning Upgraded\"",
+                "description": "Overcast spell: \"Transmutation of Lead Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_piercing_bolts_of_burning",
+                    "effect": "wh2_main_effect_ability_overcast_transmutation_of_lead",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "icon_name": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "overpower_option": "wh_main_spell_fire_piercing_bolts_of_burning_upgraded",
+                      "key": "wh_main_spell_metal_transmutation_of_lead",
+                      "icon_name": "wh_main_spell_metal_transmutation_of_lead",
+                      "overpower_option": "wh_main_spell_metal_transmutation_of_lead_upgraded",
                       "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Piercing Bolts of Burning",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Medium strike area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 9,
-                      "recharge_time": 45,
+                      "description": "Transmutation of Lead",
+                      "active_time": 40,
+                      "recharge_time": 40,
                       "wind_up_time": 5,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
-                      "mana_cost": 9,
-                      "target_self": false
+                      "mana_cost": 10,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -25,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "-25 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_piercing_bolts_of_burning",
+                    "effect": "wh2_main_effect_ability_overcast_transmutation_of_lead",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "icon_name": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "overpower_option": "wh_main_spell_fire_piercing_bolts_of_burning_upgraded",
+                      "key": "wh_main_spell_metal_transmutation_of_lead",
+                      "icon_name": "wh_main_spell_metal_transmutation_of_lead",
+                      "overpower_option": "wh_main_spell_metal_transmutation_of_lead_upgraded",
                       "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Piercing Bolts of Burning",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Medium strike area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 9,
-                      "recharge_time": 45,
+                      "description": "Transmutation of Lead",
+                      "active_time": 40,
+                      "recharge_time": 40,
                       "wind_up_time": 5,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
-                      "mana_cost": 9,
-                      "target_self": false
+                      "mana_cost": 10,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -25,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "-25 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_piercing_bolts_of_burning",
+                "key": "wh2_main_effect_ability_overcast_transmutation_of_lead",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -30% to \"Piercing Bolts of Burning\"",
-                "key": "wh_main_effect_ability_cooldown_piercing_bolts_of_burning",
+                "description": "Cooldown: -30% to \"Transmutation of Lead\"",
+                "key": "wh_main_effect_ability_cooldown_transmutation_of_lead",
                 "value": -30
               }
             ]
@@ -3388,156 +3723,158 @@
                 "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Piercing Bolts of Burning Upgraded\"",
+                "description": "Overcast spell: \"Transmutation of Lead Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_piercing_bolts_of_burning",
+                    "effect": "wh2_main_effect_ability_overcast_transmutation_of_lead",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "icon_name": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "overpower_option": "wh_main_spell_fire_piercing_bolts_of_burning_upgraded",
+                      "key": "wh_main_spell_metal_transmutation_of_lead",
+                      "icon_name": "wh_main_spell_metal_transmutation_of_lead",
+                      "overpower_option": "wh_main_spell_metal_transmutation_of_lead_upgraded",
                       "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Piercing Bolts of Burning",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Medium strike area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 9,
-                      "recharge_time": 45,
+                      "description": "Transmutation of Lead",
+                      "active_time": 40,
+                      "recharge_time": 40,
                       "wind_up_time": 5,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
-                      "mana_cost": 9,
-                      "target_self": false
+                      "mana_cost": 10,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -25,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "-25 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_piercing_bolts_of_burning",
+                    "effect": "wh2_main_effect_ability_overcast_transmutation_of_lead",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "icon_name": "wh_main_spell_fire_piercing_bolts_of_burning",
-                      "overpower_option": "wh_main_spell_fire_piercing_bolts_of_burning_upgraded",
+                      "key": "wh_main_spell_metal_transmutation_of_lead",
+                      "icon_name": "wh_main_spell_metal_transmutation_of_lead",
+                      "overpower_option": "wh_main_spell_metal_transmutation_of_lead_upgraded",
                       "type": {
-                        "key": "wh_type_bombardment",
-                        "icon_path": "icon_spell_bombardment.png",
-                        "description": "Bombardment"
+                        "key": "wh_type_area_of_hexes",
+                        "icon_path": "icon_spell_area_of_hexes.png",
+                        "description": "Hex (Area)"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Piercing Bolts of Burning",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_bombardment_medium_strike_aoe",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Medium strike area"
-                        },
-                        {
-                          "key": "wh2_main_all_good_against_armour",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Good against armour"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_unit",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs a single unit"
-                        }
-                      ],
-                      "active_time": 9,
-                      "recharge_time": 45,
+                      "description": "Transmutation of Lead",
+                      "active_time": 40,
+                      "recharge_time": 40,
                       "wind_up_time": 5,
                       "passive": false,
-                      "effect_range": 0,
+                      "effect_range": 35,
                       "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
-                      "mana_cost": 9,
-                      "target_self": false
+                      "mana_cost": 10,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 40,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": -25,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "-25 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_piercing_bolts_of_burning",
+                "key": "wh2_main_effect_ability_overcast_transmutation_of_lead",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -50% to \"Piercing Bolts of Burning\"",
-                "key": "wh_main_effect_ability_cooldown_piercing_bolts_of_burning",
+                "description": "Cooldown: -50% to \"Transmutation of Lead\"",
+                "key": "wh_main_effect_ability_cooldown_transmutation_of_lead",
                 "value": -50
               },
               {
                 "icon": "magic_character.png",
                 "priority": 294,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -2 for \"Piercing Bolts of Burning\"",
-                "key": "wh2_main_effect_ability_wom_cost_piercing_bolts_of_burning",
+                "description": "Winds of Magic cost: -2 for \"Transmutation of Lead\"",
+                "key": "wh2_main_effect_ability_wom_cost_transmutation_of_lead",
                 "value": -2
               },
               {
                 "icon": "magic_character.png",
                 "priority": 295,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -3 for \"Piercing Bolts of Burning Upgraded\"",
-                "key": "wh2_main_effect_ability_wom_cost_piercing_bolts_of_burning_upgraded",
+                "description": "Winds of Magic cost: -3 for \"Transmutation of Lead Upgraded\"",
+                "key": "wh2_main_effect_ability_wom_cost_transmutation_of_lead_upgraded",
                 "value": -3
               },
               {
                 "icon": "magic.png",
                 "priority": 298,
                 "is_positive_value_good": false,
-                "description": "Miscast base chance: -15% for \"Piercing Bolts of Burning Upgraded\"",
-                "key": "wh2_main_effect_ability_miscast_piercing_bolts_of_burning_upgraded",
+                "description": "Miscast base chance: -15% for \"Transmutation of Lead Upgraded\"",
+                "key": "wh2_main_effect_ability_miscast_transmutation_of_lead_upgraded",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_all_magic_fire_09_piercing_bolts_of_burning_lord",
+        "character_skill_key": "wh2_main_skill_all_magic_metal_09_transmutation_of_lead_lord",
         "tier": 6,
         "indent": 3,
         "points_on_creation": 0,
@@ -3550,125 +3887,55 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_magic1_10",
-        "image_path": "wh_main_spell_fire_flame_storm.png",
+        "image_path": "wh_main_spell_death_the_purple_sun_of_xereus.png",
         "is_background_skill": false,
-        "name": "Flame Storm",
-        "description": " ",
+        "name": "The Purple Sun of Xereus",
+        "description": "",
         "levels": [
           {
             "effects": [
               {
                 "icon": "magic_character.png",
-                "priority": 290,
-                "is_positive_value_good": true,
-                "description": "Spell: \"Flame Storm\"",
-                "related_abilities": [
-                  {
-                    "effect": "wh_main_effect_ability_enable_flame_storm",
-                    "bonus_value_id": "enable",
-                    "unit_ability": {
-                      "key": "wh_main_spell_fire_flame_storm",
-                      "icon_name": "wh_main_spell_fire_flame_storm",
-                      "overpower_option": "wh_main_spell_fire_flame_storm_upgraded",
-                      "type": {
-                        "key": "wh_type_vortex",
-                        "icon_path": "icon_spell_vortex.png",
-                        "description": "Vortex"
-                      },
-                      "is_hidden_in_ui": false,
-                      "description": "Flame Storm",
-                      "ui_effects": [
-                        {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_spell_medium_vortex",
-                          "sort_order": 105,
-                          "effect_state": "positive",
-                          "description": "Medium, randomly-moving area of effect"
-                        },
-                        {
-                          "key": "wh_main_all_strong_against_units",
-                          "sort_order": 106,
-                          "effect_state": "positive",
-                          "description": "Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
-                        }
-                      ],
-                      "active_time": 30,
-                      "recharge_time": 75,
-                      "wind_up_time": 5,
-                      "passive": false,
-                      "effect_range": 0,
-                      "affect_self": false,
-                      "target_friends": false,
-                      "target_enemies": true,
-                      "target_ground": true,
-                      "target_intercept_range": 150,
-                      "mana_cost": 13,
-                      "target_self": false
-                    }
-                  }
-                ],
-                "key": "wh_main_effect_ability_enable_flame_storm",
-                "value": 1
-              },
-              {
-                "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Flame Storm Upgraded\"",
+                "description": "Overcast spell: \"The Purple Sun of Xereus Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_flame_storm",
+                    "effect": "wh2_main_effect_ability_overcast_the_purple_sun_of_xereus",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_flame_storm",
-                      "icon_name": "wh_main_spell_fire_flame_storm",
-                      "overpower_option": "wh_main_spell_fire_flame_storm_upgraded",
+                      "key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "icon_name": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "overpower_option": "wh_main_spell_death_the_purple_sun_of_xereus_upgraded",
                       "type": {
                         "key": "wh_type_vortex",
                         "icon_path": "icon_spell_vortex.png",
                         "description": "Vortex"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Flame Storm",
+                      "description": "The Purple Sun of Xereus",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_spell_medium_vortex",
+                          "key": "wh2_main_spell_huge_vortex",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Medium, randomly-moving area of effect"
+                          "description": "Huge, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh2_main_all_good_against_armour",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Good against armour"
                         },
                         {
                           "key": "wh_main_all_strong_against_units",
                           "sort_order": 106,
                           "effect_state": "positive",
                           "description": "Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "active_time": 30,
-                      "recharge_time": 75,
+                      "active_time": 12,
+                      "recharge_time": 90,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -3677,52 +3944,46 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 13,
+                      "mana_cost": 19,
                       "target_self": false
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_flame_storm",
+                    "effect": "wh2_main_effect_ability_overcast_the_purple_sun_of_xereus",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_flame_storm",
-                      "icon_name": "wh_main_spell_fire_flame_storm",
-                      "overpower_option": "wh_main_spell_fire_flame_storm_upgraded",
+                      "key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "icon_name": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "overpower_option": "wh_main_spell_death_the_purple_sun_of_xereus_upgraded",
                       "type": {
                         "key": "wh_type_vortex",
                         "icon_path": "icon_spell_vortex.png",
                         "description": "Vortex"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Flame Storm",
+                      "description": "The Purple Sun of Xereus",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_spell_medium_vortex",
+                          "key": "wh2_main_spell_huge_vortex",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Medium, randomly-moving area of effect"
+                          "description": "Huge, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh2_main_all_good_against_armour",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Good against armour"
                         },
                         {
                           "key": "wh_main_all_strong_against_units",
                           "sort_order": 106,
                           "effect_state": "positive",
                           "description": "Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "active_time": 30,
-                      "recharge_time": 75,
+                      "active_time": 12,
+                      "recharge_time": 90,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -3731,20 +3992,20 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 13,
+                      "mana_cost": 19,
                       "target_self": false
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_flame_storm",
+                "key": "wh2_main_effect_ability_overcast_the_purple_sun_of_xereus",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -30% to \"Flame Storm\"",
-                "key": "wh_main_effect_ability_cooldown_flame_storm",
+                "description": "Cooldown: -30% to \"The Purple Sun of Xereus\"",
+                "key": "wh_main_effect_ability_cooldown_the_purple_sun_of_xereus",
                 "value": -30
               }
             ]
@@ -3755,50 +4016,44 @@
                 "icon": "magic_character.png",
                 "priority": 292,
                 "is_positive_value_good": true,
-                "description": "Overcast spell: \"Flame Storm Upgraded\"",
+                "description": "Overcast spell: \"The Purple Sun of Xereus Upgraded\"",
                 "related_abilities": [
                   {
-                    "effect": "wh2_main_effect_ability_overcast_flame_storm",
+                    "effect": "wh2_main_effect_ability_overcast_the_purple_sun_of_xereus",
                     "bonus_value_id": "enable_overchage",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_flame_storm",
-                      "icon_name": "wh_main_spell_fire_flame_storm",
-                      "overpower_option": "wh_main_spell_fire_flame_storm_upgraded",
+                      "key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "icon_name": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "overpower_option": "wh_main_spell_death_the_purple_sun_of_xereus_upgraded",
                       "type": {
                         "key": "wh_type_vortex",
                         "icon_path": "icon_spell_vortex.png",
                         "description": "Vortex"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Flame Storm",
+                      "description": "The Purple Sun of Xereus",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_spell_medium_vortex",
+                          "key": "wh2_main_spell_huge_vortex",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Medium, randomly-moving area of effect"
+                          "description": "Huge, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh2_main_all_good_against_armour",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Good against armour"
                         },
                         {
                           "key": "wh_main_all_strong_against_units",
                           "sort_order": 106,
                           "effect_state": "positive",
                           "description": "Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "active_time": 30,
-                      "recharge_time": 75,
+                      "active_time": 12,
+                      "recharge_time": 90,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -3807,52 +4062,46 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 13,
+                      "mana_cost": 19,
                       "target_self": false
                     }
                   },
                   {
-                    "effect": "wh2_main_effect_ability_overcast_flame_storm",
+                    "effect": "wh2_main_effect_ability_overcast_the_purple_sun_of_xereus",
                     "bonus_value_id": "enable",
                     "unit_ability": {
-                      "key": "wh_main_spell_fire_flame_storm",
-                      "icon_name": "wh_main_spell_fire_flame_storm",
-                      "overpower_option": "wh_main_spell_fire_flame_storm_upgraded",
+                      "key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "icon_name": "wh_main_spell_death_the_purple_sun_of_xereus",
+                      "overpower_option": "wh_main_spell_death_the_purple_sun_of_xereus_upgraded",
                       "type": {
                         "key": "wh_type_vortex",
                         "icon_path": "icon_spell_vortex.png",
                         "description": "Vortex"
                       },
                       "is_hidden_in_ui": false,
-                      "description": "Flame Storm",
+                      "description": "The Purple Sun of Xereus",
                       "ui_effects": [
                         {
-                          "key": "wh2_main_all_magical_and_flaming_major",
-                          "sort_order": 104,
-                          "effect_state": "positive",
-                          "description": "Causes major magical & fire damage"
-                        },
-                        {
-                          "key": "wh2_main_spell_medium_vortex",
+                          "key": "wh2_main_spell_huge_vortex",
                           "sort_order": 105,
                           "effect_state": "positive",
-                          "description": "Medium, randomly-moving area of effect"
+                          "description": "Huge, randomly-moving area of effect"
+                        },
+                        {
+                          "key": "wh2_main_all_good_against_armour",
+                          "sort_order": 106,
+                          "effect_state": "positive",
+                          "description": "Good against armour"
                         },
                         {
                           "key": "wh_main_all_strong_against_units",
                           "sort_order": 106,
                           "effect_state": "positive",
                           "description": "Strong vs multiple units"
-                        },
-                        {
-                          "key": "wh_main_all_weak_against_single",
-                          "sort_order": 203,
-                          "effect_state": "negative",
-                          "description": "Weak vs a single combatant"
                         }
                       ],
-                      "active_time": 30,
-                      "recharge_time": 75,
+                      "active_time": 12,
+                      "recharge_time": 90,
                       "wind_up_time": 5,
                       "passive": false,
                       "effect_range": 0,
@@ -3861,50 +4110,50 @@
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
-                      "mana_cost": 13,
+                      "mana_cost": 19,
                       "target_self": false
                     }
                   }
                 ],
-                "key": "wh2_main_effect_ability_overcast_flame_storm",
+                "key": "wh2_main_effect_ability_overcast_the_purple_sun_of_xereus",
                 "value": 1
               },
               {
                 "icon": "magic_cooldown.png",
                 "priority": 293,
                 "is_positive_value_good": false,
-                "description": "Cooldown: -50% to \"Flame Storm\"",
-                "key": "wh_main_effect_ability_cooldown_flame_storm",
+                "description": "Cooldown: -50% to \"The Purple Sun of Xereus\"",
+                "key": "wh_main_effect_ability_cooldown_the_purple_sun_of_xereus",
                 "value": -50
               },
               {
                 "icon": "magic_character.png",
                 "priority": 294,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -3 for \"Flame Storm\"",
-                "key": "wh2_main_effect_ability_wom_cost_flame_storm",
-                "value": -3
+                "description": "Winds of Magic cost: -2 for \"The Purple Sun of Xereus\"",
+                "key": "wh2_main_effect_ability_wom_cost_the_purple_sun_of_xereus",
+                "value": -2
               },
               {
                 "icon": "magic_character.png",
                 "priority": 295,
                 "is_positive_value_good": false,
-                "description": "Winds of Magic cost: -3 for \"Flame Storm Upgraded\"",
-                "key": "wh2_main_effect_ability_wom_cost_flame_storm_upgraded",
+                "description": "Winds of Magic cost: -3 for \"The Purple Sun of Xereus Upgraded\"",
+                "key": "wh2_main_effect_ability_wom_cost_the_purple_sun_of_xereus_upgraded",
                 "value": -3
               },
               {
                 "icon": "magic.png",
                 "priority": 298,
                 "is_positive_value_good": false,
-                "description": "Miscast base chance: -15% for \"Flame Storm Upgraded\"",
-                "key": "wh2_main_effect_ability_miscast_flame_storm_upgraded",
+                "description": "Miscast base chance: -15% for \"The Purple Sun of Xereus Upgraded\"",
+                "key": "wh2_main_effect_ability_miscast_the_purple_sun_of_xereus_upgraded",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_main_skill_all_magic_fire_10_flame_storm_lord",
+        "character_skill_key": "wh2_main_skill_all_magic_death_10_the_purple_sun_of_xereus_lord",
         "tier": 7,
         "indent": 3,
         "points_on_creation": 0,
@@ -3957,11 +4206,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -3980,25 +4229,61 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_magic1_11",
-        "image_path": "character_magic.png",
+        "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
-        "name": "Diviner",
-        "description": "This adept uses the Winds of Magic to seek out arcane artefacts.",
+        "name": "Arcane Conduit",
+        "description": "",
         "levels": [
           {
             "effects": [
               {
-                "icon": "item_ability.png",
-                "priority": 8,
+                "icon": "general_ability.png",
+                "priority": 300,
                 "is_positive_value_good": true,
-                "description": "Magic item drop chance: +15%",
-                "key": "wh_main_effect_character_mod_ancillary_drop",
-                "value": 15
+                "description": "Passive ability: \"Arcane Conduit\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_arcane_conduit",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_arcane_conduit",
+                      "icon_name": "wh_main_character_abilities_arcane_conduit",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment_of_the_winds",
+                        "icon_path": "icon_spell_augment_of_the_winds.png",
+                        "description": "Augment of the Winds"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Arcane Conduit",
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "mana_regen_mod": 0.4,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_arcane_conduit",
+                "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_magic_all_11_diviner",
+        "character_skill_key": "wh_main_skill_all_magic_all_11_arcane_conduit",
         "tier": 10,
         "indent": 3,
         "points_on_creation": 0,
@@ -4023,6 +4308,14 @@
           {
             "effects": [
               {
+                "icon": "experience.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Unit experience gain per turn: +75\n\t(Lord's army)",
+                "key": "wh_main_effect_agent_action_outcome_parent_army_xp_gain",
+                "value": 75
+              },
+              {
                 "icon": "morale_character.png",
                 "priority": 260,
                 "is_positive_value_good": true,
@@ -4043,7 +4336,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_battle_02",
-        "image_path": "battle_defence.png",
+        "image_path": "battle_attack.png",
         "is_background_skill": false,
         "name": "Chaos Vanguard",
         "description": "To the Northmen, there is no greater honour than to fight and perish under the gaze of the Gods.",
@@ -4051,11 +4344,11 @@
           {
             "effects": [
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +4 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +4 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 4
               }
             ]
@@ -4066,16 +4359,16 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +6 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_armour_marauder_aspiring_champions_forsaken",
+                "description": "Armour: +6 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units",
                 "value": 6
               },
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +6 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +6 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 6
               }
             ]
@@ -4086,16 +4379,16 @@
                 "icon": "armour.png",
                 "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Armour: +12 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_armour_marauder_aspiring_champions_forsaken",
+                "description": "Armour: +12 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units",
                 "value": 12
               },
               {
-                "icon": "defence.png",
-                "priority": 451,
+                "icon": "melee.png",
+                "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +8 for Chaos Marauders, Aspiring Champions, and Forsaken units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_marauder_aspiring_champions_forsaken",
+                "description": "Melee attack: +8 for all non-Daemonic infantry units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_infantry_units",
                 "value": 8
               }
             ]
@@ -4117,56 +4410,56 @@
         "image_path": "battle_charge.png",
         "is_background_skill": false,
         "name": "Savage Bloodlust",
-        "description": "Khorne’s will imbues his creatures with a vicious, unslakeable hunger for battle.",
+        "description": "The Daemons of Chaos bay for blood, spurred on by a chorus of agonised screams.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "charge.png",
-                "priority": 501,
+                "icon": "armour.png",
+                "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
-                "value": 6
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Armour: +4 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
                 "value": 4
-              },
-              {
-                "icon": "charge.png",
-                "priority": 501,
-                "is_positive_value_good": true,
-                "description": "Charge bonus: +9 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
-                "value": 9
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "armour.png",
+                "priority": 401,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +8 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Armour: +8 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
                 "value": 8
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Marauder Horsemen, Marauder Horsemaster, Chaos Warhounds, and Chaos Feral Manticore units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_marauder_horsemen_warhounds_manticore",
+                "description": "Charge bonus: +8 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_melee_daemons",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour.png",
+                "priority": 401,
+                "is_positive_value_good": true,
+                "description": "Armour: +12 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_melee_daemons",
+                "value": 12
+              },
+              {
+                "icon": "charge.png",
+                "priority": 501,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +12 for all Daemonic melee units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_melee_daemons",
                 "value": 12
               }
             ]
@@ -4185,10 +4478,10 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_battle_04",
-        "image_path": "battle_defence.png",
+        "image_path": "battle_ranged_damage.png",
         "is_background_skill": false,
-        "name": "Blessed by Chaos",
-        "description": "Unnatural strength, an aura of dark menace, an unwavering devotion to the Chaos Gods – some warriors have undoubtedly been touched by the Ruinous Ones.",
+        "name": "Warp Fire",
+        "description": "As dark wings take to the skies and Daemon arrows bear down, the enemies of Chaos know their end is near.",
         "levels": [
           {
             "effects": [
@@ -4196,54 +4489,70 @@
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +5 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
-                "value": 5
+                "description": "Melee defence: +4 for all Daemonic missile and flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
+                "value": 4
               }
             ]
           },
           {
             "effects": [
               {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +4% for all Daemonic flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_ranged_flying_daemons",
+                "value": 4
+              },
+              {
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +7 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
-                "value": 7
+                "description": "Melee defence: +6 for all Daemonic missile and flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
+                "value": 6
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "ranged_damage.png",
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_chosen_spawn_chaos_warriors",
-                "value": 5
+                "description": "Missile strength: +8% for all Daemonic missile units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_ranged_flying_daemons",
+                "value": 8
               }
             ]
           },
           {
             "effects": [
               {
+                "icon": "battle_movement.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Speed: +6% for all Daemonic flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_ranged_flying_daemons",
+                "value": 6
+              },
+              {
                 "icon": "defence.png",
                 "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee defence: +9 for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_melee_defence_chs_chosen_spawn_chaos_warriors",
-                "value": 9
+                "description": "Melee defence: +8 for all Daemonic missile and flying units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_ranged_flying_daemons",
+                "value": 8
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "ranged_damage.png",
+                "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Warriors, Chaos Spawn, and Chosen units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_chosen_spawn_chaos_warriors",
-                "value": 10
+                "description": "Missile strength: +12% for all Daemonic missile units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_ranged_flying_daemons",
+                "value": 12
               }
             ]
           }
         ],
-        "character_skill_key": "wh2_dlc11_skill_chs_army_buff_blessed_by_chaos",
+        "character_skill_key": "wh3_dlc20_skill_chs_army_buff_warpfire",
         "tier": 3,
         "indent": 4,
         "points_on_creation": 0,
@@ -4267,8 +4576,8 @@
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +6 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 6
               }
             ]
@@ -4276,19 +4585,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogres_chaos_knights_chariots",
-                "value": 4
+                "description": "Melee defence: +6 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_knights_chariots_units",
+                "value": 6
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +6 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 6
               }
             ]
@@ -4296,19 +4605,19 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "defence.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogres_chaos_knights_chariots",
-                "value": 6
+                "description": "Melee defence: +8 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_knights_chariots_units",
+                "value": 8
               },
               {
                 "icon": "charge.png",
                 "priority": 501,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Dragon Ogres, Chaos Knights, Gorebeast Chariot, and Chaos Chariot units",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_dragon_ogres_chaos_knights_chariots",
+                "description": "Charge bonus: +12 for all non-Daemonic cavalry and chariot units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_charge_bonus_chs_knights_chariots_units",
                 "value": 12
               }
             ]
@@ -4335,52 +4644,52 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 431,
+                "icon": "weapon_damage.png",
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Weapon strength: +4% for all non-Daemonic war beasts, monstrous and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
                 "value": 4
               }
             ]
           },
           {
             "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +4 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 4
-              },
               {
                 "icon": "weapon_damage.png",
-                "priority": 461,
+                "priority": 421,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +5% for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 5
-              }
-            ]
-          },
-          {
-            "effects": [
-              {
-                "icon": "melee.png",
-                "priority": 431,
-                "is_positive_value_good": true,
-                "description": "Melee attack: +6 for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_chs_dragon_ogre_shaggoth_trolls_giant",
+                "description": "Weapon strength: +6% for all non-Daemonic war beasts, monstrous and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
                 "value": 6
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 461,
+                "icon": "melee.png",
+                "priority": 451,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +7% for Dragon Ogre Shaggoth, Chaos Trolls, and Chaos Giant units",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_dragon_ogre_shaggoth_trolls_giant",
-                "value": 7
+                "description": "Melee attack: +6 for all non-Daemonic war beasts, monstrous, and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_monsters_beasts",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 421,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +10% for all non-Daemonic war beasts, monstrous and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_monsters_beasts",
+                "value": 10
+              },
+              {
+                "icon": "melee.png",
+                "priority": 451,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 for all non-Daemonic war beasts, monstrous, and monster units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_monsters_beasts",
+                "value": 8
               }
             ]
           }
@@ -4401,7 +4710,7 @@
         "image_path": "battle_ammo.png",
         "is_background_skill": false,
         "name": "Doomfire",
-        "description": "Doomfire is a gift from Khorne, to ensure the Hellcannons speak with extra fury.",
+        "description": "Subdue the enemy with savage fire, as flaming projectiles burn a trail across the sky.",
         "levels": [
           {
             "effects": [
@@ -4409,8 +4718,8 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +10% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +10% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 10
               }
             ]
@@ -4421,17 +4730,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +15% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 15
               },
               {
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +4% for Hellcannon units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon",
-                "value": 4
+                "description": "Missile strength: +5% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_artillery_missile_units",
+                "value": 5
               }
             ]
           },
@@ -4441,17 +4750,17 @@
                 "icon": "ammo.png",
                 "priority": 511,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +20% for Hellcannon units",
-                "key": "wh_main_effect_force_stat_ammunition_hellcannons",
+                "description": "Ammunition: +20% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_ammunition_chs_artillery_missile_units",
                 "value": 20
               },
               {
                 "icon": "ranged_damage.png",
                 "priority": 541,
                 "is_positive_value_good": true,
-                "description": "Missile strength: +6% for Hellcannon units",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon",
-                "value": 6
+                "description": "Missile strength: +10% for all non-Daemonic missile cavalry and artillery units\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_strength_chs_artillery_missile_units",
+                "value": 10
               }
             ]
           }
@@ -4473,7 +4782,7 @@
         "image_path": "wh_main_character_abilities_rally.png",
         "is_background_skill": false,
         "name": "Rally!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4553,7 +4862,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_battle_09",
-        "image_path": "battle_damage.png",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
         "name": "Legion of Doom",
         "description": "The legions march forth under the Lord's inscrutable gaze, eager to kill for fear of his wrath.",
@@ -4561,28 +4870,28 @@
           {
             "effects": [
               {
-                "icon": "melee.png",
-                "priority": 432,
+                "icon": "armour.png",
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
+                "description": "Armour: +5 for all infantry units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_infantry_units_rank7",
                 "value": 5
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 462,
+                "icon": "defence.png",
+                "priority": 452,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
-                "value": 10
+                "description": "Melee defence: +5 for all infantry units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_defence_chs_infantry_units_rank7",
+                "value": 5
               },
               {
                 "icon": "resistance_magic.png",
-                "priority": 582,
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Spell resistance: 15% for Chaos Marauders, Chaos Warriors, Forsaken, Aspiring Champions, and Chosen units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_magic_resistance_marauders_aspiring_champions_forsaken_chaos_warriors_chosen_rank7",
-                "value": 15
+                "description": "Spell resistance: 10% for all infantry units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_spell_resistance_chs_infantry_units_rank7",
+                "value": 10
               }
             ]
           }
@@ -4603,7 +4912,7 @@
         "image_path": "battle_speed.png",
         "is_background_skill": false,
         "name": "Speed & Malice",
-        "description": "The worthiest of Chaos' vanguard are blessed with the most elaborate mutations, which also enable them to run faster for longer.",
+        "description": "The worthiest of Chaos' vanguard are blessed with the most elaborate mutations, which also enable them to move faster for longer.",
         "levels": [
           {
             "effects": [
@@ -4611,25 +4920,25 @@
                 "icon": "battle_movement.png",
                 "priority": 422,
                 "is_positive_value_good": true,
-                "description": "Speed: +10% for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_speed_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
+                "description": "Speed: +10% for all cavalry, chariots and flying units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_speed_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
                 "value": 10
               },
               {
-                "icon": "charge.png",
-                "priority": 502,
+                "icon": "melee.png",
+                "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Charge bonus: +12 for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_charge_bonus_add_chs_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
-                "value": 12
+                "description": "Melee attack: +5 for all cavalry, chariots and flying units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
+                "value": 5
               },
               {
                 "icon": "resistance_missile.png",
-                "priority": 582,
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Missile resistance: 15% for Chaos Warhounds, Chaos Chariot, Gorebeast Chariot, Chaos Knights, Dragon Ogres, and Chaos Feral Manticore units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_missile_resistance_chs_chariots_chaos_knights_dragon_ogres_warhounds_manticore_rank7",
-                "value": 15
+                "description": "Missile resistance: 10% for all cavalry, chariots and flying units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_resistance_chs_war_beasts_melee_cavalry_chariots_warshrines_units_rank7",
+                "value": 10
               }
             ]
           }
@@ -4647,7 +4956,7 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_battle_11",
-        "image_path": "battle_damage.png",
+        "image_path": "battle_attack.png",
         "is_background_skill": false,
         "name": "Freakish Mutations",
         "description": "Mutations awarded by the Chaos Gods to their followers may look horrific to southerners, but such gifts are prized.",
@@ -4655,28 +4964,28 @@
           {
             "effects": [
               {
+                "icon": "morale.png",
+                "priority": 412,
+                "is_positive_value_good": true,
+                "description": "Leadership: +6 for all war beasts, monstrous and monster units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_leadership_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
+                "value": 6
+              },
+              {
                 "icon": "melee.png",
                 "priority": 432,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_melee_attack_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
+                "description": "Melee attack: +5 for all war beasts, monstrous, and monster units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_melee_attack_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
                 "value": 5
               },
               {
-                "icon": "weapon_damage.png",
-                "priority": 462,
+                "icon": "resistance_ward_save.png",
+                "priority": 581,
                 "is_positive_value_good": true,
-                "description": "Weapon strength: +10% for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_weapon_strength_chs_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
-                "value": 10
-              },
-              {
-                "icon": "resistance_physical.png",
-                "priority": 582,
-                "is_positive_value_good": true,
-                "description": "Physical resistance: 10% for Chaos Trolls, Chaos Spawn, Chaos Giant, and Dragon Ogre Shaggoth units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_physical_resistance_chs_trolls_spawn_dragon_ogre_shaggoth_giant_rank7",
-                "value": 10
+                "description": "Ward save: 5% for all war beasts, monstrous and monster units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_physical_resistance_chs_monsterous_infantry_monsters_dragon_ogre_units_rank7",
+                "value": 5
               }
             ]
           }
@@ -4694,36 +5003,36 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_battle_12",
-        "image_path": "battle_ranged_damage.png",
+        "image_path": "battle_armour.png",
         "is_background_skill": false,
-        "name": "Guided by Tzeentch",
-        "description": "Impossible foresight is granted to a few among the ranks of the Ruinous armies, allowing them to land the critical blow upon their foes.",
+        "name": "Malevolent Ranger",
+        "description": "To devastate one's enemies from afar is the key to controlling the battlefield.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "ammo.png",
-                "priority": 512,
+                "icon": "armour.png",
+                "priority": 403,
                 "is_positive_value_good": true,
-                "description": "Ammunition: +15% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_ammunition_chs_hellcannon_marauder_horsemen_rank7",
-                "value": 15
-              },
-              {
-                "icon": "ranged_damage.png",
-                "priority": 542,
-                "is_positive_value_good": true,
-                "description": "Missile strength: +10% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_missile_damage_chs_hellcannon_marauder_horsemen_rank7",
+                "description": "Armour: +10 for all missile units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_armour_chs_artillery_missile_units_rank7",
                 "value": 10
               },
               {
                 "icon": "icon_stat_reload_time_force.png",
                 "priority": 562,
                 "is_positive_value_good": true,
-                "description": "Reload time reduction: +10% for Hellcannon, Marauder Horsemen, and Marauder Horsemasters units (Rank 7 and above)",
-                "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_chs_hellcannon_marauder_horsemen_rank7",
+                "description": "Reload time reduction: +10% for all missile units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_reload_time_chs_artillery_missile_units_rank7",
                 "value": 10
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 581,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for all missile units (Rank 7 and above)\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_stat_missile_resistance_chs_artillery_missile_units_rank7",
+                "value": 15
               }
             ]
           }
@@ -4745,7 +5054,7 @@
         "image_path": "wh_main_character_abilities_stand_or_die.png",
         "is_background_skill": false,
         "name": "Stand or Die!",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -4879,7 +5188,7 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +10%",
+                "description": "Income from raiding: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 10
               }
@@ -4891,17 +5200,17 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +20%",
+                "description": "Income from raiding: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 20
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +3%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 3
+                "description": "Income from sacking settlements: +5%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 5
               }
             ]
           },
@@ -4911,17 +5220,17 @@
                 "icon": "income.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Income from raiding: +30%",
+                "description": "Income from raiding: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_raid_income",
                 "value": 30
               },
               {
                 "icon": "income.png",
-                "priority": 101,
+                "priority": 108,
                 "is_positive_value_good": true,
-                "description": "Income from razing settlements: +8%",
-                "key": "wh_main_effect_force_all_campaign_razing_income",
-                "value": 8
+                "description": "Income from sacking settlements: +10%\n\t(Lord's army)",
+                "key": "wh_main_effect_force_all_campaign_sacking_income",
+                "value": 10
               }
             ]
           }
@@ -4950,8 +5259,8 @@
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -5%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -5%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -5
               }
             ]
@@ -4959,11 +5268,19 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Warband upgrades cost: -5% for all units",
+                "key": "wh3_dlc20_effect_unit_upgrade_cost",
+                "value": -5
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -10%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -10%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -10
               }
             ]
@@ -4971,17 +5288,25 @@
           {
             "effects": [
               {
+                "icon": "military_spending.png",
+                "priority": 100,
+                "is_positive_value_good": false,
+                "description": "Warband upgrades cost: -10% for all units",
+                "key": "wh3_dlc20_effect_unit_upgrade_cost",
+                "value": -10
+              },
+              {
                 "icon": "treasury.png",
                 "priority": 106,
                 "is_positive_value_good": false,
-                "description": "Recruitment cost: -15%",
-                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "description": "Recruitment cost: -15%\n\t(Lord's army)",
+                "key": "wh3_main_effect_mercenary_cost_mod",
                 "value": -15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_serve_or_die",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_serve_or_die",
         "tier": 2,
         "indent": 5,
         "points_on_creation": 0,
@@ -4994,19 +5319,19 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_campaign_04",
-        "image_path": "campaign_growth.png",
+        "image_path": "campaign_army.png",
         "is_background_skill": false,
-        "name": "Tribes of Chaos",
-        "description": "A Lord that was once part of the tribes - one who rode the great Norscan migrations - can summon his kin.",
+        "name": "Devoted of Chaos",
+        "description": "No act of faith can rival reaving the souls of the slain; a dark and twisted offering in honour of the Ruinous Powers.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "experience.png",
+                "priority": 611,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
-                "key": "wh_main_effect_province_growth_characters",
+                "description": "Increased experience gain: +10% for units when fighting against the Forces of Order\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
                 "value": 10
               }
             ]
@@ -5014,29 +5339,45 @@
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "souls.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
-                "key": "wh_main_effect_province_growth_characters",
-                "value": 20
+                "description": "Souls gained from battles: +10%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 10
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Increased experience gain: +15% for units when fighting against the Forces of Order\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
+                "value": 15
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "growth.png",
-                "priority": 30,
+                "icon": "souls.png",
+                "priority": 100,
                 "is_positive_value_good": true,
-                "description": "Growth: +30",
-                "key": "wh_main_effect_province_growth_characters",
-                "value": 30
+                "description": "Souls gained from battles: +15%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 15
+              },
+              {
+                "icon": "experience.png",
+                "priority": 611,
+                "is_positive_value_good": true,
+                "description": "Increased experience gain: +20% for units when fighting against the Forces of Order\n\t(Lord's army)",
+                "key": "wh3_dlc20_effect_force_xp_gain_increase_forces_of_order",
+                "value": 20
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_tribes_of_chaos",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_devoted_of_chaos",
         "tier": 3,
         "indent": 5,
         "points_on_creation": 0,
@@ -5060,8 +5401,8 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition: +5% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
+                "description": "Attrition suffered by defender: +5% when laying siege or encircling\n\t(local region)",
+                "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 5
               }
             ]
@@ -5072,17 +5413,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +10% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +10% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 10
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +10% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 10
+                "is_positive_value_good": false,
+                "description": "Control: -4\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -4
               }
             ]
           },
@@ -5092,17 +5433,17 @@
                 "icon": "attrition.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Attrition suffered by defender: +15% when laying siege or encircling",
+                "description": "Attrition suffered by defender: +15% when laying siege or encircling\n\t(local region)",
                 "key": "wh_main_effect_force_army_campaign_siege_attack_attrition",
                 "value": 15
               },
               {
-                "icon": "attrition.png",
+                "icon": "public_order.png",
                 "priority": 101,
-                "is_positive_value_good": true,
-                "description": "Attrition: +15% when under siege",
-                "key": "wh_main_effect_force_army_campaign_siege_defend_attrition_bad",
-                "value": 15
+                "is_positive_value_good": false,
+                "description": "Control: -8\n\t(local enemy province)",
+                "key": "wh_main_effect_public_order_characters_negative",
+                "value": -8
               }
             ]
           }
@@ -5148,7 +5489,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +8%",
+                "description": "Casualty replenishment rate: +8%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate",
                 "value": 8
               }
@@ -5260,8 +5601,8 @@
         "key": "wh_main_skill_node_chs_archaon_campaign_08",
         "image_path": "campaign_disaster.png",
         "is_background_skill": false,
-        "name": "Dark Apothecary",
-        "description": "The Dark Apothecaries mix their fell unguents, ensuring those that can continue to serve.",
+        "name": "Foetid Gallipot",
+        "description": "A pungent mix of fell unguents ensures the unholy vitality of one’s minions.",
         "levels": [
           {
             "effects": [
@@ -5269,7 +5610,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -10% casualties suffered from all attrition",
+                "description": "Attrition: -10% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -10
               },
@@ -5277,7 +5618,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +3%",
+                "description": "Casualty replenishment rate: +3%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 3
               }
@@ -5289,7 +5630,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -20% casualties suffered from all attrition",
+                "description": "Attrition: -20% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -20
               },
@@ -5297,7 +5638,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +6%",
+                "description": "Casualty replenishment rate: +6%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 6
               }
@@ -5309,7 +5650,7 @@
                 "icon": "attrition.png",
                 "priority": 100,
                 "is_positive_value_good": false,
-                "description": "Attrition: -30% casualties suffered from all attrition",
+                "description": "Attrition: -30% casualties suffered from all attrition\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_attrition_all_resistance",
                 "value": -30
               },
@@ -5317,7 +5658,7 @@
                 "icon": "replenishment.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Casualty replenishment rate: +9%",
+                "description": "Casualty replenishment rate: +9%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_all_campaign_replenishment_rate_horde",
                 "value": 9
               }
@@ -5337,65 +5678,65 @@
       },
       {
         "key": "wh_main_skill_node_chs_archaon_campaign_09",
-        "image_path": "campaign_army.png",
+        "image_path": "campaign_military_spending.png",
         "is_background_skill": false,
-        "name": "Gathering of Might",
-        "description": "The masses flock to the Lord of Chaos - a dread time will soon fall on the weaklings in the south.",
+        "name": "Blessed by Evil",
+        "description": "For one fighting with the favour of the Ruinous Powers, glory and riches come naturally.",
         "levels": [
           {
             "effects": [
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +5%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 5
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "experience.png",
-                "priority": 117,
+                "icon": "item_ability.png",
+                "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
-                "value": 1
+                "description": "Post battle chance of stealing a magic item: +5%\n\t(Lord's army)",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 5
               },
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +10%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 10
               }
             ]
           },
           {
             "effects": [
               {
-                "icon": "experience.png",
-                "priority": 117,
+                "icon": "item_ability.png",
+                "priority": 8,
                 "is_positive_value_good": true,
-                "description": "Recruit rank: +2",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
-                "value": 2
+                "description": "Post battle chance of stealing a magic item: +10%\n\t(Lord's army)",
+                "key": "wh_main_effect_character_mod_ancillary_steal",
+                "value": 10
               },
               {
-                "icon": "army.png",
-                "priority": 270,
+                "icon": "income.png",
+                "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Local recruitment capacity: +1",
-                "key": "wh_main_effect_unit_recruitment_points",
-                "value": 1
+                "description": "Income from post-battle loot: +15%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 15
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_gathering_of_might",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_blessed_by_evil",
         "tier": 8,
         "indent": 5,
         "points_on_creation": 0,
@@ -5411,7 +5752,7 @@
         "image_path": "campaign_ambush.png",
         "is_background_skill": false,
         "name": "Premonition",
-        "description": "This being must be touched by Tzeentch, seeing things before they happen.",
+        "description": "Visions cloud the mind, prophesising the arrival of the enemy and uncovering every shadow in which they lurk.",
         "levels": [
           {
             "effects": [
@@ -5419,9 +5760,9 @@
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +6%",
+                "description": "Ambush defence chance: +10%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 6
+                "value": 10
               }
             ]
           },
@@ -5431,17 +5772,17 @@
                 "icon": "subterranean.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +8%",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%",
                 "key": "wh_main_effect_general_mod_tunnel_interception_chance",
-                "value": 8
+                "value": 10
               },
               {
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +16%",
+                "description": "Ambush defence chance: +20%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
-                "value": 16
+                "value": 20
               }
             ]
           },
@@ -5451,22 +5792,22 @@
                 "icon": "subterranean.png",
                 "priority": 101,
                 "is_positive_value_good": true,
-                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +15%",
+                "description": "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%",
                 "key": "wh_main_effect_general_mod_tunnel_interception_chance",
-                "value": 15
+                "value": 20
               },
               {
                 "icon": "icon_effects_ambush.png",
                 "priority": 110,
                 "is_positive_value_good": true,
-                "description": "Ambush defence chance: +30%",
+                "description": "Ambush defence chance: +30%\n\t(Lord's army)",
                 "key": "wh_main_effect_force_army_campaign_ambush_defence_success_chance",
                 "value": 30
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_all_lord_campaign_premonition",
+        "character_skill_key": "wh3_dlc20_skill_all_lord_campaign_premonition",
         "tier": 9,
         "indent": 5,
         "points_on_creation": 0,
@@ -5482,39 +5823,47 @@
         "key": "wh_main_skill_node_chs_archaon_campaign_11",
         "image_path": "campaign_chaos_corruption.png",
         "is_background_skill": false,
-        "name": "Corruption",
-        "description": "With the servants of Chaos comes the corruption - as the landscape twists, this one speeds the transformation.",
+        "name": "Chaos Unchained",
+        "description": "All will bow before such a harbinger of pure, unbridled Chaos, oozing with the energies of corruption.",
         "levels": [
           {
             "effects": [
               {
                 "icon": "campaign_movement.png",
-                "priority": 100,
+                "priority": 13,
                 "is_positive_value_good": true,
                 "description": "Campaign movement range: +5%",
-                "key": "wh_main_effect_agent_movement_range_mod",
+                "key": "wh_main_effect_force_all_campaign_movement_range",
                 "value": 5
+              },
+              {
+                "icon": "souls.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Souls gained from battles: +10%",
+                "key": "wh3_dlc20_effect_pooled_resource_mod_souls_battle",
+                "value": 10
+              },
+              {
+                "icon": "income.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Income from post-battle loot: +10%",
+                "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                "value": 10
               },
               {
                 "icon": "corruption_chaos.png",
                 "priority": 104,
                 "is_positive_value_good": true,
-                "description": "Chaos Undivided corruption: +4",
+                "description": "Chaos Undivided corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_corruption_chaos_characters",
-                "value": 4
-              },
-              {
-                "icon": "experience.png",
-                "priority": 117,
-                "is_positive_value_good": true,
-                "description": "Recruit rank: +1",
-                "key": "wh_main_effect_force_all_campaign_experience_base_all",
                 "value": 1
               }
             ]
           }
         ],
-        "character_skill_key": "wh_main_skill_chs_lord_campaign_corruption",
+        "character_skill_key": "wh3_dlc20_skill_chs_lord_campaign_corruption_undivided",
         "tier": 10,
         "indent": 5,
         "points_on_creation": 0,
@@ -5541,18 +5890,34 @@
         {
           "effects": [
             {
-              "icon": "income.png",
-              "priority": 101,
+              "icon": "",
+              "priority": 0,
               "is_positive_value_good": true,
-              "description": "Income from razing settlements: +50%",
-              "key": "wh_main_effect_force_all_campaign_razing_income",
-              "value": 50
+              "description": "gives RoR's the benefits of archaons unique +3% damage per rank effect, because they don't have ranks.\n\t(Lord's army)",
+              "key": "wh2_dlc16_archaon_ror_stat_fix",
+              "value": 27
+            },
+            {
+              "icon": "weapon_damage.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "Units gain +3% weapon and missile strength per rank achieved\n\t(Lord's army)",
+              "key": "wh2_dlc16_scaling_experience_benefits_archaon",
+              "value": 3
+            },
+            {
+              "icon": "corruption_chaos.png",
+              "priority": 1,
+              "is_positive_value_good": true,
+              "description": "All Authority: +1\n\t(Lord's army)",
+              "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_all_character",
+              "value": 1
             },
             {
               "icon": "resistance_ward_save.png",
               "priority": 580,
               "is_positive_value_good": true,
-              "description": "Ward save: 5%",
+              "description": "Ward save: 5%\n\t(Lord's army)",
               "key": "wh_main_effect_force_stat_ward_save",
               "value": 5
             }
@@ -5569,10 +5934,10 @@
     },
     {
       "key": "wh_main_skill_node_chs_archaon_magic1_dummy",
-      "image_path": "battle_attack.png",
+      "image_path": "wh_main_spell_metal_searing_doom.png",
       "is_background_skill": false,
-      "name": "Fireball [HIDDEN]",
-      "description": " ",
+      "name": "",
+      "description": "",
       "levels": [
         {
           "effects": [
@@ -5580,119 +5945,49 @@
               "icon": "magic_character.png",
               "priority": 290,
               "is_positive_value_good": true,
-              "description": "Spell: \"Cascading Fire Cloak\"",
+              "description": "Spell: \"Searing Doom\"",
               "related_abilities": [
                 {
-                  "effect": "wh_main_effect_ability_enable_cascading_fire_cloak",
+                  "effect": "wh_main_effect_ability_enable_searing_doom",
                   "bonus_value_id": "enable",
                   "unit_ability": {
-                    "key": "wh_main_spell_fire_cascading_fire_cloak",
-                    "icon_name": "wh_main_spell_fire_cascading_fire_cloak",
-                    "overpower_option": "",
+                    "key": "wh_main_spell_metal_searing_doom",
+                    "icon_name": "wh_main_spell_metal_searing_doom",
+                    "overpower_option": "wh_main_spell_metal_searing_doom_upgraded",
                     "type": {
-                      "key": "wh_type_augment",
-                      "icon_path": "icon_spell_augment.png",
-                      "description": "Augment"
+                      "key": "wh_type_bombardment",
+                      "icon_path": "icon_spell_bombardment.png",
+                      "description": "Bombardment"
                     },
                     "is_hidden_in_ui": false,
-                    "description": "Cascading Fire Cloak",
-                    "active_time": 30,
-                    "recharge_time": 30,
-                    "wind_up_time": 1,
-                    "passive": false,
-                    "effect_range": 0,
-                    "affect_self": true,
-                    "target_friends": true,
-                    "target_enemies": false,
-                    "target_ground": false,
-                    "target_intercept_range": 200,
-                    "mana_cost": 5,
-                    "target_self": true,
-                    "phases": [
-                      {
-                        "duration": 30,
-                        "effect_type": "positive",
-                        "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null,
-                        "stat_effects": [
-                          {
-                            "value": 1.3,
-                            "stat": "stat_melee_damage_ap",
-                            "how": "mult",
-                            "description": "x1.3 Armour-Piercing Weapon Damage",
-                            "sort_order": 0,
-                            "icon": "modifier_icon_armour_piercing.png"
-                          },
-                          {
-                            "value": 25,
-                            "stat": "stat_melee_defence",
-                            "how": "add",
-                            "description": "+25 Melee Defence",
-                            "sort_order": 3,
-                            "icon": "icon_stat_defence.png"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                }
-              ],
-              "key": "wh_main_effect_ability_enable_cascading_fire_cloak",
-              "value": 1
-            },
-            {
-              "icon": "magic_character.png",
-              "priority": 290,
-              "is_positive_value_good": true,
-              "description": "Spell: \"Fireball\"",
-              "related_abilities": [
-                {
-                  "effect": "wh_main_effect_ability_enable_fireball",
-                  "bonus_value_id": "enable",
-                  "unit_ability": {
-                    "key": "wh_main_spell_fire_fireball",
-                    "icon_name": "wh_main_spell_fire_fireball",
-                    "overpower_option": "wh_main_spell_fire_fireball_upgraded",
-                    "type": {
-                      "key": "wh_type_magic_missile",
-                      "icon_path": "icon_spell_magic_missile.png",
-                      "description": "Magic Missile"
-                    },
-                    "is_hidden_in_ui": false,
-                    "description": "Fireball",
+                    "description": "Searing Doom",
                     "ui_effects": [
                       {
-                        "key": "wh2_main_all_magical_and_flaming_medium",
+                        "key": "wh2_main_all_magical_damage_moderate",
                         "sort_order": 104,
                         "effect_state": "positive",
-                        "description": "Causes moderate magical & fire damage"
+                        "description": "Causes moderate magical damage"
                       },
                       {
-                        "key": "wh_main_projectile_powerful_explosion",
+                        "key": "wh2_main_bombardment_medium_strike_aoe",
                         "sort_order": 105,
                         "effect_state": "positive",
-                        "description": "Powerful explosion"
+                        "description": "Medium strike area"
                       },
                       {
-                        "key": "wh_main_all_strong_against_multiple",
+                        "key": "wh_main_all_strong_against_unit",
                         "sort_order": 106,
                         "effect_state": "positive",
-                        "description": "Strong vs multiple combatants"
+                        "description": "Strong vs a single unit"
                       },
                       {
-                        "key": "wh_main_projectile_effective_long_range",
-                        "sort_order": 106,
-                        "effect_state": "positive",
-                        "description": "Effective at long range"
-                      },
-                      {
-                        "key": "wh3_main_projectile_requires_line_of_sight",
-                        "sort_order": 215,
+                        "key": "wh_main_all_weak_against_single",
+                        "sort_order": 203,
                         "effect_state": "negative",
-                        "description": "Requires line of sight to the target"
+                        "description": "Weak vs a single combatant"
                       }
                     ],
+                    "active_time": 9,
                     "recharge_time": 20,
                     "wind_up_time": 1,
                     "passive": false,
@@ -5700,21 +5995,94 @@
                     "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
-                    "target_ground": false,
-                    "target_intercept_range": 300,
+                    "target_ground": true,
+                    "target_intercept_range": 200,
                     "mana_cost": 5,
                     "target_self": false
                   }
                 }
               ],
-              "key": "wh_main_effect_ability_enable_fireball",
+              "key": "wh_main_effect_ability_enable_searing_doom",
+              "value": 1
+            },
+            {
+              "icon": "magic_character.png",
+              "priority": 290,
+              "is_positive_value_good": true,
+              "description": "Spell: \"Spirit Leech\"",
+              "related_abilities": [
+                {
+                  "effect": "wh_main_effect_ability_enable_spirit_leech",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_spell_death_spirit_leech",
+                    "icon_name": "wh_main_spell_death_spirit_leech",
+                    "overpower_option": "wh_main_spell_death_spirit_leech_upgraded",
+                    "type": {
+                      "key": "wh_type_direct_damage",
+                      "icon_path": "icon_spell_direct_damage.png",
+                      "description": "Direct Damage"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Spirit Leech",
+                    "ui_effects": [
+                      {
+                        "key": "wh_main_all_direct_damage",
+                        "sort_order": 104,
+                        "effect_state": "positive",
+                        "description": "Causes damage to combatants"
+                      },
+                      {
+                        "key": "wh_dlc08_direct_damage_character_unit",
+                        "sort_order": 105,
+                        "effect_state": "positive",
+                        "description": "Strong vs character"
+                      },
+                      {
+                        "key": "wh_main_all_strong_against_single",
+                        "sort_order": 106,
+                        "effect_state": "positive",
+                        "description": "Strong vs a single combatant"
+                      },
+                      {
+                        "key": "wh_main_all_weak_against_multiple",
+                        "sort_order": 203,
+                        "effect_state": "negative",
+                        "description": "Weak vs multiple combatants"
+                      }
+                    ],
+                    "active_time": 15,
+                    "recharge_time": 30,
+                    "wind_up_time": 1,
+                    "passive": false,
+                    "effect_range": 0,
+                    "affect_self": false,
+                    "target_friends": false,
+                    "target_enemies": true,
+                    "target_ground": false,
+                    "target_intercept_range": 100,
+                    "mana_cost": 6,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": 15,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "wh_main_effect_ability_enable_spirit_leech",
               "value": 1
             }
           ]
         }
       ],
       "character_skill_node_set_key": "wh_main_skill_node_set_chs_archaon",
-      "character_skill_key": "wh2_main_skill_all_magic_fire_dummy_fireball_cascading_fire_cloak",
+      "character_skill_key": "wh3_dlc20_skill_magic_searing_doom_spirit_leech",
       "tier": 11,
       "indent": 3,
       "points_on_creation": 1,
@@ -5728,12 +6096,12 @@
       "type": "wh_main_anc_weapon",
       "effects": [
         {
-          "icon": "income.png",
-          "priority": 101,
+          "icon": "corruption_khorne.png",
+          "priority": 1,
           "is_positive_value_good": true,
-          "description": "Income from post-battle loot: +8%",
-          "value": 8,
-          "key": "wh_main_effect_force_all_campaign_post_battle_loot_mod"
+          "description": "Khorne Authority: +1",
+          "value": 1,
+          "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_khorne_character"
         },
         {
           "icon": "corruption_chaos.png",
@@ -5744,19 +6112,11 @@
           "key": "wh3_main_effect_corruption_chaos_characters"
         },
         {
-          "icon": "treasury.png",
-          "priority": 106,
-          "is_positive_value_good": false,
-          "description": "Recruitment cost: -5%",
-          "value": -5,
-          "key": "wh_main_effect_force_all_campaign_recruitment_cost_all"
-        },
-        {
           "icon": "melee_character.png",
           "priority": 130,
           "is_positive_value_good": true,
-          "description": "Melee attack: +8",
-          "value": 8,
+          "description": "Melee attack: +6",
+          "value": 6,
           "key": "wh_main_effect_character_stat_melee_attack"
         },
         {
@@ -5837,6 +6197,14 @@
           ],
           "value": 1,
           "key": "wh_main_effect_ability_enable_the_slayer_of_kings"
+        },
+        {
+          "icon": "corruption_chaos.png",
+          "priority": 500,
+          "is_positive_value_good": true,
+          "description": "Undivided Authority: +1",
+          "value": 1,
+          "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_faction"
         }
       ],
       "name": "The Slayer of Kings",
@@ -5850,28 +6218,82 @@
       "type": "wh_main_anc_armour",
       "effects": [
         {
+          "icon": "general_ability.png",
+          "priority": 1,
+          "is_positive_value_good": true,
+          "description": "Ability: \"The Armour of Morkar\"",
+          "related_abilities": [
+            {
+              "effect": "wh3_dlc20_effect_ability_enable_the_armour_of_morkar",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "wh3_dlc20_item_abilities_the_armour_of_morkar",
+                "icon_name": "wh3_dlc20_item_abilities_the_armour_of_morkar",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_area_of_augments",
+                  "icon_path": "icon_spell_area_of_augments.png",
+                  "description": "Augment (Area)"
+                },
+                "is_hidden_in_ui": false,
+                "description": "The Armour of Morkar",
+                "active_time": 29,
+                "recharge_time": 120,
+                "passive": false,
+                "effect_range": 35,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 29,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "attributes": [
+                      {
+                        "key": "charge_reflection",
+                        "description": "Charge Reflection",
+                        "attribute_type": "positive"
+                      }
+                    ],
+                    "stat_effects": [
+                      {
+                        "value": 20,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "+20 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "wh3_dlc20_effect_ability_enable_the_armour_of_morkar"
+        },
+        {
           "icon": "armour_character.png",
           "priority": 100,
           "is_positive_value_good": true,
-          "description": "Armour: +12",
-          "value": 12,
+          "description": "Armour: +10",
+          "value": 10,
           "key": "wh_main_effect_character_stat_armour"
         },
         {
           "icon": "agent.png",
           "priority": 101,
           "is_positive_value_good": false,
-          "description": "Enemy Hero action success chance: -15%",
-          "value": -15,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
           "key": "wh_main_effect_agent_action_success_chance_enemy"
-        },
-        {
-          "icon": "wound_time.png",
-          "priority": 101,
-          "is_positive_value_good": false,
-          "description": "Wound recovery time: -1",
-          "value": -1,
-          "key": "wh_main_effect_character_wound_recovery_time_mod"
         },
         {
           "icon": "defence_character.png",
@@ -5888,6 +6310,14 @@
           "description": "Ward save: 10%",
           "value": 10,
           "key": "wh_main_effect_character_stat_ward_save"
+        },
+        {
+          "icon": "corruption_chaos.png",
+          "priority": 500,
+          "is_positive_value_good": true,
+          "description": "Undivided Authority: +2",
+          "value": 2,
+          "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_undivided_faction"
         }
       ],
       "name": "The Armour of Morkar",
@@ -5901,36 +6331,36 @@
       "type": "wh_main_anc_talisman",
       "effects": [
         {
+          "icon": "corruption_tzeentch.png",
+          "priority": 1,
+          "is_positive_value_good": true,
+          "description": "Tzeentch Authority: +2",
+          "value": 2,
+          "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_tzeentch_character"
+        },
+        {
+          "icon": "magic_character.png",
+          "priority": 66,
+          "is_positive_value_good": false,
+          "description": "Winds of Magic cost: -10% for all spells",
+          "value": -10,
+          "key": "wh2_dlc14_effect_magic_cost_all_lores_percentage"
+        },
+        {
           "icon": "agent.png",
           "priority": 101,
           "is_positive_value_good": false,
-          "description": "Enemy Hero action success chance: -15%",
-          "value": -15,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
           "key": "wh_main_effect_agent_action_success_chance_enemy"
         },
         {
-          "icon": "melee_character.png",
-          "priority": 130,
+          "icon": "barrier.png",
+          "priority": 320,
           "is_positive_value_good": true,
-          "description": "Melee attack: +8",
-          "value": 8,
-          "key": "wh_main_effect_character_stat_melee_attack"
-        },
-        {
-          "icon": "defence_character.png",
-          "priority": 150,
-          "is_positive_value_good": true,
-          "description": "Melee defence: +8",
-          "value": 8,
-          "key": "wh_main_effect_character_stat_melee_defence"
-        },
-        {
-          "icon": "resistance_ward_save.png",
-          "priority": 280,
-          "is_positive_value_good": true,
-          "description": "Ward save: 15%",
-          "value": 15,
-          "key": "wh_main_effect_character_stat_ward_save"
+          "description": "Barrier hit points: +800",
+          "value": 800,
+          "key": "wh3_main_effect_battle_barrier_health_add"
         }
       ],
       "name": "The Eye of Sheerian",
@@ -5944,20 +6374,12 @@
       "type": "wh_main_anc_enchanted_item",
       "effects": [
         {
-          "icon": "military_spending.png",
-          "priority": 70,
-          "is_positive_value_good": false,
-          "description": "Upkeep: -3%",
-          "value": -3,
-          "key": "wh_main_effect_force_all_campaign_upkeep"
-        },
-        {
-          "icon": "experience.png",
-          "priority": 101,
+          "icon": "corruption_chaos.png",
+          "priority": 1,
           "is_positive_value_good": true,
-          "description": "Recruit rank: +1 for cavalry units",
+          "description": "All Authority: +1",
           "value": 1,
-          "key": "wh_main_effect_force_army_campaign_experience_base_cavalry"
+          "key": "wh3_dlc20_effect_pooled_resource_mod_chs_authority_all_character"
         },
         {
           "icon": "melee_character.png",
@@ -5966,14 +6388,6 @@
           "description": "Melee attack: +4",
           "value": 4,
           "key": "wh_main_effect_character_stat_melee_attack"
-        },
-        {
-          "icon": "growth.png",
-          "priority": 141,
-          "is_positive_value_good": true,
-          "description": "Horde growth: +7",
-          "value": 7,
-          "key": "wh_main_effect_hordebuilding_growth_characters"
         },
         {
           "icon": "defence_character.png",
@@ -6020,17 +6434,17 @@
                     "recharge_time": null,
                     "attributes": [
                       {
-                        "key": "immune_to_psychology",
-                        "description": " Immune to Psychology",
+                        "key": "causes_terror",
+                        "description": " Can Cause Terror",
                         "attribute_type": "positive"
                       }
                     ],
                     "stat_effects": [
                       {
-                        "value": 5,
+                        "value": 4,
                         "stat": "stat_morale",
                         "how": "add",
-                        "description": "+5 Leadership",
+                        "description": "+4 Leadership",
                         "sort_order": 1,
                         "icon": "icon_stat_morale.png"
                       }
@@ -6042,14 +6456,6 @@
           ],
           "value": 1,
           "key": "wh_main_effect_ability_enable_the_crown_of_domination"
-        },
-        {
-          "icon": "attribute_causes_terror.png",
-          "priority": 320,
-          "is_positive_value_good": true,
-          "description": "Attribute: Causes Terror",
-          "value": 1,
-          "key": "wh_main_effect_attribute_enable_causes_terror"
         }
       ],
       "name": "The Crown of Domination",

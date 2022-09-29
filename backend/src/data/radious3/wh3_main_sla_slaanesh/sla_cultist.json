@@ -6,7 +6,7 @@
         "image_path": "mount_chaos_steed.png",
         "is_background_skill": false,
         "name": "Chaos Steed",
-        "description": "The horses of Chaos live for battle and will choose to graze on bones over grass.",
+        "description": "The dread steeds of Chaos are more than mere horses, but creatures tainted by Daemon blood, said to be gifts from the Dark Gods themselves.",
         "levels": [
           {
             "effects": [
@@ -24,6 +24,34 @@
         ],
         "character_skill_key": "wh3_main_skill_sla_cultist_mount_chaos_steed",
         "tier": 0,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "wh3_main_skill_node_sla_cultisti_mount_warshrine",
+        "image_path": "mount_warshrine.png",
+        "is_background_skill": false,
+        "name": "Chaos Warshrine",
+        "description": "A vast, mobile altar allows the souls of the slain to be ritualistically condemned directly from the field of slaughter.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Warshrine",
+                "key": "wh_main_effect_enable_mount_warshrine",
+                "value": 1
+              }
+            ],
+            "auto_unlock_at_rank": 14
+          }
+        ],
+        "character_skill_key": "wh3_dlc20_skill_mount_sla_cultist_warshrine",
+        "tier": 1,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -226,7 +254,7 @@
           }
         ],
         "character_skill_key": "wh3_main_skill_sla_cultist_unique_gate_of_slaanesh",
-        "tier": 1,
+        "tier": 2,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -299,7 +327,7 @@
           }
         ],
         "character_skill_key": "wh3_main_skill_sla_cultist_unique_greater_gate_of_slaanesh",
-        "tier": 2,
+        "tier": 3,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 3,
@@ -330,7 +358,7 @@
           }
         ],
         "character_skill_key": "wh3_main_skill_sla_all_unique_missile_resist",
-        "tier": 3,
+        "tier": 4,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -366,7 +394,7 @@
           }
         ],
         "character_skill_key": "wh3_main_skill_sla_generic_hates_khorne",
-        "tier": 4,
+        "tier": 5,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -380,7 +408,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -390,11 +417,12 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
-        "tier": 5,
+        "tier": 6,
         "indent": 0,
         "points_on_creation": 0,
         "required_num_parents": 0,
@@ -656,7 +684,7 @@
         "image_path": "wh_main_hero_abilities_slippery.png",
         "is_background_skill": false,
         "name": "Slippery",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1964,7 +1992,7 @@
                 "icon": "corruption_slaanesh.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Slaanesh corruption: +1",
+                "description": "Slaanesh corruption: +1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_slaanesh_effect",
                 "value": 1
               },
@@ -1985,7 +2013,7 @@
                 "icon": "corruption_slaanesh.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Slaanesh corruption: +2",
+                "description": "Slaanesh corruption: +2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_slaanesh_effect",
                 "value": 2
               },
@@ -2006,7 +2034,7 @@
                 "icon": "corruption_slaanesh.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Slaanesh corruption: +3",
+                "description": "Slaanesh corruption: +3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_slaanesh_effect",
                 "value": 3
               },
@@ -2270,7 +2298,7 @@
       "key": "wh3_main_skill_node_sla_cultist_campaign_actions_dummy",
       "image_path": "battle_attack.png",
       "is_background_skill": false,
-      "name": " ",
+      "name": "",
       "description": "",
       "levels": [
         {
@@ -2327,7 +2355,7 @@
               "icon": "corruption_slaanesh.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Slaanesh corruption: +2",
+              "description": "Slaanesh corruption: +2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_slaanesh_effect",
               "value": 2
             }
@@ -2355,9 +2383,9 @@
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             },
             {
               "icon": "charge_character.png",
@@ -2388,10 +2416,18 @@
         {
           "effects": [
             {
+              "icon": "morale_character.png",
+              "priority": 110,
+              "is_positive_value_good": true,
+              "description": "Leadership: +10",
+              "key": "wh_main_effect_character_stat_leadership",
+              "value": 10
+            },
+            {
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             }
@@ -2419,7 +2455,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +10%",
+              "description": "Ambush success chance: +10%\n\t(armies in local owned region)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 10
             },
@@ -2455,7 +2491,7 @@
               "icon": "morale.png",
               "priority": 410,
               "is_positive_value_good": true,
-              "description": "Leadership: +2",
+              "description": "Leadership: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_leadership",
               "value": 2
             },
@@ -2463,7 +2499,7 @@
               "icon": "melee.png",
               "priority": 430,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +2\n\t(all units in army)",
               "key": "wh_main_effect_force_stat_melee_attack",
               "value": 2
             }
@@ -2491,9 +2527,9 @@
               "icon": "battle_movement_character.png",
               "priority": 120,
               "is_positive_value_good": true,
-              "description": "Speed: +15%",
+              "description": "Speed: +20%",
               "key": "wh_main_effect_character_stat_speed",
-              "value": 15
+              "value": 20
             },
             {
               "icon": "attribute_ignore_forest_penalties.png",
@@ -2560,20 +2596,12 @@
         {
           "effects": [
             {
-              "icon": "magic_campaign.png",
-              "priority": 100,
+              "icon": "experience.png",
+              "priority": 14,
               "is_positive_value_good": true,
-              "description": "Winds of Magic power reserve change: +5% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-              "value": 5
-            },
-            {
-              "icon": "magic_campaign.png",
-              "priority": 100,
-              "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -10% when increasing",
-              "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
-              "value": -10
+              "description": "Character experience gain: +15%",
+              "key": "wh3_main_effect_character_campaign_experience_mod",
+              "value": 15
             }
           ]
         }
@@ -2627,25 +2655,25 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +3",
+              "description": "Armour: +15",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 3
+              "value": 15
             },
             {
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +2",
+              "description": "Melee attack: +5",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 2
+              "value": 5
             },
             {
               "icon": "weapon_damage_character.png",
               "priority": 160,
               "is_positive_value_good": true,
-              "description": "Weapon strength: +5%",
+              "description": "Weapon strength: +10%",
               "key": "wh_main_effect_character_stat_weapon_strength",
-              "value": 5
+              "value": 10
             }
           ]
         }
@@ -2671,17 +2699,17 @@
               "icon": "morale_character.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Character's aura leadership effect: +2",
+              "description": "Character's aura leadership effect: +4",
               "key": "wh_main_effect_character_stat_aura_leadership_effect",
-              "value": 2
+              "value": 4
             },
             {
               "icon": "general_ability.png",
               "priority": 260,
               "is_positive_value_good": true,
-              "description": "Leadership aura size: +10%",
+              "description": "Leadership aura size: +25%",
               "key": "wh_main_effect_character_stat_leadership_aura_size",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -2707,17 +2735,17 @@
               "icon": "armour_character.png",
               "priority": 100,
               "is_positive_value_good": true,
-              "description": "Armour: +5",
+              "description": "Armour: +25",
               "key": "wh_main_effect_character_stat_armour",
-              "value": 5
+              "value": 25
             },
             {
               "icon": "defence_character.png",
               "priority": 150,
               "is_positive_value_good": true,
-              "description": "Melee defence: +3",
+              "description": "Melee defence: +5",
               "key": "wh_main_effect_character_stat_melee_defence",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -2743,17 +2771,17 @@
               "icon": "melee_character.png",
               "priority": 130,
               "is_positive_value_good": true,
-              "description": "Melee attack: +3",
+              "description": "Melee attack: +8",
               "key": "wh_main_effect_character_stat_melee_attack",
-              "value": 3
+              "value": 8
             },
             {
               "icon": "armour_piercing_character.png",
               "priority": 170,
               "is_positive_value_good": true,
-              "description": "Armour-piercing weapon damage: +5",
+              "description": "Armour-piercing weapon damage: +35",
               "key": "wh_main_effect_character_stat_ap_damage",
-              "value": 5
+              "value": 35
             }
           ]
         }
@@ -2771,7 +2799,7 @@
       "image_path": "trait_slaanesh.png",
       "is_background_skill": true,
       "name": "Sleek",
-      "description": "This one's polished, perfectly glossy smoothness enables them to glide across land, sea or air, for they are truly favoured by the Dark Prince, and swift to do his bidding.",
+      "description": "This one's polished, perfectly glossy smoothness enables them to glide across land, sea or air, for they are truly favoured by the Dark Prince, and swift to do His bidding.",
       "levels": [
         {
           "effects": [
@@ -2779,7 +2807,7 @@
               "icon": "battle_movement.png",
               "priority": 420,
               "is_positive_value_good": true,
-              "description": "Speed: +4%",
+              "description": "Speed: +4%\n\t(Hero's army)",
               "key": "wh_main_effect_force_stat_speed",
               "value": 4
             }
@@ -2807,7 +2835,7 @@
               "icon": "corruption_slaanesh.png",
               "priority": 104,
               "is_positive_value_good": true,
-              "description": "Slaanesh corruption: +1",
+              "description": "Slaanesh corruption: +1\n\t(local province)",
               "key": "wh3_main_effect_corruption_slaanesh_characters",
               "value": 1
             }

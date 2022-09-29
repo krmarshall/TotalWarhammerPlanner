@@ -5,8 +5,8 @@
         "key": "wh2_dlc15_skill_node_hef_mage_metal_mount_1",
         "image_path": "mount_elven_steed.png",
         "is_background_skill": false,
-        "name": "Elven Steed",
-        "description": "The best of all horse breeds found anywhere in the world, Elven steeds are noble, intelligent, graceful, and swift.",
+        "name": "Barded Ithilmar Steed",
+        "description": "An extremely light yet resilient material, Ithilmar gives the same protection as heavy steel, but without slowing down its wearer.",
         "levels": [
           {
             "effects": [
@@ -149,7 +149,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -159,7 +158,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -177,7 +177,7 @@
         "image_path": "wh_main_spell_metal_searing_doom.png",
         "is_background_skill": false,
         "name": "Searing Doom",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -477,7 +477,7 @@
         "image_path": "wh_main_spell_metal_plague_of_rust.png",
         "is_background_skill": false,
         "name": "Plague of Rust",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -853,7 +853,7 @@
         "image_path": "wh_main_lore_passive_metalshifting.png",
         "is_background_skill": false,
         "name": "Metalshifting",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -946,7 +946,7 @@
         "image_path": "wh_main_spell_metal_glittering_robe.png",
         "is_background_skill": false,
         "name": "Glittering Robe",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1322,7 +1322,7 @@
         "image_path": "wh_main_spell_metal_gehennas_golden_hounds.png",
         "is_background_skill": false,
         "name": "Gehenna's Golden Hounds",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1664,7 +1664,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1751,7 +1751,7 @@
         "image_path": "wh_main_spell_metal_transmutation_of_lead.png",
         "is_background_skill": false,
         "name": "Transmutation of Lead",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2127,7 +2127,7 @@
         "image_path": "wh_main_spell_metal_final_transmutation.png",
         "is_background_skill": false,
         "name": "Final Transmutation",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2580,11 +2580,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2606,7 +2606,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2642,7 +2642,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3572,7 +3572,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -1",
+                "description": "Corruption: -1\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -1
               },
@@ -3593,7 +3593,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -2",
+                "description": "Corruption: -2\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -2
               },
@@ -3614,7 +3614,7 @@
                 "icon": "corruption.png",
                 "priority": 0,
                 "is_positive_value_good": false,
-                "description": "Corruption: -3",
+                "description": "Corruption: -3\n\t(local province)",
                 "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
                 "value": -3
               },
@@ -3879,18 +3879,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_wizard_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -3920,6 +3912,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_wizard_hinder_settlement_steal_technology",
               "value": 1
             },
@@ -3935,7 +3935,7 @@
               "icon": "corruption.png",
               "priority": 0,
               "is_positive_value_good": false,
-              "description": "Corruption: -2",
+              "description": "Corruption: -2\n\t(local province)",
               "key": "wh3_main_effect_agent_action_passive_spread_corruption_reduction_effect",
               "value": -2
             }
@@ -3955,7 +3955,7 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Searing Doom [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
@@ -4047,7 +4047,7 @@
               "icon": "treasury.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Construction cost: +10% for all buildings",
+              "description": "Construction cost: +10% for all buildings\n\t(local province)",
               "key": "wh_main_effect_building_construction_cost_mod",
               "value": 10
             }
@@ -4075,7 +4075,7 @@
               "icon": "treasury.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Construction cost: -10% for all buildings",
+              "description": "Construction cost: -10% for all buildings\n\t(local province)",
               "key": "wh_main_effect_building_construction_cost_mod",
               "value": -10
             }
@@ -4103,7 +4103,7 @@
               "icon": "treasury.png",
               "priority": 101,
               "is_positive_value_good": false,
-              "description": "Construction cost: -15% for all buildings",
+              "description": "Construction cost: -15% for all buildings\n\t(local province)",
               "key": "wh_main_effect_building_construction_cost_mod",
               "value": -15
             },
@@ -4111,7 +4111,7 @@
               "icon": "construction.png",
               "priority": 102,
               "is_positive_value_good": false,
-              "description": "Construction time: -20% for all buildings",
+              "description": "Construction time: -20% for all buildings\n\t(local province)",
               "key": "wh2_main_effect_building_construction_time_mod_all",
               "value": -20
             }
@@ -4139,7 +4139,7 @@
               "icon": "income.png",
               "priority": 162,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: -10%",
+              "description": "Income from all buildings: -10%\n\t(local region)",
               "key": "wh_main_effect_economy_gdp_mod_all",
               "value": -10
             }
@@ -4167,7 +4167,7 @@
               "icon": "income.png",
               "priority": 162,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: +10%",
+              "description": "Income from all buildings: +10%\n\t(local region)",
               "key": "wh_main_effect_economy_gdp_mod_all",
               "value": 10
             }
@@ -4195,17 +4195,9 @@
               "icon": "income.png",
               "priority": 162,
               "is_positive_value_good": true,
-              "description": "Income from all buildings: +15%",
+              "description": "Income from all buildings: +15%\n\t(local region)",
               "key": "wh_main_effect_economy_gdp_mod_all",
               "value": 15
-            },
-            {
-              "icon": "income.png",
-              "priority": 162,
-              "is_positive_value_good": true,
-              "description": "Income from all buildings: +10%",
-              "key": "wh_main_effect_economy_gdp_mod_all_adjacent_provinces",
-              "value": 10
             }
           ]
         }
@@ -4311,7 +4303,7 @@
               "icon": "agent.png",
               "priority": 102,
               "is_positive_value_good": false,
-              "description": "Enemy Hero action success chance: -25%",
+              "description": "Enemy Hero action success chance: -25%\n\t(enemy characters in region)",
               "key": "wh2_main_effect_agent_action_success_chance_enemies_in_region",
               "value": -25
             }
@@ -4869,7 +4861,7 @@
               "icon": "resistance_magic.png",
               "priority": 580,
               "is_positive_value_good": false,
-              "description": "Spell resistance: 10%",
+              "description": "Spell resistance: 10%\n\t(enemy armies in local province)",
               "key": "wh_main_effect_force_stat_magic_resistance_bad",
               "value": 10
             }
@@ -4897,7 +4889,7 @@
               "icon": "magic_campaign.png",
               "priority": 100,
               "is_positive_value_good": false,
-              "description": "Enemy Winds of Magic power reserve change: -15% when increasing",
+              "description": "Enemy Winds of Magic power reserve change: -15% when increasing\n\t(local region)",
               "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod_enemy",
               "value": -15
             }
@@ -5221,7 +5213,7 @@
               "icon": "resistance_missile.png",
               "priority": 580,
               "is_positive_value_good": false,
-              "description": "Missile resistance: 10%",
+              "description": "Missile resistance: 10%\n\t(enemy armies in local province)",
               "key": "wh_main_effect_force_stat_missile_resistance_bad",
               "value": 10
             }
@@ -5537,7 +5529,7 @@
               "icon": "turns.png",
               "priority": 130,
               "is_positive_value_good": false,
-              "description": "Recruitment duration: +1 turn for Phoenix units (minimum 1)",
+              "description": "Recruitment duration: +1 turn for Phoenix units (minimum 1)\n\t(local province)",
               "key": "wh2_main_effect_trait_unit_recruitment_duration_hef_phoenix",
               "value": 1
             }
@@ -5565,7 +5557,7 @@
               "icon": "resistance_ward_save.png",
               "priority": 581,
               "is_positive_value_good": true,
-              "description": "Ward save: 5% for Phoenix units",
+              "description": "Ward save: 5% for Phoenix units\n\t(Hero's army)",
               "key": "wh2_main_effect_force_stat_ward_save_phoenix",
               "value": 5
             }

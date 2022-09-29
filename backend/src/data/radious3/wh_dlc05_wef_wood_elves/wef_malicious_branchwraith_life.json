@@ -15,7 +15,7 @@
                 "icon": "morale.png",
                 "priority": 411,
                 "is_positive_value_good": true,
-                "description": "Leadership: +6 during forest battles",
+                "description": "Leadership: +6 during forest battles\n\t(Hero's army)",
                 "key": "wh_dlc05_effect_force_stat_leadership_in_forest",
                 "value": 6
               }
@@ -43,7 +43,7 @@
                 "icon": "melee.png",
                 "priority": 431,
                 "is_positive_value_good": true,
-                "description": "Melee attack: +5 during forest battles",
+                "description": "Melee attack: +5 during forest battles\n\t(Hero's army)",
                 "key": "wh_dlc05_effect_force_stat_melee_attack_during_forest",
                 "value": 5
               }
@@ -154,7 +154,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -164,7 +163,8 @@
                 "key": "wh2_main_effect_grant_immortality_hero",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_hero",
@@ -213,7 +213,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 20,
+                      "active_time": 1,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -271,7 +271,7 @@
                           "description": "Large explosion area"
                         }
                       ],
-                      "active_time": 20,
+                      "active_time": 1,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -434,7 +434,7 @@
                           "description": "Replenishes hit points of combatants"
                         }
                       ],
-                      "active_time": 30,
+                      "active_time": 7,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -493,7 +493,7 @@
                           "description": "Replenishes hit points of combatants"
                         }
                       ],
-                      "active_time": 30,
+                      "active_time": 7,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -538,7 +538,7 @@
                           "description": "Replenishes hit points of combatants"
                         }
                       ],
-                      "active_time": 30,
+                      "active_time": 7,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -605,7 +605,7 @@
                           "description": "Replenishes hit points of combatants"
                         }
                       ],
-                      "active_time": 30,
+                      "active_time": 7,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -650,7 +650,7 @@
                           "description": "Replenishes hit points of combatants"
                         }
                       ],
-                      "active_time": 30,
+                      "active_time": 7,
                       "recharge_time": 45,
                       "wind_up_time": 1,
                       "passive": false,
@@ -1441,7 +1441,7 @@
         "image_path": "wh_main_character_passive_evasion.png",
         "is_background_skill": false,
         "name": "Evasion",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -1576,7 +1576,7 @@
                         {
                           "duration": 35,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1636,7 +1636,7 @@
                         {
                           "duration": 35,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1682,7 +1682,7 @@
                         {
                           "duration": 35,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1750,7 +1750,7 @@
                         {
                           "duration": 35,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -1796,7 +1796,7 @@
                         {
                           "duration": 35,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -1,
+                          "fatigue_change_ratio": -0.1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -2297,11 +2297,11 @@
             "effects": [
               {
                 "icon": "magic_campaign.png",
-                "priority": 100,
+                "priority": 3,
                 "is_positive_value_good": true,
-                "description": "Winds of Magic power reserve change: +20% when increasing",
-                "key": "wh3_main_effect_winds_of_magic_pooled_resource_change_positive_mod",
-                "value": 20
+                "description": "Winds of Magic power reserve capacity: +5",
+                "key": "wh3_main_effect_winds_of_magic_pool_cap",
+                "value": 5
               }
             ]
           }
@@ -2323,7 +2323,7 @@
         "image_path": "wh_main_character_abilities_arcane_conduit.png",
         "is_background_skill": false,
         "name": "Arcane Conduit",
-        "description": " ",
+        "description": "",
         "levels": [
           {
             "effects": [
@@ -2359,7 +2359,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.5,
+                          "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
                           "recharge_time": null
@@ -3818,10 +3818,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 6,
+                              "value": 5,
                               "stat": "stat_melee_attack",
                               "how": "add",
-                              "description": "+6 Melee Attack",
+                              "description": "+5 Melee Attack",
                               "sort_order": 2,
                               "icon": "icon_stat_attack.png"
                             }
@@ -3906,10 +3906,10 @@
                           "recharge_time": null,
                           "stat_effects": [
                             {
-                              "value": 6,
+                              "value": 8,
                               "stat": "stat_melee_attack",
                               "how": "add",
-                              "description": "+6 Melee Attack",
+                              "description": "+8 Melee Attack",
                               "sort_order": 2,
                               "icon": "icon_stat_attack.png"
                             }
@@ -4003,7 +4003,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -10",
+                "description": "Growth: -10\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -10
               },
@@ -4011,7 +4011,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +10",
+                "description": "Growth: +10\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 10
               },
@@ -4032,7 +4032,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -20",
+                "description": "Growth: -20\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -20
               },
@@ -4040,7 +4040,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +20",
+                "description": "Growth: +20\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 20
               },
@@ -4061,7 +4061,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: -30",
+                "description": "Growth: -30\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
                 "value": -30
               },
@@ -4069,7 +4069,7 @@
                 "icon": "growth.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Growth: +30",
+                "description": "Growth: +30\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
                 "value": 30
               },
@@ -4334,18 +4334,10 @@
       "image_path": "battle_attack.png",
       "is_background_skill": false,
       "name": "Actions [HIDDEN]",
-      "description": " ",
+      "description": "",
       "levels": [
         {
           "effects": [
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
             {
               "icon": "",
               "priority": 0,
@@ -4383,6 +4375,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_champion_passive_stimulate_growth",
               "value": 1
             },
@@ -4390,7 +4390,7 @@
               "icon": "growth.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Growth: -10",
+              "description": "Growth: -10\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_negative",
               "value": -10
             },
@@ -4398,7 +4398,7 @@
               "icon": "growth.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Growth: +10",
+              "description": "Growth: +10\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_stimulate_growth_effect_positive",
               "value": 10
             }
@@ -4434,7 +4434,7 @@
               "icon": "general_ability.png",
               "priority": 300,
               "is_positive_value_good": true,
-              "description": "Ability: \"Lamentation of Despair\"",
+              "description": "Ability: \"Lamentation of Despairs\"",
               "related_abilities": [
                 {
                   "effect": "wh2_main_effect_ability_enable_lamentation_of_despair",
@@ -4798,7 +4798,7 @@
               "icon": "icon_effects_ambush.png",
               "priority": 101,
               "is_positive_value_good": true,
-              "description": "Ambush success chance: +20%",
+              "description": "Ambush success chance: +20%\n\t(own army)",
               "key": "wh_main_effect_force_army_campaign_ambush_attack_success_chance",
               "value": 20
             },
@@ -4870,10 +4870,10 @@
         {
           "effects": [
             {
-              "icon": "spell_ability.png",
+              "icon": "magic_character.png",
               "priority": 66,
               "is_positive_value_good": true,
-              "description": "Winds of Magic cost: +2 for all enemy spells",
+              "description": "Winds of Magic cost: +2 for all enemy spells\n\t(enemy armies in local province)",
               "key": "wh2_dlc16_effect_magic_cost_all_lores_enemy",
               "value": 2
             },
@@ -4909,7 +4909,7 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "mana_regen_mod": 0.5,
+                        "mana_regen_mod": 0.4,
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
                         "recharge_time": null
@@ -5133,7 +5133,7 @@
               "icon": "resistance_magic.png",
               "priority": 580,
               "is_positive_value_good": false,
-              "description": "Spell resistance: -25%",
+              "description": "Spell resistance: -25%\n\t(enemy armies in local province)",
               "key": "wh_main_effect_force_stat_magic_resistance_bad",
               "value": -25
             },
@@ -5254,7 +5254,7 @@
                         "description": "Large explosion area"
                       }
                     ],
-                    "active_time": 20,
+                    "active_time": 1,
                     "recharge_time": 45,
                     "wind_up_time": 1,
                     "passive": false,

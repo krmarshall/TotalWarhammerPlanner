@@ -22,12 +22,12 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"For the King! Charge\", while this Mount is equipped, for Cavalry units",
+                "description": "Passive Ability: \"For the King! Charge\", while this Mount is equipped, for Cavalry units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_brt_ancillary_horse",
                 "value": 1
               }
             ],
-            "auto_unlock_at_rank": 8
+            "auto_unlock_at_rank": 7
           }
         ],
         "character_skill_key": "wh_main_skill_brt_champion_unique_paladin_barded_warhorse",
@@ -58,7 +58,7 @@
                 "icon": "general_ability.png",
                 "priority": 600,
                 "is_positive_value_good": true,
-                "description": "Passive Ability: \"Cleanse Them in the Name of the Lady\", while this Mount is equipped, for Flying units",
+                "description": "Passive Ability: \"Cleanse Them in the Name of the Lady\", while this Mount is equipped, for Flying units\n\t(all units in army)",
                 "key": "op3_effect_enable_ability_dummy_brt_ancillary_pegasus",
                 "value": 1
               }
@@ -109,7 +109,6 @@
         "description": "Who wants to live forever? As it turns out, most beings wouldn't say no…",
         "levels": [
           {
-            "unlocked_at_rank": 20,
             "effects": [
               {
                 "icon": "wound_time.png",
@@ -119,7 +118,8 @@
                 "key": "wh2_main_effect_grant_immortality_lord",
                 "value": 1
               }
-            ]
+            ],
+            "auto_unlock_at_rank": 20
           }
         ],
         "character_skill_key": "wh2_main_skill_all_immortality_lord",
@@ -1644,9 +1644,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 5",
+                "description": "Training action: Experience per turn is increased by an additional 20",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 5
+                "value": 20
               }
             ]
           },
@@ -1657,9 +1657,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 10",
+                "description": "Training action: Experience per turn is increased by an additional 35",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 10
+                "value": 35
               }
             ]
           },
@@ -1670,9 +1670,9 @@
                 "icon": "experience.png",
                 "priority": 7,
                 "is_positive_value_good": true,
-                "description": "Training action: Experience per turn is increased by an additional 25",
+                "description": "Training action: Experience per turn is increased by an additional 50",
                 "key": "wh2_main_effect_agent_action_assist_army_training_buff",
-                "value": 25
+                "value": 50
               }
             ]
           }
@@ -1697,7 +1697,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -1",
+                "description": "Control: -1\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -1
               },
@@ -1705,7 +1705,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +1",
+                "description": "Control: +1\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 1
               },
@@ -1726,7 +1726,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -2",
+                "description": "Control: -2\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -2
               },
@@ -1734,7 +1734,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +2",
+                "description": "Control: +2\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 2
               },
@@ -1755,7 +1755,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: -3",
+                "description": "Control: -3\n\t(local enemy province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
                 "value": -3
               },
@@ -1763,7 +1763,7 @@
                 "icon": "public_order.png",
                 "priority": 0,
                 "is_positive_value_good": true,
-                "description": "Control: +3",
+                "description": "Control: +3\n\t(local province)",
                 "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
                 "value": 3
               },
@@ -2037,14 +2037,6 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
-              "key": "wh2_dlc11_effect_agent_action_enable_champion_hinder_settlement_treasure_hunt",
-              "value": 1
-            },
-            {
-              "icon": "",
-              "priority": 0,
-              "is_positive_value_good": true,
-              "description": "",
               "key": "wh2_main_effect_agent_action_enable_champion_assist_army_training",
               "value": 1
             },
@@ -2077,6 +2069,14 @@
               "priority": 0,
               "is_positive_value_good": true,
               "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
               "key": "wh2_main_effect_agent_action_enable_champion_passive_spread_public_order",
               "value": 1
             },
@@ -2084,7 +2084,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: -1",
+              "description": "Control: -1\n\t(local enemy province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
               "value": -1
             },
@@ -2092,7 +2092,7 @@
               "icon": "public_order.png",
               "priority": 0,
               "is_positive_value_good": true,
-              "description": "Control: +1",
+              "description": "Control: +1\n\t(local province)",
               "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
               "value": 1
             }
@@ -2120,9 +2120,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "melee_character.png",
@@ -2164,17 +2164,17 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "morale.png",
               "priority": 411,
               "is_positive_value_good": true,
-              "description": "Leadership: +8 for Knight units",
+              "description": "Leadership: +6 for Knight units\n\t(all units in army)",
               "key": "wh_dlc07_effect_force_stat_leadership_knights",
-              "value": 8
+              "value": 6
             }
           ]
         }
@@ -2200,9 +2200,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "battle_movement_character.png",
@@ -2236,9 +2236,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "weapon_damage_character.png",
@@ -2272,9 +2272,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "charge_character.png",
@@ -2308,9 +2308,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "defence_character.png",
@@ -2344,9 +2344,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "morale_character.png",
@@ -2380,9 +2380,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "melee_character.png",
@@ -2416,9 +2416,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "bonus_vs_large_character.png",
@@ -2452,9 +2452,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "resistance_ward_save.png",
@@ -2488,9 +2488,9 @@
               "icon": "chivalry_positive.png",
               "priority": 1,
               "is_positive_value_good": true,
-              "description": "Chivalry: +10",
-              "key": "wh_dlc07_effect_chivalry_dummy",
-              "value": 10
+              "description": "Chivalry: +4 per turn",
+              "key": "wh_dlc07_effect_chivalry_per_turn_traits_good",
+              "value": 4
             },
             {
               "icon": "resistance_missile.png",
