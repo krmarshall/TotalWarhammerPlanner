@@ -51,7 +51,7 @@ const gameData: GameInterface = {
     factions: factions3,
     characters: radious3Characters,
     characterImages: radious3CharacterImgs,
-    updated: '28 Sep 2022',
+    updated: '29 Sep 2022',
   },
 };
 
