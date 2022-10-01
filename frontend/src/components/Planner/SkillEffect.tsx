@@ -16,15 +16,23 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   // } else {
   //   goodBadEffectClassName += ' text-red-500';
   // }
-
+  let iconName = skillEffect.icon;
+  if (
+    (iconName === 'spell_ability.png' || iconName === 'general_ability.png' || iconName === 'magic_character.png') &&
+    skillEffect.related_abilities?.[0]?.unit_ability.icon_name !== undefined
+  ) {
+    iconName = skillEffect.related_abilities?.[0]?.unit_ability.icon_name;
+  }
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
-  const iconName = skillEffect.icon.replace('.png', '.webp');
+  iconName = iconName.replace('.png', '.webp');
   return (
     <div className="flex flex-row flex-nowrap">
       <ReactImage
         srcList={[
           `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName}`,
           `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${iconName}`,
+          `/imgs/${selectedMod}/battle_ui/ability_icons/${iconName}.webp`,
+          `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${iconName}.webp`,
           `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
         ]}
         className="w-6 h-6"
