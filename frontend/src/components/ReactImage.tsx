@@ -1,4 +1,4 @@
-import { useState, useTransition } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 
 import spinner from '../imgs/other/spinner.webp';
 
@@ -21,17 +21,18 @@ const ReactImage = ({ srcList, className, alt, w, h }: PropsInterface) => {
         return;
       }
       setSrcState({ src: srcList[srcState.fallbackIndex], fallbackIndex: srcState.fallbackIndex + 1 });
-      const tempSrc = srcList[srcState.fallbackIndex];
-
-      if (tempSrc?.includes('/battle_ui/ability_icons/') && parseInt(w) > 24) {
-        setImgClass(`${className} p-3`);
-      } else if (tempSrc?.includes('/campaign_ui/skills/trait_') && parseInt(w) > 24) {
-        setImgClass(`${className} p-2.5`);
-      } else {
-        setImgClass(className);
-      }
     });
   };
+
+  useEffect(() => {
+    if (srcState.src?.includes('/battle_ui/ability_icons/') && parseInt(w) > 24) {
+      setImgClass(`${className} p-3`);
+    } else if (srcState.src?.includes('/campaign_ui/skills/trait_') && parseInt(w) > 24) {
+      setImgClass(`${className} p-2.5`);
+    } else {
+      setImgClass(className);
+    }
+  }, [srcState.src]);
 
   return isPending ? (
     <img
