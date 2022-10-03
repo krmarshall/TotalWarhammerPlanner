@@ -20,6 +20,7 @@ const gameData: GameInterface = {
     characters: vanilla2Characters,
     characterImages: vanilla2CharacterImgs,
     updated: '4 Aug 2022',
+    category: 'Base',
   },
   sfo2: {
     text: 'SFO 2',
@@ -28,6 +29,7 @@ const gameData: GameInterface = {
     characters: sfo2Characters,
     characterImages: sfo2CharacterImgs,
     updated: '31 Jul 2022',
+    category: 'Overhaul',
   },
   radious2: {
     text: 'Radious 2',
@@ -36,6 +38,7 @@ const gameData: GameInterface = {
     characters: radious2Characters,
     characterImages: radious2CharacterImgs,
     updated: '6 Mar 2022',
+    category: 'Overhaul',
   },
   vanilla3: {
     text: 'Vanilla 3',
@@ -44,6 +47,7 @@ const gameData: GameInterface = {
     characters: vanilla3Characters,
     characterImages: vanilla3CharacterImgs,
     updated: '6 Sep 2022',
+    category: 'Base',
   },
   radious3: {
     text: 'Radious 3',
@@ -52,6 +56,7 @@ const gameData: GameInterface = {
     characters: radious3Characters,
     characterImages: radious3CharacterImgs,
     updated: '29 Sep 2022',
+    category: 'Overhaul',
   },
 };
 

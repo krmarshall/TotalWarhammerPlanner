@@ -4,6 +4,7 @@ import gameData from '../../data/gameData';
 import ReactImage from '../ReactImage';
 import placeholderImg from '../../imgs/other/0placeholder.webp';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import TooltipWrapper from '../Planner/TooltipWrapper';
 
 const ModSelector = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -24,7 +25,6 @@ const ModSelector = () => {
   useEffect(() => {
     setGameKeys(filterGamesKeys);
   }, [selectedGame]);
-
   return (
     <div className="justify-self-center mt-[5rem]">
       <div className="flex flex-row place-content-center w-[80vw]">
@@ -37,12 +37,30 @@ const ModSelector = () => {
           {gameKeys.map((gameKey) => {
             const game = gameData[gameKey as keyof typeof gameData];
             let liClassName =
-              'flex flex-col justify-between m-1 mx-2 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
+              'flex flex-col justify-around h-48 m-1 mx-2 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
             if (gameKey === selectedMod) {
               liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';
             } else {
               liClassName += ' hover:bg-gray-600';
+            }
+
+            let categoryDesc = 'Placeholder';
+            switch (gameData[gameKey].category) {
+              case 'Base': {
+                categoryDesc = 'The vanilla game with no mods. All characters are displayed with few exceptions.';
+                break;
+              }
+              case 'Overhaul': {
+                categoryDesc =
+                  'A total overhaul mod. Both new and vanilla characters are displayed whether they have been modified or not.';
+                break;
+              }
+              case 'Character Mod': {
+                categoryDesc =
+                  'A mod that adds new characters. Vanilla characters have been pruned, only new characters added by the mod are displayed.';
+                break;
+              }
             }
             return (
               <CSSTransition
@@ -68,7 +86,20 @@ const ModSelector = () => {
                     h="128"
                     w="128"
                   />
-                  <h3 className="text-center text-gray-400 text-lg text-shadow mb-1">{gameData[gameKey].updated}</h3>
+                  <h3 className="text-center text-gray-400 text-lg text-shadow my-1">{gameData[gameKey].updated}</h3>
+                  <TooltipWrapper
+                    tooltip={
+                      <span className="text-center flex flex-row">
+                        <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+                          <h3 className="text-gray-50 text-xl">{categoryDesc}</h3>
+                        </div>
+                      </span>
+                    }
+                  >
+                    <h3 className="w-fit mx-auto text-center text-gray-400 text-lg text-shadow mb-1 underline decoration-dashed">
+                      {gameData[gameKey].category}
+                    </h3>
+                  </TooltipWrapper>
                 </li>
               </CSSTransition>
             );

@@ -6,6 +6,7 @@ interface GameInterface {
     characters: { [key: string]: { [key: string]: { name: string; spellLore?: string } } };
     characterImages: { [key: string]: string };
     updated: string;
+    category: string;
   };
 }
 

@@ -1,9 +1,9 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
 import lzbase62 from 'lzbase62';
 
-const baseURL = import.meta.env.DEV ? 'http://localhost:3000/planner/' : 'https://totalwarhammerplanner.com/planner/';
+const baseURL = import.meta.env.DEV ? 'http://127.0.0.1:5173/planner/' : 'https://totalwarhammerplanner.com/planner/';
 // 0-v means base32 decoded to a number between 0 and 31
-// Url format http://localhost:3000/planner/<faction>/<character>/...
+// Url format http://127.0.0.1:5173/planner/<faction>/<character>/...
 // [0-9 = # Of Skill Rows, y]([0-z = # of skills in next row, x][0-3 = Skill points in skill] * x) * y
 const convertBuildToCode = (characterBuild: BuildInterface) => {
   const buildData = [...characterBuild.buildData];

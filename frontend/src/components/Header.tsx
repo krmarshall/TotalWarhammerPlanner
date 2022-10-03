@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import headerImg from '../imgs/header.webp';
@@ -13,8 +13,6 @@ const Header = () => {
   const { selectedGame, selectedMod, characterData } = state;
 
   const location = useLocation();
-
-  const navigate = useNavigate();
 
   const gameChangeHandler = () => {
     const gameChange = selectedGame === '2' ? '3' : '2';
@@ -38,34 +36,32 @@ const Header = () => {
   return (
     <div className="flex flex-row flex-nowrap h-[10vh]">
       {isTabletOrMobileWidth || isTabletOrMobileHeight ? (
-        <div className="text-slate-100 text-4xl flex justify-start">
+        <Link to={'/'} className="text-slate-100 text-4xl flex justify-start">
           <img
             src={headerImg}
             alt="header diplomacy icon"
             className="w-20 h-20 my-auto cursor-pointer drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
             draggable={false}
-            onClick={() => navigate('/')}
           />
-          <h1 className="my-auto cursor-pointer text-shadow-md" onClick={() => navigate('/')}>
+          <h1 className="my-auto cursor-pointer text-shadow-md">
             Total Warhammer Planner
             <span className="text-base text-gray-400 align-super">WIP</span>
           </h1>
-        </div>
+        </Link>
       ) : (
         <>
-          <div className="w-[38vw] text-slate-100 text-4xl flex justify-start">
+          <Link to={'/'} className="w-[38vw] text-slate-100 text-4xl flex justify-start">
             <img
               src={headerImg}
               alt="header diplomacy icon"
               className="w-20 h-20 my-auto cursor-pointer drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
               draggable={false}
-              onClick={() => navigate('/')}
             />
-            <h1 className="my-auto cursor-pointer text-shadow-md whitespace-normal" onClick={() => navigate('/')}>
+            <h1 className="my-auto cursor-pointer text-shadow-md">
               Total Warhammer Planner
               <span className="text-base text-gray-400 align-super">WIP</span>
             </h1>
-          </div>
+          </Link>
           <div className="z-10 w-[24vw]">
             {location.pathname === '/' ? (
               <div
@@ -101,12 +97,12 @@ const Header = () => {
           </div>
 
           <div className="w-[38vw] flex flex-row justify-end text-xl text-slate-50 my-auto">
-            <button className={buttonClass} onClick={() => navigate('/about')}>
+            <Link className={buttonClass} to={'/about'}>
               About
-            </button>
-            <button className={buttonClass + ' ml-4'} onClick={() => navigate('/issues')}>
+            </Link>
+            <Link className={buttonClass + ' ml-4'} to={'/issues'}>
               Issues
-            </button>
+            </Link>
           </div>
         </>
       )}

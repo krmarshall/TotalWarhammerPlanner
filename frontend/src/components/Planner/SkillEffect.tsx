@@ -25,21 +25,19 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   }
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   iconName = iconName.replace('.png', '.webp');
+  if (!iconName.includes('.webp')) {
+    iconName += '.webp';
+  }
+  const srcList = [
+    `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName}`,
+    `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${iconName}`,
+    `/imgs/${selectedMod}/battle_ui/ability_icons/${iconName}`,
+    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${iconName}`,
+    `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
+  ];
   return (
     <div className="flex flex-row flex-nowrap">
-      <ReactImage
-        srcList={[
-          `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName}`,
-          `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${iconName}`,
-          `/imgs/${selectedMod}/battle_ui/ability_icons/${iconName}.webp`,
-          `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${iconName}.webp`,
-          `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
-        ]}
-        className="w-6 h-6"
-        alt={`${skillEffect.key} icon`}
-        w="24"
-        h="24"
-      />
+      <ReactImage srcList={srcList} className="w-6 h-6" alt={`${skillEffect.key} icon`} w="24" h="24" />
 
       <div className="flex flex-col justify-center ml-1 text-left max-w-[25vw]">
         <p className={goodBadEffectClassName}>{skillEffect.description}</p>

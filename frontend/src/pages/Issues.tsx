@@ -58,6 +58,7 @@ const Issues = () => {
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
         <ul className="list-disc list-inside">
+          <li className="text-gray-200 text-2xl">URL build loading currently broken</li>
           <li className="text-gray-200 text-2xl">
             Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
           </li>
@@ -73,7 +74,7 @@ const Issues = () => {
             sometimes. eg. Vilitch Authority of Change
           </li>
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
-          <li className="text-gray-200 text-2xl">Radious 2/3 mounts missing skill titles, see Wood Seer</li>
+          <li className="text-gray-200 text-2xl">Radious 2 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
           <li className="text-gray-200 text-2xl">Radious 3 Cathay Celestial Champion poorly scaled icon</li>
           <li className="text-gray-200 text-2xl">

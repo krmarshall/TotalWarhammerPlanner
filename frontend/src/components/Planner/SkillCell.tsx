@@ -6,7 +6,6 @@ import BuildInterface from '../../types/interfaces/BuildInterface';
 import { CharacterInterface, SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
-import { useImage } from 'react-image';
 import TooltipWrapper from './TooltipWrapper';
 
 import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';
@@ -282,13 +281,6 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     `/imgs/${selectedMod}/campaign_ui/skills/${imagePath.replace('_active', '')}`,
     `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
   ];
-  const { src } = useImage({
-    srcList,
-  });
-  let imgClassName = 'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg';
-  if (src?.includes('/battle_ui/ability_icons/')) {
-    imgClassName += ' p-3';
-  }
   return (
     <td
       className={tdClassName}
@@ -332,7 +324,13 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
                 height="72"
               />
             )}
-            <ReactImage srcList={srcList} className={imgClassName} alt="skillIcon" w="64" h="64" />
+            <ReactImage
+              srcList={srcList}
+              className="w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg"
+              alt="skillIcon"
+              w="64"
+              h="64"
+            />
 
             <div className="flex flex-col justify-center">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>

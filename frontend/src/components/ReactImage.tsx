@@ -1,5 +1,4 @@
-import { Suspense } from 'react';
-import { useImage } from 'react-image';
+import { useState, useTransition } from 'react';
 
 import spinner from '../imgs/other/spinner.webp';
 
@@ -11,29 +10,51 @@ interface PropsInterface {
   h: string;
 }
 
-const InnerImage = ({ srcList, className, alt, w, h }: PropsInterface) => {
-  const { src } = useImage({
-    srcList,
-  });
-  return <img src={src} draggable={false} className={className} alt={alt} width={w} height={h}></img>;
-};
-
 const ReactImage = ({ srcList, className, alt, w, h }: PropsInterface) => {
-  return (
-    <Suspense
-      fallback={
-        <img
-          src={spinner}
-          alt="loadingSpinner"
-          width={w}
-          height={h}
-          draggable={false}
-          className={`loading-spinner ${className}`}
-        />
+  const [isPending, startTransition] = useTransition();
+  const [imgClass, setImgClass] = useState(className);
+  const [srcState, setSrcState] = useState({ src: srcList[0], fallbackIndex: 1 });
+
+  const errorHandler = () => {
+    startTransition(() => {
+      if (srcState.fallbackIndex > srcList.length - 1) {
+        return;
       }
-    >
-      <InnerImage srcList={srcList} className={className} alt={alt} w={w} h={h} />
-    </Suspense>
+      setSrcState({ src: srcList[srcState.fallbackIndex], fallbackIndex: srcState.fallbackIndex + 1 });
+      const tempSrc = srcList[srcState.fallbackIndex];
+
+      if (tempSrc?.includes('/battle_ui/ability_icons/') && parseInt(w) > 24) {
+        setImgClass(`${className} p-3`);
+      } else if (tempSrc?.includes('/campaign_ui/skills/trait_') && parseInt(w) > 24) {
+        setImgClass(`${className} p-2.5`);
+      } else {
+        setImgClass(className);
+      }
+    });
+  };
+
+  return isPending ? (
+    <img
+      src={spinner}
+      alt="loadingSpinner"
+      width={w}
+      height={h}
+      draggable={false}
+      className={`loading-spinner ${className}`}
+    />
+  ) : (
+    <img
+      src={srcState.src}
+      draggable={false}
+      className={imgClass}
+      alt={alt}
+      width={w}
+      height={h}
+      onError={() => {
+        errorHandler();
+      }}
+    />
   );
 };
+
 export default ReactImage;
