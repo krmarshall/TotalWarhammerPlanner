@@ -1,4 +1,4 @@
-import { factions2, factions3 } from '../data/factionData';
+import { factions2, factions3, factions3Mixu } from '../data/factionData';
 import radious2CharacterImgs from '../imgs/characters/radious2/radious2CharacterImgs';
 import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
 import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
@@ -11,6 +11,8 @@ import radious3Characters from './radious3Characters';
 import sfo2Characters from './sfo2Characters';
 import vanilla2Characters from './vanilla2Characters';
 import vanilla3Characters from './vanilla3Characters';
+import mixu3Characters from './mixu3Characters';
+import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
 
 const gameData: GameInterface = {
   vanilla2: {
@@ -57,6 +59,15 @@ const gameData: GameInterface = {
     characterImages: radious3CharacterImgs,
     updated: '29 Sep 2022',
     category: 'Overhaul',
+  },
+  mixu3: {
+    text: 'Mixu 3',
+    image: gameImages['mixu3'],
+    factions: factions3Mixu,
+    characters: mixu3Characters,
+    characterImages: mixu3CharacterImgs,
+    updated: '29 Sep 2022',
+    category: 'Character Mod',
   },
 };
 

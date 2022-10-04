@@ -1,0 +1,1988 @@
+{
+  "skillTree": [
+    [
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_mount_0",
+        "image_path": "mount_barded_warhorse.png",
+        "is_background_skill": false,
+        "name": "Barded Warhorse",
+        "description": "Smaller than their powerful Bretonnian equivalents, barding protects Imperial warhorses from blows that would otherwise fell these proud beasts.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "mount.png",
+                "priority": 50,
+                "is_positive_value_good": true,
+                "description": "Mount: Barded Warhorse",
+                "key": "wh_main_effect_enable_mount_barded_warhorse",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_mount_barded_warhorse",
+        "tier": 2,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_generic_0",
+        "image_path": "wh_main_lord_abilities_hold_the_line.png",
+        "is_background_skill": false,
+        "name": "Hold the Line!",
+        "description": "",
+        "levels": [
+          {
+            "unlocked_at_rank": 6,
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 310,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Hold the Line!\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_hold_the_line",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_lord_passive_hold_the_line",
+                      "icon_name": "wh_main_lord_passive_hold_the_line",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_area_of_augments",
+                        "icon_path": "icon_spell_area_of_augments.png",
+                        "description": "Augment (Area)"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Hold the Line!",
+                      "passive": true,
+                      "effect_range": 35,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "+5 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": 4,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+4 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_hold_the_line",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_emp_champion_unique_hold_the_line",
+        "tier": 3,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_generic_1",
+        "image_path": "character_ward_save.png",
+        "is_background_skill": false,
+        "name": "Blessing of Ulric",
+        "description": "\"Ulric give me the fangs of the wolf,\n\tUlric give me the claws of the wolf,\n\tUlric give me the coat of the wolf,\n\tAnd I will show your enemies the mercy of the wolf.\"",
+        "levels": [
+          {
+            "unlocked_at_rank": 8,
+            "effects": [
+              {
+                "icon": "resistance_physical.png",
+                "priority": 280,
+                "is_positive_value_good": true,
+                "description": "Physical resistance: 10%",
+                "key": "wh_main_effect_character_stat_physical_resistance",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_all_generic_blessing_of_ulric",
+        "tier": 4,
+        "indent": 0,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ],
+    [
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_special_0",
+        "image_path": "mixu_special_norscan_raider.png",
+        "is_background_skill": false,
+        "name": "Unbridled Rage",
+        "description": "This warrior has something of an anger management problem. Funnily enough, no one has yet found a safe way to broach the issue.",
+        "levels": [
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "item_ability.png",
+                "priority": 22,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Rage\"",
+                "related_abilities": [
+                  {
+                    "effect": "mixu_LL_enable_ability_rage",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_dlc08_unit_passive_rage",
+                      "icon_name": "wh_dlc08_unit_passive_rage",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Rage",
+                      "ui_effects": [
+                        {
+                          "key": "wh3_dlc20_ability_intensity_time_in_melee",
+                          "sort_order": 1,
+                          "effect_state": "positive",
+                          "description": "Effect intensity increases with time spent engaged in melee."
+                        }
+                      ],
+                      "passive": true,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": -1,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 5,
+                              "stat": "stat_melee_attack",
+                              "how": "add",
+                              "description": "+5 Melee Attack",
+                              "sort_order": 2,
+                              "icon": "icon_stat_attack.png"
+                            },
+                            {
+                              "value": 8,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "+8 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": 10,
+                              "stat": "stat_resistance_physical",
+                              "how": "add",
+                              "description": "+10 Physical Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_physical.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "mixu_LL_enable_ability_rage",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_special_unbridled_rage",
+        "tier": 0,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_special_1_1",
+        "image_path": "mixu_special_fashion_guru.png",
+        "is_background_skill": false,
+        "name": "Respected Captain",
+        "description": "Vorn is a respected warrior who has been given the honour of being chosen to enter the Teutogen Guard for his service within the Knights of the White Wolf, holding a powerful position within the order.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -10%\n\t(Hero's army)",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -10
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +5",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 5
+              },
+              {
+                "icon": "morale.png",
+                "priority": 410,
+                "is_positive_value_good": true,
+                "description": "Leadership: +4\n\t(Hero's army)",
+                "key": "wh_main_effect_force_stat_leadership",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 106,
+                "is_positive_value_good": false,
+                "description": "Recruitment cost: -20%\n\t(Hero's army)",
+                "key": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+                "value": -20
+              },
+              {
+                "icon": "morale_character.png",
+                "priority": 260,
+                "is_positive_value_good": true,
+                "description": "Character's aura leadership effect: +10",
+                "key": "wh_main_effect_character_stat_aura_leadership_effect",
+                "value": 10
+              },
+              {
+                "icon": "morale.png",
+                "priority": 410,
+                "is_positive_value_good": true,
+                "description": "Leadership: +8\n\t(Hero's army)",
+                "key": "wh_main_effect_force_stat_leadership",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_special_respected_captain",
+        "tier": 1,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_special_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_special_1_2",
+        "image_path": "mixu_special_white_knight.png",
+        "is_background_skill": false,
+        "name": "Heart of the Wolf",
+        "description": "Vorn Thugenheim is inspired with the martial spirit of Ulric. He trains diligently every day, rising an hour before his peers to practice his weapons training and to run through the forests.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +10%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 10
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +5",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +20%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 20
+              },
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +10",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_special_heart_of_the_wolf",
+        "tier": 2,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_special_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_special_1_3",
+        "image_path": "mixu_special_purple_sword.png",
+        "is_background_skill": false,
+        "name": "Brotherhood of Ulric",
+        "description": "Despite his talent and high rank, he remains humble, and feels more comfortable with the common soldiery than the nobles. As an inspiration to Middenheim's defenders, Vorn is able to lift their spirits when he walks the walls at their side - a talent that will be needed in the dark times ahead.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 99,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +7% for all Empire Knights units (excluding Demigryph Knights)\n\t(Hero's army)",
+                "key": "mixu_LL_melee_damage_emp_knights",
+                "value": 7
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 7% for all Empire Knights units (excluding Demigryph Knights)\n\t(Hero's army)",
+                "key": "mixu_LL_missile_resistance_emp_knights",
+                "value": 7
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Rage\" for all Empire Knights units (excluding Demigryph Knights)\n\t(Hero's army)",
+                "key": "mixu_LL_enable_ability_rage_for_emp_knights",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage.png",
+                "priority": 99,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +15% for all Empire Knights units (excluding Demigryph Knights)\n\t(Hero's army)",
+                "key": "mixu_LL_melee_damage_emp_knights",
+                "value": 15
+              },
+              {
+                "icon": "resistance_missile.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Missile resistance: 15% for all Empire Knights units (excluding Demigryph Knights)\n\t(Hero's army)",
+                "key": "mixu_LL_missile_resistance_emp_knights",
+                "value": 15
+              },
+              {
+                "icon": "general_ability.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Passive ability: \"Rage\" for all Empire Knights units (excluding Demigryph Knights)\n\t(Hero's army)",
+                "key": "mixu_LL_enable_ability_rage_for_emp_knights",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_special_brotherhood_of_axe",
+        "tier": 3,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_special_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_special_1_4",
+        "image_path": "mixu_special_dagger_n_paper.png",
+        "is_background_skill": false,
+        "name": "Humble Perfectionist",
+        "description": "Vorn has excelled in all areas of his schooling, mastering the litanies of Ulric and proving himself as skilled swordsman and hunter.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -20%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -20
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -40%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -40
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_special_humble_perfectionist",
+        "tier": 4,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_special_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_special_2",
+        "image_path": "mixu_special_dude_with_a_flag.png",
+        "is_background_skill": false,
+        "name": "The Right Hand of Todbringer",
+        "description": "Loyal, steadfast and fierce, he is the right hand of the Elector Count, Boris Todbringer. His father, Vieran was one of Todbringer's closest confidants and advisers. He gave his life for his lord in the same battle that Todbringer lost his eye in a desperate battle against the foul Beastmen of the Drakwald, led by Khazrak the One-Eye.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 33,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +8 while embedded in Boris Todbringer's army",
+                "key": "mixu_LL_character_melee_attack_emp_vorn_thugenheim_dummy",
+                "value": 8
+              },
+              {
+                "icon": "defence_character.png",
+                "priority": 34,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +8 while embedded in Boris Todbringer's army",
+                "key": "mixu_LL_character_melee_defence_emp_vorn_thugenheim_dummy",
+                "value": 8
+              },
+              {
+                "icon": "attribute_unbreakable.png",
+                "priority": 35,
+                "is_positive_value_good": true,
+                "description": "Attribute: Unbreakable while embedded in Boris Todbringer's army",
+                "key": "mixu_LL_enable_attribute_unbreakable_emp_vorn_thugenheim_dummy",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "mixu_emp_vorn_thugenheim_special_the_right_hand_of_todbringer",
+        "tier": 5,
+        "indent": 1,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_special_1_1",
+          "mixu_skill_node_emp_vorn_thugenheim_special_1_2",
+          "mixu_skill_node_emp_vorn_thugenheim_special_1_3",
+          "mixu_skill_node_emp_vorn_thugenheim_special_1_4"
+        ]
+      }
+    ],
+    [
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_0",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Blade Master",
+        "description": "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +5",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_blade_master_starter",
+        "tier": 0,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "right_arrow": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_1_1",
+        "image_path": "character_charge.png",
+        "is_background_skill": false,
+        "name": "Devastating Charge",
+        "description": "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +6",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +16",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "charge_character.png",
+                "priority": 200,
+                "is_positive_value_good": true,
+                "description": "Charge bonus: +30",
+                "key": "wh_main_effect_character_stat_charge_bonus_add",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_devastating_charge",
+        "tier": 1,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_1_2",
+        "image_path": "character_armour.png",
+        "is_background_skill": false,
+        "name": "Full Plate Armour",
+        "description": "Full-plate armour protects the wearer from head-to-foot. Many such suits are blessed or imbued with arcane abilities.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +3",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +8",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "armour_character.png",
+                "priority": 100,
+                "is_positive_value_good": true,
+                "description": "Armour: +15",
+                "key": "wh_main_effect_character_stat_armour",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_lord_self_full_plate_armour_2",
+        "tier": 2,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_1_3",
+        "image_path": "character_defence.png",
+        "is_background_skill": false,
+        "name": "Hard to Hit",
+        "description": "Hand-to-hand combat is a lethal match of cut and thrust. However, it’s not all about offensive strikes; parries and other defensive moves can also win the day.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +3",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +7",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "defence_character.png",
+                "priority": 150,
+                "is_positive_value_good": true,
+                "description": "Melee defence: +12",
+                "key": "wh_main_effect_character_stat_melee_defence",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_hard_to_hit",
+        "tier": 3,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_0"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_1_4",
+        "image_path": "character_attack.png",
+        "is_background_skill": false,
+        "name": "Deadly Blade",
+        "description": "A deadly blade is especially lethal when in the hands of this master death-maker, killer and slaughterer!",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +3",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +7",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "melee_character.png",
+                "priority": 130,
+                "is_positive_value_good": true,
+                "description": "Melee attack: +12",
+                "key": "wh_main_effect_character_stat_melee_attack",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_blade",
+        "tier": 4,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_0"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_2",
+        "image_path": "wh_main_character_abilities_foe_seeker.png",
+        "is_background_skill": false,
+        "name": "Foe-Seeker",
+        "description": " From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Foe-Seeker\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_foe-seeker",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_foe_seeker",
+                      "icon_name": "wh_main_character_abilities_foe_seeker",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Foe-Seeker",
+                      "active_time": 25,
+                      "recharge_time": 60,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 25,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.3,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x1.3 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_foe-seeker",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_foe-seeker",
+        "tier": 5,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_1_1",
+          "mixu_skill_node_emp_vorn_thugenheim_self_1_2",
+          "mixu_skill_node_emp_vorn_thugenheim_self_1_3",
+          "mixu_skill_node_emp_vorn_thugenheim_self_1_4"
+        ],
+        "right_arrow": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_3_1",
+        "image_path": "character_damage.png",
+        "is_background_skill": false,
+        "name": "Wound-Maker",
+        "description": "Such is their power and ferocity, a wound-maker will ravage the foe, cutting and pulverising until there is only one exit - death.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +5%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +12%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "weapon_damage_character.png",
+                "priority": 160,
+                "is_positive_value_good": true,
+                "description": "Weapon strength: +20%",
+                "key": "wh_main_effect_character_stat_weapon_strength",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_wound-maker",
+        "tier": 6,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_3_2",
+        "image_path": "character_health.png",
+        "is_background_skill": false,
+        "name": "Scarred Veteran",
+        "description": "The scars on this storied warrior reveal a veteran of many battles, a being not easy to kill and one worthy of respect and fear.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +3%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +8%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "health_character.png",
+                "priority": 90,
+                "is_positive_value_good": true,
+                "description": "Hit points: +15%",
+                "key": "wh_main_effect_character_stat_unit_health",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_scarred_veteran_2",
+        "tier": 7,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_3_3",
+        "image_path": "character_morale.png",
+        "is_background_skill": false,
+        "name": "Indomitable",
+        "description": "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +4",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +8",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "morale_character.png",
+                "priority": 110,
+                "is_positive_value_good": true,
+                "description": "Leadership: +12",
+                "key": "wh_main_effect_character_stat_leadership",
+                "value": 12
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_indomitable",
+        "tier": 8,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_2"
+        ],
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_3_4",
+        "image_path": "character_speed.png",
+        "is_background_skill": false,
+        "name": "Quicksilver",
+        "description": "Blink and you die.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +5%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +10%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "battle_movement_character.png",
+                "priority": 120,
+                "is_positive_value_good": true,
+                "description": "Speed: +15%",
+                "key": "wh_main_effect_character_stat_speed",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh_dlc08_skill_nor_lords_self_quicksilver",
+        "tier": 9,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true,
+        "parent_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_2"
+        ],
+        "right_arrow": true,
+        "boxed": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_self_4",
+        "image_path": "wh_main_character_abilities_deadly_onslaught.png",
+        "is_background_skill": false,
+        "name": "Deadly Onslaught",
+        "description": "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "general_ability.png",
+                "priority": 300,
+                "is_positive_value_good": true,
+                "description": "Ability: \"Deadly Onslaught\"",
+                "related_abilities": [
+                  {
+                    "effect": "wh_main_effect_ability_enable_deadly_onslaught",
+                    "bonus_value_id": "enable",
+                    "unit_ability": {
+                      "key": "wh_main_character_abilities_deadly_onslaught",
+                      "icon_name": "wh_main_character_abilities_deadly_onslaught",
+                      "overpower_option": "",
+                      "type": {
+                        "key": "wh_type_augment",
+                        "icon_path": "icon_spell_augment.png",
+                        "description": "Augment"
+                      },
+                      "is_hidden_in_ui": false,
+                      "description": "Deadly Onslaught",
+                      "active_time": 31,
+                      "recharge_time": 90,
+                      "passive": false,
+                      "effect_range": 0,
+                      "affect_self": true,
+                      "target_friends": false,
+                      "target_enemies": false,
+                      "target_ground": false,
+                      "target_intercept_range": 0,
+                      "target_self": false,
+                      "phases": [
+                        {
+                          "duration": 31,
+                          "effect_type": "positive",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "recharge_time": null,
+                          "stat_effects": [
+                            {
+                              "value": 1.6,
+                              "stat": "stat_charge_bonus",
+                              "how": "mult",
+                              "description": "x1.6 Charge Bonus",
+                              "sort_order": 4,
+                              "icon": "icon_stat_charge_bonus.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.3 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.3,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.3 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "key": "wh_main_effect_ability_enable_deadly_onslaught",
+                "value": 1
+              }
+            ],
+            "blocks_character_skill_key": [
+              "wh_dlc05_skill_wef_general_personal_buff_ranged_ability_high_tier_killer_2",
+              "mixu_bst_gorehoof_mount_throwing_axes",
+              "wh_main_skill_dwf_engineer_self_ballistics_calibration"
+            ]
+          }
+        ],
+        "character_skill_key": "wh_main_skill_all_all_self_deadly_onslaught",
+        "tier": 10,
+        "indent": 2,
+        "points_on_creation": 0,
+        "required_num_parents": 4,
+        "visible_in_ui": true,
+        "parent_subset_required": [
+          "mixu_skill_node_emp_vorn_thugenheim_self_3_1",
+          "mixu_skill_node_emp_vorn_thugenheim_self_3_2",
+          "mixu_skill_node_emp_vorn_thugenheim_self_3_3",
+          "mixu_skill_node_emp_vorn_thugenheim_self_3_4"
+        ]
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_01",
+        "image_path": "campaign_experience.png",
+        "is_background_skill": false,
+        "name": "Training",
+        "description": "This champion extols discipline and fear away from the battlefield as much as on it.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 20",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 35",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 35
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "experience.png",
+                "priority": 7,
+                "is_positive_value_good": true,
+                "description": "Training action: Experience per turn is increased by an additional 50",
+                "key": "wh2_main_effect_agent_action_assist_army_training_buff",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_assist_army_training",
+        "tier": 0,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_02",
+        "image_path": "campaign_public_order.png",
+        "is_background_skill": false,
+        "name": "Spread Control",
+        "description": "The sight of this warrior, their stature, import or infamy, can have a calming effect.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -1\n\t(local enemy province)",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +1\n\t(local province)",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 1
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 1",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -2\n\t(local enemy province)",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -2
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +2\n\t(local province)",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 2
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 2",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: -3\n\t(local enemy province)",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+                "value": -3
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 0,
+                "is_positive_value_good": true,
+                "description": "Control: +3\n\t(local province)",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+                "value": 3
+              },
+              {
+                "icon": "public_order.png",
+                "priority": 8,
+                "is_positive_value_good": true,
+                "description": "Spread Control action: Control is modified by an additional 3",
+                "key": "wh2_main_effect_agent_action_passive_spread_public_order_buff",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_passive_spread_public_order",
+        "tier": 1,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_03",
+        "image_path": "campaign_disaster.png",
+        "is_background_skill": false,
+        "name": "Assault Units",
+        "description": "Lying in wait, experienced and patient, striking when the foe least expects.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 3% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 8% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 8
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "attrition.png",
+                "priority": 11,
+                "is_positive_value_good": true,
+                "description": "Assault Units action: Additional 15% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_army_assault_units_buff",
+                "value": 15
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_army_assault_units",
+        "tier": 2,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_04",
+        "image_path": "campaign_wound_time.png",
+        "is_background_skill": false,
+        "name": "Wound",
+        "description": "Such a champion will not bend or break, but slay in their Lord's name.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 5% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 12% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "wound_time.png",
+                "priority": 10,
+                "is_positive_value_good": true,
+                "description": "Wound action: Additional 21% chance of wounding target",
+                "key": "wh2_main_effect_agent_action_hinder_agent_wound_buff",
+                "value": 21
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_agent_wound",
+        "tier": 3,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_05",
+        "image_path": "campaign_siege_defence.png",
+        "is_background_skill": false,
+        "name": "Assault Garrison",
+        "description": "\"If they know I'm coming then more's the better!\"",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 5% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 5,
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 15% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "unlocked_at_rank": 10,
+            "effects": [
+              {
+                "icon": "siege_defence.png",
+                "priority": 9,
+                "is_positive_value_good": true,
+                "description": "Assault Garrison action: Additional 30% casualties inflicted",
+                "key": "wh2_main_effect_agent_action_hinder_settlement_assault_garrison_buff",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_hinder_settlement_assault_garrison",
+        "tier": 4,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      },
+      {
+        "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_06",
+        "image_path": "campaign_military_spending.png",
+        "is_background_skill": false,
+        "name": "Specialist",
+        "description": "An expert in their craft, this Hero knows all the mistakes that can be made and how to best avoid making them.",
+        "levels": [
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -10%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -10
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +1%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -20%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -20
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +3%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effects": [
+              {
+                "icon": "treasury.png",
+                "priority": 101,
+                "is_positive_value_good": false,
+                "description": "Hero action cost: -40%",
+                "key": "wh_main_effect_agent_action_cost_mod",
+                "value": -40
+              },
+              {
+                "icon": "agent.png",
+                "priority": 101,
+                "is_positive_value_good": true,
+                "description": "Hero action success chance: +6%",
+                "key": "wh_main_effect_agent_action_success_chance",
+                "value": 6
+              }
+            ]
+          }
+        ],
+        "character_skill_key": "wh2_main_skill_all_hero_reduce_action_cost",
+        "tier": 5,
+        "indent": 5,
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    ]
+  ],
+  "key": "emp_vorn_thugenheim",
+  "backgroundSkills": [
+    {
+      "key": "mixu_skill_node_emp_vorn_thugenheim_campaign_actions_dummy",
+      "image_path": "battle_attack.png",
+      "is_background_skill": false,
+      "name": "Actions [HIDDEN]",
+      "description": "",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_assist_army_training",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_agent_wound",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_army_assault_units",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_assault_garrison",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_hinder_settlement_scout_settlement",
+              "value": 1
+            },
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "",
+              "key": "wh2_main_effect_agent_action_enable_champion_passive_spread_public_order",
+              "value": 1
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Control: -1\n\t(local enemy province)",
+              "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_negative",
+              "value": -1
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Control: +1\n\t(local province)",
+              "key": "wh2_main_effect_agent_action_passive_spread_public_order_effect_positive",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "mixu_skill_node_set_emp_vorn_thugenheim",
+      "character_skill_key": "wh2_main_skill_all_dummy_agent_actions_emp_captain",
+      "tier": 0,
+      "indent": 8,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    },
+    {
+      "key": "mixu_skill_node_emp_vorn_thugenheim_innate",
+      "image_path": "trait_human.png",
+      "is_background_skill": true,
+      "name": "Standard Bearer of Middenheim",
+      "description": "Todbringer took Vorn under his wing when he was still a young boy, raising him as his own son. Nevertheless, he was a stern father figure with high demands and expectations, being particularly cautious not to let the young lad have a privileged upbringing. ",
+      "levels": [
+        {
+          "effects": [
+            {
+              "icon": "",
+              "priority": 0,
+              "is_positive_value_good": true,
+              "description": "Immortal",
+              "key": "mixu_LL_enable_immortality",
+              "value": 1
+            },
+            {
+              "icon": "public_order.png",
+              "priority": 6,
+              "is_positive_value_good": true,
+              "description": "Control: +4\n\t(local province)",
+              "key": "wh_main_effect_public_order_characters",
+              "value": 4
+            },
+            {
+              "icon": "item_ability.png",
+              "priority": 101,
+              "is_positive_value_good": true,
+              "description": "Passive ability: \"Frenzy\"",
+              "related_abilities": [
+                {
+                  "effect": "mixu_LL_enable_ability_frenzy",
+                  "bonus_value_id": "enable",
+                  "unit_ability": {
+                    "key": "wh_main_unit_passive_frenzy",
+                    "icon_name": "wh_main_unit_passive_frenzy",
+                    "overpower_option": "",
+                    "type": {
+                      "key": "wh_type_augment",
+                      "icon_path": "icon_spell_augment.png",
+                      "description": "Augment"
+                    },
+                    "is_hidden_in_ui": false,
+                    "description": "Frenzy",
+                    "passive": true,
+                    "effect_range": 0,
+                    "affect_self": true,
+                    "target_friends": false,
+                    "target_enemies": false,
+                    "target_ground": false,
+                    "target_intercept_range": 0,
+                    "target_self": false,
+                    "phases": [
+                      {
+                        "duration": -1,
+                        "effect_type": "positive",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "recharge_time": null,
+                        "attributes": [
+                          {
+                            "key": "immune_to_psychology",
+                            "description": " Immune to Psychology",
+                            "attribute_type": "positive"
+                          }
+                        ],
+                        "stat_effects": [
+                          {
+                            "value": 1.1,
+                            "stat": "stat_charge_bonus",
+                            "how": "mult",
+                            "description": "x1.1 Charge Bonus",
+                            "sort_order": 4,
+                            "icon": "icon_stat_charge_bonus.png"
+                          },
+                          {
+                            "value": 10,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "+10 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x1.1 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 1.1,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x1.1 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "key": "mixu_LL_enable_ability_frenzy",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "character_skill_node_set_key": "mixu_skill_node_set_emp_vorn_thugenheim",
+      "character_skill_key": "mixu_innate_emp_vorn_thugenheim",
+      "tier": 0,
+      "indent": 6,
+      "points_on_creation": 1,
+      "required_num_parents": 0,
+      "visible_in_ui": false
+    }
+  ],
+  "items": [
+    {
+      "key": "mixu_emp_vorn_thugenheim_enchanted_item_pelt_of_horrors",
+      "type": "wh_main_anc_enchanted_item",
+      "effects": [
+        {
+          "icon": "item_ability.png",
+          "priority": 22,
+          "is_positive_value_good": true,
+          "description": "Ability: \"Pelt of Horros\"",
+          "related_abilities": [
+            {
+              "effect": "mixu_emp_vorn_thugenheim_enable_ability_pelt_of_horros",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "mixu_emp_vorn_thugenheim_ability_pelt_of_horros",
+                "icon_name": "mixu_emp_vorn_thugenheim_ability_pelt_of_horros",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Pelt of Horros",
+                "active_time": 25,
+                "recharge_time": 90,
+                "passive": false,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": 25,
+                    "effect_type": "positive",
+                    "fatigue_change_ratio": -1,
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "attributes": [
+                      {
+                        "key": "causes_fear",
+                        "description": " Can Cause Fear",
+                        "attribute_type": "positive"
+                      },
+                      {
+                        "key": "causes_terror",
+                        "description": " Can Cause Terror",
+                        "attribute_type": "positive"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "mixu_emp_vorn_thugenheim_enable_ability_pelt_of_horros"
+        },
+        {
+          "icon": "agent.png",
+          "priority": 101,
+          "is_positive_value_good": false,
+          "description": "Enemy Hero action success chance: -10%",
+          "value": -10,
+          "key": "wh_main_effect_agent_action_success_chance_enemy"
+        },
+        {
+          "icon": "melee_character.png",
+          "priority": 130,
+          "is_positive_value_good": true,
+          "description": "Melee attack: +5",
+          "value": 5,
+          "key": "wh_main_effect_character_stat_melee_attack"
+        },
+        {
+          "icon": "phase_frostbite.png",
+          "priority": 140,
+          "is_positive_value_good": true,
+          "description": "Enables frostbite attacks",
+          "value": 1,
+          "key": "wh_dlc08_effect_character_stat_enable_frostbite_attacks"
+        }
+      ],
+      "name": "Pelt of Horros",
+      "description": "Few years ago the villages around Middenheim were terrorised by a massive wolf, which became known as Horros after a savage folkloric beast. When it was finally slain by Vorn himself, the wolf's spirit was imprisoned within its pelt, bestowing the wearer with primal strength.",
+      "unlocked_at_rank": 10,
+      "instant": true,
+      "image_path": "item_enchanted_item.png"
+    },
+    {
+      "key": "mixu_emp_vorn_thugenheim_talisman_heart_of_middenheim",
+      "type": "wh_main_anc_talisman",
+      "effects": [
+        {
+          "icon": "corruption.png",
+          "priority": 104,
+          "is_positive_value_good": false,
+          "description": "Corruption: -5",
+          "value": -5,
+          "key": "wh3_main_effect_corruption_reduction_characters"
+        },
+        {
+          "icon": "resistance_magic.png",
+          "priority": 280,
+          "is_positive_value_good": true,
+          "description": "Spell resistance: 10%",
+          "value": 10,
+          "key": "wh_main_effect_character_stat_magic_resistance"
+        },
+        {
+          "icon": "item_ability.png",
+          "priority": 300,
+          "is_positive_value_good": true,
+          "description": "Passive ability: \"Heart of Middenheim\"",
+          "related_abilities": [
+            {
+              "effect": "mixu_emp_vorn_thugenheim_enable_ability_heart_of_middenheim",
+              "bonus_value_id": "enable",
+              "unit_ability": {
+                "key": "mixu_emp_vorn_thugenheim_ability_heart_of_middenheim",
+                "icon_name": "wh2_dlc11_lord_passive_magical_void",
+                "overpower_option": "",
+                "type": {
+                  "key": "wh_type_augment",
+                  "icon_path": "icon_spell_augment.png",
+                  "description": "Augment"
+                },
+                "is_hidden_in_ui": false,
+                "description": "Heart of Middenheim",
+                "passive": true,
+                "effect_range": 0,
+                "affect_self": true,
+                "target_friends": false,
+                "target_enemies": false,
+                "target_ground": false,
+                "target_intercept_range": 0,
+                "target_self": false,
+                "phases": [
+                  {
+                    "duration": -1,
+                    "effect_type": "positive",
+                    "is_hidden_in_ui": false,
+                    "freeze_recharge": false,
+                    "recharge_time": null,
+                    "stat_effects": [
+                      {
+                        "value": 40,
+                        "stat": "stat_resistance_all",
+                        "how": "add",
+                        "description": "+40 Damage Resistance ",
+                        "sort_order": 10,
+                        "icon": "resistance_ward_save.png"
+                      },
+                      {
+                        "value": 1.3,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x1.3 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "value": 1,
+          "key": "mixu_emp_vorn_thugenheim_enable_ability_heart_of_middenheim"
+        },
+        {
+          "icon": "attribute_immune_to_psychology.png",
+          "priority": 320,
+          "is_positive_value_good": true,
+          "description": "Attribute: Immune to Psychology",
+          "value": 1,
+          "key": "wh_main_effect_attribute_enable_immune_to_psychology"
+        }
+      ],
+      "name": "Heart of Middenheim",
+      "description": "A perfectly round stone set into a golden amulet, the Heart of Middenheim is crafted from a fragment of the keystone of the gateway to the Temple of Ulric. It has been carried by some of the finest warriors ever to have lived in the City of the White Wolf.",
+      "unlocked_at_rank": 15,
+      "instant": true,
+      "image_path": "item_talisman.png"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import sfo2 from './sfo2.webp';
 import radious2 from './radious2.webp';
 import vanilla3 from './vanilla3.webp';
 import radious3 from './radious3.webp';
+import mixu3 from './mixu3.webp';
 
 const gameImages = {
   vanilla2,
@@ -10,6 +11,7 @@ const gameImages = {
   radious2,
   vanilla3,
   radious3,
+  mixu3,
 };
 
 export default gameImages;

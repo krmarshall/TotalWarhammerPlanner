@@ -96,7 +96,7 @@ const ModSelector = () => {
                       </span>
                     }
                   >
-                    <h3 className="w-fit mx-auto text-center text-gray-400 text-lg text-shadow mb-1 underline decoration-dashed">
+                    <h3 className="w-fit mx-auto text-center text-gray-400 text-lg text-shadow mb-1 underline decoration-dashed underline-offset-2">
                       {gameData[gameKey].category}
                     </h3>
                   </TooltipWrapper>
