@@ -16,13 +16,78 @@ interface AttributeInterface {
 interface PhaseInterface {
   duration: number;
   effect_type: string;
-  recharge_time: number;
+  recharge_time?: number;
   is_hidden_in_ui: boolean;
   mana_max_depletion_mod?: number;
   fatigue_change_ratio?: number;
   mana_regen_mod?: number;
+  ability_recharge_change?: number;
+  resurrect?: boolean;
+  hp_change_frequency?: number;
+  heal_amount?: number;
+  barrier_heal_amount?: number;
+  damage_amount?: number;
+  damage_chance?: number;
+  max_damaged_entities?: number;
+  imbue_magical?: boolean;
+  imbue_ignition?: boolean;
+  cant_move?: boolean;
+  replenish_ammo?: number;
   stat_effects?: Array<StatEffectInterface>;
   attributes?: Array<AttributeInterface>;
+}
+
+interface VortexInterface {
+  vortex_key: string;
+  duration: number;
+  damage: number;
+  damage_ap: number;
+  goal_radius: number;
+  movement_speed: number;
+  is_magical?: boolean;
+  is_flaming?: boolean;
+  delay: number;
+  num_vortexes?: number;
+  delay_between_vortexes?: number;
+  affects_allies: boolean;
+  contact_effect?: PhaseInterface;
+}
+
+interface ProjectileExplosionInterface {
+  key: string;
+  detonation_radius: number;
+  detonation_damage: number;
+  detonation_damage_ap: number;
+  is_magical?: boolean;
+  is_flaming?: boolean;
+  affects_allies: boolean;
+  contact_phase_effect?: PhaseInterface;
+}
+
+interface ProjectileInterface {
+  key: string;
+  projectile_number?: number;
+  damage: number;
+  ap_damage: number;
+  bonus_v_infantry?: number;
+  bonus_v_large?: number;
+  shockwave_radius: number;
+  burst_size?: number;
+  is_magical?: boolean;
+  is_flaming?: boolean;
+  shots_per_volley?: number;
+  can_damage_allies?: boolean;
+  contact_stat_effect?: PhaseInterface;
+  explosion_type?: ProjectileExplosionInterface;
+}
+
+interface ProjectileBombardmentInterface {
+  bombardment_key: string;
+  num_projectiles?: number;
+  start_time: number;
+  arrival_window: number;
+  radius_spread: number;
+  projectile_type: ProjectileInterface;
 }
 
 interface AbilityInterface {
@@ -38,7 +103,7 @@ interface AbilityInterface {
       description: string;
     };
     is_hidden_in_ui: boolean;
-    description: boolean;
+    description: string;
     ui_effects?: Array<{
       key: string;
       sort_order: number;
@@ -46,19 +111,24 @@ interface AbilityInterface {
     }>;
     active_time?: number;
     recharge_time?: number;
+    shared_recharge_time?: number;
     wind_up_time?: number;
-    passive: boolean;
     effect_range: number;
-    affect_self: boolean;
+    min_range?: number;
     target_friends: boolean;
     target_enemies: boolean;
     target_ground: boolean;
     target_self: boolean;
+    num_effected_friendly_units?: number;
+    num_effected_enemy_units?: number;
     target_intercept_range: number;
     mana_cost?: number;
     miscast_chance?: number;
     num_uses?: number;
     phases?: Array<PhaseInterface>;
+    vortex?: VortexInterface;
+    activated_projectile?: ProjectileInterface;
+    bombardment?: ProjectileBombardmentInterface;
   };
 }
 
@@ -123,6 +193,10 @@ export type {
   SkillInterface,
   SkillLevelInterface,
   SkillEffectInterface,
+  VortexInterface,
+  ProjectileExplosionInterface,
+  ProjectileInterface,
+  ProjectileBombardmentInterface,
   AbilityInterface,
   PhaseInterface,
   AttributeInterface,

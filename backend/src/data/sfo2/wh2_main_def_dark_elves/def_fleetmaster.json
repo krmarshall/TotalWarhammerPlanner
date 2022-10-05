@@ -445,9 +445,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Strength Through Spite",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -457,7 +455,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -929,9 +927,24 @@
                       "num_uses": 3,
                       "recharge_time": 90,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_main_character_abilities_volley_of_dark_arrows",
+                        "explosion_type": {
+                          "key": "wh2_main_character_abilities_volley_of_dark_arrows",
+                          "detonation_radius": 5,
+                          "detonation_damage": 0,
+                          "is_magical": true,
+                          "detonation_damage_ap": 200,
+                          "affects_allies": true
+                        },
+                        "projectile_number": 3,
+                        "damage": 0,
+                        "ap_damage": 400,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 0.5,
+                        "is_grapple": "false"
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -1227,9 +1240,7 @@
                       "description": "Heroic Killing Blow",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1239,7 +1250,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1533,9 +1544,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Dreadful Gaze",
-                      "passive": true,
                       "effect_range": 100,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1545,7 +1554,6 @@
                         {
                           "duration": -1,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {

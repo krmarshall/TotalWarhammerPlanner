@@ -61,9 +61,7 @@
                       "description": "Flash Bomb",
                       "active_time": 35,
                       "recharge_time": 135,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -73,7 +71,7 @@
                         {
                           "duration": 35,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -319,9 +317,41 @@
                       "num_uses": 4,
                       "recharge_time": 90,
                       "wind_up_time": 2.2,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_dlc13_character_abilities_big_boom",
+                        "explosion_type": {
+                          "key": "wh2_dlc13_character_abilities_big_boom_explosion",
+                          "detonation_radius": 10,
+                          "detonation_damage": 60,
+                          "contact_phase_effect": {
+                            "id": "wh2_dlc13_character_ability_big_boom_contact",
+                            "duration": 20,
+                            "effect_type": "negative",
+                            "max_damaged_entities": -1,
+                            "is_hidden_in_ui": false,
+                            "stat_effects": [
+                              {
+                                "value": -20,
+                                "stat": "stat_melee_defence",
+                                "how": "add",
+                                "description": "-20 Melee Defence",
+                                "sort_order": 3,
+                                "icon": "icon_stat_defence.png"
+                              }
+                            ]
+                          },
+                          "detonation_damage_ap": 200,
+                          "affects_allies": true,
+                          "is_flaming": true
+                        },
+                        "damage": 0,
+                        "ap_damage": 1,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": -1,
+                        "is_grapple": "false",
+                        "is_flaming": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -821,9 +851,7 @@
                       "description": "Ballistics Calibration",
                       "active_time": 50,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -833,7 +861,7 @@
                         {
                           "duration": 50,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1153,9 +1181,25 @@
                       "num_uses": 4,
                       "recharge_time": 90,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_dlc17_hero_abilities_cinderblast_shell",
+                        "explosion_type": {
+                          "key": "wh2_dlc13_lord_abilities_fire_arrow",
+                          "detonation_radius": 7,
+                          "detonation_damage": 72,
+                          "detonation_damage_ap": 0,
+                          "affects_allies": true,
+                          "is_flaming": true
+                        },
+                        "damage": 325,
+                        "ap_damage": 215,
+                        "bonus_v_cavalry": "0",
+                        "bonus_v_large": 120,
+                        "shockwave_radius": 3,
+                        "is_grapple": "false",
+                        "is_flaming": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,

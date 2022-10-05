@@ -227,9 +227,7 @@
                       "description": "Brass Body",
                       "active_time": 50,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -239,7 +237,7 @@
                         {
                           "duration": 50,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -447,9 +445,7 @@
                           "description": "➕ Restores 8 Hit Points per second"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -459,7 +455,8 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 4,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -1114,9 +1111,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 45,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1126,7 +1121,6 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1699,9 +1693,7 @@
                       "description": "Call of Violence",
                       "active_time": 15,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1711,7 +1703,7 @@
                         {
                           "duration": 15,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1978,9 +1970,7 @@
                       "description": "Apocalyptic Vision",
                       "active_time": 20,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1990,7 +1980,7 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4085,9 +4075,7 @@
                 "description": "Rune-Tortured Axes",
                 "recharge_time": 90,
                 "initial_recharge": 90,
-                "passive": true,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -4097,7 +4085,7 @@
                   {
                     "duration": -1,
                     "effect_type": "positive",
-                    "recharge_time": -1,
+                    "max_damaged_entities": -1,
                     "is_hidden_in_ui": false,
                     "stat_effects": [
                       {
@@ -4209,13 +4197,47 @@
                     ],
                     "active_time": 6,
                     "recharge_time": 90,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 0,
+                    "vortex": {
+                      "vortex_key": "wh2_dlc17_lord_abilities_bloodbeast",
+                      "duration": 6,
+                      "damage": 0,
+                      "damage_ap": 2,
+                      "goal_radius": 15,
+                      "movement_speed": 0,
+                      "contact_effect": {
+                        "id": "wh_main_unit_contact_morale",
+                        "duration": 5,
+                        "effect_type": "negative",
+                        "max_damaged_entities": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -7,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "-7 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          },
+                          {
+                            "value": -15,
+                            "stat": "stat_weakness_flame",
+                            "how": "add",
+                            "description": "-15 Weakness to Fire Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_flaming.png"
+                          }
+                        ]
+                      },
+                      "delay": 0.5,
+                      "affects_allies": true,
+                      "is_flaming": true
+                    },
                     "target_self": false
                   }
                 }

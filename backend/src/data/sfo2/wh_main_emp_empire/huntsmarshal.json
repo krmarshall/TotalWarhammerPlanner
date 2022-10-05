@@ -59,9 +59,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Hold the Line!",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -71,7 +69,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -500,9 +498,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Sure & True",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -512,7 +508,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -622,9 +618,26 @@
                       "num_uses": 5,
                       "recharge_time": 90,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_dlc13_lord_abilities_arrows_of_aqshy",
+                        "explosion_type": {
+                          "key": "wh2_dlc13_lord_abilities_fire_arrow",
+                          "detonation_radius": 8,
+                          "detonation_damage": 100,
+                          "detonation_damage_ap": 25,
+                          "affects_allies": true,
+                          "is_flaming": true
+                        },
+                        "projectile_number": 2,
+                        "damage": 250,
+                        "ap_damage": 150,
+                        "bonus_v_cavalry": "0",
+                        "bonus_v_large": 100,
+                        "shockwave_radius": 3,
+                        "is_grapple": "false",
+                        "is_flaming": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -895,9 +908,7 @@
                       "description": "Hail of Fire",
                       "active_time": 25,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -907,8 +918,8 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "imbue_ignition": 10,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1149,9 +1160,7 @@
                       "description": "Funnel of Flame",
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1161,8 +1170,8 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "imbue_ignition": 10,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1694,9 +1703,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1706,7 +1713,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1965,9 +1972,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1977,7 +1982,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2999,9 +3004,25 @@
                     "num_uses": 5,
                     "recharge_time": 60,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
+                    "activated_projectile": {
+                      "key": "wh2_dlc13_lord_abilities_fire_arrow",
+                      "explosion_type": {
+                        "key": "wh2_dlc13_lord_abilities_fire_arrow",
+                        "detonation_radius": 8,
+                        "detonation_damage": 100,
+                        "detonation_damage_ap": 25,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
+                      "damage": 400,
+                      "ap_damage": 300,
+                      "bonus_v_cavalry": "0",
+                      "bonus_v_large": 200,
+                      "shockwave_radius": 3,
+                      "is_grapple": "false",
+                      "is_flaming": true
+                    },
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,

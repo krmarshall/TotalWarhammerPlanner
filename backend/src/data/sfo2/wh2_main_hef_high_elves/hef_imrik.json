@@ -430,9 +430,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Ashen Fields",
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -442,14 +440,14 @@
                         {
                           "duration": -1,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -20,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-20Weakness to Fire Damage",
+                              "description": "-20 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -635,13 +633,37 @@
                       "num_uses": 4,
                       "active_time": 9,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_fire_piercing_bolts_of_burning",
+                        "projectile_type": {
+                          "key": "wh_main_spell_fire_piercing_bolts_of_burning",
+                          "explosion_type": {
+                            "key": "wh_main_spell_fire_piercing_bolts_of_burning",
+                            "detonation_radius": 4,
+                            "detonation_damage": 75,
+                            "is_magical": true,
+                            "detonation_damage_ap": 25,
+                            "affects_allies": true,
+                            "is_flaming": true
+                          },
+                          "damage": 75,
+                          "ap_damage": 25,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 1,
+                          "is_grapple": "false",
+                          "is_magical": true,
+                          "is_flaming": true
+                        },
+                        "num_projectiles": 30,
+                        "start_time": 2,
+                        "arrival_window": 3,
+                        "radius_spread": 8
+                      },
                       "target_self": false
                     }
                   }
@@ -923,9 +945,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Lord of Dragons",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -935,7 +955,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1200,9 +1220,7 @@
                       "description": "Heroic Killing Blow",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1212,7 +1230,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1292,9 +1310,7 @@
                       "active_time": 30,
                       "recharge_time": 200,
                       "wind_up_time": 6,
-                      "passive": false,
                       "effect_range": -1,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1304,7 +1320,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -1832,9 +1848,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1844,7 +1858,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2103,9 +2117,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2115,7 +2127,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3191,9 +3203,7 @@
                 "num_uses": 3,
                 "active_time": 20,
                 "recharge_time": 300,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -3206,7 +3216,9 @@
                     "cant_move": true,
                     "fatigue_change_ratio": -1,
                     "ability_recharge_change": -120,
-                    "recharge_time": -1,
+                    "hp_change_frequency": 0.5,
+                    "heal_amount": 50,
+                    "max_damaged_entities": -1,
                     "is_hidden_in_ui": false,
                     "stat_effects": [
                       {

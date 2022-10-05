@@ -472,9 +472,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -484,7 +482,6 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -800,9 +797,7 @@
                       "description": "Tormentor Sword",
                       "active_time": 20,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -813,7 +808,7 @@
                           "duration": 20,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1392,9 +1387,7 @@
                       "active_time": 90,
                       "recharge_time": 30,
                       "initial_recharge": 30,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1404,7 +1397,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1428,7 +1421,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1461,7 +1454,7 @@
                           "duration": 30,
                           "effect_type": "positive",
                           "fatigue_change_ratio": -0.5,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -2242,9 +2235,7 @@
                       ],
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2254,7 +2245,10 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 16,
+                          "max_damaged_entities": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2351,13 +2345,21 @@
                       "num_uses": 3,
                       "active_time": 10,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 0,
+                      "vortex": {
+                        "vortex_key": "chs_active_blood_breath",
+                        "duration": 10,
+                        "damage": 10,
+                        "damage_ap": 5,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "delay": 0,
+                        "affects_allies": false
+                      },
                       "target_self": false
                     }
                   }
@@ -2413,9 +2415,7 @@
                       "description": "Blood Rage",
                       "recharge_time": 60,
                       "initial_recharge": 60,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2425,7 +2425,6 @@
                         {
                           "duration": 60,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2457,7 +2456,6 @@
                         {
                           "duration": 60,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2489,7 +2487,8 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "heal_amount": 4,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3519,9 +3518,7 @@
                     "description": "Daemonic Strength",
                     "num_uses": 1,
                     "active_time": 60,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -3531,7 +3528,7 @@
                       {
                         "duration": 60,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {

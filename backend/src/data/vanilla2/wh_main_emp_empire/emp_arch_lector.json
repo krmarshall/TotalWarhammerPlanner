@@ -115,9 +115,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Hold the Line!",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -127,7 +125,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -267,9 +265,7 @@
                       ],
                       "active_time": 50,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -279,7 +275,7 @@
                         {
                           "duration": 50,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -353,9 +349,7 @@
                       ],
                       "active_time": 50,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -365,7 +359,6 @@
                         {
                           "duration": 50,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -468,13 +461,35 @@
                       "active_time": 7,
                       "recharge_time": 120,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 0,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_bound_soulfire_upgraded",
+                        "projectile_type": {
+                          "key": "wh_main_spell_bound_soulfire",
+                          "explosion_type": {
+                            "key": "wh_main_spell_bound_soulfire",
+                            "detonation_radius": 3,
+                            "detonation_damage": 36,
+                            "is_magical": true,
+                            "detonation_damage_ap": 0,
+                            "affects_allies": false
+                          },
+                          "damage": 1,
+                          "ap_damage": 0,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 1,
+                          "is_grapple": "false",
+                          "is_magical": true
+                        },
+                        "num_projectiles": 60,
+                        "start_time": 1,
+                        "arrival_window": 2,
+                        "radius_spread": 15
+                      },
                       "target_self": false
                     }
                   }
@@ -629,9 +644,7 @@
                       "active_time": 15,
                       "recharge_time": 3,
                       "initial_recharge": 3,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -641,7 +654,7 @@
                         {
                           "duration": 15,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -913,9 +926,7 @@
                       "description": "Faith's Bastion",
                       "active_time": 22,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -925,7 +936,7 @@
                         {
                           "duration": 22,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1164,9 +1175,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Benediction",
-                      "passive": true,
                       "effect_range": 30,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1176,7 +1185,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1701,9 +1710,7 @@
                       "description": "Rally!",
                       "active_time": 14,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1713,7 +1720,7 @@
                         {
                           "duration": 14,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1972,9 +1979,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1984,7 +1989,7 @@
                         {
                           "duration": 18,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {

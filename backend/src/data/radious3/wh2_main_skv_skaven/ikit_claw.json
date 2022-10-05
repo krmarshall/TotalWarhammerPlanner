@@ -364,21 +364,32 @@
                       "active_time": 15,
                       "recharge_time": 90,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 12,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc12_character_abilities_brass_orb",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 5,
+                        "goal_radius": 12,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 15,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 4,
+                          "max_damaged_entities": 25,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -612,9 +623,7 @@
                       "is_hidden_in_ui": false,
                       "description": "Adrenaline Rush",
                       "active_time": 20,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -626,7 +635,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "unbreakable",
@@ -710,9 +718,7 @@
                         }
                       ],
                       "active_time": 20,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -722,9 +728,10 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.008,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 12,
@@ -1661,13 +1668,34 @@
                       "active_time": 5,
                       "recharge_time": 60,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh2_main_spell_ruin_warp_lightning",
+                        "projectile_type": {
+                          "key": "wh2_main_spell_ruin_warp_lightning",
+                          "explosion_type": {
+                            "key": "wh2_main_spell_ruin_warp_lightning",
+                            "detonation_radius": 6,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 24,
+                            "affects_allies": true
+                          },
+                          "damage": 0,
+                          "ap_damage": 245,
+                          "shockwave_radius": 1.5,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 5,
+                        "start_time": 3,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -1721,13 +1749,34 @@
                       "active_time": 5,
                       "recharge_time": 60,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh2_main_spell_ruin_warp_lightning",
+                        "projectile_type": {
+                          "key": "wh2_main_spell_ruin_warp_lightning",
+                          "explosion_type": {
+                            "key": "wh2_main_spell_ruin_warp_lightning",
+                            "detonation_radius": 6,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 24,
+                            "affects_allies": true
+                          },
+                          "damage": 0,
+                          "ap_damage": 245,
+                          "shockwave_radius": 1.5,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 5,
+                        "start_time": 3,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -1803,13 +1852,34 @@
                       "active_time": 5,
                       "recharge_time": 60,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh2_main_spell_ruin_warp_lightning",
+                        "projectile_type": {
+                          "key": "wh2_main_spell_ruin_warp_lightning",
+                          "explosion_type": {
+                            "key": "wh2_main_spell_ruin_warp_lightning",
+                            "detonation_radius": 6,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 24,
+                            "affects_allies": true
+                          },
+                          "damage": 0,
+                          "ap_damage": 245,
+                          "shockwave_radius": 1.5,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 5,
+                        "start_time": 3,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -1863,13 +1933,34 @@
                       "active_time": 5,
                       "recharge_time": 60,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh2_main_spell_ruin_warp_lightning",
+                        "projectile_type": {
+                          "key": "wh2_main_spell_ruin_warp_lightning",
+                          "explosion_type": {
+                            "key": "wh2_main_spell_ruin_warp_lightning",
+                            "detonation_radius": 6,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 24,
+                            "affects_allies": true
+                          },
+                          "damage": 0,
+                          "ap_damage": 245,
+                          "shockwave_radius": 1.5,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 5,
+                        "start_time": 3,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -1959,9 +2050,7 @@
                         }
                       ],
                       "active_time": 8,
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1973,7 +2062,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -8,
@@ -2046,9 +2134,7 @@
                       "active_time": 25,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 55,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2061,8 +2147,7 @@
                           "effect_type": "negative",
                           "cant_move": true,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2084,9 +2169,7 @@
                       "active_time": 25,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 55,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2099,8 +2182,7 @@
                           "effect_type": "negative",
                           "cant_move": true,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2144,9 +2226,7 @@
                       "active_time": 25,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 55,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2159,8 +2239,7 @@
                           "effect_type": "negative",
                           "cant_move": true,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2182,9 +2261,7 @@
                       "active_time": 25,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 55,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2197,8 +2274,7 @@
                           "effect_type": "negative",
                           "cant_move": true,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2285,9 +2361,7 @@
                       "active_time": 20,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2300,7 +2374,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -2373,9 +2446,7 @@
                       "active_time": 20,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2388,7 +2459,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -2451,9 +2521,7 @@
                       "active_time": 20,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2466,7 +2534,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -2551,9 +2618,7 @@
                       "active_time": 20,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2566,7 +2631,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -2629,9 +2693,7 @@
                       "active_time": 20,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2644,7 +2706,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -2798,13 +2859,23 @@
                       "active_time": 12,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_scorch",
+                        "duration": 3,
+                        "damage": 40,
+                        "damage_ap": 5,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -2862,13 +2933,23 @@
                       "active_time": 12,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_scorch",
+                        "duration": 3,
+                        "damage": 40,
+                        "damage_ap": 5,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -2916,13 +2997,23 @@
                       "active_time": 12,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_scorch",
+                        "duration": 3,
+                        "damage": 40,
+                        "damage_ap": 5,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -2992,13 +3083,23 @@
                       "active_time": 12,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_scorch",
+                        "duration": 3,
+                        "damage": 40,
+                        "damage_ap": 5,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -3046,13 +3147,23 @@
                       "active_time": 12,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_scorch",
+                        "duration": 3,
+                        "damage": 40,
+                        "damage_ap": 5,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 8,
                       "target_self": false
                     }
@@ -3137,9 +3248,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Evasion",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3151,7 +3260,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -3253,13 +3361,22 @@
                       "active_time": 10,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_cracks_call",
+                        "duration": 1,
+                        "damage": 8,
+                        "damage_ap": 40,
+                        "goal_radius": 7,
+                        "movement_speed": 60,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 17,
                       "target_self": false
                     }
@@ -3317,13 +3434,22 @@
                       "active_time": 10,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_cracks_call",
+                        "duration": 1,
+                        "damage": 8,
+                        "damage_ap": 40,
+                        "goal_radius": 7,
+                        "movement_speed": 60,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 17,
                       "target_self": false
                     }
@@ -3371,13 +3497,22 @@
                       "active_time": 10,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_cracks_call",
+                        "duration": 1,
+                        "damage": 8,
+                        "damage_ap": 40,
+                        "goal_radius": 7,
+                        "movement_speed": 60,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 17,
                       "target_self": false
                     }
@@ -3447,13 +3582,22 @@
                       "active_time": 10,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_cracks_call",
+                        "duration": 1,
+                        "damage": 8,
+                        "damage_ap": 40,
+                        "goal_radius": 7,
+                        "movement_speed": 60,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 17,
                       "target_self": false
                     }
@@ -3501,13 +3645,22 @@
                       "active_time": 10,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_spell_ruin_cracks_call",
+                        "duration": 1,
+                        "damage": 8,
+                        "damage_ap": 40,
+                        "goal_radius": 7,
+                        "movement_speed": 60,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 17,
                       "target_self": false
                     }
@@ -3620,9 +3773,7 @@
                       "active_time": 20,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3633,9 +3784,11 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
+                          "hp_change_frequency": 2,
+                          "damage_amount": 144,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -20,
@@ -3703,9 +3856,7 @@
                       "active_time": 20,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3716,9 +3867,11 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
+                          "hp_change_frequency": 2,
+                          "damage_amount": 144,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -20,
@@ -3776,9 +3929,7 @@
                       "active_time": 20,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3789,9 +3940,11 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
+                          "hp_change_frequency": 2,
+                          "damage_amount": 144,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -20,
@@ -3871,9 +4024,7 @@
                       "active_time": 20,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3884,9 +4035,11 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
+                          "hp_change_frequency": 2,
+                          "damage_amount": 144,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -20,
@@ -3944,9 +4097,7 @@
                       "active_time": 20,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3957,9 +4108,11 @@
                         {
                           "duration": 20,
                           "effect_type": "negative",
+                          "hp_change_frequency": 2,
+                          "damage_amount": 144,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -20,
@@ -4118,9 +4271,7 @@
                       "description": "Unlimited Power!",
                       "active_time": 35,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4134,8 +4285,7 @@
                           "mana_regen_mod": 1.6,
                           "mana_max_depletion_mod": 0.2,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -4720,9 +4870,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4734,7 +4882,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 12,
@@ -5000,9 +5147,7 @@
                       "description": "Stand or Die!",
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -5014,7 +5159,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 34,
@@ -5882,9 +6026,7 @@
                     "active_time": 25,
                     "recharge_time": 30,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 55,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
@@ -5897,8 +6039,7 @@
                         "effect_type": "negative",
                         "cant_move": true,
                         "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null
+                        "freeze_recharge": false
                       }
                     ]
                   }
@@ -5962,13 +6103,34 @@
                     "active_time": 5,
                     "recharge_time": 60,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh2_main_spell_ruin_warp_lightning",
+                      "projectile_type": {
+                        "key": "wh2_main_spell_ruin_warp_lightning",
+                        "explosion_type": {
+                          "key": "wh2_main_spell_ruin_warp_lightning",
+                          "detonation_radius": 6,
+                          "detonation_damage": 0,
+                          "is_magical": true,
+                          "detonation_damage_ap": 24,
+                          "affects_allies": true
+                        },
+                        "damage": 0,
+                        "ap_damage": 245,
+                        "shockwave_radius": 1.5,
+                        "is_magical": true,
+                        "can_damage_allies": true
+                      },
+                      "num_projectiles": 5,
+                      "start_time": 3,
+                      "arrival_window": 1,
+                      "radius_spread": 8
+                    },
                     "mana_cost": 8,
                     "target_self": false
                   }
@@ -6021,13 +6183,22 @@
                     "active_time": 15,
                     "recharge_time": 90,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "vortex": {
+                      "vortex_key": "wh2_dlc12_character_abilities_brass_orb",
+                      "duration": 15,
+                      "damage": 0,
+                      "damage_ap": 5,
+                      "goal_radius": 12,
+                      "movement_speed": 0,
+                      "is_magical": true,
+                      "delay": 0,
+                      "affects_allies": true
+                    },
                     "target_self": false
                   }
                 }
@@ -6131,9 +6302,23 @@
                 "num_uses": 3,
                 "recharge_time": 120,
                 "wind_up_time": 5,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh2_dlc12_weapon_abilities_storm_daemon",
+                  "explosion_type": {
+                    "key": "wh2_main_spell_ruin_warp_lightning",
+                    "detonation_radius": 6,
+                    "detonation_damage": 0,
+                    "is_magical": true,
+                    "detonation_damage_ap": 24,
+                    "affects_allies": true
+                  },
+                  "damage": 0,
+                  "ap_damage": 775,
+                  "shockwave_radius": 2,
+                  "is_magical": true,
+                  "can_damage_allies": true
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,

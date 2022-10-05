@@ -479,9 +479,7 @@
                       "description": "Foe-Seeker",
                       "active_time": 25,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -491,9 +489,9 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
+                          "fatigue_change_ratio": -0.01,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.3,
@@ -790,9 +788,39 @@
                       "num_uses": 3,
                       "recharge_time": 90,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh3_main_character_abilities_crippling_throw",
+                        "damage": 140,
+                        "ap_damage": 500,
+                        "contact_stat_effect": {
+                          "id": "wh3_main_character_abilities_crippling_throw",
+                          "duration": 30,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -24,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-24 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        },
+                        "shockwave_radius": 1,
+                        "can_damage_allies": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,

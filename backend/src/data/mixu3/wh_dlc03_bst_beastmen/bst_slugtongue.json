@@ -123,9 +123,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "The Plague Master",
-                      "passive": true,
                       "effect_range": 55,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -137,8 +135,7 @@
                           "effect_type": "positive",
                           "imbue_contact": "wh_main_unit_contact_poison",
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -205,9 +202,7 @@
                       "active_time": 1,
                       "recharge_time": 120,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -576,9 +571,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Curse of the Famine-fiend",
-                      "passive": true,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -588,9 +581,11 @@
                         {
                           "duration": 35,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 8,
+                          "max_damaged_entities": 4,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -5,
@@ -613,9 +608,11 @@
                         {
                           "duration": -1,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 16,
+                          "max_damaged_entities": 8,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "cant_run",
@@ -771,9 +768,7 @@
                       },
                       "is_hidden_in_ui": true,
                       "description": "",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -785,8 +780,7 @@
                           "effect_type": "positive",
                           "imbue_contact": "mixu_LL_unit_contact_slugtongues_curse",
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -901,13 +895,33 @@
                       "active_time": 11.5,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "mixu_bst_slugtongue_ability_the_black_harvest",
+                        "duration": 10,
+                        "damage": 4,
+                        "damage_ap": 4,
+                        "goal_radius": 10,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "mixu_bst_slugtongue_ability_the_black_harvest_phase",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 5,
+                          "max_damaged_entities": 25,
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "target_self": false
                     }
                   }
@@ -973,13 +987,71 @@
                       "active_time": 3,
                       "recharge_time": 29,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_nurgle_stream_of_corruption",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 24,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_poison",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Missile Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing_ranged.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Missile Damage",
+                              "sort_order": 10,
+                              "icon": "icon_stat_ranged_damage_base.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -1009,13 +1081,71 @@
                       "active_time": 3,
                       "recharge_time": 29,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_nurgle_stream_of_corruption",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 24,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_poison",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Missile Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing_ranged.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Missile Damage",
+                              "sort_order": 10,
+                              "icon": "icon_stat_ranged_damage_base.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -1067,13 +1197,71 @@
                       "active_time": 3,
                       "recharge_time": 29,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_nurgle_stream_of_corruption",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 24,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_poison",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Missile Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing_ranged.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Missile Damage",
+                              "sort_order": 10,
+                              "icon": "icon_stat_ranged_damage_base.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -1103,13 +1291,71 @@
                       "active_time": 3,
                       "recharge_time": 29,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_nurgle_stream_of_corruption",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 24,
+                        "goal_radius": 6,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_poison",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Missile Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing_ranged.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_missile_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Missile Damage",
+                              "sort_order": 10,
+                              "icon": "icon_stat_ranged_damage_base.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x0.8 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 0.8,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x0.8 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -1205,9 +1451,7 @@
                         }
                       ],
                       "active_time": 5,
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1217,9 +1461,10 @@
                         {
                           "duration": 5,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.002,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -1288,13 +1533,22 @@
                       "active_time": 3,
                       "recharge_time": 31,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh_dlc03_spell_wild_viletide",
+                        "duration": 1,
+                        "damage": 23,
+                        "damage_ap": 0,
+                        "goal_radius": 15,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 0.8,
+                        "affects_allies": true
+                      },
                       "mana_cost": 9,
                       "target_self": false
                     }
@@ -1330,13 +1584,22 @@
                       "active_time": 3,
                       "recharge_time": 31,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh_dlc03_spell_wild_viletide",
+                        "duration": 1,
+                        "damage": 23,
+                        "damage_ap": 0,
+                        "goal_radius": 15,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 0.8,
+                        "affects_allies": true
+                      },
                       "mana_cost": 9,
                       "target_self": false
                     }
@@ -1394,13 +1657,22 @@
                       "active_time": 3,
                       "recharge_time": 31,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh_dlc03_spell_wild_viletide",
+                        "duration": 1,
+                        "damage": 23,
+                        "damage_ap": 0,
+                        "goal_radius": 15,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 0.8,
+                        "affects_allies": true
+                      },
                       "mana_cost": 9,
                       "target_self": false
                     }
@@ -1436,13 +1708,22 @@
                       "active_time": 3,
                       "recharge_time": 31,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh_dlc03_spell_wild_viletide",
+                        "duration": 1,
+                        "damage": 23,
+                        "damage_ap": 0,
+                        "goal_radius": 15,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 0.8,
+                        "affects_allies": true
+                      },
                       "mana_cost": 9,
                       "target_self": false
                     }
@@ -1537,9 +1818,7 @@
                       "active_time": 18,
                       "recharge_time": 43,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1552,7 +1831,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 30,
@@ -1566,7 +1844,7 @@
                               "value": 14,
                               "stat": "stat_damage_reflection",
                               "how": "add",
-                              "description": "+14Melee Damage Reflection",
+                              "description": "+14 Melee Damage Reflection",
                               "sort_order": 0,
                               "icon": "icon_stat_damage_reflection.png"
                             }
@@ -1610,9 +1888,7 @@
                       "active_time": 18,
                       "recharge_time": 43,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1625,7 +1901,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 30,
@@ -1639,7 +1914,7 @@
                               "value": 14,
                               "stat": "stat_damage_reflection",
                               "how": "add",
-                              "description": "+14Melee Damage Reflection",
+                              "description": "+14 Melee Damage Reflection",
                               "sort_order": 0,
                               "icon": "icon_stat_damage_reflection.png"
                             }
@@ -1673,9 +1948,7 @@
                       "active_time": 18,
                       "recharge_time": 43,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1688,7 +1961,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 30,
@@ -1702,7 +1974,7 @@
                               "value": 14,
                               "stat": "stat_damage_reflection",
                               "how": "add",
-                              "description": "+14Melee Damage Reflection",
+                              "description": "+14 Melee Damage Reflection",
                               "sort_order": 0,
                               "icon": "icon_stat_damage_reflection.png"
                             }
@@ -1758,9 +2030,7 @@
                       "active_time": 18,
                       "recharge_time": 43,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1773,7 +2043,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 30,
@@ -1787,7 +2056,7 @@
                               "value": 14,
                               "stat": "stat_damage_reflection",
                               "how": "add",
-                              "description": "+14Melee Damage Reflection",
+                              "description": "+14 Melee Damage Reflection",
                               "sort_order": 0,
                               "icon": "icon_stat_damage_reflection.png"
                             }
@@ -1821,9 +2090,7 @@
                       "active_time": 18,
                       "recharge_time": 43,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1836,7 +2103,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 30,
@@ -1850,7 +2116,7 @@
                               "value": 14,
                               "stat": "stat_damage_reflection",
                               "how": "add",
-                              "description": "+14Melee Damage Reflection",
+                              "description": "+14 Melee Damage Reflection",
                               "sort_order": 0,
                               "icon": "icon_stat_damage_reflection.png"
                             }
@@ -1949,9 +2215,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -1964,7 +2228,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 0.8,
@@ -2038,9 +2301,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2053,7 +2314,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 0.8,
@@ -2117,9 +2377,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2132,7 +2390,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 0.8,
@@ -2218,9 +2475,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2233,7 +2488,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 0.8,
@@ -2307,9 +2561,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2322,7 +2574,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 0.8,
@@ -2386,9 +2637,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -2401,7 +2650,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 0.8,
@@ -2520,9 +2768,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Evasion",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2534,7 +2780,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2678,9 +2923,7 @@
                         }
                       ],
                       "active_time": 9,
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2690,9 +2933,9 @@
                         {
                           "duration": 9,
                           "effect_type": "positive",
+                          "fatigue_change_ratio": -0.01,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2765,9 +3008,7 @@
                       "active_time": 52,
                       "recharge_time": 47,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2781,7 +3022,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -30,
@@ -2837,9 +3077,7 @@
                       "active_time": 26,
                       "recharge_time": 47,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2852,7 +3090,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -30,
@@ -2938,9 +3175,7 @@
                       "active_time": 52,
                       "recharge_time": 47,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2954,7 +3189,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -30,
@@ -3010,9 +3244,7 @@
                       "active_time": 26,
                       "recharge_time": 47,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3025,7 +3257,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -30,
@@ -3154,9 +3385,7 @@
                       "active_time": 20,
                       "recharge_time": 54,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3167,9 +3396,10 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.016,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -3209,9 +3439,7 @@
                       "active_time": 20,
                       "recharge_time": 54,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3222,9 +3450,10 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.016,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -3254,9 +3483,7 @@
                       "active_time": 20,
                       "recharge_time": 54,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3267,9 +3494,10 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.016,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -3321,9 +3549,7 @@
                       "active_time": 20,
                       "recharge_time": 54,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3334,9 +3560,10 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.016,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -3366,9 +3593,7 @@
                       "active_time": 20,
                       "recharge_time": 54,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3379,9 +3604,10 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.016,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -3466,9 +3692,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Arcane Conduit",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3480,8 +3704,7 @@
                           "effect_type": "positive",
                           "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -4028,9 +4251,7 @@
                       "description": "Call of Violence",
                       "active_time": 14,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4042,7 +4263,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 16,
@@ -4300,9 +4520,7 @@
                       "description": "Apocalyptic Vision",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4314,7 +4532,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 24,
@@ -5169,9 +5386,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Curse of the Famine-fiend",
-                    "passive": true,
                     "effect_range": 30,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -5183,7 +5398,6 @@
                         "effect_type": "negative",
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
-                        "recharge_time": null,
                         "stat_effects": [
                           {
                             "value": -5,
@@ -5198,9 +5412,11 @@
                       {
                         "duration": -1,
                         "effect_type": "negative",
+                        "hp_change_frequency": 1,
+                        "damage_amount": 8,
+                        "max_damaged_entities": 4,
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
-                        "recharge_time": null,
                         "stat_effects": [
                           {
                             "value": -5,
@@ -5284,13 +5500,22 @@
                     "active_time": 3,
                     "recharge_time": 31,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 100,
+                    "vortex": {
+                      "vortex_key": "wh_dlc03_spell_wild_viletide",
+                      "duration": 1,
+                      "damage": 23,
+                      "damage_ap": 0,
+                      "goal_radius": 15,
+                      "movement_speed": 0,
+                      "is_magical": true,
+                      "delay": 0.8,
+                      "affects_allies": true
+                    },
                     "mana_cost": 9,
                     "target_self": false
                   }
@@ -5330,13 +5555,71 @@
                     "active_time": 3,
                     "recharge_time": 29,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 100,
+                    "vortex": {
+                      "vortex_key": "wh3_main_spell_nurgle_stream_of_corruption",
+                      "duration": 3,
+                      "damage": 0,
+                      "damage_ap": 24,
+                      "goal_radius": 6,
+                      "movement_speed": 24,
+                      "contact_effect": {
+                        "id": "wh_main_unit_contact_poison",
+                        "duration": 10,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_missile_damage_ap",
+                            "how": "mult",
+                            "description": "x0.8 Armour-Piercing Missile Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing_ranged.png"
+                          },
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_missile_damage_base",
+                            "how": "mult",
+                            "description": "x0.8 Base Missile Damage",
+                            "sort_order": 10,
+                            "icon": "icon_stat_ranged_damage_base.png"
+                          },
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.8 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": 0.8,
+                            "stat": "stat_melee_damage_ap",
+                            "how": "mult",
+                            "description": "x0.8 Armour-Piercing Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "modifier_icon_armour_piercing.png"
+                          },
+                          {
+                            "value": 0.8,
+                            "stat": "stat_melee_damage_base",
+                            "how": "mult",
+                            "description": "x0.8 Base Weapon Damage",
+                            "sort_order": 0,
+                            "icon": "icon_stat_damage_base.png"
+                          }
+                        ]
+                      },
+                      "is_magical": true,
+                      "delay": 0,
+                      "affects_allies": true
+                    },
                     "mana_cost": 5,
                     "target_self": false
                   }

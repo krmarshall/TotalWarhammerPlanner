@@ -247,9 +247,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Bolstered Attack",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -259,7 +257,6 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -338,9 +335,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Bolstered Defence",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -350,7 +345,6 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -928,9 +922,7 @@
                           "description": "Units won't regenerate if cap was reached"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -940,14 +932,15 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -25,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-25Weakness to Fire Damage",
+                              "description": "-25 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -1139,9 +1132,7 @@
                       "is_hidden_in_ui": false,
                       "description": "Will of Itza",
                       "active_time": 5,
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1151,7 +1142,7 @@
                         {
                           "duration": 5,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1477,9 +1468,7 @@
                       ],
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 60,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1489,7 +1478,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1696,9 +1685,7 @@
                       "is_hidden_in_ui": false,
                       "description": "Eclipse",
                       "active_time": 5,
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1708,7 +1695,7 @@
                         {
                           "duration": 5,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {

@@ -177,9 +177,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Hold the Line!",
-                      "passive": true,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -191,7 +189,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 5,
@@ -2150,9 +2147,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2164,7 +2159,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2423,9 +2417,7 @@
                       "description": "Feint & Riposte",
                       "active_time": 35,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2437,7 +2429,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 20,
@@ -2985,9 +2976,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2999,7 +2988,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 12,
@@ -3256,9 +3244,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 80,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3270,7 +3256,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 36,
@@ -4198,13 +4183,23 @@
                 "active_time": 17,
                 "recharge_time": 135,
                 "wind_up_time": 5,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": true,
                 "target_intercept_range": 100,
+                "vortex": {
+                  "vortex_key": "wh2_main_weapon_abilities_sunfang",
+                  "duration": 2,
+                  "damage": 40,
+                  "damage_ap": 5,
+                  "goal_radius": 12,
+                  "movement_speed": 24,
+                  "is_magical": true,
+                  "delay": 0,
+                  "affects_allies": true,
+                  "is_flaming": true
+                },
                 "target_self": false
               }
             }
@@ -4285,9 +4280,7 @@
                 ],
                 "active_time": 1.1,
                 "recharge_time": 120,
-                "passive": true,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -4297,9 +4290,10 @@
                   {
                     "duration": 1,
                     "effect_type": "positive",
+                    "hp_change_frequency": 1.1,
+                    "heal_amount": 0.25,
                     "is_hidden_in_ui": false,
-                    "freeze_recharge": false,
-                    "recharge_time": null
+                    "freeze_recharge": false
                   }
                 ]
               }

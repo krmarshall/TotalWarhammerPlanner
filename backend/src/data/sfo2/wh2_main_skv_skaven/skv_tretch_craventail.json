@@ -221,9 +221,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Tretch's Raiders",
-                      "passive": true,
                       "effect_range": 60,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -233,7 +231,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -567,9 +565,7 @@
                           "description": "Units won't regenerate if cap was reached"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -579,14 +575,15 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -25,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-25Weakness to Fire Damage",
+                              "description": "-25 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -1144,9 +1141,7 @@
                       ],
                       "active_time": 20,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1156,7 +1151,7 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1413,9 +1408,7 @@
                       "description": "Trophy Heads",
                       "active_time": 60,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -1425,7 +1418,7 @@
                         {
                           "duration": 60,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1881,9 +1874,7 @@
                       "description": "Slippery",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1893,7 +1884,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2507,9 +2498,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2519,7 +2508,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2786,9 +2775,7 @@
                       "description": "Stand or Die!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2798,7 +2785,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4056,9 +4043,7 @@
                 "is_hidden_in_ui": false,
                 "description": "Lucky Skullhelm",
                 "recharge_time": 30,
-                "passive": true,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -4068,6 +4053,7 @@
                   {
                     "duration": 30,
                     "effect_type": "positive",
+                    "max_damaged_entities": -1,
                     "recharge_time": 45,
                     "is_hidden_in_ui": false,
                     "stat_effects": [

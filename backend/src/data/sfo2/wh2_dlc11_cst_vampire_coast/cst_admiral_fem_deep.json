@@ -187,9 +187,7 @@
                       "active_time": 60,
                       "recharge_time": 30,
                       "initial_recharge": 30,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -200,7 +198,8 @@
                           "duration": 60,
                           "effect_type": "positive",
                           "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 3,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -691,9 +690,7 @@
                       "description": "Taunt",
                       "active_time": 15,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -703,7 +700,7 @@
                         {
                           "duration": 15,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1042,9 +1039,45 @@
                       "num_uses": 3,
                       "recharge_time": 90,
                       "wind_up_time": 0.4,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_dlc11_character_abilities_pyromanianc",
+                        "explosion_type": {
+                          "key": "wh2_dlc11_character_abilities_pyromanianc",
+                          "detonation_radius": 8,
+                          "detonation_damage": 30,
+                          "contact_phase_effect": {
+                            "id": "wh2_dlc11_character_abilities_pyromaniac",
+                            "duration": 12,
+                            "effect_type": "negative",
+                            "hp_change_frequency": 1,
+                            "damage_chance": 1,
+                            "damage_amount": 10,
+                            "max_damaged_entities": 8,
+                            "is_hidden_in_ui": false
+                          },
+                          "detonation_damage_ap": 20,
+                          "affects_allies": true,
+                          "is_flaming": true
+                        },
+                        "projectile_number": 6,
+                        "damage": 0,
+                        "ap_damage": 0,
+                        "bonus_v_cavalry": "0",
+                        "contact_stat_effect": {
+                          "id": "wh2_dlc11_character_abilities_pyromaniac",
+                          "duration": 12,
+                          "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 10,
+                          "max_damaged_entities": 8,
+                          "is_hidden_in_ui": false
+                        },
+                        "shockwave_radius": -1,
+                        "is_grapple": "false",
+                        "is_flaming": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -1106,22 +1139,20 @@
                       "active_time": 30,
                       "recharge_time": 45,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 4,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "max_damaged_entities": -1,
                           "imbue_magical": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1154,22 +1185,20 @@
                       "active_time": 30,
                       "recharge_time": 45,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 4,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "max_damaged_entities": -1,
                           "imbue_magical": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1224,22 +1253,20 @@
                       "active_time": 30,
                       "recharge_time": 45,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 4,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "max_damaged_entities": -1,
                           "imbue_magical": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1272,22 +1299,20 @@
                       "active_time": 30,
                       "recharge_time": 45,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 4,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "max_damaged_entities": -1,
                           "imbue_magical": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1391,9 +1416,7 @@
                           "description": "➕ Causes damage to combatants"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 200,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1403,7 +1426,10 @@
                         {
                           "duration": 10,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.25,
+                          "damage_chance": 1,
+                          "damage_amount": 5,
+                          "max_damaged_entities": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1496,15 +1522,49 @@
                       "active_time": 6,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_tidecall",
+                        "duration": 2,
+                        "damage": 20,
+                        "damage_ap": 0,
+                        "goal_radius": 12,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_tidecall",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "max_damaged_entities": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0.3,
+                        "affects_allies": true
+                      },
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true
                     }
                   }
@@ -1562,15 +1622,49 @@
                       "active_time": 6,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_tidecall",
+                        "duration": 2,
+                        "damage": 20,
+                        "damage_ap": 0,
+                        "goal_radius": 12,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_tidecall",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "max_damaged_entities": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0.3,
+                        "affects_allies": true
+                      },
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true
                     }
                   },
@@ -1618,15 +1712,49 @@
                       "active_time": 6,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_tidecall",
+                        "duration": 2,
+                        "damage": 20,
+                        "damage_ap": 0,
+                        "goal_radius": 12,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_tidecall",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "max_damaged_entities": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0.3,
+                        "affects_allies": true
+                      },
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true
                     }
                   }
@@ -1696,15 +1824,49 @@
                       "active_time": 6,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_tidecall",
+                        "duration": 2,
+                        "damage": 20,
+                        "damage_ap": 0,
+                        "goal_radius": 12,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_tidecall",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "max_damaged_entities": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0.3,
+                        "affects_allies": true
+                      },
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true
                     }
                   },
@@ -1752,15 +1914,49 @@
                       "active_time": 6,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_tidecall",
+                        "duration": 2,
+                        "damage": 20,
+                        "damage_ap": 0,
+                        "goal_radius": 12,
+                        "movement_speed": 24,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_tidecall",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "max_damaged_entities": -1,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.8,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.8 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            },
+                            {
+                              "value": -10,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-10 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0.3,
+                        "affects_allies": true
+                      },
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true
                     }
                   }
@@ -1859,15 +2055,13 @@
                       "active_time": 3,
                       "recharge_time": 70,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
                       "target_intercept_range": 60,
                       "mana_cost": 16,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true
                     }
                   }
@@ -1937,21 +2131,18 @@
                       "active_time": 35,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
                       "target_intercept_range": 300,
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 35,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2010,21 +2201,18 @@
                       "active_time": 35,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
                       "target_intercept_range": 300,
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 35,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2073,21 +2261,18 @@
                       "active_time": 35,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
                       "target_intercept_range": 300,
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 35,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2158,21 +2343,18 @@
                       "active_time": 35,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
                       "target_intercept_range": 300,
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 35,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2221,21 +2403,18 @@
                       "active_time": 35,
                       "recharge_time": 55,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
                       "target_intercept_range": 300,
                       "mana_cost": 8,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 35,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2347,9 +2526,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Evasion",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2359,7 +2536,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2543,15 +2720,40 @@
                       "active_time": 15,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_krakens_pull",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 13,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_krakens_pull",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 20,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -2619,15 +2821,40 @@
                       "active_time": 15,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_krakens_pull",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 13,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_krakens_pull",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 20,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   },
@@ -2685,15 +2912,40 @@
                       "active_time": 15,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_krakens_pull",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 13,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_krakens_pull",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 20,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -2773,15 +3025,40 @@
                       "active_time": 15,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_krakens_pull",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 13,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_krakens_pull",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 20,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   },
@@ -2839,15 +3116,40 @@
                       "active_time": 15,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_spell_deep_krakens_pull",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 13,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "wh2_dlc11_spell_deep_krakens_pull",
+                          "duration": 10,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 20,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -2960,15 +3262,24 @@
                       "active_time": 6,
                       "recharge_time": 85,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_deep_ghost_ship",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 130,
+                        "goal_radius": 7,
+                        "movement_speed": 40,
+                        "is_magical": true,
+                        "delay": 4.7,
+                        "affects_allies": true
+                      },
                       "mana_cost": 18,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -3026,15 +3337,24 @@
                       "active_time": 6,
                       "recharge_time": 85,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_deep_ghost_ship",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 130,
+                        "goal_radius": 7,
+                        "movement_speed": 40,
+                        "is_magical": true,
+                        "delay": 4.7,
+                        "affects_allies": true
+                      },
                       "mana_cost": 18,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   },
@@ -3082,15 +3402,24 @@
                       "active_time": 6,
                       "recharge_time": 85,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_deep_ghost_ship",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 130,
+                        "goal_radius": 7,
+                        "movement_speed": 40,
+                        "is_magical": true,
+                        "delay": 4.7,
+                        "affects_allies": true
+                      },
                       "mana_cost": 18,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -3160,15 +3489,24 @@
                       "active_time": 6,
                       "recharge_time": 85,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_deep_ghost_ship",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 130,
+                        "goal_radius": 7,
+                        "movement_speed": 40,
+                        "is_magical": true,
+                        "delay": 4.7,
+                        "affects_allies": true
+                      },
                       "mana_cost": 18,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   },
@@ -3216,15 +3554,24 @@
                       "active_time": 6,
                       "recharge_time": 85,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_dlc11_deep_ghost_ship",
+                        "duration": 3,
+                        "damage": 0,
+                        "damage_ap": 130,
+                        "goal_radius": 7,
+                        "movement_speed": 40,
+                        "is_magical": true,
+                        "delay": 4.7,
+                        "affects_allies": true
+                      },
                       "mana_cost": 18,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -3356,9 +3703,7 @@
                       ],
                       "active_time": 45,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3368,9 +3713,9 @@
                         {
                           "duration": 45,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.1,
+                          "max_damaged_entities": -1,
+                          "mana_regen_mod": 0.15,
                           "mana_max_depletion_mod": 15,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -3924,9 +4269,7 @@
                       "description": "Avast Ye!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 60,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3936,7 +4279,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4219,9 +4562,7 @@
                       "description": "All Hands Hoay!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 60,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4231,7 +4572,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -5562,22 +5903,20 @@
                     "active_time": 30,
                     "recharge_time": 45,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 200,
                     "mana_cost": 4,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true,
                     "phases": [
                       {
                         "duration": 30,
                         "effect_type": "positive",
+                        "max_damaged_entities": -1,
                         "imbue_magical": true,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -5647,15 +5986,49 @@
                     "active_time": 6,
                     "recharge_time": 55,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 100,
+                    "vortex": {
+                      "vortex_key": "wh2_dlc11_spell_deep_tidecall",
+                      "duration": 2,
+                      "damage": 20,
+                      "damage_ap": 0,
+                      "goal_radius": 12,
+                      "movement_speed": 24,
+                      "contact_effect": {
+                        "id": "wh2_dlc11_spell_deep_tidecall",
+                        "duration": 10,
+                        "effect_type": "negative",
+                        "max_damaged_entities": -1,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 0.8,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.8 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          },
+                          {
+                            "value": -10,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "-10 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      },
+                      "is_magical": true,
+                      "delay": 0.3,
+                      "affects_allies": true
+                    },
                     "mana_cost": 8,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true
                   }
                 }

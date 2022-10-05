@@ -745,9 +745,7 @@
                       "description": "Slippery",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -757,7 +755,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1039,9 +1037,7 @@
                       ],
                       "active_time": 35,
                       "recharge_time": 100,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1051,7 +1047,7 @@
                         {
                           "duration": 35,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1712,9 +1708,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1724,7 +1718,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1983,9 +1977,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1995,7 +1987,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3066,9 +3058,73 @@
                 ],
                 "recharge_time": 120,
                 "wind_up_time": 2.5,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh2_dlc17_weapon_abilities_the_golden_blowpipe_of_ptoohee",
+                  "explosion_type": {
+                    "key": "wh2_dlc17_weapon_abilities_the_golden_blowpipe_of_ptoohee",
+                    "detonation_radius": 2,
+                    "detonation_damage": 25,
+                    "detonation_damage_ap": 0,
+                    "affects_allies": true
+                  },
+                  "projectile_number": 3,
+                  "damage": 50,
+                  "ap_damage": 200,
+                  "bonus_v_cavalry": "0",
+                  "contact_stat_effect": {
+                    "id": "wh_main_unit_contact_poison",
+                    "duration": 10,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_missile_damage_ap",
+                        "how": "mult",
+                        "description": "x0.8 Armour-Piercing Missile Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing_ranged.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_missile_damage_base",
+                        "how": "mult",
+                        "description": "x0.8 Base Missile Damage",
+                        "sort_order": 10,
+                        "icon": "icon_stat_ranged_damage_base.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_speed",
+                        "how": "mult",
+                        "description": "x0.8 Speed",
+                        "sort_order": 10,
+                        "icon": "icon_stat_speed.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x0.8 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x0.8 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  },
+                  "shockwave_radius": -1,
+                  "is_grapple": "false",
+                  "is_magical": true,
+                  "shots_per_volley": 3
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,

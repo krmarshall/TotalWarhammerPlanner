@@ -287,9 +287,7 @@
                       "description": "Spite of Da Bad Moon",
                       "active_time": 25,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -299,7 +297,7 @@
                         {
                           "duration": 21,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -378,9 +376,7 @@
                       "num_uses": 4,
                       "active_time": 36,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -390,7 +386,7 @@
                         {
                           "duration": 36,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -840,9 +836,7 @@
                       "description": "Foe-Seeker",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -852,8 +846,8 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.2,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.18,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1102,9 +1096,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1114,7 +1106,6 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1762,9 +1753,7 @@
                       "description": "Get Back 'Ere!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1774,7 +1763,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2041,9 +2030,7 @@
                       "description": "Smash 'Em Faster",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2053,7 +2040,7 @@
                         {
                           "duration": 18,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4102,9 +4089,25 @@
                 "num_uses": 2,
                 "recharge_time": 135,
                 "wind_up_time": 3,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh_dlc06_weapon_abilities_skarsniks_prodder",
+                  "explosion_type": {
+                    "key": "wh_dlc06_weapon_abilities_skarsniks_prodder",
+                    "detonation_radius": 8,
+                    "detonation_damage": 0,
+                    "is_magical": true,
+                    "detonation_damage_ap": 68,
+                    "affects_allies": true
+                  },
+                  "damage": 0,
+                  "ap_damage": 450,
+                  "bonus_v_cavalry": "0",
+                  "shockwave_radius": 1,
+                  "is_grapple": "false",
+                  "is_magical": true,
+                  "is_flaming": true
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,

@@ -204,9 +204,7 @@
                       "description": "Sacred Spawning of Xhotl",
                       "active_time": 30,
                       "recharge_time": 45,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -216,8 +214,8 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.2,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.18,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1211,9 +1209,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1223,7 +1219,6 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1500,9 +1495,7 @@
                       ],
                       "active_time": 40,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1512,7 +1505,7 @@
                         {
                           "duration": 40,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2164,9 +2157,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2176,7 +2167,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2435,9 +2426,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 80,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2447,7 +2436,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4401,9 +4390,28 @@
                 ],
                 "num_uses": 2,
                 "recharge_time": 135,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh2_main_bound_shems_burning_gaze",
+                  "explosion_type": {
+                    "key": "wh2_main_bound_shems_burning_gaze",
+                    "detonation_radius": 1,
+                    "detonation_damage": 20,
+                    "is_magical": true,
+                    "detonation_damage_ap": 45,
+                    "affects_allies": true,
+                    "is_flaming": true
+                  },
+                  "projectile_number": 15,
+                  "damage": 0,
+                  "ap_damage": 70,
+                  "bonus_v_cavalry": "0",
+                  "bonus_v_large": 35,
+                  "shockwave_radius": 0.25,
+                  "is_grapple": "false",
+                  "is_magical": true,
+                  "is_flaming": true
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,

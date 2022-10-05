@@ -525,9 +525,7 @@
                       "description": "Foe-Seeker",
                       "active_time": 25,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -537,8 +535,8 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.2,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.18,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -827,9 +825,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 31,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -839,7 +835,6 @@
                         {
                           "duration": 31,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1565,9 +1560,7 @@
                     "active_time": 13,
                     "recharge_time": 45,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -1577,7 +1570,10 @@
                       {
                         "duration": 13,
                         "effect_type": "negative",
-                        "recharge_time": -1,
+                        "hp_change_frequency": 2,
+                        "damage_chance": 0.5,
+                        "damage_amount": 144,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false
                       }
                     ]

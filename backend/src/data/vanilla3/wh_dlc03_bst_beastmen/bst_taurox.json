@@ -227,9 +227,7 @@
                       "description": "Brass Body",
                       "active_time": 41,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -239,9 +237,9 @@
                         {
                           "duration": 41,
                           "effect_type": "positive",
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 24,
@@ -441,9 +439,7 @@
                           "description": "Replenishes hit points of combatants"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -453,9 +449,10 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.001,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -1117,9 +1114,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 31,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1131,7 +1126,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.6,
@@ -1703,9 +1697,7 @@
                       "description": "Call of Violence",
                       "active_time": 14,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1717,7 +1709,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 16,
@@ -1975,9 +1966,7 @@
                       "description": "Apocalyptic Vision",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1989,7 +1978,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 24,
@@ -2858,13 +2846,39 @@
                     ],
                     "active_time": 6,
                     "recharge_time": 90,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 0,
+                    "vortex": {
+                      "vortex_key": "wh2_dlc17_lord_abilities_bloodbeast",
+                      "duration": 6,
+                      "damage": 0,
+                      "damage_ap": 2,
+                      "goal_radius": 15,
+                      "movement_speed": 0,
+                      "contact_effect": {
+                        "id": "wh_main_unit_contact_morale",
+                        "duration": 10,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "freeze_recharge": false,
+                        "stat_effects": [
+                          {
+                            "value": -8,
+                            "stat": "stat_morale",
+                            "how": "add",
+                            "description": "-8 Leadership",
+                            "sort_order": 1,
+                            "icon": "icon_stat_morale.png"
+                          }
+                        ]
+                      },
+                      "delay": 0.5,
+                      "affects_allies": true,
+                      "is_flaming": true
+                    },
                     "target_self": false
                   }
                 }
@@ -2935,9 +2949,7 @@
                 "description": "Rune-Tortured Axes",
                 "recharge_time": 90,
                 "initial_recharge": 90,
-                "passive": true,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -2947,9 +2959,9 @@
                   {
                     "duration": -1,
                     "effect_type": "positive",
+                    "max_damaged_entities": -1,
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
-                    "recharge_time": null,
                     "stat_effects": [
                       {
                         "value": 8,

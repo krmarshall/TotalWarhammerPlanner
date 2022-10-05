@@ -87,9 +87,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Howl of the Forest",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -99,7 +97,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -163,9 +161,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Sight Beyond Sight",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -175,7 +171,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -239,9 +235,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Possessed by the Trickster God",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -251,7 +245,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -486,9 +480,7 @@
                       },
                       "is_hidden_in_ui": true,
                       "description": "Part the Boughs",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -498,14 +490,14 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": 5000,
                               "stat": "stat_spotting_forest",
                               "how": "add",
-                              "description": "+5000Forest Spotting",
+                              "description": "+5000 Forest Spotting",
                               "sort_order": 0,
                               "icon": "icon_stat_spotting.png"
                             }
@@ -627,13 +619,26 @@
                       "num_uses": 3,
                       "recharge_time": 90,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_dlc05_weapon_abilities_hawks_talon",
+                        "projectile_type": {
+                          "key": "wh_dlc05_wef_hawks_talon",
+                          "damage": 0,
+                          "ap_damage": 72,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 1,
+                          "is_grapple": "false"
+                        },
+                        "num_projectiles": 25,
+                        "start_time": 2,
+                        "arrival_window": 3,
+                        "radius_spread": 10
+                      },
                       "target_self": false
                     }
                   }
@@ -857,9 +862,7 @@
                       "num_uses": 3,
                       "active_time": 16,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -870,7 +873,7 @@
                           "duration": 16,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -966,13 +969,22 @@
                       "active_time": 13,
                       "recharge_time": 90,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_dlc05_lord_abilities_grey_hounds",
+                        "duration": 13,
+                        "damage": 14,
+                        "damage_ap": 7,
+                        "goal_radius": 7,
+                        "movement_speed": 3,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "target_self": false
                     }
                   }
@@ -1211,9 +1223,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 31,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1223,7 +1233,6 @@
                         {
                           "duration": 31,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1782,9 +1791,7 @@
                       "description": "Rally!",
                       "active_time": 14,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1794,7 +1801,7 @@
                         {
                           "duration": 14,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2061,9 +2068,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2073,7 +2078,7 @@
                         {
                           "duration": 18,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2915,9 +2920,7 @@
                     "description": "➕ Restores 8 Hit Points per second"
                   }
                 ],
-                "passive": true,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -2927,7 +2930,8 @@
                   {
                     "duration": -1,
                     "effect_type": "positive",
-                    "recharge_time": -1,
+                    "hp_change_frequency": 0.5,
+                    "heal_amount": 4,
                     "is_hidden_in_ui": false,
                     "stat_effects": [
                       {
@@ -3030,9 +3034,47 @@
                   }
                 ],
                 "recharge_time": 120,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh_dlc05_wef_spear_of_kurnous",
+                  "damage": 0,
+                  "ap_damage": 338,
+                  "bonus_v_cavalry": "0",
+                  "contact_stat_effect": {
+                    "id": "wh_dlc06_unit_contact_blinded",
+                    "duration": 10,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": -30,
+                        "stat": "stat_accuracy",
+                        "how": "add",
+                        "description": "-30 Accuracy",
+                        "sort_order": 9,
+                        "icon": "icon_stat_range.png"
+                      },
+                      {
+                        "value": -24,
+                        "stat": "stat_melee_attack",
+                        "how": "add",
+                        "description": "-24 Melee Attack",
+                        "sort_order": 2,
+                        "icon": "icon_stat_attack.png"
+                      },
+                      {
+                        "value": -24,
+                        "stat": "stat_melee_defence",
+                        "how": "add",
+                        "description": "-24 Melee Defence",
+                        "sort_order": 3,
+                        "icon": "icon_stat_defence.png"
+                      }
+                    ]
+                  },
+                  "shockwave_radius": 1,
+                  "is_grapple": "false"
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,
@@ -3098,9 +3140,7 @@
                 "description": "Horn of the Wild Hunt",
                 "active_time": 24,
                 "recharge_time": 120,
-                "passive": false,
                 "effect_range": -1,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -3110,7 +3150,7 @@
                   {
                     "duration": 24,
                     "effect_type": "positive",
-                    "recharge_time": -1,
+                    "max_damaged_entities": -1,
                     "is_hidden_in_ui": false,
                     "stat_effects": [
                       {

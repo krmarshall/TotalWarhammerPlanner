@@ -146,9 +146,7 @@
                       "num_uses": 3,
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -158,7 +156,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -555,9 +553,7 @@
                           "description": "Units won't regenerate if cap was reached"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -567,14 +563,15 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -25,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-25Weakness to Fire Damage",
+                              "description": "-25 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -1057,9 +1054,7 @@
                       "active_time": 90,
                       "recharge_time": 45,
                       "initial_recharge": 45,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1069,8 +1064,8 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.05,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1087,7 +1082,7 @@
                           "duration": 30,
                           "effect_type": "positive",
                           "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1104,7 +1099,7 @@
                           "duration": 30,
                           "effect_type": "positive",
                           "fatigue_change_ratio": -0.2,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1345,9 +1340,7 @@
                       "description": "Heroic Killing Blow",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1357,7 +1350,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1920,9 +1913,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Strength Through Spite",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1932,7 +1923,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2213,9 +2204,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Kindle the Fury",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2225,7 +2214,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3270,9 +3259,7 @@
                 },
                 "is_hidden_in_ui": false,
                 "description": "Amulet of Dark Fire",
-                "passive": true,
                 "effect_range": 40,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -3282,7 +3269,7 @@
                   {
                     "duration": -1,
                     "effect_type": "positive",
-                    "recharge_time": -1,
+                    "max_damaged_entities": -1,
                     "is_hidden_in_ui": false,
                     "stat_effects": [
                       {
@@ -3416,9 +3403,7 @@
                     "description": "➖ Chance opponent will resist damage"
                   }
                 ],
-                "passive": true,
                 "effect_range": 30,
-                "affect_self": false,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -3428,7 +3413,10 @@
                   {
                     "duration": 10,
                     "effect_type": "negative",
-                    "recharge_time": -1,
+                    "hp_change_frequency": 11,
+                    "damage_chance": 1,
+                    "damage_amount": 144,
+                    "max_damaged_entities": 1,
                     "is_hidden_in_ui": false
                   }
                 ]

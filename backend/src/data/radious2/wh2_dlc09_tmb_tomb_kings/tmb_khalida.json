@@ -290,9 +290,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "True Blessing of Asaph",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -302,7 +300,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -406,9 +404,7 @@
                           "description": "➕ Restores 4 Hit Points per second"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -418,14 +414,15 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -15,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-15Weakness to Fire Damage",
+                              "description": "-15 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -603,9 +600,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Frenzy",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -615,7 +610,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -940,9 +935,7 @@
                       "description": "Tombstrike",
                       "active_time": 25,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -952,7 +945,7 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -1224,9 +1217,7 @@
                       "description": "Desertstrike",
                       "active_time": 25,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1236,7 +1227,7 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -1832,9 +1823,7 @@
                       "description": "Reanimate",
                       "active_time": 15,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1844,7 +1833,7 @@
                         {
                           "duration": 15,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2110,9 +2099,7 @@
                       ],
                       "active_time": 15,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2122,7 +2109,9 @@
                         {
                           "duration": 15,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 24,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4062,9 +4051,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Blessing of Asaph",
-                    "passive": true,
                     "effect_range": 40,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -4074,7 +4061,7 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -4154,9 +4141,7 @@
                     ],
                     "num_uses": 1,
                     "active_time": 15,
-                    "passive": true,
                     "effect_range": 40,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -4166,7 +4151,10 @@
                       {
                         "duration": 15,
                         "effect_type": "negative",
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 0.18,
+                        "damage_amount": 6,
+                        "max_damaged_entities": 18,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -4272,9 +4260,122 @@
                 "num_uses": 2,
                 "recharge_time": 120,
                 "wind_up_time": 5,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh_dlc09_weapon_abilities_venom_staff",
+                  "explosion_type": {
+                    "key": "wh_dlc09_weapon_abilities_venom_staff_explosion",
+                    "detonation_radius": 7,
+                    "detonation_damage": 0,
+                    "contact_phase_effect": {
+                      "id": "wh_main_unit_contact_poison",
+                      "duration": 5,
+                      "effect_type": "negative",
+                      "is_hidden_in_ui": false,
+                      "stat_effects": [
+                        {
+                          "value": 0.8,
+                          "stat": "scalar_missile_damage_ap",
+                          "how": "mult",
+                          "description": "x0.8 Armour-Piercing Missile Damage",
+                          "sort_order": 0,
+                          "icon": "modifier_icon_armour_piercing_ranged.png"
+                        },
+                        {
+                          "value": 0.8,
+                          "stat": "scalar_missile_damage_base",
+                          "how": "mult",
+                          "description": "x0.8 Base Missile Damage",
+                          "sort_order": 10,
+                          "icon": "icon_stat_ranged_damage_base.png"
+                        },
+                        {
+                          "value": 0.8,
+                          "stat": "scalar_speed",
+                          "how": "mult",
+                          "description": "x0.8 Speed",
+                          "sort_order": 10,
+                          "icon": "icon_stat_speed.png"
+                        },
+                        {
+                          "value": 0.8,
+                          "stat": "stat_melee_damage_ap",
+                          "how": "mult",
+                          "description": "x0.8 Armour-Piercing Weapon Damage",
+                          "sort_order": 0,
+                          "icon": "modifier_icon_armour_piercing.png"
+                        },
+                        {
+                          "value": 0.8,
+                          "stat": "stat_melee_damage_base",
+                          "how": "mult",
+                          "description": "x0.8 Base Weapon Damage",
+                          "sort_order": 0,
+                          "icon": "icon_stat_damage_base.png"
+                        }
+                      ]
+                    },
+                    "is_magical": true,
+                    "detonation_damage_ap": 75,
+                    "affects_allies": true
+                  },
+                  "projectile_number": 2,
+                  "damage": 0,
+                  "ap_damage": 100,
+                  "bonus_v_cavalry": "0",
+                  "contact_stat_effect": {
+                    "id": "wh_main_unit_contact_poison",
+                    "duration": 5,
+                    "effect_type": "negative",
+                    "is_hidden_in_ui": false,
+                    "stat_effects": [
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_missile_damage_ap",
+                        "how": "mult",
+                        "description": "x0.8 Armour-Piercing Missile Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing_ranged.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_missile_damage_base",
+                        "how": "mult",
+                        "description": "x0.8 Base Missile Damage",
+                        "sort_order": 10,
+                        "icon": "icon_stat_ranged_damage_base.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "scalar_speed",
+                        "how": "mult",
+                        "description": "x0.8 Speed",
+                        "sort_order": 10,
+                        "icon": "icon_stat_speed.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "stat_melee_damage_ap",
+                        "how": "mult",
+                        "description": "x0.8 Armour-Piercing Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "modifier_icon_armour_piercing.png"
+                      },
+                      {
+                        "value": 0.8,
+                        "stat": "stat_melee_damage_base",
+                        "how": "mult",
+                        "description": "x0.8 Base Weapon Damage",
+                        "sort_order": 0,
+                        "icon": "icon_stat_damage_base.png"
+                      }
+                    ]
+                  },
+                  "shockwave_radius": 1,
+                  "is_grapple": "false",
+                  "is_magical": true,
+                  "is_flaming": true
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,

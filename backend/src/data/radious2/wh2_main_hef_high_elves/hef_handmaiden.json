@@ -462,9 +462,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Guardian",
-                      "passive": true,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -474,7 +472,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -543,9 +541,7 @@
                       "num_uses": 2,
                       "active_time": 20,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -556,14 +552,14 @@
                           "duration": 20,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -25,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-25Weakness to Fire Damage",
+                              "description": "-25 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -1006,9 +1002,7 @@
                       "description": "Foe-Seeker",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1018,8 +1012,8 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.2,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.18,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1292,9 +1286,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1304,7 +1296,6 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3345,9 +3336,7 @@
                         "description": "➕ Restores 4 Hit Points per second"
                       }
                     ],
-                    "passive": true,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -3357,14 +3346,15 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 2,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
                             "value": -15,
                             "stat": "stat_weakness_flame",
                             "how": "add",
-                            "description": "-15Weakness to Fire Damage",
+                            "description": "-15 Weakness to Fire Damage",
                             "sort_order": 0,
                             "icon": "modifier_icon_flaming.png"
                           }

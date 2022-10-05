@@ -63,8 +63,8 @@ const Issues = () => {
             Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
           </li>
           <li className="text-gray-200 text-2xl">
-            Tooltips that overflow the viewport (eg. SFO2 Norsca Fimir Lord The Withering) are just cut off for the time
-            being
+            Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are just cut off for the
+            time being
           </li>
           <li className="text-gray-200 text-2xl">
             Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon

@@ -75,13 +75,82 @@
                       "active_time": 1,
                       "recharge_time": 150,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "lzd_active_slann_blessing",
+                        "duration": 2,
+                        "damage": 0,
+                        "damage_ap": 0,
+                        "goal_radius": 1,
+                        "movement_speed": 0,
+                        "contact_effect": {
+                          "id": "lzd_active_slann_blessing_miscast",
+                          "duration": 300,
+                          "effect_type": "positive",
+                          "max_damaged_entities": -1,
+                          "is_hidden_in_ui": false,
+                          "attributes": [
+                            {
+                              "key": "immune_to_psychology",
+                              "description": " Immune to Psychology",
+                              "attribute_type": "positive"
+                            },
+                            {
+                              "key": "charge_reflector",
+                              "description": " Expert Charge Defence",
+                              "attribute_type": "positive"
+                            }
+                          ],
+                          "stat_effects": [
+                            {
+                              "value": 1.5,
+                              "stat": "stat_melee_damage_ap",
+                              "how": "mult",
+                              "description": "x1.5 Armour-Piercing Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_armour_piercing.png"
+                            },
+                            {
+                              "value": 1.5,
+                              "stat": "stat_melee_damage_base",
+                              "how": "mult",
+                              "description": "x1.5 Base Weapon Damage",
+                              "sort_order": 0,
+                              "icon": "icon_stat_damage_base.png"
+                            },
+                            {
+                              "value": 2,
+                              "stat": "stat_accuracy",
+                              "how": "mult",
+                              "description": "x2 Accuracy",
+                              "sort_order": 9,
+                              "icon": "icon_stat_range.png"
+                            },
+                            {
+                              "value": 25,
+                              "stat": "stat_reloading",
+                              "how": "add",
+                              "description": "+25 Reload Skill",
+                              "sort_order": 8,
+                              "icon": "icon_stat_reload_time.png"
+                            },
+                            {
+                              "value": 25,
+                              "stat": "stat_resistance_magic",
+                              "how": "add",
+                              "description": "+25 Magic Resistance",
+                              "sort_order": 10,
+                              "icon": "resistance_magic.png"
+                            }
+                          ]
+                        },
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "target_self": false
                     }
                   }
@@ -369,21 +438,30 @@
                       ],
                       "num_uses": 1,
                       "active_time": 30,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 0,
+                      "vortex": {
+                        "vortex_key": "lzd_passive_energy_explode",
+                        "duration": 1,
+                        "damage": 10,
+                        "damage_ap": 10,
+                        "goal_radius": 25,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": false
+                      },
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.1,
+                          "max_damaged_entities": -1,
+                          "mana_regen_mod": 0.05,
                           "imbue_contact": "wh2_pro08_unit_contact_dampen",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -753,13 +831,41 @@
                       "active_time": 15,
                       "recharge_time": 150,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_lord_abilities_the_ruination_of_cities",
+                        "duration": 5,
+                        "damage": 8,
+                        "damage_ap": 8,
+                        "goal_radius": 20,
+                        "movement_speed": 30,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_vortex_speed",
+                          "duration": 30,
+                          "effect_type": "negative",
+                          "max_damaged_entities": 5,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": 0.5,
+                              "stat": "scalar_speed",
+                              "how": "mult",
+                              "description": "x0.5 Speed",
+                              "sort_order": 10,
+                              "icon": "icon_stat_speed.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "num_vortexes": 3,
+                        "affects_allies": true,
+                        "delay_between_vortexes": 2
+                      },
                       "target_self": false
                     }
                   }
@@ -847,9 +953,7 @@
                       ],
                       "num_uses": 1,
                       "active_time": 60,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -861,9 +965,9 @@
                           "effect_type": "positive",
                           "cant_move": true,
                           "ability_recharge_change": -60,
+                          "max_damaged_entities": -1,
                           "mana_regen_mod": 1,
                           "mana_max_depletion_mod": 100,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -950,9 +1054,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -962,7 +1064,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1163,9 +1265,7 @@
                           "description": "Units won't regenerate if cap was reached"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1175,14 +1275,15 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 2,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
                               "value": -25,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-25Weakness to Fire Damage",
+                              "description": "-25 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -1241,9 +1342,7 @@
                       "description": "Shield of the Old Ones",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 60,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1253,7 +1352,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1553,13 +1652,47 @@
                       "active_time": 15,
                       "recharge_time": 135,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh2_main_bound_banishment",
+                        "duration": 15,
+                        "damage": 0,
+                        "damage_ap": 10,
+                        "goal_radius": 15,
+                        "movement_speed": 1.5,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_vortex_blind",
+                          "duration": 30,
+                          "effect_type": "negative",
+                          "max_damaged_entities": 5,
+                          "is_hidden_in_ui": false,
+                          "stat_effects": [
+                            {
+                              "value": -5,
+                              "stat": "stat_melee_defence",
+                              "how": "add",
+                              "description": "-5 Melee Defence",
+                              "sort_order": 3,
+                              "icon": "icon_stat_defence.png"
+                            },
+                            {
+                              "value": -25,
+                              "stat": "stat_accuracy",
+                              "how": "add",
+                              "description": "-25 Accuracy",
+                              "sort_order": 9,
+                              "icon": "icon_stat_range.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "target_self": false
                     }
                   }
@@ -1616,21 +1749,18 @@
                       "active_time": 30,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 5,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1679,21 +1809,18 @@
                       "active_time": 30,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 5,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1764,21 +1891,18 @@
                       "active_time": 30,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 5,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1827,21 +1951,18 @@
                       "active_time": 30,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
                       "target_intercept_range": 200,
                       "mana_cost": 5,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": true,
                       "phases": [
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1964,9 +2085,7 @@
                       "active_time": 10,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1979,7 +2098,8 @@
                           "duration": 10,
                           "effect_type": "positive",
                           "ability_recharge_change": -10,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 30,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -2021,9 +2141,7 @@
                       "active_time": 10,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2036,7 +2154,8 @@
                           "duration": 10,
                           "effect_type": "positive",
                           "ability_recharge_change": -10,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 30,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -2100,9 +2219,7 @@
                       "active_time": 10,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2115,7 +2232,8 @@
                           "duration": 10,
                           "effect_type": "positive",
                           "ability_recharge_change": -10,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 30,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -2157,9 +2275,7 @@
                       "active_time": 10,
                       "recharge_time": 35,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2172,7 +2288,8 @@
                           "duration": 10,
                           "effect_type": "positive",
                           "ability_recharge_change": -10,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 30,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -2267,22 +2384,19 @@
                       "active_time": 15,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 15,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -2315,22 +2429,19 @@
                       "active_time": 15,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 15,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -2353,22 +2464,19 @@
                       "active_time": 15,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 15,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -2413,22 +2521,19 @@
                       "active_time": 15,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 15,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -2451,22 +2556,19 @@
                       "active_time": 15,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 15,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -2554,21 +2656,18 @@
                       "active_time": 25,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 12,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2635,21 +2734,18 @@
                       "active_time": 25,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 12,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2706,21 +2802,18 @@
                       "active_time": 25,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 12,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2799,21 +2892,18 @@
                       "active_time": 25,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 12,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2870,21 +2960,18 @@
                       "active_time": 25,
                       "recharge_time": 50,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
                       "mana_cost": 12,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false,
                       "phases": [
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3003,9 +3090,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Roiling Skies",
-                      "passive": true,
                       "effect_range": 300,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3015,7 +3100,7 @@
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3116,9 +3201,7 @@
                       "active_time": 30,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -3131,7 +3214,10 @@
                           "duration": 30,
                           "effect_type": "negative",
                           "ability_recharge_change": 30,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 50,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3233,9 +3319,7 @@
                       "active_time": 30,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -3248,7 +3332,10 @@
                           "duration": 30,
                           "effect_type": "negative",
                           "ability_recharge_change": 30,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 50,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3340,9 +3427,7 @@
                       "active_time": 30,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -3355,7 +3440,10 @@
                           "duration": 30,
                           "effect_type": "negative",
                           "ability_recharge_change": 30,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 50,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3469,9 +3557,7 @@
                       "active_time": 30,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -3484,7 +3570,10 @@
                           "duration": 30,
                           "effect_type": "negative",
                           "ability_recharge_change": 30,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 50,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3576,9 +3665,7 @@
                       "active_time": 30,
                       "recharge_time": 75,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -3591,7 +3678,10 @@
                           "duration": 30,
                           "effect_type": "negative",
                           "ability_recharge_change": 30,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "damage_chance": 1,
+                          "damage_amount": 50,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3753,15 +3843,36 @@
                       "active_time": 7,
                       "recharge_time": 100,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                        "projectile_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "explosion_type": {
+                            "key": "wh_main_spell_heavens_comet_of_casandora",
+                            "detonation_radius": 20,
+                            "detonation_damage": 100,
+                            "is_magical": true,
+                            "detonation_damage_ap": 50,
+                            "affects_allies": true
+                          },
+                          "damage": 1000,
+                          "ap_damage": 500,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 5,
+                          "is_grapple": "false",
+                          "is_magical": true
+                        },
+                        "start_time": 4,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -3824,15 +3935,36 @@
                       "active_time": 7,
                       "recharge_time": 100,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                        "projectile_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "explosion_type": {
+                            "key": "wh_main_spell_heavens_comet_of_casandora",
+                            "detonation_radius": 20,
+                            "detonation_damage": 100,
+                            "is_magical": true,
+                            "detonation_damage_ap": 50,
+                            "affects_allies": true
+                          },
+                          "damage": 1000,
+                          "ap_damage": 500,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 5,
+                          "is_grapple": "false",
+                          "is_magical": true
+                        },
+                        "start_time": 4,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   },
@@ -3885,15 +4017,36 @@
                       "active_time": 7,
                       "recharge_time": 100,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                        "projectile_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "explosion_type": {
+                            "key": "wh_main_spell_heavens_comet_of_casandora",
+                            "detonation_radius": 20,
+                            "detonation_damage": 100,
+                            "is_magical": true,
+                            "detonation_damage_ap": 50,
+                            "affects_allies": true
+                          },
+                          "damage": 1000,
+                          "ap_damage": 500,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 5,
+                          "is_grapple": "false",
+                          "is_magical": true
+                        },
+                        "start_time": 4,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -3968,15 +4121,36 @@
                       "active_time": 7,
                       "recharge_time": 100,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                        "projectile_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "explosion_type": {
+                            "key": "wh_main_spell_heavens_comet_of_casandora",
+                            "detonation_radius": 20,
+                            "detonation_damage": 100,
+                            "is_magical": true,
+                            "detonation_damage_ap": 50,
+                            "affects_allies": true
+                          },
+                          "damage": 1000,
+                          "ap_damage": 500,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 5,
+                          "is_grapple": "false",
+                          "is_magical": true
+                        },
+                        "start_time": 4,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   },
@@ -4029,15 +4203,36 @@
                       "active_time": 7,
                       "recharge_time": 100,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                        "projectile_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "explosion_type": {
+                            "key": "wh_main_spell_heavens_comet_of_casandora",
+                            "detonation_radius": 20,
+                            "detonation_damage": 100,
+                            "is_magical": true,
+                            "detonation_damage_ap": 50,
+                            "affects_allies": true
+                          },
+                          "damage": 1000,
+                          "ap_damage": 500,
+                          "bonus_v_cavalry": "0",
+                          "shockwave_radius": 5,
+                          "is_grapple": "false",
+                          "is_magical": true
+                        },
+                        "start_time": 4,
+                        "arrival_window": 1,
+                        "radius_spread": 8
+                      },
                       "mana_cost": 15,
-                      "miscast_chance": 0.3,
+                      "miscast_chance": 0.25,
                       "target_self": false
                     }
                   }
@@ -4120,9 +4315,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Shield of Saphery",
-                      "passive": true,
                       "effect_range": 150,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4132,7 +4325,7 @@
                         {
                           "duration": 10,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4195,9 +4388,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Exorcism",
-                      "passive": true,
                       "effect_range": 150,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4207,7 +4398,7 @@
                         {
                           "duration": 20,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -4324,9 +4515,7 @@
                           "description": ""
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4336,9 +4525,9 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "mana_regen_mod": 0.1,
+                          "max_damaged_entities": -1,
+                          "mana_regen_mod": 0.05,
                           "mana_max_depletion_mod": 30,
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -7076,9 +7265,7 @@
                     "description": "Rally!",
                     "active_time": 30,
                     "recharge_time": 120,
-                    "passive": false,
                     "effect_range": 50,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -7088,7 +7275,7 @@
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -7352,9 +7539,7 @@
                     "description": "Shield of the Old Ones",
                     "active_time": 30,
                     "recharge_time": 120,
-                    "passive": false,
                     "effect_range": 60,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": true,
@@ -7364,7 +7549,7 @@
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -7627,13 +7812,47 @@
                     "active_time": 15,
                     "recharge_time": 135,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 150,
+                    "vortex": {
+                      "vortex_key": "wh2_main_bound_banishment",
+                      "duration": 15,
+                      "damage": 0,
+                      "damage_ap": 10,
+                      "goal_radius": 15,
+                      "movement_speed": 1.5,
+                      "contact_effect": {
+                        "id": "wh_main_unit_contact_vortex_blind",
+                        "duration": 30,
+                        "effect_type": "negative",
+                        "max_damaged_entities": 5,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": -5,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "-5 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          },
+                          {
+                            "value": -25,
+                            "stat": "stat_accuracy",
+                            "how": "add",
+                            "description": "-25 Accuracy",
+                            "sort_order": 9,
+                            "icon": "icon_stat_range.png"
+                          }
+                        ]
+                      },
+                      "is_magical": true,
+                      "delay": 0,
+                      "affects_allies": true
+                    },
                     "target_self": false
                   }
                 }
@@ -7722,13 +7941,41 @@
                     "active_time": 15,
                     "recharge_time": 150,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 150,
+                    "vortex": {
+                      "vortex_key": "wh2_main_lord_abilities_the_ruination_of_cities",
+                      "duration": 5,
+                      "damage": 8,
+                      "damage_ap": 8,
+                      "goal_radius": 20,
+                      "movement_speed": 30,
+                      "contact_effect": {
+                        "id": "wh_main_unit_contact_vortex_speed",
+                        "duration": 30,
+                        "effect_type": "negative",
+                        "max_damaged_entities": 5,
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 0.5,
+                            "stat": "scalar_speed",
+                            "how": "mult",
+                            "description": "x0.5 Speed",
+                            "sort_order": 10,
+                            "icon": "icon_stat_speed.png"
+                          }
+                        ]
+                      },
+                      "is_magical": true,
+                      "delay": 0,
+                      "num_vortexes": 3,
+                      "affects_allies": true,
+                      "delay_between_vortexes": 2
+                    },
                     "target_self": false
                   }
                 }
@@ -7920,9 +8167,7 @@
                         "description": "Units won't regenerate if cap was reached"
                       }
                     ],
-                    "passive": true,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -7932,14 +8177,15 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 2,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
                             "value": -25,
                             "stat": "stat_weakness_flame",
                             "how": "add",
-                            "description": "-25Weakness to Fire Damage",
+                            "description": "-25 Weakness to Fire Damage",
                             "sort_order": 0,
                             "icon": "modifier_icon_flaming.png"
                           }
@@ -8039,21 +8285,18 @@
                     "active_time": 30,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 200,
                     "mana_cost": 5,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true,
                     "phases": [
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -8102,21 +8345,18 @@
                     "active_time": 30,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 200,
                     "mana_cost": 5,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true,
                     "phases": [
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -8187,21 +8427,18 @@
                     "active_time": 30,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 200,
                     "mana_cost": 5,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true,
                     "phases": [
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -8250,21 +8487,18 @@
                     "active_time": 30,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 200,
                     "mana_cost": 5,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true,
                     "phases": [
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -8388,9 +8622,7 @@
                     "active_time": 10,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
@@ -8403,7 +8635,8 @@
                         "duration": 10,
                         "effect_type": "positive",
                         "ability_recharge_change": -10,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 30,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {
@@ -8445,9 +8678,7 @@
                     "active_time": 10,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
@@ -8460,7 +8691,8 @@
                         "duration": 10,
                         "effect_type": "positive",
                         "ability_recharge_change": -10,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 30,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {
@@ -8524,9 +8756,7 @@
                     "active_time": 10,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
@@ -8539,7 +8769,8 @@
                         "duration": 10,
                         "effect_type": "positive",
                         "ability_recharge_change": -10,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 30,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {
@@ -8581,9 +8812,7 @@
                     "active_time": 10,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
@@ -8596,7 +8825,8 @@
                         "duration": 10,
                         "effect_type": "positive",
                         "ability_recharge_change": -10,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 30,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {
@@ -8692,22 +8922,19 @@
                     "active_time": 15,
                     "recharge_time": 60,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 15,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 15,
                         "effect_type": "negative",
                         "cant_move": true,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -8740,22 +8967,19 @@
                     "active_time": 15,
                     "recharge_time": 60,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 15,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 15,
                         "effect_type": "negative",
                         "cant_move": true,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -8778,22 +9002,19 @@
                     "active_time": 15,
                     "recharge_time": 60,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 15,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 15,
                         "effect_type": "negative",
                         "cant_move": true,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -8838,22 +9059,19 @@
                     "active_time": 15,
                     "recharge_time": 60,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 15,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 15,
                         "effect_type": "negative",
                         "cant_move": true,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -8876,22 +9094,19 @@
                     "active_time": 15,
                     "recharge_time": 60,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 15,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 15,
                         "effect_type": "negative",
                         "cant_move": true,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -8980,21 +9195,18 @@
                     "active_time": 25,
                     "recharge_time": 50,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 40,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 12,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 25,
                         "effect_type": "negative",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9061,21 +9273,18 @@
                     "active_time": 25,
                     "recharge_time": 50,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 40,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 12,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 25,
                         "effect_type": "negative",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9132,21 +9341,18 @@
                     "active_time": 25,
                     "recharge_time": 50,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 40,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 12,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 25,
                         "effect_type": "negative",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9225,21 +9431,18 @@
                     "active_time": 25,
                     "recharge_time": 50,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 40,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 12,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 25,
                         "effect_type": "negative",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9296,21 +9499,18 @@
                     "active_time": 25,
                     "recharge_time": 50,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 40,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
                     "mana_cost": 12,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false,
                     "phases": [
                       {
                         "duration": 25,
                         "effect_type": "negative",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9431,9 +9631,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Roiling Skies",
-                    "passive": true,
                     "effect_range": 300,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -9443,7 +9641,7 @@
                       {
                         "duration": 25,
                         "effect_type": "negative",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9515,9 +9713,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Evasion",
-                    "passive": true,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -9527,7 +9723,7 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9640,9 +9836,7 @@
                     "active_time": 30,
                     "recharge_time": 75,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -9655,7 +9849,10 @@
                         "duration": 30,
                         "effect_type": "negative",
                         "ability_recharge_change": 30,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 1,
+                        "damage_amount": 50,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9757,9 +9954,7 @@
                     "active_time": 30,
                     "recharge_time": 75,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -9772,7 +9967,10 @@
                         "duration": 30,
                         "effect_type": "negative",
                         "ability_recharge_change": 30,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 1,
+                        "damage_amount": 50,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9864,9 +10062,7 @@
                     "active_time": 30,
                     "recharge_time": 75,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -9879,7 +10075,10 @@
                         "duration": 30,
                         "effect_type": "negative",
                         "ability_recharge_change": 30,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 1,
+                        "damage_amount": 50,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -9993,9 +10192,7 @@
                     "active_time": 30,
                     "recharge_time": 75,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -10008,7 +10205,10 @@
                         "duration": 30,
                         "effect_type": "negative",
                         "ability_recharge_change": 30,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 1,
+                        "damage_amount": 50,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -10100,9 +10300,7 @@
                     "active_time": 30,
                     "recharge_time": 75,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -10115,7 +10313,10 @@
                         "duration": 30,
                         "effect_type": "negative",
                         "ability_recharge_change": 30,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 1,
+                        "damage_amount": 50,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -10278,15 +10479,36 @@
                     "active_time": 7,
                     "recharge_time": 100,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                      "projectile_type": {
+                        "key": "wh_main_spell_heavens_comet_of_casandora",
+                        "explosion_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "detonation_radius": 20,
+                          "detonation_damage": 100,
+                          "is_magical": true,
+                          "detonation_damage_ap": 50,
+                          "affects_allies": true
+                        },
+                        "damage": 1000,
+                        "ap_damage": 500,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 5,
+                        "is_grapple": "false",
+                        "is_magical": true
+                      },
+                      "start_time": 4,
+                      "arrival_window": 1,
+                      "radius_spread": 8
+                    },
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false
                   }
                 }
@@ -10349,15 +10571,36 @@
                     "active_time": 7,
                     "recharge_time": 100,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                      "projectile_type": {
+                        "key": "wh_main_spell_heavens_comet_of_casandora",
+                        "explosion_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "detonation_radius": 20,
+                          "detonation_damage": 100,
+                          "is_magical": true,
+                          "detonation_damage_ap": 50,
+                          "affects_allies": true
+                        },
+                        "damage": 1000,
+                        "ap_damage": 500,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 5,
+                        "is_grapple": "false",
+                        "is_magical": true
+                      },
+                      "start_time": 4,
+                      "arrival_window": 1,
+                      "radius_spread": 8
+                    },
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false
                   }
                 },
@@ -10410,15 +10653,36 @@
                     "active_time": 7,
                     "recharge_time": 100,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                      "projectile_type": {
+                        "key": "wh_main_spell_heavens_comet_of_casandora",
+                        "explosion_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "detonation_radius": 20,
+                          "detonation_damage": 100,
+                          "is_magical": true,
+                          "detonation_damage_ap": 50,
+                          "affects_allies": true
+                        },
+                        "damage": 1000,
+                        "ap_damage": 500,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 5,
+                        "is_grapple": "false",
+                        "is_magical": true
+                      },
+                      "start_time": 4,
+                      "arrival_window": 1,
+                      "radius_spread": 8
+                    },
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false
                   }
                 }
@@ -10493,15 +10757,36 @@
                     "active_time": 7,
                     "recharge_time": 100,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                      "projectile_type": {
+                        "key": "wh_main_spell_heavens_comet_of_casandora",
+                        "explosion_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "detonation_radius": 20,
+                          "detonation_damage": 100,
+                          "is_magical": true,
+                          "detonation_damage_ap": 50,
+                          "affects_allies": true
+                        },
+                        "damage": 1000,
+                        "ap_damage": 500,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 5,
+                        "is_grapple": "false",
+                        "is_magical": true
+                      },
+                      "start_time": 4,
+                      "arrival_window": 1,
+                      "radius_spread": 8
+                    },
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false
                   }
                 },
@@ -10554,15 +10839,36 @@
                     "active_time": 7,
                     "recharge_time": 100,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh_main_spell_heavens_comet_of_casandora",
+                      "projectile_type": {
+                        "key": "wh_main_spell_heavens_comet_of_casandora",
+                        "explosion_type": {
+                          "key": "wh_main_spell_heavens_comet_of_casandora",
+                          "detonation_radius": 20,
+                          "detonation_damage": 100,
+                          "is_magical": true,
+                          "detonation_damage_ap": 50,
+                          "affects_allies": true
+                        },
+                        "damage": 1000,
+                        "ap_damage": 500,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 5,
+                        "is_grapple": "false",
+                        "is_magical": true
+                      },
+                      "start_time": 4,
+                      "arrival_window": 1,
+                      "radius_spread": 8
+                    },
                     "mana_cost": 15,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": false
                   }
                 }
@@ -10646,9 +10952,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Shield of Saphery",
-                    "passive": true,
                     "effect_range": 150,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -10658,7 +10962,7 @@
                       {
                         "duration": 10,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -10722,9 +11026,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Exorcism",
-                    "passive": true,
                     "effect_range": 150,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -10734,7 +11036,7 @@
                       {
                         "duration": 20,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {
@@ -10852,9 +11154,7 @@
                         "description": ""
                       }
                     ],
-                    "passive": true,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -10864,9 +11164,9 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "mana_regen_mod": 0.1,
+                        "max_damaged_entities": -1,
+                        "mana_regen_mod": 0.05,
                         "mana_max_depletion_mod": 30,
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false
                       }
                     ]
@@ -10937,9 +11237,7 @@
                     "active_time": 10,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
@@ -10952,7 +11250,8 @@
                         "duration": 10,
                         "effect_type": "positive",
                         "ability_recharge_change": -10,
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 30,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {
@@ -10992,21 +11291,18 @@
                     "active_time": 30,
                     "recharge_time": 35,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
                     "target_intercept_range": 200,
                     "mana_cost": 5,
-                    "miscast_chance": 0.3,
+                    "miscast_chance": 0.25,
                     "target_self": true,
                     "phases": [
                       {
                         "duration": 30,
                         "effect_type": "positive",
-                        "recharge_time": -1,
                         "is_hidden_in_ui": false,
                         "stat_effects": [
                           {
@@ -11145,9 +11441,56 @@
                     "num_uses": 3,
                     "recharge_time": 150,
                     "wind_up_time": 3,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
+                    "activated_projectile": {
+                      "key": "lzd_active_slann_beam",
+                      "explosion_type": {
+                        "key": "lzd_active_slann_beam",
+                        "detonation_radius": 12,
+                        "detonation_damage": 200,
+                        "is_magical": true,
+                        "detonation_damage_ap": 100,
+                        "affects_allies": true
+                      },
+                      "damage": 200,
+                      "ap_damage": 100,
+                      "bonus_v_cavalry": "0",
+                      "contact_stat_effect": {
+                        "id": "wh_dlc06_unit_contact_blinded",
+                        "duration": 10,
+                        "effect_type": "negative",
+                        "is_hidden_in_ui": false,
+                        "stat_effects": [
+                          {
+                            "value": 0.7,
+                            "stat": "stat_accuracy",
+                            "how": "mult",
+                            "description": "x0.7 Accuracy",
+                            "sort_order": 9,
+                            "icon": "icon_stat_range.png"
+                          },
+                          {
+                            "value": -15,
+                            "stat": "stat_melee_attack",
+                            "how": "add",
+                            "description": "-15 Melee Attack",
+                            "sort_order": 2,
+                            "icon": "icon_stat_attack.png"
+                          },
+                          {
+                            "value": -15,
+                            "stat": "stat_melee_defence",
+                            "how": "add",
+                            "description": "-15 Melee Defence",
+                            "sort_order": 3,
+                            "icon": "icon_stat_defence.png"
+                          }
+                        ]
+                      },
+                      "shockwave_radius": 2,
+                      "is_grapple": "false",
+                      "is_magical": true
+                    },
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,

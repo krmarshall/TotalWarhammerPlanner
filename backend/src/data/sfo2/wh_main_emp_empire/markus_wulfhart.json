@@ -59,9 +59,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Hold the Line!",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -71,7 +69,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -640,9 +638,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Sure & True",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -652,7 +648,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -762,9 +758,24 @@
                       "num_uses": 3,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_dlc13_lord_abilities_executioner",
+                        "explosion_type": {
+                          "key": "wh2_dlc13_lord_abilities_kill_shot",
+                          "detonation_radius": 1,
+                          "detonation_damage": 0,
+                          "detonation_damage_ap": 100,
+                          "affects_allies": true
+                        },
+                        "damage": 200,
+                        "ap_damage": 800,
+                        "bonus_v_cavalry": "0",
+                        "bonus_v_large": 400,
+                        "shockwave_radius": 0.4,
+                        "is_grapple": "false",
+                        "is_magical": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -1036,9 +1047,7 @@
                       "num_uses": 3,
                       "active_time": 10,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -1049,7 +1058,7 @@
                           "duration": 10,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -1281,9 +1290,7 @@
                       "num_uses": 3,
                       "active_time": 25,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -1294,7 +1301,7 @@
                           "duration": 25,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false
                         }
                       ]
@@ -1816,9 +1823,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1828,7 +1833,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2087,9 +2092,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2099,7 +2102,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3173,9 +3176,24 @@
                     "num_uses": 3,
                     "recharge_time": 120,
                     "wind_up_time": 5,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
+                    "activated_projectile": {
+                      "key": "wh2_dlc13_lord_abilities_kill_shot",
+                      "explosion_type": {
+                        "key": "wh2_dlc13_lord_abilities_kill_shot",
+                        "detonation_radius": 1,
+                        "detonation_damage": 0,
+                        "detonation_damage_ap": 100,
+                        "affects_allies": true
+                      },
+                      "damage": 100,
+                      "ap_damage": 400,
+                      "bonus_v_cavalry": "0",
+                      "bonus_v_large": 150,
+                      "shockwave_radius": 0.4,
+                      "is_grapple": "false",
+                      "is_magical": true
+                    },
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -3309,9 +3327,26 @@
                 ],
                 "recharge_time": 150,
                 "wind_up_time": 3,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": false,
+                "activated_projectile": {
+                  "key": "wh2_dlc13_weapon_abilities_amber_bow",
+                  "explosion_type": {
+                    "key": "wh2_dlc13_weapon_abilities_amber_bow",
+                    "detonation_radius": 4,
+                    "detonation_damage": 0,
+                    "is_magical": true,
+                    "detonation_damage_ap": 100,
+                    "affects_allies": true
+                  },
+                  "projectile_number": 5,
+                  "damage": 80,
+                  "ap_damage": 150,
+                  "bonus_v_cavalry": "0",
+                  "bonus_v_large": 75,
+                  "shockwave_radius": 0.25,
+                  "is_grapple": "false",
+                  "is_magical": true
+                },
                 "target_friends": false,
                 "target_enemies": true,
                 "target_ground": false,

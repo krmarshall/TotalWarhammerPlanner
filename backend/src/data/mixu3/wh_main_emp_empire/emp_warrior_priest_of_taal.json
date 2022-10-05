@@ -95,9 +95,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Rhya's Comfort",
-                      "passive": true,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -109,7 +107,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -175,9 +172,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Forest Spotting",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -189,13 +184,12 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 5000,
                               "stat": "stat_spotting_forest",
                               "how": "add",
-                              "description": "+5000Forest Spotting",
+                              "description": "+5000 Forest Spotting",
                               "sort_order": 0,
                               "icon": "icon_stat_spotting.png"
                             }
@@ -316,9 +310,7 @@
                       "description": "Tanglefoot",
                       "active_time": 15,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 15,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -329,9 +321,9 @@
                           "duration": -1,
                           "effect_type": "negative",
                           "cant_move": true,
+                          "fatigue_change_ratio": 0.01,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -407,13 +399,22 @@
                       "active_time": 7,
                       "recharge_time": 120,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "mixu_emp_priest_of_taal_prayer_earthshudder",
+                        "duration": 1,
+                        "damage": 48,
+                        "damage_ap": 12,
+                        "goal_radius": 7,
+                        "movement_speed": 60,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "target_self": false
                     }
                   }
@@ -487,9 +488,7 @@
                       ],
                       "active_time": 18,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -499,9 +498,11 @@
                         {
                           "duration": 18,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 8,
+                          "max_damaged_entities": 25,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -565,9 +566,7 @@
                       "num_uses": 2,
                       "active_time": 29,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -577,9 +576,11 @@
                         {
                           "duration": 29,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.012,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -1010,9 +1011,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Frenzy",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1024,7 +1023,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -1359,9 +1357,7 @@
                       ],
                       "num_uses": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,

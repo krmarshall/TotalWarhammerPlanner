@@ -247,9 +247,24 @@
                       ],
                       "num_uses": 3,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh_dlc05_wef_arrow_of_kurnous",
+                        "explosion_type": {
+                          "key": "wh_dlc05_wef_arrow_of_kurnous",
+                          "detonation_radius": 4,
+                          "detonation_damage": 0,
+                          "is_magical": true,
+                          "detonation_damage_ap": 150,
+                          "affects_allies": true
+                        },
+                        "projectile_number": 3,
+                        "damage": 80,
+                        "ap_damage": 80,
+                        "bonus_v_cavalry": "0",
+                        "shockwave_radius": 0.5,
+                        "is_grapple": "false"
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -478,9 +493,7 @@
                       "num_uses": 3,
                       "active_time": 16,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -491,7 +504,7 @@
                           "duration": 16,
                           "effect_type": "negative",
                           "cant_move": true,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -563,9 +576,7 @@
                       "description": "Foe-Seeker",
                       "active_time": 25,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -575,8 +586,8 @@
                         {
                           "duration": 25,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.2,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.18,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -827,9 +838,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 31,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -839,7 +848,6 @@
                         {
                           "duration": 31,
                           "effect_type": "positive",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -925,9 +933,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Call of the Woods",
-                      "passive": true,
                       "effect_range": 30,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -937,7 +943,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1003,9 +1009,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Howl of the Forest",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1015,7 +1019,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1091,9 +1095,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "The Eye of Kurnous",
-                      "passive": true,
                       "effect_range": 30,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1103,7 +1105,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1169,9 +1171,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Sight Beyond Sight",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1181,7 +1181,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1257,9 +1257,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Dance of Loec",
-                      "passive": true,
                       "effect_range": 30,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1269,7 +1267,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1343,9 +1341,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Possessed by the Trickster God",
-                      "passive": true,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1355,7 +1351,7 @@
                         {
                           "duration": -1,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1898,9 +1894,7 @@
                       "description": "Rally!",
                       "active_time": 14,
                       "recharge_time": 60,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1910,7 +1904,7 @@
                         {
                           "duration": 14,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2177,9 +2171,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2189,7 +2181,7 @@
                         {
                           "duration": 18,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {

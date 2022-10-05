@@ -74,9 +74,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -128,9 +126,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -205,9 +201,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -259,9 +253,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -981,9 +973,7 @@
                       "description": "Shock Collar",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -993,7 +983,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -2767,9 +2757,8 @@
                         "description": "➕ Restores 4 Hit Points per second"
                       }
                     ],
-                    "passive": true,
                     "effect_range": 30,
-                    "affect_self": true,
+                    "num_effected_friendly_units": 3,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -2779,7 +2768,8 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "hp_change_frequency": 0.5,
+                        "heal_amount": 2,
                         "is_hidden_in_ui": false
                       }
                     ]

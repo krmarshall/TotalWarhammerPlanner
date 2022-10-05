@@ -69,9 +69,7 @@
                       "description": "Flash Bomb",
                       "active_time": 25,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -81,7 +79,7 @@
                         {
                           "duration": 25,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -793,9 +791,7 @@
                       "description": "Ballistics Calibration",
                       "active_time": 60,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 75,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -805,7 +801,7 @@
                         {
                           "duration": 60,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1136,9 +1132,25 @@
                       "num_uses": 3,
                       "recharge_time": 90,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh2_dlc17_hero_abilities_cinderblast_shell",
+                        "explosion_type": {
+                          "key": "wh2_dlc13_lord_abilities_fire_arrow",
+                          "detonation_radius": 8,
+                          "detonation_damage": 100,
+                          "detonation_damage_ap": 25,
+                          "affects_allies": true,
+                          "is_flaming": true
+                        },
+                        "damage": 500,
+                        "ap_damage": 250,
+                        "bonus_v_cavalry": "0",
+                        "bonus_v_large": 133,
+                        "shockwave_radius": 3,
+                        "is_grapple": "false",
+                        "is_flaming": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,

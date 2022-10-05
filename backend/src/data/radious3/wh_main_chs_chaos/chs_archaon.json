@@ -474,9 +474,7 @@
                           "description": "Causes damage to self"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -486,9 +484,11 @@
                         {
                           "duration": -1,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 24,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -515,9 +515,7 @@
                           "description": "Causes severe damage to self"
                         }
                       ],
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -527,9 +525,11 @@
                         {
                           "duration": -1,
                           "effect_type": "negative",
+                          "hp_change_frequency": 0.2,
+                          "damage_amount": 60,
+                          "max_damaged_entities": 5,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -788,9 +788,7 @@
                       "description": "Foe-Seeker",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -800,9 +798,9 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "fatigue_change_ratio": -0.01,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.3,
@@ -1050,9 +1048,7 @@
                       "description": "Deadly Onslaught",
                       "active_time": 30,
                       "recharge_time": 70,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1064,7 +1060,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2010,13 +2005,34 @@
                       "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_metal_searing_doom",
+                        "projectile_type": {
+                          "key": "wh_main_spell_metal_searing_doom",
+                          "explosion_type": {
+                            "key": "wh_main_spell_metal_searing_doom",
+                            "detonation_radius": 3,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 30,
+                            "affects_allies": true
+                          },
+                          "damage": 16,
+                          "ap_damage": 13,
+                          "shockwave_radius": 1,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 40,
+                        "start_time": 2,
+                        "arrival_window": 3,
+                        "radius_spread": 10
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -2064,13 +2080,34 @@
                       "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_metal_searing_doom",
+                        "projectile_type": {
+                          "key": "wh_main_spell_metal_searing_doom",
+                          "explosion_type": {
+                            "key": "wh_main_spell_metal_searing_doom",
+                            "detonation_radius": 3,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 30,
+                            "affects_allies": true
+                          },
+                          "damage": 16,
+                          "ap_damage": 13,
+                          "shockwave_radius": 1,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 40,
+                        "start_time": 2,
+                        "arrival_window": 3,
+                        "radius_spread": 10
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -2140,13 +2177,34 @@
                       "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_metal_searing_doom",
+                        "projectile_type": {
+                          "key": "wh_main_spell_metal_searing_doom",
+                          "explosion_type": {
+                            "key": "wh_main_spell_metal_searing_doom",
+                            "detonation_radius": 3,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 30,
+                            "affects_allies": true
+                          },
+                          "damage": 16,
+                          "ap_damage": 13,
+                          "shockwave_radius": 1,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 40,
+                        "start_time": 2,
+                        "arrival_window": 3,
+                        "radius_spread": 10
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -2194,13 +2252,34 @@
                       "active_time": 9,
                       "recharge_time": 20,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "bombardment": {
+                        "bombardment_key": "wh_main_spell_metal_searing_doom",
+                        "projectile_type": {
+                          "key": "wh_main_spell_metal_searing_doom",
+                          "explosion_type": {
+                            "key": "wh_main_spell_metal_searing_doom",
+                            "detonation_radius": 3,
+                            "detonation_damage": 0,
+                            "is_magical": true,
+                            "detonation_damage_ap": 30,
+                            "affects_allies": true
+                          },
+                          "damage": 16,
+                          "ap_damage": 13,
+                          "shockwave_radius": 1,
+                          "is_magical": true,
+                          "can_damage_allies": true
+                        },
+                        "num_projectiles": 40,
+                        "start_time": 2,
+                        "arrival_window": 3,
+                        "radius_spread": 10
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -2290,9 +2369,7 @@
                         }
                       ],
                       "active_time": 15,
-                      "passive": true,
                       "effect_range": -1,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2304,13 +2381,12 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -10,
                               "stat": "stat_weakness_flame",
                               "how": "add",
-                              "description": "-10Weakness to Fire Damage",
+                              "description": "-10 Weakness to Fire Damage",
                               "sort_order": 0,
                               "icon": "modifier_icon_flaming.png"
                             }
@@ -2395,9 +2471,7 @@
                       "active_time": 15,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -2408,9 +2482,11 @@
                         {
                           "duration": 15,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 67,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2458,9 +2534,7 @@
                       "active_time": 15,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -2471,9 +2545,11 @@
                         {
                           "duration": 15,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 67,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2543,9 +2619,7 @@
                       "active_time": 15,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -2556,9 +2630,11 @@
                         {
                           "duration": 15,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 67,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2606,9 +2682,7 @@
                       "active_time": 15,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -2619,9 +2693,11 @@
                         {
                           "duration": 15,
                           "effect_type": "negative",
+                          "hp_change_frequency": 1,
+                          "damage_amount": 67,
+                          "max_damaged_entities": 1,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -2708,9 +2784,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -2722,10 +2796,9 @@
                           "duration": 20,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2775,9 +2848,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -2789,10 +2860,9 @@
                           "duration": 20,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2832,9 +2902,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -2846,10 +2914,9 @@
                           "duration": 20,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2911,9 +2978,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -2925,10 +2990,9 @@
                           "duration": 20,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -2968,9 +3032,7 @@
                       "active_time": 20,
                       "recharge_time": 30,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -2982,10 +3044,9 @@
                           "duration": 20,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -3116,13 +3177,48 @@
                       "active_time": 20,
                       "recharge_time": 75,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_fire_the_burning_head",
+                        "duration": 20,
+                        "damage": 30,
+                        "damage_ap": 0,
+                        "goal_radius": 7,
+                        "movement_speed": 9,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_morale",
+                          "duration": 5,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": -7,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "-7 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": -15,
+                              "stat": "stat_weakness_flame",
+                              "how": "add",
+                              "description": "-15 Weakness to Fire Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_flaming.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 14,
                       "target_self": false
                     }
@@ -3180,13 +3276,48 @@
                       "active_time": 20,
                       "recharge_time": 75,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_fire_the_burning_head",
+                        "duration": 20,
+                        "damage": 30,
+                        "damage_ap": 0,
+                        "goal_radius": 7,
+                        "movement_speed": 9,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_morale",
+                          "duration": 5,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": -7,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "-7 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": -15,
+                              "stat": "stat_weakness_flame",
+                              "how": "add",
+                              "description": "-15 Weakness to Fire Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_flaming.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 14,
                       "target_self": false
                     }
@@ -3234,13 +3365,48 @@
                       "active_time": 20,
                       "recharge_time": 75,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_fire_the_burning_head",
+                        "duration": 20,
+                        "damage": 30,
+                        "damage_ap": 0,
+                        "goal_radius": 7,
+                        "movement_speed": 9,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_morale",
+                          "duration": 5,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": -7,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "-7 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": -15,
+                              "stat": "stat_weakness_flame",
+                              "how": "add",
+                              "description": "-15 Weakness to Fire Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_flaming.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 14,
                       "target_self": false
                     }
@@ -3310,13 +3476,48 @@
                       "active_time": 20,
                       "recharge_time": 75,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_fire_the_burning_head",
+                        "duration": 20,
+                        "damage": 30,
+                        "damage_ap": 0,
+                        "goal_radius": 7,
+                        "movement_speed": 9,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_morale",
+                          "duration": 5,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": -7,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "-7 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": -15,
+                              "stat": "stat_weakness_flame",
+                              "how": "add",
+                              "description": "-15 Weakness to Fire Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_flaming.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 14,
                       "target_self": false
                     }
@@ -3364,13 +3565,48 @@
                       "active_time": 20,
                       "recharge_time": 75,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_fire_the_burning_head",
+                        "duration": 20,
+                        "damage": 30,
+                        "damage_ap": 0,
+                        "goal_radius": 7,
+                        "movement_speed": 9,
+                        "contact_effect": {
+                          "id": "wh_main_unit_contact_morale",
+                          "duration": 5,
+                          "effect_type": "negative",
+                          "is_hidden_in_ui": false,
+                          "freeze_recharge": false,
+                          "stat_effects": [
+                            {
+                              "value": -7,
+                              "stat": "stat_morale",
+                              "how": "add",
+                              "description": "-7 Leadership",
+                              "sort_order": 1,
+                              "icon": "icon_stat_morale.png"
+                            },
+                            {
+                              "value": -15,
+                              "stat": "stat_weakness_flame",
+                              "how": "add",
+                              "description": "-15 Weakness to Fire Damage",
+                              "sort_order": 0,
+                              "icon": "modifier_icon_flaming.png"
+                            }
+                          ]
+                        },
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 14,
                       "target_self": false
                     }
@@ -3455,9 +3691,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Evasion",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3469,7 +3703,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -3545,9 +3778,7 @@
                       "active_time": 40,
                       "recharge_time": 40,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3560,7 +3791,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -25,
@@ -3610,9 +3840,7 @@
                       "active_time": 40,
                       "recharge_time": 40,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3625,7 +3853,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -25,
@@ -3665,9 +3892,7 @@
                       "active_time": 40,
                       "recharge_time": 40,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3680,7 +3905,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -25,
@@ -3742,9 +3966,7 @@
                       "active_time": 40,
                       "recharge_time": 40,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3757,7 +3979,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -25,
@@ -3797,9 +4018,7 @@
                       "active_time": 40,
                       "recharge_time": 40,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
@@ -3812,7 +4031,6 @@
                           "effect_type": "negative",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": -25,
@@ -3937,13 +4155,22 @@
                       "active_time": 12,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                        "duration": 12,
+                        "damage": 7,
+                        "damage_ap": 13,
+                        "goal_radius": 12,
+                        "movement_speed": 4,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 19,
                       "target_self": false
                     }
@@ -3985,13 +4212,22 @@
                       "active_time": 12,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                        "duration": 12,
+                        "damage": 7,
+                        "damage_ap": 13,
+                        "goal_radius": 12,
+                        "movement_speed": 4,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 19,
                       "target_self": false
                     }
@@ -4055,13 +4291,22 @@
                       "active_time": 12,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                        "duration": 12,
+                        "damage": 7,
+                        "damage_ap": 13,
+                        "goal_radius": 12,
+                        "movement_speed": 4,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 19,
                       "target_self": false
                     }
@@ -4103,13 +4348,22 @@
                       "active_time": 12,
                       "recharge_time": 90,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_death_the_purple_sun_of_xereus",
+                        "duration": 12,
+                        "damage": 7,
+                        "damage_ap": 13,
+                        "goal_radius": 12,
+                        "movement_speed": 4,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "mana_cost": 19,
                       "target_self": false
                     }
@@ -4256,9 +4510,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Arcane Conduit",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4270,8 +4522,7 @@
                           "effect_type": "positive",
                           "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -4808,9 +5059,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4822,7 +5071,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 12,
@@ -5080,9 +5328,7 @@
                       "description": "Stand or Die!",
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -5094,7 +5340,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 34,
@@ -5990,13 +6235,34 @@
                     "active_time": 9,
                     "recharge_time": 20,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 200,
+                    "bombardment": {
+                      "bombardment_key": "wh_main_spell_metal_searing_doom",
+                      "projectile_type": {
+                        "key": "wh_main_spell_metal_searing_doom",
+                        "explosion_type": {
+                          "key": "wh_main_spell_metal_searing_doom",
+                          "detonation_radius": 3,
+                          "detonation_damage": 0,
+                          "is_magical": true,
+                          "detonation_damage_ap": 30,
+                          "affects_allies": true
+                        },
+                        "damage": 16,
+                        "ap_damage": 13,
+                        "shockwave_radius": 1,
+                        "is_magical": true,
+                        "can_damage_allies": true
+                      },
+                      "num_projectiles": 40,
+                      "start_time": 2,
+                      "arrival_window": 3,
+                      "radius_spread": 10
+                    },
                     "mana_cost": 5,
                     "target_self": false
                   }
@@ -6054,9 +6320,7 @@
                     "active_time": 15,
                     "recharge_time": 30,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": false,
@@ -6067,9 +6331,11 @@
                       {
                         "duration": 15,
                         "effect_type": "negative",
+                        "hp_change_frequency": 1,
+                        "damage_amount": 67,
+                        "max_damaged_entities": 1,
                         "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null
+                        "freeze_recharge": false
                       }
                     ]
                   }
@@ -6149,9 +6415,7 @@
                 "description": "The Slayer of Kings",
                 "active_time": 45,
                 "recharge_time": 135,
-                "passive": false,
                 "effect_range": 0,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -6163,7 +6427,6 @@
                     "effect_type": "positive",
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
-                    "recharge_time": null,
                     "stat_effects": [
                       {
                         "value": 1.1,
@@ -6239,9 +6502,7 @@
                 "description": "The Armour of Morkar",
                 "active_time": 29,
                 "recharge_time": 120,
-                "passive": false,
                 "effect_range": 35,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -6251,9 +6512,9 @@
                   {
                     "duration": 29,
                     "effect_type": "positive",
+                    "max_damaged_entities": -1,
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
-                    "recharge_time": null,
                     "attributes": [
                       {
                         "key": "charge_reflection",
@@ -6417,9 +6678,7 @@
                 },
                 "is_hidden_in_ui": false,
                 "description": "The Crown of Domination",
-                "passive": true,
                 "effect_range": 55,
-                "affect_self": true,
                 "target_friends": false,
                 "target_enemies": false,
                 "target_ground": false,
@@ -6431,7 +6690,6 @@
                     "effect_type": "positive",
                     "is_hidden_in_ui": false,
                     "freeze_recharge": false,
-                    "recharge_time": null,
                     "attributes": [
                       {
                         "key": "causes_terror",

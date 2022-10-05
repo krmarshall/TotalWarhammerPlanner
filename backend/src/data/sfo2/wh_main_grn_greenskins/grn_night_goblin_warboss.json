@@ -560,9 +560,7 @@
                       "num_uses": 3,
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 30,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -572,7 +570,7 @@
                         {
                           "duration": 30,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -853,13 +851,23 @@
                       "num_uses": 3,
                       "active_time": 12,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 15,
+                      "vortex": {
+                        "vortex_key": "wh_main_unit_abilities_spinning_loons",
+                        "duration": 12,
+                        "damage": 0,
+                        "damage_ap": 30,
+                        "goal_radius": 4,
+                        "movement_speed": 6,
+                        "delay": 0,
+                        "num_vortexes": 3,
+                        "affects_allies": true,
+                        "delay_between_vortexes": 1
+                      },
                       "target_self": false
                     }
                   }
@@ -1754,9 +1762,7 @@
                       "description": "Get Back 'Ere!",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1766,8 +1772,8 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
+                          "fatigue_change_ratio": -0.05,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2042,9 +2048,7 @@
                       "description": "Smash 'Em Faster",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2055,7 +2059,7 @@
                           "duration": 30,
                           "effect_type": "positive",
                           "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3139,9 +3143,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Frenzy",
-                    "passive": true,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -3151,7 +3153,7 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {

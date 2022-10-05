@@ -552,9 +552,7 @@
                       "num_uses": 4,
                       "active_time": 36,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -564,7 +562,7 @@
                         {
                           "duration": 36,
                           "effect_type": "negative",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -840,13 +838,23 @@
                       "num_uses": 3,
                       "active_time": 12,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 15,
+                      "vortex": {
+                        "vortex_key": "wh_main_unit_abilities_spinning_loons",
+                        "duration": 10,
+                        "damage": 0,
+                        "damage_ap": 20,
+                        "goal_radius": 4,
+                        "movement_speed": 7,
+                        "delay": 0,
+                        "num_vortexes": 4,
+                        "affects_allies": true,
+                        "delay_between_vortexes": 1
+                      },
                       "target_self": false
                     }
                   }
@@ -1464,9 +1472,7 @@
                       "description": "Get Back 'Ere!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1476,7 +1482,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -1743,9 +1749,7 @@
                       "description": "Smash 'Em Faster",
                       "active_time": 18,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 40,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1755,7 +1759,7 @@
                         {
                           "duration": 18,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3791,9 +3795,7 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Frenzy",
-                    "passive": true,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -3803,7 +3805,7 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
-                        "recharge_time": -1,
+                        "max_damaged_entities": -1,
                         "is_hidden_in_ui": false,
                         "attributes": [
                           {

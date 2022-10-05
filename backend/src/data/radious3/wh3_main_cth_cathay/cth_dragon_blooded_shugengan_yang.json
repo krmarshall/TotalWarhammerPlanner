@@ -86,9 +86,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Will of the Dragons",
-                      "passive": true,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -100,7 +98,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 4,
@@ -249,9 +246,8 @@
                       "active_time": 7,
                       "recharge_time": 60,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
+                      "num_effected_friendly_units": 4,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -261,9 +257,10 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "hp_change_frequency": 1,
+                          "heal_amount": 0.008,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -335,13 +332,22 @@
                       "active_time": 6,
                       "recharge_time": 40,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh_main_spell_heavens_wind_blast",
+                        "duration": 2,
+                        "damage": 55,
+                        "damage_ap": 0,
+                        "goal_radius": 12,
+                        "movement_speed": 24,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true
+                      },
                       "target_self": false
                     }
                   }
@@ -428,9 +434,25 @@
                       ],
                       "num_uses": 4,
                       "recharge_time": 45,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
+                      "activated_projectile": {
+                        "key": "wh_main_spell_bound_fireball",
+                        "explosion_type": {
+                          "key": "wh_main_spell_fire_fireball",
+                          "detonation_radius": 3,
+                          "detonation_damage": 150,
+                          "is_magical": true,
+                          "detonation_damage_ap": 0,
+                          "affects_allies": true,
+                          "is_flaming": true
+                        },
+                        "damage": 600,
+                        "ap_damage": 150,
+                        "shockwave_radius": 1,
+                        "is_magical": true,
+                        "can_damage_allies": true,
+                        "is_flaming": true
+                      },
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": false,
@@ -491,9 +513,7 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -505,7 +525,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 10,
@@ -581,13 +600,23 @@
                       "active_time": 3,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_dragons_breath",
+                        "duration": 1,
+                        "damage": 44,
+                        "damage_ap": 0,
+                        "goal_radius": 9,
+                        "movement_speed": 25,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -609,13 +638,23 @@
                       "active_time": 3,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_dragons_breath",
+                        "duration": 1,
+                        "damage": 44,
+                        "damage_ap": 0,
+                        "goal_radius": 9,
+                        "movement_speed": 25,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -659,13 +698,23 @@
                       "active_time": 3,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_dragons_breath",
+                        "duration": 1,
+                        "damage": 44,
+                        "damage_ap": 0,
+                        "goal_radius": 9,
+                        "movement_speed": 25,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -687,13 +736,23 @@
                       "active_time": 3,
                       "recharge_time": 30,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 100,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_dragons_breath",
+                        "duration": 1,
+                        "damage": 44,
+                        "damage_ap": 0,
+                        "goal_radius": 9,
+                        "movement_speed": 25,
+                        "is_magical": true,
+                        "delay": 0,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 5,
                       "target_self": false
                     }
@@ -783,9 +842,7 @@
                         }
                       ],
                       "active_time": 15,
-                      "passive": true,
                       "effect_range": 55,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -797,7 +854,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.2,
@@ -870,9 +926,7 @@
                       "active_time": 20,
                       "recharge_time": 40,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -885,7 +939,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 40,
@@ -917,9 +970,7 @@
                       "active_time": 20,
                       "recharge_time": 40,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -932,7 +983,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 40,
@@ -986,9 +1036,7 @@
                       "active_time": 20,
                       "recharge_time": 40,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1001,7 +1049,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 40,
@@ -1033,9 +1080,7 @@
                       "active_time": 20,
                       "recharge_time": 40,
                       "wind_up_time": 1,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1048,7 +1093,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 40,
@@ -1153,13 +1197,23 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_wall_of_wind_and_fire",
+                        "duration": 23,
+                        "damage": 18,
+                        "damage_ap": 5,
+                        "goal_radius": 3,
+                        "movement_speed": 3,
+                        "is_magical": true,
+                        "delay": 2,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 6,
                       "target_self": false
                     }
@@ -1199,13 +1253,23 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_wall_of_wind_and_fire",
+                        "duration": 23,
+                        "damage": 18,
+                        "damage_ap": 5,
+                        "goal_radius": 3,
+                        "movement_speed": 3,
+                        "is_magical": true,
+                        "delay": 2,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 6,
                       "target_self": false
                     }
@@ -1235,13 +1299,23 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_wall_of_wind_and_fire",
+                        "duration": 23,
+                        "damage": 18,
+                        "damage_ap": 5,
+                        "goal_radius": 3,
+                        "movement_speed": 3,
+                        "is_magical": true,
+                        "delay": 2,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 6,
                       "target_self": false
                     }
@@ -1293,13 +1367,23 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_wall_of_wind_and_fire",
+                        "duration": 23,
+                        "damage": 18,
+                        "damage_ap": 5,
+                        "goal_radius": 3,
+                        "movement_speed": 3,
+                        "is_magical": true,
+                        "delay": 2,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 6,
                       "target_self": false
                     }
@@ -1329,13 +1413,23 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 150,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_wall_of_wind_and_fire",
+                        "duration": 23,
+                        "damage": 18,
+                        "damage_ap": 5,
+                        "goal_radius": 3,
+                        "movement_speed": 3,
+                        "is_magical": true,
+                        "delay": 2,
+                        "affects_allies": true,
+                        "is_flaming": true
+                      },
                       "mana_cost": 6,
                       "target_self": false
                     }
@@ -1422,9 +1516,7 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1437,7 +1529,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "charge_defense",
@@ -1494,9 +1585,7 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1509,7 +1598,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "charge_defense",
@@ -1556,9 +1644,7 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1571,7 +1657,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "charge_defense",
@@ -1640,9 +1725,7 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1655,7 +1738,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "charge_defense",
@@ -1702,9 +1784,7 @@
                       "active_time": 30,
                       "recharge_time": 60,
                       "wind_up_time": 3,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -1717,7 +1797,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "charge_defense",
@@ -1827,9 +1906,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Evasion",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1841,7 +1918,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 1.1,
@@ -1917,9 +1993,7 @@
                       "active_time": 45,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1931,10 +2005,9 @@
                           "duration": 45,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 20,
@@ -1992,9 +2065,7 @@
                       "active_time": 45,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2006,10 +2077,9 @@
                           "duration": 45,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 20,
@@ -2057,9 +2127,7 @@
                       "active_time": 45,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2071,10 +2139,9 @@
                           "duration": 45,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 20,
@@ -2144,9 +2211,7 @@
                       "active_time": 45,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2158,10 +2223,9 @@
                           "duration": 45,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 20,
@@ -2209,9 +2273,7 @@
                       "active_time": 45,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2223,10 +2285,9 @@
                           "duration": 45,
                           "effect_type": "positive",
                           "imbue_magical": true,
-                          "imbue_ignition": 10,
+                          "imbue_ignition": true,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 20,
@@ -2339,13 +2400,22 @@
                       "active_time": 10,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_constellation_of_the_dragon",
+                        "duration": 1,
+                        "damage": 35,
+                        "damage_ap": 20,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 3.1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 16,
                       "target_self": false
                     }
@@ -2377,13 +2447,22 @@
                       "active_time": 10,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_constellation_of_the_dragon",
+                        "duration": 1,
+                        "damage": 35,
+                        "damage_ap": 20,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 3.1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 16,
                       "target_self": false
                     }
@@ -2405,13 +2484,22 @@
                       "active_time": 10,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_constellation_of_the_dragon",
+                        "duration": 1,
+                        "damage": 35,
+                        "damage_ap": 20,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 3.1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 16,
                       "target_self": false
                     }
@@ -2455,13 +2543,22 @@
                       "active_time": 10,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_constellation_of_the_dragon",
+                        "duration": 1,
+                        "damage": 35,
+                        "damage_ap": 20,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 3.1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 16,
                       "target_self": false
                     }
@@ -2483,13 +2580,22 @@
                       "active_time": 10,
                       "recharge_time": 60,
                       "wind_up_time": 5,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": true,
                       "target_ground": true,
                       "target_intercept_range": 200,
+                      "vortex": {
+                        "vortex_key": "wh3_main_spell_yang_constellation_of_the_dragon",
+                        "duration": 1,
+                        "damage": 35,
+                        "damage_ap": 20,
+                        "goal_radius": 20,
+                        "movement_speed": 0,
+                        "is_magical": true,
+                        "delay": 3.1,
+                        "affects_allies": true
+                      },
                       "mana_cost": 16,
                       "target_self": false
                     }
@@ -2636,9 +2742,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Arcane Conduit",
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2650,8 +2754,7 @@
                           "effect_type": "positive",
                           "mana_regen_mod": 0.4,
                           "is_hidden_in_ui": false,
-                          "freeze_recharge": false,
-                          "recharge_time": null
+                          "freeze_recharge": false
                         }
                       ]
                     }
@@ -4005,9 +4108,7 @@
                       "description": "Rally!",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4019,7 +4120,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 12,
@@ -4277,9 +4377,7 @@
                       "description": "Stand Your Ground!",
                       "active_time": 30,
                       "recharge_time": 80,
-                      "passive": false,
                       "effect_range": 35,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -4291,7 +4389,6 @@
                           "effect_type": "positive",
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "stat_effects": [
                             {
                               "value": 36,
@@ -5245,13 +5342,23 @@
                     "active_time": 3,
                     "recharge_time": 30,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": true,
                     "target_ground": true,
                     "target_intercept_range": 100,
+                    "vortex": {
+                      "vortex_key": "wh3_main_spell_yang_dragons_breath",
+                      "duration": 1,
+                      "damage": 44,
+                      "damage_ap": 0,
+                      "goal_radius": 9,
+                      "movement_speed": 25,
+                      "is_magical": true,
+                      "delay": 0,
+                      "affects_allies": true,
+                      "is_flaming": true
+                    },
                     "mana_cost": 5,
                     "target_self": false
                   }
@@ -5283,9 +5390,7 @@
                     "active_time": 20,
                     "recharge_time": 40,
                     "wind_up_time": 1,
-                    "passive": false,
                     "effect_range": 0,
-                    "affect_self": true,
                     "target_friends": true,
                     "target_enemies": false,
                     "target_ground": false,
@@ -5298,7 +5403,6 @@
                         "effect_type": "positive",
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false,
-                        "recharge_time": null,
                         "stat_effects": [
                           {
                             "value": 40,

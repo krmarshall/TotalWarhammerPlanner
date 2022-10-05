@@ -1212,9 +1212,7 @@
                       "description": "Tombstrike",
                       "active_time": 30,
                       "recharge_time": 90,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1224,7 +1222,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -1496,9 +1494,7 @@
                       "description": "Desertstrike",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1508,7 +1504,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "attributes": [
                             {
@@ -1944,9 +1940,7 @@
                       },
                       "is_hidden_in_ui": false,
                       "description": "Avalanche",
-                      "passive": true,
                       "effect_range": 100,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1956,7 +1950,6 @@
                         {
                           "duration": -1,
                           "effect_type": "negative",
-                          "recharge_time": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2071,9 +2064,7 @@
                       "active_time": 60,
                       "recharge_time": 30,
                       "initial_recharge": 30,
-                      "passive": true,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2084,7 +2075,8 @@
                           "duration": 60,
                           "effect_type": "positive",
                           "fatigue_change_ratio": -0.1,
-                          "recharge_time": -1,
+                          "hp_change_frequency": 0.5,
+                          "heal_amount": 3,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2161,9 +2153,7 @@
                       "description": "Magical Animus",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 50,
-                      "affect_self": true,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2173,7 +2163,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -2747,9 +2737,7 @@
                       "description": "Reanimate",
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 60,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -2759,7 +2747,7 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -3038,9 +3026,7 @@
                       ],
                       "active_time": 30,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 60,
-                      "affect_self": false,
                       "target_friends": false,
                       "target_enemies": false,
                       "target_ground": false,
@@ -3050,7 +3036,9 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
-                          "recharge_time": -1,
+                          "hp_change_frequency": 1,
+                          "heal_amount": 33,
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "stat_effects": [
                             {
@@ -4039,9 +4027,7 @@
                     ],
                     "num_uses": 1,
                     "active_time": 15,
-                    "passive": true,
                     "effect_range": 50,
-                    "affect_self": false,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -4051,7 +4037,10 @@
                       {
                         "duration": 15,
                         "effect_type": "negative",
-                        "recharge_time": -1,
+                        "hp_change_frequency": 1,
+                        "damage_chance": 0.25,
+                        "damage_amount": 5,
+                        "max_damaged_entities": 20,
                         "is_hidden_in_ui": false
                       }
                     ]

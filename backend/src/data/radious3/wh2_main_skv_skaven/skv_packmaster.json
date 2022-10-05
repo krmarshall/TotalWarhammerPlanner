@@ -76,9 +76,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -132,9 +130,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -211,9 +207,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -267,9 +261,7 @@
                       "num_uses": 1,
                       "active_time": 1,
                       "recharge_time": 120,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": false,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": true,
@@ -989,9 +981,7 @@
                       "description": "Shock Collar",
                       "active_time": 30,
                       "recharge_time": 75,
-                      "passive": false,
                       "effect_range": 0,
-                      "affect_self": true,
                       "target_friends": true,
                       "target_enemies": false,
                       "target_ground": false,
@@ -1001,9 +991,9 @@
                         {
                           "duration": 30,
                           "effect_type": "positive",
+                          "max_damaged_entities": -1,
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false,
-                          "recharge_time": null,
                           "attributes": [
                             {
                               "key": "immune_to_psychology",
@@ -2376,9 +2366,8 @@
                     },
                     "is_hidden_in_ui": false,
                     "description": "Running with the Pack",
-                    "passive": true,
                     "effect_range": 35,
-                    "affect_self": true,
+                    "num_effected_friendly_units": 3,
                     "target_friends": false,
                     "target_enemies": false,
                     "target_ground": false,
@@ -2388,9 +2377,10 @@
                       {
                         "duration": -1,
                         "effect_type": "positive",
+                        "hp_change_frequency": 1,
+                        "heal_amount": 0.001,
                         "is_hidden_in_ui": false,
-                        "freeze_recharge": false,
-                        "recharge_time": null
+                        "freeze_recharge": false
                       }
                     ]
                   }
