@@ -57,7 +57,7 @@ const gameData: GameInterface = {
     factions: factions3,
     characters: radious3Characters,
     characterImages: radious3CharacterImgs,
-    updated: '29 Sep 2022',
+    updated: '4 Oct 2022',
     category: 'Overhaul',
   },
   mixu3: {
