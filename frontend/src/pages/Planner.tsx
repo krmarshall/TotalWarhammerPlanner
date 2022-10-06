@@ -42,7 +42,12 @@ const Planner = () => {
             faction as string,
             character as string
           );
-          dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
+          if (!code) {
+            dispatch({
+              type: AppContextActions.changeCharacterBuild,
+              payload: { characterBuild: emptyCharacterBuild },
+            });
+          }
         })
         .catch(() => {
           toast.error('Error retrieving character data from server.');
@@ -52,10 +57,7 @@ const Planner = () => {
   }, [state.characterData]);
 
   useEffect(() => {
-    if (!code || !state.characterData) {
-      return;
-    }
-    if (urlLoaded) {
+    if (!code || !state.characterData || urlLoaded) {
       return;
     }
     const importBuild = convertCodeToBuild(code);

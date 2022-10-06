@@ -12,7 +12,7 @@ const isRequiredLevel = (
     return true;
   }
   if (characterBuild?.rank) {
-    if (skill.points_on_creation > 0 && thisSkillsCurrentPoints <= skill.points_on_creation) {
+    if (skill.points_on_creation > 0 && thisSkillsCurrentPoints + 1 <= skill.points_on_creation) {
       return true;
     }
 

@@ -7,10 +7,10 @@ import { CharacterInterface, SkillInterface } from '../../types/interfaces/Chara
 import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
 import TooltipWrapper from './TooltipWrapper';
+import ReactImage from '../ReactImage';
 
 import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';
 import blockedSkillOverlay from '../../imgs/other/skill_locked_rank.webp';
-import ReactImage from '../ReactImage';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -66,24 +66,28 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   useEffect(() => {
     skill.levels?.forEach((skillLevel, index) => {
-      if (
-        characterBuild?.rank !== undefined &&
-        characterBuild?.startingSkillPoints !== undefined &&
-        characterBuild?.autoUnlockSkillPoints !== undefined &&
-        skillLevel.auto_unlock_at_rank !== undefined
-      ) {
+      if (skill.points_on_creation - 1 >= index) {
+        // Ignore points on creation skills
+      } else {
         if (
-          characterBuild.buildData[yIndex][xIndex] === index &&
-          skillLevel.auto_unlock_at_rank <=
-            characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+          characterBuild?.rank !== undefined &&
+          characterBuild?.startingSkillPoints !== undefined &&
+          characterBuild?.autoUnlockSkillPoints !== undefined &&
+          skillLevel.auto_unlock_at_rank !== undefined
         ) {
-          rankUpSkill(true);
-        } else if (
-          characterBuild.buildData[yIndex][xIndex] > index &&
-          skillLevel.auto_unlock_at_rank >
-            characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
-        ) {
-          rankDownSkill(true);
+          if (
+            characterBuild.buildData[yIndex][xIndex] === index &&
+            skillLevel.auto_unlock_at_rank <=
+              characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+          ) {
+            rankUpSkill(true);
+          } else if (
+            characterBuild.buildData[yIndex][xIndex] > index &&
+            skillLevel.auto_unlock_at_rank >
+              characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+          ) {
+            rankDownSkill(true);
+          }
         }
       }
     });
