@@ -139,6 +139,12 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
           <p className="my-auto ml-1">{projectile.can_damage_allies ? 'Yes' : 'No'}</p>
         </div>
       )}
+      {projectile.explosion_type !== undefined && (
+        <div className="flex flex-row">
+          <h5 className="text-left w-24">Expl. Affects Allies:</h5>
+          <p className="my-auto ml-1">{projectile.explosion_type.affects_allies ? 'Yes' : 'No'}</p>
+        </div>
+      )}
       {projectile.contact_stat_effect !== undefined && (
         <div className="text-left">
           <h5 className="w-24">Contact:</h5>

@@ -13,24 +13,19 @@ const mixu3Characters = {
 
   wh_dlc03_bst_beastmen_lords: {
     bst_ghorros_warhoof: { name: 'Ghorros Warhoof' },
-    bst_slugtongue: { name: 'Molokh Slugtongue' },
+    bst_slugtongue: { name: 'Molokh Slugtongue', spellLore: 'mixed' },
   },
   wh_dlc03_bst_beastmen_heroes: {
     bst_gorehoof: { name: 'Gorehoof' },
   },
 
   wh_main_chs_chaos_lords: {
-    chs_egrimm_van_horstmann: { name: 'Egrimm van Horstmann' },
-    chs_malofex_the_storm_chaser: { name: 'Malofex the Storm-Chaser' }, // Unknown
-    tze_melekh_the_changer: { name: 'Melekh the Changer' },
+    chs_egrimm_van_horstmann: { name: 'Egrimm van Horstmann', spellLore: 'light' },
+    chs_malofex_the_storm_chaser: { name: 'Malofex the Storm-Chaser', spellLore: 'mixed' }, // Unknown
+    tze_melekh_the_changer: { name: 'Melekh the Changer', spellLore: 'fire' },
   },
   wh_main_chs_chaos_heroes: {
-    chs_azubhor_clawhand: { name: 'Azubhor Clawhand' }, // Unknown
-  },
-
-  wh2_dlc11_cst_vampire_coast_lords: {},
-  wh2_dlc11_cst_vampire_coast_heroes: {
-    cst_drekla: { name: 'Captain Drekla' },
+    chs_azubhor_clawhand: { name: 'Azubhor Clawhand', spellLore: 'metal' }, // Unknown
   },
 
   wh2_main_def_dark_elves_lords: {
@@ -44,7 +39,7 @@ const mixu3Characters = {
   wh_main_dwf_dwarfs_lords: {
     dwf_grimm_burloksson: { name: 'Grimm Burloksson' },
     dwf_kazador_dragonslayer: { name: 'King Kazador' },
-    dwf_kragg_the_grim: { name: 'Kragg the Grim' },
+    dwf_kragg_the_grim: { name: 'Kragg the Grim', spellLore: 'runic' },
   },
   wh_main_dwf_dwarfs_heroes: {},
 
@@ -53,7 +48,7 @@ const mixu3Characters = {
     emp_alberich_von_korden: { name: 'Alberich von Korden' },
     emp_aldebrand_ludenhof: { name: 'Aldebrand Ludenhof' },
     emp_edvard_van_der_kraal: { name: 'Edvard van der Kraal' },
-    emp_elspeth: { name: 'Elspeth von Draken' },
+    emp_elspeth: { name: 'Elspeth von Draken', spellLore: 'death' },
     emp_helmut_feuerbach: { name: 'Helmut Feuerbach' },
     emp_marius_leitdorf: { name: 'Marius Leitdorf' },
     emp_theoderic_gausser: { name: 'Theoderic Gausser' },
@@ -74,7 +69,7 @@ const mixu3Characters = {
   wh_main_grn_greenskins_heroes: {},
 
   wh2_main_hef_high_elves_lords: {
-    hef_belannaer: { name: 'Belannaer the Wise' },
+    hef_belannaer: { name: 'Belannaer the Wise', spellLore: 'mixed' },
     hef_caradryan: { name: 'Caradryan' },
     hef_korhil: { name: 'Korhil' },
   },
@@ -83,8 +78,8 @@ const mixu3Characters = {
   },
 
   wh2_main_lzd_lizardmen_lords: {
-    lzd_lord_huinitenuchli: { name: 'Lord Huinitenuchli' },
-    lzd_tetto_eko: { name: "Tetto'eko" },
+    lzd_lord_huinitenuchli: { name: 'Lord Huinitenuchli', spellLore: 'mixed' },
+    lzd_tetto_eko: { name: "Tetto'eko", spellLore: 'heavens' },
   },
   wh2_main_lzd_lizardmen_heroes: {
     lzd_chakax: { name: 'Chakax' },
@@ -112,15 +107,20 @@ const mixu3Characters = {
     tmb_ramhotep: { name: 'Ramhotep the Visionary' },
   },
 
+  wh2_dlc11_cst_vampire_coast_lords: {},
+  wh2_dlc11_cst_vampire_coast_heroes: {
+    cst_drekla: { name: 'Captain Drekla', spellLore: 'mixed' },
+  },
+
   wh_main_vmp_vampire_counts_lords: {
-    vmp_dieter_helsnicht: { name: 'Dieter Helsnicht' },
+    vmp_dieter_helsnicht: { name: 'Dieter Helsnicht', spellLore: 'mixed' },
     // vmp_dieter_fortress: { name: '???' }, // Broke
   },
   wh_main_vmp_vampire_counts_heroes: {},
 
   wh_dlc05_wef_wood_elves_lords: {
     wef_daith: { name: 'Lord Daith' },
-    wef_naieth_the_prophetess: { name: 'Prophetess Naieth' },
+    wef_naieth_the_prophetess: { name: 'Prophetess Naieth', spellLore: 'heavens' },
     wef_wychwethyl: { name: 'Wychwethyl the Wild' },
   },
   wh_dlc05_wef_wood_elves_heroes: {},
