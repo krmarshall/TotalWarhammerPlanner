@@ -20,23 +20,23 @@ const vanilla2Characters = {
     tmb_tomb_king: {
       name: 'Tomb King',
     },
-    tmb_tomb_king_alkhazzar_ii: {
-      name: 'King Alkhazzar II',
-    },
-    tmb_tomb_king_lahmizzash: {
-      name: 'King Lahmizzash',
+    tmb_tomb_king_wakhaf: {
+      name: 'Wakhaf of the First Dynasty',
     },
     tmb_tomb_king_rakhash: {
-      name: 'King Rakhash',
-    },
-    tmb_tomb_king_setep: {
-      name: 'King Setep',
+      name: 'Rakhash of the Second Dynasty',
     },
     tmb_tomb_king_thutep: {
-      name: 'King Thutep',
+      name: 'Thutep of the Third Dynasty',
     },
-    tmb_tomb_king_wakhaf: {
-      name: 'King Wakhaf',
+    tmb_tomb_king_lahmizzash: {
+      name: 'Lahmizzash of the Fourth Dynasty	',
+    },
+    tmb_tomb_king_setep: {
+      name: 'Setep of the Fifth Dynasty',
+    },
+    tmb_tomb_king_alkhazzar_ii: {
+      name: 'Alkhazzar II of the Sixth Dynasty',
     },
   },
   wh2_dlc09_tmb_tomb_kings_heroes: {
@@ -78,8 +78,16 @@ const vanilla2Characters = {
       name: 'Count Noctilus',
       spellLore: SpellLores.mixed,
     },
-    cst_admiral: {
-      name: 'Vampire Fleet Admiral Polearm (Vampires)',
+    cst_admiral_fem_death: {
+      name: 'Vampire Fleet Admiral Pistol (Death)',
+      spellLore: SpellLores.death,
+    },
+    cst_admiral_fem_deep: {
+      name: 'Vampire Fleet Admiral Pistol (Deeps)',
+      spellLore: SpellLores.deeps,
+    },
+    cst_admiral_fem: {
+      name: 'Vampire Fleet Admiral Pistol (Vampires)',
       spellLore: SpellLores.vampires,
     },
     cst_admiral_death: {
@@ -90,48 +98,36 @@ const vanilla2Characters = {
       name: 'Vampire Fleet Admiral Polearm (Deeps)',
       spellLore: SpellLores.deeps,
     },
-    cst_admiral_fem: {
-      name: 'Vampire Fleet Admiral Pistol (Vampires)',
+    cst_admiral: {
+      name: 'Vampire Fleet Admiral Polearm (Vampires)',
       spellLore: SpellLores.vampires,
     },
-    cst_admiral_fem_death: {
-      name: 'Vampire Fleet Admiral Pistol (Death)',
-      spellLore: SpellLores.death,
-    },
-    cst_admiral_fem_deep: {
-      name: 'Vampire Fleet Admiral Pistol (Deeps)',
-      spellLore: SpellLores.deeps,
-    },
     cst_admiral_tech_01: {
-      name: 'Trusty Montford??? (Vampires)',
+      name: 'Trusty Montford (Vampires)',
       spellLore: SpellLores.vampires,
     },
     cst_admiral_tech_02: {
-      name: "O'Bones Macdonald??? (Deeps)",
+      name: "O'Bones Macdonald (Deeps)",
       spellLore: SpellLores.deeps,
     },
     cst_admiral_tech_03: {
-      name: 'Burke Black??? (Death)',
+      name: 'Burke Black (Death)',
       spellLore: SpellLores.death,
     },
     cst_admiral_tech_04: {
-      name: 'Two Toes Adley??? (Deeps)',
+      name: 'Two Toes Adley (Deeps)',
       spellLore: SpellLores.deeps,
     },
   },
   wh2_dlc11_cst_vampire_coast_heroes: {
     cst_ghost_paladin: {
-      name: 'Damned Paladin',
+      name: 'Robert Barthelemy',
     },
     cst_gunnery_wight: {
       name: 'Gunnery Wight',
     },
     cst_mourngul: {
       name: 'Mourngul Haunter',
-    },
-    cst_fleet_captain: {
-      name: 'Vampire Fleet Captain (Vampires)',
-      spellLore: SpellLores.vampires,
     },
     cst_fleet_captain_death: {
       name: 'Vampire Fleet Captain (Death)',
@@ -140,6 +136,10 @@ const vanilla2Characters = {
     cst_fleet_captain_deep: {
       name: 'Vampire Fleet Captain (Deeps)',
       spellLore: SpellLores.deeps,
+    },
+    cst_fleet_captain: {
+      name: 'Vampire Fleet Captain (Vampires)',
+      spellLore: SpellLores.vampires,
     },
   },
   wh2_main_def_dark_elves_lords: {
@@ -213,13 +213,13 @@ const vanilla2Characters = {
       name: 'Sorceress (Beasts)',
       spellLore: SpellLores.beasts,
     },
-    def_sorceress_death: {
-      name: 'Sorceress (Death)',
-      spellLore: SpellLores.death,
-    },
     def_sorceress_dark: {
       name: 'Sorceress (Dark)',
       spellLore: SpellLores.dark,
+    },
+    def_sorceress_death: {
+      name: 'Sorceress (Death)',
+      spellLore: SpellLores.death,
     },
     def_sorceress_fire: {
       name: 'Sorceress (Fire)',
@@ -306,14 +306,6 @@ const vanilla2Characters = {
       name: 'Loremaster of Hoeth',
       spellLore: SpellLores.mixed,
     },
-    hef_mage_heavens: {
-      name: 'Mage (Heavens)',
-      spellLore: SpellLores.heavens,
-    },
-    hef_mage_shadows: {
-      name: 'Mage (Shadows)',
-      spellLore: SpellLores.shadows,
-    },
     hef_mage_beasts: {
       name: 'Mage (Beasts)',
       spellLore: SpellLores.beasts,
@@ -326,9 +318,9 @@ const vanilla2Characters = {
       name: 'Mage (Fire)',
       spellLore: SpellLores.fire,
     },
-    hef_mage_metal: {
-      name: 'Mage (Metal)',
-      spellLore: SpellLores.metal,
+    hef_mage_heavens: {
+      name: 'Mage (Heavens)',
+      spellLore: SpellLores.heavens,
     },
     hef_mage_high: {
       name: 'Mage (High)',
@@ -341,6 +333,14 @@ const vanilla2Characters = {
     hef_mage_light: {
       name: 'Mage (Light)',
       spellLore: SpellLores.light,
+    },
+    hef_mage_metal: {
+      name: 'Mage (Metal)',
+      spellLore: SpellLores.metal,
+    },
+    hef_mage_shadows: {
+      name: 'Mage (Shadows)',
+      spellLore: SpellLores.shadows,
     },
     hef_noble: {
       name: 'Noble',
@@ -950,10 +950,10 @@ const vanilla2Characters = {
       spellLore: SpellLores.bigWagh,
     },
     oglok: {
-      name: 'Oglok',
+      name: "Oglok the 'Orrible",
     },
     raknik: {
-      name: 'Raknik',
+      name: 'Raknik Spiderclaw',
       spellLore: SpellLores.lilWagh,
     },
     grn_goblin_great_shaman: {

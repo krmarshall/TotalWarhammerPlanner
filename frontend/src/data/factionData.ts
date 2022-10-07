@@ -19,8 +19,8 @@ const factions2 = {
 const factions3 = {
   wh_dlc03_bst_beastmen: 'Beastmen',
   wh_main_brt_bretonnia: 'Brettonia',
+  wh3_main_dae_daemons: 'Daemons of Chaos',
   wh2_main_def_dark_elves: 'Dark Elves',
-  wh3_main_dae_daemons: 'Demons of Chaos',
   wh_main_dwf_dwarfs: 'Dwarfs',
   wh_main_emp_empire: 'The Empire',
   wh3_main_cth_cathay: 'Grand Cathay',
@@ -45,8 +45,8 @@ const factions3 = {
 const factions3Mixu = {
   wh_dlc03_bst_beastmen: 'Beastmen',
   wh_main_brt_bretonnia: 'Brettonia',
+  // wh3_main_dae_daemons: 'Daemons of Chaos',
   wh2_main_def_dark_elves: 'Dark Elves',
-  // wh3_main_dae_daemons: 'Demons of Chaos',
   wh_main_dwf_dwarfs: 'Dwarfs',
   wh_main_emp_empire: 'The Empire',
   // wh3_main_cth_cathay: 'Grand Cathay',
