@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { PhaseInterface } from '../../types/interfaces/CharacterInterface';
 import SkillPhaseAttribute from './SkillPhaseAttribute';

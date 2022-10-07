@@ -1,3 +1,4 @@
+import { SpellLores } from '../types/interfaces/GameInterface';
 import vanilla2Characters from './vanilla2Characters';
 
 const sfo2Characters = {
@@ -7,7 +8,7 @@ const sfo2Characters = {
     ...vanilla2Characters.wh2_dlc09_tmb_tomb_kings_lords,
     tmb_cha_arch_liche: {
       name: 'Liche High Priest',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
   },
   wh2_main_def_dark_elves_heroes: {
@@ -41,14 +42,14 @@ const sfo2Characters = {
     },
     nor_cha_fimir: {
       name: 'Fimir Meargh',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
   },
   wh_main_brt_bretonnia_heroes: {
     ...vanilla2Characters.wh_main_brt_bretonnia_heroes,
     brt_cha_lost: {
       name: 'Son of Bretonnia',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
   },
   wh_main_chs_chaos_heroes: {
@@ -73,7 +74,7 @@ const sfo2Characters = {
     ...vanilla2Characters.wh_main_grn_greenskins_lords,
     grn_cha_savageboss: {
       name: 'Savage Orc Warboss',
-      spellLore: 'bigWagh',
+      spellLore: SpellLores.bigWagh,
     },
   },
 };

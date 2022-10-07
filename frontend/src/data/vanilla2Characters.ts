@@ -1,19 +1,21 @@
+import { SpellLores } from '../types/interfaces/GameInterface';
+
 const vanilla2Characters = {
   wh2_dlc09_tmb_tomb_kings_lords: {
     tmb_arkhan: {
       name: 'Arkhan the Black',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     tmb_khalida: {
       name: 'High Queen Khalida',
     },
     tmb_khatep: {
       name: 'Grand Hierophant Khatep',
-      spellLore: 'nehekhara',
+      spellLore: SpellLores.nehekhara,
     },
     tmb_settra: {
       name: 'Settra the Imperishable',
-      spellLore: 'nehekhara',
+      spellLore: SpellLores.nehekhara,
     },
     tmb_tomb_king: {
       name: 'Tomb King',
@@ -40,19 +42,19 @@ const vanilla2Characters = {
   wh2_dlc09_tmb_tomb_kings_heroes: {
     tmb_liche_priest_death: {
       name: 'Liche Priest (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     tmb_liche_priest_light: {
       name: 'Liche Priest (Light)',
-      spellLore: 'light',
+      spellLore: SpellLores.light,
     },
     tmb_liche_priest_nehekhara: {
       name: 'Liche Priest (Nehekhara)',
-      spellLore: 'nehekhara',
+      spellLore: SpellLores.nehekhara,
     },
     tmb_liche_priest_shadow: {
       name: 'Liche Priest (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     tmb_necrotect: {
       name: 'Necrotect',
@@ -67,54 +69,54 @@ const vanilla2Characters = {
     },
     cst_cylostra: {
       name: 'Cylostra Direfin',
-      spellLore: 'deeps',
+      spellLore: SpellLores.deeps,
     },
     cst_harkon: {
       name: 'Luthor Harkon',
     },
     cst_noctilus: {
       name: 'Count Noctilus',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     cst_admiral: {
       name: 'Vampire Fleet Admiral Polearm (Vampires)',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     cst_admiral_death: {
       name: 'Vampire Fleet Admiral Polearm (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     cst_admiral_deep: {
       name: 'Vampire Fleet Admiral Polearm (Deeps)',
-      spellLore: 'deeps',
+      spellLore: SpellLores.deeps,
     },
     cst_admiral_fem: {
       name: 'Vampire Fleet Admiral Pistol (Vampires)',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     cst_admiral_fem_death: {
       name: 'Vampire Fleet Admiral Pistol (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     cst_admiral_fem_deep: {
       name: 'Vampire Fleet Admiral Pistol (Deeps)',
-      spellLore: 'deeps',
+      spellLore: SpellLores.deeps,
     },
     cst_admiral_tech_01: {
       name: 'Trusty Montford??? (Vampires)',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     cst_admiral_tech_02: {
       name: "O'Bones Macdonald??? (Deeps)",
-      spellLore: 'deeps',
+      spellLore: SpellLores.deeps,
     },
     cst_admiral_tech_03: {
       name: 'Burke Black??? (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     cst_admiral_tech_04: {
       name: 'Two Toes Adley??? (Deeps)',
-      spellLore: 'deeps',
+      spellLore: SpellLores.deeps,
     },
   },
   wh2_dlc11_cst_vampire_coast_heroes: {
@@ -129,15 +131,15 @@ const vanilla2Characters = {
     },
     cst_fleet_captain: {
       name: 'Vampire Fleet Captain (Vampires)',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     cst_fleet_captain_death: {
       name: 'Vampire Fleet Captain (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     cst_fleet_captain_deep: {
       name: 'Vampire Fleet Captain (Deeps)',
-      spellLore: 'deeps',
+      spellLore: SpellLores.deeps,
     },
   },
   wh2_main_def_dark_elves_lords: {
@@ -152,11 +154,11 @@ const vanilla2Characters = {
     },
     def_malekith: {
       name: 'Malekith',
-      spellLore: 'dark',
+      spellLore: SpellLores.dark,
     },
     def_morathi: {
       name: 'Morathi',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     def_rakarth: {
       name: 'Rakarth',
@@ -178,23 +180,23 @@ const vanilla2Characters = {
     },
     def_supreme_sorceress_beasts: {
       name: 'Supreme Sorceress (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     def_supreme_sorceress_dark: {
       name: 'Supreme Sorceress (Dark)',
-      spellLore: 'dark',
+      spellLore: SpellLores.dark,
     },
     def_supreme_sorceress_death: {
       name: 'Supreme Sorceress (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     def_supreme_sorceress_fire: {
       name: 'Supreme Sorceress (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     def_supreme_sorceress_shadow: {
       name: 'Supreme Sorceress (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
   },
   wh2_main_def_dark_elves_heroes: {
@@ -209,43 +211,43 @@ const vanilla2Characters = {
     },
     def_sorceress_beasts: {
       name: 'Sorceress (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     def_sorceress_death: {
       name: 'Sorceress (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     def_sorceress_dark: {
       name: 'Sorceress (Dark)',
-      spellLore: 'dark',
+      spellLore: SpellLores.dark,
     },
     def_sorceress_fire: {
       name: 'Sorceress (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     def_sorceress_shadow: {
       name: 'Sorceress (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
   },
   wh2_main_hef_high_elves_lords: {
     hef_alarielle: {
       name: 'Alarielle the Radiant',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     hef_alith_anar: {
       name: 'Alith Anar',
     },
     hef_eltharion: {
       name: 'Eltharion',
-      spellLore: 'high',
+      spellLore: SpellLores.high,
     },
     hef_imrik: {
       name: 'Imrik',
     },
     hef_teclis: {
       name: 'Teclis',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     hef_tyrion: {
       name: 'Tyrion',
@@ -255,39 +257,39 @@ const vanilla2Characters = {
     },
     hef_archmage_beasts: {
       name: 'Archmage (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     hef_archmage_death: {
       name: 'Archmage (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     hef_archmage_fire: {
       name: 'Archmage (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     hef_archmage_heavens: {
       name: 'Archmage (Heavens)',
-      spellLore: 'heavens',
+      spellLore: SpellLores.heavens,
     },
     hef_archmage_high: {
       name: 'Archmage (High)',
-      spellLore: 'high',
+      spellLore: SpellLores.high,
     },
     hef_archmage_life: {
       name: 'Archmage (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     hef_archmage_light: {
       name: 'Archmage (Light)',
-      spellLore: 'light',
+      spellLore: SpellLores.light,
     },
     hef_archmage_metal: {
       name: 'Archmage (Metal)',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     hef_archmage_shadows: {
       name: 'Archmage (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     hef_prince: {
       name: 'Prince',
@@ -302,43 +304,43 @@ const vanilla2Characters = {
     },
     hef_loremaster_of_hoeth: {
       name: 'Loremaster of Hoeth',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     hef_mage_heavens: {
       name: 'Mage (Heavens)',
-      spellLore: 'heavens',
+      spellLore: SpellLores.heavens,
     },
     hef_mage_shadows: {
       name: 'Mage (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     hef_mage_beasts: {
       name: 'Mage (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     hef_mage_death: {
       name: 'Mage (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     hef_mage_fire: {
       name: 'Mage (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     hef_mage_metal: {
       name: 'Mage (Metal)',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     hef_mage_high: {
       name: 'Mage (High)',
-      spellLore: 'high',
+      spellLore: SpellLores.high,
     },
     hef_mage_life: {
       name: 'Mage (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     hef_mage_light: {
       name: 'Mage (Light)',
-      spellLore: 'light',
+      spellLore: SpellLores.light,
     },
     hef_noble: {
       name: 'Noble',
@@ -353,7 +355,7 @@ const vanilla2Characters = {
     },
     lzd_lord_mazdamundi: {
       name: 'Lord Mazdamundi',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     nakai: {
       name: 'Nakai the Wanderer',
@@ -363,7 +365,7 @@ const vanilla2Characters = {
     },
     lzd_tehenhauin: {
       name: 'Tehenhauin',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     lzd_tiktaqto: {
       name: "Tiktaq'to",
@@ -379,25 +381,25 @@ const vanilla2Characters = {
     },
     lzd_slann_mage_priest_fire: {
       name: 'Slann Mage-Priest (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     lzd_slann_mage_priest_high: {
       name: 'Slann Mage-Priest (High)',
-      spellLore: 'high',
+      spellLore: SpellLores.high,
     },
     lzd_slann_mage_priest_life: {
       name: 'Slann Mage-Priest (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     lzd_slann_mage_priest: {
       name: 'Slann Mage-Priest (Light)',
-      spellLore: 'light',
+      spellLore: SpellLores.light,
     },
   },
   wh2_main_lzd_lizardmen_heroes: {
     lzd_lord_kroak: {
       name: 'Lord Kroak',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     lzd_saurus_scar_veteran: {
       name: 'Saurus Scar-Veteran',
@@ -407,28 +409,28 @@ const vanilla2Characters = {
     },
     lzd_skink_oracle: {
       name: 'Skink Oracle',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     lzd_skink_priest_beasts: {
       name: 'Skink Priest (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     lzd_skink_priest_heavens: {
       name: 'Skink Priest (Heavens)',
-      spellLore: 'heavens',
+      spellLore: SpellLores.heavens,
     },
   },
   wh2_main_skv_skaven_lords: {
     ikit_claw: {
       name: 'Ikit Claw',
-      spellLore: 'ruin',
+      spellLore: SpellLores.ruin,
     },
     skv_queek_headtaker: {
       name: 'Queek Headtaker',
     },
     skv_lord_skrolk: {
       name: 'Lord Skrolk',
-      spellLore: 'skvPlague',
+      spellLore: SpellLores.skvPlague,
     },
     skv_deathmaster_snikch: {
       name: 'Deathmaster Snikch',
@@ -441,18 +443,18 @@ const vanilla2Characters = {
     },
     skv_grey_seer_plague: {
       name: 'Grey Seer (Plague)',
-      spellLore: 'skvPlague',
+      spellLore: SpellLores.skvPlague,
     },
     skv_grey_seer_ruin: {
       name: 'Grey Seer (Ruin)',
-      spellLore: 'ruin',
+      spellLore: SpellLores.ruin,
     },
     skv_master_assassin: {
       name: 'Master Assassin',
     },
     skv_warlock_master: {
       name: 'Warlock Master',
-      spellLore: 'ruin',
+      spellLore: SpellLores.ruin,
     },
     skv_warlord: {
       name: 'Warlord',
@@ -470,18 +472,18 @@ const vanilla2Characters = {
     },
     skv_eshin_sorcerer: {
       name: 'Eshin Sorcerer',
-      spellLore: 'stealth',
+      spellLore: SpellLores.stealth,
     },
     skv_packmaster: {
       name: 'Packmaster',
     },
     skv_plague_priest: {
       name: 'Plague Priest',
-      spellLore: 'skvPlague',
+      spellLore: SpellLores.skvPlague,
     },
     skv_warlock_engineer: {
       name: 'Warlock Engineer',
-      spellLore: 'ruin',
+      spellLore: SpellLores.ruin,
     },
   },
   wh_dlc03_bst_beastmen_lords: {
@@ -490,7 +492,7 @@ const vanilla2Characters = {
     },
     bst_malagor: {
       name: 'Malagor the Dark Omen',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     bst_morghur: {
       name: 'Morghur the Shadowgave',
@@ -506,37 +508,37 @@ const vanilla2Characters = {
     },
     bst_great_bray_shaman_beast: {
       name: 'Great Bray-Shaman (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     bst_great_bray_shaman_death: {
       name: 'Great Bray-Shaman (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     bst_great_bray_shaman_shadows: {
       name: 'Great Bray-Shaman (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     bst_great_bray_shaman_wild: {
       name: 'Great Bray-Shaman (Wild)',
-      spellLore: 'wild',
+      spellLore: SpellLores.wild,
     },
   },
   wh_dlc03_bst_beastmen_heroes: {
     bst_bray_shaman_beast: {
       name: 'Bray-Shaman (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     bst_bray_shaman_death: {
       name: 'Bray-Shaman (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     bst_bray_shaman_shadows: {
       name: 'Bray-Shaman (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     bst_bray_shaman_wild: {
       name: 'Bray-Shaman (Wild)',
-      spellLore: 'wild',
+      spellLore: SpellLores.wild,
     },
     bst_gorebull: {
       name: 'Gorebull',
@@ -548,11 +550,11 @@ const vanilla2Characters = {
   wh_dlc05_wef_wood_elves_lords: {
     wef_drycha: {
       name: 'Drycha',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     wef_durthu: {
       name: 'Durthu',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     wef_orion: {
       name: 'Orion',
@@ -562,19 +564,19 @@ const vanilla2Characters = {
     },
     wef_ancient_treeman: {
       name: 'Ancient Treeman',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     wef_malicious_ancient_treeman_beasts: {
       name: 'Malevolent Ancient Treeman (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     wef_malicious_ancient_treeman_life: {
       name: 'Malevolent Ancient Treeman (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     wef_malicious_ancient_treeman_shadows: {
       name: 'Malevolent Ancient Treeman (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     wef_glade_lord: {
       name: 'Glade Lord',
@@ -584,64 +586,64 @@ const vanilla2Characters = {
     },
     wef_spellweaver_beasts: {
       name: 'Spellweaver (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     wef_spellweaver_dark: {
       name: 'Spellweaver (Dark)',
-      spellLore: 'dark',
+      spellLore: SpellLores.dark,
     },
     wef_spellweaver_high: {
       name: 'Spellweaver (High)',
-      spellLore: 'high',
+      spellLore: SpellLores.wefHigh,
     },
     wef_spellweaver_life: {
       name: 'Spellweaver (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     wef_spellweaver_shadows: {
       name: 'Spellweaver (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
   },
   wh_dlc05_wef_wood_elves_heroes: {
     wef_ariel: {
       name: 'Ariel',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     wef_coeddil: {
       name: 'Coeddil',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     wef_branchwraith: {
       name: 'Branchwraith',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     wef_malicious_branchwraith_beasts: {
       name: 'Malevolent Branchwraith (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     wef_malicious_branchwraith_life: {
       name: 'Malevolent Branchwraith (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     wef_malicious_branchwraith_shadows: {
       name: 'Malevolent Branchwraith (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     wef_glade_captain: {
       name: 'Glade Captain',
     },
     wef_spellsinger_beasts: {
       name: 'Spellsinger (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     wef_spellsinger_life: {
       name: 'Spellsinger (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     wef_spellsinger_shadow: {
       name: 'Spellsinger (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     wef_waystalker: {
       name: 'Waystalker',
@@ -667,23 +669,23 @@ const vanilla2Characters = {
     },
     nor_fimir_balefiend_fire: {
       name: 'Fimir Balefiend (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     nor_fimir_balefiend_shadow: {
       name: 'Fimir Balefiend (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     nor_shaman_sorcerer_death: {
       name: 'Shaman-Sorcerer (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     nor_shaman_sorcerer_fire: {
       name: 'Shaman-Sorcerer (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     nor_shaman_sorcerer_metal: {
       name: 'Shaman-Sorcerer (Metal)',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     nor_skin_wolf_werekin: {
       name: 'Skin Wolf Werekin',
@@ -695,7 +697,7 @@ const vanilla2Characters = {
     },
     brt_fay_enchantress: {
       name: 'The Fay Enchantress',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     brt_louen: {
       name: 'Louen Leoncoeur',
@@ -708,15 +710,15 @@ const vanilla2Characters = {
     },
     brt_prophetess_beast: {
       name: 'Prophetess (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     brt_prophetess_heavens: {
       name: 'Prophetess (Heavens)',
-      spellLore: 'heavens',
+      spellLore: SpellLores.heavens,
     },
     brt_prophetess_life: {
       name: 'Prophetess (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
   },
   wh_main_brt_bretonnia_heroes: {
@@ -728,15 +730,15 @@ const vanilla2Characters = {
     },
     brt_damsel_beasts: {
       name: 'Damsel (Beasts)',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     brt_damsel: {
       name: 'Damsel (Heavens)',
-      spellLore: 'heavens',
+      spellLore: SpellLores.heavens,
     },
     brt_damsel_life: {
       name: 'Damsel (Life)',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     brt_paladin: {
       name: 'Paladin',
@@ -745,7 +747,7 @@ const vanilla2Characters = {
   wh_main_chs_chaos_lords: {
     chs_archaon: {
       name: 'Archaon the Everchosen',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     chs_kholek: {
       name: 'Kholek Suneater',
@@ -755,26 +757,26 @@ const vanilla2Characters = {
     },
     chs_lord_of_change: {
       name: 'Sarthorael the Everwatcher',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     chs_lord: {
       name: 'Chaos Lord',
     },
     chs_sorcerer_lord_death: {
       name: 'Chaos Sorcerer Lord (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     chs_sorcerer_lord_fire: {
       name: 'Chaos Sorcerer Lord (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     chs_sorcerer_lord_metal: {
       name: 'Chaos Sorcerer Lord (Metal)',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     chs_sorcerer_lord_shadow: {
       name: 'Chaos Sorcerer Lord (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
   },
   wh_main_chs_chaos_heroes: {
@@ -783,19 +785,19 @@ const vanilla2Characters = {
     },
     chs_chaos_sorcerer_death: {
       name: 'Chaos Sorcerer (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     chs_chaos_sorcerer_fire: {
       name: 'Chaos Sorcerer (Fire)',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     chs_chaos_sorcerer_metal: {
       name: 'Chaos Sorcerer (Metal)',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     chs_sorcerer_shadow: {
       name: 'Chaos Sorcerer (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
   },
   wh_main_dwf_dwarfs_lords: {
@@ -807,7 +809,7 @@ const vanilla2Characters = {
     },
     dwf_thorek: {
       name: 'Thorek Ironbrow',
-      spellLore: 'runic',
+      spellLore: SpellLores.runic,
     },
     dwf_thorgrim: {
       name: 'Thorgrim Grudgebearer',
@@ -820,7 +822,7 @@ const vanilla2Characters = {
     },
     dwf_runelord: {
       name: 'Runelord',
-      spellLore: 'runic',
+      spellLore: SpellLores.runic,
     },
   },
   wh_main_dwf_dwarfs_heroes: {
@@ -835,7 +837,7 @@ const vanilla2Characters = {
     },
     dwf_runesmith_ghost: {
       name: 'Throni Ironbrow',
-      spellLore: 'runic',
+      spellLore: SpellLores.runic,
     },
     dwf_thane_ghost_artifact: {
       name: 'Great Axe Thane',
@@ -845,7 +847,7 @@ const vanilla2Characters = {
     },
     all_runesmith: {
       name: 'Runesmith',
-      spellLore: 'runic',
+      spellLore: SpellLores.runic,
     },
     dwf_thane: {
       name: 'Thane',
@@ -854,7 +856,7 @@ const vanilla2Characters = {
   wh_main_emp_empire_lords: {
     emp_balthasar: {
       name: 'Balthasar Gelt',
-      spellLore: 'metal',
+      spellLore: SpellLores.metal,
     },
     emp_karl_franz: {
       name: 'Karl Franz - Prince AND Emperor',
@@ -893,34 +895,34 @@ const vanilla2Characters = {
     },
     emp_amber_wizard: {
       name: 'Amber Wizard',
-      spellLore: 'beasts',
+      spellLore: SpellLores.beasts,
     },
     emp_amethyst_wizard: {
       name: 'Amethyst Wizard',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     emp_bright_wizard: {
       name: 'Bright Wizard',
-      spellLore: 'fire',
+      spellLore: SpellLores.fire,
     },
     emp_celestial_wizard: {
       name: 'Celestial Wizard',
-      spellLore: 'heavens',
+      spellLore: SpellLores.heavens,
     },
     emp_captain: {
       name: 'Empire Captain',
     },
     grey_wizard: {
       name: 'Grey Wizard',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     jade_wizard: {
       name: 'Jade Wizard',
-      spellLore: 'life',
+      spellLore: SpellLores.life,
     },
     emp_light_wizard: {
       name: 'Light Wizard',
-      spellLore: 'light',
+      spellLore: SpellLores.light,
     },
     emp_warrior_priest: {
       name: 'Warrior Priest',
@@ -932,7 +934,7 @@ const vanilla2Characters = {
   wh_main_grn_greenskins_lords: {
     grn_azhag: {
       name: 'Azhag the Slaughterer',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     grn_grimgor: {
       name: 'Grimgor Ironhide',
@@ -945,18 +947,18 @@ const vanilla2Characters = {
     },
     grn_wurrzag_da_great_prophet: {
       name: 'Wurrzag Da Great Green Prophet',
-      spellLore: 'bigWagh',
+      spellLore: SpellLores.bigWagh,
     },
     oglok: {
       name: 'Oglok',
     },
     raknik: {
       name: 'Raknik',
-      spellLore: 'lilWagh',
+      spellLore: SpellLores.lilWagh,
     },
     grn_goblin_great_shaman: {
       name: 'Goblin Great Shaman',
-      spellLore: 'lilWagh',
+      spellLore: SpellLores.lilWagh,
     },
     grn_night_goblin_warboss: {
       name: 'Night Goblin Warboss',
@@ -971,76 +973,76 @@ const vanilla2Characters = {
     },
     grn_river_troll_hag: {
       name: 'Giant River Troll Hag',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     grn_goblin_big_boss: {
       name: 'Goblin Big Boss',
     },
     grn_night_goblin_shaman: {
       name: 'Night Goblin Shaman',
-      spellLore: 'lilWagh',
+      spellLore: SpellLores.lilWagh,
     },
     grn_orc_shaman: {
       name: 'Orc Shaman',
-      spellLore: 'bigWagh',
+      spellLore: SpellLores.bigWagh,
     },
   },
   wh_main_vmp_vampire_counts_lords: {
     vmp_heinrich: {
       name: 'Heinrich Kemmler',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_helman_ghorst: {
       name: 'Helman Ghorst',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_isabella_von_carstein: {
       name: 'Isabella von Carstein',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_mannfred: {
       name: 'Mannlet von Carstein',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_vlad_von_carstein: {
       name: 'Chad von Carstein',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_red_duke: {
       name: 'The Red Duke',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_bloodline_blood_dragon_lord: {
       name: 'Blood Dragon Vampire Lord',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_bloodline_lahmian_lord: {
       name: 'Lahmian Vampire Lord',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     vmp_bloodline_necrarch_lord: {
       name: 'Necrarch Vampire Lord',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     vmp_bloodline_strigoi_lord: {
       name: 'Strigoi Vampire Lord',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     vmp_bloodline_von_carstein_lord: {
       name: 'Von Carstein Vampire Lord',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     vmp_master_necromancer: {
       name: 'Master Necromancer',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_strigoi_ghoul_king: {
       name: 'Strigoi Ghoul King',
-      spellLore: 'mixed',
+      spellLore: SpellLores.mixed,
     },
     vmp_lord: {
       name: 'Vampire Lord',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
   },
   wh_main_vmp_vampire_counts_heroes: {
@@ -1052,15 +1054,15 @@ const vanilla2Characters = {
     },
     vmp_necromancer: {
       name: 'Necromancer',
-      spellLore: 'vampires',
+      spellLore: SpellLores.vampires,
     },
     vmp_vampire: {
       name: 'Vampire (Death)',
-      spellLore: 'death',
+      spellLore: SpellLores.death,
     },
     vmp_vampire_shadow: {
       name: 'Vampire (Shadows)',
-      spellLore: 'shadows',
+      spellLore: SpellLores.shadows,
     },
     vmp_wight_king: {
       name: 'Wight King',

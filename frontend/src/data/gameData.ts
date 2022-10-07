@@ -1,17 +1,19 @@
 import { factions2, factions3, factions3Mixu } from '../data/factionData';
-import radious2CharacterImgs from '../imgs/characters/radious2/radious2CharacterImgs';
-import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
-import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
-import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
-import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
+import { GameInterface } from '../types/interfaces/GameInterface';
 import gameImages from '../imgs/games/gameImages';
-import GameInterface from '../types/interfaces/GameInterface';
-import radious2Characters from './radious2Characters';
-import radious3Characters from './radious3Characters';
-import sfo2Characters from './sfo2Characters';
+
 import vanilla2Characters from './vanilla2Characters';
+import sfo2Characters from './sfo2Characters';
+import radious2Characters from './radious2Characters';
 import vanilla3Characters from './vanilla3Characters';
+import radious3Characters from './radious3Characters';
 import mixu3Characters from './mixu3Characters';
+
+import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
+import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
+import radious2CharacterImgs from '../imgs/characters/radious2/radious2CharacterImgs';
+import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
+import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
 import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
 
 const gameData: GameInterface = {
