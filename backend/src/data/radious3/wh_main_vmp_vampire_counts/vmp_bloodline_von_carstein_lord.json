@@ -154,6 +154,9 @@
                             }
                           ]
                         }
+                      ],
+                      "target_if": [
+                        "Unit is a Lord or Hero"
                       ]
                     }
                   }
@@ -528,6 +531,9 @@
                             }
                           ]
                         }
+                      ],
+                      "target_if": [
+                        "Flying unit"
                       ]
                     }
                   }
@@ -638,6 +644,10 @@
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false
                         }
+                      ],
+                      "enabled_if": [
+                        "Leadership is higher than broken",
+                        "In melee"
                       ]
                     }
                   }
@@ -2065,6 +2075,10 @@
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false
                         }
+                      ],
+                      "target_if": [
+                        "Hit point replenishment cap not reached",
+                        "Undead"
                       ]
                     }
                   },
@@ -2122,6 +2136,10 @@
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false
                         }
+                      ],
+                      "target_if": [
+                        "Hit point replenishment cap not reached",
+                        "Undead"
                       ]
                     }
                   }
@@ -2201,6 +2219,10 @@
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false
                         }
+                      ],
+                      "target_if": [
+                        "Hit point replenishment cap not reached",
+                        "Undead"
                       ]
                     }
                   },
@@ -2258,6 +2280,10 @@
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false
                         }
+                      ],
+                      "target_if": [
+                        "Hit point replenishment cap not reached",
+                        "Undead"
                       ]
                     }
                   }
@@ -2380,6 +2406,13 @@
                           "is_hidden_in_ui": false,
                           "freeze_recharge": false
                         }
+                      ],
+                      "enabled_if": [
+                        "Leadership is higher than broken",
+                        "Casting"
+                      ],
+                      "target_if": [
+                        "Undead"
                       ]
                     }
                   }
@@ -3611,7 +3644,10 @@
                         "affects_allies": true
                       },
                       "mana_cost": 20,
-                      "target_self": false
+                      "target_self": false,
+                      "target_if": [
+                        "Grounded"
+                      ]
                     }
                   },
                   {
@@ -3674,7 +3710,10 @@
                         "affects_allies": true
                       },
                       "mana_cost": 20,
-                      "target_self": false
+                      "target_self": false,
+                      "target_if": [
+                        "Grounded"
+                      ]
                     }
                   }
                 ],
@@ -3759,7 +3798,10 @@
                         "affects_allies": true
                       },
                       "mana_cost": 20,
-                      "target_self": false
+                      "target_self": false,
+                      "target_if": [
+                        "Grounded"
+                      ]
                     }
                   },
                   {
@@ -3822,7 +3864,10 @@
                         "affects_allies": true
                       },
                       "mana_cost": 20,
-                      "target_self": false
+                      "target_self": false,
+                      "target_if": [
+                        "Grounded"
+                      ]
                     }
                   }
                 ],
@@ -6230,6 +6275,10 @@
                         "is_hidden_in_ui": false,
                         "freeze_recharge": false
                       }
+                    ],
+                    "target_if": [
+                      "Hit point replenishment cap not reached",
+                      "Undead"
                     ]
                   }
                 }

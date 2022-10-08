@@ -119,6 +119,8 @@ interface AbilityInterface {
     target_enemies: boolean;
     target_ground: boolean;
     target_self: boolean;
+    enabled_if?: Array<string>;
+    target_if?: Array<string>;
     num_effected_friendly_units?: number;
     num_effected_enemy_units?: number;
     target_intercept_range: number;
