@@ -1,7 +1,7 @@
 import { SpellLores } from '../types/interfaces/GameInterface';
 
 const vanilla2Characters = {
-  wh2_dlc09_tmb_tomb_kings_lords: {
+  tmb_tomb_kings_lords: {
     tmb_arkhan: {
       name: 'Arkhan the Black',
       spellLore: SpellLores.death,
@@ -39,7 +39,7 @@ const vanilla2Characters = {
       name: 'Alkhazzar II of the Sixth Dynasty',
     },
   },
-  wh2_dlc09_tmb_tomb_kings_heroes: {
+  tmb_tomb_kings_heroes: {
     tmb_liche_priest_death: {
       name: 'Liche Priest (Death)',
       spellLore: SpellLores.death,
@@ -63,7 +63,7 @@ const vanilla2Characters = {
       name: 'Tomb Prince',
     },
   },
-  wh2_dlc11_cst_vampire_coast_lords: {
+  cst_vampire_coast_lords: {
     cst_aranessa: {
       name: 'Aranessa Saltspite',
     },
@@ -119,7 +119,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.deeps,
     },
   },
-  wh2_dlc11_cst_vampire_coast_heroes: {
+  cst_vampire_coast_heroes: {
     cst_ghost_paladin: {
       name: 'Robert Barthelemy',
     },
@@ -142,7 +142,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.vampires,
     },
   },
-  wh2_main_def_dark_elves_lords: {
+  def_dark_elves_lords: {
     def_crone: {
       name: 'Crone Hellebron',
     },
@@ -199,7 +199,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.shadows,
     },
   },
-  wh2_main_def_dark_elves_heroes: {
+  def_dark_elves_heroes: {
     def_death_hag: {
       name: 'Death Hag',
     },
@@ -230,7 +230,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.shadows,
     },
   },
-  wh2_main_hef_high_elves_lords: {
+  hef_high_elves_lords: {
     hef_alarielle: {
       name: 'Alarielle the Radiant',
       spellLore: SpellLores.mixed,
@@ -298,7 +298,7 @@ const vanilla2Characters = {
       name: 'Princess',
     },
   },
-  wh2_main_hef_high_elves_heroes: {
+  hef_high_elves_heroes: {
     hef_handmaiden: {
       name: 'Handmaiden',
     },
@@ -346,7 +346,7 @@ const vanilla2Characters = {
       name: 'Noble',
     },
   },
-  wh2_main_lzd_lizardmen_lords: {
+  lzd_lizardmen_lords: {
     gor_rok: {
       name: 'Gor-Rok',
     },
@@ -396,7 +396,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.light,
     },
   },
-  wh2_main_lzd_lizardmen_heroes: {
+  lzd_lizardmen_heroes: {
     lzd_lord_kroak: {
       name: 'Lord Kroak',
       spellLore: SpellLores.mixed,
@@ -420,7 +420,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.heavens,
     },
   },
-  wh2_main_skv_skaven_lords: {
+  skv_skaven_lords: {
     ikit_claw: {
       name: 'Ikit Claw',
       spellLore: SpellLores.ruin,
@@ -460,7 +460,7 @@ const vanilla2Characters = {
       name: 'Warlord',
     },
   },
-  wh2_main_skv_skaven_heroes: {
+  skv_skaven_heroes: {
     skv_ghoritch: {
       name: 'Ghoritch',
     },
@@ -486,7 +486,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.ruin,
     },
   },
-  wh_dlc03_bst_beastmen_lords: {
+  bst_beastmen_lords: {
     bst_khazrak: {
       name: 'Khazrak the One-Eye',
     },
@@ -523,7 +523,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.wild,
     },
   },
-  wh_dlc03_bst_beastmen_heroes: {
+  bst_beastmen_heroes: {
     bst_bray_shaman_beast: {
       name: 'Bray-Shaman (Beasts)',
       spellLore: SpellLores.beasts,
@@ -547,7 +547,7 @@ const vanilla2Characters = {
       name: 'Wargor',
     },
   },
-  wh_dlc05_wef_wood_elves_lords: {
+  wef_wood_elves_lords: {
     wef_drycha: {
       name: 'Drycha',
       spellLore: SpellLores.shadows,
@@ -605,7 +605,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.shadows,
     },
   },
-  wh_dlc05_wef_wood_elves_heroes: {
+  wef_wood_elves_heroes: {
     wef_ariel: {
       name: 'Ariel',
       spellLore: SpellLores.mixed,
@@ -649,7 +649,7 @@ const vanilla2Characters = {
       name: 'Waystalker',
     },
   },
-  wh_dlc08_nor_norsca_lords: {
+  nor_norsca_lords: {
     nor_throgg: {
       name: 'Throgg',
     },
@@ -663,7 +663,7 @@ const vanilla2Characters = {
       name: 'Marauder Chieftain',
     },
   },
-  wh_dlc08_nor_norsca_heroes: {
+  nor_norsca_heroes: {
     nor_kihar: {
       name: 'Kihar the Tormentor',
     },
@@ -691,7 +691,7 @@ const vanilla2Characters = {
       name: 'Skin Wolf Werekin',
     },
   },
-  wh_main_brt_bretonnia_lords: {
+  brt_bretonnia_lords: {
     brt_alberic: {
       name: 'Alberic de Bordeleaux',
     },
@@ -721,7 +721,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.life,
     },
   },
-  wh_main_brt_bretonnia_heroes: {
+  brt_bretonnia_heroes: {
     brt_green_knight: {
       name: 'The Green Knight',
     },
@@ -744,7 +744,7 @@ const vanilla2Characters = {
       name: 'Paladin',
     },
   },
-  wh_main_chs_chaos_lords: {
+  chs_chaos_lords: {
     chs_archaon: {
       name: 'Archaon the Everchosen',
       spellLore: SpellLores.fire,
@@ -779,7 +779,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.shadows,
     },
   },
-  wh_main_chs_chaos_heroes: {
+  chs_chaos_heroes: {
     chs_exalted_hero: {
       name: 'Exalted Hero',
     },
@@ -800,7 +800,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.shadows,
     },
   },
-  wh_main_dwf_dwarfs_lords: {
+  dwf_dwarfs_lords: {
     dwf_belegar: {
       name: 'Belegar Ironhammer',
     },
@@ -825,7 +825,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.runic,
     },
   },
-  wh_main_dwf_dwarfs_heroes: {
+  dwf_dwarfs_heroes: {
     dwf_master_engineer_ghost: {
       name: 'Dramar Hammerfist',
     },
@@ -853,7 +853,7 @@ const vanilla2Characters = {
       name: 'Thane',
     },
   },
-  wh_main_emp_empire_lords: {
+  emp_empire_lords: {
     emp_balthasar: {
       name: 'Balthasar Gelt',
       spellLore: SpellLores.metal,
@@ -880,7 +880,7 @@ const vanilla2Characters = {
       name: 'Huntsman General',
     },
   },
-  wh_main_emp_empire_heroes: {
+  emp_empire_heroes: {
     emp_hunter_doctor_hertwig_van_hal: {
       name: 'Hertwig Van Hal',
     },
@@ -931,7 +931,7 @@ const vanilla2Characters = {
       name: 'Witch Hunter',
     },
   },
-  wh_main_grn_greenskins_lords: {
+  grn_greenskins_lords: {
     grn_azhag: {
       name: 'Azhag the Slaughterer',
       spellLore: SpellLores.death,
@@ -967,7 +967,7 @@ const vanilla2Characters = {
       name: 'Orc Warboss',
     },
   },
-  wh_main_grn_greenskins_heroes: {
+  grn_greenskins_heroes: {
     grn_black_orc_big_boss: {
       name: 'Black Orc Big Boss',
     },
@@ -987,7 +987,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.bigWagh,
     },
   },
-  wh_main_vmp_vampire_counts_lords: {
+  vmp_vampire_counts_lords: {
     vmp_heinrich: {
       name: 'Heinrich Kemmler',
       spellLore: SpellLores.vampires,
@@ -1045,7 +1045,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.vampires,
     },
   },
-  wh_main_vmp_vampire_counts_heroes: {
+  vmp_vampire_counts_heroes: {
     vmp_kevon_lloydstein: {
       name: 'Kevin von Lloydstein',
     },

@@ -5,7 +5,7 @@ const vanilla3Characters = {
   ...vanilla2Characters,
 
   // Chieftain spelled properly in 3
-  wh_dlc08_nor_norsca_lords: {
+  nor_norsca_lords: {
     nor_throgg: {
       name: 'Throgg',
     },
@@ -24,7 +24,7 @@ const vanilla3Characters = {
       name: 'Marauder Chieftain',
     },
   },
-  wh_dlc08_nor_norsca_heroes: {
+  nor_norsca_heroes: {
     nor_kihar: {
       name: 'Kihar the Tormentor',
       spellLore: SpellLores.slaanesh,
@@ -57,7 +57,7 @@ const vanilla3Characters = {
     },
   },
 
-  wh_main_vmp_vampire_counts_lords: {
+  vmp_vampire_counts_lords: {
     vmp_heinrich: {
       name: 'Heinrich Kemmler',
       spellLore: SpellLores.vampires,
@@ -115,7 +115,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.vampires,
     },
   },
-  wh_main_vmp_vampire_counts_heroes: {
+  vmp_vampire_counts_heroes: {
     vmp_isabella_von_carstein_hero: {
       name: 'Isabella von Carstein (Hero)',
       spellLore: SpellLores.vampires,
@@ -148,7 +148,7 @@ const vanilla3Characters = {
   },
 
   // // No Black Ark Blessed Dread
-  // wh2_main_def_dark_elves_lords: {
+  // def_dark_elves_lords: {
   //   def_crone: {
   //     name: 'Crone Hellebron',
   //   },
@@ -203,7 +203,7 @@ const vanilla3Characters = {
   //   },
   // },
 
-  wh3_main_cth_cathay_lords: {
+  cth_cathay_lords: {
     cth_miao_ying: {
       name: 'Miao Ying',
       spellLore: SpellLores.mixed,
@@ -232,7 +232,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.yin,
     },
   },
-  wh3_main_cth_cathay_heroes: {
+  cth_cathay_heroes: {
     cth_alchemist: {
       name: 'Alchemist',
       spellLore: SpellLores.metal,
@@ -242,7 +242,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.heavens,
     },
   },
-  wh3_main_dae_daemons_lords: {
+  dae_daemons_lords: {
     dae_cha_be_lakor_0: {
       name: "Be'lakor",
       spellLore: SpellLores.shadows,
@@ -305,7 +305,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.tzeentch,
     },
   },
-  wh3_main_dae_daemons_heroes: {
+  dae_daemons_heroes: {
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
       spellLore: SpellLores.shadows,
@@ -334,7 +334,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.nurgle,
     },
   },
-  wh3_main_kho_khorne_lords: {
+  kho_khorne_lords: {
     kho_skarbrand: {
       name: 'Skarbrand the Exiled',
     },
@@ -351,7 +351,7 @@ const vanilla3Characters = {
       name: 'Daemon Prince of Khorne',
     },
   },
-  wh3_main_kho_khorne_heroes: {
+  kho_khorne_heroes: {
     kho_bloodreaper: {
       name: 'Bloodreaper',
     },
@@ -362,7 +362,7 @@ const vanilla3Characters = {
       name: 'Exalted Hero of Khorne',
     },
   },
-  wh3_main_ksl_kislev_lords: {
+  ksl_kislev_lords: {
     ksl_boris: {
       name: 'Boris Ursus',
     },
@@ -388,7 +388,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.tempest,
     },
   },
-  wh3_main_ksl_kislev_heroes: {
+  ksl_kislev_heroes: {
     ksl_frost_maiden_ice: {
       name: 'Frost Maiden (Ice)',
       spellLore: SpellLores.ice,
@@ -401,7 +401,7 @@ const vanilla3Characters = {
       name: 'Patriarch',
     },
   },
-  wh3_main_nur_nurgle_lords: {
+  nur_nurgle_lords: {
     nur_kugath: {
       name: "Ku'gath Plaguefather",
       spellLore: SpellLores.nurgle,
@@ -435,7 +435,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.mixed,
     },
   },
-  wh3_main_nur_nurgle_heroes: {
+  nur_nurgle_heroes: {
     nur_cultist: {
       name: 'Cultist of Nurgle',
     },
@@ -451,7 +451,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.nurgle,
     },
   },
-  wh3_main_ogr_ogre_kingdoms_lords: {
+  ogr_ogre_kingdoms_lords: {
     ogr_greasus_goldtooth: {
       name: 'Greasus Goldtooth',
     },
@@ -471,7 +471,7 @@ const vanilla3Characters = {
       name: 'Tyrant',
     },
   },
-  wh3_main_ogr_ogre_kingdoms_heroes: {
+  ogr_ogre_kingdoms_heroes: {
     ogr_butcher_beasts: {
       name: 'Butcher (Beasts)',
       spellLore: SpellLores.beasts,
@@ -488,7 +488,7 @@ const vanilla3Characters = {
       name: 'Hunter',
     },
   },
-  wh3_main_sla_slaanesh_lords: {
+  sla_slaanesh_lords: {
     sla_nkari: {
       name: "N'Kari",
       spellLore: SpellLores.slaanesh,
@@ -517,7 +517,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.mixed,
     },
   },
-  wh3_main_sla_slaanesh_heroes: {
+  sla_slaanesh_heroes: {
     sla_alluress_shadow: {
       name: 'Alluress (Shadow)',
       spellLore: SpellLores.shadows,
@@ -538,7 +538,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.slaanesh,
     },
   },
-  wh3_main_tze_tzeentch_lords: {
+  tze_tzeentch_lords: {
     tze_kairos: {
       name: 'Kairos Fateweaver',
       spellLore: SpellLores.mixed,
@@ -572,7 +572,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.mixed,
     },
   },
-  wh3_main_tze_tzeentch_heroes: {
+  tze_tzeentch_heroes: {
     tze_cultist: {
       name: 'Cultist of Tzeentch',
       spellLore: SpellLores.fire,
@@ -595,7 +595,7 @@ const vanilla3Characters = {
     },
   },
 
-  wh_main_chs_chaos_lords: {
+  chs_chaos_lords: {
     chs_archaon: {
       name: 'Archaon the Everchosen',
       spellLore: SpellLores.mixed,
@@ -692,7 +692,7 @@ const vanilla3Characters = {
     },
   },
 
-  wh_main_chs_chaos_heroes: {
+  chs_chaos_heroes: {
     chs_exalted_hero: {
       name: 'Exalted Hero',
     },

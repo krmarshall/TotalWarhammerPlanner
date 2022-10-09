@@ -9,7 +9,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const FactionSelector = () => {
   const { state, dispatch } = useContext(AppContext);
   const { selectedMod } = state;
-  const [currentGameFactions, setCurrentGameFactions] = useState(Object.keys(gameData['vanilla2'].factions));
+  const [currentGameFactions, setCurrentGameFactions] = useState(Object.keys(gameData['vanilla3'].factions));
 
   useEffect(() => {
     setCurrentGameFactions(Object.keys(gameData[selectedMod].factions));
