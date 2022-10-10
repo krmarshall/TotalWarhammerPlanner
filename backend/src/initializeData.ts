@@ -14,10 +14,10 @@ interface bulkDataInterface {
 const bulkData: bulkDataInterface = {};
 
 const initializeData = () => {
-  const gamePaths = glob.sync('./src/data/*/');
+  const gamePaths = glob.sync('./src/TWPData/*/');
 
   gamePaths.forEach((gamePath) => {
-    const game = gamePath.split('./src/data/')[1].replace('/', '');
+    const game = gamePath.split('./src/TWPData/')[1].replace('/', '');
     bulkData[game] = {};
     const factionPaths = glob.sync(`${gamePath}*/`);
 
