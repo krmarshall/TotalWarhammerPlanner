@@ -76,7 +76,7 @@ const Header = () => {
                 />
                 <h1 className="z-10 text-center text-3xl -mt-8 mb-4 text-gray-200 text-shadow-border">Toggle Game</h1>
               </div>
-            ) : location.pathname === '/about' || location.pathname === '/issues' ? (
+            ) : location.pathname === '/about' || location.pathname === '/issues' || location.pathname === '/404' ? (
               <></>
             ) : (
               <div className="relative m-auto -mb-48 mt-2 w-[9.5rem] h-[9.5rem] bg-gray-700 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]">

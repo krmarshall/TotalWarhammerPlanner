@@ -12,7 +12,7 @@ const Issues = () => {
         <p className="text-center text-gray-200 text-2xl">
           If you think you&apos;ve found a bug or problem the easiest way to message me is on{' '}
           <a
-            href="https://www.reddit.com/user/Fearhorn/"
+            href="https://www.reddit.com/message/compose?to=Fearhorn&subject=&message="
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500"

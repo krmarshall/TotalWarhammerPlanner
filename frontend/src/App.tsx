@@ -10,6 +10,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Planner = lazy(() => import('./pages/Planner'));
 const About = lazy(() => import('./pages/About'));
 const Issues = lazy(() => import('./pages/Issues'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const App = () => {
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1023 });
@@ -60,9 +61,13 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/issues" element={<Issues />} />
+                <Route path="/404" element={<NotFound />} />
 
                 <Route path="/planner/:mod/:faction/:character/:code" element={<Planner />} />
                 <Route path="/planner/:mod/:faction/:character" element={<Planner />} />
+
+                {/* Fallback Route */}
+                <Route path="/*" element={<NotFound />} />
               </Routes>
             )}
           </Suspense>
