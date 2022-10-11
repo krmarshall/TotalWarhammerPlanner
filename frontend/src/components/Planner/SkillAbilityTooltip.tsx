@@ -50,7 +50,8 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
       phase.imbue_magical ||
       phase.imbue_ignition ||
       phase.replenish_ammo ||
-      phase.cant_move
+      phase.cant_move ||
+      phase.imbue_contact
     ) {
       hasPhases = true;
     }

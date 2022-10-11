@@ -28,6 +28,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
       relatedAbilities.push(...effect.related_abilities);
     }
   });
+  const relatedAbilitiesKeys: Array<string> = [];
   return (
     <span className="text-center flex flex-row">
       <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
@@ -58,19 +59,15 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
           })}
         </div>
       </div>
-      {
-        relatedAbilities.length !== 0 && <SkillAbilityTooltip ability={relatedAbilities[0]} />
-        // relatedAbilities.map((ability, index) => {
-        //   return (
-        //     <div
-        //       key={index}
-        //       className="mt-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600"
-        //     >
-        //       <SkillAbilityTooltip ability={ability} />
-        //     </div>
-        //   );
-        // })
-      }
+      {/* {relatedAbilities.length !== 0 && <SkillAbilityTooltip ability={relatedAbilities[0]} />} */}
+      {relatedAbilities.length !== 0 &&
+        relatedAbilities.map((ability, index) => {
+          if (!relatedAbilitiesKeys.includes(ability.unit_ability.key)) {
+            relatedAbilitiesKeys.push(ability.unit_ability.key);
+            relatedAbilitiesKeys.push(`${ability.unit_ability.key}_upgraded`);
+            return <SkillAbilityTooltip key={index} ability={ability} />;
+          }
+        })}
     </span>
   );
 };

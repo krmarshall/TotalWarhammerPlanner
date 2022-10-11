@@ -31,6 +31,7 @@ interface PhaseInterface {
   max_damaged_entities?: number;
   imbue_magical?: boolean;
   imbue_ignition?: boolean;
+  imbue_contact?: PhaseInterface;
   cant_move?: boolean;
   replenish_ammo?: number;
   stat_effects?: Array<StatEffectInterface>;

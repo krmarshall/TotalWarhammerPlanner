@@ -157,6 +157,12 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
           <p className="my-auto ml-1">Flaming Attacks</p>
         </div>
       )}
+      {phase.imbue_contact !== undefined && (
+        <div className="text-left">
+          <h5 className="w-24">Imbue Contact:</h5>
+          <SkillPhase phase={phase.imbue_contact} />
+        </div>
+      )}
       {phase.replenish_ammo !== undefined && phase.replenish_ammo > 0 && (
         <div className="flex flex-row">
           <h5 className="text-left w-24">Replenish Ammo:</h5>

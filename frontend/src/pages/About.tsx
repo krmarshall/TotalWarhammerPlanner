@@ -50,7 +50,6 @@ const About = () => {
         <ul className="list-disc list-inside">
           <li className="text-gray-200 text-2xl">TW2 quest item levels</li>
           <li className="text-gray-200 text-2xl">Faction Effects</li>
-          <li className="text-gray-200 text-2xl">Army Ability Tooltips</li>
           <li className="text-gray-200 text-2xl">Brettonia vow details</li>
           <li className="text-gray-200 text-2xl">Mobile UI</li>
           <li className="text-gray-200 text-2xl">Character stats</li>
