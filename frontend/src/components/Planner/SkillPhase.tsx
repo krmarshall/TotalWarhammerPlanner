@@ -59,7 +59,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
       )}
       {phase.ability_recharge_change !== undefined && (
         <div className="flex flex-row">
-          <h5 className="text-left w-24">Ability Recharge Mod:</h5>
+          <h5 className="text-left w-24">Decrease Cooldowns:</h5>
           <p className="my-auto ml-1">{phase.ability_recharge_change}s</p>
         </div>
       )}

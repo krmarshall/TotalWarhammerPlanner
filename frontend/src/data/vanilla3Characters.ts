@@ -17,7 +17,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.tzeentch,
     },
     nor_burplesmirk_spewpit: {
-      name: 'Burplesmirk Spewpit???',
+      name: 'Burplesmirk Spewpit',
       spellLore: SpellLores.nurgle,
     },
     nor_marauder_chieftain: {
@@ -30,7 +30,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.slaanesh,
     },
     nor_killgore_slaymaim: {
-      name: 'Killgore Slaymaim???',
+      name: 'Killgore Slaymaim',
     },
     nor_fimir_balefiend_fire: {
       name: 'Fimir Balefiend (Fire)',
@@ -273,7 +273,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.nurgle,
     },
     sla_herald_of_slaanesh_shadow: {
-      name: 'Herald of Slaanesh (Shadow)',
+      name: 'Herald of Slaanesh (Shadows)',
       spellLore: SpellLores.shadows,
     },
     sla_herald_of_slaanesh_slaanesh: {
@@ -281,7 +281,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.slaanesh,
     },
     sla_exalted_keeper_of_secrets_shadow: {
-      name: 'Exalted Keeper of Secrets (Shadow)',
+      name: 'Exalted Keeper of Secrets (Shadows)',
       spellLore: SpellLores.shadows,
     },
     sla_exalted_keeper_of_secrets_slaanesh: {
@@ -307,7 +307,7 @@ const vanilla3Characters = {
   },
   dae_daemons_heroes: {
     sla_alluress_shadow: {
-      name: 'Alluress (Shadow)',
+      name: 'Alluress (Shadows)',
       spellLore: SpellLores.shadows,
     },
     sla_alluress_slaanesh: {
@@ -494,7 +494,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.slaanesh,
     },
     sla_herald_of_slaanesh_shadow: {
-      name: 'Herald of Slaanesh (Shadow)',
+      name: 'Herald of Slaanesh (Shadows)',
       spellLore: SpellLores.shadows,
     },
     sla_herald_of_slaanesh_slaanesh: {
@@ -502,7 +502,7 @@ const vanilla3Characters = {
       spellLore: SpellLores.slaanesh,
     },
     sla_exalted_keeper_of_secrets_shadow: {
-      name: 'Exalted Keeper of Secrets (Shadow)',
+      name: 'Exalted Keeper of Secrets (Shadows)',
       spellLore: SpellLores.shadows,
     },
     sla_exalted_keeper_of_secrets_slaanesh: {
@@ -519,7 +519,7 @@ const vanilla3Characters = {
   },
   sla_slaanesh_heroes: {
     sla_alluress_shadow: {
-      name: 'Alluress (Shadow)',
+      name: 'Alluress (Shadows)',
       spellLore: SpellLores.shadows,
     },
     sla_alluress_slaanesh: {
