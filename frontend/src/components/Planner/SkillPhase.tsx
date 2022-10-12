@@ -39,7 +39,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
           <p className="my-auto ml-1">{phase.fatigue_change_ratio * 100}%</p>
         </div>
       )}
-      {phase.mana_regen_mod !== undefined && phase.mana_regen_mod > 0 && (
+      {phase.mana_regen_mod !== undefined && (
         <div className="flex flex-row">
           <h5 className="text-left w-24">Power Recharge:</h5>
           <p className="my-auto ml-1">
@@ -48,7 +48,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
           </p>
         </div>
       )}
-      {phase.mana_max_depletion_mod !== undefined && phase.mana_max_depletion_mod > 0 && (
+      {phase.mana_max_depletion_mod !== undefined && (
         <div className="flex flex-row">
           <h5 className="text-left w-24">Reserves:</h5>
           <p className="my-auto ml-1">
@@ -163,7 +163,7 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
           <SkillPhase phase={phase.imbue_contact} />
         </div>
       )}
-      {phase.replenish_ammo !== undefined && phase.replenish_ammo > 0 && (
+      {phase.replenish_ammo !== undefined && (
         <div className="flex flex-row">
           <h5 className="text-left w-24">Replenish Ammo:</h5>
           <p className="my-auto ml-1">{phase.replenish_ammo}%</p>

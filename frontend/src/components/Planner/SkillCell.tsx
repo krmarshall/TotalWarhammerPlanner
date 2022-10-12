@@ -352,6 +352,12 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
                   skill={skill}
                   skillPoints={index}
                   thisSkillsCurrentPoints={thisSkillsCurrentPoints}
+                  selectable={selectable}
+                  currentRank={
+                    (characterBuild?.rank as number) -
+                    (characterBuild?.startingSkillPoints as number) -
+                    (characterBuild?.autoUnlockSkillPoints as number)
+                  }
                   blocked={blocked}
                 />
               );

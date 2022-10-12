@@ -25,37 +25,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
   target += unitAbility.target_friends ? 'Allies ' : '';
   target += unitAbility.target_ground ? 'Ground ' : '';
   target += unitAbility.target_self ? 'Self ' : '';
-  let doesTarget = false;
-  if (
-    unitAbility.target_enemies ||
-    unitAbility.target_friends ||
-    unitAbility.target_ground ||
-    unitAbility.target_self
-  ) {
-    doesTarget = true;
-  }
-
-  let hasPhases = false;
-  unitAbility.phases?.forEach((phase) => {
-    if (
-      phase.stat_effects ||
-      (phase.attributes !== undefined && phase.attributes.length > 0) ||
-      phase.mana_max_depletion_mod ||
-      phase.fatigue_change_ratio ||
-      phase.mana_regen_mod ||
-      phase.ability_recharge_change ||
-      phase.heal_amount ||
-      phase.barrier_heal_amount ||
-      phase.damage_amount ||
-      phase.imbue_magical ||
-      phase.imbue_ignition ||
-      phase.replenish_ammo ||
-      phase.cant_move ||
-      phase.imbue_contact
-    ) {
-      hasPhases = true;
-    }
-  });
+  const doesTarget = target.length > 0 ? true : false;
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
 
@@ -210,7 +180,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           })}
         </div>
       )}
-      {hasPhases && (
+      {unitAbility?.phases !== undefined && unitAbility?.phases.length > 0 && (
         <div className="text-left">
           <h5 className="w-24">Phases:</h5>
           <div className="w-auto ml-6">
