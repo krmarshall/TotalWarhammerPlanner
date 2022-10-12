@@ -1,13 +1,16 @@
 import { Request, Response } from 'express';
 import { bulkData } from './initializeData';
+import { usageData } from './usageLog';
 // import { readFile } from 'fs/promises';
 
 const apiListener = (req: Request, res: Response) => {
   const selectedCharacter = bulkData[req.params.gameKey]?.[req.params.factionKey]?.[req.params.characterKey];
   if (selectedCharacter === undefined) {
+    usageData.misses++;
     return res.sendStatus(404);
   }
 
+  usageData.hits++;
   return res.status(200).json(selectedCharacter);
 };
 
