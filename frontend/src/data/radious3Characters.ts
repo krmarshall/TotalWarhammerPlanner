@@ -52,11 +52,6 @@ const radious3Characters = {
     brt_hermit_knight: { name: 'Hermit Knight' },
   },
 
-  chs_chaos_lords: {
-    ...vanilla3Characters.chs_chaos_lords,
-    kho_wrathcaller: { name: 'Wrathcaller' },
-  },
-
   dwf_dwarfs_lords: {
     ...vanilla3Characters.dwf_dwarfs_lords,
     dwf_guildmaster_general: { name: 'Guildmaster' },

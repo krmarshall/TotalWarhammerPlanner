@@ -19,27 +19,27 @@ beforeAll(() => {
 
 describe('Basic character API tests', () => {
   test('Basic example Malagor', async () => {
-    const response = await request.get('/api/vanilla2.wh_dlc03_bst_beastmen.bst_malagor');
+    const response = await request.get('/api/vanilla2.bst_beastmen.bst_malagor');
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(bulkData['vanilla2']['wh_dlc03_bst_beastmen']['bst_malagor']);
+    expect(response.body).toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid game returns 404', async () => {
-    const response = await request.get('/api/garbage.wh_dlc03_bst_beastmen.bst_malagor');
+    const response = await request.get('/api/garbage.beastmen.bst_malagor');
     expect(response.status).toBe(404);
-    expect(response.body).not.toEqual(bulkData['vanilla2']['wh_dlc03_bst_beastmen']['bst_malagor']);
+    expect(response.body).not.toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid faction returns 404', async () => {
     const response = await request.get('/api/vanilla2.garbage.bst_malagor');
     expect(response.status).toBe(404);
-    expect(response.body).not.toEqual(bulkData['vanilla2']['wh_dlc03_bst_beastmen']['bst_malagor']);
+    expect(response.body).not.toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid character returns 404', async () => {
-    const response = await request.get('/api/vanilla2.wh_dlc03_bst_beastmen.garbage');
+    const response = await request.get('/api/vanilla2.bst_beastmen.garbage');
     expect(response.status).toBe(404);
-    expect(response.body).not.toEqual(bulkData['vanilla2']['wh_dlc03_bst_beastmen']['bst_malagor']);
+    expect(response.body).not.toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 });
 
@@ -55,7 +55,7 @@ describe('Bulk character API test', () => {
   ];
 
   gameList.forEach((game) => {
-    const characterPathList = glob.sync(`./src/data/${game.name}/**/*.json`);
+    const characterPathList = glob.sync(`./src/TWPData/${game.name}/**/*.json`);
     const characterList = characterPathList.map((characterPath) => path.basename(characterPath, '.json'));
     const testedChars = [];
 
