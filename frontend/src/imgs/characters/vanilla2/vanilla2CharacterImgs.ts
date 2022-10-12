@@ -454,7 +454,7 @@ const vanilla2CharacterImgs = {
   dwf_ungrim: ungrim,
   dwf_grombrindal: grombrindal,
 
-  dwf_thane_ghost_artifact: thaneGhost3,
+  dwf_thane_ghost_artifact: thaneGhost2,
   dwf_thane: thane,
   dwf_master_engineer_ghost: masterEngineerGhost,
   dwf_runesmith_ghost: runesmithGhost,

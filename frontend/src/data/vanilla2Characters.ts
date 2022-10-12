@@ -840,7 +840,7 @@ const vanilla2Characters = {
       spellLore: SpellLores.runic,
     },
     dwf_thane_ghost_artifact: {
-      name: 'Great Axe Thane',
+      name: 'Hans Valhirsson',
     },
     all_engineer: {
       name: 'Master Engineer',
