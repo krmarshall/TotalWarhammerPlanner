@@ -62,6 +62,9 @@ const SkillTooltip = ({ skill, skillPoints, blocked }: SkillTooltipPropInterface
       {/* {relatedAbilities.length !== 0 && <SkillAbilityTooltip ability={relatedAbilities[0]} />} */}
       {relatedAbilities.length !== 0 &&
         relatedAbilities.map((ability, index) => {
+          if (index > 1) {
+            return;
+          }
           if (!relatedAbilitiesKeys.includes(ability.unit_ability.key)) {
             relatedAbilitiesKeys.push(ability.unit_ability.key);
             relatedAbilitiesKeys.push(`${ability.unit_ability.key}_upgraded`);

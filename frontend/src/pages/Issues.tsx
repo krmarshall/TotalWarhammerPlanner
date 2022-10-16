@@ -66,10 +66,16 @@ const Issues = () => {
             time being
           </li>
           <li className="text-gray-200 text-2xl">
+            Tooltips only show the first 2 related abilities for that skill currently.
+          </li>
+          <li className="text-gray-200 text-2xl">
             Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>
           <li className="text-gray-200 text-2xl">
             Vanilla 3 Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree
+          </li>
+          <li className="text-gray-200 text-2xl">
+            Vanilla 3 Kostaltyn is supposed to be able to select all 3 prayers.
           </li>
           <li className="text-gray-200 text-2xl">
             Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs in
