@@ -62,20 +62,14 @@ const Issues = () => {
             Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
           </li>
           <li className="text-gray-200 text-2xl">
-            Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are just cut off for the
-            time being
+            Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are cut off
           </li>
-          <li className="text-gray-200 text-2xl">
-            Tooltips only show the first 2 related abilities for that skill currently.
-          </li>
+          <li className="text-gray-200 text-2xl">Tooltips only show the first 2 related abilities for that skill</li>
           <li className="text-gray-200 text-2xl">
             Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>
           <li className="text-gray-200 text-2xl">
             Vanilla 3 Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree
-          </li>
-          <li className="text-gray-200 text-2xl">
-            Vanilla 3 Kostaltyn is supposed to be able to select all 3 prayers.
           </li>
           <li className="text-gray-200 text-2xl">
             Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs in
@@ -84,7 +78,9 @@ const Issues = () => {
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
           <li className="text-gray-200 text-2xl">Radious 2 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
-          <li className="text-gray-200 text-2xl">Radious 3 Cathay Celestial Champion poorly scaled icon</li>
+          <li className="text-gray-200 text-2xl">
+            Radious 3 Cathay Celestial Champion/Dwarf Runesmith poorly scaled icons
+          </li>
           <li className="text-gray-200 text-2xl">
             Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
             like copying from broken base game skill?)

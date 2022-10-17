@@ -47,7 +47,7 @@ const About = () => {
           Some general items I would like to add/improve in the future, nothing is set in stone and some of these would
           take a lot of time, but I&apos;ve at least thought about them.
         </p>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside mx-auto">
           <li className="text-gray-200 text-2xl">TW2 quest item levels</li>
           <li className="text-gray-200 text-2xl">Faction effects</li>
           <li className="text-gray-200 text-2xl">Brettonia vow details</li>

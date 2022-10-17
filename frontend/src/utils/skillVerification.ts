@@ -45,12 +45,12 @@ const hasRequiredSkill = (skill: SkillInterface, characterBuild: BuildInterface 
   return false;
 };
 
-const skillIsBlocked = (skillKey: string, characterBuild: BuildInterface | null) => {
+const skillIsBlocked = (skillNodeKey: string, characterBuild: BuildInterface | null) => {
   if (characterBuild?.blockedSkills.length === 0) {
     return false;
   }
   if (characterBuild?.blockedSkills) {
-    if (characterBuild.blockedSkills.includes(skillKey)) {
+    if (characterBuild.blockedSkills.includes(skillNodeKey)) {
       return true;
     } else {
       return false;
@@ -145,7 +145,7 @@ const skillIsValid = (
     return false;
   }
   // Check Blocked skills
-  if (skillIsBlocked(skillKey, characterBuild)) {
+  if (skillIsBlocked(skill.key, characterBuild)) {
     return false;
   }
   // Check x points in last y skills
@@ -189,7 +189,7 @@ const skillIncreaseIsValid = (
     return false;
   }
   // Check Blocked skills
-  if (skillIsBlocked(skillKey, characterBuild)) {
+  if (skillIsBlocked(skill.key, characterBuild)) {
     if (printError) {
       toast.error(`Skill is blocked by another skill.`, { id: `${skillKey} blocked` });
     }

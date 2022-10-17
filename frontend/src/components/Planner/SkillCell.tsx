@@ -57,7 +57,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   }, [thisSkillsCurrentPoints]);
 
   useEffect(() => {
-    if (characterBuild?.blockedSkills.includes(skillKey)) {
+    if (characterBuild?.blockedSkills.includes(skill.key)) {
       setBlocked(true);
     } else {
       setBlocked(false);
@@ -99,19 +99,20 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         return;
       }
     }
+
+    const newCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
     // If new skill add to characterBuild.selectedSkills and blockedSkills references if needed
     if (thisSkillsCurrentPoints === 0) {
-      characterBuild?.selectedSkills.push(skill.character_skill_key);
-      characterBuild?.selectedSkills.push(skill.key);
+      newCharacterBuild?.selectedSkills.push(skill.character_skill_key);
+      newCharacterBuild?.selectedSkills.push(skill.key);
       if (skill?.levels?.[0].blocks_character_skill_key) {
         skill?.levels?.[0].blocks_character_skill_key.forEach((blockedSkill) => {
-          characterBuild?.blockedSkills.push(blockedSkill);
+          newCharacterBuild?.blockedSkills.push(blockedSkill);
         });
       }
     }
     // Add skill point to build array
     // Add 1 to character rank
-    const newCharacterBuild = JSON.parse(JSON.stringify(characterBuild));
     newCharacterBuild.buildData[yIndex][xIndex]++;
     newCharacterBuild.rank++;
     if (autoRankSkill) {
