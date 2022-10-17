@@ -67,6 +67,13 @@ const missingRequiredPoints = (
   if (skill.required_num_parents === 0) {
     return false;
   }
+  if (
+    skill.required_num_parents > 0 &&
+    skill.parent_subset_required === undefined &&
+    skill.parent_required === undefined
+  ) {
+    return;
+  }
 
   if (characterBuild?.buildData && skill.parent_subset_required) {
     let spentPoints = 0;
