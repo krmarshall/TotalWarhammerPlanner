@@ -7,6 +7,7 @@ const apiListener = (req: Request, res: Response) => {
   const selectedCharacter = bulkData[req.params.gameKey]?.[req.params.factionKey]?.[req.params.characterKey];
   if (selectedCharacter === undefined) {
     usageData.misses++;
+    usageData.missList.push(req.originalUrl);
     return res.sendStatus(404);
   }
 
