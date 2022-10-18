@@ -13,14 +13,18 @@ const usageData: LogInterface = {
 const usageLog = (hoursInterval: number) => {
   const hoursIntervalInternal = hoursInterval * 1000 * 60 * 60;
   setInterval(() => {
-    console.log(`API Hits: ${usageData.hits}`);
-    console.log(`API Misses: ${usageData.misses}`);
-    console.log('API Missed Links:');
-    console.log(usageData.missList);
-    usageData.hits = 0;
-    usageData.misses = 0;
-    usageData.missList = [];
+    outputLog();
   }, hoursIntervalInternal);
 };
 
-export { usageLog, usageData };
+const outputLog = () => {
+  console.log(`API Hits: ${usageData.hits}`);
+  console.log(`API Misses: ${usageData.misses}`);
+  console.log('API Missed Links:');
+  console.log(usageData.missList);
+  usageData.hits = 0;
+  usageData.misses = 0;
+  usageData.missList = [];
+};
+
+export { usageLog, outputLog, usageData };
