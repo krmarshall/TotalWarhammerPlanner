@@ -59,12 +59,15 @@ const App = () => {
             ) : (
               <Routes>
                 <Route path="/" element={<Home />} />
+
+                <Route path="/planner/:mod/:faction/:character/:code" element={<Planner />} />
+                <Route path="/planner/:mod/:faction/:character" element={<Planner />} />
+
                 <Route path="/about" element={<About />} />
                 <Route path="/issues" element={<Issues />} />
                 <Route path="/404" element={<NotFound />} />
 
-                <Route path="/planner/:mod/:faction/:character/:code" element={<Planner />} />
-                <Route path="/planner/:mod/:faction/:character" element={<Planner />} />
+                <Route path="/:mod/:faction" element={<Home />} />
 
                 {/* Fallback Route */}
                 <Route path="/*" element={<NotFound />} />

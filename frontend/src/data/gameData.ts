@@ -1,4 +1,4 @@
-import { factions2, factions3, factions3Mixu } from '../data/factionData';
+import factions from '../data/factionData';
 import { GameInterface } from '../types/interfaces/GameInterface';
 import gameImages from '../imgs/games/gameImages';
 
@@ -20,34 +20,34 @@ const gameData: GameInterface = {
   vanilla2: {
     text: 'Vanilla 2',
     image: gameImages['vanilla2'],
-    factions: factions2,
+    factions: factions,
     characters: vanilla2Characters,
     characterImages: vanilla2CharacterImgs,
     updated: '4 Aug 2022',
     category: 'Base',
   },
-  sfo2: {
-    text: 'SFO 2',
-    image: gameImages['sfo2'],
-    factions: factions2,
-    characters: sfo2Characters,
-    characterImages: sfo2CharacterImgs,
-    updated: '31 Jul 2022',
-    category: 'Overhaul',
-  },
   radious2: {
     text: 'Radious 2',
     image: gameImages['radious2'],
-    factions: factions2,
+    factions: factions,
     characters: radious2Characters,
     characterImages: radious2CharacterImgs,
     updated: '6 Mar 2022',
     category: 'Overhaul',
   },
+  sfo2: {
+    text: 'SFO 2',
+    image: gameImages['sfo2'],
+    factions: factions,
+    characters: sfo2Characters,
+    characterImages: sfo2CharacterImgs,
+    updated: '31 Jul 2022',
+    category: 'Overhaul',
+  },
   vanilla3: {
     text: 'Vanilla 3',
     image: gameImages['vanilla3'],
-    factions: factions3,
+    factions: factions,
     characters: vanilla3Characters,
     characterImages: vanilla3CharacterImgs,
     updated: '6 Sep 2022',
@@ -56,20 +56,21 @@ const gameData: GameInterface = {
   radious3: {
     text: 'Radious 3',
     image: gameImages['radious3'],
-    factions: factions3,
+    factions: factions,
     characters: radious3Characters,
     characterImages: radious3CharacterImgs,
     updated: '12 Oct 2022',
     category: 'Overhaul',
   },
   mixu3: {
-    text: 'Mixu 3',
+    text: "Mixu's Compilation 3",
     image: gameImages['mixu3'],
-    factions: factions3Mixu,
+    factions: factions,
     characters: mixu3Characters,
     characterImages: mixu3CharacterImgs,
-    updated: '29 Sep 2022',
-    category: 'Character Mod',
+    updated: '16 Oct 2022',
+    category: 'Character Mod Compilation',
+    includes: ["Mixu's Legendary Lords", 'Gnoblar Hordes - The Unwashed Masses'],
   },
 };
 

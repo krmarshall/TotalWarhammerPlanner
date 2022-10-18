@@ -14,16 +14,11 @@ const CharacterSelector = () => {
   const { selectedMod, selectedFaction } = state;
   const navigate = useNavigate();
 
-  const [gameCharacters, setGameCharacters] = useState(gameData[selectedMod as keyof typeof gameData]?.characters);
+  const gameCharacters = gameData[selectedMod as keyof typeof gameData]?.characters;
 
   // Grab all the lord and hero keys from the currently selected game characters
   const [lordKeys, setLordKeys] = useState<Array<string>>();
   const [heroKeys, setHeroKeys] = useState<Array<string>>();
-
-  // Whenever the selected game changes refresh the characters
-  useEffect(() => {
-    setGameCharacters(gameData[selectedMod as keyof typeof gameData].characters);
-  }, [selectedMod]);
 
   // Whenever the faction/characters change refresh the lord/hero keys
   useEffect(() => {
@@ -33,7 +28,7 @@ const CharacterSelector = () => {
       setLordKeys(Object.keys(gameCharacters[`${selectedFaction}_lords` as keyof typeof gameCharacters]));
       setHeroKeys(Object.keys(gameCharacters[`${selectedFaction}_heroes` as keyof typeof gameCharacters]));
     }
-  }, [selectedFaction, gameCharacters]);
+  }, [selectedMod, selectedFaction]);
 
   const checkFactionUndefined = () => {
     return (

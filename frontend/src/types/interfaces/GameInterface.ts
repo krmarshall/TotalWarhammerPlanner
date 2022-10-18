@@ -40,6 +40,7 @@ interface GameInterface {
     characterImages: { [key: string]: string };
     updated: string;
     category: string;
+    includes?: Array<string>;
   };
 }
 

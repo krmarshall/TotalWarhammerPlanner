@@ -126,6 +126,20 @@ const mixu3Characters = {
     wef_wychwethyl: { name: 'Wychwethyl the Wild' },
   },
   wef_wood_elves_heroes: {},
+
+  gnb_gnoblars_lords: {
+    bragg_the_gutsman: { name: 'Bragg The Gutsman' },
+    gnobbo: { name: 'Gnobbo' },
+    king_bezos: { name: 'King Bezos' },
+    head_honcho: { name: 'Head Honcho' },
+  },
+  gnb_gnoblars_heroes: {
+    bloodnose: { name: 'Bloodnose' },
+    bonechewer_beasts: { name: 'Bloodchewer (Beasts)', spellLore: SpellLores.beasts },
+    bonechewer_great_maw: { name: 'Bloodchewer (Great Maw)', spellLore: SpellLores.greatMaw },
+    scrapper: { name: 'Scrapper' },
+    woodbelly: { name: 'Woodbelly' },
+  },
 };
 
 export default mixu3Characters;

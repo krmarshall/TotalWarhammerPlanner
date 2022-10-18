@@ -53,11 +53,22 @@ import vmp_dieter_helsnicht from './vmp_dieter_helsnicht.webp';
 import wef_daith from './wef_daith.webp';
 import wef_naieth_the_prophetess from './wef_naieth_the_prophetess.webp';
 import wef_wychwethyl from './wef_wychwethyl.webp';
+
+import gnb_bloodnose from './gnob_bloodnose_01.webp';
+import gnb_bonechewer from './gnob_bonechewer_01.webp';
+import gnb_bragg_the_gutsman from './gnob_bragg_the_gutsman.webp';
+import gnb_gnobbo from './gnob_gnobbo.webp';
+import gnb_head_honcho from './gnob_head_honcho_01.webp';
+import gnb_king_bezos from './gnob_king_bezos.webp';
+import gnb_scrapper from './gnob_scrapper_02.webp';
+import gnb_woodbelly from './gnob_woodbelly_01.webp';
+
 import placeholder from './0placeholder.webp';
 
 const mixu3CharacterImgs = {
   ...vanilla3CharacterImgs,
 
+  // Mixu Legendary Lords
   brt_adalhard: brt_adalhard,
   brt_bohemond: brt_bohemond,
   brt_cassyon: brt_cassyon,
@@ -115,6 +126,17 @@ const mixu3CharacterImgs = {
   wef_daith: wef_daith,
   wef_naieth_the_prophetess: wef_naieth_the_prophetess,
   wef_wychwethyl: wef_wychwethyl,
+
+  // Gnoblar Hordes
+  bragg_the_gutsman: gnb_bragg_the_gutsman,
+  gnobbo: gnb_gnobbo,
+  king_bezos: gnb_king_bezos,
+  bloodnose: gnb_bloodnose,
+  bonechewer_beasts: gnb_bonechewer,
+  bonechewer_great_maw: gnb_bonechewer,
+  head_honcho: gnb_head_honcho,
+  scrapper: gnb_scrapper,
+  woodbelly: gnb_woodbelly,
 };
 
 export default mixu3CharacterImgs;

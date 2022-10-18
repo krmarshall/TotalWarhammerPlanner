@@ -22,6 +22,8 @@ import vampireCounts from './vampireCounts.webp';
 import warriorsOfChaos from './warriorsOfChaos.webp';
 import woodElves from './woodElves.webp';
 
+import gnoblars from './gnoblars.webp';
+
 const factionImages = {
   tmb_tomb_kings: tombKings,
   cst_vampire_coast: vampireCoast,
@@ -46,6 +48,8 @@ const factionImages = {
   emp_empire: empire,
   grn_greenskins: greenskins,
   vmp_vampire_counts: vampireCounts,
+
+  gnb_gnoblars: gnoblars,
 };
 
 export default factionImages;

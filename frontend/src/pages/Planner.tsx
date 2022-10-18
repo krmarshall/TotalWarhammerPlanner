@@ -25,9 +25,10 @@ const Planner = () => {
   useEffect(() => {
     if (state.characterData === null) {
       const game = mod?.includes('2') ? '2' : '3';
-      dispatch({ type: AppContextActions.changeGame, payload: { selectedGame: game } });
-      dispatch({ type: AppContextActions.changeMod, payload: { selectedMod: mod } });
-      dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: faction } });
+      dispatch({
+        type: AppContextActions.changeGameModFaction,
+        payload: { selectedGame: game, selectedMod: mod, selectedFaction: faction },
+      });
 
       api
         .getCharacterSkillTree(mod as string, faction as string, character as string)

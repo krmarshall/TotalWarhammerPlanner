@@ -37,7 +37,7 @@ const ModSelector = () => {
           {gameKeys.map((gameKey) => {
             const game = gameData[gameKey as keyof typeof gameData];
             let liClassName =
-              'flex flex-col justify-around h-48 m-1 mx-2 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
+              'flex flex-col justify-around m-1 mx-2 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
             if (gameKey === selectedMod) {
               liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';
@@ -61,6 +61,11 @@ const ModSelector = () => {
                   'A mod that adds new characters. Vanilla characters have been pruned, only new characters added by the mod are displayed.';
                 break;
               }
+              case 'Character Mod Compilation': {
+                categoryDesc =
+                  'A compilation of mods that add new characters. Vanilla characters have been pruned, only new characters added by the mods are displayed.';
+                break;
+              }
             }
             return (
               <CSSTransition
@@ -82,21 +87,28 @@ const ModSelector = () => {
                   <ReactImage
                     srcList={[game.image, placeholderImg]}
                     alt={`${game.text} icon`}
-                    className="w-36 h-fit m-auto drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                    className="m-auto w-auto max-w-[11rem] max-h-[7rem] drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
                     h="128"
                     w="128"
                   />
-                  <h3 className="text-center text-gray-400 text-lg text-shadow my-1">{gameData[gameKey].updated}</h3>
+                  <h3 className="text-center text-gray-400 text-lg text-shadow mt-2">{gameData[gameKey].updated}</h3>
                   <TooltipWrapper
                     tooltip={
                       <span className="text-center flex flex-row">
-                        <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-                          <h3 className="text-gray-50 text-xl">{categoryDesc}</h3>
+                        <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">
+                          <h3 className="text-gray-50">{categoryDesc}</h3>
+                          <div className="text-center">
+                            {gameData[gameKey].includes !== undefined && <p>Includes:</p>}
+                            {gameData[gameKey].includes !== undefined &&
+                              gameData[gameKey].includes?.map((includedMod) => {
+                                return <p key={includedMod}>{includedMod}</p>;
+                              })}
+                          </div>
                         </div>
                       </span>
                     }
                   >
-                    <h3 className="w-fit mx-auto text-center text-gray-400 text-lg text-shadow mb-1 underline decoration-dashed underline-offset-2">
+                    <h3 className="w-fit mx-auto text-center text-gray-300 text-lg text-shadow mb-1 underline decoration-dashed underline-offset-2">
                       {gameData[gameKey].category}
                     </h3>
                   </TooltipWrapper>

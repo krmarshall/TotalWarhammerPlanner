@@ -1,6 +1,3 @@
-import resetIcon from '../../imgs/other/icon_reset.webp';
-import shareIcon from '../../imgs/other/resume_saved.webp';
-import backIcon from '../../imgs/other/icon_home.webp';
 import { useNavigate, useParams } from 'react-router-dom';
 import gameData from '../../data/gameData';
 import { useContext } from 'react';
@@ -8,6 +5,10 @@ import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { createEmptyCharacterBuild } from '../../utils/sharedFunctions';
 import { convertBuildToCode } from '../../utils/urlFunctions';
 import { toast } from 'react-hot-toast';
+
+import resetIcon from '../../imgs/other/icon_reset.webp';
+import shareIcon from '../../imgs/other/icon_button_external_link.webp';
+import backIcon from '../../imgs/other/icon_home.webp';
 
 interface PropInterface {
   effectiveRank: number;
@@ -77,7 +78,7 @@ const TopBar = ({ effectiveRank }: PropInterface) => {
           className="flex flex-row place-content-center mr-4 my-auto px-2 bg-blue-600 hover:bg-blue-500 border rounded-xl drop-shadow-lg hover-scale"
           onClick={shareButtonHandler}
         >
-          <img src={shareIcon} alt="Share" width="20" height="20" className="my-auto w-5 h-5" draggable={false} />
+          <img src={shareIcon} alt="Share" width="20" height="20" className="my-auto w-6 h-6" draggable={false} />
           <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Share</p>
         </button>
         <button

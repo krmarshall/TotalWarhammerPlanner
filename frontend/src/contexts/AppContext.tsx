@@ -39,6 +39,7 @@ enum AppContextActions {
   changeCharacterData = 'changeCharacterData',
   changeCharacterBuild = 'changeCharacterBuild',
   changeLocalStorageBuildKeys = 'changeLocalStorageBuildKeys',
+  changeGameModFaction = 'changeGameModFaction',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -63,6 +64,25 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
 
     case AppContextActions.changeFaction: {
       const newState = { ...state };
+      if (action.payload.selectedFaction === undefined) {
+        return state;
+      }
+      newState.selectedFaction = action.payload.selectedFaction;
+      return newState;
+    }
+
+    case AppContextActions.changeGameModFaction: {
+      const newState = { ...state };
+      if (action.payload.selectedGame === undefined) {
+        return state;
+      }
+      newState.selectedGame = action.payload.selectedGame;
+
+      if (action.payload.selectedMod === undefined) {
+        return state;
+      }
+      newState.selectedMod = action.payload.selectedMod;
+
       if (action.payload.selectedFaction === undefined) {
         return state;
       }
