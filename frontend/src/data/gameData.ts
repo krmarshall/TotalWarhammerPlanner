@@ -50,7 +50,7 @@ const gameData: GameInterface = {
     factions: factions,
     characters: vanilla3Characters,
     characterImages: vanilla3CharacterImgs,
-    updated: '6 Sep 2022',
+    updated: '18 Oct 2022',
     category: 'Base',
   },
   radious3: {
@@ -59,7 +59,7 @@ const gameData: GameInterface = {
     factions: factions,
     characters: radious3Characters,
     characterImages: radious3CharacterImgs,
-    updated: '12 Oct 2022',
+    updated: '16 Oct 2022',
     category: 'Overhaul',
   },
   mixu3: {
@@ -68,9 +68,9 @@ const gameData: GameInterface = {
     factions: factions,
     characters: mixu3Characters,
     characterImages: mixu3CharacterImgs,
-    updated: '16 Oct 2022',
+    updated: '18 Oct 2022',
     category: 'Character Mod Compilation',
-    includes: ["Mixu's Legendary Lords", 'Gnoblar Hordes - The Unwashed Masses'],
+    includes: ["Mixu's Legendary Lords (29 Sep 2022)", 'Gnoblar Hordes - The Unwashed Masses (18 Oct 2022)'],
   },
 };
 
