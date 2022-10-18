@@ -135,8 +135,8 @@ const mixu3Characters = {
   },
   gnb_gnoblars_heroes: {
     bloodnose: { name: 'Bloodnose' },
-    bonechewer_beasts: { name: 'Bloodchewer (Beasts)', spellLore: SpellLores.beasts },
-    bonechewer_great_maw: { name: 'Bloodchewer (Great Maw)', spellLore: SpellLores.greatMaw },
+    bonechewer_beasts: { name: 'Bonechewer (Beasts)', spellLore: SpellLores.beasts },
+    bonechewer_great_maw: { name: 'Bonechewer (Great Maw)', spellLore: SpellLores.greatMaw },
     scrapper: { name: 'Scrapper' },
     woodbelly: { name: 'Woodbelly' },
   },
