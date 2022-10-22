@@ -224,7 +224,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       ' filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]';
   } else if (thisSkillsCurrentPoints === 0 && !selectable) {
     divClassName +=
-      ' bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)] opacity-40 hover:opacity-100 filter grayscale hover:filter-none hover:grayscale-0';
+      ' bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)] brightness-[70%] filter grayscale hover:filter-none hover:grayscale-0';
   }
 
   let tdClassName = 'flex flex-row w-max h-auto my-1 border relative';

@@ -12,13 +12,13 @@ const ExtrasDrawer = () => {
 
   let drawerClass = 'flex flex-row place-content-evenly';
   if (open) {
-    drawerClass += ' h-44 mt-1.5 show';
+    drawerClass += ' mt-1.5 show h-[20vh]';
   } else {
-    drawerClass += ' h-0';
+    drawerClass += ' h-[0vh]';
   }
 
   return (
-    <>
+    <div className="flex flex-col">
       <button
         className="w-3/4 mx-auto h-6 bg-gray-400/70 hover:bg-gray-300/60 mt-1 rounded-xl hover-scale"
         onClick={() => {
@@ -34,7 +34,7 @@ const ExtrasDrawer = () => {
         )}
         <BuildStorage />
       </div>
-    </>
+    </div>
   );
 };
 
