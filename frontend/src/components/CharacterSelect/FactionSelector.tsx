@@ -9,7 +9,11 @@ import shareIcon from '../../imgs/other/icon_button_external_link.webp';
 import TooltipWrapper from '../Planner/TooltipWrapper';
 import { toast } from 'react-hot-toast';
 
-const FactionSelector = () => {
+interface PropInterface {
+  containerWidth: string;
+}
+
+const FactionSelector = ({ containerWidth }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
   const { selectedMod, selectedFaction } = state;
   const [currentGameFactions, setCurrentGameFactions] = useState(Object.keys(gameData[selectedMod].factions));
@@ -32,8 +36,8 @@ const FactionSelector = () => {
   };
 
   return (
-    <div className="justify-self-center">
-      <div className="flex flex-row place-content-center w-[80vw] mx-auto mt-2">
+    <div className={'justify-self-center px-2 ' + containerWidth}>
+      <div className="flex flex-row place-content-center mx-auto">
         <hr className="grow mt-[1.25rem] opacity-50" />
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Factions</h1>
         <TooltipWrapper
@@ -76,7 +80,7 @@ const FactionSelector = () => {
 
             const factionName = gameData[selectedMod]?.factions[factionKey];
             let liClassName =
-              'flex-col m-1 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
+              'flex-col m-1 p-1.5 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
             if (factionKey === state.selectedFaction) {
               liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';
@@ -100,12 +104,12 @@ const FactionSelector = () => {
                     dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: factionKey } });
                   }}
                 >
-                  <h2 className="text-center h-8 text-gray-200 text-2xl text-shadow mb-2">{factionName}</h2>
+                  <h2 className="text-center h-7 text-gray-200 text-2xl text-shadow mb-2">{factionName}</h2>
                   <div className="flex flex-row justify-center">
                     <ReactImage
                       srcList={[factionImages[factionKey as keyof typeof factionImages], placeholderImg]}
                       alt={`${factionName} icon`}
-                      className="w-20 drop-shadow-[0.1rem_0.1rem_0.35rem_rgba(0,0,0,0.7)]"
+                      className="w-20 h-auto drop-shadow-[0.1rem_0.1rem_0.35rem_rgba(0,0,0,0.7)]"
                       w="96"
                       h="96"
                     />

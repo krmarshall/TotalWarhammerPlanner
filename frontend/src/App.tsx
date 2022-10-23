@@ -1,10 +1,9 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { useMediaQuery } from 'react-responsive';
-import { AppProvider } from './contexts/AppContext';
 import Header from './components/Header';
 import LoadingSpinner from './components/LoadingSpinner';
+import { AppProvider } from './contexts/AppContext';
 
 const Home = lazy(() => import('./pages/Home'));
 const Planner = lazy(() => import('./pages/Planner'));
@@ -13,14 +12,9 @@ const Issues = lazy(() => import('./pages/Issues'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const App = () => {
-  const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1023 });
-  const isTabletOrMobileHeight = useMediaQuery({ maxHeight: 719 });
-
-  const isTabletOrMobileWidthRotate = useMediaQuery({ minWidth: 720 });
-  const isTabletOrMobileHeightRotate = useMediaQuery({ minHeight: 1024 });
   return (
     <AppProvider>
-      <div className="bg-gray-800 w-screen h-screen px-8 font-CaslonAntique select-none">
+      <div className="bg-gray-800 w-screen h-screen flex flex-col flex-nowrap px-8 pb-2 font-CaslonAntique select-none">
         <Toaster
           position="bottom-center"
           toastOptions={{
@@ -37,42 +31,21 @@ const App = () => {
         <BrowserRouter>
           <Header />
           <Suspense fallback={<LoadingSpinner loadingText="Loading..." />}>
-            {isTabletOrMobileWidthRotate &&
-            isTabletOrMobileHeightRotate &&
-            (isTabletOrMobileWidth || isTabletOrMobileHeight) ? (
-              <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-                <div className="flex flex-col place-items-center mt-[20vh]">
-                  <h5 className="text-center text-gray-200 text-4xl">
-                    Please rotate your device, otherwise your display is not large enough to reasonably display skill
-                    trees. Sorry! ._.
-                  </h5>
-                </div>
-              </div>
-            ) : isTabletOrMobileWidth || isTabletOrMobileHeight ? (
-              <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-                <div className="flex flex-col place-items-center mt-[20vh]">
-                  <h5 className="text-center text-gray-200 text-4xl">
-                    Your display is not large enough to reasonably display skill trees. Sorry! ._.
-                  </h5>
-                </div>
-              </div>
-            ) : (
-              <Routes>
-                <Route path="/" element={<Home />} />
+            <Routes>
+              <Route path="/" element={<Home />} />
 
-                <Route path="/planner/:mod/:faction/:character/:code" element={<Planner />} />
-                <Route path="/planner/:mod/:faction/:character" element={<Planner />} />
+              <Route path="/planner/:mod/:faction/:character/:code" element={<Planner />} />
+              <Route path="/planner/:mod/:faction/:character" element={<Planner />} />
 
-                <Route path="/about" element={<About />} />
-                <Route path="/issues" element={<Issues />} />
-                <Route path="/404" element={<NotFound />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/issues" element={<Issues />} />
+              <Route path="/404" element={<NotFound />} />
 
-                <Route path="/:mod/:faction" element={<Home />} />
+              <Route path="/:mod/:faction" element={<Home />} />
 
-                {/* Fallback Route */}
-                <Route path="/*" element={<NotFound />} />
-              </Routes>
-            )}
+              {/* Fallback Route */}
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
           </Suspense>
         </BrowserRouter>
       </div>

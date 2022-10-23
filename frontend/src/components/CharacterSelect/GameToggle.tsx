@@ -4,7 +4,11 @@ import gameData from '../../data/gameData';
 
 import gameImages from '../../imgs/games/gameImages';
 
-const GameToggle = () => {
+interface PropInterface {
+  display: string;
+}
+
+const GameToggle = ({ display }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
   const { selectedGame, selectedMod } = state;
 
@@ -22,7 +26,10 @@ const GameToggle = () => {
   const imgSrc = selectedMod.includes('2') ? gameImages.vanilla2 : gameImages.vanilla3;
   return (
     <div
-      className="absolute place-self-center h-fit w-fit top-2 z-20 flex flex-col place-content-end bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)] hover-scale"
+      className={
+        'h-fit w-fit top-2 z-20 flex flex-col place-content-end bg-gray-700 hover:bg-gray-600 rounded-full border border-gray-500 drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)] hover-scale ' +
+        display
+      }
       onClick={gameChangeHandler}
     >
       <img

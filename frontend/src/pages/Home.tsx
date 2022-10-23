@@ -5,10 +5,14 @@ import GameToggle from '../components/CharacterSelect/GameToggle';
 import { useParams } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
+import { useMediaQuery } from 'react-responsive';
 
 const Home = () => {
   const { state, dispatch } = useContext(AppContext);
   const { mod, faction } = useParams();
+
+  const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1365 });
+  const isMobileWidth = useMediaQuery({ maxWidth: 1023 });
 
   useEffect(() => {
     if (mod !== undefined && faction !== undefined) {
@@ -20,12 +24,23 @@ const Home = () => {
     }
   }, []);
 
+  let modContainerWidth = isTabletOrMobileWidth ? 'w-[100%] mt-2' : 'w-[30%] mt-8';
+  if (isMobileWidth) {
+    modContainerWidth = 'w-[100%] mt-2';
+  } else if (isTabletOrMobileWidth) {
+    modContainerWidth = 'w-[100%] mt-16';
+  } else {
+    modContainerWidth = 'w-[30%] mt-8';
+  }
+  const factionContainerWidth = isTabletOrMobileWidth ? 'w-[100%]' : 'w-[70%] mt-8';
+  const gameToggleDisplay = isMobileWidth ? '' : 'absolute';
+
   return (
-    <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-      <div className="grid auto-rows-min justify-items-stretch">
-        <GameToggle />
-        <ModSelector />
-        <FactionSelector />
+    <div className="grow mt-1 bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+      <div className="flex flex-row flex-wrap place-content-center">
+        <GameToggle display={gameToggleDisplay} />
+        <ModSelector containerWidth={modContainerWidth} />
+        <FactionSelector containerWidth={factionContainerWidth} />
         <CharacterSelector />
       </div>
     </div>

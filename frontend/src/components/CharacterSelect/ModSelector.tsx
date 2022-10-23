@@ -6,7 +6,11 @@ import placeholderImg from '../../imgs/other/0placeholder.webp';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import TooltipWrapper from '../Planner/TooltipWrapper';
 
-const ModSelector = () => {
+interface PropInterface {
+  containerWidth: string;
+}
+
+const ModSelector = ({ containerWidth }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
   const { selectedGame, selectedMod } = state;
 
@@ -25,9 +29,10 @@ const ModSelector = () => {
   useEffect(() => {
     setGameKeys(filterGamesKeys);
   }, [selectedGame]);
+
   return (
-    <div className="justify-self-center mt-14">
-      <div className="flex flex-row place-content-center w-[80vw]">
+    <div className={'justify-self-center px-2 ' + containerWidth}>
+      <div className="flex flex-row place-content-center">
         <hr className="grow mt-[1.25rem] opacity-50" />
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Mods</h1>
         <hr className="grow mt-[1.25rem] opacity-50" />
@@ -37,7 +42,7 @@ const ModSelector = () => {
           {gameKeys.map((gameKey) => {
             const game = gameData[gameKey as keyof typeof gameData];
             let liClassName =
-              'flex flex-col justify-around m-1 mx-2 p-2 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
+              'flex flex-col justify-around m-2 mt-1 p-1.5 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
             if (gameKey === selectedMod) {
               liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';
@@ -87,7 +92,7 @@ const ModSelector = () => {
                   <ReactImage
                     srcList={[game.image, placeholderImg]}
                     alt={`${game.text} icon`}
-                    className="m-auto w-auto max-w-[11rem] max-h-[7rem] drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+                    className="m-auto w-auto max-w-[9rem] max-h-[6rem] drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
                     h="128"
                     w="128"
                   />

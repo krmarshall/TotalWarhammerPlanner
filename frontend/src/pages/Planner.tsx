@@ -11,6 +11,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ExtrasDrawer from '../components/Planner/ExtrasDrawer';
 import TopBar from '../components/Planner/TopBar';
 import CharacterPortrait from '../components/Planner/CharacterPortrait';
+import { useMediaQuery } from 'react-responsive';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -19,6 +20,12 @@ const Planner = () => {
 
   const [urlLoaded, setUrlLoaded] = useState(false);
   const [effectiveRank, setEffectiveRank] = useState(1);
+
+  const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1023 });
+  const isTabletOrMobileHeight = useMediaQuery({ maxHeight: 719 });
+  const isShort = useMediaQuery({ maxHeight: 620 });
+  // If isShort, show extras should toggle between fully skill tree and fully extras drawer, disable topbar as well?
+  const isMobile = isTabletOrMobileWidth || isTabletOrMobileHeight ? true : false;
 
   const navigate = useNavigate();
 
@@ -92,16 +99,17 @@ const Planner = () => {
   };
 
   return (
-    <div className="h-[88vh] flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">
+    <div className="grow mt-1 flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">
       {state.characterData === null ? (
         <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
         <Fragment>
-          <TopBar effectiveRank={effectiveRank} />
-          <CharacterPortrait />
+          <TopBar effectiveRank={effectiveRank} isMobile={isMobile} />
+          {!isMobile && <CharacterPortrait />}
+
           <div
             className={
-              ' grow max-h-[73vh] min-h-[52vh] overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 rounded-xl bg-left-top bg-local bg-no-repeat bg-cover' +
+              ' grow max-h-[81vh] min-h-[52vh] overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 rounded-xl bg-left-top bg-local bg-no-repeat bg-cover' +
               getBgUrl(faction)
             }
             id="horScrollContainer"
