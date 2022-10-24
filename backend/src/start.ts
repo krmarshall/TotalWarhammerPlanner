@@ -17,4 +17,5 @@ usageLog(logInterval);
 
 ON_DEATH(() => {
   outputLog();
+  process.exit(0);
 });
