@@ -6,31 +6,29 @@ import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../utils/sharedFunctions';
 import { convertCodeToBuild } from '../utils/urlFunctions';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
-import SkillRow from '../components/Planner/SkillRow';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ExtrasDrawer from '../components/Planner/ExtrasDrawer';
 import TopBar from '../components/Planner/TopBar';
 import CharacterPortrait from '../components/Planner/CharacterPortrait';
-import { useMediaQuery } from 'react-responsive';
+import SkillTable from '../components/Planner/SkillTable';
+import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild } = state;
+  const { characterData } = state;
   const { mod, faction, character, code } = useParams();
+  const { isMobileWidth, isMobileHeight, isShortWidth, isShortHeight, isThin } = useBulkMediaQueries();
 
   const [urlLoaded, setUrlLoaded] = useState(false);
-  const [effectiveRank, setEffectiveRank] = useState(1);
+  const [shortViewToggle, setShortViewToggle] = useState(false);
 
-  const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1023 });
-  const isTabletOrMobileHeight = useMediaQuery({ maxHeight: 719 });
-  const isShort = useMediaQuery({ maxHeight: 620 });
-  // If isShort, show extras should toggle between fully skill tree and fully extras drawer, disable topbar as well?
-  const isMobile = isTabletOrMobileWidth || isTabletOrMobileHeight ? true : false;
+  const isMobile = isMobileWidth || isMobileHeight ? true : false;
+  const isShort = isShortWidth || isShortHeight ? true : false;
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (state.characterData === null) {
+    if (characterData === null) {
       const game = mod?.includes('2') ? '2' : '3';
       dispatch({
         type: AppContextActions.changeGameModFaction,
@@ -60,143 +58,49 @@ const Planner = () => {
           navigate('/404');
         });
     }
-  }, [state.characterData]);
+  }, [characterData]);
 
   useEffect(() => {
-    if (!code || !state.characterData || urlLoaded) {
+    if (!code || !characterData || urlLoaded) {
       return;
     }
     const importBuild = convertCodeToBuild(code);
     const newCharacterBuild = createCharacterBuildFromArray(
       importBuild,
-      state.characterData,
+      characterData,
       mod as string,
       faction as string,
       character as string
     );
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
     setUrlLoaded(true);
-  }, [code, state.characterData]);
+  }, [code, characterData]);
 
   useEffect(() => {
-    if (
-      typeof characterBuild?.rank === 'number' &&
-      typeof characterBuild?.startingSkillPoints === 'number' &&
-      typeof characterBuild?.autoUnlockSkillPoints === 'number'
-    ) {
-      setEffectiveRank(
-        characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
-      );
-    }
-  }, [characterBuild?.rank, characterBuild?.startingSkillPoints, characterBuild?.autoUnlockSkillPoints]);
+    setShortViewToggle(false);
+  }, [isShort]);
 
-  const horizontalScroll = (event: React.WheelEvent) => {
-    const container = document.getElementById('horScrollContainer');
-    const containerScrollPosition = container?.scrollLeft !== undefined ? container?.scrollLeft : 0;
-    container?.scrollTo({
-      left: containerScrollPosition + event.deltaY,
-    });
-  };
+  useEffect(() => {
+    setShortViewToggle(false);
+  }, [isThin]);
 
   return (
     <div className="grow mt-1 flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">
-      {state.characterData === null ? (
+      {characterData === null ? (
         <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
         <Fragment>
-          <TopBar effectiveRank={effectiveRank} isMobile={isMobile} />
+          {!isShort && <TopBar isMobile={isMobile} />}
+
           {!isMobile && <CharacterPortrait />}
 
-          <div
-            className={
-              ' grow max-h-[81vh] min-h-[52vh] overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 rounded-xl bg-left-top bg-local bg-no-repeat bg-cover' +
-              getBgUrl(faction)
-            }
-            id="horScrollContainer"
-            onWheel={(event) => {
-              horizontalScroll(event);
-            }}
-          >
-            <table className="table-fixed">
-              <thead></thead>
-              <tbody className="flex flex-col flex-nowrap">
-                {state.characterData?.skillTree?.map((skillRow, index) => {
-                  return <SkillRow key={index} skillRow={skillRow} yIndex={index} />;
-                })}
-              </tbody>
-            </table>
-          </div>
+          <SkillTable faction={faction} shortViewToggle={shortViewToggle} />
 
-          <ExtrasDrawer />
+          {!isThin && <ExtrasDrawer shortViewToggle={shortViewToggle} setShortViewToggle={setShortViewToggle} />}
         </Fragment>
       )}
     </div>
   );
-};
-
-// Really verbose way of doing this, but tailwind needs the whole class present to generate it
-const getBgUrl = (selectedFaction: string | undefined) => {
-  let returnUrl = ' bg-[url(/imgs/other/bgs/default/bg.webp)]';
-  switch (selectedFaction) {
-    case 'brt_bretonnia':
-      returnUrl = ' bg-[url(/imgs/other/bgs/brt_bretonnia/bg.webp)]';
-      break;
-    case 'bst_beastmen':
-      returnUrl = ' bg-[url(/imgs/other/bgs/bst_beastmen/bg.webp)]';
-      break;
-    case 'chs_chaos':
-      returnUrl = ' bg-[url(/imgs/other/bgs/chs_chaos/bg.webp)]';
-      break;
-    case 'cst_vampire_coast':
-      returnUrl = ' bg-[url(/imgs/other/bgs/cst_vampire_coast/bg.webp)]';
-      break;
-    case 'cth_cathay':
-      returnUrl = ' bg-[url(/imgs/other/bgs/cth_cathay/bg.webp)]';
-      break;
-    case 'dae_daemons':
-      returnUrl = ' bg-[url(/imgs/other/bgs/dae_daemons/bg.webp)]';
-      break;
-    case 'def_dark_elves':
-      returnUrl = ' bg-[url(/imgs/other/bgs/def_dark_elves/bg.webp)]';
-      break;
-    case 'grn_greenskins':
-      returnUrl = ' bg-[url(/imgs/other/bgs/grn_greenskins/bg.webp)]';
-      break;
-    case 'kho_khorne':
-      returnUrl = ' bg-[url(/imgs/other/bgs/kho_khorne/bg.webp)]';
-      break;
-    case 'ksl_kislev':
-      returnUrl = ' bg-[url(/imgs/other/bgs/ksl_kislev/bg.webp)]';
-      break;
-    case 'lzd_lizardmen':
-      returnUrl = ' bg-[url(/imgs/other/bgs/lzd_lizardmen/bg.webp)]';
-      break;
-    case 'nur_nurgle':
-      returnUrl = ' bg-[url(/imgs/other/bgs/nur_nurgle/bg.webp)]';
-      break;
-    case 'ogr_ogre_kingdoms':
-      returnUrl = ' bg-[url(/imgs/other/bgs/ogr_ogre_kingdoms/bg.webp)]';
-      break;
-    case 'skv_skaven':
-      returnUrl = ' bg-[url(/imgs/other/bgs/skv_skaven/bg.webp)]';
-      break;
-    case 'sla_slaanesh':
-      returnUrl = ' bg-[url(/imgs/other/bgs/sla_slaanesh/bg.webp)]';
-      break;
-    case 'tmb_tomb_kings':
-      returnUrl = ' bg-[url(/imgs/other/bgs/tmb_tomb_kings/bg.webp)]';
-      break;
-    case 'tze_tzeentch':
-      returnUrl = ' bg-[url(/imgs/other/bgs/tze_tzeentch/bg.webp)]';
-      break;
-    case 'vmp_vampire_counts':
-      returnUrl = ' bg-[url(/imgs/other/bgs/vmp_vampire_counts/bg.webp)]';
-      break;
-    default:
-      returnUrl = ' bg-[url(/imgs/other/bgs/default/bg.webp)]';
-      break;
-  }
-  return returnUrl;
 };
 
 export default Planner;

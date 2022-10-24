@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import gameData from '../../data/gameData';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { createEmptyCharacterBuild } from '../../utils/sharedFunctions';
 import { convertBuildToCode } from '../../utils/urlFunctions';
@@ -11,16 +11,29 @@ import shareIcon from '../../imgs/other/icon_button_external_link.webp';
 import backIcon from '../../imgs/other/icon_home.webp';
 
 interface PropInterface {
-  effectiveRank: number;
   isMobile: boolean;
 }
 
-const TopBar = ({ effectiveRank, isMobile }: PropInterface) => {
+const TopBar = ({ isMobile }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
   const { characterBuild } = state;
   const { mod, faction, character } = useParams();
 
+  const [effectiveRank, setEffectiveRank] = useState(1);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (
+      typeof characterBuild?.rank === 'number' &&
+      typeof characterBuild?.startingSkillPoints === 'number' &&
+      typeof characterBuild?.autoUnlockSkillPoints === 'number'
+    ) {
+      setEffectiveRank(
+        characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+      );
+    }
+  }, [characterBuild?.rank, characterBuild?.startingSkillPoints, characterBuild?.autoUnlockSkillPoints]);
 
   const resetButtonHandler = () => {
     if (!state.characterData) {
@@ -59,6 +72,13 @@ const TopBar = ({ effectiveRank, isMobile }: PropInterface) => {
 
   const rankLimit = mod?.includes('2') ? 40 : 50;
 
+  let headerClass = 'z-10 text-center text-4xl  mx-auto text-gray-200 text-shadow-border ';
+  if (isMobile) {
+    headerClass += ' mb-2';
+  } else {
+    headerClass += ' m-2';
+  }
+
   return (
     <div className="h-[4.5rem] flex flex-row place-content-between">
       <div className="w-[30vw] flex place-content-start">
@@ -73,7 +93,9 @@ const TopBar = ({ effectiveRank, isMobile }: PropInterface) => {
           {isMobile ? gameData[state.selectedMod]?.text : `Selected Game: ${gameData[state.selectedMod]?.text}`}
         </p>
       </div>
-      <h1 className="z-10 text-center text-4xl m-2 text-gray-200 text-shadow-border">{characterName}</h1>
+
+      <h1 className={headerClass}>{characterName}</h1>
+
       <div className="w-[30vw] flex place-content-end">
         {!isMobile && (
           <button

@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
 import headerImg from '../imgs/header.webp';
+import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 
 const Header = () => {
-  const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1023 });
-  const isSmol = useMediaQuery({ maxWidth: 540 });
+  const { isMobileWidth, isSmol } = useBulkMediaQueries();
 
   let linksWidth;
   if (isSmol) {
     linksWidth = ' hidden';
-  } else if (isTabletOrMobileWidth) {
+  } else if (isMobileWidth) {
     linksWidth = ' w-[27vw]';
   } else {
     linksWidth = ' w-[62vw]';
