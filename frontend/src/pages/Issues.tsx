@@ -1,9 +1,12 @@
+import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import placeholderImage from '../imgs/other/0placeholder.webp';
 
 const Issues = () => {
+  const { isShortWidth } = useBulkMediaQueries();
+  const marginThickness = isShortWidth ? ' mx-2' : ' mx-32';
   return (
     <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-      <div className="flex flex-col place-content-center mt-4 mx-32 select-text font-[Helvetica]">
+      <div className={'flex flex-col place-content-center mt-4 select-text font-[Helvetica]' + marginThickness}>
         <div className="flex flex-row place-content-center">
           <hr className="grow mt-[1.6rem] opacity-50" />
           <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">Report an Issue</h1>
