@@ -24,15 +24,15 @@ const Home = () => {
     }
   }, []);
 
-  let modContainerWidth = isTabletOrMobileWidth ? 'w-[100%] mt-2' : 'w-[30%] mt-8';
+  let modContainerWidth;
   if (isMobileWidth) {
     modContainerWidth = 'w-[100%] mt-2';
   } else if (isTabletOrMobileWidth) {
     modContainerWidth = 'w-[100%] mt-16';
   } else {
-    modContainerWidth = 'w-[35%] mt-8';
+    modContainerWidth = 'w-[35%] mt-10';
   }
-  const factionContainerWidth = isTabletOrMobileWidth ? 'w-[100%]' : 'w-[65%] mt-8';
+  const factionContainerWidth = isTabletOrMobileWidth ? 'w-[100%]' : 'w-[65%] mt-10';
   const gameToggleDisplay = isMobileWidth ? '' : 'absolute';
 
   return (
