@@ -37,7 +37,7 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Mods</h1>
         <hr className="grow mt-[1.25rem] opacity-50" />
       </div>
-      <ul className="flex flex-row flex-wrap justify-center">
+      <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[27.7rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         <TransitionGroup component={null}>
           {gameKeys.map((gameKey) => {
             const game = gameData[gameKey as keyof typeof gameData];

@@ -30,9 +30,9 @@ const Home = () => {
   } else if (isTabletOrMobileWidth) {
     modContainerWidth = 'w-[100%] mt-16';
   } else {
-    modContainerWidth = 'w-[30%] mt-8';
+    modContainerWidth = 'w-[35%] mt-8';
   }
-  const factionContainerWidth = isTabletOrMobileWidth ? 'w-[100%]' : 'w-[70%] mt-8';
+  const factionContainerWidth = isTabletOrMobileWidth ? 'w-[100%]' : 'w-[65%] mt-8';
   const gameToggleDisplay = isMobileWidth ? '' : 'absolute';
 
   return (
