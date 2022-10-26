@@ -29,6 +29,7 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
     iconName += '.webp';
   }
   const srcList = [
+    `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName.toLowerCase()}`,
     `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName}`,
     `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${iconName}`,
     `/imgs/${selectedMod}/battle_ui/ability_icons/${iconName}`,
