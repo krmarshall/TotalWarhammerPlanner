@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillTooltip from './SkillTooltip';
 import TooltipWrapper from './TooltipWrapper';
@@ -22,6 +23,8 @@ const SkillPointSelector = ({
   currentRank,
   blocked,
 }: SkillPointSelectorPropInterface) => {
+  const [ctrCounter, setCtrCounter] = useState(0);
+
   let containerClassName = 'w-5 h-5 bg-contain ';
   const selected = thisSkillsCurrentPoints >= index + 1 ? true : false;
   let rankLocked = false;
@@ -44,7 +47,17 @@ const SkillPointSelector = ({
   }
 
   return (
-    <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={skillPoints} blocked={blocked} />}>
+    <TooltipWrapper
+      tooltip={
+        <SkillTooltip
+          skill={skill}
+          skillPoints={skillPoints}
+          blocked={blocked}
+          ctrCounter={ctrCounter}
+          setCtrCounter={setCtrCounter}
+        />
+      }
+    >
       <div className={containerClassName}></div>
     </TooltipWrapper>
   );

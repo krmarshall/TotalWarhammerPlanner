@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
@@ -12,6 +12,7 @@ interface PropInterface {
 const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const { state } = useContext(AppContext);
   const { selectedMod, selectedGame } = state;
+  const [ctrCounter, setCtrCounter] = useState(0);
 
   const fontSize = skill.name.length < 28 ? 'text-xl' : 'text-base';
 
@@ -27,7 +28,17 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   ];
 
   return (
-    <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={0} blocked={false} />}>
+    <TooltipWrapper
+      tooltip={
+        <SkillTooltip
+          skill={skill}
+          skillPoints={0}
+          blocked={false}
+          ctrCounter={ctrCounter}
+          setCtrCounter={setCtrCounter}
+        />
+      }
+    >
       <div className="flex flex-row m-auto drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <ReactImage
           srcList={srcList}

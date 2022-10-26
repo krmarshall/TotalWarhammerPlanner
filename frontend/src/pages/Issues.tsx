@@ -67,7 +67,9 @@ const Issues = () => {
           <li className="text-gray-200 text-2xl">
             Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are cut off
           </li>
-          <li className="text-gray-200 text-2xl">Tooltips only show the first 2 related abilities for that skill</li>
+          <li className="text-gray-200 text-2xl">
+            In some cases each skill effect only has the first 3 related abilities linked for tooltips
+          </li>
           <li className="text-gray-200 text-2xl">
             Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>

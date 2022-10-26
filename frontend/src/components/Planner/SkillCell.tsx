@@ -29,6 +29,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const [thisSkillsCurrentPoints, setThisSkillsCurrentPoints] = useState(
     characterBuild?.buildData?.[yIndex]?.[xIndex] as number
   );
+  const [ctrCounter, setCtrCounter] = useState(0);
 
   useEffect(() => {
     let tempCurPoints = thisSkillsCurrentPoints;
@@ -317,7 +318,17 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         </TooltipWrapper>
       )}
       <div className={divClassName}>
-        <TooltipWrapper tooltip={<SkillTooltip skill={skill} skillPoints={previewSkillPoints} blocked={blocked} />}>
+        <TooltipWrapper
+          tooltip={
+            <SkillTooltip
+              skill={skill}
+              skillPoints={previewSkillPoints}
+              blocked={blocked}
+              ctrCounter={ctrCounter}
+              setCtrCounter={setCtrCounter}
+            />
+          }
+        >
           <div className="flex flex-row">
             {blocked && (
               <img
