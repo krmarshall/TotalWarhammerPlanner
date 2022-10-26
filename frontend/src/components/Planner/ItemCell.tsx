@@ -52,9 +52,9 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
   });
 
   let fontSize;
-  if (item.name.length > 38) {
+  if (item.name.length > 37) {
     fontSize = 'text-sm';
-  } else if (item.name.length > 28) {
+  } else if (item.name.length > 27) {
     fontSize = 'text-base';
   } else {
     fontSize = 'text-xl';

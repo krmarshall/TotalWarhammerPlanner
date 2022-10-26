@@ -71,7 +71,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
           <h3 className="text-gray-50 text-2xl">{skill?.name}</h3>
           {skill?.description.trim() && !isMobile && (
-            <h4 className="max-w-[25vw] mx-auto text-gray-50 opacity-70 text-lg">{skill?.description.trim()}</h4>
+            <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">{skill?.description.trim()}</h4>
           )}
           {skill?.levels?.[skillPoints]?.auto_unlock_at_rank && (
             <p className="text-yellow-400 text-lg">
