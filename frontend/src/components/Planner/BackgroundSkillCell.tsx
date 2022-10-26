@@ -14,7 +14,14 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const { selectedMod, selectedGame } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
 
-  const fontSize = skill.name.length < 28 ? 'text-xl' : 'text-base';
+  let fontSize;
+  if (skill.name.length > 38) {
+    fontSize = 'text-sm';
+  } else if (skill.name.length > 28) {
+    fontSize = 'text-base';
+  } else {
+    fontSize = 'text-xl';
+  }
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = skill.image_path.replace('.png', '.webp');
@@ -42,7 +49,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
       <div className="flex flex-row m-auto drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <ReactImage
           srcList={srcList}
-          className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
+          className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto text"
           alt="skillIcon"
           w="64"
           h="64"

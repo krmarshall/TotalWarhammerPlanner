@@ -1,6 +1,14 @@
 import { SpellLores } from '../types/interfaces/GameInterface';
 
 const mixu3Characters = {
+  bst_beastmen_lords: {
+    bst_ghorros_warhoof: { name: 'Ghorros Warhoof' },
+    bst_slugtongue: { name: 'Molokh Slugtongue', spellLore: SpellLores.mixed },
+  },
+  bst_beastmen_heroes: {
+    bst_gorehoof: { name: 'Gorehoof' },
+  },
+
   brt_bretonnia_lords: {
     brt_adalhard: { name: 'Adalhard de Lyonesse' },
     brt_bohemond: { name: 'Bohemond Beastslayer' },
@@ -11,14 +19,6 @@ const mixu3Characters = {
   brt_bretonnia_heroes: {
     brt_amalric_de_gaudaron: { name: 'Sir Almaric de Gaudaron' },
     brt_donna_don_domingio: { name: 'Donna Don Domingio' },
-  },
-
-  bst_beastmen_lords: {
-    bst_ghorros_warhoof: { name: 'Ghorros Warhoof' },
-    bst_slugtongue: { name: 'Molokh Slugtongue', spellLore: SpellLores.mixed },
-  },
-  bst_beastmen_heroes: {
-    bst_gorehoof: { name: 'Gorehoof' },
   },
 
   chs_chaos_lords: {

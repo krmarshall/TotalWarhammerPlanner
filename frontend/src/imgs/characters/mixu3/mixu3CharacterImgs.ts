@@ -1,5 +1,3 @@
-import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
-
 import brt_adalhard from './brt_adalhard.webp';
 import brt_bohemond from './brt_bohemond.webp';
 import brt_cassyon from './brt_cassyon.webp';
@@ -66,8 +64,6 @@ import gnb_woodbelly from './gnob_woodbelly_01.webp';
 import placeholder from './0placeholder.webp';
 
 const mixu3CharacterImgs = {
-  ...vanilla3CharacterImgs,
-
   // Mixu Legendary Lords
   brt_adalhard: brt_adalhard,
   brt_bohemond: brt_bohemond,

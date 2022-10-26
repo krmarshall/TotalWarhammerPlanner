@@ -256,7 +256,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }
 
-  const fontSize = skill.name.length < 28 ? 'text-xl' : 'text-base';
+  let fontSize;
+  if (skill.name.length > 38) {
+    fontSize = 'text-sm';
+  } else if (skill.name.length > 28) {
+    fontSize = 'text-base';
+  } else {
+    fontSize = 'text-xl';
+  }
 
   const findAbilityImage = () => {
     if (skill.levels?.[0].effects === undefined) {

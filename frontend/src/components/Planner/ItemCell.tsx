@@ -51,7 +51,14 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     }
   });
 
-  const fontSize = item.name.length < 28 ? 'text-xl' : 'text-base';
+  let fontSize;
+  if (item.name.length > 38) {
+    fontSize = 'text-sm';
+  } else if (item.name.length > 28) {
+    fontSize = 'text-base';
+  } else {
+    fontSize = 'text-xl';
+  }
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = item.image_path.replace('.png', '.webp');

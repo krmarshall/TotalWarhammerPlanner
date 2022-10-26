@@ -80,6 +80,10 @@ const Issues = () => {
             Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs in
             the mod itself
           </li>
+          <li className="text-gray-200 text-2xl">
+            Legendary Characters 3 Bassiano Dutra has several placeholder skills with no title or description, these are
+            due to misplaced locs in the mod
+          </li>
           <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
           <li className="text-gray-200 text-2xl">Radious 2 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>

@@ -23,7 +23,9 @@ const CharacterSelector = () => {
   // Whenever the faction/characters change refresh the lord/hero keys
   useEffect(() => {
     if (checkFactionUndefined()) {
-      dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: 'bst_beastmen' } });
+      const factionCharKeys = Object.keys(gameCharacters);
+      const firstKey = factionCharKeys[0].replace(/_lords|_heroes/, '');
+      dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: firstKey } });
     } else {
       setLordKeys(Object.keys(gameCharacters[`${selectedFaction}_lords` as keyof typeof gameCharacters]));
       setHeroKeys(Object.keys(gameCharacters[`${selectedFaction}_heroes` as keyof typeof gameCharacters]));
