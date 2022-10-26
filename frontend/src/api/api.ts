@@ -10,7 +10,22 @@ const api = {
       if (response.status === 200) {
         return response.json();
       } else {
-        throw new Error(response.statusText);
+        let errorMessage = '';
+        switch (response.status) {
+          case 404: {
+            errorMessage = 'Requested character not found';
+            break;
+          }
+          case 502: {
+            errorMessage = 'API unreachable, try again later';
+            break;
+          }
+          default: {
+            errorMessage = 'Could not fetch character';
+            break;
+          }
+        }
+        throw new Error(errorMessage);
       }
     });
   },

@@ -49,7 +49,7 @@ const CharacterSelector = () => {
       {
         loading: 'Loading',
         success: 'Success',
-        error: 'Could not fetch character',
+        error: (err) => `${err}`,
       },
       { loading: { duration: 5000 } }
     );

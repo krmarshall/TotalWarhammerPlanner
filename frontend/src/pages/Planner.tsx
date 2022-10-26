@@ -52,8 +52,8 @@ const Planner = () => {
             });
           }
         })
-        .catch(() => {
-          toast.error('Error retrieving character data from server.');
+        .catch((err) => {
+          toast.error(`${err}`);
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
           navigate('/404');
         });
