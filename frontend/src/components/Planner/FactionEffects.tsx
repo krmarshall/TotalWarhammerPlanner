@@ -6,6 +6,7 @@ import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
+import { trimString } from '../../utils/sharedFunctions';
 
 interface PropInterface {
   factionEffect: FactionEffectInterface;
@@ -53,7 +54,9 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
   });
 
   let fontSize;
-  if (factionEffect.title.length > 37) {
+  if (factionEffect.title.length > 52) {
+    fontSize = 'text-xs';
+  } else if (factionEffect.title.length > 37) {
     fontSize = 'text-sm';
   } else if (factionEffect.title.length > 27) {
     fontSize = 'text-base';
@@ -122,7 +125,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
             <div className="flex flex-col justify-center">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>
-                {factionEffect.title}
+                {trimString(factionEffect.title)}
               </h2>
             </div>
             <div className="invisible w-4 pl-0.5">spacer</div>

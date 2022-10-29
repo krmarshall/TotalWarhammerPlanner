@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
+import { trimString } from '../../utils/sharedFunctions';
 import ReactImage from '../ReactImage';
 import SkillTooltip from './SkillTooltip';
 import TooltipWrapper from './TooltipWrapper';
@@ -15,9 +16,11 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const [ctrCounter, setCtrCounter] = useState(0);
 
   let fontSize;
-  if (skill.name.length > 38) {
+  if (skill.name.length > 52) {
+    fontSize = 'text-xs';
+  } else if (skill.name.length > 37) {
     fontSize = 'text-sm';
-  } else if (skill.name.length > 28) {
+  } else if (skill.name.length > 27) {
     fontSize = 'text-base';
   } else {
     fontSize = 'text-xl';
@@ -56,7 +59,9 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
         />
 
         <div className="flex flex-col justify-center">
-          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>
+          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>
+            {trimString(skill.name)}
+          </h2>
         </div>
         <div className="invisible w-4 pl-0.5">spacer</div>
       </div>

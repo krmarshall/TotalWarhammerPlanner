@@ -11,6 +11,7 @@ import ReactImage from '../ReactImage';
 
 import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';
 import blockedSkillOverlay from '../../imgs/other/skill_locked_rank.webp';
+import { trimString } from '../../utils/sharedFunctions';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -257,9 +258,11 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   }
 
   let fontSize;
-  if (skill.name.length > 38) {
+  if (skill.name.length > 52) {
+    fontSize = 'text-xs';
+  } else if (skill.name.length > 37) {
     fontSize = 'text-sm';
-  } else if (skill.name.length > 28) {
+  } else if (skill.name.length > 27) {
     fontSize = 'text-base';
   } else {
     fontSize = 'text-xl';
@@ -356,7 +359,9 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
             />
 
             <div className="flex flex-col justify-center">
-              <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{skill.name}</h2>
+              <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>
+                {trimString(skill.name)}
+              </h2>
             </div>
           </div>
         </TooltipWrapper>

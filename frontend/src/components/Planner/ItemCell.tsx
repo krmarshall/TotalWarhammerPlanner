@@ -6,6 +6,7 @@ import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
+import { trimString } from '../../utils/sharedFunctions';
 
 interface SkillCellPropsInterface {
   item: ItemInterface;
@@ -52,7 +53,9 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
   });
 
   let fontSize;
-  if (item.name.length > 37) {
+  if (item.name.length > 52) {
+    fontSize = 'text-xs';
+  } else if (item.name.length > 37) {
     fontSize = 'text-sm';
   } else if (item.name.length > 27) {
     fontSize = 'text-base';
@@ -117,7 +120,9 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         />
 
         <div className="flex flex-col justify-center">
-          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>{item.name}</h2>
+          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>
+            {trimString(item.name)}
+          </h2>
         </div>
         <div className="invisible w-4 pl-0.5">spacer</div>
       </div>

@@ -92,4 +92,13 @@ const createCharacterBuildFromArray = (
   return newCharacterBuild;
 };
 
-export { createEmptyCharacterBuild, createCharacterBuildFromArray };
+const trimString = (string: string, length = 75) => {
+  let trimmedString = string;
+  if (trimmedString.length > length) {
+    trimmedString = trimmedString.substring(0, length);
+    trimmedString += '...';
+  }
+  return trimmedString;
+};
+
+export { createEmptyCharacterBuild, createCharacterBuildFromArray, trimString };
