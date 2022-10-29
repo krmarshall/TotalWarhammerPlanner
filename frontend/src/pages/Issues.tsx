@@ -77,6 +77,9 @@ const Issues = () => {
             Vanilla 3 Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree
           </li>
           <li className="text-gray-200 text-2xl">
+            WH2 Vanilla + Mods, Several lords dont have their Faction Effects linked, this likely wont change
+          </li>
+          <li className="text-gray-200 text-2xl">
             Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs in
             the mod itself
           </li>

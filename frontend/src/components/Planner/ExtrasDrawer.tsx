@@ -5,6 +5,7 @@ import CharacterItems from './CharacterItems';
 import BackgroundSkills from './BackgroundSkills';
 import TopBar from './TopBar';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
+import FactionEffects from './FactionEffects';
 
 interface PropInterface {
   shortViewToggle: boolean;
@@ -59,6 +60,9 @@ const ExtrasDrawer = ({ shortViewToggle, setShortViewToggle }: PropInterface) =>
         {state.characterData?.items && state.characterData?.items.length > 0 && <CharacterItems />}
         {state.characterData?.backgroundSkills && state.characterData.backgroundSkills.length > 0 && (
           <BackgroundSkills />
+        )}
+        {state.characterData?.factionEffects !== undefined && (
+          <FactionEffects factionEffect={state.characterData?.factionEffects} />
         )}
         {!isShort && <BuildStorage />}
       </div>

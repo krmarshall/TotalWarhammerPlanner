@@ -183,15 +183,25 @@ interface ItemInterface {
   instant?: boolean;
 }
 
+interface FactionEffectInterface {
+  key: string;
+  ui_icon: string;
+  title: string;
+  description: string;
+  effects: Array<SkillEffectInterface>;
+}
+
 interface CharacterInterface {
   key: string;
   skillTree: Array<Array<SkillInterface>>;
-  items: Array<ItemInterface>;
-  backgroundSkills: Array<SkillInterface>;
+  items?: Array<ItemInterface>;
+  backgroundSkills?: Array<SkillInterface>;
+  factionEffects?: FactionEffectInterface;
 }
 
 export type {
   CharacterInterface,
+  FactionEffectInterface,
   ItemInterface,
   SkillInterface,
   SkillLevelInterface,

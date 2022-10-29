@@ -39,7 +39,7 @@ const BuildStorage = () => {
   };
 
   return (
-    <div className="h-auto w-full mx-2 min-w-[18rem] max-w-[25rem] flex flex-col place-content-between shadow-lg border border-gray-500 rounded ">
+    <div className="h-auto w-full mx-1 min-w-[14rem] max-w-[25rem] flex flex-col place-content-between shadow-lg border border-gray-500 rounded ">
       <div className="flex flex-col justify-center">
         <h2 className="text-center text-3xl mt-1 text-gray-200 text-shadow">Builds</h2>
       </div>

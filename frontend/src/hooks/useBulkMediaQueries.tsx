@@ -6,7 +6,7 @@ const useBulkMediaQueries = () => {
     isMobileHeight: useMediaQuery({ maxHeight: 719 }),
     isShortWidth: useMediaQuery({ maxWidth: 965 }),
     isShortHeight: useMediaQuery({ maxHeight: 669 }),
-    isThin: useMediaQuery({ maxWidth: 625 }),
+    isThin: useMediaQuery({ maxWidth: 737 }),
     tallWindow: useMediaQuery({ minHeight: 920 }),
     isSmol: useMediaQuery({ maxWidth: 540 }),
   };
