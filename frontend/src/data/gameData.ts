@@ -17,6 +17,8 @@ import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3Character
 import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
 import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
 import lege3CharacterImgs from '../imgs/characters/lege3/lege3CharacterImgs';
+import crys3Characters from './crys3Characters';
+import crys3CharacterImgs from '../imgs/characters/crys3/crys3CharacterImgs';
 
 const gameData: GameInterface = {
   vanilla2: {
@@ -82,6 +84,15 @@ const gameData: GameInterface = {
     characterImages: lege3CharacterImgs,
     updated: '26 Oct 2022',
     category: 'Character Mod',
+  },
+  crys3: {
+    text: 'Leaders of Legend 3',
+    image: gameImages['crys3'],
+    factions: factions,
+    characters: crys3Characters,
+    characterImages: crys3CharacterImgs,
+    updated: '29 Oct 2022',
+    category: 'Overhaul',
   },
 };
 

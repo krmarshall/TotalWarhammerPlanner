@@ -71,10 +71,10 @@ const Issues = () => {
             In some cases each skill effect only has the first 3 related abilities linked for tooltips
           </li>
           <li className="text-gray-200 text-2xl">
-            Vanilla 3 Daemon Prince Reinforcer skill has a placeholder skill icon
+            WH3 Vanilla + Mods, Daemon Prince Reinforcer skill has a placeholder skill icon
           </li>
           <li className="text-gray-200 text-2xl">
-            Vanilla 3 Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree
+            WH3 Vanilla + Mods, Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree
           </li>
           <li className="text-gray-200 text-2xl">
             WH2 Vanilla + Mods, Several lords dont have their Faction Effects linked, this likely wont change
@@ -87,7 +87,6 @@ const Issues = () => {
             Legendary Characters 3 Bassiano Dutra has several placeholder skills with no title or description, these are
             due to misplaced locs in the mod
           </li>
-          <li className="text-gray-200 text-2xl">SFO2 Son of Bretonnia has a hidden skill in skilltree</li>
           <li className="text-gray-200 text-2xl">Radious 2 mounts missing skill titles, see Wood Seer</li>
           <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
           <li className="text-gray-200 text-2xl">

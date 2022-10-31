@@ -11,6 +11,7 @@ import radious3Characters from '../../frontend/src/data/radious3Characters';
 import vanilla3Characters from '../../frontend/src/data/vanilla3Characters';
 import mixu3Characters from '../../frontend/src/data/mixu3Characters';
 import lege3Characters from '../../frontend/src/data/lege3Characters';
+import crys3Characters from '../../frontend/src/data/crys3Characters';
 
 const request = supertest(app);
 
@@ -54,6 +55,7 @@ describe('Bulk character API test', () => {
     { charList: radious3Characters, name: 'radious3' },
     { charList: mixu3Characters, name: 'mixu3' },
     { charList: lege3Characters, name: 'lege3' },
+    { charList: crys3Characters, name: 'crys3' },
   ];
 
   gameList.forEach((game) => {
