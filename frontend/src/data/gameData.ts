@@ -91,7 +91,7 @@ const gameData: GameInterface = {
     factions: factions,
     characters: crys3Characters,
     characterImages: crys3CharacterImgs,
-    updated: '30 Oct 2022',
+    updated: '1 Nov 2022',
     category: 'Overhaul',
   },
 };
