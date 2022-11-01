@@ -1,11 +1,12 @@
 import { findSkill } from '../../utils/skillVerification';
-import { AbilityInterface, SkillInterface } from '../../types/interfaces/CharacterInterface';
+import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillEffect from './SkillEffect';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
+import { getRelatedAbilities } from '../../utils/sharedFunctions';
 
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;
@@ -48,22 +49,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
       ?.name as string;
   }
 
-  const relatedAbilities: Array<AbilityInterface> = [];
-  const relatedAbilitiesKeys: Array<string> = [];
-  skill?.levels?.[skillPoints]?.effects?.forEach((effect) => {
-    if (effect.related_abilities) {
-      effect.related_abilities.forEach((ability) => {
-        let keyCheck = ability.unit_ability.key;
-        if (keyCheck.endsWith('_upgraded')) {
-          keyCheck = keyCheck.replace(/_upgraded$/, '');
-        }
-        if (!relatedAbilitiesKeys.includes(keyCheck)) {
-          relatedAbilities.push(ability);
-          relatedAbilitiesKeys.push(keyCheck);
-        }
-      });
-    }
-  });
+  const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
 
   return (
     <span className="text-center flex flex-row">

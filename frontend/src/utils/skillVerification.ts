@@ -131,6 +131,7 @@ const findSkill = (
     });
   });
   if (returnValue === undefined) {
+    // eslint-disable-next-line no-console
     console.log('Could not find skill in data tree');
   }
   return returnValue;

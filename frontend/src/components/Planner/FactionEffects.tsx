@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
-import { AbilityInterface, FactionEffectInterface } from '../../types/interfaces/CharacterInterface';
+import { FactionEffectInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
-import { trimString } from '../../utils/sharedFunctions';
+import { getRelatedAbilities, setFontSize, trimString } from '../../utils/sharedFunctions';
 
 interface PropInterface {
   factionEffect: FactionEffectInterface;
@@ -36,33 +36,9 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
     };
   }, [ctrCounter]);
 
-  const relatedAbilities: Array<AbilityInterface> = [];
-  const relatedAbilitiesKeys: Array<string> = [];
-  factionEffect.effects?.forEach((effect) => {
-    if (effect.related_abilities) {
-      effect.related_abilities.forEach((ability) => {
-        let keyCheck = ability.unit_ability.key;
-        if (keyCheck.endsWith('_upgraded')) {
-          keyCheck = keyCheck.replace(/_upgraded$/, '');
-        }
-        if (!relatedAbilitiesKeys.includes(keyCheck)) {
-          relatedAbilities.push(ability);
-          relatedAbilitiesKeys.push(keyCheck);
-        }
-      });
-    }
-  });
+  const relatedAbilities = getRelatedAbilities(factionEffect.effects);
 
-  let fontSize;
-  if (factionEffect.title.length > 52) {
-    fontSize = 'text-xs';
-  } else if (factionEffect.title.length > 37) {
-    fontSize = 'text-sm';
-  } else if (factionEffect.title.length > 27) {
-    fontSize = 'text-base';
-  } else {
-    fontSize = 'text-xl';
-  }
+  const fontSize = setFontSize(factionEffect.title);
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = factionEffect.ui_icon.replace('.png', '.webp');

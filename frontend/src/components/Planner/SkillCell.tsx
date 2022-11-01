@@ -11,7 +11,7 @@ import ReactImage from '../ReactImage';
 
 import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';
 import blockedSkillOverlay from '../../imgs/other/skill_locked_rank.webp';
-import { trimString } from '../../utils/sharedFunctions';
+import { setFontSize, trimString } from '../../utils/sharedFunctions';
 
 interface SkillCellPropsInterface {
   skill: SkillInterface;
@@ -257,16 +257,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }
 
-  let fontSize;
-  if (skill.name.length > 52) {
-    fontSize = 'text-xs';
-  } else if (skill.name.length > 37) {
-    fontSize = 'text-sm';
-  } else if (skill.name.length > 27) {
-    fontSize = 'text-base';
-  } else {
-    fontSize = 'text-xl';
-  }
+  const fontSize = setFontSize(skill.name);
 
   const findAbilityImage = () => {
     if (skill.levels?.[0].effects === undefined) {

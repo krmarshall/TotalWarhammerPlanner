@@ -1,5 +1,5 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
-import { CharacterInterface } from '../types/interfaces/CharacterInterface';
+import { AbilityInterface, CharacterInterface, SkillEffectInterface } from '../types/interfaces/CharacterInterface';
 
 const createEmptyCharacterBuild = (
   character: CharacterInterface,
@@ -101,4 +101,41 @@ const trimString = (string: string, length = 75) => {
   return trimmedString;
 };
 
-export { createEmptyCharacterBuild, createCharacterBuildFromArray, trimString };
+const getRelatedAbilities = (effectsArray: Array<SkillEffectInterface> | undefined) => {
+  const relatedAbilities: Array<AbilityInterface> = [];
+  const relatedAbilitiesKeys: Array<string> = [];
+
+  effectsArray?.forEach((effect) => {
+    if (effect.related_abilities) {
+      effect.related_abilities.forEach((ability) => {
+        let keyCheck = ability.unit_ability.key;
+        if (keyCheck.endsWith('_upgraded')) {
+          keyCheck = keyCheck.replace(/_upgraded$/, '');
+        }
+        if (!relatedAbilitiesKeys.includes(keyCheck)) {
+          relatedAbilities.push(ability);
+          relatedAbilitiesKeys.push(keyCheck);
+        }
+      });
+    }
+  });
+
+  return relatedAbilities;
+};
+
+const setFontSize = (string: string) => {
+  let fontSize;
+  if (string.length > 52) {
+    fontSize = 'text-xs';
+  } else if (string.length > 37) {
+    fontSize = 'text-sm';
+  } else if (string.length > 27) {
+    fontSize = 'text-base';
+  } else {
+    fontSize = 'text-xl';
+  }
+
+  return fontSize;
+};
+
+export { createEmptyCharacterBuild, createCharacterBuildFromArray, trimString, getRelatedAbilities, setFontSize };

@@ -1,17 +1,30 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
 import lzbase62 from 'lzbase62';
+import { createEmptyCharacterBuild } from './sharedFunctions';
+import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
 const baseURL = import.meta.env.DEV ? 'http://127.0.0.1:5173/planner/' : 'https://totalwarhammerplanner.com/planner/';
 // 0-v means base32 decoded to a number between 0 and 31
 // Url format http://127.0.0.1:5173/planner/<faction>/<character>/...
 // [0-9 = # Of Skill Rows, y]([0-z = # of skills in next row, x][0-3 = Skill points in skill] * x) * y
-const convertBuildToCode = (characterBuild: BuildInterface) => {
+const convertBuildToCode = (characterBuild: BuildInterface, characterData: CharacterInterface) => {
   const buildData = [...characterBuild.buildData];
   let stringBase = '';
   stringBase += baseURL;
 
   // Add faction and character
   stringBase += `${characterBuild.game}/${characterBuild.faction}/${characterBuild.character}/`;
+
+  const emptyCharacterBuild = createEmptyCharacterBuild(
+    characterData,
+    characterBuild.game,
+    characterBuild.faction,
+    characterBuild.character
+  );
+  // Scuffed object equality check
+  if (JSON.stringify(characterBuild) === JSON.stringify(emptyCharacterBuild)) {
+    return stringBase;
+  }
 
   let encodedString = '';
   // Encode # of skill rows

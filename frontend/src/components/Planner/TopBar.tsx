@@ -16,7 +16,7 @@ interface PropInterface {
 
 const TopBar = ({ isMobile }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild } = state;
+  const { characterBuild, characterData } = state;
   const { mod, faction, character } = useParams();
 
   const [effectiveRank, setEffectiveRank] = useState(1);
@@ -49,10 +49,11 @@ const TopBar = ({ isMobile }: PropInterface) => {
   };
 
   const shareButtonHandler = () => {
-    if (!characterBuild) {
+    if (!characterBuild || !characterData) {
       return;
     }
-    const buildLink = convertBuildToCode(characterBuild);
+
+    const buildLink = convertBuildToCode(characterBuild, characterData);
 
     navigator.clipboard
       .writeText(buildLink)

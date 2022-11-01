@@ -8,7 +8,7 @@ import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { useMediaQuery } from 'react-responsive';
 
 const Home = () => {
-  const { state, dispatch } = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
   const { mod, faction } = useParams();
 
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1365 });

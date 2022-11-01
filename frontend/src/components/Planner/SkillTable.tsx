@@ -9,7 +9,7 @@ interface PropInterface {
 }
 
 const SkillTable = ({ faction, shortViewToggle }: PropInterface) => {
-  const { state, dispatch } = useContext(AppContext);
+  const { state } = useContext(AppContext);
   const { isShortWidth, isShortHeight } = useBulkMediaQueries();
 
   const isShort = isShortWidth || isShortHeight ? true : false;

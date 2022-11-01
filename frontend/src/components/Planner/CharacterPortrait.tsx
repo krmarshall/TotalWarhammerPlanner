@@ -5,7 +5,7 @@ import gameData from '../../data/gameData';
 // import portholeFrame from '../imgs/other/porthole_frame_battle_load.webp';
 
 const CharacterPortrait = () => {
-  const { state, dispatch } = useContext(AppContext);
+  const { state } = useContext(AppContext);
   const { selectedMod, characterData } = state;
 
   const imgSrc = gameData[selectedMod].characterImages[characterData?.key as string];

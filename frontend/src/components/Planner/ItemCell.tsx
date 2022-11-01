@@ -1,12 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
-import { AbilityInterface, ItemInterface } from '../../types/interfaces/CharacterInterface';
+import { ItemInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
-import { trimString } from '../../utils/sharedFunctions';
+import { getRelatedAbilities, setFontSize, trimString } from '../../utils/sharedFunctions';
+import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 
 interface SkillCellPropsInterface {
   item: ItemInterface;
@@ -15,6 +16,11 @@ interface SkillCellPropsInterface {
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
   const { state } = useContext(AppContext);
   const { selectedMod, selectedGame } = state;
+
+  const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
+
+  const isMobile = isMobileWidth || isMobileHeight ? true : false;
+
   const [ctrCounter, setCtrCounter] = useState(0);
 
   useEffect(() => {
@@ -35,33 +41,9 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     };
   }, [ctrCounter]);
 
-  const relatedAbilities: Array<AbilityInterface> = [];
-  const relatedAbilitiesKeys: Array<string> = [];
-  item?.effects?.forEach((effect) => {
-    if (effect.related_abilities) {
-      effect.related_abilities.forEach((ability) => {
-        let keyCheck = ability.unit_ability.key;
-        if (keyCheck.endsWith('_upgraded')) {
-          keyCheck = keyCheck.replace(/_upgraded$/, '');
-        }
-        if (!relatedAbilitiesKeys.includes(keyCheck)) {
-          relatedAbilities.push(ability);
-          relatedAbilitiesKeys.push(keyCheck);
-        }
-      });
-    }
-  });
+  const relatedAbilities = getRelatedAbilities(item.effects);
 
-  let fontSize;
-  if (item.name.length > 52) {
-    fontSize = 'text-xs';
-  } else if (item.name.length > 37) {
-    fontSize = 'text-sm';
-  } else if (item.name.length > 27) {
-    fontSize = 'text-base';
-  } else {
-    fontSize = 'text-xl';
-  }
+  const fontSize = setFontSize(item.name);
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = item.image_path.replace('.png', '.webp');
@@ -72,7 +54,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
           <div className="flex flex-col">
             <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
               <h3 className="text-gray-50 text-2xl">{item?.name}</h3>
-              {item?.description.trim() && (
+              {item?.description.trim() && !isMobile && (
                 <h4 className="text-gray-50 opacity-70 text-lg max-w-fit">&quot;{item?.description.trim()}&quot;</h4>
               )}
               {item?.unlocked_at_rank && (

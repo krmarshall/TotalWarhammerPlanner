@@ -9,6 +9,7 @@ import vanilla3Characters from './vanilla3Characters';
 import radious3Characters from './radious3Characters';
 import mixu3Characters from './mixu3Characters';
 import lege3Characters from './lege3Characters';
+import crys3Characters from './crys3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
@@ -17,7 +18,6 @@ import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3Character
 import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
 import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
 import lege3CharacterImgs from '../imgs/characters/lege3/lege3CharacterImgs';
-import crys3Characters from './crys3Characters';
 import crys3CharacterImgs from '../imgs/characters/crys3/crys3CharacterImgs';
 
 const gameData: GameInterface = {

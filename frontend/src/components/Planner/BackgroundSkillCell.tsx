@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
-import { trimString } from '../../utils/sharedFunctions';
+import { setFontSize, trimString } from '../../utils/sharedFunctions';
 import ReactImage from '../ReactImage';
 import SkillTooltip from './SkillTooltip';
 import TooltipWrapper from './TooltipWrapper';
@@ -15,16 +15,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const { selectedMod, selectedGame } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
 
-  let fontSize;
-  if (skill.name.length > 52) {
-    fontSize = 'text-xs';
-  } else if (skill.name.length > 37) {
-    fontSize = 'text-sm';
-  } else if (skill.name.length > 27) {
-    fontSize = 'text-base';
-  } else {
-    fontSize = 'text-xl';
-  }
+  const fontSize = setFontSize(skill.name);
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = skill.image_path.replace('.png', '.webp');
