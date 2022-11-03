@@ -12,6 +12,12 @@ const apiListener = (req: Request, res: Response) => {
   }
 
   usageData.hits++;
+  if (usageData.modHits[req.params.gameKey] === undefined) {
+    usageData.modHits.other++;
+  } else {
+    usageData.modHits[req.params.gameKey]++;
+  }
+
   return res.status(200).json(selectedCharacter);
 };
 

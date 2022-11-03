@@ -9,7 +9,7 @@ if (process.env.LOGINTERVAL !== undefined) {
 }
 
 app.listen(port, () => {
-  console.log(`API is up at port ${port}`);
+  console.log(`API is up on port ${port}`);
   console.log(`Environment ${process.env.NODE_ENV}`);
 });
 
