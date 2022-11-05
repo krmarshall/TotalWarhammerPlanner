@@ -1,3 +1,4 @@
+import IssuesSlider from '../components/IssuesSlider';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import placeholderImage from '../imgs/other/0placeholder.webp';
 
@@ -24,14 +25,10 @@ const Issues = () => {
           </a>
           . Some notes to follow before messaging:
         </p>
-        <ul className="list-disc list-inside mt-8">
-          <li className="text-gray-200 text-2xl">
-            If the base game updated recently expect mods to be broken and/or outdated.
-          </li>
-          <li className="text-gray-200 text-2xl">
-            Ensure the problem isn&apos;t already mentioned in the Known Issues section.
-          </li>
-          <li className="text-gray-200 text-2xl">
+        <ul className="list-disc list-inside mt-8 text-gray-200 text-2xl">
+          <li>If the base game updated recently expect mods to be broken and/or outdated.</li>
+          <li>Ensure the problem isn&apos;t already mentioned in the Known Issues section.</li>
+          <li>
             When sending a message please include the following details, or use this template:
             <div className="border border-gray-300 bg-gray-800 w-fit ml-8 p-2 pr-12 rounded-xl">
               Browser Used:
@@ -41,11 +38,11 @@ const Issues = () => {
               <br /> Steps to Reproduce (If Applicable):
             </div>
           </li>
-          <li className="text-gray-200 text-2xl">
+          <li>
             If you are experiencing an issue using Safari or IE, try another browser such as Chrome or Firefox before
             reporting it.
           </li>
-          <li className="text-gray-200 text-2xl">
+          <li>
             If it is related to a pink icon (
             <img src={placeholderImage} alt="placeholder image" width="59" height="59" className="inline w-6 h-6" />
             ), that is a placeholder icon. If this is somewhere in a tooltip it is probably related to a hidden skill
@@ -60,42 +57,44 @@ const Issues = () => {
           <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">Known Issues</h1>
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
-        <ul className="list-disc list-inside">
-          <li className="text-gray-200 text-2xl">
+
+        <ul className="list-disc list-inside text-gray-200 text-2xl">
+          <li>
             Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
           </li>
-          <li className="text-gray-200 text-2xl">
-            Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are cut off
+          <li>Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are cut off</li>
+          <li>
+            In some cases each skill effect only has the first 3 related abilities linked for tooltips (eg. Sisters of
+            Twilight Dragon Breath&apos;s)
           </li>
-          <li className="text-gray-200 text-2xl">
-            In some cases each skill effect only has the first 3 related abilities linked for tooltips
-          </li>
-          <li className="text-gray-200 text-2xl">
-            WH3 Vanilla + Mods, Daemon Prince Reinforcer skill has a placeholder skill icon
-          </li>
-          <li className="text-gray-200 text-2xl">
-            WH3 Vanilla + Mods, Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree
-          </li>
-          <li className="text-gray-200 text-2xl">
-            WH2 Vanilla + Mods, Several lords dont have their Faction Effects linked, this likely wont change
-          </li>
-          <li className="text-gray-200 text-2xl">
-            Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs in
-            the mod itself
-          </li>
-          <li className="text-gray-200 text-2xl">
-            Legendary Characters 3 Bassiano Dutra has several placeholder skills with no title or description, these are
-            due to misplaced locs in the mod
-          </li>
-          <li className="text-gray-200 text-2xl">Radious 2 mounts missing skill titles, see Wood Seer</li>
-          <li className="text-gray-200 text-2xl">Radious 2 boxed issues, see Fimir Noble</li>
-          <li className="text-gray-200 text-2xl">
-            Radious 3 Cathay Celestial Champion/Dwarf Runesmith poorly scaled icons
-          </li>
-          <li className="text-gray-200 text-2xl">
-            Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
-            like copying from broken base game skill?)
-          </li>
+          <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
+            <li>Daemon Prince Reinforcer skill has a placeholder skill icon</li>
+            <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
+
+            <IssuesSlider title="Mods" bg="bg-gray-700">
+              <li>
+                Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs
+                in the mod itself
+              </li>
+              <li>
+                Legendary Characters 3 Bassiano Dutra has several placeholder skills with no title or description, these
+                are due to misplaced locs in the mod
+              </li>
+              <li>Radious 3 Cathay Celestial Champion/Dwarf Runesmith poorly scaled icons</li>
+              <li>
+                Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
+                like copying from broken base game skill?)
+              </li>
+            </IssuesSlider>
+          </IssuesSlider>
+
+          <IssuesSlider title="Warhammer 2" bg="bg-gray-600">
+            <li>Several lords dont have their Faction Effects linked, this likely wont change</li>
+            <IssuesSlider title="Mods" bg="bg-gray-700">
+              <li>Radious 2 mounts missing skill titles, see Wood Seer</li>
+              <li>Radious 2 boxed issues, see Fimir Noble</li>
+            </IssuesSlider>
+          </IssuesSlider>
         </ul>
       </div>
     </div>

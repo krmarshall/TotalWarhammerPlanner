@@ -27,9 +27,8 @@ const About = () => {
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
         <p className="text-center text-gray-200 text-2xl">
-          Development and maintenance are extremely time consuming, if you find this tool useful and want to help cover
-          server costs, keep this tool ad and tracking free, or just buy me a coffee by donating it is greatly
-          appreciated.
+          Development is extremely time consuming, if you find this tool useful and want to help cover server costs,
+          keep this tool ad and tracking free, or just buy me a coffee by donating it is greatly appreciated.
         </p>
 
         <a href="https://ko-fi.com/D1D6EX4Y6" target="_blank" rel="noopener noreferrer" className="mx-auto mt-2">
@@ -51,12 +50,12 @@ const About = () => {
           Some general items I would like to add/improve in the future, nothing is set in stone and some of these would
           take a lot of time, but I&apos;ve at least thought about them.
         </p>
-        <ul className="list-disc list-inside mx-auto">
-          <li className="text-gray-200 text-2xl">TW2 quest item levels</li>
-          <li className="text-gray-200 text-2xl">Brettonia vow details</li>
-          <li className="text-gray-200 text-2xl">Mobile UI</li>
-          <li className="text-gray-200 text-2xl">Character stats</li>
-          <li className="text-gray-200 text-2xl">Unique starting heroes/traits (maybe)</li>
+        <ul className="list-disc list-inside mx-auto text-gray-200 text-2xl">
+          <li>TW2 quest item levels</li>
+          <li>Brettonia vow details</li>
+          <li>Mobile UI</li>
+          <li>Character stats</li>
+          <li>Unique starting heroes/traits (maybe)</li>
         </ul>
       </div>
     </div>

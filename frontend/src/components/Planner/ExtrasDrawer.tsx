@@ -19,15 +19,15 @@ const ExtrasDrawer = ({ shortViewToggle, setShortViewToggle }: PropInterface) =>
 
   const isShort = isShortWidth || isShortHeight ? true : false;
 
-  let drawerClass = 'flex flex-row place-content-evenly';
+  let drawerClass = 'flex flex-row place-content-evenly slide-out';
   if (open && isShort && shortViewToggle) {
     drawerClass += ' show max-h-[48vh]';
   } else if (open) {
     drawerClass += ' mt-1.5 show max-h-[20vh]';
   } else if (!open && isShort) {
-    drawerClass += ' h-[0vh] hidden';
+    drawerClass += ' max-h-[0vh] hidden';
   } else {
-    drawerClass += ' h-[0vh]';
+    drawerClass += ' max-h-[0vh]';
   }
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const ExtrasDrawer = ({ shortViewToggle, setShortViewToggle }: PropInterface) =>
         <p className="text-black text-center text-xl">{open ? '↓ Hide Extras ↓' : '↑ Show Extras ↑'}</p>
       </button>
       {isShort && open && <TopBar isMobile={true} />}
-      <div className={drawerClass} id="slide-out">
+      <div className={drawerClass}>
         {state.characterData?.items && state.characterData?.items.length > 0 && <CharacterItems />}
         {state.characterData?.backgroundSkills && state.characterData.backgroundSkills.length > 0 && (
           <BackgroundSkills />

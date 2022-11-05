@@ -7,6 +7,7 @@ import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
 import { getRelatedAbilities, setFontSize, trimString } from '../../utils/sharedFunctions';
+import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 
 interface PropInterface {
   factionEffect: FactionEffectInterface;
@@ -15,6 +16,10 @@ interface PropInterface {
 const FactionEffects = ({ factionEffect }: PropInterface) => {
   const { state } = useContext(AppContext);
   const { selectedMod, selectedGame } = state;
+
+  const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
+
+  const isMobile = isMobileWidth || isMobileHeight ? true : false;
 
   const [ctrCounter, setCtrCounter] = useState(0);
 
@@ -52,7 +57,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
               <div className="flex flex-col">
                 <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
                   <h3 className="text-gray-50 text-2xl">{factionEffect?.title}</h3>
-                  {factionEffect?.description.trim() && (
+                  {factionEffect?.description.trim() && !isMobile && (
                     <h4 className="text-gray-50 opacity-70 text-lg max-w-[30vw]">
                       &quot;{factionEffect?.description.trim()}&quot;
                     </h4>
