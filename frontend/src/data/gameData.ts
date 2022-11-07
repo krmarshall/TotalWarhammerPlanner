@@ -82,7 +82,7 @@ const gameData: GameInterface = {
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
-    updated: '2 Nov 2022',
+    updated: '7 Nov 2022',
     category: 'Character Mod',
   },
   crys3: {

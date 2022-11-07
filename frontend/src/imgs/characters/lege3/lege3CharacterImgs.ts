@@ -29,6 +29,11 @@ import str_thyrus from './str_thyrus.webp';
 import str_ulrika from './str_ulrika.webp';
 import str_valnir from './str_valnir.webp';
 import str_xian from './str_xian.webp';
+import hcs_morskittar from './hcs_morskittar.webp';
+import str_amon from './str_amon.webp';
+import str_ragush from './str_ragush.webp';
+import str_serkhet from './str_serkhet.webp';
+import str_xuqls from './str_xuqls.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -64,6 +69,11 @@ const lege3CharacterImgs = {
   str_changeling: str_changeling,
   str_scribes: str_scribes,
   str_ulrika: str_ulrika,
+  hcs_morskittar: hcs_morskittar,
+  str_amon: str_amon,
+  str_ragush: str_ragush,
+  str_serkhet: str_serkhet,
+  str_xuqls: str_xuqls,
 };
 
 export default lege3CharacterImgs;

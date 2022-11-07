@@ -1,12 +1,18 @@
 import { SpellLores } from '../types/interfaces/GameInterface';
 
 const lege3Characters = {
+  bst_beastmen_lords: {
+    str_ragush: { name: 'Ragush of the Bloody Horn' },
+  },
+  bst_beastmen_heroes: {},
+
   dae_daemons_lords: {
     str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
     str_slavin: { name: 'Slavin Kurnz' },
   },
   dae_daemons_heroes: {
     str_masque: { name: 'The Masque' },
+    str_xuqls: { name: "Xuq'ls" },
   },
 
   chs_chaos_lords: {
@@ -70,6 +76,7 @@ const lege3Characters = {
 
   skv_skaven_lords: {
     kd_kratch_doomclaw: { name: 'Kratch Doomclaw' },
+    hcs_morskittar: { name: 'Lord Morskittar' },
   },
   skv_skaven_heroes: {
     hcm_hackflay: { name: 'Ikk Hackflay' },
@@ -84,10 +91,18 @@ const lege3Characters = {
     str_masque: { name: 'The Masque' },
   },
 
-  tze_tzeentch_lords: {},
+  tmb_tomb_kings_lords: {},
+  tmb_tomb_kings_heroes: {
+    str_serkhet: { name: 'Serkhet' },
+  },
+
+  tze_tzeentch_lords: {
+    str_amon: { name: "Amon 'Chakai" },
+  },
   tze_tzeentch_heroes: {
     str_changeling: { name: 'Changeling', spellLore: SpellLores.tzeentch },
     str_scribes: { name: 'Blue Scribes', spellLore: SpellLores.mixed },
+    str_xuqls: { name: "Xuq'ls" },
   },
 
   vmp_vampire_counts_lords: {},

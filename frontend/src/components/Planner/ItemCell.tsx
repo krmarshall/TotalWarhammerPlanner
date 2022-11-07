@@ -102,7 +102,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         />
 
         <div className="flex flex-col justify-center">
-          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 ${fontSize}`}>
+          <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
             {trimString(item.name)}
           </h2>
         </div>

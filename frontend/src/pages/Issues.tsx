@@ -70,6 +70,9 @@ const Issues = () => {
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
             <li>Daemon Prince Reinforcer skill has a placeholder skill icon</li>
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
+            <li>
+              Some poorly scaled skill icons depending on file path, mostly affects a couple mods like Lege3 Amon Chakai
+            </li>
 
             <IssuesSlider title="Mods" bg="bg-gray-700">
               <li>
@@ -80,7 +83,9 @@ const Issues = () => {
                 Legendary Characters 3 Bassiano Dutra has several placeholder skills with no title or description, these
                 are due to misplaced locs in the mod
               </li>
-              <li>Radious 3 Cathay Celestial Champion/Dwarf Runesmith poorly scaled icons</li>
+              <li>
+                Legendary Characters 3 Amon Chakai missing right arrow on Legions of Madness (second last blue line)
+              </li>
               <li>
                 Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
                 like copying from broken base game skill?)
