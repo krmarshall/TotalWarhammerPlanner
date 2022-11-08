@@ -28,7 +28,14 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
   if (!iconName.includes('.webp')) {
     iconName += '.webp';
   }
+
+  const abilityImagePath = skillEffect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+
   const srcList = [
+    `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePath}`,
+    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${abilityImagePath}`,
+    `/imgs/${selectedMod}/campaign_ui/skills/${abilityImagePath}`,
+    `/imgs/${vanillaGamePath}/campaign_ui/skills/${abilityImagePath}`,
     `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName.toLowerCase()}`,
     `/imgs/${selectedMod}/campaign_ui/effect_bundles/${iconName}`,
     `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${iconName}`,

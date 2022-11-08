@@ -265,7 +265,11 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
     for (let i = 0; i < skill.levels?.[0].effects?.length; i++) {
       const effect = skill.levels?.[0].effects[i];
-      if (effect.related_abilities?.[0].unit_ability.icon_name) {
+      if (
+        effect.related_abilities?.[0].unit_ability.icon_name &&
+        // Related ability icons tend to override skill icons, passives seem not to? hacky workaround
+        !effect.description.toLowerCase().includes('passive ability:')
+      ) {
         return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
       }
     }
@@ -276,11 +280,12 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const abilityImagePath = findAbilityImage();
 
   const srcList = [
-    `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
     // Some WH3 spells have incorrect icons on the character skill, but correct icons on the related ability
     `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePath}`,
     `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${abilityImagePath}`,
+    // Standard Skill Icon Path
+    `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
+    `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
     // WH2 has pretty much all the skill icons in campaign_ui, WH3 has many of the spells/abilities under battle_ui
     `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
     `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${imagePath}`,
