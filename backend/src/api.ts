@@ -42,6 +42,7 @@ const techListener = (req: Request, res: Response) => {
     return res.sendStatus(404);
   }
 
+  usageData.techHits++;
   return res.status(200).json(selectedTech);
 };
 

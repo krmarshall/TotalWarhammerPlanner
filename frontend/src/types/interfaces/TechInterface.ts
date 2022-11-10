@@ -36,4 +36,4 @@ interface TechSetInterface {
   node_links: Array<NodeLinkInterface>;
 }
 
-export type { TechSetInterface };
+export type { TechSetInterface, TechNodeInterface, NodeLinkInterface };
