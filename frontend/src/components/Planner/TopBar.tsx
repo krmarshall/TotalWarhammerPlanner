@@ -36,11 +36,11 @@ const TopBar = ({ isMobile }: PropInterface) => {
   }, [characterBuild?.rank, characterBuild?.startingSkillPoints, characterBuild?.autoUnlockSkillPoints]);
 
   const resetButtonHandler = () => {
-    if (!state.characterData) {
+    if (!characterData) {
       return;
     }
     const emptyCharacterBuild = createEmptyCharacterBuild(
-      state.characterData,
+      characterData,
       mod as string,
       faction as string,
       character as string

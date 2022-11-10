@@ -5,7 +5,6 @@ import api from '../api/api';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../utils/sharedFunctions';
 import { convertCodeToBuild } from '../utils/urlFunctions';
-import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ExtrasDrawer from '../components/Planner/ExtrasDrawer';
 import TopBar from '../components/Planner/TopBar';
@@ -37,7 +36,7 @@ const Planner = () => {
 
       api
         .getCharacterSkillTree(mod as string, faction as string, character as string)
-        .then((response: CharacterInterface) => {
+        .then((response) => {
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
           const emptyCharacterBuild = createEmptyCharacterBuild(
             response,

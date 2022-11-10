@@ -24,6 +24,15 @@ import woodElves from './woodElves.webp';
 
 import gnoblars from './gnoblars.webp';
 
+import chevaliers from './chevaliers.webp';
+import hunstmarshal from './hunstmarshal.webp';
+import spiritsJungle from './spiritsJungle.webp';
+import ecstaticLegions from './ecstaticLegions.webp';
+import fecundites from './fecundites.webp';
+import shadowLegion from './shadowLegion.webp';
+import legionOfTheGorequeen from './legionOfTheGorequeen.webp';
+import puppetsOfMisrule from './puppetsOfMisrule.webp';
+
 const factionImages = {
   tmb_tomb_kings: tombKings,
   cst_vampire_coast: vampireCoast,
@@ -50,6 +59,15 @@ const factionImages = {
   vmp_vampire_counts: vampireCounts,
 
   gnb_gnoblars: gnoblars,
+
+  brt_chevaliers: chevaliers,
+  emp_hunstmarshal: hunstmarshal,
+  lzs_spirits_of_the_jungle: spiritsJungle,
+  chs_ecstatic_legions: ecstaticLegions,
+  chs_fecundites: fecundites,
+  chs_shadowLegion: shadowLegion,
+  chs_legionOfTheGorequeen: legionOfTheGorequeen,
+  chs_puppetsOfMisrule: puppetsOfMisrule,
 };
 
 export default factionImages;

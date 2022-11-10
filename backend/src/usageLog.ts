@@ -5,6 +5,7 @@ interface LogInterface {
   };
   misses: number;
   missList: Array<string>;
+  techHits: number;
 }
 
 const usageData: LogInterface = {
@@ -23,6 +24,7 @@ const usageData: LogInterface = {
   },
   misses: 0,
   missList: [],
+  techHits: 0,
 };
 
 const usageLog = (hoursInterval: number) => {
@@ -33,12 +35,14 @@ const usageLog = (hoursInterval: number) => {
 };
 
 const outputLog = () => {
-  console.log(`API Hits: ${usageData.hits}`);
-  console.log('API Hits Breakdown:');
+  console.log(`Skill Hits: ${usageData.hits}`);
+  console.log('Skill Hits Breakdown:');
   console.log(usageData.modHits);
-  console.log(`API Misses: ${usageData.misses}`);
-  console.log('API Missed Links:');
-  console.log(usageData.missList);
+  console.log(`Skill Misses: ${usageData.misses}`);
+  // console.log('API Missed Links:');
+  // console.log(usageData.missList);
+  console.log(`Tech Hits: ${usageData.hits}`);
+
   usageData.hits = 0;
   usageData.modHits = {
     vanilla2: 0,
@@ -54,6 +58,7 @@ const outputLog = () => {
   };
   usageData.misses = 0;
   usageData.missList = [];
+  usageData.techHits = 0;
 };
 
 export { usageLog, outputLog, usageData };

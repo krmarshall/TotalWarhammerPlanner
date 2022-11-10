@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
+import TooltipWrapper from '../Planner/TooltipWrapper';
 import ReactImage from '../ReactImage';
 import placeholderImg from '../../imgs/other/0placeholder.webp';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import TooltipWrapper from '../Planner/TooltipWrapper';
 
 interface PropInterface {
   containerWidth: string;
@@ -14,21 +14,7 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
   const { selectedGame, selectedMod } = state;
 
-  const filterGamesKeys = () => {
-    const newKeys: Array<string> = [];
-    Object.keys(gameData).forEach((gameKey) => {
-      if (gameKey.includes(selectedGame)) {
-        newKeys.push(gameKey);
-      }
-    });
-    return newKeys;
-  };
-
-  const [gameKeys, setGameKeys] = useState(filterGamesKeys());
-
-  useEffect(() => {
-    setGameKeys(filterGamesKeys);
-  }, [selectedGame]);
+  const gameKeys = Object.keys(gameData);
 
   return (
     <div className={'justify-self-center px-2 ' + containerWidth}>
@@ -40,6 +26,11 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
       <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[27.7rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         <TransitionGroup component={null}>
           {gameKeys.map((gameKey) => {
+            if (!gameKey.includes(selectedGame)) {
+              return;
+            }
+
+            // Would like to break this out as its own component, but transition group get really weird about it
             const game = gameData[gameKey as keyof typeof gameData];
             let liClassName =
               'flex flex-col justify-around m-2 mt-1 p-1.5 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
@@ -51,7 +42,7 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
             }
 
             let categoryDesc = 'Placeholder';
-            switch (gameData[gameKey].category) {
+            switch (game.category) {
               case 'Base': {
                 categoryDesc = 'The vanilla game with no mods. All characters are displayed with few exceptions.';
                 break;
@@ -96,16 +87,16 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
                     h="128"
                     w="128"
                   />
-                  <h3 className="text-center text-gray-400 text-lg text-shadow mt-2">{gameData[gameKey].updated}</h3>
+                  <h3 className="text-center text-gray-400 text-lg text-shadow mt-2">{game.updated}</h3>
                   <TooltipWrapper
                     tooltip={
                       <span className="text-center flex flex-row">
                         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">
                           <h3 className="text-gray-50">{categoryDesc}</h3>
                           <div className="text-center">
-                            {gameData[gameKey].includes !== undefined && <p>Includes:</p>}
-                            {gameData[gameKey].includes !== undefined &&
-                              gameData[gameKey].includes?.map((includedMod) => {
+                            {game.includes !== undefined && <p>Includes:</p>}
+                            {game.includes !== undefined &&
+                              game.includes?.map((includedMod) => {
                                 return <p key={includedMod}>{includedMod}</p>;
                               })}
                           </div>
@@ -114,7 +105,7 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
                     }
                   >
                     <h3 className="w-fit mx-auto text-center text-gray-300 text-lg text-shadow mb-1 underline decoration-dashed underline-offset-2">
-                      {gameData[gameKey].category}
+                      {game.category}
                     </h3>
                   </TooltipWrapper>
                 </li>

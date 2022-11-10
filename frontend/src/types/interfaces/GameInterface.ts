@@ -31,18 +31,29 @@ enum SpellLores {
   'greatMaw' = 'greatMaw',
 }
 
-interface GameInterface {
-  [key: string]: {
-    text: string;
-    image: string;
-    factions: { [key: string]: string };
-    characters: { [key: string]: { [key: string]: { name: string; spellLore?: string } } };
-    characterImages: { [key: string]: string };
-    updated: string;
-    category: string;
-    includes?: Array<string>;
+interface GameDataInterface {
+  text: string;
+  image: string;
+  factions: { [key: string]: string };
+  characters: { [key: string]: { [key: string]: { name: string; spellLore?: string } } };
+  characterImages: { [key: string]: string };
+  updated: string;
+  category: string;
+  includes?: Array<string>;
+}
+
+interface TechDataInterface {
+  text: string;
+  image: string;
+  updated: string;
+  category: string;
+  techTrees: {
+    [key: string]: {
+      name: string;
+      image: string;
+    };
   };
 }
 
 export { SpellLores };
-export type { GameInterface };
+export type { GameDataInterface, TechDataInterface };

@@ -8,6 +8,8 @@ import useBulkMediaQueries from './hooks/useBulkMediaQueries';
 
 const Home = lazy(() => import('./pages/Home'));
 const Planner = lazy(() => import('./pages/Planner'));
+const TechHome = lazy(() => import('./pages/TechHome'));
+const Tech = lazy(() => import('./pages/Tech'));
 const About = lazy(() => import('./pages/About'));
 const Issues = lazy(() => import('./pages/Issues'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -43,6 +45,9 @@ const App = () => {
 
               <Route path="/planner/:mod/:faction/:character/:code" element={<Planner />} />
               <Route path="/planner/:mod/:faction/:character" element={<Planner />} />
+
+              <Route path="/techHome" element={<TechHome />} />
+              <Route path="/tech/:mod/:techTree" element={<Tech />} />
 
               <Route path="/about" element={<About />} />
               <Route path="/issues" element={<Issues />} />
