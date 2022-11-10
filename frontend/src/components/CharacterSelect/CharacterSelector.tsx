@@ -39,22 +39,26 @@ const CharacterSelector = () => {
     );
   };
 
-  const handleCharacterSelect = (characterKey: string) => {
-    const apiPromise = api.getCharacterSkillTree(selectedMod, selectedFaction, characterKey).then((response) => {
-      dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
-      const emptyCharacterBuild = createEmptyCharacterBuild(response, selectedMod, selectedFaction, characterKey);
-      dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
-      navigate(`/planner/${selectedMod}/${selectedFaction}/${characterKey}`);
-    });
-    toast.promise(
-      apiPromise,
-      {
-        loading: 'Loading',
-        success: 'Success',
-        error: (err) => `${err}`,
-      },
-      { loading: { duration: 5000 } }
-    );
+  const handleCharacterSelect = (event: React.MouseEvent, characterKey: string) => {
+    if (event.button === 0 && !event.ctrlKey && !event.shiftKey) {
+      event.preventDefault();
+
+      const apiPromise = api.getCharacterSkillTree(selectedMod, selectedFaction, characterKey).then((response) => {
+        dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
+        const emptyCharacterBuild = createEmptyCharacterBuild(response, selectedMod, selectedFaction, characterKey);
+        dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
+        navigate(`/planner/${selectedMod}/${selectedFaction}/${characterKey}`);
+      });
+      toast.promise(
+        apiPromise,
+        {
+          loading: 'Loading',
+          success: 'Success',
+          error: (err) => `${err}`,
+        },
+        { loading: { duration: 5000 } }
+      );
+    }
   };
 
   return (

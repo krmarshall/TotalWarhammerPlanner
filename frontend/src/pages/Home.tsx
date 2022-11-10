@@ -8,7 +8,7 @@ import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { useMediaQuery } from 'react-responsive';
 
 const Home = () => {
-  const { dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
   const { mod, faction } = useParams();
 
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1365 });
@@ -21,6 +21,13 @@ const Home = () => {
         type: AppContextActions.changeGameModFaction,
         payload: { selectedGame: game, selectedMod: mod, selectedFaction: faction },
       });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (state.characterData !== null) {
+      dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
+      dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: null } });
     }
   }, []);
 

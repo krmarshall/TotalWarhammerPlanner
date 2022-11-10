@@ -5,8 +5,9 @@ import SkillAbilityTooltip from './SkillAbilityTooltip';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
-import ctrlImg from '../../imgs/other/ctrlKey.webp';
 import { getRelatedAbilities } from '../../utils/sharedFunctions';
+
+import ctrlImg from '../../imgs/other/ctrlKey.webp';
 
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;

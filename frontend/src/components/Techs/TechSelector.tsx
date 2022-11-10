@@ -14,20 +14,24 @@ const TechSelector = () => {
 
   const gameTechKeys = Object.keys(techGameData[selectedModTech].techTrees);
 
-  const handleTechSelect = (techKey: string) => {
-    const apiPromise = api.getTechTree(selectedModTech, techKey).then((response) => {
-      dispatch({ type: AppContextActions.changeTechData, payload: { techData: response } });
-      navigate(`/tech/${selectedModTech}/${techKey}`);
-    });
-    toast.promise(
-      apiPromise,
-      {
-        loading: 'Loading',
-        success: 'Success',
-        error: (err) => `${err}`,
-      },
-      { loading: { duration: 5000 } }
-    );
+  const handleTechSelect = (event: React.MouseEvent, techKey: string) => {
+    if (event.button === 0 && !event.ctrlKey && !event.shiftKey) {
+      event.preventDefault();
+
+      const apiPromise = api.getTechTree(selectedModTech, techKey).then((response) => {
+        dispatch({ type: AppContextActions.changeTechData, payload: { techData: response } });
+        navigate(`/tech/${selectedModTech}/${techKey}`);
+      });
+      toast.promise(
+        apiPromise,
+        {
+          loading: 'Loading',
+          success: 'Success',
+          error: (err) => `${err}`,
+        },
+        { loading: { duration: 5000 } }
+      );
+    }
   };
 
   return (
