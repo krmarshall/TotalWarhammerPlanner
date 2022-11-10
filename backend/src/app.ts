@@ -4,7 +4,7 @@ import path from 'path';
 import helmet from 'helmet';
 import compression from 'compression';
 
-import apiListener from './api';
+import { skillListener, techListener } from './api';
 import setCustomCacheControl from './setCustomCacheControl';
 import { initializeData } from './initializeData';
 
@@ -28,7 +28,8 @@ app.use(helmet());
 app.use(compression());
 
 // Serve rest api
-app.get('/api/:gameKey.:factionKey.:characterKey', apiListener);
+app.get('/api/skills/:gameKey.:factionKey.:characterKey', skillListener);
+app.get('/api/techs/:gameKey.:techTreeKey', techListener);
 
 // Serve static front end HTML/JS/Images
 app.use(

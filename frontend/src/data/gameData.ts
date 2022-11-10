@@ -1,15 +1,15 @@
 import factions from '../data/factionData';
-import { GameInterface } from '../types/interfaces/GameInterface';
+import { GameDataInterface } from '../types/interfaces/GameInterface';
 import gameImages from '../imgs/games/gameImages';
 
-import vanilla2Characters from './vanilla2Characters';
-import sfo2Characters from './sfo2Characters';
-import radious2Characters from './radious2Characters';
-import vanilla3Characters from './vanilla3Characters';
-import radious3Characters from './radious3Characters';
-import mixu3Characters from './mixu3Characters';
-import lege3Characters from './lege3Characters';
-import crys3Characters from './crys3Characters';
+import vanilla2Characters from './characters/vanilla2Characters';
+import sfo2Characters from './characters/sfo2Characters';
+import radious2Characters from './characters/radious2Characters';
+import vanilla3Characters from './characters/vanilla3Characters';
+import radious3Characters from './characters/radious3Characters';
+import mixu3Characters from './characters/mixu3Characters';
+import lege3Characters from './characters/lege3Characters';
+import crys3Characters from './characters/crys3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
@@ -20,7 +20,7 @@ import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
 import lege3CharacterImgs from '../imgs/characters/lege3/lege3CharacterImgs';
 import crys3CharacterImgs from '../imgs/characters/crys3/crys3CharacterImgs';
 
-const gameData: GameInterface = {
+const gameData: { [key: string]: GameDataInterface } = {
   vanilla2: {
     text: 'Vanilla 2',
     image: gameImages['vanilla2'],

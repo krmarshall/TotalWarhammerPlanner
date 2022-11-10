@@ -4,14 +4,14 @@ import path from 'path';
 
 import app from '../src/app';
 import { initializeData, bulkData } from '../src/initializeData';
-import vanilla2Characters from '../../frontend/src/data/vanilla2Characters';
-import sfo2Characters from '../../frontend/src/data/sfo2Characters';
-import radious2Characters from '../../frontend/src/data/radious2Characters';
-import radious3Characters from '../../frontend/src/data/radious3Characters';
-import vanilla3Characters from '../../frontend/src/data/vanilla3Characters';
-import mixu3Characters from '../../frontend/src/data/mixu3Characters';
-import lege3Characters from '../../frontend/src/data/lege3Characters';
-import crys3Characters from '../../frontend/src/data/crys3Characters';
+import vanilla2Characters from '../../frontend/src/data/characters/vanilla2Characters';
+import sfo2Characters from '../../frontend/src/data/characters/sfo2Characters';
+import radious2Characters from '../../frontend/src/data/characters/radious2Characters';
+import radious3Characters from '../../frontend/src/data/characters/radious3Characters';
+import vanilla3Characters from '../../frontend/src/data/characters/vanilla3Characters';
+import mixu3Characters from '../../frontend/src/data/characters/mixu3Characters';
+import lege3Characters from '../../frontend/src/data/characters/lege3Characters';
+import crys3Characters from '../../frontend/src/data/characters/crys3Characters';
 
 const request = supertest(app);
 

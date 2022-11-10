@@ -1,4 +1,4 @@
-import { SpellLores } from '../types/interfaces/GameInterface';
+import { SpellLores } from '../../types/interfaces/GameInterface';
 
 const vanilla2Characters = {
   tmb_tomb_kings_lords: {

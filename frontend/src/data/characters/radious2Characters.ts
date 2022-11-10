@@ -1,4 +1,4 @@
-import { SpellLores } from '../types/interfaces/GameInterface';
+import { SpellLores } from '../../types/interfaces/GameInterface';
 import vanilla2Characters from './vanilla2Characters';
 
 const radious2Characters = {

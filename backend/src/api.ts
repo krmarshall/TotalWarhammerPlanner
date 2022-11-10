@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { bulkData } from './initializeData';
+import { skillData, techData } from './initializeData';
 import { usageData } from './usageLog';
 // import { readFile } from 'fs/promises';
 
-const apiListener = (req: Request, res: Response) => {
-  const selectedCharacter = bulkData[req.params.gameKey]?.[req.params.factionKey]?.[req.params.characterKey];
+const skillListener = (req: Request, res: Response) => {
+  const selectedCharacter = skillData[req.params.gameKey]?.[req.params.factionKey]?.[req.params.characterKey];
   if (selectedCharacter === undefined) {
     usageData.misses++;
     usageData.missList.push(req.originalUrl);
@@ -35,4 +35,14 @@ const apiListener = (req: Request, res: Response) => {
 //     });
 // };
 
-export default apiListener;
+const techListener = (req: Request, res: Response) => {
+  const selectedTech = techData[req.params.gameKey]?.[req.params.techTreeKey];
+
+  if (selectedTech === undefined) {
+    return res.sendStatus(404);
+  }
+
+  return res.status(200).json(selectedTech);
+};
+
+export { skillListener, techListener };

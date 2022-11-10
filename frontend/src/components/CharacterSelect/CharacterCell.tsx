@@ -18,7 +18,6 @@ interface CharacterCellProps {
 const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSelect }: CharacterCellProps) => {
   return (
     <li
-      key={charKey}
       className="flex flex-col justify-around m-1 p-1 rounded-lg border shadow-lg shadow-gray-800/60 border-gray-500 hover:bg-gray-600 hover-scale"
       onClick={() => handleCharacterSelect(charKey)}
     >

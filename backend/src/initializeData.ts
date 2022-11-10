@@ -1,7 +1,7 @@
 import glob from 'glob';
 import { readFileSync } from 'fs';
 
-interface bulkDataInterface {
+interface skillDataInterface {
   [key: string]: {
     [key: string]: {
       [key: string]: {
@@ -11,27 +11,57 @@ interface bulkDataInterface {
   };
 }
 
-const bulkData: bulkDataInterface = {};
+const skillData: skillDataInterface = {};
 
-const initializeData = () => {
-  const gamePaths = glob.sync('./src/TWPData/*/');
+const initializeSkillData = () => {
+  const gamePaths = glob.sync('./src/TWPData/skills/*/');
 
   gamePaths.forEach((gamePath) => {
-    const game = gamePath.split('./src/TWPData/')[1].replace('/', '');
-    bulkData[game] = {};
+    const game = gamePath.split('./src/TWPData/skills/')[1].replace('/', '');
+    skillData[game] = {};
     const factionPaths = glob.sync(`${gamePath}*/`);
 
     factionPaths.forEach((factionPath) => {
       const faction = factionPath.split(gamePath)[1].replace('/', '');
-      bulkData[game][faction] = {};
+      skillData[game][faction] = {};
       const characterPaths = glob.sync(`${factionPath}**.json`);
 
       characterPaths.forEach((characterPath) => {
         const character = characterPath.split(factionPath)[1].replace('.json', '');
-        bulkData[game][faction][character] = JSON.parse(readFileSync(characterPath, 'utf-8'));
+        skillData[game][faction][character] = JSON.parse(readFileSync(characterPath, 'utf-8'));
       });
     });
   });
 };
 
-export { initializeData, bulkData };
+interface techDataInterface {
+  [key: string]: {
+    [key: string]: {
+      techTree: any;
+    };
+  };
+}
+
+const techData: techDataInterface = {};
+
+const initializeTechData = () => {
+  const gamePaths = glob.sync('./src/TWPData/techs/*/');
+
+  gamePaths.forEach((gamePath) => {
+    const game = gamePath.split('./src/TWPData/techs/')[1].replace('/', '');
+    techData[game] = {};
+    const techTreePaths = glob.sync(`${gamePath}**.json`);
+
+    techTreePaths.forEach((techTreePath) => {
+      const techTree = techTreePath.split(gamePath)[1].replace('.json', '');
+      techData[game][techTree] = JSON.parse(readFileSync(techTreePath, 'utf-8'));
+    });
+  });
+};
+
+const initializeData = () => {
+  initializeSkillData();
+  initializeTechData();
+};
+
+export { initializeData, skillData, techData };
