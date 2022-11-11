@@ -17,7 +17,7 @@ const TechArrows = () => {
               end={link.child_key}
               endAnchor={link.child_link_position as anchorType}
               color={'#e7ebe5'}
-              divContainerProps={{ className: '' }}
+              divContainerProps={{ className: `${link.parent_key} | ${link.child_key}` }}
               strokeWidth={2}
               headSize={6}
               path="grid"

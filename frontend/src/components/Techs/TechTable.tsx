@@ -29,7 +29,15 @@ const TechTable = () => {
           <thead></thead>
           <tbody className="flex flex-col flex-nowrap">
             {techData?.tree.map((techRow, index) => {
-              return <TechRow key={index} techRow={techRow} yIndex={index} />;
+              return (
+                <TechRow
+                  key={index}
+                  techRow={techRow}
+                  techRowAbove={techData.tree[index - 1]}
+                  techRowBelow={techData.tree[index + 1]}
+                  yIndex={index}
+                />
+              );
             })}
           </tbody>
         </table>

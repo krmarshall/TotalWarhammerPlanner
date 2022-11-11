@@ -7,6 +7,8 @@ import TooltipWrapper from '../Planner/TooltipWrapper';
 import ReactImage from '../ReactImage';
 import TechTooltip from './TechTooltip';
 
+import buildingRequired from '../../imgs/other/building_required.webp';
+
 interface PropInterface {
   tech: TechNodeInterface;
   yIndex: number;
@@ -32,12 +34,30 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
   ];
   return (
     <td
-      className="flex flex-row w-max h-auto my-2 mr-6"
+      className="flex flex-row w-max h-auto my-2 mr-6 relative"
       onContextMenu={(event) => {
         event.preventDefault();
       }}
       onScroll={updateXarrow}
     >
+      {tech.technology?.required_buildings !== undefined && tech.technology?.required_buildings?.length > 0 && (
+        <TooltipWrapper
+          tooltip={
+            <div className="w-max p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+              <p className="text-yellow-300 text-xl">Requires: {tech.technology.required_buildings.join(', ')}</p>
+            </div>
+          }
+        >
+          <img
+            src={buildingRequired}
+            className="w-8 h-8 absolute top-0 right-0 z-20 hover-scale-large contrast-125"
+            draggable={false}
+            alt="building required icon"
+            width="38"
+            height="38"
+          />
+        </TooltipWrapper>
+      )}
       <div
         id={tech.key}
         className="flex flex-row z-10 rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"

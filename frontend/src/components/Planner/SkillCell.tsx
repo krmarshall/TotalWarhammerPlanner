@@ -307,14 +307,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         <TooltipWrapper
           tooltip={
             <div className="w-max p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-              <p className="text-yellow-400 text-lg">
+              <p className="text-yellow-300 text-xl">
                 This skill automatically unlocks at rank {skill.levels?.[0]?.auto_unlock_at_rank}
               </p>
             </div>
           }
         >
           <img
-            className="w-6 h-6 absolute bottom-1 left-1 z-10"
+            className="w-6 h-6 absolute bottom-1 left-1 z-10 hover-scale-large"
             src={autoSkillIcon}
             draggable={false}
             alt="autoUnlockIcon"

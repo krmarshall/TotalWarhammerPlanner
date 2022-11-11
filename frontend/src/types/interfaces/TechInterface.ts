@@ -13,6 +13,7 @@ interface TechSkillInterface {
   icon_name: string;
   name: string;
   description: string;
+  required_buildings?: Array<string>;
   effects: Array<SkillEffectInterface>;
 }
 
