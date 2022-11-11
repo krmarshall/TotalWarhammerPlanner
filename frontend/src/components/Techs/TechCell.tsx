@@ -1,4 +1,5 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { useXarrow } from 'react-xarrows';
 import { AppContext } from '../../contexts/AppContext';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
 import { setFontSize, trimString } from '../../utils/sharedFunctions';
@@ -16,6 +17,7 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
   const { state } = useContext(AppContext);
   const { selectedModTech } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
+  const updateXarrow = useXarrow();
 
   const fontSize = setFontSize(tech.technology.name);
 
@@ -28,12 +30,16 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
   ];
   return (
     <td
-      className="flex flex-row w-max h-auto my-1"
+      className="flex flex-row w-max h-auto my-2 mr-6"
       onContextMenu={(event) => {
         event.preventDefault();
       }}
+      onScroll={updateXarrow}
     >
-      <div className="flex flex-row rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
+      <div
+        id={tech.key}
+        className="flex flex-row z-10 rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"
+      >
         <TooltipWrapper tooltip={<TechTooltip tech={tech} ctrCounter={ctrCounter} setCtrCounter={setCtrCounter} />}>
           <div className="flex flex-row">
             <ReactImage
