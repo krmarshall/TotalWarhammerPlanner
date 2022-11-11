@@ -19,12 +19,11 @@ interface TechSkillInterface {
 
 interface TechNodeInterface {
   key: string;
-  technology_node_set: string;
   tier: number;
   indent: number;
   research_points_required: number;
-  cost_per_round: number;
-  optional_ui_group: string;
+  cost_per_round?: number;
+  optional_ui_group?: string;
   required_parents?: number;
   technology: TechSkillInterface;
 }
