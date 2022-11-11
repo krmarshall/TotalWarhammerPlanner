@@ -41,7 +41,7 @@ const outputLog = () => {
   console.log(`Skill Misses: ${usageData.misses}`);
   // console.log('API Missed Links:');
   // console.log(usageData.missList);
-  console.log(`Tech Hits: ${usageData.hits}`);
+  console.log(`Tech Hits: ${usageData.techHits}`);
 
   usageData.hits = 0;
   usageData.modHits = {
