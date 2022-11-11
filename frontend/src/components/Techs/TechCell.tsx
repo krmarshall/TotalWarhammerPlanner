@@ -21,6 +21,8 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
 
   const fontSize = setFontSize(tech.technology.name);
 
+  const imgPadding = selectedModTech.includes('2') ? ' p-0 scale-110' : ' p-1.5';
+
   const vanillaGamePath = selectedModTech.includes('2') ? 'vanilla2' : 'vanilla3';
   const imgPath = tech.technology.icon_name + '.webp';
   const srcList = [
@@ -44,7 +46,7 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
           <div className="flex flex-row">
             <ReactImage
               srcList={srcList}
-              className="w-[4.5rem] h-[4.5rem] p-1.5 my-auto drop-shadow-lg"
+              className={'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg' + imgPadding}
               alt="techIcon"
               w="64"
               h="64"
