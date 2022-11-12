@@ -61,22 +61,22 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">{skill?.description.trim()}</h4>
           )}
           {skill?.levels?.[skillPoints]?.auto_unlock_at_rank && (
-            <p className="text-yellow-400 text-lg">
+            <p className="text-yellow-300 text-lg">
               Automatically unlocks at rank {skill?.levels?.[skillPoints]?.auto_unlock_at_rank}
             </p>
           )}
           {skill?.levels?.[skillPoints]?.unlocked_at_rank && (
-            <p className="text-yellow-400 text-lg">
+            <p className="text-yellow-300 text-lg">
               Available at rank {skill?.levels?.[skillPoints]?.unlocked_at_rank}
             </p>
           )}
           {skill?.required_num_parents !== 0 && (
-            <p className="text-yellow-400 text-lg">
+            <p className="text-yellow-300 text-lg">
               Available after spending {skill?.required_num_parents} skill points in the previous group
             </p>
           )}
           {skill?.parent_required && (
-            <p className="text-yellow-400 text-lg">Available after unlocking &quot;{parentName?.trim()}&quot;</p>
+            <p className="text-yellow-300 text-lg">Available after unlocking &quot;{parentName?.trim()}&quot;</p>
           )}
           {blocked && <p className="text-red-500 text-lg">Skill has been blocked by another skill.</p>}
           <div>

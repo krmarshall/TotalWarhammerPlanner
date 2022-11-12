@@ -8,6 +8,7 @@ import ReactImage from '../ReactImage';
 import TechTooltip from './TechTooltip';
 
 import buildingRequired from '../../imgs/other/building_required.webp';
+import timerFrame from '../../imgs/other/timer_frame.webp';
 
 interface PropInterface {
   tech: TechNodeInterface;
@@ -29,7 +30,9 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
   const imgPath = tech.technology.icon_name + '.webp';
   const srcList = [
     `/imgs/${selectedModTech}/campaign_ui/technologies/${imgPath}`,
+    `/imgs/${selectedModTech}/campaign_ui/technologies/${imgPath.toLowerCase()}`,
     `/imgs/${vanillaGamePath}/campaign_ui/technologies/${imgPath}`,
+    `/imgs/${vanillaGamePath}/campaign_ui/technologies/${imgPath.toLowerCase()}`,
     `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
   ];
   return (
@@ -40,30 +43,37 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
       }}
       onScroll={updateXarrow}
     >
-      {tech.technology?.required_buildings !== undefined && tech.technology?.required_buildings?.length > 0 && (
-        <TooltipWrapper
-          tooltip={
-            <div className="w-max p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-              <p className="text-yellow-300 text-xl">Requires: {tech.technology.required_buildings.join(', ')}</p>
-            </div>
-          }
-        >
-          <img
-            src={buildingRequired}
-            className="w-8 h-8 absolute top-0 right-0 z-20 hover-scale-large contrast-125"
-            draggable={false}
-            alt="building required icon"
-            width="38"
-            height="38"
-          />
-        </TooltipWrapper>
-      )}
       <div
         id={tech.key}
         className="flex flex-row z-10 rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"
       >
         <TooltipWrapper tooltip={<TechTooltip tech={tech} ctrCounter={ctrCounter} setCtrCounter={setCtrCounter} />}>
           <div className="flex flex-row">
+            {tech.research_points_required > 0 && (
+              <div className="">
+                <img
+                  src={timerFrame}
+                  className="w-12 absolute -top-1 -right-2 z-20"
+                  draggable={false}
+                  alt="timer frame"
+                  width="46"
+                  height="27"
+                />
+                <p className="text-gray-50 text-lg absolute top-[-0.18rem] right-[0.3rem] z-30">
+                  {Math.ceil(tech.research_points_required / 100)}
+                </p>
+              </div>
+            )}
+            {tech.technology?.required_buildings !== undefined && tech.technology?.required_buildings?.length > 0 && (
+              <img
+                src={buildingRequired}
+                className="w-8 h-8 absolute top-[1.3rem] -right-2 z-20 contrast-125"
+                draggable={false}
+                alt="building required icon"
+                width="38"
+                height="38"
+              />
+            )}
             <ReactImage
               srcList={srcList}
               className={'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg' + imgPadding}
@@ -71,7 +81,6 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
               w="64"
               h="64"
             />
-
             <div className="flex flex-col justify-center mr-4">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
                 {trimString(tech.technology.name)}

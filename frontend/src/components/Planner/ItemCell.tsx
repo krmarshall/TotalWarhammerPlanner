@@ -58,7 +58,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
                 <h4 className="text-gray-50 opacity-70 text-lg max-w-fit">&quot;{item?.description.trim()}&quot;</h4>
               )}
               {item?.unlocked_at_rank && (
-                <p className="text-yellow-400 text-lg">Available at rank {item?.unlocked_at_rank}</p>
+                <p className="text-yellow-300 text-lg">Available at rank {item?.unlocked_at_rank}</p>
               )}
               <div>
                 {item.effects?.map((itemEffect, index) => {

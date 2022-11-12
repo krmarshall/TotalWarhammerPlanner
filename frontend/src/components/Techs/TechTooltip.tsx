@@ -51,13 +51,18 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter }: PropInterface) => {
               {tech?.technology?.description.trim()}
             </h4>
           )}
+          {tech?.technology?.required_buildings !== undefined && tech?.technology?.required_buildings?.length > 0 && (
+            <p className="text-yellow-300 text-lg">
+              Requires Building: {tech.technology.required_buildings.join(', ')}
+            </p>
+          )}
           {/* {skill?.required_num_parents !== 0 && (
-            <p className="text-yellow-400 text-lg">
+            <p className="text-yellow-300 text-lg">
               Available after spending {skill?.required_num_parents} skill points in the previous group
             </p>
           )} */}
           {/* {skill?.parent_required && (
-            <p className="text-yellow-400 text-lg">Available after unlocking &quot;{parentName?.trim()}&quot;</p>
+            <p className="text-yellow-300 text-lg">Available after unlocking &quot;{parentName?.trim()}&quot;</p>
           )} */}
           <div>
             {tech?.technology?.effects?.map((techEffect, index) => {

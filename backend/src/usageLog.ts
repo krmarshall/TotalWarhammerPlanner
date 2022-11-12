@@ -35,6 +35,7 @@ const usageLog = (hoursInterval: number) => {
 };
 
 const outputLog = () => {
+  console.log('--------------------------------------');
   console.log(`Skill Hits: ${usageData.hits}`);
   console.log('Skill Hits Breakdown:');
   console.log(usageData.modHits);
