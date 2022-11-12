@@ -20,6 +20,7 @@ const TechSelectorCell = ({ techKey, handleTechSelect }: PropInterface) => {
         href={`/tech/${selectedModTech}/${techKey}`}
         className="w-full h-full p-1 flex flex-col justify-around"
         onClick={(event) => handleTechSelect(event, techKey)}
+        draggable={false}
       >
         <h2 className="w-32 text-center text-2xl text-shadow text-gray-200 mb-2">{tech?.name}</h2>
         <div className="flex flex-row justify-center relative">

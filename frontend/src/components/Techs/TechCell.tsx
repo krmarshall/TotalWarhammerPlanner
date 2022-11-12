@@ -14,9 +14,10 @@ interface PropInterface {
   tech: TechNodeInterface;
   yIndex: number;
   xIndex: number;
+  borderClass: string;
 }
 
-const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
+const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
   const { state } = useContext(AppContext);
   const { selectedModTech } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
@@ -37,7 +38,8 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
   ];
   return (
     <td
-      className="flex flex-row w-max h-auto my-2 mr-6 relative"
+      className={'flex flex-row w-max h-auto py-2 pr-6' + borderClass}
+      style={{ backgroundColor: `#${tech.ui_group_colour}50` }}
       onContextMenu={(event) => {
         event.preventDefault();
       }}
@@ -45,7 +47,7 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
     >
       <div
         id={tech.key}
-        className="flex flex-row z-10 rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"
+        className="flex flex-row relative z-10 rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"
       >
         <TooltipWrapper tooltip={<TechTooltip tech={tech} ctrCounter={ctrCounter} setCtrCounter={setCtrCounter} />}>
           <div className="flex flex-row">
@@ -53,13 +55,13 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
               <div className="">
                 <img
                   src={timerFrame}
-                  className="w-12 absolute -top-1 -right-2 z-20"
+                  className="w-12 absolute top-[-0.3rem] right-[-1rem] z-20"
                   draggable={false}
                   alt="timer frame"
                   width="46"
                   height="27"
                 />
-                <p className="text-gray-50 text-lg absolute top-[-0.18rem] right-[0.3rem] z-30">
+                <p className="text-gray-50 text-lg absolute top-[-0.25rem] right-[-0.2rem] z-30">
                   {Math.ceil(tech.research_points_required / 100)}
                 </p>
               </div>
@@ -67,7 +69,7 @@ const TechCell = ({ tech, yIndex, xIndex }: PropInterface) => {
             {tech.technology?.required_buildings !== undefined && tech.technology?.required_buildings?.length > 0 && (
               <img
                 src={buildingRequired}
-                className="w-8 h-8 absolute top-[1.3rem] -right-2 z-20 contrast-125"
+                className="w-8 h-8 absolute top-[1.3rem] right-[-0.45rem] z-20 contrast-125"
                 draggable={false}
                 alt="building required icon"
                 width="38"

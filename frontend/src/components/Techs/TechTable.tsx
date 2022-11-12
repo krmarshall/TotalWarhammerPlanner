@@ -27,17 +27,10 @@ const TechTable = () => {
       <Xwrapper>
         <table className="table-fixed">
           <thead></thead>
-          <tbody className="flex flex-col flex-nowrap">
+          <tbody className="flex flex-col flex-nowrap p-4">
             {techData?.tree.map((techRow, index) => {
-              return (
-                <TechRow
-                  key={index}
-                  techRow={techRow}
-                  techRowAbove={techData.tree[index - 1]}
-                  techRowBelow={techData.tree[index + 1]}
-                  yIndex={index}
-                />
-              );
+              // @ts-expect-error ts(2322)
+              return <TechRow key={index} techRow={techRow} yIndex={index} />;
             })}
           </tbody>
         </table>
