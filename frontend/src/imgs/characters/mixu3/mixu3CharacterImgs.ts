@@ -51,6 +51,7 @@ import vmp_dieter_helsnicht from './vmp_dieter_helsnicht.webp';
 import wef_daith from './wef_daith.webp';
 import wef_naieth_the_prophetess from './wef_naieth_the_prophetess.webp';
 import wef_wychwethyl from './wef_wychwethyl.webp';
+import tze_exalted_hero from './tze_exalted_hero_01.webp';
 
 import gnb_bloodnose from './gnob_bloodnose_01.webp';
 import gnb_bonechewer from './gnob_bonechewer_01.webp';
@@ -122,6 +123,7 @@ const mixu3CharacterImgs = {
   wef_daith: wef_daith,
   wef_naieth_the_prophetess: wef_naieth_the_prophetess,
   wef_wychwethyl: wef_wychwethyl,
+  tze_exalted_hero: tze_exalted_hero,
 
   // Gnoblar Hordes
   bragg_the_gutsman: gnb_bragg_the_gutsman,

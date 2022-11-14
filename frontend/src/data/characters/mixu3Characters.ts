@@ -22,12 +22,11 @@ const mixu3Characters = {
   },
 
   chs_chaos_lords: {
-    chs_egrimm_van_horstmann: { name: 'Egrimm van Horstmann', spellLore: SpellLores.light },
-    chs_malofex_the_storm_chaser: { name: 'Malofex the Storm-Chaser', spellLore: SpellLores.mixed }, // Unknown
+    // chs_malofex_the_storm_chaser: { name: 'Malofex the Storm-Chaser', spellLore: SpellLores.mixed },
     tze_melekh_the_changer: { name: 'Melekh the Changer', spellLore: SpellLores.fire },
   },
   chs_chaos_heroes: {
-    chs_azubhor_clawhand: { name: 'Azubhor Clawhand', spellLore: SpellLores.metal }, // Unknown
+    // chs_azubhor_clawhand: { name: 'Azubhor Clawhand', spellLore: SpellLores.metal },
   },
 
   def_dark_elves_lords: {
@@ -107,6 +106,13 @@ const mixu3Characters = {
   },
   tmb_tomb_kings_heroes: {
     tmb_ramhotep: { name: 'Ramhotep the Visionary' },
+  },
+
+  tze_tzeentch_lords: {
+    chs_egrimm_van_horstmann: { name: 'Egrimm van Horstmann', spellLore: SpellLores.light },
+  },
+  tze_tzeentch_heroes: {
+    tze_exalted_hero: { name: 'Exalted Hero of Tzeentch' },
   },
 
   cst_vampire_coast_lords: {},
