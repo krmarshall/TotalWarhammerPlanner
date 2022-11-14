@@ -3,7 +3,7 @@ import glob from 'glob';
 import path from 'path';
 
 import app from '../src/app';
-import { initializeData, bulkData } from '../src/initializeData';
+import { initializeData, skillData } from '../src/initializeData';
 import vanilla2Characters from '../../frontend/src/data/characters/vanilla2Characters';
 import sfo2Characters from '../../frontend/src/data/characters/sfo2Characters';
 import radious2Characters from '../../frontend/src/data/characters/radious2Characters';
@@ -21,27 +21,27 @@ beforeAll(() => {
 
 describe('Basic character API tests', () => {
   test('Basic example Malagor', async () => {
-    const response = await request.get('/api/vanilla2.bst_beastmen.bst_malagor');
+    const response = await request.get('/api/skills/vanilla2.bst_beastmen.bst_malagor');
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
+    expect(response.body).toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid game returns 404', async () => {
-    const response = await request.get('/api/garbage.beastmen.bst_malagor');
+    const response = await request.get('/api/skills/garbage.beastmen.bst_malagor');
     expect(response.status).toBe(404);
-    expect(response.body).not.toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
+    expect(response.body).not.toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid faction returns 404', async () => {
-    const response = await request.get('/api/vanilla2.garbage.bst_malagor');
+    const response = await request.get('/api/skills/vanilla2.garbage.bst_malagor');
     expect(response.status).toBe(404);
-    expect(response.body).not.toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
+    expect(response.body).not.toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid character returns 404', async () => {
-    const response = await request.get('/api/vanilla2.bst_beastmen.garbage');
+    const response = await request.get('/api/skills/vanilla2.bst_beastmen.garbage');
     expect(response.status).toBe(404);
-    expect(response.body).not.toEqual(bulkData['vanilla2']['bst_beastmen']['bst_malagor']);
+    expect(response.body).not.toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 });
 
@@ -59,7 +59,7 @@ describe('Bulk character API test', () => {
   ];
 
   gameList.forEach((game) => {
-    const characterPathList = glob.sync(`./src/TWPData/${game.name}/**/*.json`);
+    const characterPathList = glob.sync(`./src/TWPData/skills/${game.name}/**/*.json`);
     const characterList = characterPathList.map((characterPath) => path.basename(characterPath, '.json'));
     const testedChars = [];
 
@@ -69,7 +69,7 @@ describe('Bulk character API test', () => {
       characterKeys.forEach((characterKey) => {
         test(`${game.name} - ${factionKey} - ${characterKey}`, async () => {
           const strippedFactionKey = factionKey.replace(/_(lords|heroes)/, '');
-          const response = await request.get(`/api/${game.name}.${strippedFactionKey}.${characterKey}`);
+          const response = await request.get(`/api/skills/${game.name}.${strippedFactionKey}.${characterKey}`);
           expect(response.status).toBe(200);
           expect(response.body).toHaveProperty('key', characterKey);
           expect(response.body).toHaveProperty('skillTree');
