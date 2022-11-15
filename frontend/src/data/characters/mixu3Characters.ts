@@ -109,7 +109,7 @@ const mixu3Characters = {
   },
 
   tze_tzeentch_lords: {
-    chs_egrimm_van_horstmann: { name: 'Egrimm van Horstmann', spellLore: SpellLores.light },
+    chs_egrimm_van_horstmann: { name: 'Egrimm van Horstmann', spellLore: SpellLores.mixed },
   },
   tze_tzeentch_heroes: {
     tze_exalted_hero: { name: 'Exalted Hero of Tzeentch' },
