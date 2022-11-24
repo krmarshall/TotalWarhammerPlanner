@@ -259,25 +259,27 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   const fontSize = setFontSize(skill.name);
 
-  const findAbilityImage = () => {
+  const findAbilityImage = (includePassives: boolean) => {
     if (skill.levels?.[0].effects === undefined) {
       return '';
     }
     for (let i = 0; i < skill.levels?.[0].effects?.length; i++) {
       const effect = skill.levels?.[0].effects[i];
-      if (
-        effect.related_abilities?.[0].unit_ability.icon_name &&
-        // Related ability icons tend to override skill icons, passives seem not to? hacky workaround
-        !effect.description.toLowerCase().includes('passive ability:')
-      ) {
-        return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+      if (effect.related_abilities?.[0].unit_ability.icon_name) {
+        // Passives seem to generally not overwrite skill icons, but use as possible fallback
+        if (!includePassives && !effect.description.toLowerCase().includes('passive ability:')) {
+          return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+        } else if (includePassives) {
+          return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+        }
       }
     }
   };
 
   const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
   const imagePath = skill.image_path.replace('.png', '.webp');
-  const abilityImagePath = findAbilityImage();
+  const abilityImagePath = findAbilityImage(false);
+  const abilityImagePathPassive = findAbilityImage(true);
 
   const srcList = [
     // Some WH3 spells have incorrect icons on the character skill, but correct icons on the related ability
@@ -291,6 +293,10 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${imagePath}`,
     // Some SFO ability icons have _active in the imagePath, but not on the actual image name /shrug
     `/imgs/${selectedMod}/campaign_ui/skills/${imagePath.replace('_active', '')}`,
+    // Passive related ability fallback
+    `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePathPassive}`,
+    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${abilityImagePathPassive}`,
+
     `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
   ];
   return (
