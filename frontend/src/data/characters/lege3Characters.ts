@@ -40,6 +40,7 @@ const lege3Characters = {
   },
   emp_empire_heroes: {
     bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
+    hkrul_aldred: { name: 'Aldred von Carroburg' },
   },
 
   kho_khorne_lords: {

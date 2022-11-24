@@ -34,6 +34,7 @@ import str_amon from './str_amon.webp';
 import str_ragush from './str_ragush.webp';
 import str_serkhet from './str_serkhet.webp';
 import str_xuqls from './str_xuqls.webp';
+import hkrul_aldred from './hkrul_aldred.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -74,6 +75,7 @@ const lege3CharacterImgs = {
   str_ragush: str_ragush,
   str_serkhet: str_serkhet,
   str_xuqls: str_xuqls,
+  hkrul_aldred: hkrul_aldred,
 };
 
 export default lege3CharacterImgs;

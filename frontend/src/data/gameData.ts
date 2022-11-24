@@ -72,9 +72,9 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: mixu3Characters,
     characterImages: mixu3CharacterImgs,
-    updated: '21 Nov 2022',
+    updated: '22 Nov 2022',
     category: 'Character Mod Compilation',
-    includes: ["Mixu's Legendary Lords (21 Nov 2022)", 'Gnoblar Hordes - The Unwashed Masses (29 Oct 2022)'],
+    includes: ["Mixu's Legendary Lords (21 Nov 2022)", 'Gnoblar Hordes - The Unwashed Masses (22 Oct 2022)'],
   },
   lege3: {
     text: 'Legendary Characters 3',
@@ -82,7 +82,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
-    updated: '22 Nov 2022',
+    updated: '23 Nov 2022',
     category: 'Character Mod',
   },
   crys3: {
@@ -91,7 +91,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: crys3Characters,
     characterImages: crys3CharacterImgs,
-    updated: '14 Nov 2022',
+    updated: '22 Nov 2022',
     category: 'Overhaul',
   },
 };
