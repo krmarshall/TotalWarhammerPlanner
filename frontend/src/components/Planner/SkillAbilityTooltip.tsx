@@ -4,8 +4,6 @@ import windsImg from '../../imgs/other/winds_ui_replenish_battle_ph.webp';
 import chargesImg from '../../imgs/other/icon_uses.webp';
 import SkillPhase from './SkillPhase';
 import ReactImage from '../ReactImage';
-import { useContext } from 'react';
-import { AppContext } from '../../contexts/AppContext';
 import SkillAbilityVortex from './SkillAbilityVortex';
 import SkillAbilityProjectile from './SkillAbilityProjectile';
 import SkillAbilityBombardment from './SkillAbilityBombardment';
@@ -15,9 +13,6 @@ interface SkillAbilityTooltipPropInterface {
 }
 
 const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
-  const { state } = useContext(AppContext);
-  const { selectedMod, selectedGame } = state;
-
   const unitAbility = ability.unit_ability;
 
   let target = '';
@@ -27,26 +22,14 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
   target += unitAbility.target_self ? 'Self ' : '';
   const doesTarget = target.length > 0 ? true : false;
 
-  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
-
-  const abilityImagePath = unitAbility.icon_name + '.webp';
   const abilitySrcList = [
-    // Some WH3 spells have incorrect icons on the character skill, but correct icons on the related ability
-    `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePath}`,
-    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${abilityImagePath}`,
-    // WH2 has pretty much all the skill icons in campaign_ui, WH3 has many of the spells/abilities under battle_ui
-    `/imgs/${selectedMod}/campaign_ui/skills/${abilityImagePath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/${abilityImagePath}`,
-    // Some SFO ability icons have _active in the imagePath, but not on the actual image name /shrug
-    `/imgs/${selectedMod}/campaign_ui/skills/${abilityImagePath.replace('_active', '')}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
+    `/imgs/${unitAbility.icon_name}.webp`,
+    `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`,
   ];
 
-  const typeImagePath = unitAbility.type.icon_path.replace('.png', '.webp');
   const typeSrcList = [
-    `/imgs/${selectedMod}/battle_ui/ability_icons/${typeImagePath}`,
-    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${typeImagePath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
+    `/imgs/${unitAbility.type.icon_path}.webp`,
+    `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`,
   ];
   return (
     <div className="flex-grow h-fit max-w-[30vw] ml-2 p-2 rounded border border-gray-400 shadow-lg text-lg text-gray-50 bg-gray-600">

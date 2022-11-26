@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react';
-import { AppContext } from '../../contexts/AppContext';
+import { useState } from 'react';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import { setFontSize, trimString } from '../../utils/sharedFunctions';
 import ReactImage from '../ReactImage';
@@ -11,22 +10,11 @@ interface PropInterface {
 }
 
 const BackgroundSkillCell = ({ skill }: PropInterface) => {
-  const { state } = useContext(AppContext);
-  const { selectedMod, selectedGame } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
 
   const fontSize = setFontSize(skill.name);
 
-  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
-  const imagePath = skill.image_path.replace('.png', '.webp');
-
-  const srcList = [
-    `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
-    `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
-    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${imagePath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
-  ];
+  const srcList = [`/imgs/${skill.image_path}.webp`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`];
 
   return (
     <TooltipWrapper

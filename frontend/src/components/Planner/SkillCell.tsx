@@ -23,7 +23,7 @@ interface SkillCellPropsInterface {
 
 const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild, characterData, selectedMod, selectedGame } = state;
+  const { characterBuild, characterData } = state;
   const [selectable, setSelectable] = useState(false);
   const [previewSkillPoints, setPreviewSkillPoints] = useState(0);
   const [blocked, setBlocked] = useState(false);
@@ -268,37 +268,32 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       if (effect.related_abilities?.[0].unit_ability.icon_name) {
         // Passives seem to generally not overwrite skill icons, but use as possible fallback
         if (!includePassives && !effect.description.toLowerCase().includes('passive ability:')) {
-          return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+          return effect.related_abilities?.[0].unit_ability.icon_name;
         } else if (includePassives) {
-          return effect.related_abilities?.[0].unit_ability.icon_name + '.webp';
+          return effect.related_abilities?.[0].unit_ability.icon_name;
         }
       }
     }
   };
 
-  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
-  const imagePath = skill.image_path.replace('.png', '.webp');
+  const srcList = [
+    // `/imgs/${abilityImagePath}.webp`, // Effective placement from below, avoids 404s
+    `/imgs/${skill.image_path}.webp`,
+    // `/imgs/${abilityImagePathPassive}.webp`, // Effective placement from below, avoids 404s
+    // `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`, // Effective placement from below, avoids 404s
+  ];
+
   const abilityImagePath = findAbilityImage(false);
   const abilityImagePathPassive = findAbilityImage(true);
 
-  const srcList = [
-    // Some WH3 spells have incorrect icons on the character skill, but correct icons on the related ability
-    `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePath}`,
-    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${abilityImagePath}`,
-    // Standard Skill Icon Path
-    `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
-    // WH2 has pretty much all the skill icons in campaign_ui, WH3 has many of the spells/abilities under battle_ui
-    `/imgs/${selectedMod}/battle_ui/ability_icons/${imagePath}`,
-    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${imagePath}`,
-    // Some SFO ability icons have _active in the imagePath, but not on the actual image name /shrug
-    `/imgs/${selectedMod}/campaign_ui/skills/${imagePath.replace('_active', '')}`,
-    // Passive related ability fallback
-    `/imgs/${selectedMod}/battle_ui/ability_icons/${abilityImagePathPassive}`,
-    `/imgs/${vanillaGamePath}/battle_ui/ability_icons/${abilityImagePathPassive}`,
+  if (abilityImagePath !== undefined) {
+    srcList.unshift(`/imgs/${abilityImagePath}.webp`);
+  }
+  if (abilityImagePathPassive !== undefined) {
+    srcList.push(`/imgs/${abilityImagePathPassive}.webp`);
+  }
+  srcList.push(`/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`);
 
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
-  ];
   return (
     <td
       className={tdClassName}

@@ -11,6 +11,7 @@ interface AttributeInterface {
   key: string;
   description: string;
   attribute_type: string;
+  icon: string;
 }
 
 interface PhaseInterface {

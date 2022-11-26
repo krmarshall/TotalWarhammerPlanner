@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../../contexts/AppContext';
+import { useEffect, useState } from 'react';
 import { ItemInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
@@ -14,9 +13,6 @@ interface SkillCellPropsInterface {
 }
 
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
-  const { state } = useContext(AppContext);
-  const { selectedMod, selectedGame } = state;
-
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
 
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
@@ -45,8 +41,6 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
 
   const fontSize = setFontSize(item.name);
 
-  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
-  const imagePath = item.image_path.replace('.png', '.webp');
   return (
     <TooltipWrapper
       tooltip={
@@ -91,10 +85,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     >
       <div className="flex flex-row w-max m-auto rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <ReactImage
-          srcList={[
-            `/imgs/${selectedMod}/campaign_ui/skills/${imagePath}`,
-            `/imgs/${vanillaGamePath}/campaign_ui/skills/${imagePath}`,
-          ]}
+          srcList={[`/imgs/${item.image_path}.webp`]}
           className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
           alt="itemIcon"
           w="64"

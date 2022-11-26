@@ -13,22 +13,17 @@ interface PropsInterface {
 const ReactImage = ({ srcList, className, alt, w, h }: PropsInterface) => {
   const [isPending, startTransition] = useTransition();
   const [imgClass, setImgClass] = useState(className);
-  const [srcState, setSrcState] = useState({ src: srcList[0], fallbackIndex: 1, triedLowerCase: false });
+  const [srcState, setSrcState] = useState({ src: srcList[0], fallbackIndex: 1 });
 
   const errorHandler = () => {
     startTransition(() => {
       if (srcState.fallbackIndex > srcList.length - 1) {
         return;
       }
-      if (srcState.triedLowerCase === false) {
-        setSrcState({ src: srcState.src.toLowerCase(), fallbackIndex: srcState.fallbackIndex, triedLowerCase: true });
-      } else {
-        setSrcState({
-          src: srcList[srcState.fallbackIndex],
-          fallbackIndex: srcState.fallbackIndex + 1,
-          triedLowerCase: false,
-        });
-      }
+      setSrcState({
+        src: srcList[srcState.fallbackIndex],
+        fallbackIndex: srcState.fallbackIndex + 1,
+      });
     });
   };
 
