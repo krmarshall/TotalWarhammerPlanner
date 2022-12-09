@@ -63,7 +63,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: radious3Characters,
     characterImages: radious3CharacterImgs,
-    updated: '1 Dec 2022',
+    updated: '5 Dec 2022',
     category: 'Overhaul',
   },
   mixu3: {
@@ -82,7 +82,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
-    updated: '29 Nov 2022',
+    updated: '5 Dec 2022',
     category: 'Character Mod',
   },
   crys3: {
