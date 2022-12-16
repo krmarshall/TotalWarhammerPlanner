@@ -72,9 +72,9 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: mixu3Characters,
     characterImages: mixu3CharacterImgs,
-    updated: '22 Nov 2022',
+    updated: '10 Dec 2022',
     category: 'Character Mod Compilation',
-    includes: ["Mixu's Legendary Lords (21 Nov 2022)", 'Gnoblar Hordes - The Unwashed Masses (22 Oct 2022)'],
+    includes: ["Mixu's Legendary Lords (10 Dec 2022)", 'Gnoblar Hordes - The Unwashed Masses (22 Oct 2022)'],
   },
   lege3: {
     text: 'Legendary Characters 3',
