@@ -36,4 +36,4 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 - Copy over json data to TWPData repo
 - Copy over portrait to ./src/imgs/characters/<gameFolder>, be sure to crop and mask portrait to 164x164
 - Update characterImgs export in ./src/imgs/characters/<gameFolder>
-- Update character list in ./src/data, may have to look around rpfm for actual character names
+- Update character list in ./src/data/characters/<gameFile>, may have to look around rpfm for actual character names

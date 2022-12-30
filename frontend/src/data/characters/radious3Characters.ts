@@ -94,6 +94,11 @@ const radious3Characters = {
     ...vanilla3Characters.sla_slaanesh_lords,
     sla_flawless_king: { name: 'Flawless King' },
   },
+
+  nur_nurgle_lords: {
+    ...vanilla3Characters.nur_nurgle_lords,
+    nur_watcher_of_the_garden: { name: 'Watcher of the Garden' },
+  },
 };
 
 export default radious3Characters;
