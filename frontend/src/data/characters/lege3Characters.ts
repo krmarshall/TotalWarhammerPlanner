@@ -1,6 +1,11 @@
 import { SpellLores } from '../../types/interfaces/GameInterface';
 
 const lege3Characters = {
+  brt_bretonnia_lords: {
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+  },
+  brt_bretonnia_heroes: {},
+
   bst_beastmen_lords: {
     str_ragush: { name: 'Ragush of the Bloody Horn' },
   },
@@ -14,6 +19,12 @@ const lege3Characters = {
     str_masque: { name: 'The Masque' },
     str_xuqls: { name: "Xuq'ls" },
   },
+
+  dwf_dwarfs_lords: {
+    Helgar_longplaits: { name: 'Helgar Longplaits' },
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+  },
+  dwf_dwarfs_heroes: {},
 
   chs_chaos_lords: {
     str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
@@ -37,6 +48,7 @@ const lege3Characters = {
   emp_empire_lords: {
     dead_kes: { name: 'Stefan von Kessel' },
     str_thyrus: { name: 'Thyrus Gorman', spellLore: SpellLores.fire },
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
   },
   emp_empire_heroes: {
     bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
@@ -51,7 +63,9 @@ const lege3Characters = {
     str_skulltaker: { name: 'Skulltaker' },
   },
 
-  ksl_kislev_lords: {},
+  ksl_kislev_lords: {
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+  },
   ksl_kislev_heroes: {
     dead_grigori: { name: 'Grigori Medvezhiy' },
     dead_ice_mage: { name: 'Vladimir Stormbringer', spellLore: SpellLores.tempest },

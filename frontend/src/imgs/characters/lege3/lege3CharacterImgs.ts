@@ -35,6 +35,8 @@ import str_ragush from './str_ragush.webp';
 import str_serkhet from './str_serkhet.webp';
 import str_xuqls from './str_xuqls.webp';
 import hkrul_aldred from './hkrul_aldred.webp';
+import ludwig_von_uberdorf from './ludwig_von_uberdorf.webp';
+import helgar_longplaits from './helgar_longplaits.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -76,6 +78,8 @@ const lege3CharacterImgs = {
   str_serkhet: str_serkhet,
   str_xuqls: str_xuqls,
   hkrul_aldred: hkrul_aldred,
+  Helgar_longplaits: helgar_longplaits,
+  ludwig_von_uberdorf: ludwig_von_uberdorf,
 };
 
 export default lege3CharacterImgs;

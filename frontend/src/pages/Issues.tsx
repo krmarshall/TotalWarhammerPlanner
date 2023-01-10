@@ -81,6 +81,10 @@ const Issues = () => {
                 Legendary Characters 3 Amon Chakai missing right arrow on Legions of Madness (second last blue line)
               </li>
               <li>
+                Legendary Characters 3 Ludwig von Uberdorf has a Gyrobomber mount that the Skeleton Crew has left in as
+                an optional mount, but it is disabled by default so you wont see it in game without editing your pack.
+              </li>
+              <li>
                 Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
                 like copying from broken base game skill?)
               </li>
