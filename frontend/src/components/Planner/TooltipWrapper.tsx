@@ -9,7 +9,7 @@ import {
   useHover,
   FloatingPortal,
   autoPlacement,
-} from '@floating-ui/react-dom-interactions';
+} from '@floating-ui/react';
 
 interface Props {
   tooltip: JSX.Element;
