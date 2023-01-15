@@ -102,7 +102,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
-    updated: '14 Jan 2023',
+    updated: '15 Jan 2023',
     category: 'Character Mod Compilation',
     includes: [
       'The Jade-Blooded Vampires: Curse of Nongchang (14 Jan 2023)',
@@ -115,7 +115,7 @@ const gameData: { [key: string]: GameDataInterface } = {
       'Empire Secessionists, Secede! (25 Nov 2022)',
       'Karanak, Hound of Vengeance (22 Nov 2022)',
       'Pestilent Brotherhood (4 Jan 2023)',
-      'Rotblood Tribe (22 Nov 2022)',
+      'Rotblood Tribe (15 Jan 2023)',
       'The Gnoblar Horde (22 Nov 2022)',
     ],
   },
