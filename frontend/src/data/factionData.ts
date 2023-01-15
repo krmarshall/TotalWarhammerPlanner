@@ -24,6 +24,8 @@ const factions = {
   wef_wood_elves: 'Wood Elves',
 
   gnb_gnoblars: 'Gnoblar Hordes',
+
+  jbv_jade_vampires: 'Jade-Blooded Vampires',
 };
 
 export default factions;

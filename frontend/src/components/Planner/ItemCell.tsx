@@ -49,7 +49,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
             <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
               <h3 className="text-gray-50 text-2xl">{item?.name}</h3>
               {item?.description.trim() && !isMobile && (
-                <h4 className="text-gray-50 opacity-70 text-lg max-w-fit">&quot;{item?.description.trim()}&quot;</h4>
+                <h4 className="text-gray-50 opacity-70 text-lg max-w-[20vw]">&quot;{item?.description.trim()}&quot;</h4>
               )}
               {item?.unlocked_at_rank && (
                 <p className="text-yellow-300 text-lg">Available at rank {item?.unlocked_at_rank}</p>

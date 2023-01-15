@@ -19,6 +19,7 @@ const usageData: LogInterface = {
     mixu3: 0,
     lege3: 0,
     crys3: 0,
+    scm3: 0,
 
     other: 0,
   },
@@ -54,6 +55,7 @@ const outputLog = () => {
     mixu3: 0,
     lege3: 0,
     crys3: 0,
+    scm3: 0,
 
     other: 0,
   };

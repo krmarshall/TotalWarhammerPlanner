@@ -1,10 +1,10 @@
 import { SpellLores } from '../../types/interfaces/GameInterface';
 
 const lege3Characters = {
-  brt_bretonnia_lords: {
+  brt_bretonnia_lords: {},
+  brt_bretonnia_heroes: {
     ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
   },
-  brt_bretonnia_heroes: {},
 
   bst_beastmen_lords: {
     str_ragush: { name: 'Ragush of the Bloody Horn' },
@@ -12,19 +12,16 @@ const lege3Characters = {
   bst_beastmen_heroes: {},
 
   dae_daemons_lords: {
-    str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
     str_slavin: { name: 'Slavin Kurnz' },
   },
-  dae_daemons_heroes: {
-    str_masque: { name: 'The Masque' },
-    str_xuqls: { name: "Xuq'ls" },
-  },
+  dae_daemons_heroes: {},
 
   dwf_dwarfs_lords: {
     Helgar_longplaits: { name: 'Helgar Longplaits' },
+  },
+  dwf_dwarfs_heroes: {
     ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
   },
-  dwf_dwarfs_heroes: {},
 
   chs_chaos_lords: {
     str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
@@ -48,11 +45,11 @@ const lege3Characters = {
   emp_empire_lords: {
     dead_kes: { name: 'Stefan von Kessel' },
     str_thyrus: { name: 'Thyrus Gorman', spellLore: SpellLores.fire },
-    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
   },
   emp_empire_heroes: {
     bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
     hkrul_aldred: { name: 'Aldred von Carroburg' },
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
   },
 
   kho_khorne_lords: {
@@ -63,14 +60,13 @@ const lege3Characters = {
     str_skulltaker: { name: 'Skulltaker' },
   },
 
-  ksl_kislev_lords: {
-    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
-  },
+  ksl_kislev_lords: {},
   ksl_kislev_heroes: {
     dead_grigori: { name: 'Grigori Medvezhiy' },
-    dead_ice_mage: { name: 'Vladimir Stormbringer', spellLore: SpellLores.tempest },
     str_ilja: { name: 'Ilja of Murova' },
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
     str_naryaska: { name: 'Naryaska Leysa, the Golden Knight' },
+    dead_ice_mage: { name: 'Vladimir Stormbringer', spellLore: SpellLores.tempest },
   },
 
   nur_nurgle_lords: {
@@ -84,9 +80,9 @@ const lege3Characters = {
   ogr_ogre_kingdoms_heroes: {
     str_braugh: { name: 'Braugh Slavelord' },
     str_brudd: { name: 'Brudd the Blackened' },
+    str_kineater: { name: 'Drulg Kineater' },
     str_frostmaw: { name: 'Haurg Frostmaw', spellLore: SpellLores.ice },
     str_katerina: { name: 'Katerina de Hansebourg' },
-    str_kineater: { name: 'Drulg Kineater' },
   },
 
   skv_skaven_lords: {
@@ -99,9 +95,7 @@ const lege3Characters = {
     str_fylch: { name: 'Fylch Sharptail' },
   },
 
-  sla_slaanesh_lords: {
-    str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
-  },
+  sla_slaanesh_lords: {},
   sla_slaanesh_heroes: {
     str_masque: { name: 'The Masque' },
   },

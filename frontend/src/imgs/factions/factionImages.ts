@@ -23,6 +23,7 @@ import warriorsOfChaos from './warriorsOfChaos.webp';
 import woodElves from './woodElves.webp';
 
 import gnoblars from './gnoblars.webp';
+import jadeVampires from './jadeVampires.webp';
 
 import chevaliers from './chevaliers.webp';
 import hunstmarshal from './hunstmarshal.webp';
@@ -59,6 +60,7 @@ const factionImages = {
   vmp_vampire_counts: vampireCounts,
 
   gnb_gnoblars: gnoblars,
+  jbv_jade_vampires: jadeVampires,
 
   brt_chevaliers: chevaliers,
   emp_hunstmarshal: hunstmarshal,
