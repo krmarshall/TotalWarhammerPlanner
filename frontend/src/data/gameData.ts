@@ -117,6 +117,7 @@ const gameData: { [key: string]: GameDataInterface } = {
       'Pestilent Brotherhood (4 Jan 2023)',
       'Rotblood Tribe (15 Jan 2023)',
       'The Gnoblar Horde (22 Nov 2022)',
+      'Clan Verms (15 Jan 2023)',
     ],
   },
 };

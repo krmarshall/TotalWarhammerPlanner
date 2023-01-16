@@ -87,9 +87,11 @@ const scm3Characters = {
     str_skittice: { name: 'Grrzk Roteye' },
     str_pontifex_sitch: { name: 'Arch-Pontifex Sitch', spellLore: SpellLores.skvPlague },
     str_poxtooth: { name: 'Poxtooth, Befouler of Sotek', spellLore: SpellLores.skvPlague },
+    str_tenscratch: { name: 'Blight Tenscratch' },
     bc_the_hidden: { name: 'The Hidden', spellLore: SpellLores.skvPlague },
     bc_plague_lord: { name: 'Plague Lord' },
     bc_plague_pontifex: { name: 'Plague Pontifex', spellLore: SpellLores.skvPlague },
+    str_verms_swarmleader: { name: 'Swarmleader' },
 
     bc_skrimanx: { name: 'Archdeacon of Disease Lord Skrimanx' },
     bc_gritch: { name: 'Great Potentate of Pustules Lord Gritch' },
@@ -100,6 +102,7 @@ const scm3Characters = {
   skv_skaven_heroes: {
     bc_festering_chantor: { name: 'Festering Chantor' },
     bc_stinking_thing: { name: 'Stinking Thing' },
+    str_verms_swarmcaller: { name: 'Swarmcaller' },
   },
 };
 

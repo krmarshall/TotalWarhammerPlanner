@@ -39,6 +39,9 @@ import bc_the_hidden from './bc_the_hidden.webp';
 import str_pontifex_sitch from './str_pontifex_sitch.webp';
 import str_poxtooth from './str_poxtooth.webp';
 import str_skittice from './str_skittice.webp';
+import str_tenscratch from './str_tenscratch.webp';
+import str_verms_swarmcaller from './str_verms_swarmcaller.webp';
+import str_verms_swarmleader from './str_verms_swarmleader.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -87,6 +90,9 @@ const scm3CharacterImgs = {
   str_pontifex_sitch: str_pontifex_sitch,
   str_poxtooth: str_poxtooth,
   str_skittice: str_skittice,
+  str_tenscratch: str_tenscratch,
+  str_verms_swarmcaller: str_verms_swarmcaller,
+  str_verms_swarmleader: str_verms_swarmleader,
 };
 
 export default scm3CharacterImgs;
