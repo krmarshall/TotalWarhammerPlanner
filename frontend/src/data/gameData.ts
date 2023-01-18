@@ -40,6 +40,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characterImages: radious2CharacterImgs,
     updated: '6 Mar 2022',
     category: 'Overhaul',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1149634389',
   },
   sfo2: {
     text: 'SFO 2',
@@ -49,6 +50,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characterImages: sfo2CharacterImgs,
     updated: '31 Jul 2022',
     category: 'Overhaul',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1149625355',
   },
   vanilla3: {
     text: 'Vanilla 3',
@@ -67,6 +69,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characterImages: radious3CharacterImgs,
     updated: '3 Jan 2023',
     category: 'Overhaul',
+    workshopLink: 'https://steamcommunity.com/workshop/filedetails/?id=2791750313',
   },
   mixu3: {
     text: "Mixu's Compilation 3",
@@ -77,6 +80,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     updated: '15 Jan 2023',
     category: 'Character Mod Compilation',
     includes: ["Mixu's Legendary Lords (15 Jan 2023)", 'Gnoblar Hordes - The Unwashed Masses (22 Oct 2022)'],
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920114265',
   },
   lege3: {
     text: 'Legendary Characters 3',
@@ -86,6 +90,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characterImages: lege3CharacterImgs,
     updated: '7 Jan 2023',
     category: 'Character Mod',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
   },
   crys3: {
     text: 'Leaders of Legend 3',
@@ -95,6 +100,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characterImages: crys3CharacterImgs,
     updated: '29 Nov 2022',
     category: 'Overhaul',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2880244265',
   },
   scm3: {
     text: 'Skeleton Crew Compilation 3',
@@ -119,6 +125,7 @@ const gameData: { [key: string]: GameDataInterface } = {
       'The Gnoblar Horde (22 Nov 2022)',
       'Clan Verms (15 Jan 2023)',
     ],
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',
   },
 };
 

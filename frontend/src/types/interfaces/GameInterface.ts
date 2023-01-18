@@ -40,6 +40,7 @@ interface GameDataInterface {
   updated: string;
   category: string;
   includes?: Array<string>;
+  workshopLink?: string;
 }
 
 interface TechDataInterface {

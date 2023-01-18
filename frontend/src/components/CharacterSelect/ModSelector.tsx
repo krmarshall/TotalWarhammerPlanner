@@ -90,14 +90,18 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
                   <h3 className="text-center text-gray-400 text-lg text-shadow mt-2">{game.updated}</h3>
                   <TooltipWrapper
                     tooltip={
-                      <span className="text-center flex flex-row">
+                      <span className="text-center flex flex-row max-w-[25vw]">
                         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">
                           <h3 className="text-gray-50">{categoryDesc}</h3>
                           <div className="text-center">
-                            {game.includes !== undefined && <p>Includes:</p>}
+                            {game.includes !== undefined && <p className="pt-3">Includes:</p>}
                             {game.includes !== undefined &&
                               game.includes?.map((includedMod) => {
-                                return <p key={includedMod}>{includedMod}</p>;
+                                return (
+                                  <p key={includedMod} className="pt-1">
+                                    {includedMod}
+                                  </p>
+                                );
                               })}
                           </div>
                         </div>
@@ -108,6 +112,13 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
                       {game.category}
                     </h3>
                   </TooltipWrapper>
+                  {game.workshopLink !== undefined && (
+                    <h3 className="text-center text-blue-400 text-lg text-shadow">
+                      <a href={game.workshopLink} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        Steam Workshop
+                      </a>
+                    </h3>
+                  )}
                 </li>
               </CSSTransition>
             );
