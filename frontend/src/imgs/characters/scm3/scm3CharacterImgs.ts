@@ -42,6 +42,9 @@ import str_skittice from './str_skittice.webp';
 import str_tenscratch from './str_tenscratch.webp';
 import str_verms_swarmcaller from './str_verms_swarmcaller.webp';
 import str_verms_swarmleader from './str_verms_swarmleader.webp';
+import ksl_shaman from './ksl_shaman_01.webp';
+import str_gangrous_szik from './str_gangrous_szik.webp';
+import str_treecherik_gristl from './str_treecherik_gristl.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -93,6 +96,10 @@ const scm3CharacterImgs = {
   str_tenscratch: str_tenscratch,
   str_verms_swarmcaller: str_verms_swarmcaller,
   str_verms_swarmleader: str_verms_swarmleader,
+  ksl_shaman_amber: ksl_shaman,
+  ksl_shaman_jade: ksl_shaman,
+  str_gangrous_szik: str_gangrous_szik,
+  str_treecherik_gristl: str_treecherik_gristl,
 };
 
 export default scm3CharacterImgs;

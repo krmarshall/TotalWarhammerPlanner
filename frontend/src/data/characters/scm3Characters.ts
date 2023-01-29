@@ -4,9 +4,9 @@ const scm3Characters = {
   dae_daemons_lords: {},
   dae_daemons_heroes: {
     kho_karnak: { name: 'Karanak' },
-    str_rotblood_blightstorm_hero: { name: 'Greater Blightstormer', spellLore: SpellLores.death },
-    str_rotblood_lifeleech_hero: { name: 'Greater Lifeleech', spellLore: SpellLores.nurgle },
-    str_rotblood_eternal: { name: 'Rotblood Eternal' },
+    // str_rotblood_blightstorm_hero: { name: 'Greater Blightstormer', spellLore: SpellLores.death },
+    // str_rotblood_lifeleech_hero: { name: 'Greater Lifeleech', spellLore: SpellLores.nurgle },
+    // str_rotblood_eternal: { name: 'Rotblood Eternal' },
   },
 
   chs_chaos_lords: {
@@ -60,6 +60,8 @@ const scm3Characters = {
   ksl_kislev_heroes: {
     blade_master: { name: 'Blade Master' },
     ksl_ivan: { name: 'Ivan Radinov' },
+    ksl_shaman_amber: { name: 'Shaman (Beasts)', spellLore: SpellLores.beasts },
+    ksl_shaman_jade: { name: 'Shaman (Life)', spellLore: SpellLores.life },
   },
 
   nur_nurgle_lords: {
@@ -87,7 +89,9 @@ const scm3Characters = {
     str_skittice: { name: 'Grrzk Roteye' },
     str_pontifex_sitch: { name: 'Arch-Pontifex Sitch', spellLore: SpellLores.skvPlague },
     str_poxtooth: { name: 'Poxtooth, Befouler of Sotek', spellLore: SpellLores.skvPlague },
+    str_gangrous_szik: { name: 'Szik Vilepot' },
     str_tenscratch: { name: 'Blight Tenscratch' },
+    str_treecherik_gristl: { name: 'Gristl Twitchslice' },
     bc_the_hidden: { name: 'The Hidden', spellLore: SpellLores.skvPlague },
     bc_plague_lord: { name: 'Plague Lord' },
     bc_plague_pontifex: { name: 'Plague Pontifex', spellLore: SpellLores.skvPlague },
