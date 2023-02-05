@@ -12,8 +12,6 @@ const usageData: LogInterface = {
   hits: 0,
   modHits: {
     vanilla2: 0,
-    radious2: 0,
-    sfo2: 0,
     vanilla3: 0,
     radious3: 0,
     mixu3: 0,
@@ -48,8 +46,6 @@ const outputLog = () => {
   usageData.hits = 0;
   usageData.modHits = {
     vanilla2: 0,
-    radious2: 0,
-    sfo2: 0,
     vanilla3: 0,
     radious3: 0,
     mixu3: 0,
