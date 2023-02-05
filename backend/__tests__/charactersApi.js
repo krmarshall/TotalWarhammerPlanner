@@ -5,8 +5,8 @@ import path from 'path';
 import app from '../src/app';
 import { initializeData, skillData } from '../src/initializeData';
 import vanilla2Characters from '../../frontend/src/data/characters/vanilla2Characters';
-import sfo2Characters from '../../frontend/src/data/characters/sfo2Characters';
-import radious2Characters from '../../frontend/src/data/characters/radious2Characters';
+// import sfo2Characters from '../../frontend/src/data/characters/sfo2Characters';
+// import radious2Characters from '../../frontend/src/data/characters/radious2Characters';
 import radious3Characters from '../../frontend/src/data/characters/radious3Characters';
 import vanilla3Characters from '../../frontend/src/data/characters/vanilla3Characters';
 import mixu3Characters from '../../frontend/src/data/characters/mixu3Characters';
@@ -49,8 +49,8 @@ describe('Basic character API tests', () => {
 describe('Bulk character API test', () => {
   const gameList = [
     { charList: vanilla2Characters, name: 'vanilla2' },
-    { charList: sfo2Characters, name: 'sfo2' },
-    { charList: radious2Characters, name: 'radious2' },
+    // { charList: sfo2Characters, name: 'sfo2' },
+    // { charList: radious2Characters, name: 'radious2' },
 
     { charList: vanilla3Characters, name: 'vanilla3' },
     { charList: radious3Characters, name: 'radious3' },

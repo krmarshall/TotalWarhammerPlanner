@@ -43,12 +43,16 @@ const scm3Characters = {
 
   jbv_jade_vampires_lords: {
     jbv_hei_lianhua: { name: 'Maiden of the Black Lotus', spellLore: SpellLores.mixed },
+    jbv_witch_lord: { name: 'Ancestor Witch', spellLore: SpellLores.mixed },
     jbv_jade_blooded: { name: 'Jade-Blooded Master Warlock', spellLore: SpellLores.mixed },
+    jbv_jade_blooded_a: { name: 'Jade-Blooded Master Warlock', spellLore: SpellLores.vampires },
+    jbv_matron: { name: 'Jade-Blooded Matron', spellLore: SpellLores.mixed },
   },
   jbv_jade_vampires_heroes: {
     jbv_channeler: { name: 'Channeler', spellLore: SpellLores.mixed },
+    jbv_courtesan: { name: 'Jade-Blooded Courtesan' },
     jbv_jiangjun: { name: 'Jiangjun Revenant' },
-    jbv_nugui: { name: 'Nü Gui', spellLore: SpellLores.mixed },
+    jbv_nugui: { name: 'Nü Gui' },
   },
 
   kho_khorne_lords: {},

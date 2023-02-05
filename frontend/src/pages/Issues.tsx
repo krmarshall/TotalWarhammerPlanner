@@ -32,9 +32,13 @@ const Issues = () => {
             When sending a message please include the following details, or use this template:
             <div className="border border-gray-300 bg-gray-800 w-fit ml-8 p-2 pr-12 rounded-xl">
               Browser Used:
+              <br />
               <br /> Game/Mod:
+              <br />
               <br /> Faction and Character:
+              <br />
               <br /> Description:
+              <br />
               <br /> Steps to Reproduce (If Applicable):
             </div>
           </li>
@@ -62,10 +66,14 @@ const Issues = () => {
           <li>
             Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
           </li>
-          <li>Tooltips that overflow the viewport (eg. SFO2 | Any Shadow Caster | The Withering) are cut off</li>
+          <li>Tooltips that overflow the viewport are cut off</li>
           <li>
             In some cases each skill effect only has the first 3 related abilities linked for tooltips (eg. Sisters of
             Twilight Dragon Breath&apos;s)
+          </li>
+          <li>
+            Certain skill nodes that require x number of points in the last y skills will be missing a right arrow
+            indicating such. Most prevalent on the last skill in characters blue lines.
           </li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
             <li>Daemon Prince Reinforcer skill has a placeholder skill icon</li>
@@ -78,13 +86,6 @@ const Issues = () => {
                 in the mod itself
               </li>
               <li>
-                Legendary Characters 3 Amon Chakai missing right arrow on Legions of Madness (second last blue line)
-              </li>
-              <li>
-                Legendary Characters 3 Ludwig von Uberdorf has a Gyrobomber mount that the Skeleton Crew has left in as
-                an optional mount, but it is disabled by default so you wont see it in game without editing your pack.
-              </li>
-              <li>
                 Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
                 like copying from broken base game skill?)
               </li>
@@ -94,8 +95,7 @@ const Issues = () => {
           <IssuesSlider title="Warhammer 2" bg="bg-gray-600">
             <li>Several lords dont have their Faction Effects linked, this likely wont change</li>
             <IssuesSlider title="Mods" bg="bg-gray-700">
-              <li>Radious 2 mounts missing skill titles, see Wood Seer</li>
-              <li>Radious 2 boxed issues, see Fimir Noble</li>
+              <li>Stopped extracting and hosting mods for WH2.</li>
             </IssuesSlider>
           </IssuesSlider>
         </ul>

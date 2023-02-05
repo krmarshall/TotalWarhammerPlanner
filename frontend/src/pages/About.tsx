@@ -52,9 +52,10 @@ const About = () => {
         </p>
         <ul className="list-disc list-inside mx-auto text-gray-200 text-2xl">
           <li>TW2 quest item levels</li>
+          <li>Banner ancillary details</li>
           <li>Brettonia vow details</li>
           <li>Mobile UI</li>
-          <li>Character stats</li>
+          <li>Character stats/attributes</li>
           <li>Unique starting heroes/traits (maybe)</li>
         </ul>
       </div>

@@ -25,15 +25,10 @@ import str_rotblood_caster_death from './str_rotblood_caster_death.webp';
 import str_rotblood_caster_nurgle from './str_rotblood_caster_nurgle.webp';
 import str_gnoblar_head from './str_gnoblar_head.webp';
 import str_gnoblar_honcho from './str_gnoblar_honcho.webp';
-// import bc_blistrox from './bc_blistrox.webp';
 import bc_festering_chantor from './bc_festering_chantor.webp';
-// import bc_grilok from './bc_grilok.webp';
-// import bc_gritch from './bc_gritch.webp';
-// import bc_kreegrix from './bc_kreegrix.webp';
 import bc_nurglitch from './bc_nurglitch.webp';
 import bc_plague_lord from './bc_plague_lord.webp';
 import bc_plague_pontifex from './bc_plague_pontifex.webp';
-// import bc_skrimanx from './bc_skrimanx.webp';
 import bc_stinking_thing from './bc_stinking_thing.webp';
 import bc_the_hidden from './bc_the_hidden.webp';
 import str_pontifex_sitch from './str_pontifex_sitch.webp';
@@ -45,6 +40,9 @@ import str_verms_swarmleader from './str_verms_swarmleader.webp';
 import ksl_shaman from './ksl_shaman_01.webp';
 import str_gangrous_szik from './str_gangrous_szik.webp';
 import str_treecherik_gristl from './str_treecherik_gristl.webp';
+import jbv_courtesan from './jbv_courtesan_01.webp';
+import jbv_matron from './jbv_matron_01.webp';
+import jbv_witch_lord from './jbv_witch_lord.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -100,6 +98,10 @@ const scm3CharacterImgs = {
   ksl_shaman_jade: ksl_shaman,
   str_gangrous_szik: str_gangrous_szik,
   str_treecherik_gristl: str_treecherik_gristl,
+  jbv_courtesan: jbv_courtesan,
+  jbv_matron: jbv_matron,
+  jbv_witch_lord: jbv_witch_lord,
+  jbv_jade_blooded_a: jbv_jade_blooded,
 };
 
 export default scm3CharacterImgs;
