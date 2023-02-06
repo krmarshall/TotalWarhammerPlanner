@@ -16,18 +16,20 @@ const Header = () => {
 
   return (
     <div className="flex flex-row flex-nowrap justify-between h-[4.5rem]">
-      <Link to={'/'} className="w-1/3 text-slate-100 text-4xl flex justify-start">
-        <img
-          src={headerImg}
-          alt="header diplomacy icon"
-          className="w-20 h-20 my-auto cursor-pointer drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
-          draggable={false}
-        />
-        <h1 className="my-auto cursor-pointer text-shadow-md">
-          {title}
-          <span className="text-base text-gray-400 align-super">WIP</span>
-        </h1>
-      </Link>
+      <div className="w-1/3 flex flex-row flex-nowrap justify-start">
+        <Link to={'/'} className="text-slate-100 text-4xl flex flex-row flex-nowrap">
+          <img
+            src={headerImg}
+            alt="header diplomacy icon"
+            className="w-20 h-20 my-auto drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(0,0,0,0.7)]"
+            draggable={false}
+          />
+          <h1 className="my-auto text-shadow-md">
+            {title}
+            <span className="text-base text-gray-400 align-super">WIP</span>
+          </h1>
+        </Link>
+      </div>
 
       <div className={'w-1/3 flex flex-row justify-center text-2xl text-slate-50 my-auto' + linksWidth}>
         <Link className={pageButtonClass + avoidImageMargin} to={'/'} draggable={false}>
