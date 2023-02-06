@@ -11,6 +11,7 @@ import TopBar from '../components/Planner/TopBar';
 import CharacterPortrait from '../components/Planner/CharacterPortrait';
 import SkillTable from '../components/Planner/SkillTable';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
+import gameData from '../data/gameData';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -26,12 +27,17 @@ const Planner = () => {
 
   const navigate = useNavigate();
 
+  // @ts-expect-error ts(7053)
+  const lordName = gameData[mod].characters[`${faction}_lords`]?.[character]?.name;
+  // @ts-expect-error ts(7053)
+  const heroName = gameData[mod].characters[`${faction}_heroes`]?.[character]?.name;
+  const characterName = lordName === undefined ? heroName : lordName;
+
   useEffect(() => {
     if (characterData === null) {
-      const game = mod?.includes('2') ? '2' : '3';
       dispatch({
-        type: AppContextActions.changeGameModFaction,
-        payload: { selectedGame: game, selectedMod: mod, selectedFaction: faction },
+        type: AppContextActions.changeModFaction,
+        payload: { selectedMod: mod, selectedFaction: faction },
       });
 
       api
@@ -82,6 +88,10 @@ const Planner = () => {
   useEffect(() => {
     setShortViewToggle(false);
   }, [isThin]);
+
+  useEffect(() => {
+    document.title = `TWP - ${characterName}`;
+  }, []);
 
   return (
     <div className="grow mt-1 flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">

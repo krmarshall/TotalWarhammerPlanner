@@ -12,7 +12,7 @@ interface PropInterface {
 
 const ModSelector = ({ containerWidth }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { selectedGame, selectedMod } = state;
+  const { selectedMod } = state;
 
   const gameKeys = Object.keys(gameData);
 
@@ -23,17 +23,13 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Mods</h1>
         <hr className="grow mt-[1.25rem] opacity-50" />
       </div>
-      <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[27.7rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+      <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[34rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
         <TransitionGroup component={null}>
           {gameKeys.map((gameKey) => {
-            if (!gameKey.includes(selectedGame)) {
-              return;
-            }
-
             // Would like to break this out as its own component, but transition group get really weird about it
             const game = gameData[gameKey as keyof typeof gameData];
             let liClassName =
-              'flex flex-col justify-around m-2 mt-1 p-1.5 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
+              'flex flex-col justify-around m-2 mt-1 px-1.5 py-1 border border-gray-500 shadow-lg shadow-gray-800/60 rounded-lg hover-scale';
 
             if (gameKey === selectedMod) {
               liClassName += ' bg-gray-600 hover:bg-gray-500/80 scale-105';

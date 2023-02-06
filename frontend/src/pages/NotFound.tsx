@@ -11,6 +11,10 @@ const NotFound = () => {
       navigate('/404');
     }
   }, [location]);
+
+  useEffect(() => {
+    document.title = 'Total Warhammer Planner - 404';
+  }, []);
   return (
     <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
       <div className="flex flex-col place-content-center mt-4 mx-auto select-text font-[Helvetica] text-gray-200">

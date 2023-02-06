@@ -15,7 +15,7 @@ interface PropInterface {
 
 const FactionEffects = ({ factionEffect }: PropInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedMod, selectedGame } = state;
+  const { selectedMod } = state;
 
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
 
@@ -45,7 +45,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
   const fontSize = setFontSize(factionEffect.title);
 
-  const vanillaGamePath = selectedGame === '2' ? 'vanilla2' : 'vanilla3';
+  const vanillaGamePath = selectedMod.includes('2') ? 'vanilla2' : 'vanilla3';
   const imagePath = factionEffect.ui_icon.replace('.png', '.webp');
   return (
     <div className="flex flex-col mx-1 min-w-[14rem] shadow-lg border border-gray-500 rounded">

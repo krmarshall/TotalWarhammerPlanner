@@ -3,22 +3,20 @@ import headerImg from '../imgs/header.webp';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 
 const Header = () => {
-  const { isMobileWidth, isSmol } = useBulkMediaQueries();
+  const { isSmol, shortenHeaderTitle, isMobileWidth } = useBulkMediaQueries();
 
-  let linksWidth;
-  if (isSmol) {
-    linksWidth = ' hidden';
-  } else if (isMobileWidth) {
-    linksWidth = ' w-[27vw]';
-  } else {
-    linksWidth = ' w-[62vw]';
-  }
+  const title = shortenHeaderTitle ? 'Total Warhammer Planner' : 'TWP';
 
+  const linksWidth = isSmol ? ' hidden' : '';
+
+  const avoidImageMargin = isMobileWidth ? ' mr-4' : ' mr-44';
+
+  const pageButtonClass = 'bg-slate-500 rounded-2xl py-1 px-5 my-auto shadow-md shadow-gray-900 hover-scale';
   const buttonClass = 'bg-slate-500 rounded-2xl py-1 px-5 my-auto shadow-md shadow-gray-900 hover-scale';
 
   return (
-    <div className="flex flex-row flex-nowrap h-[4.5rem]">
-      <Link to={'/'} className="grow text-slate-100 text-4xl flex justify-start">
+    <div className="flex flex-row flex-nowrap justify-between h-[4.5rem]">
+      <Link to={'/'} className="w-1/3 text-slate-100 text-4xl flex justify-start">
         <img
           src={headerImg}
           alt="header diplomacy icon"
@@ -26,16 +24,25 @@ const Header = () => {
           draggable={false}
         />
         <h1 className="my-auto cursor-pointer text-shadow-md">
-          Total Warhammer Planner
+          {title}
           <span className="text-base text-gray-400 align-super">WIP</span>
         </h1>
       </Link>
 
-      <div className={'flex flex-row justify-end text-xl text-slate-50 my-auto' + linksWidth}>
-        <Link className={buttonClass} to={'/about'}>
+      <div className={'w-1/3 flex flex-row justify-center text-2xl text-slate-50 my-auto' + linksWidth}>
+        <Link className={pageButtonClass + avoidImageMargin} to={'/'} draggable={false}>
+          Skills
+        </Link>
+        <Link className={pageButtonClass} to={'/techHome'} draggable={false}>
+          Techs
+        </Link>
+      </div>
+
+      <div className={'w-1/3 flex flex-row justify-end text-2xl text-slate-50 my-auto' + linksWidth}>
+        <Link className={buttonClass + ' mr-4'} to={'/about'} draggable={false}>
           About
         </Link>
-        <Link className={buttonClass + ' ml-4'} to={'/issues'}>
+        <Link className={buttonClass} to={'/issues'} draggable={false}>
           Issues
         </Link>
       </div>

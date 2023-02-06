@@ -1,6 +1,5 @@
 import ReactImage from '../ReactImage';
 import placeholderImg from '../../imgs/other/0placeholderInvis.webp';
-import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 

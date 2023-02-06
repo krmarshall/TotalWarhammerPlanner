@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 
 const About = () => {
   const { isShortWidth } = useBulkMediaQueries();
   const marginThickness = isShortWidth ? ' mx-2' : ' mx-32';
+
+  useEffect(() => {
+    document.title = 'Total Warhammer Planner - About';
+  }, []);
   return (
     <div className="h-[88vh] bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
       <div className={'flex flex-col place-content-center mt-4 select-text font-[Helvetica]' + marginThickness}>

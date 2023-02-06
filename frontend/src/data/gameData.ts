@@ -3,8 +3,8 @@ import { GameDataInterface } from '../types/interfaces/GameInterface';
 import gameImages from '../imgs/games/gameImages';
 
 import vanilla2Characters from './characters/vanilla2Characters';
-import sfo2Characters from './characters/sfo2Characters';
-import radious2Characters from './characters/radious2Characters';
+// import sfo2Characters from './characters/sfo2Characters';
+// import radious2Characters from './characters/radious2Characters';
 import vanilla3Characters from './characters/vanilla3Characters';
 import radious3Characters from './characters/radious3Characters';
 import mixu3Characters from './characters/mixu3Characters';

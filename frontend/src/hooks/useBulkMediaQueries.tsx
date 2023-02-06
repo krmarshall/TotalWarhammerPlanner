@@ -8,7 +8,8 @@ const useBulkMediaQueries = () => {
     isShortHeight: useMediaQuery({ maxHeight: 669 }),
     isThin: useMediaQuery({ maxWidth: 737 }),
     tallWindow: useMediaQuery({ minHeight: 920 }),
-    isSmol: useMediaQuery({ maxWidth: 540 }),
+    isSmol: useMediaQuery({ maxWidth: 600 }),
+    shortenHeaderTitle: useMediaQuery({ minWidth: 898 }),
   };
 };
 

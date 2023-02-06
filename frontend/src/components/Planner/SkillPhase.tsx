@@ -10,9 +10,11 @@ interface SkillPhaseProps {
 
 const SkillPhase = ({ phase }: SkillPhaseProps) => {
   const { state } = useContext(AppContext);
-  const { selectedGame } = state;
+  const { selectedMod } = state;
   const type = phase.effect_type === 'positive' ? 'Buff' : 'Debuff';
   const imbueBoth = phase.imbue_magical && phase.imbue_ignition ? true : false;
+
+  const selectedGame = selectedMod.includes('2') ? '2' : '3';
   return (
     <div className="w-auto rounded-lg border border-gray-500 mb-2 p-2 shadow-lg">
       {phase.duration !== undefined && phase.duration > 0 && (

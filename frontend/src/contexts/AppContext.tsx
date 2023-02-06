@@ -4,7 +4,6 @@ import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 import { TechSetInterface } from '../types/interfaces/TechInterface';
 
 interface ContextStateInterface {
-  selectedGame: string;
   selectedMod: string;
   selectedModTech: string;
   selectedFaction: string;
@@ -15,7 +14,6 @@ interface ContextStateInterface {
 }
 
 const initialState: ContextStateInterface = {
-  selectedGame: '3',
   selectedMod: 'vanilla3',
   selectedModTech: 'vanilla3',
   selectedFaction: 'bst_beastmen',
@@ -28,7 +26,6 @@ const initialState: ContextStateInterface = {
 interface ActionInterface {
   type: string;
   payload: {
-    selectedGame?: string;
     selectedMod?: string;
     selectedModTech?: string;
     selectedFaction?: string;
@@ -48,20 +45,11 @@ enum AppContextActions {
   changeCharacterBuild = 'changeCharacterBuild',
   changeTechData = 'changeTechData',
   changeLocalStorageBuildKeys = 'changeLocalStorageBuildKeys',
-  changeGameModFaction = 'changeGameModFaction',
+  changeModFaction = 'changeModFaction',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
   switch (action.type) {
-    case AppContextActions.changeGame: {
-      const newState = { ...state };
-      if (action.payload.selectedGame === undefined) {
-        return state;
-      }
-      newState.selectedGame = action.payload.selectedGame;
-      return newState;
-    }
-
     case AppContextActions.changeMod: {
       const newState = { ...state };
       if (action.payload.selectedMod === undefined) {
@@ -89,12 +77,8 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
       return newState;
     }
 
-    case AppContextActions.changeGameModFaction: {
+    case AppContextActions.changeModFaction: {
       const newState = { ...state };
-      if (action.payload.selectedGame === undefined) {
-        return state;
-      }
-      newState.selectedGame = action.payload.selectedGame;
 
       if (action.payload.selectedMod === undefined) {
         return state;

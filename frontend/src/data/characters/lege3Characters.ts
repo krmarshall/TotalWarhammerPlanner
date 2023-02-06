@@ -1,15 +1,15 @@
 import { SpellLores } from '../../types/interfaces/GameInterface';
 
 const lege3Characters = {
-  brt_bretonnia_lords: {},
-  brt_bretonnia_heroes: {
-    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
-  },
-
   bst_beastmen_lords: {
     str_ragush: { name: 'Ragush of the Bloody Horn' },
   },
   bst_beastmen_heroes: {},
+
+  brt_bretonnia_lords: {},
+  brt_bretonnia_heroes: {
+    ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+  },
 
   dae_daemons_lords: {
     str_slavin: { name: 'Slavin Kurnz' },

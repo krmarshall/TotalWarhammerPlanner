@@ -59,7 +59,7 @@ const FactionSelector = ({ containerWidth }: PropInterface) => {
         </TooltipWrapper>
         <hr className="grow mt-[1.25rem] opacity-50" />
       </div>
-      <ul className="flex flex-row flex-wrap justify-center">
+      <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[34rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-60">
         <TransitionGroup component={null}>
           {currentGameFactions?.map((factionKey) => {
             if (
