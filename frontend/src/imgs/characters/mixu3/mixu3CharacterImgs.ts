@@ -62,6 +62,10 @@ import gnb_king_bezos from './gnob_king_bezos.webp';
 import gnb_scrapper from './gnob_scrapper_02.webp';
 import gnb_woodbelly from './gnob_woodbelly_01.webp';
 
+import dwf_dragon_slayer from './dwf_dragon_slayer_1.webp';
+
+import wef_shadowdancer from './wef_shadowdancer_1.webp';
+
 import placeholder from './0placeholder.webp';
 
 const mixu3CharacterImgs = {
@@ -135,6 +139,11 @@ const mixu3CharacterImgs = {
   head_honcho: gnb_head_honcho,
   scrapper: gnb_scrapper,
   woodbelly: gnb_woodbelly,
+
+  dwf_dragon_slayer: dwf_dragon_slayer,
+  dwf_daemon_slayer: dwf_dragon_slayer,
+
+  wef_shadowdancer: wef_shadowdancer,
 };
 
 export default mixu3CharacterImgs;

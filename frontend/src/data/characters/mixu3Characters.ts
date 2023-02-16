@@ -41,8 +41,11 @@ const mixu3Characters = {
     dwf_grimm_burloksson: { name: 'Grimm Burloksson' },
     dwf_kazador_dragonslayer: { name: 'King Kazador' },
     dwf_kragg_the_grim: { name: 'Kragg the Grim', spellLore: SpellLores.runic },
+    dwf_daemon_slayer: { name: 'Daemon Slayer' },
   },
-  dwf_dwarfs_heroes: {},
+  dwf_dwarfs_heroes: {
+    dwf_dragon_slayer: { name: 'Dragon Slayer' },
+  },
 
   emp_empire_lords: {
     emp_alberich_haupt_anderssen: { name: 'Alberich Haupt-Anderssen' },
@@ -131,7 +134,9 @@ const mixu3Characters = {
     wef_naieth_the_prophetess: { name: 'Prophetess Naieth', spellLore: SpellLores.heavens },
     wef_wychwethyl: { name: 'Wychwethyl the Wild' },
   },
-  wef_wood_elves_heroes: {},
+  wef_wood_elves_heroes: {
+    wef_shadowdancer: { name: 'Shadowdancer', spellLore: SpellLores.mixed },
+  },
 
   gnb_gnoblars_lords: {
     bragg_the_gutsman: { name: 'Bragg The Gutsman' },
