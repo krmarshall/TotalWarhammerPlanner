@@ -11,6 +11,7 @@ import mixu3Characters from './characters/mixu3Characters';
 import lege3Characters from './characters/lege3Characters';
 import crys3Characters from './characters/crys3Characters';
 import scm3Characters from './characters/scm3Characters';
+import sfo3Characters from './characters/sfo3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 // import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
@@ -21,6 +22,7 @@ import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
 import lege3CharacterImgs from '../imgs/characters/lege3/lege3CharacterImgs';
 import crys3CharacterImgs from '../imgs/characters/crys3/crys3CharacterImgs';
 import scm3CharacterImgs from '../imgs/characters/scm3/scm3CharacterImgs';
+import sfo3CharacterImgs from '../imgs/characters/sfo3/sfo3CharacterImgs';
 
 const gameData: { [key: string]: GameDataInterface } = {
   vanilla2: {
@@ -61,6 +63,16 @@ const gameData: { [key: string]: GameDataInterface } = {
     updated: '16 Feb 2022 (2.4.0)',
     category: 'Base',
   },
+  sfo3: {
+    text: 'SFO 3',
+    image: gameImages['sfo3'],
+    factions: factions,
+    characters: sfo3Characters,
+    characterImages: sfo3CharacterImgs,
+    updated: '16 Feb 2023',
+    category: 'Overhaul',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2792731173',
+  },
   radious3: {
     text: 'Radious 3',
     image: gameImages['radious3'],
@@ -97,16 +109,6 @@ const gameData: { [key: string]: GameDataInterface } = {
     category: 'Character Mod',
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
   },
-  crys3: {
-    text: 'Leaders of Legend 3',
-    image: gameImages['crys3'],
-    factions: factions,
-    characters: crys3Characters,
-    characterImages: crys3CharacterImgs,
-    updated: '29 Nov 2022',
-    category: 'Overhaul',
-    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2880244265',
-  },
   scm3: {
     text: 'Skeleton Crew Compilation 3',
     image: gameImages['scm3'],
@@ -116,7 +118,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     updated: '16 Feb 2023',
     category: 'Character Mod Compilation',
     includes: [
-      'The Jade-Blooded Vampires: Curse of Nongchang (12 Feb 2023)',
+      'The Jade-Blooded Vampires: Curse of Nongchang (16 Feb 2023)',
       'Dark Land Warboss (8 Jan 2023)',
       "Dead's Cult of the Possessed V2 (5 Dec 2022)",
       "Dead's Jade Army Expansion (2 Feb 2023)",
@@ -132,6 +134,16 @@ const gameData: { [key: string]: GameDataInterface } = {
       'Clan Treecherik (1 Feb 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',
+  },
+  crys3: {
+    text: 'Leaders of Legend 3',
+    image: gameImages['crys3'],
+    factions: factions,
+    characters: crys3Characters,
+    characterImages: crys3CharacterImgs,
+    updated: '29 Nov 2022',
+    category: 'Overhaul',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2880244265',
   },
 };
 

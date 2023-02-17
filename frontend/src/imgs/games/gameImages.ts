@@ -7,6 +7,7 @@ import mixu3 from './mixu3.webp';
 import lege3 from './lege3.webp';
 import crys3 from './crys3.webp';
 import scm3 from './scm3.webp';
+import sfo3 from './sfo3.webp';
 
 const gameImages = {
   vanilla2,
@@ -18,6 +19,7 @@ const gameImages = {
   lege3,
   crys3,
   scm3,
+  sfo3,
 };
 
 export default gameImages;
