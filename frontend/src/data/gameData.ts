@@ -105,7 +105,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
-    updated: '23 Feb 2023',
+    updated: '25 Feb 2023',
     category: 'Character Mod',
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
   },
