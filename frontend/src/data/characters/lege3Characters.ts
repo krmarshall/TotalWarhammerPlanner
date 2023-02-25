@@ -47,8 +47,9 @@ const lege3Characters = {
     str_thyrus: { name: 'Thyrus Gorman', spellLore: SpellLores.fire },
   },
   emp_empire_heroes: {
-    bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
     hkrul_aldred: { name: 'Aldred von Carroburg' },
+    bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
+    str_halagrundsor: { name: 'Halagrundsor the Horrible' },
     ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
   },
 
@@ -60,7 +61,9 @@ const lege3Characters = {
     str_skulltaker: { name: 'Skulltaker' },
   },
 
-  ksl_kislev_lords: {},
+  ksl_kislev_lords: {
+    dead_ksl_dmitri_tzaryov: { name: 'Dmitry Tzaryov' },
+  },
   ksl_kislev_heroes: {
     dead_grigori: { name: 'Grigori Medvezhiy' },
     str_ilja: { name: 'Ilja of Murova' },
@@ -68,6 +71,11 @@ const lege3Characters = {
     str_naryaska: { name: 'Naryaska Leysa, the Golden Knight' },
     dead_ice_mage: { name: 'Vladimir Stormbringer', spellLore: SpellLores.tempest },
   },
+
+  lzd_lizardmen_lords: {
+    zlatgar_ll: { name: 'Zlatgar' },
+  },
+  lzd_lizardmen_heroes: {},
 
   nur_nurgle_lords: {
     str_valnir: { name: 'Valnir the Reaper' },
@@ -118,6 +126,11 @@ const lege3Characters = {
   vmp_vampire_counts_heroes: {
     str_ulrika: { name: 'Ulrika Magdova Straghov' },
   },
+
+  wef_wood_elves_lords: {
+    queen_marrisith_set: { name: 'Queen Marrisith' },
+  },
+  wef_wood_elves_heroes: {},
 };
 
 export default lege3Characters;

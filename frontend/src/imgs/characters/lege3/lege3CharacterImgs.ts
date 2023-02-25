@@ -37,6 +37,10 @@ import str_xuqls from './str_xuqls.webp';
 import hkrul_aldred from './hkrul_aldred.webp';
 import ludwig_von_uberdorf from './ludwig_von_uberdorf.webp';
 import helgar_longplaits from './helgar_longplaits.webp';
+import dead_ksl_dmitri_tzaryov from './dead_ksl_dmitri_tzaryov.webp';
+import kou_queen_marrisith from './kou_queen_marrisith.webp';
+import kou_zlatgar_ll from './kou_zlatgar_ll.webp';
+import str_halagrundsor from './str_halagrundsor.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -80,6 +84,10 @@ const lege3CharacterImgs = {
   hkrul_aldred: hkrul_aldred,
   Helgar_longplaits: helgar_longplaits,
   ludwig_von_uberdorf: ludwig_von_uberdorf,
+  queen_marrisith_set: kou_queen_marrisith,
+  zlatgar_ll: kou_zlatgar_ll,
+  dead_ksl_dmitri_tzaryov: dead_ksl_dmitri_tzaryov,
+  str_halagrundsor: str_halagrundsor,
 };
 
 export default lege3CharacterImgs;
