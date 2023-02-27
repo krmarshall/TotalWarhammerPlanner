@@ -140,8 +140,8 @@ const mixu3Characters = {
 
   gnb_gnoblars_lords: {
     bragg_the_gutsman: { name: 'Bragg The Gutsman' },
-    gnobbo: { name: 'Gnobbo' },
-    king_bezos: { name: 'King Bezos' },
+    gnobbo: { name: 'Gnobbo the Masked' },
+    king_bezos: { name: 'Great-King-Lord Bezer' },
     head_honcho: { name: 'Head Honcho' },
   },
   gnb_gnoblars_heroes: {

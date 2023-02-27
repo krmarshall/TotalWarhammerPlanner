@@ -1,17 +1,17 @@
 import factionImages from '../../imgs/factions/factionImages';
 
 const vanilla2Techs = {
+  bst_mil_rework: { name: 'Beastmen', image: factionImages.bst_beastmen },
   brt_mil: { name: 'Brettonia', image: factionImages.brt_bretonnia },
   brt_repanse: { name: 'Chevaliers de Lyonesse (Repanse)', image: factionImages.brt_chevaliers },
-  bst_mil: { name: 'Beastmen (Old)', image: factionImages.bst_beastmen },
-  bst_mil_rework: { name: 'Beastmen (New)', image: factionImages.bst_beastmen },
+  // bst_mil: { name: 'Beastmen (Old)', image: factionImages.bst_beastmen },
   def_mil: { name: 'Dark Elves', image: factionImages.def_dark_elves },
   dwf_civ: { name: 'Dwarfs (Civ)', image: factionImages.dwf_dwarfs },
   dwf_mil: { name: 'Dwarfs (Mil)', image: factionImages.dwf_dwarfs },
-  emp_civ: { name: 'Empire (Old?)', image: factionImages.emp_empire },
-  emp_civ_reworkd: { name: 'Empire (New?)', image: factionImages.emp_empire },
+  // emp_civ: { name: 'Empire (Old?)', image: factionImages.emp_empire },
+  emp_civ_reworkd: { name: 'The Empire', image: factionImages.emp_empire },
   emp_wulfhart: { name: "The Huntsmarshal's Expedition (Markus)", image: factionImages.emp_hunstmarshal },
-  grn_mil: { name: 'Greenskins (Mil)', image: factionImages.grn_greenskins },
+  // grn_mil: { name: 'Greenskins (Mil)', image: factionImages.grn_greenskins },
   grn_new: { name: 'Greenskins (New)', image: factionImages.grn_greenskins },
   grn_test: { name: 'Greenskins (Test)', image: factionImages.grn_greenskins },
   hef_mil: { name: 'High Elves', image: factionImages.hef_high_elves },

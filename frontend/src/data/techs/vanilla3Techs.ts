@@ -1,12 +1,12 @@
 import factionImages from '../../imgs/factions/factionImages';
 
 const vanilla3Techs = {
-  brt_mil: { name: 'Brettonia', image: factionImages.brt_bretonnia },
   bst_mil_rework: { name: 'Beastmen', image: factionImages.bst_beastmen },
-  cth_mil: { name: 'Grand Cathay', image: factionImages.cth_cathay },
+  brt_mil: { name: 'Brettonia', image: factionImages.brt_bretonnia },
   def_mil: { name: 'Dark Elves', image: factionImages.def_dark_elves },
   dwf_mil: { name: 'Dwarfs', image: factionImages.dwf_dwarfs },
-  emp_civ_reworkd: { name: 'Empire', image: factionImages.emp_empire },
+  emp_civ_reworkd: { name: 'The Empire', image: factionImages.emp_empire },
+  cth_mil: { name: 'Grand Cathay', image: factionImages.cth_cathay },
   emp_wulfhart: { name: "The Huntsmarshal's Expedition (Markus)", image: factionImages.emp_hunstmarshal },
   grn_new: { name: 'Greenskins', image: factionImages.grn_greenskins },
   hef_mil: { name: 'High Elves', image: factionImages.hef_high_elves },

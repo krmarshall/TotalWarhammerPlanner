@@ -1,11 +1,12 @@
 import { TechDataInterface } from '../types/interfaces/GameInterface';
 import gameData from './gameData';
 // import radious2Techs from './techs/radiou2Techs';
-import radious3Techs from './techs/radious3Techs';
-import sfo33Techs from './techs/sfo3Techs';
 // import sfo2Techs from './techs/sfo2Techs';
 import vanilla2Techs from './techs/vanilla2Techs';
 import vanilla3Techs from './techs/vanilla3Techs';
+import radious3Techs from './techs/radious3Techs';
+import sfo33Techs from './techs/sfo3Techs';
+import mixu3Techs from './techs/mixu3Techs';
 
 const techGameData: { [key: string]: TechDataInterface } = {
   vanilla2: {
@@ -49,6 +50,13 @@ const techGameData: { [key: string]: TechDataInterface } = {
     updated: gameData.sfo3.updated,
     category: gameData.sfo3.category,
     techTrees: sfo33Techs,
+  },
+  mixu3: {
+    text: gameData.mixu3.text,
+    image: gameData.mixu3.image,
+    updated: gameData.mixu3.updated,
+    category: gameData.mixu3.category,
+    techTrees: mixu3Techs,
   },
 };
 
