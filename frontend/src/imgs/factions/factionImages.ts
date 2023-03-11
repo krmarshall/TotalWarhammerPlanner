@@ -1,3 +1,4 @@
+// Vanilla Factions
 import beastmen from './beastmen.webp';
 import bretonnia from './bretonnia.webp';
 import daemonsOfChaos from './daemonsOfChaos.webp';
@@ -22,9 +23,12 @@ import vampireCounts from './vampireCounts.webp';
 import warriorsOfChaos from './warriorsOfChaos.webp';
 import woodElves from './woodElves.webp';
 
+// Mod Factions
 import gnoblars from './gnoblars.webp';
 import jadeVampires from './jadeVampires.webp';
+import rotbloodTribe from './rotbloodTribe.webp';
 
+// Tech Factions
 import chevaliers from './chevaliers.webp';
 import hunstmarshal from './hunstmarshal.webp';
 import spiritsJungle from './spiritsJungle.webp';
@@ -61,6 +65,7 @@ const factionImages = {
 
   gnb_gnoblars: gnoblars,
   jbv_jade_vampires: jadeVampires,
+  str_rotblood: rotbloodTribe,
 
   brt_chevaliers: chevaliers,
   emp_hunstmarshal: hunstmarshal,

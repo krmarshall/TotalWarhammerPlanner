@@ -26,6 +26,8 @@ const factions = {
   gnb_gnoblars: 'Gnoblar Hordes',
 
   jbv_jade_vampires: 'Jade-Blooded Vampires',
+
+  str_rotblood: 'Rotblood Tribe',
 };
 
 export default factions;

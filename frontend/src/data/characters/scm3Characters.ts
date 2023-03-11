@@ -68,19 +68,6 @@ const scm3Characters = {
     ksl_shaman_jade: { name: 'Shaman (Life)', spellLore: SpellLores.life },
   },
 
-  nur_nurgle_lords: {
-    str_bodvarr: { name: 'Bödvarr Ribspreader' },
-    str_burblespue: { name: 'Burblespue Halescourge', spellLore: SpellLores.mixed },
-    str_rotblood_blessed: { name: 'Blessed' },
-    str_rotblood_caster_death: { name: 'Shaman Lord (Death)', spellLore: SpellLores.death },
-    str_rotblood_caster_nurgle: { name: 'Shaman Lord (Nurgle)', spellLore: SpellLores.nurgle },
-  },
-  nur_nurgle_heroes: {
-    str_rotblood_blightstorm_hero: { name: 'Greater Blightstormer', spellLore: SpellLores.death },
-    str_rotblood_lifeleech_hero: { name: 'Greater Lifeleech', spellLore: SpellLores.nurgle },
-    str_rotblood_eternal: { name: 'Rotblood Eternal' },
-  },
-
   ogr_ogre_kingdoms_lords: {
     str_gnoblar_head: { name: 'Head Honcho' },
   },
@@ -111,6 +98,19 @@ const scm3Characters = {
     bc_festering_chantor: { name: 'Festering Chantor' },
     bc_stinking_thing: { name: 'Stinking Thing' },
     str_verms_swarmcaller: { name: 'Swarmcaller' },
+  },
+
+  str_rotblood_lords: {
+    str_bodvarr: { name: 'Bödvarr Ribspreader' },
+    str_burblespue: { name: 'Burblespue Halescourge', spellLore: SpellLores.mixed },
+    str_rotblood_blessed: { name: 'Blessed' },
+    str_rotblood_caster_death: { name: 'Shaman Lord (Death)', spellLore: SpellLores.death },
+    str_rotblood_caster_nurgle: { name: 'Shaman Lord (Nurgle)', spellLore: SpellLores.nurgle },
+  },
+  str_rotblood_heroes: {
+    str_rotblood_blightstorm_hero: { name: 'Greater Blightstormer', spellLore: SpellLores.death },
+    str_rotblood_lifeleech_hero: { name: 'Greater Lifeleech', spellLore: SpellLores.nurgle },
+    str_rotblood_eternal: { name: 'Rotblood Eternal' },
   },
 };
 
