@@ -41,6 +41,16 @@ import dead_ksl_dmitri_tzaryov from './dead_ksl_dmitri_tzaryov.webp';
 import kou_queen_marrisith from './kou_queen_marrisith.webp';
 import kou_zlatgar_ll from './kou_zlatgar_ll.webp';
 import str_halagrundsor from './str_halagrundsor.webp';
+import dust_nyletoth from './dust_unit_nyletoth.webp';
+import hkrul_erkstein from './hkrul_erkstein.webp';
+import kou_aurelion_ll from './kou_aurelion_ll.webp';
+import kou_oreon_ll from './kou_oreon_ll.webp';
+import str_crom from './str_crom.webp';
+import str_fellheart from './str_fellheart.webp';
+import str_feytor from './str_feytor.webp';
+import str_haargroth from './str_haargroth.webp';
+import str_styrkaar from './str_styrkaar.webp';
+import str_vandred from './str_vandred.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -84,10 +94,20 @@ const lege3CharacterImgs = {
   hkrul_aldred: hkrul_aldred,
   Helgar_longplaits: helgar_longplaits,
   ludwig_von_uberdorf: ludwig_von_uberdorf,
-  queen_marrisith_set: kou_queen_marrisith,
+  queen_marrisith: kou_queen_marrisith,
   zlatgar_ll: kou_zlatgar_ll,
   dead_ksl_dmitri_tzaryov: dead_ksl_dmitri_tzaryov,
   str_halagrundsor: str_halagrundsor,
+  nyletoth: dust_nyletoth,
+  hkrul_erkstein: hkrul_erkstein,
+  kou_aurelion_ll: kou_aurelion_ll,
+  oreon_ll: kou_oreon_ll,
+  str_crom: str_crom,
+  str_fellheart: str_fellheart,
+  str_feytor: str_feytor,
+  str_haargroth: str_haargroth,
+  str_styrkaar: str_styrkaar,
+  str_vandred: str_vandred,
 };
 
 export default lege3CharacterImgs;

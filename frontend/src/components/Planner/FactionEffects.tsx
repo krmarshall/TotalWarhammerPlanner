@@ -97,6 +97,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
               srcList={[
                 `/imgs/${selectedMod}/campaign_ui/effect_bundles/${imagePath}`,
                 `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${imagePath}`,
+                `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`,
               ]}
               className="w-[4.5rem] h-[4.5rem] p-2 drop-shadow-lg my-auto"
               alt="itemIcon"

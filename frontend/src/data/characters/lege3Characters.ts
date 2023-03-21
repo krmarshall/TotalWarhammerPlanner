@@ -24,7 +24,12 @@ const lege3Characters = {
   },
 
   chs_chaos_lords: {
+    str_feytor: { name: 'Feytor the Tainted' },
+    str_haargroth: { name: 'Haargroth the Blooded' },
     str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
+    str_styrkaar: { name: 'Styrkaar of the Sortsvinaer' },
+    str_crom: { name: 'Vardek Crom' },
+    str_vandred: { name: 'Vandred the Majestic' },
   },
   chs_chaos_heroes: {
     str_scyla: { name: 'Scyla Anfingrimm' },
@@ -37,20 +42,29 @@ const lege3Characters = {
     str_xian: { name: 'Xian Feng' },
   },
 
-  def_dark_elves_lords: {},
+  def_dark_elves_lords: {
+    str_fellheart: { name: 'Laithikar Fellheart' },
+  },
   def_dark_elves_heroes: {
     str_shadowblade: { name: 'Shadowblade' },
   },
 
   emp_empire_lords: {
+    hkrul_erkstein: { name: 'Grand Marshal Erkstein' },
     dead_kes: { name: 'Stefan von Kessel' },
     str_thyrus: { name: 'Thyrus Gorman', spellLore: SpellLores.fire },
   },
   emp_empire_heroes: {
     hkrul_aldred: { name: 'Aldred von Carroburg' },
+    kou_aurelion_ll: { name: 'Aurelion' },
     bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
     str_halagrundsor: { name: 'Halagrundsor the Horrible' },
     ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+  },
+
+  hef_high_elves_lords: {},
+  hef_high_elves_heroes: {
+    kou_aurelion_ll: { name: 'Aurelion' },
   },
 
   kho_khorne_lords: {
@@ -110,6 +124,7 @@ const lege3Characters = {
 
   tmb_tomb_kings_lords: {},
   tmb_tomb_kings_heroes: {
+    nyletoth: { name: 'Nyletoth the Charioteer' },
     str_serkhet: { name: 'Serkhet' },
   },
 
@@ -128,7 +143,8 @@ const lege3Characters = {
   },
 
   wef_wood_elves_lords: {
-    queen_marrisith_set: { name: 'Queen Marrisith' },
+    queen_marrisith: { name: 'Queen Marrisith' },
+    oreon_ll: { name: 'Oreon' },
   },
   wef_wood_elves_heroes: {},
 };
