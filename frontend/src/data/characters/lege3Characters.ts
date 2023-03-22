@@ -56,7 +56,7 @@ const lege3Characters = {
   },
   emp_empire_heroes: {
     hkrul_aldred: { name: 'Aldred von Carroburg' },
-    kou_aurelion_ll: { name: 'Aurelion' },
+    kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
     bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
     str_halagrundsor: { name: 'Halagrundsor the Horrible' },
     ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
@@ -64,7 +64,7 @@ const lege3Characters = {
 
   hef_high_elves_lords: {},
   hef_high_elves_heroes: {
-    kou_aurelion_ll: { name: 'Aurelion' },
+    kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
   },
 
   kho_khorne_lords: {
@@ -129,7 +129,7 @@ const lege3Characters = {
   },
 
   tze_tzeentch_lords: {
-    str_amon: { name: "Amon 'Chakai" },
+    str_amon: { name: "Amon 'Chakai", spellLore: SpellLores.mixed },
   },
   tze_tzeentch_heroes: {
     str_changeling: { name: 'Changeling', spellLore: SpellLores.tzeentch },

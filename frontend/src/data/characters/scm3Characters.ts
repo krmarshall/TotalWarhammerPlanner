@@ -22,18 +22,35 @@ const scm3Characters = {
     jade_officer: { name: 'Jade Officer' },
   },
 
+  dwf_dwarfs_lords: {},
+  dwf_dwarfs_heroes: {
+    hkrul_guzunda: { name: 'Guzunda Wallrattler' },
+  },
+
   emp_empire_lords: {
     emp_sec_hans: { name: 'Hans Frankenwurter' },
 
     emp_helborg: { name: 'Kurt Helborg' },
 
     hun_cha_huntsmarshal_0: { name: 'Huntsman General' },
+
+    hkrul_egmond: { name: 'Egmond den Euwe', spellLore: SpellLores.mixed },
+    hkrul_jk: { name: 'Jaan van de Kuypers' },
+    hkrul_hendrik: { name: 'Simon Goudenkruin' },
+    mar_caravan_master: { name: 'Merchant Lord' },
   },
   emp_empire_heroes: {
     emp_zintler: { name: 'Hans Zintler' },
     emp_schwartzhelm: { name: 'Ludwig Schwarzhelm' },
     emp_gold_wizard: { name: 'Alchemist (Gold Wizard)', spellLore: SpellLores.metal },
     emp_huntsmaster: { name: 'Hunt Master' },
+
+    hkrul_crispijn: { name: 'Crispijn van Haagen' },
+    hkrul_cross: { name: 'Captain Daefvid Maicross' },
+    hkrul_guzunda: { name: 'Guzunda Wallrattler' },
+    hkrul_lisette: { name: 'Lisette Leerer' },
+    hkrul_pg: { name: 'Pieter de Groot' },
+    hkrul_solkan: { name: 'Sword of Solkan' },
   },
 
   grn_greenskins_lords: {
@@ -98,6 +115,13 @@ const scm3Characters = {
     bc_festering_chantor: { name: 'Festering Chantor' },
     bc_stinking_thing: { name: 'Stinking Thing' },
     str_verms_swarmcaller: { name: 'Swarmcaller' },
+  },
+
+  vmp_vampire_counts_lords: {
+    hkrul_mundvard: { name: 'Mundvard the Cruel', spellLore: SpellLores.mixed },
+  },
+  vmp_vampire_counts_heroes: {
+    hkrul_alicia: { name: 'Alicia von Unterwald' },
   },
 
   str_rotblood_lords: {

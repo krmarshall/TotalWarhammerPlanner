@@ -43,6 +43,18 @@ import str_treecherik_gristl from './str_treecherik_gristl.webp';
 import jbv_courtesan from './jbv_courtesan_01.webp';
 import jbv_matron from './jbv_matron_01.webp';
 import jbv_witch_lord from './jbv_witch_lord.webp';
+import hkrul_alicia from './hkrul_alicia.webp';
+import hkrul_crispijn from './hkrul_crispijn.webp';
+import hkrul_cross from './hkrul_cross.webp';
+import hkrul_guzunda from './hkrul_guzunda.webp';
+import hkrul_hendrik from './hkrul_hendrik.webp';
+import hkrul_jk from './hkrul_jk.webp';
+import hkrul_lisette from './hkrul_lisette.webp';
+import hkrul_mar_egmond from './hkrul_mar_egmond.webp';
+import hkrul_mar_munvard from './hkrul_mar_munvard.webp';
+import hkrul_pg from './hkrul_pg.webp';
+import hkrul_solkan from './hkrul_solkan_1.webp';
+import hrul_mar_caravan_commander from './hrul_mar_caravan_commander_06.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -102,6 +114,18 @@ const scm3CharacterImgs = {
   jbv_matron: jbv_matron,
   jbv_witch_lord: jbv_witch_lord,
   jbv_jade_blooded_a: jbv_jade_blooded,
+  hkrul_alicia: hkrul_alicia,
+  hkrul_crispijn: hkrul_crispijn,
+  hkrul_cross: hkrul_cross,
+  hkrul_guzunda: hkrul_guzunda,
+  hkrul_hendrik: hkrul_hendrik,
+  hkrul_jk: hkrul_jk,
+  hkrul_lisette: hkrul_lisette,
+  hkrul_egmond: hkrul_mar_egmond,
+  hkrul_mundvard: hkrul_mar_munvard,
+  hkrul_pg: hkrul_pg,
+  hkrul_solkan: hkrul_solkan,
+  mar_caravan_master: hrul_mar_caravan_commander,
 };
 
 export default scm3CharacterImgs;
