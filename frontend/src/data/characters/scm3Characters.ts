@@ -121,7 +121,7 @@ const scm3Characters = {
     hkrul_mundvard: { name: 'Mundvard the Cruel', spellLore: SpellLores.mixed },
   },
   vmp_vampire_counts_heroes: {
-    hkrul_alicia: { name: 'Alicia von Unterwald' },
+    hkrul_alicia: { name: 'Alicia von Unterwald', spellLore: SpellLores.shadows },
   },
 
   str_rotblood_lords: {
