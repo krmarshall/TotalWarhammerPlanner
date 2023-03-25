@@ -14,10 +14,10 @@ interface skillDataInterface {
 const skillData: skillDataInterface = {};
 
 const initializeSkillData = () => {
-  const gamePaths = glob.sync('./src/TWPData/skills/*/');
+  const gamePaths = glob.sync('../TWPData/skills/*/');
 
   gamePaths.forEach((gamePath) => {
-    const game = gamePath.split('./src/TWPData/skills/')[1].replace('/', '');
+    const game = gamePath.split('./TWPData/skills/')[1].replace('/', '');
     skillData[game] = {};
     const factionPaths = glob.sync(`${gamePath}*/`);
 
@@ -45,10 +45,10 @@ interface techDataInterface {
 const techData: techDataInterface = {};
 
 const initializeTechData = () => {
-  const gamePaths = glob.sync('./src/TWPData/techs/*/');
+  const gamePaths = glob.sync('../TWPData/techs/*/');
 
   gamePaths.forEach((gamePath) => {
-    const game = gamePath.split('./src/TWPData/techs/')[1].replace('/', '');
+    const game = gamePath.split('../TWPData/techs/')[1].replace('/', '');
     techData[game] = {};
     const techTreePaths = glob.sync(`${gamePath}**.json`);
 
