@@ -27,10 +27,8 @@ const Planner = () => {
 
   const navigate = useNavigate();
 
-  // @ts-expect-error ts(7053)
-  const lordName = gameData[mod].characters[`${faction}_lords`]?.[character]?.name;
-  // @ts-expect-error ts(7053)
-  const heroName = gameData[mod].characters[`${faction}_heroes`]?.[character]?.name;
+  const lordName = gameData[mod as string].characters[faction as string]?.lords?.[character as string]?.name;
+  const heroName = gameData[mod as string].characters[faction as string]?.heroes?.[character as string]?.name;
   const characterName = lordName === undefined ? heroName : lordName;
 
   useEffect(() => {
