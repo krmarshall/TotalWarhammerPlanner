@@ -9,7 +9,8 @@
     "buildWin": "(cd frontend && npm install && npm run build) && (cd ../backend && npm install && npm run build)",
     "frontend-dev": "cd ./frontend && npm install && npm run dev",
     "backend-dev": "cd ./backend && npm install && npm run dev",
-    "dev": "concurrently -m 2 -k -n front,server -c #124dc4,#c45f12 npm:frontend-dev npm:backend-dev"
+    "dev": "concurrently -m 2 -k -n front,server -c #124dc4,#c45f12 npm:frontend-dev npm:backend-dev",
+    "test": "cd ./backend && npm run test"
   },
   "author": "krmarshall",
   "license": "ISC",

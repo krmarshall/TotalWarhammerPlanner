@@ -48,7 +48,7 @@ const TechSelector = () => {
               <CSSTransition
                 key={techKey}
                 classNames={{
-                  enterActive: 'animate__animated animate__faster animate__flipInX',
+                  enterActive: 'animate__animated animate__faster animate__zoomIn',
                   exitActive: 'hidden',
                 }}
                 timeout={500}

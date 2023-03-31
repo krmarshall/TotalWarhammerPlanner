@@ -2,20 +2,18 @@ import factions from '../data/factionData';
 import { GameDataInterface } from '../types/interfaces/GameInterface';
 import gameImages from '../imgs/games/gameImages';
 
-import vanilla2Characters from './characters/vanilla2Characters';
-// import sfo2Characters from './characters/sfo2Characters';
-// import radious2Characters from './characters/radious2Characters';
-import vanilla3Characters from './characters/vanilla3Characters';
+import { vanilla2CharactersMemes } from './characters/vanilla2Characters';
+import { vanilla3CharactersMemes } from './characters/vanilla3Characters';
 import radious3Characters from './characters/radious3Characters';
 import mixu3Characters from './characters/mixu3Characters';
+import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
 import lege3Characters from './characters/lege3Characters';
 import crys3Characters from './characters/crys3Characters';
 import scm3Characters from './characters/scm3Characters';
+import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
 import sfo3Characters from './characters/sfo3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
-// import sfo2CharacterImgs from '../imgs/characters/sfo2/sfo2CharacterImgs';
-// import radious2CharacterImgs from '../imgs/characters/radious2/radious2CharacterImgs';
 import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
 import radious3CharacterImgs from '../imgs/characters/radious3/radious3CharacterImgs';
 import mixu3CharacterImgs from '../imgs/characters/mixu3/mixu3CharacterImgs';
@@ -29,36 +27,16 @@ const gameData: { [key: string]: GameDataInterface } = {
     text: 'Vanilla 2',
     image: gameImages['vanilla2'],
     factions: factions,
-    characters: vanilla2Characters,
+    characters: vanilla2CharactersMemes,
     characterImages: vanilla2CharacterImgs,
     updated: '4 Aug 2022 (1.12.1)',
     category: 'Base',
   },
-  // radious2: {
-  //   text: 'Radious 2',
-  //   image: gameImages['radious2'],
-  //   factions: factions,
-  //   characters: radious2Characters,
-  //   characterImages: radious2CharacterImgs,
-  //   updated: '6 Mar 2022',
-  //   category: 'Overhaul',
-  //   workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1149634389',
-  // },
-  // sfo2: {
-  //   text: 'SFO 2',
-  //   image: gameImages['sfo2'],
-  //   factions: factions,
-  //   characters: sfo2Characters,
-  //   characterImages: sfo2CharacterImgs,
-  //   updated: '31 Jul 2022',
-  //   category: 'Overhaul',
-  //   workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1149625355',
-  // },
   vanilla3: {
     text: 'Vanilla 3',
     image: gameImages['vanilla3'],
     factions: factions,
-    characters: vanilla3Characters,
+    characters: vanilla3CharactersMemes,
     characterImages: vanilla3CharacterImgs,
     updated: '16 Feb 2023 (2.4.0)',
     category: 'Base',
@@ -89,6 +67,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: mixu3Characters,
     characterImages: mixu3CharacterImgs,
+    compilationGroups: mixu3CompGroups,
     updated: '18 Mar 2023',
     category: 'Character Mod Compilation',
     includes: [
@@ -115,24 +94,25 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
+    compilationGroups: scm3CompGroups,
     updated: '24 Mar 2023',
     category: 'Character Mod Compilation',
     includes: [
       'The Jade-Blooded Vampires: Curse of Nongchang (24 Mar 2023)',
-      'Dark Land Warboss (8 Jan 2023)',
-      "Dead's Cult of the Possessed V2 (15 Mar 2023)",
-      "Dead's Jade Army Expansion (2 Feb 2023)",
-      "Dead's Kislev Units (15 Mar 2023)",
-      'Ivan Radinov - Commander of the Gryphon Legion (16 Feb 2023)',
+      'Rotblood Tribe (24 Mar 2023)',
+      'Marienburg: The Merchant Empire (24 Mar 2023)',
       "Sigmar's Heirs, an Empire Overhaul (21 Mar 2023)",
       'Empire Secessionists, Secede! (11 Mar 2023)',
-      'Karanak, Hound of Vengeance (16 Feb 2023)',
-      'Pestilent Brotherhood (24 Mar 2023)',
-      'Rotblood Tribe (24 Mar 2023)',
       'The Gnoblar Horde (22 Nov 2022)',
-      'Clan Verms (24 Mar 2023)',
+      'Karanak, Hound of Vengeance (16 Feb 2023)',
+      'Ivan Radinov - Commander of the Gryphon Legion (16 Feb 2023)',
+      'Dark Land Warboss (8 Jan 2023)',
+      "Dead's Cult of the Possessed (15 Mar 2023)",
+      "Dead's Jade Army Expansion (2 Feb 2023)",
+      "Dead's Kislev Units (15 Mar 2023)",
       'Clan Treecherik (24 Mar 2023)',
-      'Marienburg: The Merchant Empire (24 Mar 2023)',
+      'Clan Verms (24 Mar 2023)',
+      'Pestilent Brotherhood (24 Mar 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',
   },

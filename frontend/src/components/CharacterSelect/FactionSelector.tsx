@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
 import factionImages from '../../imgs/factions/factionImages';
@@ -9,18 +9,57 @@ import shareIcon from '../../imgs/other/icon_button_external_link.webp';
 import TooltipWrapper from '../Planner/TooltipWrapper';
 import { toast } from 'react-hot-toast';
 
-interface PropInterface {
-  containerWidth: string;
-}
-
-const FactionSelector = ({ containerWidth }: PropInterface) => {
+const FactionSelector = () => {
   const { state, dispatch } = useContext(AppContext);
-  const { selectedMod, selectedFaction } = state;
-  const [currentGameFactions, setCurrentGameFactions] = useState(Object.keys(gameData[selectedMod].factions));
+  const { selectedMod, selectedFaction, selectedCompGroups } = state;
+  const [currentModFactions, setCurrentModFactions] = useState(Object.keys(gameData[selectedMod].factions));
 
   useEffect(() => {
-    setCurrentGameFactions(Object.keys(gameData[selectedMod].factions));
-  }, [selectedMod]);
+    if (gameData[selectedMod].compilationGroups !== undefined && selectedCompGroups.length > 0) {
+      const filteredFactionKeys = Object.keys(filterCurrentModFactions());
+      setCurrentModFactions(filteredFactionKeys);
+      if (!filteredFactionKeys.includes(selectedFaction)) {
+        dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: filteredFactionKeys[0] } });
+      }
+    } else {
+      setCurrentModFactions(Object.keys(gameData[selectedMod].factions));
+    }
+  }, [selectedMod, selectedCompGroups]);
+
+  const filterCurrentModFactions = () => {
+    const gameCompGroups = gameData[selectedMod].compilationGroups;
+    if (gameCompGroups !== undefined) {
+      const validFactions: { [key: string]: string } = {};
+      const currentModCharacters = gameData[selectedMod].characters;
+
+      // O(n^3) Lawd He Comin
+      Object.keys(gameCompGroups).forEach((compGroup) => {
+        if (selectedCompGroups.includes(compGroup)) {
+          // Could short circuit the for loop when charKey is found in a faction once, but chars can be in multiple factions so dont
+          Object.keys(gameCompGroups[compGroup]).forEach((charKey) => {
+            Object.keys(currentModCharacters).forEach((factionKey) => {
+              if (
+                currentModCharacters[factionKey].lords[charKey] !== undefined ||
+                currentModCharacters[factionKey].heroes[charKey] !== undefined
+              ) {
+                validFactions[factionKey] = factionKey;
+              }
+            });
+          });
+        }
+      });
+      // Remove invalid factions while preserving manual ordering
+      const cloneFaction = JSON.parse(JSON.stringify(gameData[selectedMod].factions));
+      Object.keys(cloneFaction).forEach((factionKey) => {
+        if (validFactions[factionKey] === undefined) {
+          delete cloneFaction[factionKey];
+        }
+      });
+      return cloneFaction;
+    } else {
+      return gameData[selectedMod].factions;
+    }
+  };
 
   const shareHandler = () => {
     let url = import.meta.env.DEV ? 'http://127.0.0.1:5173/' : 'https://totalwarhammerplanner.com/';
@@ -36,7 +75,7 @@ const FactionSelector = ({ containerWidth }: PropInterface) => {
   };
 
   return (
-    <div className={'justify-self-center px-2 ' + containerWidth}>
+    <div className="justify-self-center px-2 w-full">
       <div className="flex flex-row place-content-center mx-auto">
         <hr className="grow mt-[1.25rem] opacity-50" />
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Factions</h1>
@@ -59,21 +98,21 @@ const FactionSelector = ({ containerWidth }: PropInterface) => {
         </TooltipWrapper>
         <hr className="grow mt-[1.25rem] opacity-50" />
       </div>
-      <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[28rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-60">
+      <ul className="flex flex-row flex-wrap justify-center py-1">
         <TransitionGroup component={null}>
-          {currentGameFactions?.map((factionKey) => {
+          {currentModFactions?.map((factionKey) => {
             if (
-              gameData[selectedMod].characters[`${factionKey}_lords`] === undefined &&
-              gameData[selectedMod].characters[`${factionKey}_heroes`] === undefined
+              gameData[selectedMod].characters[factionKey]?.lords === undefined &&
+              gameData[selectedMod].characters[factionKey]?.lords === undefined
             ) {
               return null;
             }
 
             if (
-              gameData[selectedMod].characters[`${factionKey}_lords`] !== undefined &&
-              Object.keys(gameData[selectedMod].characters[`${factionKey}_lords`]).length === 0 &&
-              gameData[selectedMod].characters[`${factionKey}_heroes`] !== undefined &&
-              Object.keys(gameData[selectedMod].characters[`${factionKey}_heroes`]).length === 0
+              gameData[selectedMod].characters[factionKey]?.lords !== undefined &&
+              Object.keys(gameData[selectedMod].characters[factionKey].lords).length === 0 &&
+              gameData[selectedMod].characters[factionKey]?.heroes !== undefined &&
+              Object.keys(gameData[selectedMod].characters[factionKey].heroes).length === 0
             ) {
               return null;
             }
@@ -92,8 +131,8 @@ const FactionSelector = ({ containerWidth }: PropInterface) => {
               <CSSTransition
                 key={factionKey}
                 classNames={{
-                  enterActive: 'animate__animated animate__faster animate__flipInX',
-                  exitActive: 'animate__animated animate__faster animate__flipOutX',
+                  enterActive: 'animate__animated animate__faster animate__zoomIn',
+                  exitActive: 'hidden',
                 }}
                 timeout={500}
               >

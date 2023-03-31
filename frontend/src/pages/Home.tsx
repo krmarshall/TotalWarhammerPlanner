@@ -5,9 +5,13 @@ import { useParams } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
 import { useMediaQuery } from 'react-responsive';
+import gameData from '../data/gameData';
+import CompilationFilter from '../components/CharacterSelect/CompilationFilter';
+import { CompGroupsInterface } from '../types/interfaces/GameInterface';
 
 const Home = () => {
   const { state, dispatch } = useContext(AppContext);
+  const { selectedMod } = state;
   const { mod, faction } = useParams();
 
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1365 });
@@ -42,10 +46,21 @@ const Home = () => {
   const factionContainerWidth = isTabletOrMobileWidth ? 'w-[100%]' : 'w-[55%] mt-3';
 
   return (
-    <div className="grow mt-1 bg-gray-700 w-full border border-gray-500 rounded-md px-2 pb-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+    <div className="grow mt-1 bg-gray-700 w-full border border-gray-500 rounded-md px-3 pb-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
       <div className="flex flex-row flex-wrap place-content-center">
         <ModSelector containerWidth={modContainerWidth} />
-        <FactionSelector containerWidth={factionContainerWidth} />
+        <div
+          className={
+            'flex flex-col flex-nowrap max-h-[33rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-60 ' +
+            factionContainerWidth
+          }
+        >
+          {gameData[selectedMod].compilationGroups !== undefined && (
+            <CompilationFilter compGroups={gameData[selectedMod].compilationGroups as CompGroupsInterface} />
+          )}
+          <FactionSelector />
+        </div>
+
         <CharacterSelector />
       </div>
     </div>

@@ -6,15 +6,16 @@ import api from '../../api/api';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
 import spellLoreIcons from '../../imgs/spellLoreIcons/spellLoreIcons';
+import { CompGroupsInterface } from '../../types/interfaces/GameInterface';
 import { createEmptyCharacterBuild } from '../../utils/sharedFunctions';
 import CharacterCell from './CharacterCell';
 
 const CharacterSelector = () => {
   const { state, dispatch } = useContext(AppContext);
-  const { selectedMod, selectedFaction } = state;
+  const { selectedMod, selectedFaction, selectedCompGroups } = state;
   const navigate = useNavigate();
 
-  const gameCharacters = gameData[selectedMod as keyof typeof gameData]?.characters;
+  const gameCharacters = gameData[selectedMod]?.characters;
 
   // Grab all the lord and hero keys from the currently selected game characters
   const [lordKeys, setLordKeys] = useState<Array<string>>();
@@ -24,19 +25,22 @@ const CharacterSelector = () => {
   useEffect(() => {
     if (checkFactionUndefined()) {
       const factionCharKeys = Object.keys(gameCharacters);
-      const firstKey = factionCharKeys[0].replace(/_lords|_heroes/, '');
-      dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: firstKey } });
+      const firstFactionKey = factionCharKeys[0];
+      dispatch({ type: AppContextActions.changeFaction, payload: { selectedFaction: firstFactionKey } });
     } else {
-      setLordKeys(Object.keys(gameCharacters[`${selectedFaction}_lords` as keyof typeof gameCharacters]));
-      setHeroKeys(Object.keys(gameCharacters[`${selectedFaction}_heroes` as keyof typeof gameCharacters]));
+      if (gameData[selectedMod].compilationGroups !== undefined && selectedCompGroups.length > 0) {
+        const { filteredLords, filteredHeroes } = filterCharLists();
+        setLordKeys(Object.keys(filteredLords));
+        setHeroKeys(Object.keys(filteredHeroes));
+      } else {
+        setLordKeys(Object.keys(gameCharacters[selectedFaction].lords));
+        setHeroKeys(Object.keys(gameCharacters[selectedFaction].heroes));
+      }
     }
-  }, [selectedMod, selectedFaction]);
+  }, [selectedMod, selectedFaction, selectedCompGroups]);
 
   const checkFactionUndefined = () => {
-    return (
-      gameCharacters[`${selectedFaction}_lords` as keyof typeof gameCharacters] === undefined ||
-      gameCharacters[`${selectedFaction}_heroes` as keyof typeof gameCharacters] === undefined
-    );
+    return gameCharacters[selectedFaction] === undefined;
   };
 
   const handleCharacterSelect = (event: React.MouseEvent, characterKey: string) => {
@@ -61,6 +65,52 @@ const CharacterSelector = () => {
     }
   };
 
+  const invertCompGroups = (compGroups: CompGroupsInterface | undefined) => {
+    if (compGroups !== undefined) {
+      const invertedMap: { [key: string]: string } = {};
+      Object.keys(compGroups).forEach((groupKey) => {
+        Object.keys(compGroups[groupKey]).forEach((charKey) => {
+          invertedMap[charKey] = groupKey;
+        });
+      });
+      return invertedMap;
+    } else {
+      return undefined;
+    }
+  };
+
+  const compGroupsCharMap = invertCompGroups(gameData[selectedMod].compilationGroups);
+
+  const filterCharLists = () => {
+    const filteredLords: {
+      [key: string]: {
+        name: string;
+        spellLore?: string | undefined;
+      };
+    } = {};
+    const filteredHeroes: {
+      [key: string]: {
+        name: string;
+        spellLore?: string | undefined;
+      };
+    } = {};
+
+    Object.keys(gameCharacters[selectedFaction].lords).forEach((lordKey) => {
+      const lordMod = compGroupsCharMap?.[lordKey];
+      if (lordMod !== undefined && selectedCompGroups.includes(lordMod)) {
+        filteredLords[lordKey] = gameCharacters[selectedFaction].lords[lordKey];
+      }
+    });
+    Object.keys(gameCharacters[selectedFaction].heroes).forEach((heroKey) => {
+      const heroMod = compGroupsCharMap?.[heroKey];
+      if (heroMod !== undefined && selectedCompGroups.includes(heroMod)) {
+        filteredHeroes[heroKey] = gameCharacters[selectedFaction].heroes[heroKey];
+      }
+    });
+
+    return { filteredLords, filteredHeroes };
+  };
+
   return (
     <Fragment>
       {lordKeys !== undefined && lordKeys.length > 0 && (
@@ -76,8 +126,9 @@ const CharacterSelector = () => {
                 if (checkFactionUndefined()) {
                   return;
                 }
-                const lord = gameCharacters[`${selectedFaction}_lords`][lordKey];
+                const lord = gameCharacters[selectedFaction].lords[lordKey];
                 const lordImage = gameData[selectedMod]?.characterImages[lordKey];
+                const lordMod = compGroupsCharMap?.[lordKey];
 
                 let spellLore = undefined;
                 if (lord?.spellLore !== undefined) {
@@ -87,7 +138,7 @@ const CharacterSelector = () => {
                   <CSSTransition
                     key={lordKey}
                     classNames={{
-                      enterActive: 'animate__animated animate__faster animate__flipInX',
+                      enterActive: 'animate__animated animate__faster animate__zoomIn',
                       exitActive: 'hidden',
                     }}
                     timeout={500}
@@ -98,6 +149,7 @@ const CharacterSelector = () => {
                       char={lord}
                       charImage={lordImage}
                       spellLore={spellLore}
+                      charMod={lordMod}
                       handleCharacterSelect={handleCharacterSelect}
                     />
                   </CSSTransition>
@@ -120,8 +172,10 @@ const CharacterSelector = () => {
                 if (checkFactionUndefined()) {
                   return;
                 }
-                const hero = gameCharacters[`${selectedFaction}_heroes`][heroKey];
+                const hero = gameCharacters[selectedFaction].heroes[heroKey];
                 const heroImage = gameData[selectedMod]?.characterImages[heroKey];
+                const heroMod = compGroupsCharMap?.[heroKey];
+
                 let spellLore = undefined;
                 if (hero?.spellLore !== undefined) {
                   spellLore = spellLoreIcons[hero.spellLore as keyof typeof spellLoreIcons];
@@ -130,7 +184,7 @@ const CharacterSelector = () => {
                   <CSSTransition
                     key={heroKey}
                     classNames={{
-                      enterActive: 'animate__animated animate__faster animate__flipInX',
+                      enterActive: 'animate__animated animate__faster animate__zoomIn',
                       exitActive: 'hidden',
                     }}
                     timeout={500}
@@ -141,6 +195,7 @@ const CharacterSelector = () => {
                       char={hero}
                       charImage={heroImage}
                       spellLore={spellLore}
+                      charMod={heroMod}
                       handleCharacterSelect={handleCharacterSelect}
                     />
                   </CSSTransition>

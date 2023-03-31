@@ -14,10 +14,11 @@ interface CharacterCellProps {
     image: string;
     shadow: string;
   };
+  charMod?: string;
   handleCharacterSelect: CallableFunction;
 }
 
-const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSelect }: CharacterCellProps) => {
+const CharacterCell = ({ charKey, char, charImage, spellLore, charMod, handleCharacterSelect }: CharacterCellProps) => {
   const { state } = useContext(AppContext);
   const { selectedMod, selectedFaction } = state;
   return (
@@ -47,6 +48,9 @@ const CharacterCell = ({ charKey, char, charImage, spellLore, handleCharacterSel
             />
           )}
         </div>
+        {charMod !== undefined && (
+          <h3 className="w-32 mx-auto text-base text-center text-shadow text-gray-200">{charMod}</h3>
+        )}
       </a>
     </li>
   );

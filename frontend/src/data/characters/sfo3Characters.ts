@@ -1,75 +1,109 @@
 import { SpellLores } from '../../types/interfaces/GameInterface';
-import vanilla3Characters from './vanilla3Characters';
+import { vanilla3Characters } from './vanilla3Characters';
 
 const sfo3Characters = {
   ...vanilla3Characters,
 
-  tmb_tomb_kings_lords: {
-    ...vanilla3Characters.tmb_tomb_kings_lords,
-    tmb_cha_arch_liche: {
-      name: 'Liche High Priest',
-      spellLore: SpellLores.mixed,
+  tmb_tomb_kings: {
+    lords: {
+      ...vanilla3Characters.tmb_tomb_kings.lords,
+      tmb_cha_arch_liche: {
+        name: 'Liche High Priest',
+        spellLore: SpellLores.mixed,
+      },
+    },
+    heroes: { ...vanilla3Characters.tmb_tomb_kings.heroes },
+  },
+
+  def_dark_elves: {
+    lords: { ...vanilla3Characters.def_dark_elves.lords },
+    heroes: {
+      ...vanilla3Characters.def_dark_elves.heroes,
+      def_fleetmaster: {
+        name: 'Black Ark Reaver',
+      },
     },
   },
-  def_dark_elves_heroes: {
-    ...vanilla3Characters.def_dark_elves_heroes,
-    def_fleetmaster: {
-      name: 'Black Ark Reaver',
+
+  skv_skaven: {
+    lords: {
+      ...vanilla3Characters.skv_skaven.lords,
+      skv_cha_rik: {
+        name: 'Rikcruk Sliceblade',
+      },
+    },
+    heroes: {
+      ...vanilla3Characters.skv_skaven.heroes,
+      skv_cha_bloodtail: {
+        name: 'Fangleader',
+      },
     },
   },
-  skv_skaven_lords: {
-    ...vanilla3Characters.skv_skaven_lords,
-    skv_cha_rik: {
-      name: 'Rikcruk Sliceblade???',
+
+  wef_wood_elves: {
+    lords: { ...vanilla3Characters.wef_wood_elves.lords },
+    heroes: {
+      ...vanilla3Characters.wef_wood_elves.heroes,
+      wef_cha_shadowdancer: {
+        name: 'Shadowdancer',
+      },
     },
   },
-  skv_skaven_heroes: {
-    ...vanilla3Characters.skv_skaven_heroes,
-    skv_cha_bloodtail: {
-      name: 'Fangleader',
+
+  nor_norsca: {
+    lords: {
+      ...vanilla3Characters.nor_norsca.lords,
+      nor_cha_hunter: {
+        name: 'Marauder Pathfinder',
+      },
+      nor_cha_fimir: {
+        name: 'Fimir Meargh',
+        spellLore: SpellLores.mixed,
+      },
+    },
+    heroes: { ...vanilla3Characters.nor_norsca.heroes },
+  },
+
+  brt_bretonnia: {
+    lords: { ...vanilla3Characters.brt_bretonnia.lords },
+    heroes: {
+      ...vanilla3Characters.brt_bretonnia.heroes,
+      brt_cha_lost: {
+        name: 'Son of Bretonnia',
+        spellLore: SpellLores.mixed,
+      },
     },
   },
-  wef_wood_elves_heroes: {
-    ...vanilla3Characters.wef_wood_elves_heroes,
-    wef_cha_shadowdancer: {
-      name: 'Shadowdancer',
+
+  dwf_dwarfs: {
+    lords: { ...vanilla3Characters.dwf_dwarfs.lords },
+    heroes: {
+      ...vanilla3Characters.dwf_dwarfs.heroes,
+      dwf_cha_slayer: {
+        name: 'Daemon Slayer',
+      },
     },
   },
-  nor_norsca_lords: {
-    ...vanilla3Characters.nor_norsca_lords,
-    nor_cha_hunter: {
-      name: 'Marauder Pathfinder',
+
+  emp_empire: {
+    lords: {
+      ...vanilla3Characters.emp_empire.lords,
+      emp_cha_grandmaster: {
+        name: 'Grand Master',
+      },
     },
-    nor_cha_fimir: {
-      name: 'Fimir Meargh',
-      spellLore: SpellLores.mixed,
-    },
+    heroes: { ...vanilla3Characters.emp_empire.heroes },
   },
-  brt_bretonnia_heroes: {
-    ...vanilla3Characters.brt_bretonnia_heroes,
-    brt_cha_lost: {
-      name: 'Son of Bretonnia',
-      spellLore: SpellLores.mixed,
+
+  grn_greenskins: {
+    lords: {
+      ...vanilla3Characters.grn_greenskins.lords,
+      grn_cha_savageboss: {
+        name: 'Savage Orc Warboss',
+        spellLore: SpellLores.bigWagh,
+      },
     },
-  },
-  dwf_dwarfs_heroes: {
-    ...vanilla3Characters.dwf_dwarfs_heroes,
-    dwf_cha_slayer: {
-      name: 'Daemon Slayer',
-    },
-  },
-  emp_empire_lords: {
-    ...vanilla3Characters.emp_empire_lords,
-    emp_cha_grandmaster: {
-      name: 'Grand Master',
-    },
-  },
-  grn_greenskins_lords: {
-    ...vanilla3Characters.grn_greenskins_lords,
-    grn_cha_savageboss: {
-      name: 'Savage Orc Warboss',
-      spellLore: SpellLores.bigWagh,
-    },
+    heroes: { ...vanilla3Characters.grn_greenskins.heroes },
   },
 };
 

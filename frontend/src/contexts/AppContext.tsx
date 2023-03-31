@@ -11,6 +11,7 @@ interface ContextStateInterface {
   characterBuild: BuildInterface | null;
   techData: TechSetInterface | null;
   localStorageBuildKeys: Array<string>;
+  selectedCompGroups: Array<string>;
 }
 
 const initialState: ContextStateInterface = {
@@ -21,6 +22,7 @@ const initialState: ContextStateInterface = {
   characterBuild: null,
   techData: null,
   localStorageBuildKeys: [],
+  selectedCompGroups: [],
 };
 
 interface ActionInterface {
@@ -33,6 +35,7 @@ interface ActionInterface {
     characterBuild?: BuildInterface | null;
     techData?: TechSetInterface | null;
     localStorageBuildKeys?: Array<string>;
+    selectedCompGroups?: Array<string>;
   };
 }
 
@@ -46,6 +49,7 @@ enum AppContextActions {
   changeTechData = 'changeTechData',
   changeLocalStorageBuildKeys = 'changeLocalStorageBuildKeys',
   changeModFaction = 'changeModFaction',
+  changeSelectedCompGroups = 'changeSelectedCompGroups',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -56,6 +60,7 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.selectedMod = action.payload.selectedMod;
+      newState.selectedCompGroups = [];
       return newState;
     }
 
@@ -84,6 +89,7 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.selectedMod = action.payload.selectedMod;
+      newState.selectedCompGroups = [];
 
       if (action.payload.selectedFaction === undefined) {
         return state;
@@ -125,6 +131,15 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.localStorageBuildKeys = action.payload.localStorageBuildKeys;
+      return newState;
+    }
+
+    case AppContextActions.changeSelectedCompGroups: {
+      const newState = { ...state };
+      if (action.payload.selectedCompGroups === undefined) {
+        return state;
+      }
+      newState.selectedCompGroups = action.payload.selectedCompGroups;
       return newState;
     }
 

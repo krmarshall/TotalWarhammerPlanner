@@ -17,13 +17,18 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
   const gameKeys = Object.keys(gameData);
 
   return (
-    <div className={'justify-self-center px-2 ' + containerWidth}>
+    <div
+      className={
+        'justify-self-center px-2 max-h-[33rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 ' +
+        containerWidth
+      }
+    >
       <div className="flex flex-row place-content-center">
         <hr className="grow mt-[1.25rem] opacity-50" />
         <h1 className="w-max text-center text-4xl mx-2 text-gray-200 text-shadow">Mods</h1>
         <hr className="grow mt-[1.25rem] opacity-50" />
       </div>
-      <ul className="flex flex-row flex-wrap justify-center py-1 max-h-[28rem] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+      <ul className="flex flex-row flex-wrap justify-center py-1">
         <TransitionGroup component={null}>
           {gameKeys.map((gameKey) => {
             // Would like to break this out as its own component, but transition group get really weird about it
@@ -63,7 +68,7 @@ const ModSelector = ({ containerWidth }: PropInterface) => {
               <CSSTransition
                 key={gameKey}
                 classNames={{
-                  enterActive: 'animate__animated animate__faster animate__flipInX',
+                  enterActive: 'animate__animated animate__faster animate__zoomIn',
                   exitActive: 'hidden',
                 }}
                 timeout={500}
