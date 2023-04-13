@@ -22,6 +22,7 @@ import vampireCoast from './vampireCoast.webp';
 import vampireCounts from './vampireCounts.webp';
 import warriorsOfChaos from './warriorsOfChaos.webp';
 import woodElves from './woodElves.webp';
+import chorfs from './chorfs.webp';
 
 // Mod Factions
 import gnoblars from './gnoblars.webp';
@@ -62,6 +63,7 @@ const factionImages = {
   emp_empire: empire,
   grn_greenskins: greenskins,
   vmp_vampire_counts: vampireCounts,
+  chd_chaos_dwarfs: chorfs,
 
   gnb_gnoblars: gnoblars,
   jbv_jade_vampires: jadeVampires,

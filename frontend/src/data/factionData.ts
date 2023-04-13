@@ -1,6 +1,7 @@
 const factions = {
   bst_beastmen: 'Beastmen',
   brt_bretonnia: 'Brettonia',
+  chd_chaos_dwarfs: 'Chaos Dwarfs',
   dae_daemons: 'Daemons of Chaos',
   def_dark_elves: 'Dark Elves',
   dwf_dwarfs: 'Dwarfs',

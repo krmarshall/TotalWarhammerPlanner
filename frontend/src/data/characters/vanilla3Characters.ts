@@ -4,6 +4,91 @@ import { SpellLores } from '../../types/interfaces/GameInterface';
 const vanilla3Characters = {
   ...vanilla2Characters,
 
+  emp_empire: {
+    lords: {
+      emp_balthasar: {
+        name: 'Balthasar Gelt',
+        spellLore: SpellLores.metal,
+      },
+      emp_karl_franz: {
+        name: 'Karl Franz',
+      },
+      markus_wulfhart: {
+        name: 'Markus Wulfhart',
+      },
+      emp_volkmar: {
+        name: 'Volkmar the Grim',
+      },
+      emp_boris_todbringer: {
+        name: 'Boris Todbringer',
+      },
+      emp_arch_lector: {
+        name: 'Arch Lector',
+      },
+      emp_general: {
+        name: 'General of the Empire',
+      },
+      huntsmarshal: {
+        name: 'Huntsman General',
+      },
+    },
+    heroes: {
+      ksl_ulrika: {
+        name: 'Ulrika Magdova',
+        spellLore: SpellLores.shadows,
+      },
+      emp_hunter_doctor_hertwig_van_hal: {
+        name: 'Hertwig Van Hal',
+      },
+      emp_hunter_jorek_grimm_0: {
+        name: 'Jorek Grimm',
+      },
+      emp_hunter_kalara_of_wydrioth_0: {
+        name: 'Kalara of Wydrioth',
+      },
+      emp_hunter_rodrik_l_anguille_0: {
+        name: "Rodrik L'Anguille",
+      },
+      emp_amber_wizard: {
+        name: 'Amber Wizard',
+        spellLore: SpellLores.beasts,
+      },
+      emp_amethyst_wizard: {
+        name: 'Amethyst Wizard',
+        spellLore: SpellLores.death,
+      },
+      emp_bright_wizard: {
+        name: 'Bright Wizard',
+        spellLore: SpellLores.fire,
+      },
+      emp_celestial_wizard: {
+        name: 'Celestial Wizard',
+        spellLore: SpellLores.heavens,
+      },
+      emp_captain: {
+        name: 'Empire Captain',
+      },
+      grey_wizard: {
+        name: 'Grey Wizard',
+        spellLore: SpellLores.shadows,
+      },
+      jade_wizard: {
+        name: 'Jade Wizard',
+        spellLore: SpellLores.life,
+      },
+      emp_light_wizard: {
+        name: 'Light Wizard',
+        spellLore: SpellLores.light,
+      },
+      emp_warrior_priest: {
+        name: 'Warrior Priest',
+      },
+      emp_witch_hunter: {
+        name: 'Witch Hunter',
+      },
+    },
+  },
+
   // Chieftain spelled properly in 3
   nor_norsca: {
     lords: {
@@ -207,6 +292,71 @@ const vanilla3Characters = {
   //   },
   // },
 
+  chd_chaos_dwarfs: {
+    lords: {
+      chd_astragoth: {
+        name: 'Astragoth Ironhand',
+        spellLore: SpellLores.mixed,
+      },
+      chd_drazhoath: {
+        name: 'Drazhoath the Ashen',
+        spellLore: SpellLores.hashut,
+      },
+      chd_zhatan: {
+        name: 'Zhatan the Black',
+      },
+      chd_lord_convoy_overseer: {
+        name: 'Convoy Overseer',
+      },
+      chd_overseer: {
+        name: 'Overseer',
+      },
+      chd_sorcerer_prophet_death: {
+        name: 'Sorcerer Prophet (Death)',
+        spellLore: SpellLores.death,
+      },
+      chd_sorcerer_prophet_fire: {
+        name: 'Sorcerer Prophet (Fire)',
+        spellLore: SpellLores.fire,
+      },
+      chd_sorcerer_prophet_hashut: {
+        name: 'Sorcerer Prophet (Hashut)',
+        spellLore: SpellLores.hashut,
+      },
+      chd_sorcerer_prophet_metal: {
+        name: 'Sorcerer Prophet (Metal)',
+        spellLore: SpellLores.metal,
+      },
+    },
+    heroes: {
+      chd_gorduz_backstabber: {
+        name: 'Gorduz Backstabber',
+      },
+      chd_bull_centaur_taurruk: {
+        name: "Bull Centaur Taur'ruk",
+      },
+      chd_daemonsmith_sorcerer_death: {
+        name: 'Daemonsmith Sorcerer (Death)',
+        spellLore: SpellLores.death,
+      },
+      chd_daemonsmith_sorcerer_fire: {
+        name: 'Daemonsmith Sorcerer (Fire)',
+        spellLore: SpellLores.fire,
+      },
+      chd_daemonsmith_sorcerer_hashut: {
+        name: 'Daemonsmith Sorcerer (Hashut)',
+        spellLore: SpellLores.hashut,
+      },
+      chd_daemonsmith_sorcerer_metal: {
+        name: 'Daemonsmith Sorcerer (Metal)',
+        spellLore: SpellLores.metal,
+      },
+      chd_infernal_castellan: {
+        name: 'Infernal Castellan',
+      },
+    },
+  },
+
   cth_cathay: {
     lords: {
       cth_miao_ying: {
@@ -403,6 +553,10 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      ksl_ulrika: {
+        name: 'Ulrika Magdova',
+        spellLore: SpellLores.shadows,
+      },
       ksl_frost_maiden_ice: {
         name: 'Frost Maiden (Ice)',
         spellLore: SpellLores.ice,

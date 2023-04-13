@@ -19,6 +19,8 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 ## To Do
 
 - Work on overall page style
+- projectiles_tables spawned_vortex
+- phase remove_magical
 
 ## Adding A Mod
 

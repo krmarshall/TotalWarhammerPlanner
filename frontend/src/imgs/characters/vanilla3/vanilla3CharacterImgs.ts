@@ -81,6 +81,16 @@ import chsSorcLordNur from './dae_nur_chaos_sorcerer_lord_campaign_01_0.webp';
 import chsSorcLordTze from './dae_tze_chaos_sorcerer_lord_campaign_01_0.webp';
 import chsSorcSla from './dae_sla_chaos_sorcerer_campaign_01_0.webp';
 import chsSorcTze from './dae_tze_chaos_sorcerer_campaign_01_0.webp';
+import chd_astragoth_ironhand from './chd_astragoth_ironhand_0.webp';
+import chd_bull_centaur_taurruk from './chd_bull_centaur_taurruk_campaign_01_0.webp';
+import chd_daemonsmith_sorcerer from './chd_daemonsmith_sorcerer_campaign_01_0.webp';
+import chd_drazhoath_the_ashen from './chd_drazhoath_the_ashen_0.webp';
+import chd_gorduz_backstabber from './chd_gorduz_backstabber_0.webp';
+import chd_infernal_castellan from './chd_infernal_castellan_campaign_01_0.webp';
+import chd_overseer from './chd_overseer_campaign_01_0.webp';
+import chd_sorcerer_prophet from './chd_sorcerer_prophet_campaign_01_0.webp';
+import chd_zhatan_the_black from './chd_zhatan_the_black_0.webp';
+import neu_ulrika from './neu_ulrika_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
@@ -216,6 +226,24 @@ const vanilla3CharacterImgs = {
   tze_kairos: kairos,
 
   tze_cultist: cultistOfTzeentch,
+
+  chd_astragoth: chd_astragoth_ironhand,
+  chd_bull_centaur_taurruk: chd_bull_centaur_taurruk,
+  chd_daemonsmith_sorcerer_death: chd_daemonsmith_sorcerer,
+  chd_daemonsmith_sorcerer_fire: chd_daemonsmith_sorcerer,
+  chd_daemonsmith_sorcerer_hashut: chd_daemonsmith_sorcerer,
+  chd_daemonsmith_sorcerer_metal: chd_daemonsmith_sorcerer,
+  chd_drazhoath: chd_drazhoath_the_ashen,
+  chd_gorduz_backstabber: chd_gorduz_backstabber,
+  chd_infernal_castellan: chd_infernal_castellan,
+  chd_overseer: chd_overseer,
+  chd_lord_convoy_overseer: chd_overseer,
+  chd_sorcerer_prophet_death: chd_sorcerer_prophet,
+  chd_sorcerer_prophet_fire: chd_sorcerer_prophet,
+  chd_sorcerer_prophet_hashut: chd_sorcerer_prophet,
+  chd_sorcerer_prophet_metal: chd_sorcerer_prophet,
+  chd_zhatan: chd_zhatan_the_black,
+  ksl_ulrika: neu_ulrika,
 };
 
 export default vanilla3CharacterImgs;
