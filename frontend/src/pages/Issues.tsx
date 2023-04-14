@@ -81,7 +81,12 @@ const Issues = () => {
             indicating such. Most prevalent on the last skill in characters blue lines.
           </li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
-            <li>Daemon Prince Reinforcer skill has a placeholder skill icon</li>
+            <li>
+              3.0.0 Specific features have yet to be implemented (randomized ability effects, remove magic attacks
+              flag), the data parser is currently being rewritten to be cleaner and more extensible, they will be added
+              when this rewrite is done.
+            </li>
+            <li>Chorf tech tree is pretty borked.</li>
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
             <li>Some poorly scaled skill icons depending on file path, mostly affects mods</li>
 

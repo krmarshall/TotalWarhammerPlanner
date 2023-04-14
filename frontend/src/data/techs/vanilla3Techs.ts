@@ -3,6 +3,7 @@ import factionImages from '../../imgs/factions/factionImages';
 const vanilla3Techs = {
   bst_mil_rework: { name: 'Beastmen', image: factionImages.bst_beastmen },
   brt_mil: { name: 'Brettonia', image: factionImages.brt_bretonnia },
+  chd_mil: { name: 'Chaos Dwarfs', image: factionImages.chd_chaos_dwarfs },
   def_mil: { name: 'Dark Elves', image: factionImages.def_dark_elves },
   dwf_mil: { name: 'Dwarfs', image: factionImages.dwf_dwarfs },
   emp_civ_reworkd: { name: 'The Empire', image: factionImages.emp_empire },
