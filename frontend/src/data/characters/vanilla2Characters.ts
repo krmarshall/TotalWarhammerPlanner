@@ -1118,6 +1118,6 @@ vanilla2CharactersMemes.bst_beastmen.lords.bst_taurox.name = 'Taurox Wants Wheat
 vanilla2CharactersMemes.emp_empire.lords.emp_karl_franz.name = 'Karl Franz - Prince and Emperor';
 vanilla2CharactersMemes.emp_empire.lords.emp_boris_todbringer.name = 'Boris Bodbringer';
 vanilla2CharactersMemes.vmp_vampire_counts.lords.vmp_mannfred.name = 'Mannlet von Carstein';
-vanilla2CharactersMemes.vmp_vampire_counts.lords.vmp_vlad_von_carstein.name = 'Mannlet von Carstein';
+vanilla2CharactersMemes.vmp_vampire_counts.lords.vmp_vlad_von_carstein.name = 'Chad von Carstein';
 
 export { vanilla2Characters, vanilla2CharactersMemes };

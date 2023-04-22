@@ -82,9 +82,9 @@ const Issues = () => {
           </li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
             <li>
-              3.0.0 Specific features have yet to be implemented (randomized ability effects, remove magic attacks
-              flag), the data parser is currently being rewritten to be cleaner and more extensible, they will be added
-              when this rewrite is done.
+              3.0.0 Specific features have yet to be implemented (randomized ability effects, remove magic attacks flag,
+              projectile vortices), the data parser is currently being rewritten to be cleaner and more extensible, they
+              will be added when this rewrite is done.
             </li>
             <li>Chorf tech tree is pretty borked.</li>
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>

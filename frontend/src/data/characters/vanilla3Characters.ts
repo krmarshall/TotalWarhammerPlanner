@@ -922,9 +922,9 @@ const vanilla3CharactersMemes = JSON.parse(JSON.stringify(vanilla3Characters));
 vanilla3CharactersMemes.bst_beastmen.lords.bst_taurox.name = 'Taurox Wants Wheaties';
 vanilla3CharactersMemes.emp_empire.lords.emp_karl_franz.name = 'Karl Franz - Prince and Emperor';
 vanilla3CharactersMemes.emp_empire.lords.emp_boris_todbringer.name = 'Boris Bodbringer';
-vanilla3CharactersMemes.vmp_vampire_counts.lords.vmp_mannfred = 'Mannlet von Carstein';
-vanilla3CharactersMemes.vmp_vampire_counts.lords.vmp_vlad_von_carstein = 'Chad von Carstein';
-vanilla3CharactersMemes.vmp_vampire_counts.heroes.vmp_vlad_von_carstein_hero = 'Chad von Carstein (Hero)';
+vanilla3CharactersMemes.vmp_vampire_counts.lords.vmp_mannfred.name = 'Mannlet von Carstein';
+vanilla3CharactersMemes.vmp_vampire_counts.lords.vmp_vlad_von_carstein.name = 'Chad von Carstein';
+vanilla3CharactersMemes.vmp_vampire_counts.heroes.vmp_vlad_von_carstein_hero.name = 'Chad von Carstein (Hero)';
 vanilla3CharactersMemes.chs_chaos.lords.nur_festus.name = 'Festus the Chinlord';
 
 export { vanilla3Characters, vanilla3CharactersMemes };
