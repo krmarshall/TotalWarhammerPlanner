@@ -15,9 +15,12 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
 
   const srcList = [
     // `/imgs/${abilityImagePath}.webp`, // Effective placement from below, avoids 404s
-    `/imgs/${skillEffect.icon}.webp`,
+    // `/imgs/${skillEffect.icon}.webp`, // Effective placement from below, avoids 404s
     `/imgs/vanilla3/campaign_ui/effect_bundles/0_placeholder_effect_bundle.webp`,
   ];
+  if (skillEffect.icon !== '') {
+    srcList.unshift(`/imgs/${skillEffect.icon}.webp`);
+  }
 
   const abilityImagePath = skillEffect.related_abilities?.[0].unit_ability.icon_name;
   if (abilityImagePath !== undefined) {
