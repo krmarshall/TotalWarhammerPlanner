@@ -19,10 +19,6 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 ## To Do
 
 - Work on overall page style
-- effect_bundle icon check on data parser side
-- technology images check on data parser side
-- projectiles_tables spawned_vortex
-- phase remove_magical
 
 ## Adding A Mod
 

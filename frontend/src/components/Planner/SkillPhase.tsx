@@ -13,6 +13,16 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
   const { selectedMod } = state;
   const type = phase.effect_type === 'positive' ? 'Buff' : 'Debuff';
   const imbueBoth = phase.imbue_magical && phase.imbue_ignition ? true : false;
+  let targets = '';
+  if (phase.target_self) targets += 'Self';
+  if (phase.target_friends) {
+    if (targets.length !== 0) targets += ', ';
+    targets += 'Allies';
+  }
+  if (phase.target_enemies) {
+    if (targets.length !== 0) targets += ', ';
+    targets += 'Enemies';
+  }
 
   const selectedGame = selectedMod.includes('2') ? '2' : '3';
   return (
@@ -27,6 +37,12 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
         <div className="flex flex-row">
           <h5 className="text-left w-24">Effect Type:</h5>
           <p className="my-auto ml-1">{type}</p>
+        </div>
+      )}
+      {targets.length !== 0 && (
+        <div className="flex flex-row">
+          <h5 className="text-left w-24">Targets:</h5>
+          <p className="my-auto ml-1">{targets}</p>
         </div>
       )}
       {phase.recharge_time !== undefined && phase.recharge_time > 0 && (
@@ -175,6 +191,31 @@ const SkillPhase = ({ phase }: SkillPhaseProps) => {
         <div className="flex flex-row">
           <h5 className="text-left w-24">Can&apos;t Move:</h5>
           <p className="my-auto ml-1">Yes</p>
+        </div>
+      )}
+      {phase.unbreakable && (
+        <div className="flex flex-row">
+          <img
+            src="/imgs/vanilla3/skins/default/attribute_unbreakable.webp"
+            className="h-5 w-5 my-auto mr-1"
+            alt="unbreakable"
+            width="24"
+            height="24"
+          />
+          <h5 className="text-left w-24">Unbreakable:</h5>
+          <p className="my-auto ml-1">Yes</p>
+        </div>
+      )}
+      {phase.remove_magical && (
+        <div className="flex flex-row">
+          <h5 className="text-left w-24">Removes Magic Attacks:</h5>
+          <p className="my-auto ml-1">Yes</p>
+        </div>
+      )}
+      {phase.spread_radius && (
+        <div className="flex flex-row">
+          <h5 className="text-left w-24">Spread Radius:</h5>
+          <p className="my-auto ml-1">{phase.spread_radius}m</p>
         </div>
       )}
       {phase.stat_effects && (

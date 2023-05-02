@@ -107,9 +107,9 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     if (thisSkillsCurrentPoints === 0) {
       newCharacterBuild?.selectedSkills.push(skill.character_skill_key);
       newCharacterBuild?.selectedSkills.push(skill.key);
-      if (skill?.levels?.[0].blocks_character_skill_key) {
-        skill?.levels?.[0].blocks_character_skill_key.forEach((blockedSkill) => {
-          newCharacterBuild?.blockedSkills.push(blockedSkill);
+      if (skill?.levels?.[0].blocks_skill_node_keys) {
+        skill?.levels?.[0].blocks_skill_node_keys.forEach((blockedNode) => {
+          newCharacterBuild?.blockedSkills.push(blockedNode);
         });
       }
     }
@@ -156,9 +156,9 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       let blocksSkill = false;
       const blockedSkillKeys: Array<string> = [];
       skill.levels?.forEach((level) => {
-        if (level.blocks_character_skill_key) {
+        if (level.blocks_skill_node_keys) {
           blocksSkill = true;
-          blockedSkillKeys.push(...level.blocks_character_skill_key);
+          blockedSkillKeys.push(...level.blocks_skill_node_keys);
         }
       });
       if (blocksSkill) {
@@ -257,7 +257,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     }
   }
 
-  const fontSize = setFontSize(skill.name);
+  const fontSize = setFontSize(skill.localised_name);
 
   const findAbilityImage = (includePassives: boolean) => {
     if (skill.levels?.[0].effects === undefined) {
@@ -357,7 +357,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
             <div className="flex flex-col justify-center">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
-                {trimString(skill.name)}
+                {trimString(skill.localised_name)}
               </h2>
             </div>
           </div>

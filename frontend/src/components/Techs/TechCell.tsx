@@ -23,19 +23,11 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
   const [ctrCounter, setCtrCounter] = useState(0);
   const updateXarrow = useXarrow();
 
-  const fontSize = setFontSize(tech.technology.name);
+  const fontSize = setFontSize(tech.technology.onscreen_name);
 
   const imgPadding = selectedModTech.includes('2') ? ' p-0 scale-110' : ' p-1.5';
 
-  const vanillaGamePath = selectedModTech.includes('2') ? 'vanilla2' : 'vanilla3';
   const imgPath = tech.technology.icon_name + '.webp';
-  const srcList = [
-    `/imgs/${selectedModTech}/campaign_ui/technologies/${imgPath}`,
-    `/imgs/${selectedModTech}/campaign_ui/technologies/${imgPath.toLowerCase()}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/technologies/${imgPath}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/technologies/${imgPath.toLowerCase()}`,
-    `/imgs/${vanillaGamePath}/campaign_ui/skills/0_placeholder_skill.webp`,
-  ];
   return (
     <td
       className={'flex flex-row w-max h-auto py-2 pr-6' + borderClass}
@@ -77,7 +69,7 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
               />
             )}
             <ReactImage
-              srcList={srcList}
+              srcList={[`/imgs/${imgPath}`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`]}
               className={'w-[4.5rem] h-[4.5rem] my-auto drop-shadow-lg' + imgPadding}
               alt="techIcon"
               w="64"
@@ -85,7 +77,7 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
             />
             <div className="flex flex-col justify-center mr-4">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
-                {trimString(tech.technology.name)}
+                {trimString(tech.technology.onscreen_name)}
               </h2>
             </div>
           </div>

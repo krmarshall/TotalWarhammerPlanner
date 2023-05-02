@@ -47,7 +47,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
   if (skill?.parent_required) {
     const parentLocation = findSkill(characterData, characterBuild, skill?.parent_required[0]);
     parentName = characterData?.skillTree[parentLocation?.yIndex as number]?.[parentLocation?.xIndex as number]
-      ?.name as string;
+      ?.localised_name as string;
   }
 
   const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
@@ -56,9 +56,11 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
     <span className="text-center flex flex-row">
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          <h3 className="text-gray-50 text-2xl">{skill?.name}</h3>
-          {skill?.description.trim() && !isMobile && (
-            <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">{skill?.description.trim()}</h4>
+          <h3 className="text-gray-50 text-2xl">{skill?.localised_name}</h3>
+          {skill?.localised_description.trim() && !isMobile && (
+            <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
+              {skill?.localised_description.trim()}
+            </h4>
           )}
           {skill?.levels?.[skillPoints]?.auto_unlock_at_rank && (
             <p className="text-yellow-300 text-lg">

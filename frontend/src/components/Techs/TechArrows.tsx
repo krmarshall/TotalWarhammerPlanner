@@ -8,7 +8,7 @@ const TechArrows = () => {
   return (
     <div>
       {techData?.node_links.map((link, index) => {
-        if (link.visible || link.visible === undefined) {
+        if (link.visible_in_ui || link.visible_in_ui === undefined) {
           return (
             <Xarrow
               key={index}

@@ -45,10 +45,10 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter }: PropInterface) => {
     <span className="text-center flex flex-row">
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          <h3 className="text-gray-50 text-2xl">{tech?.technology.name}</h3>
-          {tech?.technology?.description?.trim() && !isMobile && (
+          <h3 className="text-gray-50 text-2xl">{tech?.technology.onscreen_name}</h3>
+          {tech?.technology?.short_description?.trim() && !isMobile && (
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
-              {tech?.technology?.description?.trim()}
+              {tech?.technology?.short_description?.trim()}
             </h4>
           )}
           {tech?.technology?.required_buildings !== undefined && tech?.technology?.required_buildings?.length > 0 && (

@@ -12,6 +12,8 @@ interface ContextStateInterface {
   techData: TechSetInterface | null;
   localStorageBuildKeys: Array<string>;
   selectedCompGroups: Array<string>;
+  showedHomeToast: boolean;
+  showedTechToast: boolean;
 }
 
 const initialState: ContextStateInterface = {
@@ -23,6 +25,8 @@ const initialState: ContextStateInterface = {
   techData: null,
   localStorageBuildKeys: [],
   selectedCompGroups: [],
+  showedHomeToast: false,
+  showedTechToast: false,
 };
 
 interface ActionInterface {
@@ -36,6 +40,8 @@ interface ActionInterface {
     techData?: TechSetInterface | null;
     localStorageBuildKeys?: Array<string>;
     selectedCompGroups?: Array<string>;
+    showedHomeToast?: boolean;
+    showedTechToast?: boolean;
   };
 }
 
@@ -50,6 +56,8 @@ enum AppContextActions {
   changeLocalStorageBuildKeys = 'changeLocalStorageBuildKeys',
   changeModFaction = 'changeModFaction',
   changeSelectedCompGroups = 'changeSelectedCompGroups',
+  changeShowedHomeToast = 'changeShowedHomeToast',
+  changeShowedTechToast = 'changeShowedTechToast',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -140,6 +148,24 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.selectedCompGroups = action.payload.selectedCompGroups;
+      return newState;
+    }
+
+    case AppContextActions.changeShowedHomeToast: {
+      const newState = { ...state };
+      if (action.payload.showedHomeToast === undefined) {
+        return state;
+      }
+      newState.showedHomeToast = action.payload.showedHomeToast;
+      return newState;
+    }
+
+    case AppContextActions.changeShowedTechToast: {
+      const newState = { ...state };
+      if (action.payload.showedTechToast === undefined) {
+        return state;
+      }
+      newState.showedTechToast = action.payload.showedTechToast;
       return newState;
     }
 

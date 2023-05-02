@@ -1,5 +1,5 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
-import { AbilityInterface, CharacterInterface, SkillEffectInterface } from '../types/interfaces/CharacterInterface';
+import { AbilityInterface, CharacterInterface, EffectInterface } from '../types/interfaces/CharacterInterface';
 
 const createEmptyCharacterBuild = (
   character: CharacterInterface,
@@ -66,8 +66,8 @@ const createCharacterBuildFromArray = (
 
         characterData.skillTree[y][x].levels?.forEach((level, index) => {
           if (index + 1 <= skill) {
-            if (level.blocks_character_skill_key !== undefined) {
-              blockedSkills.push(...level.blocks_character_skill_key);
+            if (level.blocks_skill_node_keys !== undefined) {
+              blockedSkills.push(...level.blocks_skill_node_keys);
             }
           }
 
@@ -101,7 +101,7 @@ const trimString = (string: string, length = 75) => {
   return trimmedString;
 };
 
-const getRelatedAbilities = (effectsArray: Array<SkillEffectInterface> | undefined) => {
+const getRelatedAbilities = (effectsArray: Array<EffectInterface> | undefined) => {
   const relatedAbilities: Array<AbilityInterface> = [];
   const relatedAbilitiesKeys: Array<string> = [];
 

@@ -4,7 +4,7 @@ interface StatEffectInterface {
   how: string;
   description: string;
   icon: string;
-  sort_order: number;
+  sort_order?: number;
 }
 
 interface AttributeInterface {
@@ -15,8 +15,13 @@ interface AttributeInterface {
 }
 
 interface PhaseInterface {
+  order: number;
+  target_enemies: boolean;
+  target_self: boolean;
+  target_friends: boolean;
   duration: number;
   effect_type: string;
+  onscreen_name?: string;
   recharge_time?: number;
   is_hidden_in_ui: boolean;
   mana_max_depletion_mod?: number;
@@ -34,7 +39,10 @@ interface PhaseInterface {
   imbue_ignition?: boolean;
   imbue_contact?: PhaseInterface;
   cant_move?: boolean;
+  unbreakable?: boolean;
   replenish_ammo?: number;
+  spread_radius?: number;
+  remove_magical?: boolean;
   stat_effects?: Array<StatEffectInterface>;
   attributes?: Array<AttributeInterface>;
 }
@@ -81,6 +89,7 @@ interface ProjectileInterface {
   can_damage_allies?: boolean;
   contact_stat_effect?: PhaseInterface;
   explosion_type?: ProjectileExplosionInterface;
+  spawned_vortex?: VortexInterface;
 }
 
 interface ProjectileBombardmentInterface {
@@ -90,6 +99,13 @@ interface ProjectileBombardmentInterface {
   arrival_window: number;
   radius_spread: number;
   projectile_type: ProjectileInterface;
+}
+
+interface UiEffectInterface {
+  key: string;
+  sort_order?: number;
+  localised_text: string;
+  effect_state?: string;
 }
 
 interface AbilityInterface {
@@ -102,15 +118,11 @@ interface AbilityInterface {
     type: {
       key: string;
       icon_path: string;
-      description: string;
+      onscreen_name: string;
     };
     is_hidden_in_ui: boolean;
-    description: string;
-    ui_effects?: Array<{
-      key: string;
-      sort_order: number;
-      description: string;
-    }>;
+    onscreen_name: string;
+    ui_effects?: Array<UiEffectInterface>;
     active_time?: number;
     recharge_time?: number;
     shared_recharge_time?: number;
@@ -136,29 +148,31 @@ interface AbilityInterface {
   };
 }
 
-interface SkillEffectInterface {
+interface EffectInterface {
   key: string;
   icon: string;
-  priority: number;
-  is_positive_value_good: boolean;
+  priority?: number;
   description: string;
-  value: number;
+  value?: number;
+  scope?: string;
   related_abilities?: Array<AbilityInterface>;
 }
 
 interface SkillLevelInterface {
   unlocked_at_rank?: number;
   auto_unlock_at_rank?: number;
-  blocks_character_skill_key?: Array<string>;
-  effects?: Array<SkillEffectInterface>;
+  blocks_skill_node_keys?: Array<string>;
+  effects?: Array<EffectInterface>;
 }
 
 interface SkillInterface {
   key: string;
+  subculture?: string;
+  faction?: string;
   image_path: string;
   is_background_skill: boolean;
-  name: string;
-  description: string;
+  localised_name: string;
+  localised_description: string;
   use_quest_for_prefix?: boolean;
   character_skill_key: string;
   tier: number;
@@ -175,21 +189,20 @@ interface SkillInterface {
 
 interface ItemInterface {
   key: string;
-  type?: string;
-  effects?: Array<SkillEffectInterface>;
-  name: string;
-  description: string;
-  image_path: string;
+  character_skill?: string;
+  effects?: Array<EffectInterface>;
+  onscreen_name: string;
+  colour_text: string;
   unlocked_at_rank?: number;
-  instant?: boolean;
+  ui_icon: string;
 }
 
 interface FactionEffectInterface {
   key: string;
   ui_icon: string;
-  title: string;
-  description: string;
-  effects: Array<SkillEffectInterface>;
+  localised_title: string;
+  localised_description: string;
+  effects: Array<EffectInterface>;
 }
 
 interface CharacterInterface {
@@ -206,7 +219,7 @@ export type {
   ItemInterface,
   SkillInterface,
   SkillLevelInterface,
-  SkillEffectInterface,
+  EffectInterface,
   VortexInterface,
   ProjectileExplosionInterface,
   ProjectileInterface,

@@ -191,7 +191,8 @@ const skillIncreaseIsValid = (
   if (!hasRequiredSkill(skill, characterBuild)) {
     if (printError) {
       const skillLocation = findSkill(characterData, characterBuild, skill?.parent_required?.[0] as string);
-      const skillName = characterData?.skillTree[skillLocation?.yIndex as number][skillLocation?.xIndex as number].name;
+      const skillName =
+        characterData?.skillTree[skillLocation?.yIndex as number][skillLocation?.xIndex as number].localised_name;
       toast.error(`Requires ${skillName}`, { id: `${skillKey} requires` });
     }
     return false;

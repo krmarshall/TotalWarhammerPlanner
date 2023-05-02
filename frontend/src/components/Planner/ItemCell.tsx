@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ItemInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
@@ -7,12 +7,15 @@ import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
 import { getRelatedAbilities, setFontSize, trimString } from '../../utils/sharedFunctions';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
+import { AppContext } from '../../contexts/AppContext';
 
 interface SkillCellPropsInterface {
   item: ItemInterface;
 }
 
 const ItemCell = ({ item }: SkillCellPropsInterface) => {
+  const { state } = useContext(AppContext);
+  const { selectedMod } = state;
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
 
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
@@ -39,7 +42,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
 
   const relatedAbilities = getRelatedAbilities(item.effects);
 
-  const fontSize = setFontSize(item.name);
+  const fontSize = setFontSize(item.onscreen_name);
 
   return (
     <TooltipWrapper
@@ -47,9 +50,9 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         <span className="text-center flex flex-row w-max">
           <div className="flex flex-col">
             <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-              <h3 className="text-gray-50 text-2xl">{item?.name}</h3>
-              {item?.description.trim() && !isMobile && (
-                <h4 className="text-gray-50 opacity-70 text-lg max-w-[20vw]">&quot;{item?.description.trim()}&quot;</h4>
+              <h3 className="text-gray-50 text-2xl">{item?.onscreen_name}</h3>
+              {item?.colour_text.trim() && !isMobile && (
+                <h4 className="text-gray-50 opacity-70 text-lg max-w-[20vw]">&quot;{item?.colour_text.trim()}&quot;</h4>
               )}
               {item?.unlocked_at_rank && (
                 <p className="text-yellow-300 text-lg">Available at rank {item?.unlocked_at_rank}</p>
@@ -85,7 +88,11 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
     >
       <div className="flex flex-row w-max m-auto rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
         <ReactImage
-          srcList={[`/imgs/${item.image_path}.webp`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`]}
+          srcList={[
+            `/imgs/vanilla3/${item.ui_icon}.webp`,
+            `/imgs/${selectedMod}/${item.ui_icon}.webp`,
+            `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`,
+          ]}
           className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto"
           alt="itemIcon"
           w="64"
@@ -94,7 +101,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
 
         <div className="flex flex-col justify-center">
           <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
-            {trimString(item.name)}
+            {trimString(item.onscreen_name)}
           </h2>
         </div>
         <div className="invisible w-4 pl-0.5">spacer</div>

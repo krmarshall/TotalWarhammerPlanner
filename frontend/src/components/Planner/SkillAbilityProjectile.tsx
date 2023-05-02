@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { ProjectileInterface } from '../../types/interfaces/CharacterInterface';
 import SkillPhase from './SkillPhase';
+import SkillAbilityVortex from './SkillAbilityVortex';
 
 interface PropsInterface {
   projectile: ProjectileInterface;
@@ -158,6 +159,14 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
           <h5 className="w-24">Expl. Contact:</h5>
           <div className="w-auto ml-6">
             <SkillPhase phase={projectile.explosion_type?.contact_phase_effect} />
+          </div>
+        </div>
+      )}
+      {projectile.spawned_vortex !== undefined && (
+        <div className="text-left">
+          <h5 className="w-24">Vortex:</h5>
+          <div className="w-auto ml-6">
+            <SkillAbilityVortex vortex={projectile.spawned_vortex} />
           </div>
         </div>
       )}

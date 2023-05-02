@@ -1,8 +1,8 @@
-import { SkillEffectInterface } from '../../types/interfaces/CharacterInterface';
+import { EffectInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 
 interface SkillEffectPropsInterface {
-  skillEffect: SkillEffectInterface;
+  skillEffect: EffectInterface;
 }
 
 const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {

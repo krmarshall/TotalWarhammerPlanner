@@ -1,20 +1,20 @@
-import { SkillEffectInterface } from './CharacterInterface';
+import { EffectInterface, ItemInterface } from './CharacterInterface';
 
 interface NodeLinkInterface {
   parent_key: string;
   child_key: string;
   parent_link_position: string;
   child_link_position: string;
-  visible?: boolean;
+  visible_in_ui?: boolean;
 }
 
 interface TechSkillInterface {
   key: string;
   icon_name: string;
-  name: string;
-  description: string;
+  onscreen_name: string;
+  short_description: string;
   required_buildings?: Array<string>;
-  effects: Array<SkillEffectInterface>;
+  effects: Array<EffectInterface>;
 }
 
 interface TechNodeInterface {
@@ -25,7 +25,10 @@ interface TechNodeInterface {
   cost_per_round?: number;
   optional_ui_group?: string;
   required_parents?: number;
+  required_tech_keys?: Array<{ key: string; name: string }>;
+  required_tech_node_keys?: Array<string>;
   technology: TechSkillInterface;
+  items?: Array<ItemInterface>;
   ui_group?: string;
   ui_group_colour?: string;
   ui_group_position?: string;

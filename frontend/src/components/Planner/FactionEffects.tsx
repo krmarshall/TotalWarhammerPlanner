@@ -43,12 +43,12 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
   const relatedAbilities = getRelatedAbilities(factionEffect.effects);
 
-  const fontSize = setFontSize(factionEffect.title);
+  const fontSize = setFontSize(factionEffect.localised_title);
 
   const vanillaGamePath = selectedMod.includes('2') ? 'vanilla2' : 'vanilla3';
   const imagePath = factionEffect.ui_icon.replace('.png', '.webp');
   return (
-    <div className="flex flex-col mx-1 min-w-[14rem] shadow-lg border border-gray-500 rounded">
+    <div className="flex flex-col mx-1 min-w-[14.5rem] shadow-lg border border-gray-500 rounded">
       <h2 className="text-center text-3xl mt-1 text-gray-200 text-shadow">Faction Effects</h2>
       <div className="w-full pb-1 place-items-center overflow-x-hidden overflow-y-hidden">
         <TooltipWrapper
@@ -56,10 +56,10 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
             <span className="text-center flex flex-row w-max">
               <div className="flex flex-col">
                 <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-                  <h3 className="text-gray-50 text-2xl">{factionEffect?.title}</h3>
-                  {factionEffect?.description.trim() && !isMobile && (
+                  <h3 className="text-gray-50 text-2xl">{factionEffect?.localised_title}</h3>
+                  {factionEffect?.localised_description.trim() && !isMobile && (
                     <h4 className="text-gray-50 opacity-70 text-lg max-w-[30vw]">
-                      &quot;{factionEffect?.description.trim()}&quot;
+                      &quot;{factionEffect?.localised_description.trim()}&quot;
                     </h4>
                   )}
                   <div>
@@ -94,11 +94,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
         >
           <div className="flex flex-row w-max m-auto rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
             <ReactImage
-              srcList={[
-                `/imgs/${selectedMod}/campaign_ui/effect_bundles/${imagePath}`,
-                `/imgs/${vanillaGamePath}/campaign_ui/effect_bundles/${imagePath}`,
-                `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`,
-              ]}
+              srcList={[`/imgs/${imagePath}.webp`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`]}
               className="w-[4.5rem] h-[4.5rem] p-2 drop-shadow-lg my-auto"
               alt="itemIcon"
               w="64"
@@ -107,7 +103,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
             <div className="flex flex-col justify-center">
               <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
-                {trimString(factionEffect.title)}
+                {trimString(factionEffect.localised_title)}
               </h2>
             </div>
             <div className="invisible w-4 pl-0.5">spacer</div>

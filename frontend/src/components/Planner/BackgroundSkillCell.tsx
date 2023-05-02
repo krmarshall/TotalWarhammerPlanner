@@ -12,7 +12,7 @@ interface PropInterface {
 const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const [ctrCounter, setCtrCounter] = useState(0);
 
-  const fontSize = setFontSize(skill.name);
+  const fontSize = setFontSize(skill.localised_name);
 
   const srcList = [`/imgs/${skill.image_path}.webp`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`];
 
@@ -39,7 +39,7 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
 
         <div className="flex flex-col justify-center">
           <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
-            {trimString(skill.name)}
+            {trimString(skill.localised_name)}
           </h2>
         </div>
         <div className="invisible w-4 pl-0.5">spacer</div>

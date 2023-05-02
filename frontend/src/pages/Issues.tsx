@@ -73,20 +73,11 @@ const Issues = () => {
           </li>
           <li>Tooltips that overflow the viewport are cut off</li>
           <li>
-            In some cases each skill effect only has the first 3 related abilities linked for tooltips (eg. Sisters of
-            Twilight Dragon Breath&apos;s)
-          </li>
-          <li>
             Certain skill nodes that require x number of points in the last y skills will be missing a right arrow
             indicating such. Most prevalent on the last skill in characters blue lines.
           </li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
-            <li>
-              3.0.0 Specific features have yet to be implemented (randomized ability effects, remove magic attacks flag,
-              projectile vortices), the data parser is currently being rewritten to be cleaner and more extensible, they
-              will be added when this rewrite is done.
-            </li>
-            <li>Chorf tech tree is pretty borked.</li>
+            <li>Randomized phase effects need a better ui still</li>
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
             <li>Some poorly scaled skill icons depending on file path, mostly affects mods</li>
 
@@ -99,13 +90,17 @@ const Issues = () => {
                 Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
                 like copying from broken base game skill?)
               </li>
+              <li>
+                Skeleton Crew Compilation 3 Dead&apos;s Kislev Units currently adds nothing, the heroes that were added
+                seem to be being moving to a separate mod that isn&apos;t release yet?
+              </li>
             </IssuesSlider>
           </IssuesSlider>
 
           <IssuesSlider title="Warhammer 2" bg="bg-gray-600">
-            <li>Several lords dont have their Faction Effects linked, this likely wont change</li>
+            <li>Faction Effects are not linked for WH2 Legendary Lords</li>
             <IssuesSlider title="Mods" bg="bg-gray-700">
-              <li>Stopped extracting and hosting mods for WH2.</li>
+              <li>Stopped extracting and hosting mods for WH2, sorry!</li>
             </IssuesSlider>
           </IssuesSlider>
         </ul>
