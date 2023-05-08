@@ -18,28 +18,29 @@ const Home = () => {
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1365 });
   const isMobileWidth = useMediaQuery({ maxWidth: 1023 });
 
-  let toastId: any;
-  useEffect(() => {
-    if (toastId === undefined && !showedHomeToast) {
-      toastId = toast.custom(
-        <div className="p-3 bg-gray-600 border rounded-xl border-gray-500 text-gray-50 flex flex-row place-content-around">
-          <h1 className="text-4xl mx-6 my-auto">ℹ</h1>
-          <p className="text-3xl m-auto w-[40rem] text-center">
-            Backend tooling has had an extensive overhaul, please report any regressions or new issues you encounter,
-            see the Issues tab for instructions.
-          </p>
-          <button
-            className="text-2xl bg-slate-500 rounded-2xl py-1 px-5 my-auto ml-4 shadow-md hover-scale"
-            onClick={() => toast.remove(toastId)}
-          >
-            Dismiss
-          </button>
-        </div>,
-        { position: 'bottom-center', duration: 20000 }
-      );
-      dispatch({ type: AppContextActions.changeShowedHomeToast, payload: { showedHomeToast: true } });
-    }
-  }, []);
+  // Info toast example
+  // let toastId: any;
+  // useEffect(() => {
+  //   if (toastId === undefined && !showedHomeToast) {
+  //     toastId = toast.custom(
+  //       <div className="p-3 bg-gray-600 border rounded-xl border-gray-500 text-gray-50 flex flex-row place-content-around">
+  //         <h1 className="text-4xl mx-6 my-auto">ℹ</h1>
+  //         <p className="text-3xl m-auto w-[40rem] text-center">
+  //           Backend tooling has had an extensive overhaul, please report any regressions or new issues you encounter,
+  //           see the Issues tab for instructions.
+  //         </p>
+  //         <button
+  //           className="text-2xl bg-slate-500 rounded-2xl py-1 px-5 my-auto ml-4 shadow-md hover-scale"
+  //           onClick={() => toast.remove(toastId)}
+  //         >
+  //           Dismiss
+  //         </button>
+  //       </div>,
+  //       { position: 'bottom-center', duration: 20000 }
+  //     );
+  //     dispatch({ type: AppContextActions.changeShowedHomeToast, payload: { showedHomeToast: true } });
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (mod !== undefined && faction !== undefined) {

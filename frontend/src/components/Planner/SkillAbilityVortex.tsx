@@ -82,7 +82,7 @@ const SkillAbilityVortex = ({ vortex }: PropsInterface) => {
         <div className="text-left">
           <h5 className="w-24">Contact:</h5>
           <div className="w-auto ml-6">
-            <SkillPhase phase={vortex.contact_effect} />
+            <SkillPhase index={0} phase={vortex.contact_effect} />
           </div>
         </div>
       )}

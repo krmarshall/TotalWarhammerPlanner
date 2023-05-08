@@ -77,7 +77,6 @@ const Issues = () => {
             indicating such. Most prevalent on the last skill in characters blue lines.
           </li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
-            <li>Randomized phase effects need a better ui still</li>
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
             <li>Some poorly scaled skill icons depending on file path, mostly affects mods</li>
 

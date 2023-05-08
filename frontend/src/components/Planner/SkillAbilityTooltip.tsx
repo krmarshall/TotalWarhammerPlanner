@@ -168,7 +168,7 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           <h5 className="w-24">Phases:</h5>
           <div className="w-auto ml-6">
             {unitAbility?.phases?.map((phase, index) => {
-              return <SkillPhase key={index} phase={phase} />;
+              return <SkillPhase key={index} index={index} phase={phase} random={unitAbility.random_phases} />;
             })}
           </div>
         </div>

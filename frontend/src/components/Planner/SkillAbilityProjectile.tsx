@@ -150,7 +150,7 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
         <div className="text-left">
           <h5 className="w-24">Contact:</h5>
           <div className="w-auto ml-6">
-            <SkillPhase phase={projectile.contact_stat_effect} />
+            <SkillPhase index={0} phase={projectile.contact_stat_effect} />
           </div>
         </div>
       )}
@@ -158,7 +158,7 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
         <div className="text-left">
           <h5 className="w-24">Expl. Contact:</h5>
           <div className="w-auto ml-6">
-            <SkillPhase phase={projectile.explosion_type?.contact_phase_effect} />
+            <SkillPhase index={0} phase={projectile.explosion_type?.contact_phase_effect} />
           </div>
         </div>
       )}
