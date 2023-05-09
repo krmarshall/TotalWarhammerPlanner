@@ -95,7 +95,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
     compilationGroups: scm3CompGroups,
-    updated: '7 May 2023',
+    updated: '8 May 2023',
     category: 'Character Mod Compilation',
     includes: [
       'The Jade-Blooded Vampires: Curse of Nongchang (26 Apr 2023)',
@@ -109,7 +109,8 @@ const gameData: { [key: string]: GameDataInterface } = {
       'Dark Land Warboss (16 Apr 2023)',
       "Dead's Cult of the Possessed (13 Apr 2023)",
       "Dead's Jade Army Expansion (15 Apr 2023)",
-      "Dead's Kislev Units (15 Apr 2023)",
+      "Dead's Kislev Droyashka (8 May 2023)",
+      "Dead's Kislev Shaman (8 May 2023)",
       'Clan Treecherik (22 Apr 2023)',
       'Clan Verms (24 Apr 2023)',
       'Pestilent Brotherhood (22 Apr 2023)',
