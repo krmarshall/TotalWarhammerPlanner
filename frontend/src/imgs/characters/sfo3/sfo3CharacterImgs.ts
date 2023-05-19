@@ -15,6 +15,7 @@ import tmb_cha_rakhas from './tmb_cha_rakhas.webp';
 import tmb_cha_setep from './tmb_cha_setep.webp';
 import tmb_cha_thutep from './tmb_cha_thutep.webp';
 import tmb_cha_wakhaf from './tmb_cha_wakhaf.webp';
+import dwf_cha_engineer_lord from './dwf_cha_engineer_lord_1.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -40,6 +41,8 @@ const sfo3CharacterImgs = {
   tmb_tomb_king_setep: tmb_cha_setep,
   tmb_tomb_king_thutep: tmb_cha_thutep,
   tmb_tomb_king_wakhaf: tmb_cha_wakhaf,
+
+  dwf_cha_engineer_lord: dwf_cha_engineer_lord,
 };
 
 export default sfo3CharacterImgs;

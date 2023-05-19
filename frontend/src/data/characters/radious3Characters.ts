@@ -147,6 +147,14 @@ const radious3Characters = {
     },
     heroes: { ...vanilla3Characters.nur_nurgle.heroes },
   },
+
+  chd_chaos_dwarfs: {
+    lords: {
+      ...vanilla3Characters.chd_chaos_dwarfs.lords,
+      chd_herald_of_the_conclave: { name: 'Herald of the Conclave' },
+    },
+    heroes: { ...vanilla3Characters.chd_chaos_dwarfs.heroes },
+  },
 };
 
 export default radious3Characters;

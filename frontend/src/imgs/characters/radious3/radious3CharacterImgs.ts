@@ -23,6 +23,7 @@ import rdsOgrSlaughtermaster from './rad_wh3_part3_agent_uniform_ogr_slaughterma
 import rdsSlaFlawlessKing from './rad_wh3_part3_agent_uniform_sla_flawless_king_02.webp';
 import rdsTzeRenegadeSorc from './rad_wh3_part3_agent_uniform_tze_renegade_sorcerer_dark_02.webp';
 import rdsNurWatcherGarden from './rad_wh3_part3_agent_uniform_nur_watcher_of_the_garden_03.webp';
+import chd_herald_of_the_conclave from './rad_wh3_part3_agent_uniform_chd_herald_of_the_conclave_01.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
@@ -64,6 +65,7 @@ const radious3CharacterImgs = {
   tze_renegade_sorcerer_shadows: rdsTzeRenegadeSorc,
   sla_flawless_king: rdsSlaFlawlessKing,
   nur_watcher_of_the_garden: rdsNurWatcherGarden,
+  chd_herald_of_the_conclave: chd_herald_of_the_conclave,
 };
 
 export default radious3CharacterImgs;

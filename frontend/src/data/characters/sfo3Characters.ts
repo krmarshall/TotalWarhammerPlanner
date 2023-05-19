@@ -76,7 +76,10 @@ const sfo3Characters = {
   },
 
   dwf_dwarfs: {
-    lords: { ...vanilla3Characters.dwf_dwarfs.lords },
+    lords: {
+      ...vanilla3Characters.dwf_dwarfs.lords,
+      dwf_cha_engineer_lord: { name: 'Guild Master' },
+    },
     heroes: {
       ...vanilla3Characters.dwf_dwarfs.heroes,
       dwf_cha_slayer: {
