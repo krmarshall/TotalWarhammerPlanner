@@ -10,7 +10,6 @@ interface StatEffectInterface {
 interface AttributeInterface {
   key: string;
   description: string;
-  attribute_type: string;
   icon: string;
 }
 
@@ -164,6 +163,7 @@ interface SkillLevelInterface {
   auto_unlock_at_rank?: number;
   blocks_skill_node_keys?: Array<string>;
   effects?: Array<EffectInterface>;
+  mount_unit_stats?: UnitStatsInterface;
 }
 
 interface SkillInterface {
@@ -186,6 +186,51 @@ interface SkillInterface {
   right_arrow?: boolean;
   boxed?: boolean;
   levels?: Array<SkillLevelInterface>;
+}
+
+interface UnitStatsInterface {
+  run_speed: number;
+  fly_speed?: number;
+  mass: number;
+  size: string;
+  can_siege?: boolean;
+  can_skirmish?: boolean;
+
+  barrier?: number;
+  hit_points: number;
+  bonus_hit_points: number;
+  armour: number;
+  missile_block_chance: number;
+  morale: number;
+  damage_mod_flame: number;
+  damage_mod_magic: number;
+  damage_mod_physical: number;
+  damage_mod_missile: number;
+  damage_mod_all: number;
+
+  melee_attack: number;
+  melee_defense: number;
+  charge_bonus: number;
+  bonus_v_large: number;
+  bonus_v_infantry: number;
+  damage: number;
+  ap_damage: number;
+  splash_target_size_limit: string;
+  splash_attack_max_attacks: number;
+  melee_attack_interval: number;
+  is_flaming?: boolean;
+  is_magical?: boolean;
+  contact_phase?: PhaseInterface;
+
+  projectile?: ProjectileInterface;
+  accuracy?: number;
+  reload?: number;
+  primary_ammo?: number;
+  secondary_ammo?: number;
+  fire_arc?: number;
+
+  attributes?: Array<AttributeInterface>;
+  abilities?: Array<AbilityInterface>;
 }
 
 interface ItemInterface {
@@ -220,6 +265,7 @@ export type {
   ItemInterface,
   SkillInterface,
   SkillLevelInterface,
+  UnitStatsInterface,
   EffectInterface,
   VortexInterface,
   ProjectileExplosionInterface,
