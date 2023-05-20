@@ -209,7 +209,7 @@ interface UnitStatsInterface {
   damage_mod_all: number;
 
   melee_attack: number;
-  melee_defense: number;
+  melee_defence: number;
   charge_bonus: number;
   bonus_v_large: number;
   bonus_v_infantry: number;
@@ -254,6 +254,7 @@ interface FactionEffectInterface {
 interface CharacterInterface {
   key: string;
   skillTree: Array<Array<SkillInterface>>;
+  unitStats: UnitStatsInterface;
   items?: Array<ItemInterface>;
   backgroundSkills?: Array<SkillInterface>;
   factionEffects?: FactionEffectInterface;
