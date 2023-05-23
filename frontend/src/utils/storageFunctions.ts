@@ -93,10 +93,25 @@ const loadBuildsFromStorage = (state: ContextStateInterface) => {
   }
 };
 
+const loadAdvancedToggleFromStorage = () => {
+  const curValue = localStorage.getItem('plannerAdvancedStatsToggle');
+  if (curValue === null) {
+    return false;
+  } else {
+    return 'true' === curValue;
+  }
+};
+
+const saveAdvancedToggleFromStorage = (value: boolean) => {
+  localStorage.setItem('plannerAdvancedStatsToggle', JSON.stringify(value));
+};
+
 export {
   loadBuildsFromStorage,
   saveBuildToStorage,
   deleteBuildFromStorage,
   setActiveBuildFromStorage,
   initializeBuildsFromStorage,
+  loadAdvancedToggleFromStorage,
+  saveAdvancedToggleFromStorage,
 };

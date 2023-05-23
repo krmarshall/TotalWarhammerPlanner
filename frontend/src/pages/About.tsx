@@ -82,11 +82,11 @@ const About = () => {
           take a lot of time, but I&apos;ve at least thought about them.
         </p>
         <ul className="list-disc list-inside mx-auto text-gray-200 text-2xl">
+          <li>Character stats mount comparison</li>
+          <li>Character stats skill integration</li>
           <li>Banner ancillary details</li>
           <li>Brettonia vow details</li>
           <li>Mobile UI</li>
-          <li>Character stats/attributes</li>
-          <li>Unique starting heroes/traits (maybe)</li>
         </ul>
       </div>
     </div>

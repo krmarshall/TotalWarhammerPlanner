@@ -71,7 +71,10 @@ const Issues = () => {
           <li>
             Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
           </li>
-          <li>Tooltips that overflow the viewport are cut off</li>
+          <li>
+            Tooltips that overflow the viewport can be scrolled, but mousewheel inputs will scroll the background
+            container as well
+          </li>
           <li>
             Certain skill nodes that require x number of points in the last y skills will be missing a right arrow
             indicating such. Most prevalent on the last skill in characters blue lines.
@@ -79,7 +82,7 @@ const Issues = () => {
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
             <li>Some poorly scaled skill icons depending on file path, mostly affects mods</li>
-
+            <li>Mounts obtained as quest items do not have stats linked</li>
             <IssuesSlider title="Mods" bg="bg-gray-700">
               <li>
                 Mixu 3 has several missing skill icons, and Wychwethyl&apos;s melee line is out of order, these are bugs
@@ -88,10 +91,6 @@ const Issues = () => {
               <li>
                 Radious 3 Lord of the Admiralty Monster Hunter skill icon placeholder (and duplicate skill effect? seems
                 like copying from broken base game skill?)
-              </li>
-              <li>
-                Skeleton Crew Compilation 3 Dead&apos;s Kislev Units currently adds nothing, the heroes that were added
-                seem to be being moving to a separate mod that isn&apos;t release yet?
               </li>
             </IssuesSlider>
           </IssuesSlider>

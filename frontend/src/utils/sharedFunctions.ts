@@ -1,5 +1,11 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
-import { AbilityInterface, CharacterInterface, EffectInterface } from '../types/interfaces/CharacterInterface';
+import {
+  AbilityInterface,
+  CharacterInterface,
+  EffectInterface,
+  PhaseInterface,
+  UnitStatsInterface,
+} from '../types/interfaces/CharacterInterface';
 
 const createEmptyCharacterBuild = (
   character: CharacterInterface,
@@ -123,6 +129,86 @@ const getRelatedAbilities = (effectsArray: Array<EffectInterface> | undefined) =
   return relatedAbilities;
 };
 
+const getRelatedContactPhases = (ability: AbilityInterface | undefined) => {
+  const relatedPhases: Array<PhaseInterface> = [];
+  const relatedPhaseKeys: Array<string> = [];
+
+  if (ability === undefined) {
+    return relatedPhases;
+  }
+
+  if (ability.unit_ability.activated_projectile?.contact_stat_effect !== undefined) {
+    const keyCheck = ability.unit_ability.activated_projectile?.contact_stat_effect.icon;
+    if (!relatedPhaseKeys.includes(keyCheck)) {
+      relatedPhases.push(ability.unit_ability.activated_projectile?.contact_stat_effect);
+      relatedPhaseKeys.push(keyCheck);
+    }
+  }
+
+  if (ability.unit_ability.activated_projectile?.explosion_type?.contact_phase_effect !== undefined) {
+    const keyCheck = ability.unit_ability.activated_projectile?.explosion_type?.contact_phase_effect.icon;
+    if (!relatedPhaseKeys.includes(keyCheck)) {
+      relatedPhases.push(ability.unit_ability.activated_projectile?.explosion_type?.contact_phase_effect);
+      relatedPhaseKeys.push(keyCheck);
+    }
+  }
+
+  if (ability.unit_ability.vortex?.contact_effect !== undefined) {
+    const keyCheck = ability.unit_ability.vortex?.contact_effect.icon;
+    if (!relatedPhaseKeys.includes(keyCheck)) {
+      relatedPhases.push(ability.unit_ability.vortex?.contact_effect);
+      relatedPhaseKeys.push(keyCheck);
+    }
+  }
+
+  if (ability.unit_ability?.bombardment?.projectile_type?.contact_stat_effect !== undefined) {
+    const keyCheck = ability.unit_ability?.bombardment?.projectile_type?.contact_stat_effect.icon;
+    if (!relatedPhaseKeys.includes(keyCheck)) {
+      relatedPhases.push(ability.unit_ability?.bombardment?.projectile_type?.contact_stat_effect);
+      relatedPhaseKeys.push(keyCheck);
+    }
+  }
+
+  ability.unit_ability.phases?.forEach((phase) => {
+    if (phase.imbue_contact !== undefined) {
+      const keyCheck = phase.imbue_contact.icon;
+      if (!relatedPhaseKeys.includes(keyCheck)) {
+        relatedPhases.push(phase.imbue_contact);
+        relatedPhaseKeys.push(keyCheck);
+      }
+    }
+  });
+
+  return relatedPhases;
+};
+
+const getUnitStatSets = (characterData: CharacterInterface | null) => {
+  const unitStatSets: Array<{ name: string; stats: UnitStatsInterface }> = [];
+
+  if (characterData?.unitStats !== undefined) {
+    unitStatSets.push({ name: 'Base', stats: characterData?.unitStats });
+  }
+  characterData?.skillTree.forEach((skillLine) =>
+    skillLine.forEach((skill) =>
+      skill.levels?.forEach((skillLevel) => {
+        if (skillLevel.mount_unit_stats !== undefined) {
+          unitStatSets.push({ name: skill.localised_name, stats: skillLevel.mount_unit_stats });
+        }
+      })
+    )
+  );
+
+  characterData?.backgroundSkills?.forEach((bgSkill) =>
+    bgSkill.levels?.forEach((skillLevel) => {
+      if (skillLevel.mount_unit_stats !== undefined) {
+        unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
+      }
+    })
+  );
+
+  return unitStatSets;
+};
+
 const setFontSize = (string: string) => {
   let fontSize;
   if (string.length > 52) {
@@ -208,6 +294,8 @@ export {
   createCharacterBuildFromArray,
   trimString,
   getRelatedAbilities,
+  getRelatedContactPhases,
+  getUnitStatSets,
   setFontSize,
   getBgUrl,
 };

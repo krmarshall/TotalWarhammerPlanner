@@ -11,9 +11,10 @@ interface SkillPhaseProps {
   index: number;
   phase: PhaseInterface;
   random?: boolean;
+  header?: boolean;
 }
 
-const SkillPhase = ({ index, phase, random }: SkillPhaseProps) => {
+const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) => {
   const { state } = useContext(AppContext);
   const { selectedMod } = state;
   const type = phase.effect_type === 'positive' ? 'Buff' : 'Debuff';
@@ -48,9 +49,16 @@ const SkillPhase = ({ index, phase, random }: SkillPhaseProps) => {
 
   const selectedGame = selectedMod.includes('2') ? '2' : '3';
   return (
-    <div className="flex flex-row flex-nowrap w-full">
+    <div className="flex flex-row flex-nowrap mb-1 w-full text-gray-50 text-lg">
       {random && <img className="w-7 h-7 -ml-6 mr-1" src={randImgSrc} alt="random phase img" width="38" height="38" />}
-      <div className="w-full rounded-lg border border-gray-500 mb-2 p-2 shadow-lg">
+      <div className="w-full rounded-lg border border-gray-500 p-2 shadow-lg bg-gray-600">
+        {header && (
+          <div className="flex flex-row flex-nowrap">
+            <img src={`/imgs/${phase.icon}.webp`} alt="bvl" width="22" height="22" className="my-auto mx-1 h-8 w-8" />
+            <h4 className="text-2xl ml-1">{phase.onscreen_name}</h4>
+          </div>
+        )}
+
         {phase.duration !== undefined && phase.duration > 0 && (
           <div className="flex flex-row">
             <h5 className="text-left w-24">Duration:</h5>
@@ -200,9 +208,16 @@ const SkillPhase = ({ index, phase, random }: SkillPhaseProps) => {
           </div>
         )}
         {phase.imbue_contact !== undefined && (
-          <div className="text-left">
+          <div className="text-left flex flex-row flex-nowrap">
             <h5 className="w-24">Imbue Contact:</h5>
-            <SkillPhase index={0} phase={phase.imbue_contact} />
+            <img
+              src={`/imgs/${phase.imbue_contact.icon}.webp`}
+              alt="imbue contact"
+              width="22"
+              height="22"
+              className="my-auto mx-1 h-6 w-6"
+            />
+            <h4 className="text-lg ml-1">{phase.imbue_contact.onscreen_name}</h4>
           </div>
         )}
         {phase.replenish_ammo !== undefined && (

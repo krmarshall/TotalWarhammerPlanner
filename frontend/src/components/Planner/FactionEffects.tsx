@@ -6,8 +6,9 @@ import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from './TooltipWrapper';
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
-import { getRelatedAbilities, setFontSize, trimString } from '../../utils/sharedFunctions';
+import { getRelatedAbilities, getRelatedContactPhases, setFontSize, trimString } from '../../utils/sharedFunctions';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
+import SkillPhase from './SkillPhase';
 
 interface PropInterface {
   factionEffect: FactionEffectInterface;
@@ -42,6 +43,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
   }, [ctrCounter]);
 
   const relatedAbilities = getRelatedAbilities(factionEffect.effects);
+  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
 
   const fontSize = setFontSize(factionEffect.localised_title);
 
@@ -82,13 +84,19 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
                 )}
               </div>
 
-              {relatedAbilities.length !== 0 &&
-                relatedAbilities.map((ability, index) => {
-                  if (index !== ctrCounter) {
-                    return;
-                  }
-                  return <SkillAbilityTooltip key={index} ability={ability} />;
-                })}
+              {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
+                <div className="flex flex-col w-fit h-fit max-w-[30vw] ml-2">
+                  {relatedAbilities.map((ability, index) => {
+                    if (index !== ctrCounter) {
+                      return;
+                    }
+                    return <SkillAbilityTooltip key={index} ability={ability} />;
+                  })}
+                  {relatedPhases.map((phase, index) => {
+                    return <SkillPhase key={index} phase={phase} index={index} header={true} random={false} />;
+                  })}
+                </div>
+              )}
             </span>
           }
         >

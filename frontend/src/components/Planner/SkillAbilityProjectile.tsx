@@ -147,19 +147,29 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
         </div>
       )}
       {projectile.contact_stat_effect !== undefined && (
-        <div className="text-left">
+        <div className="text-left flex flex-row flex-nowrap">
           <h5 className="w-24">Contact:</h5>
-          <div className="w-auto ml-6">
-            <SkillPhase index={0} phase={projectile.contact_stat_effect} />
-          </div>
+          <img
+            src={`/imgs/${projectile.contact_stat_effect.icon}.webp`}
+            alt="bvl"
+            width="22"
+            height="22"
+            className="my-auto mx-1 h-6 w-6"
+          />
+          <h4 className="text-lg ml-1">{projectile.contact_stat_effect.onscreen_name}</h4>
         </div>
       )}
       {projectile.explosion_type?.contact_phase_effect !== undefined && (
-        <div className="text-left">
+        <div className="text-left flex flex-row flex-nowrap">
           <h5 className="w-24">Expl. Contact:</h5>
-          <div className="w-auto ml-6">
-            <SkillPhase index={0} phase={projectile.explosion_type?.contact_phase_effect} />
-          </div>
+          <img
+            src={`/imgs/${projectile.explosion_type?.contact_phase_effect.icon}.webp`}
+            alt="bvl"
+            width="22"
+            height="22"
+            className="my-auto mx-1 h-6 w-6"
+          />
+          <h4 className="text-lg ml-1">{projectile.explosion_type?.contact_phase_effect.onscreen_name}</h4>
         </div>
       )}
       {projectile.spawned_vortex !== undefined && (

@@ -21,7 +21,7 @@ const SkillTable = ({ faction }: PropInterface) => {
   return (
     <div
       className={
-        'w-5/6 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 bg-left-top bg-local bg-no-repeat bg-cover' +
+        'w-fit overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 bg-left-top bg-local bg-no-repeat bg-cover' +
         getBgUrl(faction)
       }
       id="horScrollContainer"

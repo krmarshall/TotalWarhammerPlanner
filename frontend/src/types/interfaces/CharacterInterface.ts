@@ -14,6 +14,7 @@ interface AttributeInterface {
 }
 
 interface PhaseInterface {
+  icon: string;
   order: number;
   target_enemies: boolean;
   target_self: boolean;
@@ -78,6 +79,8 @@ interface ProjectileInterface {
   projectile_number?: number;
   damage: number;
   ap_damage: number;
+  effective_range: number;
+  base_reload_time?: number;
   bonus_v_infantry?: number;
   bonus_v_large?: number;
   shockwave_radius: number;
