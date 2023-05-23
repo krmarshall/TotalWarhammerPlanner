@@ -12,6 +12,7 @@ import CharacterPortrait from '../components/Planner/CharacterPortrait';
 import SkillTable from '../components/Planner/SkillTable';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import gameData from '../data/gameData';
+import UnitStats from '../components/Planner/UnitStats';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -91,6 +92,12 @@ const Planner = () => {
     document.title = `TWP - ${characterName}`;
   }, []);
 
+  let tableStatsContainer = 'flex flex-row flex-nowrap';
+  if (isShort && shortViewToggle) {
+    tableStatsContainer += ' h-0';
+  } else {
+    tableStatsContainer += ' grow max-h-[88vh] min-h-[50vh]';
+  }
   return (
     <div className="grow mt-1 flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">
       {characterData === null ? (
@@ -101,7 +108,10 @@ const Planner = () => {
 
           {!isMobile && <CharacterPortrait />}
 
-          <SkillTable faction={faction} shortViewToggle={shortViewToggle} />
+          <div className={tableStatsContainer}>
+            <UnitStats />
+            <SkillTable faction={faction} />
+          </div>
 
           {!isThin && <ExtrasDrawer shortViewToggle={shortViewToggle} setShortViewToggle={setShortViewToggle} />}
         </Fragment>

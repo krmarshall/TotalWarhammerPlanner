@@ -5,9 +5,11 @@ import SkillAbilityTooltip from './SkillAbilityTooltip';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
-import { getRelatedAbilities } from '../../utils/sharedFunctions';
+import { getRelatedAbilities, getRelatedContactPhases } from '../../utils/sharedFunctions';
 
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
+import lockImg from '../../imgs/other/icon_padlock.webp';
+import SkillPhase from './SkillPhase';
 
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;
@@ -26,7 +28,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
 
   useEffect(() => {
-    const keyDownHandler = (event: KeyboardEvent) => {
+    const ctrKeyDownHandler = (event: KeyboardEvent) => {
       if (event.key === 'Control') {
         if (ctrCounter + 1 < relatedAbilities.length) {
           setCtrCounter(ctrCounter + 1);
@@ -36,10 +38,10 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
       }
     };
 
-    document.addEventListener('keydown', keyDownHandler);
+    document.addEventListener('keydown', ctrKeyDownHandler);
 
     return () => {
-      document.removeEventListener('keydown', keyDownHandler);
+      document.removeEventListener('keydown', ctrKeyDownHandler);
     };
   }, [ctrCounter]);
 
@@ -51,11 +53,12 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
   }
 
   const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
-
+  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
   return (
     <span className="text-center flex flex-row">
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+          <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" />
           <h3 className="text-gray-50 text-2xl">{skill?.localised_name}</h3>
           {skill?.localised_description.trim() && !isMobile && (
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
@@ -100,13 +103,19 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
         )}
       </div>
 
-      {relatedAbilities.length !== 0 &&
-        relatedAbilities.map((ability, index) => {
-          if (index !== ctrCounter) {
-            return;
-          }
-          return <SkillAbilityTooltip key={index} ability={ability} />;
-        })}
+      {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
+        <div className="flex flex-col w-fit h-fit max-w-[30vw] ml-2">
+          {relatedAbilities.map((ability, index) => {
+            if (index !== ctrCounter) {
+              return;
+            }
+            return <SkillAbilityTooltip key={index} ability={ability} />;
+          })}
+          {relatedPhases.map((phase, index) => {
+            return <SkillPhase key={index} phase={phase} index={index} header={true} random={false} />;
+          })}
+        </div>
+      )}
     </span>
   );
 };

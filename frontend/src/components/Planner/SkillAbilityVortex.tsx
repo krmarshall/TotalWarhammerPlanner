@@ -79,11 +79,16 @@ const SkillAbilityVortex = ({ vortex }: PropsInterface) => {
         <p className="my-auto ml-1">{vortex.affects_allies ? 'Yes' : 'No'}</p>
       </div>
       {vortex.contact_effect !== undefined && (
-        <div className="text-left">
+        <div className="text-left flex flex-row flex-nowrap">
           <h5 className="w-24">Contact:</h5>
-          <div className="w-auto ml-6">
-            <SkillPhase index={0} phase={vortex.contact_effect} />
-          </div>
+          <img
+            src={`/imgs/${vortex.contact_effect.icon}.webp`}
+            alt="bvl"
+            width="22"
+            height="22"
+            className="my-auto mx-1 h-6 w-6"
+          />
+          <h4 className="text-lg ml-1">{vortex.contact_effect.onscreen_name}</h4>
         </div>
       )}
     </div>

@@ -2,11 +2,13 @@ import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
-import { getRelatedAbilities } from '../../utils/sharedFunctions';
+import { getRelatedAbilities, getRelatedContactPhases } from '../../utils/sharedFunctions';
 import SkillAbilityTooltip from '../Planner/SkillAbilityTooltip';
 import SkillEffect from '../Planner/SkillEffect';
 
 import ctrlImg from '../../imgs/other/ctrlKey.webp';
+import lockImg from '../../imgs/other/icon_padlock.webp';
+import SkillPhase from '../Planner/SkillPhase';
 
 interface PropInterface {
   tech: TechNodeInterface | undefined;
@@ -41,10 +43,13 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter }: PropInterface) => {
   }, [ctrCounter]);
 
   const relatedAbilities = getRelatedAbilities(tech?.technology.effects);
+  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
+
   return (
     <span className="text-center flex flex-row">
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
+          <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" />
           <h3 className="text-gray-50 text-2xl">{tech?.technology.onscreen_name}</h3>
           {tech?.technology?.short_description?.trim() && !isMobile && (
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
@@ -83,13 +88,19 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter }: PropInterface) => {
         )}
       </div>
 
-      {relatedAbilities.length !== 0 &&
-        relatedAbilities.map((ability, index) => {
-          if (index !== ctrCounter) {
-            return;
-          }
-          return <SkillAbilityTooltip key={index} ability={ability} />;
-        })}
+      {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
+        <div className="flex flex-col w-fit h-fit max-w-[30vw] ml-2">
+          {relatedAbilities.map((ability, index) => {
+            if (index !== ctrCounter) {
+              return;
+            }
+            return <SkillAbilityTooltip key={index} ability={ability} />;
+          })}
+          {relatedPhases.map((phase, index) => {
+            return <SkillPhase key={index} phase={phase} index={index} header={true} random={false} />;
+          })}
+        </div>
+      )}
     </span>
   );
 };

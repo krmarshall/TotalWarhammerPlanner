@@ -9,6 +9,8 @@ import {
   useHover,
   FloatingPortal,
   autoPlacement,
+  limitShift,
+  safePolygon,
 } from '@floating-ui/react';
 
 interface Props {
@@ -21,15 +23,32 @@ interface Props {
 // https://codesandbox.io/s/winter-tree-wmmffl?file=/src/Tooltip.tsx
 const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
   const [open, setOpen] = useState(false);
+  const [locked, setLocked] = useState(false);
 
-  const { x, y, reference, floating, strategy, context, refs, update } = useFloating({
+  const { x, y, strategy, context, refs, update } = useFloating({
     placement,
     open,
     onOpenChange: setOpen,
-    middleware: [offset(20), autoPlacement({ padding: 8 }), shift({ padding: 8, crossAxis: true })],
+    middleware: [
+      offset(20),
+      autoPlacement({ padding: 8 }),
+      shift({ padding: 8, crossAxis: true, limiter: limitShift() }),
+    ],
   });
 
-  const { getReferenceProps, getFloatingProps } = useInteractions([useHover(context)]);
+  let getReferenceProps;
+  let getFloatingProps;
+  if (locked) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const temp = useInteractions([useHover(context, { handleClose: safePolygon({ blockPointerEvents: true }) })]);
+    getReferenceProps = temp.getReferenceProps;
+    getFloatingProps = temp.getFloatingProps;
+  } else {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const temp = useInteractions([useHover(context)]);
+    getReferenceProps = temp.getReferenceProps;
+    getFloatingProps = temp.getFloatingProps;
+  }
 
   useEffect(() => {
     if (refs.reference.current && refs.floating.current && open) {
@@ -37,15 +56,28 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
     }
   }, [refs.reference, refs.floating, update, open]);
 
+  useEffect(() => {
+    if (!open) {
+      setLocked(false);
+    }
+    const tempRef = refs.reference.current;
+    setTimeout(() => {
+      if (open === true && refs.reference.current === tempRef) {
+        setLocked(true);
+      }
+    }, 3500);
+  }, [open]);
+
   return (
     <>
-      {cloneElement(children, getReferenceProps({ ref: reference, ...children.props }))}
+      {cloneElement(children, getReferenceProps({ ref: refs.setReference, ...children.props }))}
       <FloatingPortal>
         {open && (
           <div
             {...getFloatingProps({
-              ref: floating,
-              className: 'Tooltip z-30 max-h-[98vh] fade-in font-CaslonAntique select-none overflow-hidden',
+              ref: refs.setFloating,
+              className:
+                'Tooltip z-30 max-h-[98vh] fade-in font-CaslonAntique select-none overflow-y-auto scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-700',
               style: {
                 position: strategy,
                 // top: y ?? '', // Allegedly using below transform is better perf but can blur if set on subpixels?
