@@ -873,6 +873,9 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      chs_cha_harald_hammerstorm: {
+        name: 'Harald Hammerstorm',
+      },
       chs_exalted_hero: {
         name: 'Exalted Hero',
       },

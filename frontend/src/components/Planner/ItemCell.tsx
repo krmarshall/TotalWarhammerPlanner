@@ -53,7 +53,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
         <span className="text-center flex flex-row w-max">
           <div className="flex flex-col">
             <div className="h-fit min-w-[15vw] p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-              <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" />
+              {/* <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" /> */}
               <h3 className="text-gray-50 text-2xl">{item?.onscreen_name}</h3>
               {item?.colour_text.trim() && !isMobile && (
                 <h4 className="text-gray-50 opacity-70 text-lg max-w-[20vw]">&quot;{item?.colour_text.trim()}&quot;</h4>

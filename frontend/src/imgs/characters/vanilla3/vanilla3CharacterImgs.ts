@@ -91,6 +91,8 @@ import chd_overseer from './chd_overseer_campaign_01_0.webp';
 import chd_sorcerer_prophet from './chd_sorcerer_prophet_campaign_01_0.webp';
 import chd_zhatan_the_black from './chd_zhatan_the_black_0.webp';
 import neu_ulrika from './neu_ulrika_0.webp';
+
+import chs_harald_hammerstorm from './dae_chs_harald_hammerstorm_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
@@ -244,6 +246,8 @@ const vanilla3CharacterImgs = {
   chd_sorcerer_prophet_metal: chd_sorcerer_prophet,
   chd_zhatan: chd_zhatan_the_black,
   ksl_ulrika: neu_ulrika,
+
+  chs_cha_harald_hammerstorm: chs_harald_hammerstorm,
 };
 
 export default vanilla3CharacterImgs;

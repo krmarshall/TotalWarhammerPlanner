@@ -58,7 +58,7 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
     <span className="text-center flex flex-row">
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" />
+          {/* <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" /> */}
           <h3 className="text-gray-50 text-2xl">{skill?.localised_name}</h3>
           {skill?.localised_description.trim() && !isMobile && (
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
