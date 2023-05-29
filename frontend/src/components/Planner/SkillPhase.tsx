@@ -54,7 +54,7 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
       <div className="w-full rounded-lg border border-gray-500 p-2 shadow-lg bg-gray-600">
         {header && (
           <div className="flex flex-row flex-nowrap">
-            <img src={`/imgs/${phase.icon}.webp`} alt="bvl" width="22" height="22" className="my-auto mx-1 h-8 w-8" />
+            <img src={`/imgs/${phase.icon}.webp`} alt="phase" width="22" height="22" className="my-auto mx-1 h-8 w-8" />
             <h4 className="text-2xl ml-1">{phase.onscreen_name}</h4>
           </div>
         )}

@@ -73,9 +73,17 @@ const lege3Characters = {
       hkrul_aldred: { name: 'Aldred von Carroburg' },
       kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
       bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
+      hkrul_gunter: { name: 'Gunter Fredhoff' },
       str_halagrundsor: { name: 'Halagrundsor the Horrible' },
       ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
     },
+  },
+
+  grn_greenskins: {
+    lords: {
+      kou_frob_nobber: { name: 'Nobber Fangadoom' },
+    },
+    heroes: {},
   },
 
   hef_high_elves: {
@@ -88,6 +96,7 @@ const lege3Characters = {
   kho_khorne: {
     lords: {
       str_abrax: { name: 'Abrax the Bloody' },
+      str_kaarn: { name: 'Kaarn the Vanquisher' },
     },
     heroes: {
       str_scyla: { name: 'Scyla Anfingrimm' },
@@ -115,6 +124,13 @@ const lege3Characters = {
     heroes: {},
   },
 
+  nor_norsca: {
+    lords: {},
+    heroes: {
+      str_dazharr: { name: 'Dazharr Doomaxe' },
+    },
+  },
+
   nur_nurgle: {
     lords: {
       str_valnir: { name: 'Valnir the Reaper' },
@@ -125,7 +141,7 @@ const lege3Characters = {
   },
 
   ogr_ogre_kingdoms: {
-    lords: {},
+    lords: { str_vazgrat: { name: 'Vazgrat the Lucky' } },
     heroes: {
       str_braugh: { name: 'Braugh Slavelord' },
       str_brudd: { name: 'Brudd the Blackened' },
@@ -174,7 +190,9 @@ const lege3Characters = {
   },
 
   vmp_vampire_counts: {
-    lords: {},
+    lords: {
+      str_rahtep: { name: 'Waldakir Rahtep' },
+    },
     heroes: {
       str_ulrika: { name: 'Ulrika Magdova Straghov' },
     },
@@ -185,7 +203,9 @@ const lege3Characters = {
       queen_marrisith: { name: 'Queen Marrisith' },
       oreon_ll: { name: 'Oreon' },
     },
-    heroes: {},
+    heroes: {
+      kou_skaw_lh: { name: 'Skaw the Falconer' },
+    },
   },
 };
 

@@ -83,7 +83,7 @@ const SkillAbilityVortex = ({ vortex }: PropsInterface) => {
           <h5 className="w-24">Contact:</h5>
           <img
             src={`/imgs/${vortex.contact_effect.icon}.webp`}
-            alt="bvl"
+            alt="contact"
             width="22"
             height="22"
             className="my-auto mx-1 h-6 w-6"

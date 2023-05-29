@@ -151,7 +151,7 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
           <h5 className="w-24">Contact:</h5>
           <img
             src={`/imgs/${projectile.contact_stat_effect.icon}.webp`}
-            alt="bvl"
+            alt="contact"
             width="22"
             height="22"
             className="my-auto mx-1 h-6 w-6"
@@ -164,7 +164,7 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
           <h5 className="w-24">Expl. Contact:</h5>
           <img
             src={`/imgs/${projectile.explosion_type?.contact_phase_effect.icon}.webp`}
-            alt="bvl"
+            alt="contact"
             width="22"
             height="22"
             className="my-auto mx-1 h-6 w-6"

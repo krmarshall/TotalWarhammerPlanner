@@ -51,6 +51,13 @@ import str_feytor from './str_feytor.webp';
 import str_haargroth from './str_haargroth.webp';
 import str_styrkaar from './str_styrkaar.webp';
 import str_vandred from './str_vandred.webp';
+import hkrul_gunter from './hkrul_gunter.webp';
+import kou_frob_nobber from './kou_frob_nobber.webp';
+import kou_skaw_lh from './kou_skaw_lh.webp';
+import str_dazharr from './str_dazharr.webp';
+import str_kaarn from './str_kaarn.webp';
+import str_rahtep from './str_rahtep.webp';
+import str_vazgrat from './str_vazgrat.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -108,6 +115,13 @@ const lege3CharacterImgs = {
   str_haargroth: str_haargroth,
   str_styrkaar: str_styrkaar,
   str_vandred: str_vandred,
+  hkrul_gunter: hkrul_gunter,
+  kou_frob_nobber: kou_frob_nobber,
+  kou_skaw_lh: kou_skaw_lh,
+  str_dazharr: str_dazharr,
+  str_kaarn: str_kaarn,
+  str_rahtep: str_rahtep,
+  str_vazgrat: str_vazgrat,
 };
 
 export default lege3CharacterImgs;

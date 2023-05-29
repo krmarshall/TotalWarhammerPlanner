@@ -239,7 +239,7 @@ const UnitStats = () => {
               >
                 <img
                   src={`/imgs/${stats.contact_phase.icon}.webp`}
-                  alt="bvl"
+                  alt="contact"
                   width="22"
                   height="22"
                   className="my-auto ml-1 h-5 w-5"
@@ -436,7 +436,7 @@ const UnitStats = () => {
               >
                 <img
                   src={`/imgs/${stats.projectile.contact_stat_effect.icon}.webp`}
-                  alt="bvl"
+                  alt="contact"
                   width="22"
                   height="22"
                   className="my-auto ml-1 h-5 w-5"
