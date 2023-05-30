@@ -66,6 +66,7 @@ const lege3Characters = {
   emp_empire: {
     lords: {
       hkrul_erkstein: { name: 'Grand Marshal Erkstein' },
+      hkrul_gunter: { name: 'Gunter Fredhoff' },
       dead_kes: { name: 'Stefan von Kessel' },
       str_thyrus: { name: 'Thyrus Gorman', spellLore: SpellLores.fire },
     },
@@ -73,7 +74,6 @@ const lege3Characters = {
       hkrul_aldred: { name: 'Aldred von Carroburg' },
       kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
       bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
-      hkrul_gunter: { name: 'Gunter Fredhoff' },
       str_halagrundsor: { name: 'Halagrundsor the Horrible' },
       ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
     },
@@ -81,7 +81,7 @@ const lege3Characters = {
 
   grn_greenskins: {
     lords: {
-      kou_frob_nobber: { name: 'Nobber Fangadoom' },
+      kou_frob_nobber: { name: 'Nobber Fangadoom', spellLore: SpellLores.lilWagh },
     },
     heroes: {},
   },
@@ -127,7 +127,7 @@ const lege3Characters = {
   nor_norsca: {
     lords: {},
     heroes: {
-      str_dazharr: { name: 'Dazharr Doomaxe' },
+      str_dazharr: { name: 'Dazharr Doomaxe', spellLore: SpellLores.hashut },
     },
   },
 
@@ -191,7 +191,7 @@ const lege3Characters = {
 
   vmp_vampire_counts: {
     lords: {
-      str_rahtep: { name: 'Waldakir Rahtep' },
+      str_rahtep: { name: 'Waldakir Rahtep', spellLore: SpellLores.mixed },
     },
     heroes: {
       str_ulrika: { name: 'Ulrika Magdova Straghov' },
