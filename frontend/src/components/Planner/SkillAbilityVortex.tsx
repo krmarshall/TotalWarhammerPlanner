@@ -1,5 +1,4 @@
 import { VortexInterface } from '../../types/interfaces/CharacterInterface';
-import SkillPhase from './SkillPhase';
 
 interface PropsInterface {
   vortex: VortexInterface;

@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { ProjectileInterface } from '../../types/interfaces/CharacterInterface';
-import SkillPhase from './SkillPhase';
 import SkillAbilityVortex from './SkillAbilityVortex';
 
 interface PropsInterface {

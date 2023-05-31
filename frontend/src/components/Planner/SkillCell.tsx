@@ -1,4 +1,4 @@
-import { MouseEvent, useContext, useEffect, useState } from 'react';
+import { MouseEvent, useContext, useEffect, useRef, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { skillIncreaseIsValid, isValidSkillTree } from '../../utils/skillVerification';
@@ -31,6 +31,9 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     characterBuild?.buildData?.[yIndex]?.[xIndex] as number
   );
   const [ctrCounter, setCtrCounter] = useState(0);
+  const [tooltipScrollable, setTooltipScrollable] = useState(false);
+  const tooltipRef = useRef<HTMLSpanElement>(null);
+  const cellRef = useRef<HTMLTableCellElement>(null);
 
   useEffect(() => {
     let tempCurPoints = thisSkillsCurrentPoints;
@@ -94,6 +97,29 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
       }
     });
   }, [characterBuild?.rank]);
+
+  useEffect(() => {
+    const passScrollEvent = (event: WheelEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (tooltipRef.current !== null) {
+        const tooltipScrollPosition = tooltipRef.current.scrollTop ?? 0;
+        tooltipRef.current.scrollTo({
+          top: tooltipScrollPosition + event.deltaY,
+        });
+      }
+    };
+
+    if (tooltipScrollable && cellRef.current !== null) {
+      cellRef.current.addEventListener('wheel', passScrollEvent);
+    }
+
+    return () => {
+      if (cellRef.current !== null) {
+        cellRef.current.removeEventListener('wheel', passScrollEvent);
+      }
+    };
+  }, [tooltipScrollable, tooltipRef?.current]);
 
   const rankUpSkill = (autoRankSkill: boolean) => {
     if (!autoRankSkill) {
@@ -296,6 +322,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
 
   return (
     <td
+      ref={cellRef}
       className={tdClassName}
       onMouseDown={(event: MouseEvent) => {
         skillClickHandler(event);
@@ -333,6 +360,8 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
               blocked={blocked}
               ctrCounter={ctrCounter}
               setCtrCounter={setCtrCounter}
+              setTooltipScrollable={setTooltipScrollable}
+              tooltipRef={tooltipRef}
             />
           }
         >

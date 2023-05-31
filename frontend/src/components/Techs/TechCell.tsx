@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useXarrow } from 'react-xarrows';
 import { AppContext } from '../../contexts/AppContext';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
@@ -21,7 +21,33 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
   const { state } = useContext(AppContext);
   const { selectedModTech } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
+  const [tooltipScrollable, setTooltipScrollable] = useState(false);
+  const tooltipRef = useRef<HTMLSpanElement>(null);
+  const cellRef = useRef<HTMLTableCellElement>(null);
   const updateXarrow = useXarrow();
+
+  useEffect(() => {
+    const passScrollEvent = (event: WheelEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (tooltipRef.current !== null) {
+        const tooltipScrollPosition = tooltipRef.current.scrollTop ?? 0;
+        tooltipRef.current.scrollTo({
+          top: tooltipScrollPosition + event.deltaY,
+        });
+      }
+    };
+
+    if (tooltipScrollable && cellRef.current !== null) {
+      cellRef.current.addEventListener('wheel', passScrollEvent);
+    }
+
+    return () => {
+      if (cellRef.current !== null) {
+        cellRef.current.removeEventListener('wheel', passScrollEvent);
+      }
+    };
+  }, [tooltipScrollable, tooltipRef?.current]);
 
   const fontSize = setFontSize(tech.technology.onscreen_name);
 
@@ -30,6 +56,7 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
   const imgPath = tech.technology.icon_name + '.webp';
   return (
     <td
+      ref={cellRef}
       className={'flex flex-row w-max h-auto py-2 pr-6' + borderClass}
       style={{ backgroundColor: `#${tech.ui_group_colour}50` }}
       onContextMenu={(event) => {
@@ -41,7 +68,17 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
         id={tech.key}
         className="flex flex-row relative z-10 rounded-lg drop-shadow-lg hover-scale bg-no-repeat bg-cover filter-none bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"
       >
-        <TooltipWrapper tooltip={<TechTooltip tech={tech} ctrCounter={ctrCounter} setCtrCounter={setCtrCounter} />}>
+        <TooltipWrapper
+          tooltip={
+            <TechTooltip
+              tech={tech}
+              ctrCounter={ctrCounter}
+              setCtrCounter={setCtrCounter}
+              setTooltipScrollable={setTooltipScrollable}
+              tooltipRef={tooltipRef}
+            />
+          }
+        >
           <div className="flex flex-row">
             {tech.research_points_required > 0 && (
               <div className="">

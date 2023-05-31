@@ -5,10 +5,7 @@ import techGameData from '../../data/techGameData';
 import TooltipWrapper from '../TooltipWrapper';
 
 import resetIcon from '../../imgs/other/icon_reset.webp';
-import shareIcon from '../../imgs/other/icon_button_external_link.webp';
 import backIcon from '../../imgs/other/icon_home.webp';
-import leftMouse from '../../imgs/other/help_page_left_mouse.webp';
-import rightMouse from '../../imgs/other/help_page_right_mouse.webp';
 import scrollWheel from '../../imgs/other/help_page_middle_mouse.webp';
 import shift from '../../imgs/other/help_page_camera_speed_controls.webp';
 

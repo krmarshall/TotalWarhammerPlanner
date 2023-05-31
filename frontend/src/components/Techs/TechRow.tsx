@@ -8,7 +8,7 @@ interface PropInterface {
 
 const TechRow = ({ techRow, yIndex }: PropInterface) => {
   if ((techRow === null || techRow.length === 0) && [0, 1].includes(yIndex)) {
-    return <td className="h-0"></td>;
+    return <tr className="h-0"></tr>;
   }
   return (
     <tr className="flex flex-row">

@@ -4,8 +4,6 @@ import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
 import { getRelatedAbilities, getRelatedContactPhases } from '../../utils/sharedFunctions';
 import SkillEffect from '../Planner/SkillEffect';
-
-import lockImg from '../../imgs/other/icon_padlock.webp';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../TooltipAbilityMap';
 
@@ -13,9 +11,11 @@ interface PropInterface {
   tech: TechNodeInterface | undefined;
   ctrCounter: number;
   setCtrCounter: React.Dispatch<React.SetStateAction<number>>;
+  setTooltipScrollable?: React.Dispatch<React.SetStateAction<boolean>>;
+  tooltipRef?: React.RefObject<HTMLSpanElement>;
 }
 
-const TechTooltip = ({ tech, ctrCounter, setCtrCounter }: PropInterface) => {
+const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, tooltipRef }: PropInterface) => {
   const { state } = useContext(AppContext);
   const { techData } = state;
 
@@ -41,14 +41,26 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter }: PropInterface) => {
     };
   }, [ctrCounter]);
 
+  useEffect(() => {
+    if (setTooltipScrollable !== undefined) {
+      if (tooltipRef?.current !== null && tooltipRef?.current !== undefined) {
+        setTooltipScrollable(tooltipRef.current.scrollHeight > tooltipRef.current.clientHeight);
+      } else {
+        setTooltipScrollable(false);
+      }
+    }
+  }, [tooltipRef?.current, ctrCounter]);
+
   const relatedAbilities = getRelatedAbilities(tech?.technology.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
 
   return (
-    <span className="text-center flex flex-row">
+    <span
+      ref={tooltipRef}
+      className="max-h-[98vh] text-center flex flex-row overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700"
+    >
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          {/* <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" /> */}
           <h3 className="text-gray-50 text-2xl">{tech?.technology.onscreen_name}</h3>
           {tech?.technology?.short_description?.trim() && !isMobile && (
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">

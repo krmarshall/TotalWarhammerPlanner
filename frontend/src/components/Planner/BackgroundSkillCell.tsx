@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import { setFontSize, trimString } from '../../utils/sharedFunctions';
 import ReactImage from '../ReactImage';
@@ -11,6 +11,32 @@ interface PropInterface {
 
 const BackgroundSkillCell = ({ skill }: PropInterface) => {
   const [ctrCounter, setCtrCounter] = useState(0);
+  const [tooltipScrollable, setTooltipScrollable] = useState(false);
+  const tooltipRef = useRef<HTMLSpanElement>(null);
+  const cellRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const passScrollEvent = (event: WheelEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (tooltipRef.current !== null) {
+        const tooltipScrollPosition = tooltipRef.current.scrollTop ?? 0;
+        tooltipRef.current.scrollTo({
+          top: tooltipScrollPosition + event.deltaY,
+        });
+      }
+    };
+
+    if (tooltipScrollable && cellRef.current !== null) {
+      cellRef.current.addEventListener('wheel', passScrollEvent);
+    }
+
+    return () => {
+      if (cellRef.current !== null) {
+        cellRef.current.removeEventListener('wheel', passScrollEvent);
+      }
+    };
+  }, [tooltipScrollable, tooltipRef?.current]);
 
   const fontSize = setFontSize(skill.localised_name);
 
@@ -25,10 +51,15 @@ const BackgroundSkillCell = ({ skill }: PropInterface) => {
           blocked={false}
           ctrCounter={ctrCounter}
           setCtrCounter={setCtrCounter}
+          setTooltipScrollable={setTooltipScrollable}
+          tooltipRef={tooltipRef}
         />
       }
     >
-      <div className="flex flex-row m-auto drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]">
+      <div
+        ref={cellRef}
+        className="flex flex-row m-auto drop-shadow-lg hover-scale bg-no-repeat bg-cover bg-[url(/imgs/other/skills_tab_frame.webp)] hover:bg-[url(/imgs/other/skills_tab_frame_hover.webp)]"
+      >
         <ReactImage
           srcList={srcList}
           className="w-[4.5rem] h-[4.5rem] drop-shadow-lg my-auto text"

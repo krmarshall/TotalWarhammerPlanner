@@ -5,8 +5,6 @@ import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { getRelatedAbilities, getRelatedContactPhases } from '../../utils/sharedFunctions';
-
-import lockImg from '../../imgs/other/icon_padlock.webp';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../TooltipAbilityMap';
 
@@ -16,9 +14,19 @@ interface SkillTooltipPropInterface {
   blocked: boolean;
   ctrCounter: number;
   setCtrCounter: React.Dispatch<React.SetStateAction<number>>;
+  setTooltipScrollable?: React.Dispatch<React.SetStateAction<boolean>>;
+  tooltipRef?: React.RefObject<HTMLSpanElement>;
 }
 
-const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }: SkillTooltipPropInterface) => {
+const SkillTooltip = ({
+  skill,
+  skillPoints,
+  blocked,
+  ctrCounter,
+  setCtrCounter,
+  setTooltipScrollable,
+  tooltipRef,
+}: SkillTooltipPropInterface) => {
   const { state } = useContext(AppContext);
   const { characterData, characterBuild } = state;
 
@@ -44,6 +52,16 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
     };
   }, [ctrCounter]);
 
+  useEffect(() => {
+    if (setTooltipScrollable !== undefined) {
+      if (tooltipRef?.current !== null && tooltipRef?.current !== undefined) {
+        setTooltipScrollable(tooltipRef.current.scrollHeight > tooltipRef.current.clientHeight);
+      } else {
+        setTooltipScrollable(false);
+      }
+    }
+  }, [tooltipRef?.current, ctrCounter]);
+
   let parentName = '';
   if (skill?.parent_required) {
     const parentLocation = findSkill(characterData, characterBuild, skill?.parent_required[0]);
@@ -54,10 +72,12 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
   const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
   return (
-    <span className="text-center flex flex-row">
+    <span
+      ref={tooltipRef}
+      className="max-h-[98vh] text-center flex flex-row overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700"
+    >
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          {/* <img src={lockImg} alt="lock" width="26" height="27" className="-mb-6 h-6 w-6 fade-in-slow" /> */}
           <h3 className="text-gray-50 text-2xl">{skill?.localised_name}</h3>
           {skill?.localised_description.trim() && !isMobile && (
             <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">

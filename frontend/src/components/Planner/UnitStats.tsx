@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import TooltipWrapper from '../TooltipWrapper';
 import smallEntityIcon from '../../imgs/other/icon_entity_small.webp';
@@ -17,6 +17,12 @@ const UnitStats = () => {
 
   const [advanced, setAdvanced] = useState(loadAdvancedToggleFromStorage());
   const [hasBarrier, setHasBarrier] = useState(stats.barrier !== undefined && stats.barrier > 0);
+
+  useEffect(() => {
+    if (stats.barrier !== undefined) {
+      setHasBarrier(stats.barrier > 0);
+    }
+  }, [stats.barrier]);
 
   let healthClassName =
     'flex flex-row flex-nowrap h-6 justify-center mx-auto w-40 bg-green-600 border border-gray-800 rounded-md';

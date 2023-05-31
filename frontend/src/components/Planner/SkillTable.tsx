@@ -14,12 +14,12 @@ const SkillTable = ({ faction }: PropInterface) => {
   const horizontalScroll = (event: React.WheelEvent) => {
     const container = document.getElementById('horScrollContainer');
     if (event.shiftKey) {
-      const containerScrollPosition = container?.scrollTop !== undefined ? container?.scrollTop : 0;
+      const containerScrollPosition = container?.scrollTop ?? 0;
       container?.scrollTo({
         top: containerScrollPosition + event.deltaY,
       });
     } else {
-      const containerScrollPosition = container?.scrollLeft !== undefined ? container?.scrollLeft : 0;
+      const containerScrollPosition = container?.scrollLeft ?? 0;
       container?.scrollTo({
         left: containerScrollPosition + event.deltaY,
       });

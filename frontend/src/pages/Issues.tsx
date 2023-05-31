@@ -69,11 +69,8 @@ const Issues = () => {
 
         <ul className="list-disc list-inside text-gray-200 text-2xl">
           <li>
-            Tooltips that cant find space to fit in the viewport without conflicting with the cursor aren&apos;t visible
-          </li>
-          <li>
-            Tooltips that overflow the viewport can be scrolled, but mousewheel inputs will scroll the background
-            container as well
+            Tooltips that cant find horizontal space to fit in the viewport without conflicting with the cursor
+            aren&apos;t visible
           </li>
           <li>
             Certain skill nodes that require x number of points in the last y skills will be missing a right arrow
