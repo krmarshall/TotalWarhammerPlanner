@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import gameData from '../../data/gameData';
-import TooltipWrapper from '../Planner/TooltipWrapper';
+import TooltipWrapper from '../TooltipWrapper';
 import ReactImage from '../ReactImage';
 import placeholderImg from '../../imgs/other/0placeholder.webp';
 

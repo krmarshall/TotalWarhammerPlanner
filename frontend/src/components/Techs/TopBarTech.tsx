@@ -1,11 +1,16 @@
 import { useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AppContext } from '../../contexts/AppContext';
+import techGameData from '../../data/techGameData';
+import TooltipWrapper from '../TooltipWrapper';
 
 import resetIcon from '../../imgs/other/icon_reset.webp';
 import shareIcon from '../../imgs/other/icon_button_external_link.webp';
 import backIcon from '../../imgs/other/icon_home.webp';
-import techGameData from '../../data/techGameData';
+import leftMouse from '../../imgs/other/help_page_left_mouse.webp';
+import rightMouse from '../../imgs/other/help_page_right_mouse.webp';
+import scrollWheel from '../../imgs/other/help_page_middle_mouse.webp';
+import shift from '../../imgs/other/help_page_camera_speed_controls.webp';
 
 interface PropInterface {
   isMobile: boolean;
@@ -46,6 +51,35 @@ const TopBarTech = ({ isMobile }: PropInterface) => {
       <h1 className={headerClass}>{techGameData[selectedModTech].techTrees[techTree as string].name}</h1>
 
       <div className="w-[30vw] flex place-content-end">
+        <TooltipWrapper
+          tooltip={
+            <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">
+              <h5 className="text-3xl text-center">Controls</h5>
+              {/* <div className="flex flex-row flex-nowrap mb-1">
+                <img src={leftMouse} alt="left mouse" height="36" width="27" />
+                <p className="my-auto">Select Skill</p>
+              </div>
+              <div className="flex flex-row flex-nowrap mb-1">
+                <img src={rightMouse} alt="right mouse" height="36" width="27" />
+                <p className="my-auto">Deselect Skill</p>
+              </div> */}
+              <div className="flex flex-row flex-nowrap mb-1">
+                <img src={scrollWheel} alt="scroll wheel" height="36" width="27" />
+                <p className="my-auto">Scroll Horizontally</p>
+              </div>
+              <div className="flex flex-row flex-nowrap">
+                <img src={shift} alt="shift" height="32" width="86" />
+                <p className="my-auto">+</p>
+                <img src={scrollWheel} alt="scroll wheel" height="36" width="27" />
+                <p className="my-auto">Scroll Vertically</p>
+              </div>
+            </div>
+          }
+        >
+          <div className="my-auto mr-4 px-3 text-2xl text-gray-50 border rounded-full bg-gray-500 hover:bg-gray-400/80 drop-shadow-lg hover-scale">
+            ?
+          </div>
+        </TooltipWrapper>
         <button
           className="flex flex-row place-content-center mr-4 px-2 my-auto bg-gray-500 hover:bg-gray-400/80 border rounded-xl drop-shadow-lg hover-scale"
           onClick={resetButtonHandler}

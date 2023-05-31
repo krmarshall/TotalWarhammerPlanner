@@ -1,15 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import { ItemInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
-import SkillAbilityTooltip from './SkillAbilityTooltip';
 import SkillEffect from './SkillEffect';
-import TooltipWrapper from './TooltipWrapper';
-import ctrlImg from '../../imgs/other/ctrlKey.webp';
+import TooltipWrapper from '../TooltipWrapper';
 import lockImg from '../../imgs/other/icon_padlock.webp';
 import { getRelatedAbilities, getRelatedContactPhases, setFontSize, trimString } from '../../utils/sharedFunctions';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { AppContext } from '../../contexts/AppContext';
-import SkillPhase from './SkillPhase';
+import TooltipAbilityCycler from '../TooltipAbiltyCycler';
+import TooltipAbilityMap from '../TooltipAbilityMap';
 
 interface SkillCellPropsInterface {
   item: ItemInterface;
@@ -68,30 +67,16 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
               </div>
             </div>
             {relatedAbilities.length > 1 && (
-              <div className="h-fit w-fit m-2 mx-auto p-2 rounded border border-gray-400 shadow-lg text-xl text-gray-50 bg-gray-600">
-                <p>
-                  Showing ability {ctrCounter + 1}/{relatedAbilities.length}
-                </p>
-                <p>
-                  Press <img src={ctrlImg} alt="ctrl key" className="w-8 h-8 inline m-auto" width="80" height="80" /> to
-                  cycle the displayed ability
-                </p>
-              </div>
+              <TooltipAbilityCycler ctrCounter={ctrCounter} relatedAbilitiesLength={relatedAbilities.length} />
             )}
           </div>
 
           {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
-            <div className="flex flex-col w-fit h-fit max-w-[30vw] ml-2">
-              {relatedAbilities.map((ability, index) => {
-                if (index !== ctrCounter) {
-                  return;
-                }
-                return <SkillAbilityTooltip key={index} ability={ability} />;
-              })}
-              {relatedPhases.map((phase, index) => {
-                return <SkillPhase key={index} phase={phase} index={index} header={true} random={false} />;
-              })}
-            </div>
+            <TooltipAbilityMap
+              relatedAbilities={relatedAbilities}
+              relatedPhases={relatedPhases}
+              ctrCounter={ctrCounter}
+            />
           )}
         </span>
       }

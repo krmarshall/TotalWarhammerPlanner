@@ -3,7 +3,7 @@ import { useXarrow } from 'react-xarrows';
 import { AppContext } from '../../contexts/AppContext';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
 import { setFontSize, trimString } from '../../utils/sharedFunctions';
-import TooltipWrapper from '../Planner/TooltipWrapper';
+import TooltipWrapper from '../TooltipWrapper';
 import ReactImage from '../ReactImage';
 import TechTooltip from './TechTooltip';
 

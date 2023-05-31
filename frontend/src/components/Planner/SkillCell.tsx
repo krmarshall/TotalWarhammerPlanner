@@ -6,7 +6,7 @@ import BuildInterface from '../../types/interfaces/BuildInterface';
 import { CharacterInterface, SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillPointSelector from './SkillPointSelector';
 import SkillTooltip from './SkillTooltip';
-import TooltipWrapper from './TooltipWrapper';
+import TooltipWrapper from '../TooltipWrapper';
 import ReactImage from '../ReactImage';
 
 import autoSkillIcon from '../../imgs/other/skill_auto_unlock_rank.webp';

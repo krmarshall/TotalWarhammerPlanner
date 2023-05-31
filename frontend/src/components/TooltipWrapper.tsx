@@ -10,7 +10,6 @@ import {
   FloatingPortal,
   autoPlacement,
   limitShift,
-  safePolygon,
 } from '@floating-ui/react';
 
 interface Props {
@@ -23,7 +22,6 @@ interface Props {
 // https://codesandbox.io/s/winter-tree-wmmffl?file=/src/Tooltip.tsx
 const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
   const [open, setOpen] = useState(false);
-  // const [locked, setLocked] = useState(false);
 
   const { x, y, strategy, context, refs, update } = useFloating({
     placement,
@@ -37,37 +35,12 @@ const TooltipWrapper = ({ children, tooltip, placement = 'right' }: Props) => {
   });
 
   const { getReferenceProps, getFloatingProps } = useInteractions([useHover(context)]);
-  // let getReferenceProps;
-  // let getFloatingProps;
-  // if (locked) {
-  //   // eslint-disable-next-line react-hooks/rules-of-hooks
-  //   const temp = useInteractions([useHover(context, { handleClose: safePolygon({ blockPointerEvents: true }) })]);
-  //   getReferenceProps = temp.getReferenceProps;
-  //   getFloatingProps = temp.getFloatingProps;
-  // } else {
-  //   // eslint-disable-next-line react-hooks/rules-of-hooks
-  //   const temp = useInteractions([useHover(context)]);
-  //   getReferenceProps = temp.getReferenceProps;
-  //   getFloatingProps = temp.getFloatingProps;
-  // }
 
   useEffect(() => {
     if (refs.reference.current && refs.floating.current && open) {
       return autoUpdate(refs.reference.current, refs.floating.current, update);
     }
   }, [refs.reference, refs.floating, update, open]);
-
-  // useEffect(() => {
-  //   if (!open) {
-  //     setLocked(false);
-  //   }
-  //   const tempRef = refs.reference.current;
-  //   setTimeout(() => {
-  //     if (open === true && refs.reference.current === tempRef) {
-  //       setLocked(true);
-  //     }
-  //   }, 3500);
-  // }, [open]);
 
   return (
     <>

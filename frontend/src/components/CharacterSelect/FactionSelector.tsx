@@ -6,7 +6,7 @@ import ReactImage from '../ReactImage';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import placeholderImg from '../../imgs/other/0placeholder.webp';
 import shareIcon from '../../imgs/other/icon_button_external_link.webp';
-import TooltipWrapper from '../Planner/TooltipWrapper';
+import TooltipWrapper from '../TooltipWrapper';
 import { toast } from 'react-hot-toast';
 
 const FactionSelector = () => {

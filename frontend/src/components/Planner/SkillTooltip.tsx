@@ -1,15 +1,14 @@
 import { findSkill } from '../../utils/skillVerification';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import SkillEffect from './SkillEffect';
-import SkillAbilityTooltip from './SkillAbilityTooltip';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { getRelatedAbilities, getRelatedContactPhases } from '../../utils/sharedFunctions';
 
-import ctrlImg from '../../imgs/other/ctrlKey.webp';
 import lockImg from '../../imgs/other/icon_padlock.webp';
-import SkillPhase from './SkillPhase';
+import TooltipAbilityCycler from '../TooltipAbiltyCycler';
+import TooltipAbilityMap from '../TooltipAbilityMap';
 
 interface SkillTooltipPropInterface {
   skill: SkillInterface | undefined;
@@ -91,30 +90,12 @@ const SkillTooltip = ({ skill, skillPoints, blocked, ctrCounter, setCtrCounter }
           </div>
         </div>
         {relatedAbilities.length > 1 && (
-          <div className="h-fit w-fit m-2 mx-auto p-2 rounded border border-gray-400 shadow-lg text-xl text-gray-50 bg-gray-600">
-            <p>
-              Showing ability {ctrCounter + 1}/{relatedAbilities.length}
-            </p>
-            <p>
-              Press <img src={ctrlImg} alt="ctrl key" className="w-8 h-8 inline m-auto" width="80" height="80" /> to
-              cycle the displayed ability
-            </p>
-          </div>
+          <TooltipAbilityCycler ctrCounter={ctrCounter} relatedAbilitiesLength={relatedAbilities.length} />
         )}
       </div>
 
       {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
-        <div className="flex flex-col w-fit h-fit max-w-[30vw] ml-2">
-          {relatedAbilities.map((ability, index) => {
-            if (index !== ctrCounter) {
-              return;
-            }
-            return <SkillAbilityTooltip key={index} ability={ability} />;
-          })}
-          {relatedPhases.map((phase, index) => {
-            return <SkillPhase key={index} phase={phase} index={index} header={true} random={false} />;
-          })}
-        </div>
+        <TooltipAbilityMap relatedAbilities={relatedAbilities} relatedPhases={relatedPhases} ctrCounter={ctrCounter} />
       )}
     </span>
   );

@@ -3,7 +3,7 @@ import { SkillInterface } from '../../types/interfaces/CharacterInterface';
 import { setFontSize, trimString } from '../../utils/sharedFunctions';
 import ReactImage from '../ReactImage';
 import SkillTooltip from './SkillTooltip';
-import TooltipWrapper from './TooltipWrapper';
+import TooltipWrapper from '../TooltipWrapper';
 
 interface PropInterface {
   skill: SkillInterface;

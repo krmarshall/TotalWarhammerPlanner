@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { AppContext } from '../../contexts/AppContext';
-import TooltipWrapper from './TooltipWrapper';
+import TooltipWrapper from '../TooltipWrapper';
 import smallEntityIcon from '../../imgs/other/icon_entity_small.webp';
 import largeEntityIcon from '../../imgs/other/icon_entity_large.webp';
 import { loadAdvancedToggleFromStorage, saveAdvancedToggleFromStorage } from '../../utils/storageFunctions';
