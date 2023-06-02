@@ -6,12 +6,11 @@ import { vanilla2CharactersMemes } from './characters/vanilla2Characters';
 import { vanilla3CharactersMemes } from './characters/vanilla3Characters';
 import radious3Characters from './characters/radious3Characters';
 import mixu3Characters from './characters/mixu3Characters';
-import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
 import lege3Characters from './characters/lege3Characters';
 import crys3Characters from './characters/crys3Characters';
 import scm3Characters from './characters/scm3Characters';
-import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
 import sfo3Characters from './characters/sfo3Characters';
+import cat3Characters from './characters/cat3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
@@ -21,6 +20,11 @@ import lege3CharacterImgs from '../imgs/characters/lege3/lege3CharacterImgs';
 import crys3CharacterImgs from '../imgs/characters/crys3/crys3CharacterImgs';
 import scm3CharacterImgs from '../imgs/characters/scm3/scm3CharacterImgs';
 import sfo3CharacterImgs from '../imgs/characters/sfo3/sfo3CharacterImgs';
+import cat3CharacterImgs from '../imgs/characters/cat3/cat3CharacterImgs';
+
+import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
+import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
+import cat3CompGroups from '../../../TWPData/compGroups/cat3.json';
 
 const gameData: { [key: string]: GameDataInterface } = {
   vanilla2: {
@@ -87,6 +91,22 @@ const gameData: { [key: string]: GameDataInterface } = {
     updated: '2 Jun 2023',
     category: 'Character Mod',
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
+  },
+  cat3: {
+    text: "Cataph's Compilation 3",
+    image: gameImages['cat3'],
+    factions: factions,
+    characters: cat3Characters,
+    characterImages: cat3CharacterImgs,
+    compilationGroups: cat3CompGroups,
+    updated: '25 May 2023',
+    category: 'Character Mod Compilation',
+    includes: [
+      "Cataph's Southern Realms (TEB) (25 May 2023)",
+      "Cataph's Kraka Drak: the Norse Dwarfs (25 May 2023)",
+      "Cataph's High Elf Sea Patrol (25 May 2023)",
+    ],
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2984086934',
   },
   scm3: {
     text: 'Skeleton Crew Compilation 3',

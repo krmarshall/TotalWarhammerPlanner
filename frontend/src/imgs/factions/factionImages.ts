@@ -28,6 +28,7 @@ import chorfs from './chorfs.webp';
 import gnoblars from './gnoblars.webp';
 import jadeVampires from './jadeVampires.webp';
 import rotbloodTribe from './rotbloodTribe.webp';
+import southernRealms from './southernRealms.webp';
 
 // Tech Factions
 import chevaliers from './chevaliers.webp';
@@ -38,6 +39,7 @@ import fecundites from './fecundites.webp';
 import shadowLegion from './shadowLegion.webp';
 import legionOfTheGorequeen from './legionOfTheGorequeen.webp';
 import puppetsOfMisrule from './puppetsOfMisrule.webp';
+import krakaDrak from './krakaDrak.webp';
 
 const factionImages = {
   tmb_tomb_kings: tombKings,
@@ -68,6 +70,7 @@ const factionImages = {
   gnb_gnoblars: gnoblars,
   jbv_jade_vampires: jadeVampires,
   str_rotblood: rotbloodTribe,
+  teb_southern_realms: southernRealms,
 
   brt_chevaliers: chevaliers,
   emp_hunstmarshal: hunstmarshal,
@@ -77,6 +80,7 @@ const factionImages = {
   chs_shadowLegion: shadowLegion,
   chs_legionOfTheGorequeen: legionOfTheGorequeen,
   chs_puppetsOfMisrule: puppetsOfMisrule,
+  dwf_kraka_drak: krakaDrak,
 };
 
 export default factionImages;

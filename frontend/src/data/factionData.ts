@@ -29,6 +29,8 @@ const factions = {
   jbv_jade_vampires: 'Jade-Blooded Vampires',
 
   str_rotblood: 'Rotblood Tribe',
+
+  teb_southern_realms: 'Southern Realms',
 };
 
 export default factions;

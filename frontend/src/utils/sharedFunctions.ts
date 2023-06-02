@@ -184,6 +184,7 @@ const getRelatedContactPhases = (ability: AbilityInterface | undefined) => {
 
 const getUnitStatSets = (characterData: CharacterInterface | null) => {
   const unitStatSets: Array<{ name: string; stats: UnitStatsInterface }> = [];
+  const unitStatNames: Array<string> = [];
 
   if (characterData?.unitStats !== undefined) {
     unitStatSets.push({ name: 'Base', stats: characterData?.unitStats });
@@ -191,7 +192,8 @@ const getUnitStatSets = (characterData: CharacterInterface | null) => {
   characterData?.skillTree.forEach((skillLine) =>
     skillLine.forEach((skill) =>
       skill.levels?.forEach((skillLevel) => {
-        if (skillLevel.mount_unit_stats !== undefined) {
+        if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(skill.localised_name)) {
+          unitStatNames.push(skill.localised_name);
           unitStatSets.push({ name: skill.localised_name, stats: skillLevel.mount_unit_stats });
         }
       })
@@ -200,7 +202,8 @@ const getUnitStatSets = (characterData: CharacterInterface | null) => {
 
   characterData?.backgroundSkills?.forEach((bgSkill) =>
     bgSkill.levels?.forEach((skillLevel) => {
-      if (skillLevel.mount_unit_stats !== undefined) {
+      if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
+        unitStatNames.push(bgSkill.localised_name);
         unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
       }
     })
