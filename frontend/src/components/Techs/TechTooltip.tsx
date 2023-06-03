@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
-import { getRelatedAbilities, getRelatedContactPhases } from '../../utils/sharedFunctions';
+import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../utils/sharedFunctions';
 import SkillEffect from '../Planner/SkillEffect';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../TooltipAbilityMap';
@@ -53,7 +53,7 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, to
 
   const relatedAbilities = getRelatedAbilities(tech?.technology.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
-
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
   return (
     <span
       ref={tooltipRef}
@@ -92,7 +92,12 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, to
       </div>
 
       {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
-        <TooltipAbilityMap relatedAbilities={relatedAbilities} relatedPhases={relatedPhases} ctrCounter={ctrCounter} />
+        <TooltipAbilityMap
+          relatedAbilities={relatedAbilities}
+          relatedPhases={relatedPhases}
+          relatedAttributes={relatedAttributes}
+          ctrCounter={ctrCounter}
+        />
       )}
     </span>
   );

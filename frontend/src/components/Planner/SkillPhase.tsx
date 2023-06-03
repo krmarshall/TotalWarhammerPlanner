@@ -48,10 +48,11 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
   }
 
   const selectedGame = selectedMod.includes('2') ? '2' : '3';
+  const borderColor = header ? ' border-gray-400' : ' border-gray-500';
   return (
-    <div className="flex flex-row flex-nowrap mb-1 w-full text-gray-50 text-lg">
+    <div className="flex flex-row flex-nowrap mb-2 w-full text-gray-50 text-lg">
       {random && <img className="w-7 h-7 -ml-6 mr-1" src={randImgSrc} alt="random phase img" width="38" height="38" />}
-      <div className="w-full rounded-lg border border-gray-500 p-2 shadow-lg bg-gray-600">
+      <div className={'w-full rounded-lg border p-2 shadow-lg bg-gray-600' + borderColor}>
         {header && (
           <div className="flex flex-row flex-nowrap">
             <img src={`/imgs/${phase.icon}.webp`} alt="phase" width="22" height="22" className="my-auto mx-1 h-8 w-8" />

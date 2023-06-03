@@ -1,6 +1,7 @@
 import BuildInterface from '../types/interfaces/BuildInterface';
 import {
   AbilityInterface,
+  AttributeInterface,
   CharacterInterface,
   EffectInterface,
   PhaseInterface,
@@ -182,6 +183,45 @@ const getRelatedContactPhases = (ability: AbilityInterface | undefined) => {
   return relatedPhases;
 };
 
+const getRelatedAttributes = (ability: AbilityInterface | undefined) => {
+  const relatedAttributes: Array<AttributeInterface> = [];
+  const relatedAttributeKeys: Array<string> = [];
+
+  const addAttribute = (attribute: AttributeInterface) => {
+    if (!relatedAttributeKeys.includes(attribute.key)) {
+      relatedAttributes.push(attribute);
+      relatedAttributeKeys.push(attribute.key);
+    }
+  };
+
+  if (ability === undefined) {
+    return relatedAttributes;
+  }
+
+  ability.unit_ability?.phases?.forEach((phase) => phase.attributes?.forEach((attribute) => addAttribute(attribute)));
+  ability.unit_ability?.activated_projectile?.contact_stat_effect?.attributes?.forEach((attribute) =>
+    addAttribute(attribute)
+  );
+  ability.unit_ability?.activated_projectile?.explosion_type?.contact_phase_effect?.attributes?.forEach((attribute) =>
+    addAttribute(attribute)
+  );
+  ability.unit_ability?.activated_projectile?.spawned_vortex?.contact_effect?.attributes?.forEach((attribute) =>
+    addAttribute(attribute)
+  );
+  ability.unit_ability?.bombardment?.projectile_type?.contact_stat_effect?.attributes?.forEach((attribute) =>
+    addAttribute(attribute)
+  );
+  ability.unit_ability?.bombardment?.projectile_type?.explosion_type?.contact_phase_effect?.attributes?.forEach(
+    (attribute) => addAttribute(attribute)
+  );
+  ability.unit_ability?.bombardment?.projectile_type?.spawned_vortex?.contact_effect?.attributes?.forEach((attribute) =>
+    addAttribute(attribute)
+  );
+  ability.unit_ability?.vortex?.contact_effect?.attributes?.forEach((attribute) => addAttribute(attribute));
+
+  return relatedAttributes;
+};
+
 const getUnitStatSets = (characterData: CharacterInterface | null) => {
   const unitStatSets: Array<{ name: string; stats: UnitStatsInterface }> = [];
   const unitStatNames: Array<string> = [];
@@ -298,6 +338,7 @@ export {
   trimString,
   getRelatedAbilities,
   getRelatedContactPhases,
+  getRelatedAttributes,
   getUnitStatSets,
   setFontSize,
   getBgUrl,

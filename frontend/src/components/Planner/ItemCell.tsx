@@ -3,7 +3,13 @@ import { ItemInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from '../TooltipWrapper';
-import { getRelatedAbilities, getRelatedContactPhases, setFontSize, trimString } from '../../utils/sharedFunctions';
+import {
+  getRelatedAbilities,
+  getRelatedAttributes,
+  getRelatedContactPhases,
+  setFontSize,
+  trimString,
+} from '../../utils/sharedFunctions';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { AppContext } from '../../contexts/AppContext';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
@@ -76,6 +82,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
 
   const relatedAbilities = getRelatedAbilities(item.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
 
   const fontSize = setFontSize(item.onscreen_name);
 
@@ -110,6 +117,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
             <TooltipAbilityMap
               relatedAbilities={relatedAbilities}
               relatedPhases={relatedPhases}
+              relatedAttributes={relatedAttributes}
               ctrCounter={ctrCounter}
             />
           )}

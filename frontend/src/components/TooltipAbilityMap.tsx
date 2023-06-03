@@ -1,14 +1,16 @@
-import { AbilityInterface, PhaseInterface } from '../types/interfaces/CharacterInterface';
+import { AbilityInterface, AttributeInterface, PhaseInterface } from '../types/interfaces/CharacterInterface';
+import AttributeTooltip from './Planner/AttributeTooltip';
 import SkillAbilityTooltip from './Planner/SkillAbilityTooltip';
 import SkillPhase from './Planner/SkillPhase';
 
 interface PropInterface {
   relatedAbilities: Array<AbilityInterface>;
   relatedPhases: Array<PhaseInterface>;
+  relatedAttributes: Array<AttributeInterface>;
   ctrCounter: number;
 }
 
-const TooltipAbilityMap = ({ relatedAbilities, relatedPhases, ctrCounter }: PropInterface) => {
+const TooltipAbilityMap = ({ relatedAbilities, relatedPhases, relatedAttributes, ctrCounter }: PropInterface) => {
   return (
     <div className="flex flex-col w-fit h-fit max-w-[30vw] ml-2">
       {relatedAbilities.map((ability, index) => {
@@ -19,6 +21,9 @@ const TooltipAbilityMap = ({ relatedAbilities, relatedPhases, ctrCounter }: Prop
       })}
       {relatedPhases.map((phase, index) => {
         return <SkillPhase key={index} phase={phase} index={index} header={true} random={false} />;
+      })}
+      {relatedAttributes.map((attribute) => {
+        return <AttributeTooltip key={attribute.key} attribute={attribute} />;
       })}
     </div>
   );

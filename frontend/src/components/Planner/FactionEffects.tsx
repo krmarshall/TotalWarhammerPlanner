@@ -4,7 +4,13 @@ import { FactionEffectInterface } from '../../types/interfaces/CharacterInterfac
 import ReactImage from '../ReactImage';
 import SkillEffect from './SkillEffect';
 import TooltipWrapper from '../TooltipWrapper';
-import { getRelatedAbilities, getRelatedContactPhases, setFontSize, trimString } from '../../utils/sharedFunctions';
+import {
+  getRelatedAbilities,
+  getRelatedAttributes,
+  getRelatedContactPhases,
+  setFontSize,
+  trimString,
+} from '../../utils/sharedFunctions';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../TooltipAbilityMap';
@@ -77,6 +83,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
   const relatedAbilities = getRelatedAbilities(factionEffect.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
 
   const fontSize = setFontSize(factionEffect.localised_title);
 
@@ -115,6 +122,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
                 <TooltipAbilityMap
                   relatedAbilities={relatedAbilities}
                   relatedPhases={relatedPhases}
+                  relatedAttributes={relatedAttributes}
                   ctrCounter={ctrCounter}
                 />
               )}

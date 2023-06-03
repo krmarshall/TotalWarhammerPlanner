@@ -8,6 +8,7 @@ import SkillPhase from './SkillPhase';
 import UnitStatLine from './UnitStatLine';
 import { getRelatedContactPhases, getUnitStatSets } from '../../utils/sharedFunctions';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
+import AttributeTooltip from './AttributeTooltip';
 
 const UnitStats = () => {
   const { state } = useContext(AppContext);
@@ -167,6 +168,30 @@ const UnitStats = () => {
               />
               <p>{stats.ap_damage} Armour Piercing Damage</p>
             </div>
+            {stats.bonus_v_infantry > 0 && (
+              <div className="flex flex-row flex-nowrap">
+                <img
+                  src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_infantry.webp"
+                  alt="bvi"
+                  width="16"
+                  height="16"
+                  className="my-auto h-4 w-4 mr-1"
+                />
+                <p>{stats.bonus_v_infantry} Bonus Vs Infantry</p>
+              </div>
+            )}
+            {stats.bonus_v_large > 0 && (
+              <div className="flex flex-row flex-nowrap">
+                <img
+                  src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_large.webp"
+                  alt="bvl"
+                  width="16"
+                  height="16"
+                  className="my-auto h-4 w-4 mr-1"
+                />
+                <p>{stats.bonus_v_large} Bonus Vs Large</p>
+              </div>
+            )}
           </div>
         }
       />
@@ -184,38 +209,22 @@ const UnitStats = () => {
               />
             )}
             {stats.bonus_v_infantry > 0 && (
-              <TooltipWrapper
-                tooltip={
-                  <div className="bg-gray-600 p-1.5 border border-gray-400 rounded-xl text-xl text-gray-50">
-                    +{stats.bonus_v_infantry} Bonus Vs Infantry
-                  </div>
-                }
-              >
-                <img
-                  src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_infantry.webp"
-                  alt="bvi"
-                  width="22"
-                  height="22"
-                  className="my-auto ml-1 h-5 w-5"
-                />
-              </TooltipWrapper>
+              <img
+                src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_infantry.webp"
+                alt="bvi"
+                width="22"
+                height="22"
+                className="my-auto ml-1 h-5 w-5"
+              />
             )}
             {stats.bonus_v_large > 0 && (
-              <TooltipWrapper
-                tooltip={
-                  <div className="bg-gray-600 p-1.5 border border-gray-400 rounded-xl text-xl text-gray-50">
-                    +{stats.bonus_v_large} Bonus Vs Large
-                  </div>
-                }
-              >
-                <img
-                  src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_large.webp"
-                  alt="bvl"
-                  width="22"
-                  height="22"
-                  className="my-auto ml-1 h-5 w-5"
-                />
-              </TooltipWrapper>
+              <img
+                src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_large.webp"
+                alt="bvl"
+                width="22"
+                height="22"
+                className="my-auto ml-1 h-5 w-5"
+              />
             )}
             {stats.is_flaming && (
               <img
@@ -315,6 +324,30 @@ const UnitStats = () => {
                 />
                 <p>{stats.projectile.ap_damage} Armour Piercing Damage</p>
               </div>
+              {stats.projectile.bonus_v_infantry !== undefined && stats.projectile.bonus_v_infantry > 0 && (
+                <div className="flex flex-row flex-nowrap">
+                  <img
+                    src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_infantry.webp"
+                    alt="damage"
+                    width="16"
+                    height="16"
+                    className="my-auto h-4 w-4 mr-1"
+                  />
+                  <p>{stats.projectile.bonus_v_infantry} Bonus Vs Infantry</p>
+                </div>
+              )}
+              {stats.projectile.bonus_v_large !== undefined && stats.projectile.bonus_v_large > 0 && (
+                <div className="flex flex-row flex-nowrap">
+                  <img
+                    src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_large.webp"
+                    alt="damage"
+                    width="16"
+                    height="16"
+                    className="my-auto h-4 w-4 mr-1"
+                  />
+                  <p>{stats.projectile.bonus_v_large} Bonus Vs Large</p>
+                </div>
+              )}
               {stats.projectile.explosion_type?.detonation_damage !== undefined && (
                 <div className="flex flex-row flex-nowrap">
                   <img
@@ -381,38 +414,22 @@ const UnitStats = () => {
               />
             )}
             {stats.projectile.bonus_v_infantry !== undefined && stats.projectile.bonus_v_infantry > 0 && (
-              <TooltipWrapper
-                tooltip={
-                  <div className="bg-gray-600 p-1.5 border border-gray-400 rounded-xl text-xl text-gray-50">
-                    +{stats.projectile.bonus_v_infantry} Bonus Vs Infantry
-                  </div>
-                }
-              >
-                <img
-                  src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_infantry.webp"
-                  alt="bvi"
-                  width="22"
-                  height="22"
-                  className="my-auto ml-1 h-5 w-5"
-                />
-              </TooltipWrapper>
+              <img
+                src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_infantry.webp"
+                alt="bvi"
+                width="22"
+                height="22"
+                className="my-auto ml-1 h-5 w-5"
+              />
             )}
             {stats.projectile.bonus_v_large !== undefined && stats.projectile.bonus_v_large > 0 && (
-              <TooltipWrapper
-                tooltip={
-                  <div className="bg-gray-600 p-1.5 border border-gray-400 rounded-xl text-xl text-gray-50">
-                    +{stats.projectile.bonus_v_large} Bonus Vs Large
-                  </div>
-                }
-              >
-                <img
-                  src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_large.webp"
-                  alt="bvl"
-                  width="22"
-                  height="22"
-                  className="my-auto ml-1 h-5 w-5"
-                />
-              </TooltipWrapper>
+              <img
+                src="/imgs/vanilla3/skins/default/modifier_icon_bonus_vs_large.webp"
+                alt="bvl"
+                width="22"
+                height="22"
+                className="my-auto ml-1 h-5 w-5"
+              />
             )}
             {stats.projectile.is_flaming && (
               <img
@@ -482,16 +499,55 @@ const UnitStats = () => {
 
       {(stats.abilities !== undefined || stats.attributes !== undefined) && (
         <div className="flex flex-row flex-wrap place-content-center w-fit mx-auto">
-          {stats.attributes?.map((attribute) => {
-            return (
+          {stats.can_siege && (
+            <TooltipWrapper
+              tooltip={
+                <AttributeTooltip
+                  attribute={{
+                    key: 'siege_attacker',
+                    description: 'Siege Attacker',
+                    bullet_text:
+                      'This unit can attack city gates, allowing you to instantly launch a siege battle without having to wait for towers or battering rams to be built.',
+                    icon: 'vanilla3/battle_ui/ability_icons/can_siege',
+                  }}
+                />
+              }
+            >
+              <img
+                src="/imgs/vanilla3/battle_ui/ability_icons/can_siege.webp"
+                alt="can_siege"
+                width="38"
+                height="38"
+                className="my-auto ml-1 h-8 w-8 mt-1.5"
+              />
+            </TooltipWrapper>
+          )}
+          {stats.can_skirmish &&
+            stats.attributes?.find((attribute) => attribute.key === 'mounted_fire_move') === undefined && (
               <TooltipWrapper
-                key={attribute.key}
                 tooltip={
-                  <div className="h-fit p-2 mb-2 rounded border border-gray-400 shadow-lg bg-gray-600 text-gray-50 text-lg">
-                    {attribute.description}
-                  </div>
+                  <AttributeTooltip
+                    attribute={{
+                      key: 'mounted_fire_move',
+                      description: 'Fire Whilst Moving',
+                      bullet_text: 'This unit can fire while on the move.',
+                      icon: 'vanilla3/battle_ui/ability_icons/mounted_fire_move',
+                    }}
+                  />
                 }
               >
+                <img
+                  src="/imgs/vanilla3/battle_ui/ability_icons/mounted_fire_move.webp"
+                  alt="mounted_fire_move"
+                  width="38"
+                  height="38"
+                  className="my-auto ml-1 h-8 w-8 mt-1.5"
+                />
+              </TooltipWrapper>
+            )}
+          {stats.attributes?.map((attribute) => {
+            return (
+              <TooltipWrapper key={attribute.key} tooltip={<AttributeTooltip attribute={attribute} />}>
                 <img
                   src={`/imgs/${attribute.icon}.webp`}
                   alt="ability"
