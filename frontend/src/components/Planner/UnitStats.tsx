@@ -6,9 +6,10 @@ import largeEntityIcon from '../../imgs/other/icon_entity_large.webp';
 import { loadAdvancedToggleFromStorage, saveAdvancedToggleFromStorage } from '../../utils/storageFunctions';
 import SkillPhase from './SkillPhase';
 import UnitStatLine from './UnitStatLine';
-import { getRelatedContactPhases, getUnitStatSets } from '../../utils/sharedFunctions';
+import { getRelatedAttributes, getRelatedContactPhases, getUnitStatSets } from '../../utils/sharedFunctions';
 import SkillAbilityTooltip from './SkillAbilityTooltip';
 import AttributeTooltip from './AttributeTooltip';
+import TooltipAbilityMap from '../TooltipAbilityMap';
 
 const UnitStats = () => {
   const { state } = useContext(AppContext);
@@ -560,16 +561,17 @@ const UnitStats = () => {
           })}
           {stats.abilities?.map((ability) => {
             const relatedPhases = getRelatedContactPhases(ability);
+            const relatedAttributes = getRelatedAttributes(ability);
             return (
               <TooltipWrapper
                 key={ability.effect}
                 tooltip={
-                  <div className="flex flex-col flex-nowrap">
-                    <SkillAbilityTooltip ability={ability} />
-                    {relatedPhases.map((phase, index) => {
-                      return <SkillPhase key={index} index={index} phase={phase} header={true} />;
-                    })}
-                  </div>
+                  <TooltipAbilityMap
+                    relatedAbilities={[ability]}
+                    relatedPhases={relatedPhases}
+                    relatedAttributes={relatedAttributes}
+                    ctrCounter={0}
+                  />
                 }
               >
                 <img
