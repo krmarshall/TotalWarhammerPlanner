@@ -115,7 +115,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
     compilationGroups: scm3CompGroups,
-    updated: '1 Jun 2023',
+    updated: '3 Jun 2023',
     category: 'Character Mod Compilation',
     includes: [
       'The Jade-Blooded Vampires: Curse of Nongchang (28 May 2023)',
@@ -132,7 +132,7 @@ const gameData: { [key: string]: GameDataInterface } = {
       "Dead's Kislev Droyashka (9 May 2023)",
       "Dead's Kislev Shaman (9 May 2023)",
       'Clan Treecherik (28 May 2023)',
-      'Clan Verms (28 May 2023)',
+      'Clan Verms (3 Jun 2023)',
       'Pestilent Brotherhood (28 May 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',
