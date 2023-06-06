@@ -130,9 +130,18 @@ const getRelatedAbilities = (effectsArray: Array<EffectInterface> | undefined) =
   return relatedAbilities;
 };
 
-const getRelatedContactPhases = (ability: AbilityInterface | undefined) => {
+const getRelatedContactPhases = (ability: AbilityInterface | undefined, effects?: Array<EffectInterface>) => {
   const relatedPhases: Array<PhaseInterface> = [];
   const relatedPhaseKeys: Array<string> = [];
+
+  effects?.forEach((effect) =>
+    effect.related_phases?.forEach((phase) => {
+      if (!relatedPhaseKeys.includes(phase.icon)) {
+        relatedPhases.push(phase);
+        relatedPhaseKeys.push(phase.icon);
+      }
+    })
+  );
 
   if (ability === undefined) {
     return relatedPhases;

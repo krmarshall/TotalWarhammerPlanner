@@ -70,7 +70,7 @@ const SkillTooltip = ({
   }
 
   const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
-  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
+  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter], skill?.levels?.[skillPoints]?.effects);
   const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], skill?.levels?.[skillPoints]?.effects);
   return (
     <span

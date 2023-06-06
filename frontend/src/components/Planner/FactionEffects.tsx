@@ -82,7 +82,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
   }, [tooltipRef?.current, ctrCounter]);
 
   const relatedAbilities = getRelatedAbilities(factionEffect.effects);
-  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
+  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter], factionEffect.effects);
   const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], factionEffect.effects);
 
   const fontSize = setFontSize(factionEffect.localised_title);
@@ -118,7 +118,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
                 )}
               </div>
 
-              {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
+              {(relatedAbilities.length !== 0 || relatedPhases.length !== 0 || relatedAttributes.length !== 0) && (
                 <TooltipAbilityMap
                   relatedAbilities={relatedAbilities}
                   relatedPhases={relatedPhases}

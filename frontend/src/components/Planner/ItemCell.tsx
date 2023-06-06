@@ -81,7 +81,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
   }, [tooltipRef?.current, ctrCounter]);
 
   const relatedAbilities = getRelatedAbilities(item.effects);
-  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
+  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter], item.effects);
   const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], item.effects);
 
   const fontSize = setFontSize(item.onscreen_name);
@@ -113,7 +113,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
             )}
           </div>
 
-          {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
+          {(relatedAbilities.length !== 0 || relatedPhases.length !== 0 || relatedAttributes.length !== 0) && (
             <TooltipAbilityMap
               relatedAbilities={relatedAbilities}
               relatedPhases={relatedPhases}
