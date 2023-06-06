@@ -82,7 +82,7 @@ const ItemCell = ({ item }: SkillCellPropsInterface) => {
 
   const relatedAbilities = getRelatedAbilities(item.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
-  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], item.effects);
 
   const fontSize = setFontSize(item.onscreen_name);
 

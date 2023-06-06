@@ -83,7 +83,7 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
   const relatedAbilities = getRelatedAbilities(factionEffect.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
-  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], factionEffect.effects);
 
   const fontSize = setFontSize(factionEffect.localised_title);
 

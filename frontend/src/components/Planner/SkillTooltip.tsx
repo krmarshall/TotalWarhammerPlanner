@@ -71,7 +71,7 @@ const SkillTooltip = ({
 
   const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
-  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], skill?.levels?.[skillPoints]?.effects);
   return (
     <span
       ref={tooltipRef}
@@ -116,7 +116,7 @@ const SkillTooltip = ({
         )}
       </div>
 
-      {(relatedAbilities.length !== 0 || relatedPhases.length !== 0) && (
+      {(relatedAbilities.length !== 0 || relatedPhases.length !== 0 || relatedAttributes.length !== 0) && (
         <TooltipAbilityMap
           relatedAbilities={relatedAbilities}
           relatedPhases={relatedPhases}

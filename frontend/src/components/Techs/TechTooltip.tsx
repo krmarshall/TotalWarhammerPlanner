@@ -53,7 +53,7 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, to
 
   const relatedAbilities = getRelatedAbilities(tech?.technology.effects);
   const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter]);
-  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter]);
+  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], tech?.technology.effects);
   return (
     <span
       ref={tooltipRef}
