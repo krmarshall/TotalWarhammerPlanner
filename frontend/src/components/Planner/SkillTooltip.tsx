@@ -85,11 +85,12 @@ const SkillTooltip = ({
               {skill?.localised_description.trim()}
             </h4>
           )}
-          {skill?.levels?.[skillPoints]?.auto_unlock_at_rank && (
-            <p className="text-yellow-300 text-lg">
-              Automatically unlocks at rank {skill?.levels?.[skillPoints]?.auto_unlock_at_rank}
-            </p>
-          )}
+          {skill?.levels?.[skillPoints]?.auto_unlock_at_rank !== undefined &&
+            skill?.levels?.[skillPoints]?.auto_unlock_at_rank !== 0 && (
+              <p className="text-yellow-300 text-lg">
+                Automatically unlocks at rank {skill?.levels?.[skillPoints]?.auto_unlock_at_rank}
+              </p>
+            )}
           {skill?.levels?.[skillPoints]?.unlocked_at_rank && (
             <p className="text-yellow-300 text-lg">
               Available at rank {skill?.levels?.[skillPoints]?.unlocked_at_rank}

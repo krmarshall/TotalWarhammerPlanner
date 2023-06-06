@@ -185,6 +185,29 @@ const mixu3Characters = {
       woodbelly: { name: 'Woodbelly' },
     },
   },
+
+  msl_mousillon: {
+    lords: {
+      msl_lady_of_the_black_grail: { name: 'Lady of the Black Grail', spellLore: SpellLores.shadows },
+      msl_mallobaude: { name: 'Mallobaude' },
+      msl_dark_prophetess_beasts: { name: 'Dark Prophetess (Beasts)', spellLore: SpellLores.beasts },
+      msl_dark_prophetess_death: { name: 'Dark Prophetess (Death)', spellLore: SpellLores.death },
+      msl_dark_prophetess_heavens: { name: 'Dark Prophetess (Heavens)', spellLore: SpellLores.heavens },
+      msl_dark_prophetess_shadows: { name: 'Dark Prophetess (Shadows)', spellLore: SpellLores.shadows },
+      msl_lord: { name: 'Vampire Lord', spellLore: SpellLores.vampires },
+    },
+    heroes: {
+      msl_aucassin_de_hane: { name: 'Aucassin de Hane', spellLore: SpellLores.mixed },
+      msl_bougars_the_butcher: { name: 'Bougars de Biaucaire' },
+      msl_eustache_of_the_rusting_blade: { name: 'Eustache of the Rusting Blade' },
+      msl_nicolete_de_oisement: { name: 'Nicolete de Oisement', spellLore: SpellLores.mixed },
+      msl_damsel_beasts: { name: 'Damsel (Beasts)', spellLore: SpellLores.beasts },
+      msl_damsel_death: { name: 'Damsel (Death)', spellLore: SpellLores.death },
+      msl_damsel_heavens: { name: 'Damsel (Heavens)', spellLore: SpellLores.heavens },
+      msl_damsel_shadows: { name: 'Damsel (Shadows)', spellLore: SpellLores.shadows },
+      msl_bretonnian_wight: { name: 'Wight King' },
+    },
+  },
 };
 
 export default mixu3Characters;

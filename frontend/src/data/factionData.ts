@@ -31,6 +31,8 @@ const factions = {
   str_rotblood: 'Rotblood Tribe',
 
   teb_southern_realms: 'Southern Realms',
+
+  msl_mousillon: 'Mousillon',
 };
 
 export default factions;

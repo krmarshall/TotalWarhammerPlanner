@@ -53,6 +53,17 @@ import wef_naieth_the_prophetess from './wef_naieth_the_prophetess.webp';
 import wef_wychwethyl from './wef_wychwethyl.webp';
 import tze_exalted_hero from './tze_exalted_hero_01.webp';
 
+import msl_aucassin_de_hane from './msl_aucassin_de_hane.webp';
+import msl_bougars_the_butcher from './msl_bougars_the_butcher.webp';
+import msl_bretonnian_wight from './msl_bretonnian_wight_1.webp';
+import msl_damsel from './msl_damsel_1.webp';
+import msl_dark_prophetess from './msl_dark_prophetess_1.webp';
+import msl_eustache_of_the_rusting_blade from './msl_eustache_of_the_rusting_blade.webp';
+import msl_lady_of_the_black_grail from './msl_lady_of_the_black_grail.webp';
+import msl_lord from './msl_lord_1.webp';
+import msl_mallobaude from './msl_mallobaude.webp';
+import msl_nicolete_de_oisement from './msl_nicolete_de_oisement.webp';
+
 import gnb_bloodnose from './gnob_bloodnose_01.webp';
 import gnb_bonechewer from './gnob_bonechewer_01.webp';
 import gnb_bragg_the_gutsman from './gnob_bragg_the_gutsman.webp';
@@ -128,6 +139,24 @@ const mixu3CharacterImgs = {
   wef_naieth_the_prophetess: wef_naieth_the_prophetess,
   wef_wychwethyl: wef_wychwethyl,
   tze_exalted_hero: tze_exalted_hero,
+
+  // Mousillon
+  msl_aucassin_de_hane: msl_aucassin_de_hane,
+  msl_bougars_the_butcher: msl_bougars_the_butcher,
+  msl_bretonnian_wight: msl_bretonnian_wight,
+  msl_damsel_beasts: msl_damsel,
+  msl_damsel_death: msl_damsel,
+  msl_damsel_heavens: msl_damsel,
+  msl_damsel_shadows: msl_damsel,
+  msl_dark_prophetess_beasts: msl_dark_prophetess,
+  msl_dark_prophetess_death: msl_dark_prophetess,
+  msl_dark_prophetess_heavens: msl_dark_prophetess,
+  msl_dark_prophetess_shadows: msl_dark_prophetess,
+  msl_eustache_of_the_rusting_blade: msl_eustache_of_the_rusting_blade,
+  msl_lady_of_the_black_grail: msl_lady_of_the_black_grail,
+  msl_lord: msl_lord,
+  msl_mallobaude: msl_mallobaude,
+  msl_nicolete_de_oisement: msl_nicolete_de_oisement,
 
   // Gnoblar Hordes
   bragg_the_gutsman: gnb_bragg_the_gutsman,

@@ -29,6 +29,7 @@ import gnoblars from './gnoblars.webp';
 import jadeVampires from './jadeVampires.webp';
 import rotbloodTribe from './rotbloodTribe.webp';
 import southernRealms from './southernRealms.webp';
+import mousillon from './mousillon.webp';
 
 // Tech Factions
 import chevaliers from './chevaliers.webp';
@@ -71,6 +72,7 @@ const factionImages = {
   jbv_jade_vampires: jadeVampires,
   str_rotblood: rotbloodTribe,
   teb_southern_realms: southernRealms,
+  msl_mousillon: mousillon,
 
   brt_chevaliers: chevaliers,
   emp_hunstmarshal: hunstmarshal,

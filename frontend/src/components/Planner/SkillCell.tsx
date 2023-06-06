@@ -331,7 +331,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         event.preventDefault();
       }}
     >
-      {skill.levels?.[0]?.auto_unlock_at_rank && (
+      {skill.levels?.[0]?.auto_unlock_at_rank !== undefined && skill.levels?.[0]?.auto_unlock_at_rank !== 0 && (
         <TooltipWrapper
           tooltip={
             <div className="w-max p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
