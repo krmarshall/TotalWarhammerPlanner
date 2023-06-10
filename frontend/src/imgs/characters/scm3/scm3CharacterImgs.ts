@@ -55,6 +55,7 @@ import hkrul_mar_munvard from './hkrul_mar_munvard.webp';
 import hkrul_pg from './hkrul_pg.webp';
 import hkrul_solkan from './hkrul_solkan_1.webp';
 import hrul_mar_caravan_commander from './hrul_mar_caravan_commander_06.webp';
+import str_crooktail_viciss from './str_crooktail_viciss.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -126,6 +127,7 @@ const scm3CharacterImgs = {
   hkrul_pg: hkrul_pg,
   hkrul_solkan: hkrul_solkan,
   mar_caravan_master: hrul_mar_caravan_commander,
+  str_crooktail_viciss: str_crooktail_viciss,
 };
 
 export default scm3CharacterImgs;
