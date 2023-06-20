@@ -144,9 +144,12 @@ const scm3Characters = {
   vmp_vampire_counts: {
     lords: {
       hkrul_mundvard: { name: 'Mundvard the Cruel', spellLore: SpellLores.mixed },
+      jian_xiu_necro: { name: 'Yuwei Ha Feng', spellLore: SpellLores.mixed },
+      jade_shugegnan: { name: 'Jade-Blooded Shugengan', spellLore: SpellLores.yin },
     },
     heroes: {
       hkrul_alicia: { name: 'Alicia von Unterwald', spellLore: SpellLores.shadows },
+      astrolicher_theak: { name: 'Dusk Wight', spellLore: SpellLores.mixed },
     },
   },
 
