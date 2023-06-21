@@ -118,6 +118,8 @@ const scm3Characters = {
       str_tenscratch: { name: 'Blight Tenscratch' },
       str_verms_swarmleader: { name: 'Swarmleader' },
 
+      clan_vrrtkin_lord_trikstab: { name: 'Trikstab Gribnode' },
+
       bc_nurglitch: { name: 'Arch Plague Lord Nurglitch', spellLore: SpellLores.skvPlague },
       str_skittice: { name: 'Grrzk Roteye' },
       str_pontifex_sitch: { name: 'Arch-Pontifex Sitch', spellLore: SpellLores.skvPlague },
@@ -135,6 +137,8 @@ const scm3Characters = {
     },
     heroes: {
       str_verms_swarmcaller: { name: 'Swarmcaller' },
+
+      clan_vrrtkin_masterglobe: { name: 'Vrrtkin Master Globadier', spellLore: SpellLores.mixed },
 
       bc_festering_chantor: { name: 'Festering Chantor' },
       bc_stinking_thing: { name: 'Stinking Thing' },
