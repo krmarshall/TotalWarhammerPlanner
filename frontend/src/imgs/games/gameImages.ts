@@ -7,6 +7,7 @@ import crys3 from './crys3.webp';
 import scm3 from './scm3.webp';
 import sfo3 from './sfo3.webp';
 import cat3 from './cat3.webp';
+import ovn3 from './ovn3.webp';
 
 const gameImages = {
   vanilla2,
@@ -18,6 +19,7 @@ const gameImages = {
   scm3,
   sfo3,
   cat3,
+  ovn3,
 };
 
 export default gameImages;

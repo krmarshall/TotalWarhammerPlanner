@@ -25,14 +25,15 @@ const factions = {
   wef_wood_elves: 'Wood Elves',
 
   gnb_gnoblars: 'Gnoblar Hordes',
+  msl_mousillon: 'Mousillon',
 
   jbv_jade_vampires: 'Jade-Blooded Vampires',
-
   str_rotblood: 'Rotblood Tribe',
 
   teb_southern_realms: 'Southern Realms',
 
-  msl_mousillon: 'Mousillon',
+  alb_albion: 'Albion',
+  fim_fimir: 'Fimir',
 };
 
 export default factions;

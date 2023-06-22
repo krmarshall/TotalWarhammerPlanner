@@ -7,6 +7,7 @@ import sfo33Techs from './techs/sfo3Techs';
 import mixu3Techs from './techs/mixu3Techs';
 import scm3Techs from './techs/scm3Techs';
 import cat3Techs from './techs/cat3Techs';
+import ovn3Techs from './techs/ovn3Techs';
 
 const techGameData: { [key: string]: TechDataInterface } = {
   vanilla2: {
@@ -50,6 +51,13 @@ const techGameData: { [key: string]: TechDataInterface } = {
     updated: gameData.cat3.updated,
     category: gameData.cat3.category,
     techTrees: cat3Techs,
+  },
+  ovn3: {
+    text: gameData.ovn3.text,
+    image: gameData.ovn3.image,
+    updated: gameData.ovn3.updated,
+    category: gameData.ovn3.category,
+    techTrees: ovn3Techs,
   },
   scm3: {
     text: gameData.scm3.text,

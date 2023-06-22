@@ -11,6 +11,7 @@ import crys3Characters from './characters/crys3Characters';
 import scm3Characters from './characters/scm3Characters';
 import sfo3Characters from './characters/sfo3Characters';
 import cat3Characters from './characters/cat3Characters';
+import ovn3Characters from './characters/ovn3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
@@ -21,10 +22,12 @@ import crys3CharacterImgs from '../imgs/characters/crys3/crys3CharacterImgs';
 import scm3CharacterImgs from '../imgs/characters/scm3/scm3CharacterImgs';
 import sfo3CharacterImgs from '../imgs/characters/sfo3/sfo3CharacterImgs';
 import cat3CharacterImgs from '../imgs/characters/cat3/cat3CharacterImgs';
+import ovn3CharacterImgs from '../imgs/characters/ovn3/ovn3CharacterImgs';
 
 import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
 import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
 import cat3CompGroups from '../../../TWPData/compGroups/cat3.json';
+import ovn3CompGroups from '../../../TWPData/compGroups/ovn3.json';
 
 const gameData: { [key: string]: GameDataInterface } = {
   vanilla2: {
@@ -89,7 +92,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
-    updated: '17 Jun 2023',
+    updated: '22 Jun 2023',
     category: 'Character Mod',
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
   },
@@ -109,6 +112,23 @@ const gameData: { [key: string]: GameDataInterface } = {
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2984086934',
   },
+  ovn3: {
+    text: 'OvN Lost Factions 3',
+    image: gameImages['ovn3'],
+    factions: factions,
+    characters: ovn3Characters,
+    characterImages: ovn3CharacterImgs,
+    compilationGroups: ovn3CompGroups,
+    updated: '22 Jun 2023',
+    category: 'Character Mod Compilation',
+    includes: [
+      'Albion (12 Jun 2023)',
+      'Citadel of Dusk (11 Jun 2023)',
+      'Fimir (31 May 2023)',
+      'Grudgebringers (22 Jun 2023)',
+    ],
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2993203389',
+  },
   scm3: {
     text: 'Skeleton Crew Compilation 3',
     image: gameImages['scm3'],
@@ -116,11 +136,11 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
     compilationGroups: scm3CompGroups,
-    updated: '21 Jun 2023',
+    updated: '22 Jun 2023',
     category: 'Character Mod Compilation',
     includes: [
       'The Jade-Blooded Vampires: Curse of Nongchang (21 Jun 2023)',
-      'Rotblood Tribe (28 May 2023)',
+      'Rotblood Tribe (22 Jun 2023)',
       'Marienburg: The Merchant Empire (22 Apr 2023)',
       'Dynasty of the Damned (20 Jun 2023)',
       "Sigmar's Heirs, an Empire Overhaul (13 Jun 2023)",
@@ -136,8 +156,8 @@ const gameData: { [key: string]: GameDataInterface } = {
       "Dead's Kislev Shaman (9 May 2023)",
       'Clan Crooktail (18 Jun 2023)',
       'Clan Treecherik (28 May 2023)',
-      'Clan Verms (8 Jun 2023)',
-      'Clan Vrrtkin (21 Jun 2023)',
+      'Clan Verms (22 Jun 2023)',
+      'Clan Vrrtkin (22 Jun 2023)',
       'Pestilent Brotherhood (17 Jun 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',

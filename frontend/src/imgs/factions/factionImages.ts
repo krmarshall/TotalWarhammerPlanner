@@ -30,6 +30,8 @@ import jadeVampires from './jadeVampires.webp';
 import rotbloodTribe from './rotbloodTribe.webp';
 import southernRealms from './southernRealms.webp';
 import mousillon from './mousillon.webp';
+import albion from './albion.webp';
+import fimir from './fimir.webp';
 
 // Tech Factions
 import chevaliers from './chevaliers.webp';
@@ -73,6 +75,8 @@ const factionImages = {
   str_rotblood: rotbloodTribe,
   teb_southern_realms: southernRealms,
   msl_mousillon: mousillon,
+  alb_albion: albion,
+  fim_fimir: fimir,
 
   brt_chevaliers: chevaliers,
   emp_hunstmarshal: hunstmarshal,
