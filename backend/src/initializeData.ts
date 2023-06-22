@@ -1,4 +1,4 @@
-import glob from 'glob';
+import fg from 'fast-glob';
 import { readFileSync } from 'fs';
 
 interface skillDataInterface {
@@ -14,17 +14,17 @@ interface skillDataInterface {
 const skillData: skillDataInterface = {};
 
 const initializeSkillData = () => {
-  const gamePaths = glob.sync('../TWPData/skills/*/');
+  const gamePaths = fg.sync('../TWPData/skills/*/', { markDirectories: true, onlyDirectories: true });
 
   gamePaths.forEach((gamePath) => {
     const game = gamePath.split('./TWPData/skills/')[1].replace('/', '');
     skillData[game] = {};
-    const factionPaths = glob.sync(`${gamePath}*/`);
+    const factionPaths = fg.sync(`${gamePath}*/`, { markDirectories: true, onlyDirectories: true });
 
     factionPaths.forEach((factionPath) => {
       const faction = factionPath.split(gamePath)[1].replace('/', '');
       skillData[game][faction] = {};
-      const characterPaths = glob.sync(`${factionPath}**.json`);
+      const characterPaths = fg.sync(`${factionPath}**.json`);
 
       characterPaths.forEach((characterPath) => {
         const character = characterPath.split(factionPath)[1].replace('.json', '');
@@ -45,12 +45,12 @@ interface techDataInterface {
 const techData: techDataInterface = {};
 
 const initializeTechData = () => {
-  const gamePaths = glob.sync('../TWPData/techs/*/');
+  const gamePaths = fg.sync('../TWPData/techs/*/', { markDirectories: true, onlyDirectories: true });
 
   gamePaths.forEach((gamePath) => {
     const game = gamePath.split('../TWPData/techs/')[1].replace('/', '');
     techData[game] = {};
-    const techTreePaths = glob.sync(`${gamePath}**.json`);
+    const techTreePaths = fg.sync(`${gamePath}**.json`);
 
     techTreePaths.forEach((techTreePath) => {
       const techTree = techTreePath.split(gamePath)[1].replace('.json', '');

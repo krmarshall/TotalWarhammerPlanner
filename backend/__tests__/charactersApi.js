@@ -1,5 +1,5 @@
 import supertest from 'supertest';
-import glob from 'glob';
+import fg from 'fast-glob';
 import path from 'path';
 
 import app from '../src/app';
@@ -59,7 +59,7 @@ describe('Bulk character API test', () => {
   ];
 
   gameList.forEach((game) => {
-    const characterPathList = glob.sync(`../TWPData/skills/${game.name}/**/*.json`);
+    const characterPathList = fg.sync(`../TWPData/skills/${game.name}/**/*.json`);
     const characterList = characterPathList.map((characterPath) => path.basename(characterPath, '.json'));
     const testedChars = [];
 
