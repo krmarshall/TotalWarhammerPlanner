@@ -12,6 +12,8 @@ import lege3Characters from '../../frontend/src/data/characters/lege3Characters'
 import crys3Characters from '../../frontend/src/data/characters/crys3Characters';
 import scm3Characters from '../../frontend/src/data/characters/scm3Characters';
 import sfo3Characters from '../../frontend/src/data/characters/sfo3Characters';
+import cat3Characters from '../../frontend/src/data/characters/cat3Characters';
+import ovn3Characters from '../../frontend/src/data/characters/ovn3Characters';
 
 const request = supertest(app);
 
@@ -56,6 +58,8 @@ describe('Bulk character API test', () => {
     { charList: crys3Characters, name: 'crys3' },
     { charList: scm3Characters, name: 'scm3' },
     { charList: sfo3Characters, name: 'sfo3' },
+    { charList: cat3Characters, name: 'cat3' },
+    { charList: ovn3Characters, name: 'ovn3' },
   ];
 
   gameList.forEach((game) => {
