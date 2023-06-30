@@ -31,7 +31,7 @@ const SkillPointSelector = ({
   if (
     currentRank !== undefined &&
     skill?.levels?.[index].unlocked_at_rank !== undefined &&
-    (skill?.levels?.[index].unlocked_at_rank as number) > currentRank
+    (skill?.levels?.[index].unlocked_at_rank as number) > currentRank + 1
   ) {
     rankLocked = true;
   }

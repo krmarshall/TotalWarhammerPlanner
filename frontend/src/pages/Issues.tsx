@@ -34,6 +34,14 @@ const Issues = () => {
           <li>If the base game updated recently expect mods to be broken and/or outdated.</li>
           <li>Ensure the problem isn&apos;t already mentioned in the Known Issues section.</li>
           <li>
+            Rank requirements are achieved 1 rank too early (eg. a skill with rank requirement of 10 can be selected
+            when the character is rank 9). This is just a quirk of I chose to show the character rank, in game the
+            character ranks up, unlocks requirements, then you get to choose where the point goes. With TWP you
+            effectively rank up upon taking the skill. Allowing you to rank the skill 1 rank &quot;early&quot;
+            effectively matches how the game works. If you find an instance where this doesnt match game behavior let me
+            know.
+          </li>
+          <li>
             When sending a message please include the following details, or use this template:
             <div className="border border-gray-300 bg-gray-800 w-fit ml-8 p-2 pr-12 rounded-xl">
               Browser Used:
