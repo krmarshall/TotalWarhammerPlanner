@@ -42,13 +42,13 @@ const UnitStatLine = ({
           className="my-auto mx-1"
         />
         {tooltip !== undefined ? (
-          <div className="my-auto w-7">
+          <div className="my-auto w-8">
             <TooltipWrapper tooltip={tooltip}>
-              <p className="w-7 underline decoration-dashed decoration-gray-300">{statValue}</p>
+              <p className="w-8 underline decoration-dashed decoration-gray-300">{statValue}</p>
             </TooltipWrapper>
           </div>
         ) : (
-          <p className="w-7">{statValue}</p>
+          <p className="w-8">{statValue}</p>
         )}
 
         <div className="my-auto mx-2">

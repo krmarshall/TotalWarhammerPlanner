@@ -69,7 +69,7 @@ const UnitStats = () => {
     shieldImg = '/imgs/vanilla3/skins/default/modifier_icon_shield1.webp';
   }
   return (
-    <div className="min-w-[16rem] mr-1 p-1.5 border rounded border-gray-500 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 text-gray-50 text-lg">
+    <div className="flex-shrink-0 w-[17rem] mr-1 p-1.5 border rounded border-gray-500 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600 text-gray-50 text-lg">
       <h3 className="text-3xl text-center">Character Stats</h3>
 
       <div className="mx-auto mb-1 flex flex-row flex-nowrap w-fit">
@@ -499,7 +499,7 @@ const UnitStats = () => {
       <hr className="w-48 mx-auto opacity-50" />
 
       {(stats.abilities !== undefined || stats.attributes !== undefined) && (
-        <div className="flex flex-row flex-wrap place-content-center w-fit mx-auto">
+        <div className="flex flex-row flex-wrap place-content-center w-[16rem] mx-auto">
           {stats.can_siege && (
             <TooltipWrapper
               tooltip={
