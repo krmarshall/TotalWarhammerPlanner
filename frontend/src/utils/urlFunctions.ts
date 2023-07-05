@@ -3,17 +3,18 @@ import lzbase62 from 'lzbase62';
 import { createEmptyCharacterBuild } from './sharedFunctions';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
-const baseURL = import.meta.env.DEV ? 'http://127.0.0.1:5173/planner/' : 'https://totalwarhammerplanner.com/planner/';
+const baseURL = import.meta.env.DEV ? 'http://localhost:5173/planner/' : 'https://totalwarhammerplanner.com/planner/';
+
+const generateCharacterURL = (characterBuild: BuildInterface) => {
+  return baseURL + `${characterBuild.game}/${characterBuild.faction}/${characterBuild.character}/`;
+};
+
 // 0-v means base32 decoded to a number between 0 and 31
 // Url format http://127.0.0.1:5173/planner/<faction>/<character>/...
 // [0-9 = # Of Skill Rows, y]([0-z = # of skills in next row, x][0-3 = Skill points in skill] * x) * y
 const convertBuildToCode = (characterBuild: BuildInterface, characterData: CharacterInterface) => {
   const buildData = [...characterBuild.buildData];
-  let stringBase = '';
-  stringBase += baseURL;
-
-  // Add faction and character
-  stringBase += `${characterBuild.game}/${characterBuild.faction}/${characterBuild.character}/`;
+  const stringBase = generateCharacterURL(characterBuild);
 
   const emptyCharacterBuild = createEmptyCharacterBuild(
     characterData,
@@ -103,4 +104,4 @@ const base32Array = [
   'z',
 ];
 
-export { convertBuildToCode, convertCodeToBuild };
+export { generateCharacterURL, convertBuildToCode, convertCodeToBuild };

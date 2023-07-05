@@ -62,7 +62,7 @@ const FactionSelector = () => {
   };
 
   const shareHandler = () => {
-    let url = import.meta.env.DEV ? 'http://127.0.0.1:5173/' : 'https://totalwarhammerplanner.com/';
+    let url = import.meta.env.DEV ? 'http://localhost:5173/' : 'https://totalwarhammerplanner.com/';
     url += `${selectedMod}/${selectedFaction}`;
     navigator.clipboard
       .writeText(url)

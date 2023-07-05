@@ -257,6 +257,10 @@ interface FactionEffectInterface {
   effects: Array<EffectInterface>;
 }
 
+interface AltFactionNodeSetsInterface {
+  [key: string]: { factionName: string; nodes: Array<SkillInterface> };
+}
+
 interface CharacterInterface {
   key: string;
   skillTree: Array<Array<SkillInterface>>;
@@ -264,10 +268,12 @@ interface CharacterInterface {
   items?: Array<ItemInterface>;
   backgroundSkills?: Array<SkillInterface>;
   factionEffects?: FactionEffectInterface;
+  altFactionNodeSets?: AltFactionNodeSetsInterface;
 }
 
 export type {
   CharacterInterface,
+  AltFactionNodeSetsInterface,
   FactionEffectInterface,
   ItemInterface,
   SkillInterface,

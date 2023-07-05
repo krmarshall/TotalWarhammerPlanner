@@ -13,6 +13,7 @@ import SkillTable from '../components/Planner/SkillTable';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import gameData from '../data/gameData';
 import UnitStats from '../components/Planner/UnitStats';
+import FactionVariantSelect from '../components/Planner/FactionVariantSelect';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -57,7 +58,7 @@ const Planner = () => {
           }
         })
         .catch((err) => {
-          toast.error(`${err}`);
+          toast.error(`${err}`, { id: 'err api call' });
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
           navigate('/404');
         });
@@ -66,6 +67,23 @@ const Planner = () => {
 
   useEffect(() => {
     if (!code || !characterData || urlLoaded) {
+      return;
+    }
+    if (characterData.altFactionNodeSets !== undefined) {
+      const emptyCharacterBuild = createEmptyCharacterBuild(
+        characterData,
+        mod as string,
+        faction as string,
+        character as string
+      );
+      dispatch({
+        type: AppContextActions.changeCharacterBuild,
+        payload: { characterBuild: emptyCharacterBuild },
+      });
+      toast.error(`Build codes for characters with faction variants are not currently supported. Sorry!`, {
+        id: 'load build code for faction variant',
+        duration: 10000,
+      });
       return;
     }
     const importBuild = convertCodeToBuild(code);
@@ -109,7 +127,10 @@ const Planner = () => {
           {!isMobile && <CharacterPortrait />}
 
           <div className={tableStatsContainer}>
-            <UnitStats />
+            <div className="flex-shrink-0 w-[17rem] mr-1 p-1.5 border rounded border-gray-500 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
+              {characterData?.altFactionNodeSets !== undefined && <FactionVariantSelect />}
+              <UnitStats />
+            </div>
             <SkillTable faction={faction} />
           </div>
 

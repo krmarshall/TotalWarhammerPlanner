@@ -14,6 +14,8 @@ interface ContextStateInterface {
   selectedCompGroups: Array<string>;
   showedHomeToast: boolean;
   showedTechToast: boolean;
+  cleanCharacterData: CharacterInterface | null;
+  selectedAltFactionNodeSet: string;
 }
 
 const initialState: ContextStateInterface = {
@@ -27,6 +29,8 @@ const initialState: ContextStateInterface = {
   selectedCompGroups: [],
   showedHomeToast: false,
   showedTechToast: false,
+  cleanCharacterData: null,
+  selectedAltFactionNodeSet: '',
 };
 
 interface ActionInterface {
@@ -42,6 +46,8 @@ interface ActionInterface {
     selectedCompGroups?: Array<string>;
     showedHomeToast?: boolean;
     showedTechToast?: boolean;
+    cleanCharacterData?: CharacterInterface | null;
+    selectedAltFactionNodeSet?: string;
   };
 }
 
@@ -58,6 +64,8 @@ enum AppContextActions {
   changeSelectedCompGroups = 'changeSelectedCompGroups',
   changeShowedHomeToast = 'changeShowedHomeToast',
   changeShowedTechToast = 'changeShowedTechToast',
+  changeCleanCharacterData = 'changeCleanCharacterData',
+  changeSelectedAltFactionNodeSet = 'changeSelectedAltFactionNodeSet',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -166,6 +174,30 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
         return state;
       }
       newState.showedTechToast = action.payload.showedTechToast;
+      return newState;
+    }
+
+    case AppContextActions.changeCleanCharacterData: {
+      const newState = { ...state };
+      if (action.payload.cleanCharacterData === undefined) {
+        return state;
+      }
+      newState.cleanCharacterData = action.payload.cleanCharacterData;
+      return newState;
+    }
+
+    case AppContextActions.changeSelectedAltFactionNodeSet: {
+      const newState = { ...state };
+      if (
+        action.payload.selectedAltFactionNodeSet === undefined ||
+        action.payload.characterBuild === undefined ||
+        action.payload.characterData === undefined
+      ) {
+        return state;
+      }
+      newState.selectedAltFactionNodeSet = action.payload.selectedAltFactionNodeSet;
+      newState.characterBuild = action.payload.characterBuild;
+      newState.characterData = action.payload.characterData;
       return newState;
     }
 
