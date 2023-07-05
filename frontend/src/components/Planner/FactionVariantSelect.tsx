@@ -23,29 +23,31 @@ const FactionVariantSelect = () => {
     if (characterData === null) {
       return;
     }
-    const emptyCharacterBuild = createEmptyCharacterBuild(
-      characterData,
-      mod as string,
-      faction as string,
-      character as string
-    );
-    const newCharacterData: CharacterInterface = JSON.parse(JSON.stringify(cleanCharacterData));
     if (factionKey === 'none') {
+      const emptyCleanCharacterBuild = createEmptyCharacterBuild(
+        cleanCharacterData as CharacterInterface,
+        mod as string,
+        faction as string,
+        character as string
+      );
       dispatch({
         type: AppContextActions.changeSelectedAltFactionNodeSet,
         payload: {
           selectedAltFactionNodeSet: '',
-          characterBuild: emptyCharacterBuild,
-          characterData: newCharacterData,
+          characterBuild: emptyCleanCharacterBuild,
+          characterData: cleanCharacterData as CharacterInterface,
         },
       });
+      return;
     }
+
     const factionNodes = characterData.altFactionNodeSets?.[factionKey].nodes;
     if (factionNodes === undefined) {
       toast.error('Invalid Faction Key...', { id: 'error faction change key' });
       return;
     }
 
+    const newCharacterData: CharacterInterface = JSON.parse(JSON.stringify(cleanCharacterData));
     const sortIndents = new Set<number>();
     factionNodes.forEach((node) => {
       const replaceIndex = newCharacterData.skillTree[node.indent].findIndex(
@@ -61,6 +63,12 @@ const FactionVariantSelect = () => {
 
     sortIndents.forEach((indent) => newCharacterData.skillTree[indent].sort((a, b) => a.tier - b.tier));
 
+    const emptyCharacterBuild = createEmptyCharacterBuild(
+      newCharacterData,
+      mod as string,
+      faction as string,
+      character as string
+    );
     dispatch({
       type: AppContextActions.changeSelectedAltFactionNodeSet,
       payload: {
