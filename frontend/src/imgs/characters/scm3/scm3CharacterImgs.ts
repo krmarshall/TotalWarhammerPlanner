@@ -62,6 +62,7 @@ import jade_shugegnan from './jade_shugengan_01.webp';
 import jian_xiu_necro from './yuwei_feng_0.webp';
 import clan_vrrtkin_lord_trikstab from './clan_vrrtkin_lord_trikstab.webp';
 import clan_vrrtkin_masterglobe from './clan_vrrtkin_masterglobe.webp';
+import str_garbag from './str_garbag.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -140,6 +141,7 @@ const scm3CharacterImgs = {
   astrolicher_theak: astrolicher_theak,
   clan_vrrtkin_lord_trikstab: clan_vrrtkin_lord_trikstab,
   clan_vrrtkin_masterglobe: clan_vrrtkin_masterglobe,
+  str_garbag: str_garbag,
 };
 
 export default scm3CharacterImgs;

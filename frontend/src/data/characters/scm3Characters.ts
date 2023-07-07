@@ -62,6 +62,7 @@ const scm3Characters = {
 
   grn_greenskins: {
     lords: {
+      str_garbag: { name: 'Garbag', spellLore: SpellLores.lilWagh },
       frb_warboss_lord: { name: 'Dark Land Warboss' },
     },
     heroes: {},
