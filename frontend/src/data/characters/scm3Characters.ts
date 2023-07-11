@@ -65,7 +65,9 @@ const scm3Characters = {
       str_garbag: { name: 'Garbag', spellLore: SpellLores.lilWagh },
       frb_warboss_lord: { name: 'Dark Land Warboss' },
     },
-    heroes: {},
+    heroes: {
+      str_garbag_spite: { name: 'Spite' },
+    },
   },
 
   jbv_jade_vampires: {
