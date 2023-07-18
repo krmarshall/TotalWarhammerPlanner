@@ -46,6 +46,7 @@ const scm3Characters = {
       mar_caravan_master: { name: 'Merchant Lord' },
     },
     heroes: {
+      emp_sister_bertha: { name: 'Bertha Bestraufrung' },
       emp_zintler: { name: 'Hans Zintler' },
       emp_schwartzhelm: { name: 'Ludwig Schwarzhelm' },
       emp_gold_wizard: { name: 'Alchemist (Gold Wizard)', spellLore: SpellLores.metal },
