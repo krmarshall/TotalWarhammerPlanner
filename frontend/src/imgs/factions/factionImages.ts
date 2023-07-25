@@ -32,6 +32,8 @@ import southernRealms from './southernRealms.webp';
 import mousillon from './mousillon.webp';
 import albion from './albion.webp';
 import fimir from './fimir.webp';
+import bloodyGrail from './bloodyGrail.webp';
+import mallobaude from './mallobaude.webp';
 
 // Tech Factions
 import chevaliers from './chevaliers.webp';
@@ -77,6 +79,8 @@ const factionImages = {
   msl_mousillon: mousillon,
   alb_albion: albion,
   fim_fimir: fimir,
+  msl_bloodyGrail: bloodyGrail,
+  msl_mallobaude: mallobaude,
 
   brt_chevaliers: chevaliers,
   emp_hunstmarshal: hunstmarshal,

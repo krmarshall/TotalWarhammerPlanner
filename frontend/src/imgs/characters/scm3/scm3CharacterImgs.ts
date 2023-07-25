@@ -63,7 +63,7 @@ import jian_xiu_necro from './yuwei_feng_0.webp';
 import clan_vrrtkin_lord_trikstab from './clan_vrrtkin_lord_trikstab.webp';
 import clan_vrrtkin_masterglobe from './clan_vrrtkin_masterglobe.webp';
 import str_garbag from './str_garbag.webp';
-import str_garbag_spite from '../vanilla2/skv_chieftain_campaign_01_0.webp';
+import str_garbag_spite from './str_garbag_spite.webp';
 import emp_sister_bertha from './emp_sister_bertha.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
