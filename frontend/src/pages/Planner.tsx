@@ -40,8 +40,9 @@ const Planner = () => {
         payload: { selectedMod: mod, selectedFaction: faction },
       });
 
+      const hasBuild = code !== undefined ? true : false;
       api
-        .getCharacterSkillTree(mod as string, faction as string, character as string)
+        .getCharacterSkillTree(mod as string, faction as string, character as string, hasBuild)
         .then((response) => {
           dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
           const emptyCharacterBuild = createEmptyCharacterBuild(

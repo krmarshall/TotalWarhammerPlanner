@@ -23,8 +23,13 @@ const getErrorMessage = (status: number) => {
 };
 
 const api = {
-  getCharacterSkillTree: (gameKey: string, factionKey: string, characterKey: string): Promise<CharacterInterface> => {
-    return fetch(`${path}/skills/${gameKey}.${factionKey}.${characterKey}`, {
+  getCharacterSkillTree: (
+    gameKey: string,
+    factionKey: string,
+    characterKey: string,
+    hasBuild: boolean
+  ): Promise<CharacterInterface> => {
+    return fetch(`${path}/skills/${gameKey}.${factionKey}.${characterKey}.${hasBuild}`, {
       method: 'GET',
     }).then((response) => {
       if (response.status === 200) {

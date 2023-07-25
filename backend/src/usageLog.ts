@@ -6,6 +6,7 @@ interface LogInterface {
   misses: number;
   missList: Array<string>;
   techHits: number;
+  buildCode: number;
 }
 
 const usageData: LogInterface = {
@@ -26,6 +27,7 @@ const usageData: LogInterface = {
   misses: 0,
   missList: [],
   techHits: 0,
+  buildCode: 0,
 };
 
 const usageLog = (hoursInterval: number) => {
@@ -44,6 +46,7 @@ const outputLog = () => {
   // console.log('API Missed Links:');
   // console.log(usageData.missList);
   console.log(`Tech Hits: ${usageData.techHits}`);
+  console.log(`Build Code: ${usageData.buildCode}`);
 
   usageData.hits = 0;
   usageData.modHits = {
@@ -62,6 +65,7 @@ const outputLog = () => {
   usageData.misses = 0;
   usageData.missList = [];
   usageData.techHits = 0;
+  usageData.buildCode = 0;
 };
 
 export { usageLog, outputLog, usageData };

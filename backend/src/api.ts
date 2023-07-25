@@ -17,6 +17,9 @@ const skillListener = (req: Request, res: Response) => {
   } else {
     usageData.modHits[req.params.gameKey]++;
   }
+  if (req.params.hasBuild === 'true') {
+    usageData.buildCode++;
+  }
 
   return res.status(200).json(selectedCharacter);
 };
