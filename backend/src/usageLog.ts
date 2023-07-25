@@ -21,6 +21,7 @@ const usageData: LogInterface = {
     crys3: 0,
     scm3: 0,
     cat3: 0,
+    ovn3: 0,
 
     other: 0,
   },
@@ -40,13 +41,12 @@ const usageLog = (hoursInterval: number) => {
 const outputLog = () => {
   console.log('--------------------------------------');
   console.log(`Skill Hits: ${usageData.hits}`);
-  console.log('Skill Hits Breakdown:');
   console.log(usageData.modHits);
   console.log(`Skill Misses: ${usageData.misses}`);
   // console.log('API Missed Links:');
   // console.log(usageData.missList);
   console.log(`Tech Hits: ${usageData.techHits}`);
-  console.log(`Build Code: ${usageData.buildCode}`);
+  console.log(`Build Codes: ${usageData.buildCode}`);
 
   usageData.hits = 0;
   usageData.modHits = {
@@ -59,6 +59,7 @@ const outputLog = () => {
     crys3: 0,
     scm3: 0,
     cat3: 0,
+    ovn3: 0,
 
     other: 0,
   };
