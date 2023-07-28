@@ -115,6 +115,8 @@ const scm3Characters = {
 
   skv_skaven: {
     lords: {
+      str_skarrik: { name: 'Skarrik Spinemanglr' },
+
       str_crooktail_viciss: { name: 'Wastelord Viciss Baukis' },
 
       str_treecherik_gristl: { name: 'Gristl Twitchslice' },
