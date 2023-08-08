@@ -23,25 +23,25 @@ beforeAll(() => {
 
 describe('Basic character API tests', () => {
   test('Basic example Malagor', async () => {
-    const response = await request.get('/api/skills/vanilla2.bst_beastmen.bst_malagor');
+    const response = await request.get('/api/skills/vanilla2.bst_beastmen.bst_malagor.false');
     expect(response.status).toBe(200);
     expect(response.body).toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid game returns 404', async () => {
-    const response = await request.get('/api/skills/garbage.beastmen.bst_malagor');
+    const response = await request.get('/api/skills/garbage.beastmen.bst_malagor.false');
     expect(response.status).toBe(404);
     expect(response.body).not.toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid faction returns 404', async () => {
-    const response = await request.get('/api/skills/vanilla2.garbage.bst_malagor');
+    const response = await request.get('/api/skills/vanilla2.garbage.bst_malagor.false');
     expect(response.status).toBe(404);
     expect(response.body).not.toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
 
   test('Invalid character returns 404', async () => {
-    const response = await request.get('/api/skills/vanilla2.bst_beastmen.garbage');
+    const response = await request.get('/api/skills/vanilla2.bst_beastmen.garbage.false');
     expect(response.status).toBe(404);
     expect(response.body).not.toEqual(skillData['vanilla2']['bst_beastmen']['bst_malagor']);
   });
@@ -75,7 +75,7 @@ describe('Bulk character API test', () => {
       ];
       characterKeys.forEach((characterKey) => {
         test(`${game.name} - ${factionKey} - ${characterKey}`, async () => {
-          const response = await request.get(`/api/skills/${game.name}.${factionKey}.${characterKey}`);
+          const response = await request.get(`/api/skills/${game.name}.${factionKey}.${characterKey}.false`);
           expect(response.status).toBe(200);
           expect(response.body).toHaveProperty('key', characterKey);
           expect(response.body).toHaveProperty('skillTree');

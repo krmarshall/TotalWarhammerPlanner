@@ -55,6 +55,28 @@ const ovn3Characters = {
       fimir_finmor: { name: 'Fimm Finmor' },
     },
   },
+
+  tmb_tomb_kings: {
+    lords: {
+      tmb_Dread_King: { name: 'Dread King', spellLore: SpellLores.vampires },
+      elo_hand_of_nagash: { name: 'Hand of Nagash', spellLore: SpellLores.vampires },
+      dread_possessed_hero_01: { name: 'Thesops', spellLore: SpellLores.shadows },
+      dread_possessed_hero_02: { name: 'Persemius', spellLore: SpellLores.beasts },
+      elo_liche_general_death: { name: 'Liche Strategos (Death)', spellLore: SpellLores.death },
+      elo_liche_general_vampires: { name: 'Liche Strategos (Vampires)', spellLore: SpellLores.vampires },
+      dread_traitor_tomb_king_nebwaneph: { name: 'Traitor King Nebwaneph' },
+      dread_traitor_tomb_king_omanhan_iii: { name: 'Traitor King Omanhan III' },
+      dread_traitor_tomb_king_haptmose: { name: 'Hierophant Haptmose', spellLore: SpellLores.nehekhara },
+    },
+    heroes: {
+      elo_dread_larenscheld: { name: 'Gunther Larenscheld', spellLore: SpellLores.vampires },
+      dread_corrupted_priest_death: { name: 'Corrupted Priest (Death)', spellLore: SpellLores.death },
+      dread_corrupted_priest_shadow: { name: 'Corrupted Priest (Shadows)', spellLore: SpellLores.shadows },
+      dread_corrupted_priest_vampires: { name: 'Corrupted Priest (Vampires)', spellLore: SpellLores.vampires },
+      dread_hellwraith: { name: 'Hellwraith' },
+      dread_centurion: { name: 'Hetairoi' },
+    },
+  },
 };
 
 export default ovn3Characters;

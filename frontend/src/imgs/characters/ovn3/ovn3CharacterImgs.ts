@@ -24,7 +24,21 @@ import ksl_ice_mage_ice from './ice_mage_vladimir_stormbringer.webp';
 import dwf_envoy from './dwarf_envoy.webp';
 import matthias from './matthias.webp';
 import luther_flamenstrike from './luther_flamenstrike.webp';
-
+import tmb_Dread_King from './dread_king.webp';
+import dread_centurion from './dread_hetairoi_01.webp';
+import dread_corrupted_priest_death from './dread_corrupted_priest_02.webp';
+import dread_corrupted_priest_shadow from './dread_corrupted_priest_02.webp';
+import dread_corrupted_priest_vampires from './dread_corrupted_priest_02.webp';
+import dread_hellwraith from './dread_hellwraith_01.webp';
+import dread_possessed_hero_01 from './dread_possessed_hero_01.webp';
+import dread_possessed_hero_02 from './dread_possessed_hero_02.webp';
+import dread_traitor_tomb_king_haptmose from './dread_traitor_tomb_king_haptmose.webp';
+import dread_traitor_tomb_king_nebwaneph from './dread_traitor_tomb_king_nebwaneph.webp';
+import dread_traitor_tomb_king_omanhan_iii from './dread_traitor_tomb_king_omanhan_iii.webp';
+import elo_dread_larenscheld from './elo_larenscheld.webp';
+import elo_hand_of_nagash from './elo_hand_of_nagash.webp';
+import elo_liche_general_death from './elo_liche_general_01.webp';
+import elo_liche_general_vampires from './elo_liche_general_01.webp';
 const ovn3CharacterImgs = {
   albion_chief: albion_chief,
   morrigan: morrigan,
@@ -54,6 +68,21 @@ const ovn3CharacterImgs = {
   dwf_envoy: dwf_envoy,
   matthias: matthias,
   luther_flamenstrike: luther_flamenstrike,
+  dread_centurion: dread_centurion,
+  dread_corrupted_priest_death: dread_corrupted_priest_death,
+  dread_corrupted_priest_shadow: dread_corrupted_priest_shadow,
+  dread_corrupted_priest_vampires: dread_corrupted_priest_vampires,
+  dread_hellwraith: dread_hellwraith,
+  dread_possessed_hero_01: dread_possessed_hero_01,
+  dread_possessed_hero_02: dread_possessed_hero_02,
+  dread_traitor_tomb_king_haptmose: dread_traitor_tomb_king_haptmose,
+  dread_traitor_tomb_king_nebwaneph: dread_traitor_tomb_king_nebwaneph,
+  dread_traitor_tomb_king_omanhan_iii: dread_traitor_tomb_king_omanhan_iii,
+  elo_dread_larenscheld: elo_dread_larenscheld,
+  elo_hand_of_nagash: elo_hand_of_nagash,
+  elo_liche_general_death: elo_liche_general_death,
+  elo_liche_general_vampires: elo_liche_general_vampires,
+  tmb_Dread_King: tmb_Dread_King,
 };
 
 export default ovn3CharacterImgs;
