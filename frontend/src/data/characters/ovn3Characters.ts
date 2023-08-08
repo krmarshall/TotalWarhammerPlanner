@@ -60,10 +60,10 @@ const ovn3Characters = {
     lords: {
       tmb_Dread_King: { name: 'Dread King', spellLore: SpellLores.vampires },
       elo_hand_of_nagash: { name: 'Hand of Nagash', spellLore: SpellLores.vampires },
-      dread_possessed_hero_01: { name: 'Thesops', spellLore: SpellLores.shadows },
-      dread_possessed_hero_02: { name: 'Persemius', spellLore: SpellLores.beasts },
       elo_liche_general_death: { name: 'Liche Strategos (Death)', spellLore: SpellLores.death },
       elo_liche_general_vampires: { name: 'Liche Strategos (Vampires)', spellLore: SpellLores.vampires },
+      dread_possessed_hero_01: { name: 'Thesops', spellLore: SpellLores.shadows },
+      dread_possessed_hero_02: { name: 'Persemius', spellLore: SpellLores.beasts },
       dread_traitor_tomb_king_nebwaneph: { name: 'Traitor King Nebwaneph' },
       dread_traitor_tomb_king_omanhan_iii: { name: 'Traitor King Omanhan III' },
       dread_traitor_tomb_king_haptmose: { name: 'Hierophant Haptmose', spellLore: SpellLores.nehekhara },
