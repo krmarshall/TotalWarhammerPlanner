@@ -15,20 +15,11 @@ const lege3Characters = {
     },
   },
 
-  dae_daemons: {
+  chd_chaos_dwarfs: {
     lords: {
-      str_slavin: { name: 'Slavin Kurnz' },
+      str_rykarth: { name: 'Rykarth the Unbreakable' },
     },
     heroes: {},
-  },
-
-  dwf_dwarfs: {
-    lords: {
-      Helgar_longplaits: { name: 'Helgar Longplaits' },
-    },
-    heroes: {
-      ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
-    },
   },
 
   chs_chaos: {
@@ -54,6 +45,22 @@ const lege3Characters = {
     },
   },
 
+  dae_daemons: {
+    lords: {
+      str_slavin: { name: 'Slavin Kurnz' },
+    },
+    heroes: {},
+  },
+
+  dwf_dwarfs: {
+    lords: {
+      Helgar_longplaits: { name: 'Helgar Longplaits' },
+    },
+    heroes: {
+      ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+    },
+  },
+
   def_dark_elves: {
     lords: {
       str_fellheart: { name: 'Laithikar Fellheart' },
@@ -67,6 +74,7 @@ const lege3Characters = {
     lords: {
       hkrul_erkstein: { name: 'Grand Marshal Erkstein' },
       hkrul_gunter: { name: 'Gunter Fredhoff' },
+      str_lietpold: { name: 'Lietpold the Black' },
       dead_kes: { name: 'Stefan von Kessel' },
       str_thyrus: { name: 'Thyrus Gorman', spellLore: SpellLores.fire },
     },
@@ -74,6 +82,7 @@ const lege3Characters = {
       hkrul_aldred: { name: 'Aldred von Carroburg' },
       kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
       bassiano_dutra: { name: 'Bassiano Dutra', spellLore: SpellLores.death },
+      str_chronos: { name: 'Chronos Goodheart' },
       str_halagrundsor: { name: 'Halagrundsor the Horrible' },
       ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
     },
@@ -141,7 +150,10 @@ const lege3Characters = {
   },
 
   ogr_ogre_kingdoms: {
-    lords: { str_vazgrat: { name: 'Vazgrat the Lucky' } },
+    lords: {
+      str_targog: { name: 'Targog Whalebeater' },
+      str_vazgrat: { name: 'Vazgrat the Lucky' },
+    },
     heroes: {
       str_braugh: { name: 'Braugh Slavelord' },
       str_brudd: { name: 'Brudd the Blackened' },
@@ -164,7 +176,9 @@ const lege3Characters = {
   },
 
   sla_slaanesh: {
-    lords: {},
+    lords: {
+      str_sssel: { name: 'Sss’el’ari the Golden, Lord of Paramountcy', spellLore: SpellLores.slaanesh },
+    },
     heroes: {
       str_masque: { name: 'The Masque' },
     },
@@ -194,6 +208,8 @@ const lege3Characters = {
       str_rahtep: { name: 'Waldakir Rahtep', spellLore: SpellLores.mixed },
     },
     heroes: {
+      str_gothard: { name: 'Gothard the Undying Knight' },
+      str_obadiah: { name: 'Obadiah Glothman', spellLore: SpellLores.vampires },
       str_ulrika: { name: 'Ulrika Magdova Straghov' },
     },
   },

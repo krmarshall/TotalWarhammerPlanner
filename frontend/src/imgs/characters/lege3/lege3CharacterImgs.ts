@@ -58,6 +58,13 @@ import str_dazharr from './str_dazharr.webp';
 import str_kaarn from './str_kaarn.webp';
 import str_rahtep from './str_rahtep.webp';
 import str_vazgrat from './str_vazgrat.webp';
+import str_rykarth from './str_rykarth.webp';
+import str_chronos from './str_chronos.webp';
+import str_lietpold from './str_lietpold.webp';
+import str_targog from './str_targog.webp';
+import str_sssel from './str_sssel.webp';
+import str_gothard from './str_gothard.webp';
+import str_obadiah from './str_obadiah.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -122,6 +129,13 @@ const lege3CharacterImgs = {
   str_kaarn: str_kaarn,
   str_rahtep: str_rahtep,
   str_vazgrat: str_vazgrat,
+  str_rykarth: str_rykarth,
+  str_chronos: str_chronos,
+  str_lietpold: str_lietpold,
+  str_targog: str_targog,
+  str_sssel: str_sssel,
+  str_gothard: str_gothard,
+  str_obadiah: str_obadiah,
 };
 
 export default lege3CharacterImgs;
