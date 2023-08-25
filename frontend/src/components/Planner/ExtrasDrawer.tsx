@@ -21,7 +21,7 @@ const ExtrasDrawer = () => {
 
   let drawerClass = 'flex flex-row place-content-evenly slide-out-vert';
   if (extrasDrawerOpen) {
-    drawerClass += ' show max-h-[20vh]';
+    drawerClass += ' show max-h-[20vh] min-h-[8rem]';
   } else {
     drawerClass += ' max-h-[0vh]';
   }

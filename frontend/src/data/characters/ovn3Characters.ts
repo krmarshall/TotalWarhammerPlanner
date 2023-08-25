@@ -6,6 +6,7 @@ const ovn3Characters = {
       morgan_bernhardt: { name: 'Commander Bernhardt' },
     },
     heroes: {
+      allor: { name: 'Allor', spellLore: SpellLores.beasts },
       hef_ceridan: { name: 'Ceridan the Lone Ranger' },
       dwf_envoy: { name: 'Engrol Goldtongue' },
       ovn_ludwig_uberdorf: { name: 'Ludwig von Uberdorf' },

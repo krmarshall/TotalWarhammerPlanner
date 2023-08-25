@@ -39,6 +39,8 @@ import elo_dread_larenscheld from './elo_larenscheld.webp';
 import elo_hand_of_nagash from './elo_hand_of_nagash.webp';
 import elo_liche_general_death from './elo_liche_general_01.webp';
 import elo_liche_general_vampires from './elo_liche_general_01.webp';
+import allor from './allor.webp';
+
 const ovn3CharacterImgs = {
   albion_chief: albion_chief,
   morrigan: morrigan,
@@ -83,6 +85,7 @@ const ovn3CharacterImgs = {
   elo_liche_general_death: elo_liche_general_death,
   elo_liche_general_vampires: elo_liche_general_vampires,
   tmb_Dread_King: tmb_Dread_King,
+  allor: allor,
 };
 
 export default ovn3CharacterImgs;

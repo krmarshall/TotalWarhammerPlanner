@@ -150,7 +150,7 @@ const TopBar = ({ isMobile }: PropInterface) => {
           <>
             <div className=" flex flex-col flex-nowrap justify-center mr-4 text-gray-50">
               <div className="ml-auto flex flex-row flex-nowrap w-fit">
-                <label htmlFor="statsCheckbox" className="text-xl text-center my-auto cursor-pointer">
+                <label htmlFor="statsCheckbox" className="text-2xl text-center my-auto cursor-pointer">
                   Stats Drawer
                 </label>
                 <input
@@ -163,11 +163,11 @@ const TopBar = ({ isMobile }: PropInterface) => {
                       payload: { statsDrawerOpen: !statsDrawerOpen },
                     });
                   }}
-                  className="ml-2 cursor-pointer"
+                  className="ml-2 w-4 cursor-pointer"
                 />
               </div>
               <div className="ml-auto mb-1 flex flex-row flex-nowrap w-fit">
-                <label htmlFor="extrasCheckbox" className="text-xl text-center my-auto cursor-pointer">
+                <label htmlFor="extrasCheckbox" className="text-2xl text-center my-auto cursor-pointer">
                   Extras Drawer
                 </label>
                 <input
@@ -180,7 +180,7 @@ const TopBar = ({ isMobile }: PropInterface) => {
                       payload: { extrasDrawerOpen: !extrasDrawerOpen },
                     });
                   }}
-                  className="ml-2 cursor-pointer"
+                  className="ml-2 w-4 cursor-pointer"
                 />
               </div>
             </div>
