@@ -14,15 +14,16 @@ import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import gameData from '../data/gameData';
 import UnitStats from '../components/Planner/UnitStats';
 import FactionVariantSelect from '../components/Planner/FactionVariantSelect';
+import StatsDrawer from '../components/Planner/StatsDrawer';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
   const { characterData } = state;
   const { mod, faction, character, code } = useParams();
-  const { isMobileWidth, isMobileHeight, isShortWidth, isShortHeight, isThin } = useBulkMediaQueries();
+  const { isMobileWidth, isMobileHeight, isShortWidth, isShortHeight } = useBulkMediaQueries();
 
   const [urlLoaded, setUrlLoaded] = useState(false);
-  const [shortViewToggle, setShortViewToggle] = useState(false);
+  const [mobileTab, setMobileTab] = useState('skills');
 
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
   const isShort = isShortWidth || isShortHeight ? true : false;
@@ -100,43 +101,85 @@ const Planner = () => {
   }, [code, characterData]);
 
   useEffect(() => {
-    setShortViewToggle(false);
-  }, [isShort]);
-
-  useEffect(() => {
-    setShortViewToggle(false);
-  }, [isThin]);
-
-  useEffect(() => {
     document.title = `TWP - ${characterName}`;
   }, []);
 
-  let tableStatsContainer = 'flex flex-row flex-nowrap';
-  if (isShort && shortViewToggle) {
-    tableStatsContainer += ' h-0';
-  } else {
-    tableStatsContainer += ' grow max-h-[88vh] min-h-[50vh]';
-  }
+  const mobileTabButtonClass =
+    'rounded-lg rounded-b-none py-1 px-3 my-auto text-slate-50 text-xl shadow-md shadow-gray-900 hover-scale';
+  const mobileTabButtonColorsSelected = ' bg-gray-500 hover:bg-gray-400';
+  const mobileTabButtonColorsDeselected = ' bg-gray-600 hover:bg-gray-500';
   return (
     <div className="grow mt-1 flex flex-col bg-gray-700 w-full border border-gray-500 rounded-md px-2 py-2 overflow-y-hidden overflow-x-hidden">
       {characterData === null ? (
         <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
-        <Fragment>
-          {!isShort && <TopBar isMobile={isMobile} />}
+        <>
+          {/* {!isShort && <TopBar isMobile={isMobile} />}
 
           {!isMobile && <CharacterPortrait />}
 
           <div className={tableStatsContainer}>
-            <div className="flex-shrink-0 w-[17rem] mr-1 p-1.5 border rounded border-gray-500 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-600">
-              {characterData?.altFactionNodeSets !== undefined && <FactionVariantSelect />}
-              <UnitStats />
-            </div>
             <SkillTable faction={faction} />
           </div>
 
-          {!isThin && <ExtrasDrawer shortViewToggle={shortViewToggle} setShortViewToggle={setShortViewToggle} />}
-        </Fragment>
+          {!isThin && <ExtrasDrawer shortViewToggle={shortViewToggle} setShortViewToggle={setShortViewToggle} />} */}
+
+          {!isShort ? (
+            <>
+              <TopBar isMobile={isMobile} />
+              {!isMobile && <CharacterPortrait />}
+              <div className="flex flex-row flex-nowrap grow max-h-[88vh] min-h-[50vh]">
+                <StatsDrawer />
+
+                <SkillTable faction={faction} />
+              </div>
+              <ExtrasDrawer />
+            </>
+          ) : (
+            <>
+              <div className="">
+                <button
+                  className={
+                    mobileTabButtonClass +
+                    (mobileTab === 'skills' ? mobileTabButtonColorsSelected : mobileTabButtonColorsDeselected)
+                  }
+                  onClick={() => setMobileTab('skills')}
+                >
+                  Skills
+                </button>
+                <button
+                  className={
+                    mobileTabButtonClass +
+                    (mobileTab === 'stats' ? mobileTabButtonColorsSelected : mobileTabButtonColorsDeselected)
+                  }
+                  onClick={() => {
+                    setMobileTab('stats');
+                    dispatch({ type: AppContextActions.changeStatsDrawerOpen, payload: { statsDrawerOpen: true } });
+                  }}
+                >
+                  Stats
+                </button>
+                <button
+                  className={
+                    mobileTabButtonClass +
+                    (mobileTab === 'extras' ? mobileTabButtonColorsSelected : mobileTabButtonColorsDeselected)
+                  }
+                  onClick={() => {
+                    setMobileTab('extras');
+                    dispatch({ type: AppContextActions.changeExtrasDrawerOpen, payload: { extrasDrawerOpen: true } });
+                  }}
+                >
+                  Extras
+                </button>
+              </div>
+              <div className="flex flex-row flex-nowrap grow max-h-[88%]">
+                {mobileTab === 'skills' && <SkillTable faction={faction} />}
+                {mobileTab === 'stats' && <StatsDrawer />}
+                {mobileTab === 'extras' && <ExtrasDrawer />}
+              </div>
+            </>
+          )}
+        </>
       )}
     </div>
   );

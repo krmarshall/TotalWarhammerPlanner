@@ -102,8 +102,34 @@ const loadAdvancedToggleFromStorage = () => {
   }
 };
 
-const saveAdvancedToggleFromStorage = (value: boolean) => {
+const saveAdvancedToggleToStorage = (value: boolean) => {
   localStorage.setItem('plannerAdvancedStatsToggle', JSON.stringify(value));
+};
+
+const loadExtrasDrawerOpenFromStorage = () => {
+  const curValue = localStorage.getItem('plannerExtrasDrawerOpen');
+  if (curValue === null) {
+    return true;
+  } else {
+    return 'true' === curValue;
+  }
+};
+
+const saveExtrasDrawerOpenToStorage = (value: boolean) => {
+  localStorage.setItem('plannerExtrasDrawerOpen', JSON.stringify(value));
+};
+
+const loadStatsDrawerOpenFromStorage = () => {
+  const curValue = localStorage.getItem('plannerStatsDrawerOpen');
+  if (curValue === null) {
+    return true;
+  } else {
+    return 'true' === curValue;
+  }
+};
+
+const saveStatsDrawerOpenToStorage = (value: boolean) => {
+  localStorage.setItem('plannerStatsDrawerOpen', JSON.stringify(value));
 };
 
 export {
@@ -113,5 +139,9 @@ export {
   setActiveBuildFromStorage,
   initializeBuildsFromStorage,
   loadAdvancedToggleFromStorage,
-  saveAdvancedToggleFromStorage,
+  saveAdvancedToggleToStorage,
+  loadExtrasDrawerOpenFromStorage,
+  saveExtrasDrawerOpenToStorage,
+  loadStatsDrawerOpenFromStorage,
+  saveStatsDrawerOpenToStorage,
 };

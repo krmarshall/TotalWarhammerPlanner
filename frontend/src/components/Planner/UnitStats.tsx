@@ -3,7 +3,7 @@ import { AppContext } from '../../contexts/AppContext';
 import TooltipWrapper from '../TooltipWrapper';
 import smallEntityIcon from '../../imgs/other/icon_entity_small.webp';
 import largeEntityIcon from '../../imgs/other/icon_entity_large.webp';
-import { loadAdvancedToggleFromStorage, saveAdvancedToggleFromStorage } from '../../utils/storageFunctions';
+import { loadAdvancedToggleFromStorage, saveAdvancedToggleToStorage } from '../../utils/storageFunctions';
 import SkillPhase from './SkillPhase';
 import UnitStatLine from './UnitStatLine';
 import { getRelatedAttributes, getRelatedContactPhases, getUnitStatSets } from '../../utils/sharedFunctions';
@@ -72,16 +72,19 @@ const UnitStats = () => {
       <h3 className="text-3xl text-center">Character Stats</h3>
 
       <div className="mx-auto mb-1 flex flex-row flex-nowrap w-fit">
-        <p className="text-xl text-center my-auto">Advanced Stats</p>
+        <label htmlFor="advancedStatsCheckbox" className="text-xl text-center my-auto cursor-pointer">
+          Advanced Stats
+        </label>
         <input
           type="checkbox"
+          id="advancedStatsCheckbox"
           defaultChecked={advanced}
           onChange={() => {
             const newAdvanced = !advanced;
-            saveAdvancedToggleFromStorage(newAdvanced);
+            saveAdvancedToggleToStorage(newAdvanced);
             setAdvanced(newAdvanced);
           }}
-          className="ml-2"
+          className="ml-2 cursor-pointer"
         />
       </div>
       {unitStatSets.length > 1 && (

@@ -2,6 +2,12 @@ import { createContext, ReactElement, useReducer } from 'react';
 import BuildInterface from '../types/interfaces/BuildInterface';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 import { TechSetInterface } from '../types/interfaces/TechInterface';
+import {
+  loadExtrasDrawerOpenFromStorage,
+  loadStatsDrawerOpenFromStorage,
+  saveExtrasDrawerOpenToStorage,
+  saveStatsDrawerOpenToStorage,
+} from '../utils/storageFunctions';
 
 interface ContextStateInterface {
   selectedMod: string;
@@ -16,6 +22,8 @@ interface ContextStateInterface {
   showedTechToast: boolean;
   cleanCharacterData: CharacterInterface | null;
   selectedAltFactionNodeSet: string;
+  extrasDrawerOpen: boolean;
+  statsDrawerOpen: boolean;
 }
 
 const initialState: ContextStateInterface = {
@@ -31,6 +39,8 @@ const initialState: ContextStateInterface = {
   showedTechToast: false,
   cleanCharacterData: null,
   selectedAltFactionNodeSet: '',
+  extrasDrawerOpen: loadExtrasDrawerOpenFromStorage(),
+  statsDrawerOpen: loadStatsDrawerOpenFromStorage(),
 };
 
 interface ActionInterface {
@@ -48,6 +58,8 @@ interface ActionInterface {
     showedTechToast?: boolean;
     cleanCharacterData?: CharacterInterface | null;
     selectedAltFactionNodeSet?: string;
+    extrasDrawerOpen?: boolean;
+    statsDrawerOpen?: boolean;
   };
 }
 
@@ -66,6 +78,8 @@ enum AppContextActions {
   changeShowedTechToast = 'changeShowedTechToast',
   changeCleanCharacterData = 'changeCleanCharacterData',
   changeSelectedAltFactionNodeSet = 'changeSelectedAltFactionNodeSet',
+  changeExtrasDrawerOpen = 'changeExtrasDrawerOpen',
+  changeStatsDrawerOpen = 'changeStatsDrawerOpen',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -198,6 +212,26 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
       newState.selectedAltFactionNodeSet = action.payload.selectedAltFactionNodeSet;
       newState.characterBuild = action.payload.characterBuild;
       newState.characterData = action.payload.characterData;
+      return newState;
+    }
+
+    case AppContextActions.changeExtrasDrawerOpen: {
+      const newState = { ...state };
+      if (action.payload.extrasDrawerOpen === undefined) {
+        return state;
+      }
+      saveExtrasDrawerOpenToStorage(action.payload.extrasDrawerOpen);
+      newState.extrasDrawerOpen = action.payload.extrasDrawerOpen;
+      return newState;
+    }
+
+    case AppContextActions.changeStatsDrawerOpen: {
+      const newState = { ...state };
+      if (action.payload.statsDrawerOpen === undefined) {
+        return state;
+      }
+      saveStatsDrawerOpenToStorage(action.payload.statsDrawerOpen);
+      newState.statsDrawerOpen = action.payload.statsDrawerOpen;
       return newState;
     }
 

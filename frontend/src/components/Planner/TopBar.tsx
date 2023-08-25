@@ -21,7 +21,7 @@ interface PropInterface {
 
 const TopBar = ({ isMobile }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild, characterData } = state;
+  const { characterBuild, characterData, extrasDrawerOpen, statsDrawerOpen } = state;
   const { mod, faction, character } = useParams();
 
   const [effectiveRank, setEffectiveRank] = useState(1);
@@ -98,16 +98,47 @@ const TopBar = ({ isMobile }: PropInterface) => {
   }
 
   return (
-    <div className="h-[4.5rem] flex flex-row place-content-between">
+    <div className="h-[4.5rem] flex flex-row place-content-between whitespace-nowrap">
       <div className="w-[30vw] flex place-content-start">
         <button
-          className="flex flex-row place-content-center my-auto px-3 bg-gray-500 hover:bg-gray-400/80 border rounded-xl drop-shadow-lg hover-scale"
+          className="flex flex-row min-w-[6rem] place-content-center my-auto mr-4 px-3 bg-gray-500 hover:bg-gray-400/80 border rounded-xl drop-shadow-lg hover-scale"
           onClick={() => navigate('/')}
         >
           <img src={backIcon} alt="Back" width="45" height="45" className="my-auto w-8 h-8" draggable={false} />
           <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Home</p>
         </button>
-        <p className="text-gray-200 text-2xl text-center my-auto ml-4">
+        {!isMobile && (
+          <TooltipWrapper
+            tooltip={
+              <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">
+                <h5 className="text-3xl text-center">Controls</h5>
+                <div className="flex flex-row flex-nowrap mb-1">
+                  <img src={leftMouse} alt="left mouse" height="36" width="27" />
+                  <p className="my-auto">Select Skill</p>
+                </div>
+                <div className="flex flex-row flex-nowrap mb-1">
+                  <img src={rightMouse} alt="right mouse" height="36" width="27" />
+                  <p className="my-auto">Deselect Skill</p>
+                </div>
+                <div className="flex flex-row flex-nowrap mb-1">
+                  <img src={scrollWheel} alt="scroll wheel" height="36" width="27" />
+                  <p className="my-auto">Scroll Horizontally</p>
+                </div>
+                <div className="flex flex-row flex-nowrap">
+                  <img src={shift} alt="shift" height="32" width="86" />
+                  <p className="my-auto">+</p>
+                  <img src={scrollWheel} alt="scroll wheel" height="36" width="27" />
+                  <p className="my-auto">Scroll Vertically</p>
+                </div>
+              </div>
+            }
+          >
+            <div className="my-auto px-3 mr-4 text-2xl text-gray-50 border rounded-full bg-gray-500 hover:bg-gray-400/80 drop-shadow-lg hover-scale">
+              ?
+            </div>
+          </TooltipWrapper>
+        )}
+        <p className="text-gray-200 text-2xl text-center my-auto">
           {isMobile ? gameData[state.selectedMod]?.text : `Selected Game: ${gameData[state.selectedMod]?.text}`}
         </p>
       </div>
@@ -115,48 +146,56 @@ const TopBar = ({ isMobile }: PropInterface) => {
       <h1 className={headerClass}>{characterName}</h1>
 
       <div className="w-[30vw] flex place-content-end">
-        <TooltipWrapper
-          tooltip={
-            <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">
-              <h5 className="text-3xl text-center">Controls</h5>
-              <div className="flex flex-row flex-nowrap mb-1">
-                <img src={leftMouse} alt="left mouse" height="36" width="27" />
-                <p className="my-auto">Select Skill</p>
+        {!isMobile && (
+          <>
+            <div className=" flex flex-col flex-nowrap justify-center mr-4 text-gray-50">
+              <div className="ml-auto flex flex-row flex-nowrap w-fit">
+                <label htmlFor="statsCheckbox" className="text-xl text-center my-auto cursor-pointer">
+                  Stats Drawer
+                </label>
+                <input
+                  type="checkbox"
+                  id="statsCheckbox"
+                  defaultChecked={statsDrawerOpen}
+                  onChange={() => {
+                    dispatch({
+                      type: AppContextActions.changeStatsDrawerOpen,
+                      payload: { statsDrawerOpen: !statsDrawerOpen },
+                    });
+                  }}
+                  className="ml-2 cursor-pointer"
+                />
               </div>
-              <div className="flex flex-row flex-nowrap mb-1">
-                <img src={rightMouse} alt="right mouse" height="36" width="27" />
-                <p className="my-auto">Deselect Skill</p>
-              </div>
-              <div className="flex flex-row flex-nowrap mb-1">
-                <img src={scrollWheel} alt="scroll wheel" height="36" width="27" />
-                <p className="my-auto">Scroll Horizontally</p>
-              </div>
-              <div className="flex flex-row flex-nowrap">
-                <img src={shift} alt="shift" height="32" width="86" />
-                <p className="my-auto">+</p>
-                <img src={scrollWheel} alt="scroll wheel" height="36" width="27" />
-                <p className="my-auto">Scroll Vertically</p>
+              <div className="ml-auto mb-1 flex flex-row flex-nowrap w-fit">
+                <label htmlFor="extrasCheckbox" className="text-xl text-center my-auto cursor-pointer">
+                  Extras Drawer
+                </label>
+                <input
+                  type="checkbox"
+                  id="extrasCheckbox"
+                  defaultChecked={extrasDrawerOpen}
+                  onChange={() => {
+                    dispatch({
+                      type: AppContextActions.changeExtrasDrawerOpen,
+                      payload: { extrasDrawerOpen: !extrasDrawerOpen },
+                    });
+                  }}
+                  className="ml-2 cursor-pointer"
+                />
               </div>
             </div>
-          }
-        >
-          <div className="my-auto mr-4 px-3 text-2xl text-gray-50 border rounded-full bg-gray-500 hover:bg-gray-400/80 drop-shadow-lg hover-scale">
-            ?
-          </div>
-        </TooltipWrapper>
-
-        {!isMobile && (
-          <button
-            className="flex flex-row place-content-center mr-4 my-auto px-2 bg-blue-600 hover:bg-blue-500 border rounded-xl drop-shadow-lg hover-scale"
-            onClick={shareButtonHandler}
-          >
-            <img src={shareIcon} alt="Share" width="20" height="20" className="my-auto w-6 h-6" draggable={false} />
-            <p className="text-center text-gray-200 text-2xl px-0.5 ml-1">Share</p>
-          </button>
+            <button
+              className="flex flex-row min-w-[5rem] place-content-center mr-4 my-auto px-2 bg-blue-600 hover:bg-blue-500 border rounded-xl drop-shadow-lg hover-scale"
+              onClick={shareButtonHandler}
+            >
+              <img src={shareIcon} alt="Share" width="20" height="20" className="my-auto w-6 h-6" draggable={false} />
+              <p className="text-center text-gray-200 text-2xl px-0.5">Share</p>
+            </button>
+          </>
         )}
 
         <button
-          className="flex flex-row place-content-center mr-4 px-2 my-auto bg-gray-500 hover:bg-gray-400/80 border rounded-xl drop-shadow-lg hover-scale"
+          className="flex flex-row min-w-[5rem] place-content-center mr-4 px-2 my-auto bg-gray-500 hover:bg-gray-400/80 border rounded-xl drop-shadow-lg hover-scale"
           onClick={resetButtonHandler}
         >
           <img src={resetIcon} alt="reset" width="20" height="20" className="my-auto w-6 h-6" draggable={false} />

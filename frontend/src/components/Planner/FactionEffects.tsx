@@ -87,10 +87,9 @@ const FactionEffects = ({ factionEffect }: PropInterface) => {
 
   const fontSize = setFontSize(factionEffect.localised_title);
 
-  const vanillaGamePath = selectedMod.includes('2') ? 'vanilla2' : 'vanilla3';
   const imagePath = factionEffect.ui_icon.replace('.png', '.webp');
   return (
-    <div className="flex flex-col mx-1 min-w-[14.5rem] shadow-lg border border-gray-500 rounded">
+    <div className="flex flex-col mx-1 mt-1.5 min-w-[14.5rem] max-w-[35rem] shadow-lg border border-gray-500 rounded">
       <h2 className="text-center text-3xl mt-1 text-gray-200 text-shadow">Faction Effects</h2>
       <div className="w-full pb-1 place-items-center overflow-x-hidden overflow-y-hidden">
         <TooltipWrapper
