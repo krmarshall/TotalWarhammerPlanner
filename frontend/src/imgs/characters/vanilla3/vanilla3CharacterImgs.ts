@@ -93,6 +93,14 @@ import chd_zhatan_the_black from './chd_zhatan_the_black_0.webp';
 import neu_ulrika from './neu_ulrika_0.webp';
 
 import chs_harald_hammerstorm from './dae_chs_harald_hammerstorm_0.webp';
+
+import yuan_bo from './cth_jade_dragon_human_0.webp';
+import celestial_general from './cth_celestial_general_campaign_03_0.webp';
+import aekold_hellbrass from './chs_ch_aekold_0.webp';
+import blue_scribes from './dae_blue_scribes_0.webp';
+import changeling from './dae_changeling_0.webp';
+import hag_witch from './ksl_hag_witch_campaign_01_0.webp';
+import ostankya from './ksl_ostankya_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
@@ -248,6 +256,17 @@ const vanilla3CharacterImgs = {
   ksl_ulrika: neu_ulrika,
 
   chs_cha_harald_hammerstorm: chs_harald_hammerstorm,
+
+  cth_yuan_bo: yuan_bo,
+  cth_celestial_general_yang: celestial_general,
+  cth_celestial_general_yin: celestial_general,
+  ksl_mother_ostankya: ostankya,
+  ksl_hag_witch_beasts: hag_witch,
+  ksl_hag_witch_death: hag_witch,
+  ksl_hag_witch_shadows: hag_witch,
+  tze_the_changeling: changeling,
+  tze_aekold_helbrass: aekold_hellbrass,
+  tze_blue_scribes: blue_scribes,
 };
 
 export default vanilla3CharacterImgs;

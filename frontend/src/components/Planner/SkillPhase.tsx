@@ -257,6 +257,12 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
             <p className="my-auto ml-1">{phase.spread_radius}m</p>
           </div>
         )}
+        {phase.execute_ratio && (
+          <div className="flex flex-row">
+            <h5 className="text-left w-24">Execute Below:</h5>
+            <p className="my-auto ml-1">{phase.execute_ratio * 100}% HP</p>
+          </div>
+        )}
         {phase.stat_effects && (
           <div className="text-left">
             <h5 className="w-24">Stat Effects:</h5>

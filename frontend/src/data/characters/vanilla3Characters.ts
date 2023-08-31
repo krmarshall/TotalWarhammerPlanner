@@ -360,16 +360,22 @@ const vanilla3Characters = {
   cth_cathay: {
     lords: {
       cth_miao_ying: {
-        name: 'Miao Ying',
+        name: 'Miao Ying, the Storm Dragon',
+        spellLore: SpellLores.mixed,
+      },
+      cth_yuan_bo: {
+        name: 'Yuan Bo, the Jade Dragon',
         spellLore: SpellLores.mixed,
       },
       cth_zhao_ming: {
-        name: 'Zhao Ming',
+        name: 'Zhao Ming, the Iron Dragon',
         spellLore: SpellLores.mixed,
       },
       cth_lord_caravan_master: {
         name: 'Caravan Master',
       },
+      cth_celestial_general_yang: { name: 'Celestial General (Yang)', spellLore: SpellLores.yang },
+      cth_celestial_general_yin: { name: 'Celestial General, (Yin)', spellLore: SpellLores.yin },
       cth_dragon_blooded_shugengan_yang: {
         name: 'Dragon-Blooded Shugengan Lord (Yang)',
         spellLore: SpellLores.yang,
@@ -537,6 +543,10 @@ const vanilla3Characters = {
         name: 'Tzarina Katarin',
         spellLore: SpellLores.ice,
       },
+      ksl_mother_ostankya: {
+        name: 'Mother Ostankya',
+        spellLore: SpellLores.mixed,
+      },
       ksl_ataman: {
         name: 'Ataman',
       },
@@ -564,6 +574,18 @@ const vanilla3Characters = {
       ksl_frost_maiden_tempest: {
         name: 'Frost Maiden (Tempest)',
         spellLore: SpellLores.tempest,
+      },
+      ksl_hag_witch_beasts: {
+        name: 'Hag Witch (Beasts)',
+        spellLore: SpellLores.beasts,
+      },
+      ksl_hag_witch_death: {
+        name: 'Hag Witch (Death)',
+        spellLore: SpellLores.death,
+      },
+      ksl_hag_witch_shadows: {
+        name: 'Hag Witch (Shadow)',
+        spellLore: SpellLores.shadows,
       },
       ksl_patriarch: {
         name: 'Patriarch',
@@ -719,6 +741,10 @@ const vanilla3Characters = {
 
   tze_tzeentch: {
     lords: {
+      tze_the_changeling: {
+        name: 'The Changeling',
+        spellLore: SpellLores.tzeentch,
+      },
       tze_kairos: {
         name: 'Kairos Fateweaver',
         spellLore: SpellLores.mixed,
@@ -753,6 +779,11 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      tze_aekold_helbrass: { name: 'Aekold Helbrass' },
+      tze_blue_scribes: {
+        name: 'The Blue Scribes',
+        spellLore: SpellLores.mixed,
+      },
       tze_cultist: {
         name: 'Cultist of Tzeentch',
         spellLore: SpellLores.fire,

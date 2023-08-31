@@ -45,6 +45,8 @@ import shadowLegion from './shadowLegion.webp';
 import legionOfTheGorequeen from './legionOfTheGorequeen.webp';
 import puppetsOfMisrule from './puppetsOfMisrule.webp';
 import krakaDrak from './krakaDrak.webp';
+import daughtersOfTheForest from './daughtersOfTheForest.webp';
+import theDeceivers from './theDeceivers.webp';
 
 const factionImages = {
   tmb_tomb_kings: tombKings,
@@ -91,6 +93,8 @@ const factionImages = {
   chs_legionOfTheGorequeen: legionOfTheGorequeen,
   chs_puppetsOfMisrule: puppetsOfMisrule,
   dwf_kraka_drak: krakaDrak,
+  ksl_daughtersOfTheForest: daughtersOfTheForest,
+  tze_theDeceivers: theDeceivers,
 };
 
 export default factionImages;
