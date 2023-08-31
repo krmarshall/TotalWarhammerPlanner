@@ -9,7 +9,7 @@ interface PropInterface {
 const IssuesSlider: FC<PropInterface> = ({ children, title, bg }) => {
   const [open, setOpen] = useState(false);
 
-  let ulClass = 'list-disc list-inside slide-out';
+  let ulClass = 'list-disc list-inside slide-out-vert';
   if (open) {
     ulClass += ' show max-h-[80vh] mt-2';
   } else {
