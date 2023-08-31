@@ -1,7 +1,6 @@
 import kho_karnak from './kho_karnak.webp';
 import magister from './magister_01.webp';
 import merga from './merga.webp';
-import jade_officer from './jade_officer_0.webp';
 import str_rotblood_blightstorm_hero from './str_rotblood_blightstorm_hero.webp';
 import str_rotblood_eternal from './str_rotblood_eternal.webp';
 import str_rotblood_lifeleech_hero from './str_rotblood_lifeleech_hero.webp';
@@ -66,6 +65,7 @@ import str_garbag from './str_garbag.webp';
 import str_garbag_spite from './str_garbag_spite.webp';
 import emp_sister_bertha from './emp_sister_bertha.webp';
 import str_skarrik from './str_skarrik.webp';
+import gate_master from './gate_master_1.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -74,7 +74,6 @@ const scm3CharacterImgs = {
   kho_karnak: kho_karnak,
   magister: magister,
   merga: merga,
-  jade_officer: jade_officer,
   str_rotblood_blightstorm_hero: str_rotblood_blightstorm_hero,
   str_rotblood_eternal: str_rotblood_eternal,
   str_rotblood_lifeleech_hero: str_rotblood_lifeleech_hero,
@@ -148,6 +147,7 @@ const scm3CharacterImgs = {
   str_garbag_spite: str_garbag_spite,
   emp_sister_bertha: emp_sister_bertha,
   str_skarrik: str_skarrik,
+  gate_master: gate_master,
 };
 
 export default scm3CharacterImgs;

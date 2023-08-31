@@ -21,7 +21,7 @@ const scm3Characters = {
   cth_cathay: {
     lords: { cth_yinyin: { name: 'Yin-Yin, the Sea Dragon', spellLore: SpellLores.mixed } },
     heroes: {
-      jade_officer: { name: 'Jade Officer' },
+      gate_master: { name: 'Gate Master' },
     },
   },
 
