@@ -76,6 +76,7 @@ const Issues = () => {
         </div>
 
         <ul className="list-disc list-inside text-gray-200 text-2xl">
+          <li>Skill nodes that overlap indent and tier with another node have inconsistent behavior.</li>
           <li>
             Tooltips that cant find horizontal space to fit in the viewport without conflicting with the cursor
             aren&apos;t visible

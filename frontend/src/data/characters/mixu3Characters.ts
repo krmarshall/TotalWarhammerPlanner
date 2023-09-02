@@ -7,6 +7,7 @@ const mixu3Characters = {
       bst_slugtongue: { name: 'Molokh Slugtongue', spellLore: SpellLores.mixed },
     },
     heroes: {
+      bst_little_morella: { name: 'Little Morella' },
       bst_gorehoof: { name: 'Gorehoof' },
     },
   },

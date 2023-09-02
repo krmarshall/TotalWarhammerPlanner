@@ -52,6 +52,7 @@ import wef_daith from './wef_daith.webp';
 import wef_naieth_the_prophetess from './wef_naieth_the_prophetess.webp';
 import wef_wychwethyl from './wef_wychwethyl.webp';
 import tze_exalted_hero from './tze_exalted_hero_01.webp';
+import bst_little_morella from './bst_little_morella.webp';
 
 import msl_aucassin_de_hane from './msl_aucassin_de_hane.webp';
 import msl_bougars_the_butcher from './msl_bougars_the_butcher.webp';
@@ -139,6 +140,7 @@ const mixu3CharacterImgs = {
   wef_naieth_the_prophetess: wef_naieth_the_prophetess,
   wef_wychwethyl: wef_wychwethyl,
   tze_exalted_hero: tze_exalted_hero,
+  bst_little_morella: bst_little_morella,
 
   // Mousillon
   msl_aucassin_de_hane: msl_aucassin_de_hane,
