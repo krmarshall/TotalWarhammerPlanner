@@ -17,7 +17,7 @@ const AttributeTooltip = ({ attribute }: PropInterface) => {
         />
         <h5 className="text-2xl ml-1">{attribute.description}</h5>
       </div>
-      <p className="text-lg text-left">{attribute.bullet_text}</p>
+      <p className="text-lg text-left whitespace-pre-wrap">{attribute.bullet_text}</p>
     </div>
   );
 };
