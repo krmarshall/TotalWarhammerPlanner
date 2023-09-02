@@ -288,7 +288,12 @@ const UnitStats = () => {
         <UnitStatLine statName="Ammunition" imgPath="icon_stat_ammo" statValue={stats.primary_ammo} />
       )}
       {stats.secondary_ammo !== undefined && stats.secondary_ammo > 0 && (
-        <UnitStatLine statName="Alt Ammunition" imgPath="icon_stat_ammo" statValue={stats.secondary_ammo} />
+        <UnitStatLine
+          statName="Alt Ammunition"
+          imgPath="icon_stat_ammo"
+          statValue={stats.secondary_ammo}
+          advanced={advanced}
+        />
       )}
       {stats.projectile !== undefined && (
         <UnitStatLine statName="Range" imgPath="icon_stat_range" statValue={stats.projectile.effective_range} />
