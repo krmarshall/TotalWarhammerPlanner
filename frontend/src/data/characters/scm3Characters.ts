@@ -151,6 +151,25 @@ const scm3Characters = {
     },
   },
 
+  tmb_tomb_kings: {
+    lords: {
+      tmb_sea: { name: 'King Amenemhetum', spellLore: SpellLores.deeps },
+      tmb_crim: { name: 'King Imrathepis' },
+      tmb_scarab: { name: 'King Nekhenaten' },
+      tmb_rakaph: { name: 'Prince Rakaph III' },
+      tmb_rasut: { name: 'Queen Rasut', spellLore: SpellLores.mixed },
+      tmb_rhupesh: { name: 'King Rhupesh VII' },
+      tmb_sehenesmet: { name: 'Sehenesmet, Vizier of Quatar', spellLore: SpellLores.nehekhara },
+      tmb_liche_high_priest_death: { name: 'Liche High Priest (Death)', spellLore: SpellLores.death },
+      tmb_liche_high_priest_light: { name: 'Liche High Priest (Light)', spellLore: SpellLores.light },
+      tmb_liche_high_priest_nehekhara: { name: 'Liche High Priest (Nehekhara)', spellLore: SpellLores.nehekhara },
+    },
+    heroes: {
+      loki_apophas: { name: 'Prince Apophas' },
+      loki_nekaph: { name: 'Herald Nekaph' },
+    },
+  },
+
   vmp_vampire_counts: {
     lords: {
       hkrul_mundvard: { name: 'Mundvard the Cruel', spellLore: SpellLores.mixed },

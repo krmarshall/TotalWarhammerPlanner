@@ -157,6 +157,7 @@ const gameData: { [key: string]: GameDataInterface } = {
       "Dead's Kislev Shaman (9 May 2023)",
       "Garbag's Cunnin' Alliance (31 Aug 2023)",
       'Dark Land Warboss (31 Aug 2023)',
+      'Tomb Kings Extended (2 Sep 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',
   },

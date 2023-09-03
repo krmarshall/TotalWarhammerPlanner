@@ -66,6 +66,16 @@ import str_garbag_spite from './str_garbag_spite.webp';
 import emp_sister_bertha from './emp_sister_bertha.webp';
 import str_skarrik from './str_skarrik.webp';
 import gate_master from './gate_master_1.webp';
+import tmb_sea from './tmb_sea.webp';
+import liche_high_priest from './tmb_liche_high_priest_01.webp';
+import tmb_rasut from './tmb_rasut.webp';
+import tmb_sehenesmet from './tmb_sehenesmet.webp';
+import tmb_rhupesh from './tmb_rhupesh.webp';
+import tmb_rakaph from './tmb_rakaph.webp';
+import tmb_crim from './tmb_crim.webp';
+import tmb_scarab from './tmb_scarab.webp';
+import loki_apophas from './loki_apophas.webp';
+import loki_nekaph from './loki_nekaph.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -148,6 +158,18 @@ const scm3CharacterImgs = {
   emp_sister_bertha: emp_sister_bertha,
   str_skarrik: str_skarrik,
   gate_master: gate_master,
+  tmb_sea: tmb_sea,
+  tmb_liche_high_priest_death: liche_high_priest,
+  tmb_liche_high_priest_light: liche_high_priest,
+  tmb_liche_high_priest_nehekhara: liche_high_priest,
+  tmb_rasut: tmb_rasut,
+  tmb_sehenesmet: tmb_sehenesmet,
+  tmb_rhupesh: tmb_rhupesh,
+  tmb_rakaph: tmb_rakaph,
+  tmb_crim: tmb_crim,
+  tmb_scarab: tmb_scarab,
+  loki_apophas: loki_apophas,
+  loki_nekaph: loki_nekaph,
 };
 
 export default scm3CharacterImgs;
