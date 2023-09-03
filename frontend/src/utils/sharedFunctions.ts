@@ -255,7 +255,7 @@ const getUnitStatSets = (characterData: CharacterInterface | null) => {
 
   characterData?.backgroundSkills?.forEach((bgSkill) =>
     bgSkill.levels?.forEach((skillLevel) => {
-      if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
+      if (skillLevel?.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
         unitStatNames.push(bgSkill.localised_name);
         unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
       }
