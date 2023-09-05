@@ -271,7 +271,7 @@ const setFontSize = (string: string) => {
     fontSize = 'text-xs';
   } else if (string.length > 37) {
     fontSize = 'text-sm';
-  } else if (string.length > 27) {
+  } else if (string.length > 25) {
     fontSize = 'text-base';
   } else {
     fontSize = 'text-xl';

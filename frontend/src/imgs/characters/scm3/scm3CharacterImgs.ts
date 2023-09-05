@@ -76,6 +76,12 @@ import tmb_crim from './tmb_crim.webp';
 import tmb_scarab from './tmb_scarab.webp';
 import loki_apophas from './loki_apophas.webp';
 import loki_nekaph from './loki_nekaph.webp';
+import frb_dark_land_orcs_legendary_lord from './frb_dark_land_orcs_legendary_lord_01.webp';
+import frb_orc_dragonrider from './frb_orc_dragonrider_01.webp';
+import hkrul_harb from './hkrul_harb.webp';
+import hkrul_lector_manann from './hkrul_lector_manann_1.webp';
+import hkrul_mack from './hkrul_mack.webp';
+import hkrul_slaver from './hkrul_slaver_1.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -170,6 +176,12 @@ const scm3CharacterImgs = {
   tmb_scarab: tmb_scarab,
   loki_apophas: loki_apophas,
   loki_nekaph: loki_nekaph,
+  frb_dark_land_orcs_legendary_lord: frb_dark_land_orcs_legendary_lord,
+  frb_orc_dragonrider: frb_orc_dragonrider,
+  hkrul_harb: hkrul_harb,
+  hkrul_lector_manann: hkrul_lector_manann,
+  hkrul_mack: hkrul_mack,
+  hkrul_slaver: hkrul_slaver,
 };
 
 export default scm3CharacterImgs;

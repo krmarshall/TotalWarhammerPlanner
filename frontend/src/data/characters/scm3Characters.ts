@@ -34,7 +34,7 @@ const scm3Characters = {
 
   emp_empire: {
     lords: {
-      emp_sec_hans: { name: 'Hans Frankenwurter' },
+      hkrul_mack: { name: 'Reinhardt von Mackensen' },
 
       emp_helborg: { name: 'Kurt Helborg' },
 
@@ -43,9 +43,12 @@ const scm3Characters = {
       hkrul_egmond: { name: 'Egmond den Euwe', spellLore: SpellLores.mixed },
       hkrul_jk: { name: 'Jaan van de Kuypers' },
       hkrul_hendrik: { name: 'Simon Goudenkruin' },
+      hkrul_lector_manann: { name: 'High Priest of Manann' },
       mar_caravan_master: { name: 'Merchant Lord' },
     },
     heroes: {
+      emp_sec_hans: { name: 'Hans Frankenwurter' },
+
       emp_sister_bertha: { name: 'Bertha Bestraufrung' },
       emp_zintler: { name: 'Hans Zintler' },
       emp_schwartzhelm: { name: 'Ludwig Schwarzhelm' },
@@ -56,6 +59,7 @@ const scm3Characters = {
       hkrul_cross: { name: 'Captain Daefvid Maicross' },
       hkrul_guzunda: { name: 'Guzunda Wallrattler' },
       hkrul_lisette: { name: 'Lisette Leerer' },
+      hkrul_harb: { name: 'Odvaal van den Huister' },
       hkrul_pg: { name: 'Pieter de Groot' },
       hkrul_solkan: { name: 'Sword of Solkan' },
     },
@@ -64,10 +68,14 @@ const scm3Characters = {
   grn_greenskins: {
     lords: {
       str_garbag: { name: 'Garbag', spellLore: SpellLores.lilWagh },
+
+      frb_dark_land_orcs_legendary_lord: { name: 'Gormok the Dark Armourer' },
       frb_warboss_lord: { name: 'Dark Land Warboss' },
     },
     heroes: {
       str_garbag_spite: { name: 'Spite' },
+
+      frb_orc_dragonrider: { name: 'Dark Land Drake Rider' },
     },
   },
 
@@ -173,6 +181,7 @@ const scm3Characters = {
   vmp_vampire_counts: {
     lords: {
       hkrul_mundvard: { name: 'Mundvard the Cruel', spellLore: SpellLores.mixed },
+      hkrul_slaver: { name: 'Master Slavetrader', spellLore: SpellLores.vampires },
       jian_xiu_necro: { name: 'Yuwei Ha Feng', spellLore: SpellLores.mixed },
       jade_shugegnan: { name: 'Jade-Blooded Shugengan', spellLore: SpellLores.yin },
     },
