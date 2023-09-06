@@ -470,6 +470,7 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      tze_aekold_helbrass: { name: 'Aekold Helbrass' },
       sla_alluress_shadow: {
         name: 'Alluress (Shadows)',
         spellLore: SpellLores.shadows,
@@ -838,10 +839,6 @@ const vanilla3Characters = {
         name: 'Vilitch the Curseling',
         spellLore: SpellLores.tzeentch,
       },
-      chs_lord_of_change: {
-        name: 'Sarthorael the Everwatcher',
-        spellLore: SpellLores.metal,
-      },
       chs_lord: {
         name: 'Chaos Lord',
       },
@@ -904,6 +901,7 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      tze_aekold_helbrass: { name: 'Aekold Helbrass' },
       chs_cha_harald_hammerstorm: {
         name: 'Harald Hammerstorm',
       },
