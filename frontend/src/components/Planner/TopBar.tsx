@@ -3,7 +3,7 @@ import gameData from '../../data/gameData';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { createEmptyCharacterBuild } from '../../utils/sharedFunctions';
-import { convertBuildToCode, generateCharacterURL } from '../../utils/urlFunctions';
+import { convertBuildToCode, splitCharacterKey } from '../../utils/urlFunctions';
 import { toast } from 'react-hot-toast';
 import TooltipWrapper from '../TooltipWrapper';
 
@@ -21,7 +21,14 @@ interface PropInterface {
 
 const TopBar = ({ isMobile }: PropInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild, characterData, extrasDrawerOpen, statsDrawerOpen } = state;
+  const {
+    characterBuild,
+    characterData,
+    extrasDrawerOpen,
+    statsDrawerOpen,
+    selectedAltFactionNodeSet,
+    selectedStartPosTrait,
+  } = state;
   const { mod, faction, character } = useParams();
 
   const [effectiveRank, setEffectiveRank] = useState(1);
@@ -58,34 +65,25 @@ const TopBar = ({ isMobile }: PropInterface) => {
       return;
     }
 
-    let buildLink = convertBuildToCode(characterBuild, characterData);
-    if (characterData.altFactionNodeSets !== undefined) {
-      buildLink = generateCharacterURL(characterBuild);
-      navigator.clipboard
-        .writeText(buildLink)
-        .then(() => {
-          toast.success(
-            'Build codes for characters with faction variants are not currently supported. Base character URL copied to clipboard.',
-            { id: 'faction alternate clipboard', duration: 12000 }
-          );
-        })
-        .catch(() => {
-          toast.error('Error copying build to the clipboard...', { id: 'error clipboard' });
-        });
-    } else {
-      navigator.clipboard
-        .writeText(buildLink)
-        .then(() => {
-          toast.success('Build copied to clipboard!', { id: 'success clipboard' });
-        })
-        .catch(() => {
-          toast.error('Error copying build to the clipboard...', { id: 'error clipboard' });
-        });
-    }
+    const buildLink = convertBuildToCode(
+      characterBuild,
+      characterData,
+      selectedAltFactionNodeSet,
+      selectedStartPosTrait
+    );
+    navigator.clipboard
+      .writeText(buildLink)
+      .then(() => {
+        toast.success('Build copied to clipboard!', { id: 'success clipboard' });
+      })
+      .catch(() => {
+        toast.error('Error copying build to the clipboard...', { id: 'error clipboard' });
+      });
   };
 
-  const lordName = gameData[mod as string].characters[faction as string]?.lords?.[character as string]?.name;
-  const heroName = gameData[mod as string].characters[faction as string]?.heroes?.[character as string]?.name;
+  const { cleanCharacter } = splitCharacterKey(character as string);
+  const lordName = gameData[mod as string].characters[faction as string]?.lords?.[cleanCharacter as string]?.name;
+  const heroName = gameData[mod as string].characters[faction as string]?.heroes?.[cleanCharacter as string]?.name;
   const characterName = lordName === undefined ? heroName : lordName;
 
   const rankLimit = mod?.includes('2') ? 40 : 50;

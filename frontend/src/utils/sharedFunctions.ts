@@ -5,20 +5,29 @@ import {
   CharacterInterface,
   EffectInterface,
   PhaseInterface,
+  SkillInterface,
   UnitStatsInterface,
 } from '../types/interfaces/CharacterInterface';
+import { splitCharacterKey } from './urlFunctions';
 
 const createEmptyCharacterBuild = (
-  character: CharacterInterface,
+  characterData: CharacterInterface,
   gameKey: string,
   factionKey: string,
   characterKey: string
 ) => {
+  let localCharacterData: CharacterInterface;
+  const { cleanCharacter, cleanFaction, startPos } = splitCharacterKey(characterKey);
+  if (cleanFaction !== '' && characterData.altFactionNodeSets !== undefined) {
+    localCharacterData = addFactionVariantNodes(characterData.altFactionNodeSets[cleanFaction].nodes, characterData);
+  } else {
+    localCharacterData = characterData;
+  }
   const emptyBuildArray: Array<Array<number>> = [];
   let rank = 1;
   let startingSkillPoints = 0;
   const selectedSkills: Array<string> = [];
-  character.skillTree.forEach((skillRow, yIndex) => {
+  localCharacterData.skillTree.forEach((skillRow, yIndex) => {
     emptyBuildArray[yIndex] = [];
     skillRow.forEach((skill, xIndex) => {
       emptyBuildArray[yIndex][xIndex] = skill.points_on_creation;
@@ -34,7 +43,7 @@ const createEmptyCharacterBuild = (
   const emptyCharacterBuild: BuildInterface = {
     game: gameKey,
     faction: factionKey,
-    character: characterKey,
+    character: cleanCharacter,
     buildData: emptyBuildArray,
     rank,
     startingSkillPoints,
@@ -50,9 +59,17 @@ const createCharacterBuildFromArray = (
   arrayBuild: Array<Array<number>>,
   characterData: CharacterInterface,
   game: string,
-  faction: string,
-  character: string
+  factionKey: string,
+  characterKey: string
 ) => {
+  let localCharacterData: CharacterInterface;
+  const { cleanCharacter, cleanFaction, startPos } = splitCharacterKey(characterKey);
+  if (cleanFaction !== '' && characterData.altFactionNodeSets?.[cleanFaction] !== undefined) {
+    localCharacterData = addFactionVariantNodes(characterData.altFactionNodeSets[cleanFaction].nodes, characterData);
+  } else {
+    localCharacterData = characterData;
+  }
+
   let rank = 1;
   let startingSkillPoints = 0;
   let autoUnlockSkillPoints = 0;
@@ -64,14 +81,14 @@ const createCharacterBuildFromArray = (
       if (skill > 0) {
         rank += skill;
 
-        selectedSkills.push(characterData.skillTree[y][x].character_skill_key);
-        selectedSkills.push(characterData.skillTree[y][x].key);
+        selectedSkills.push(localCharacterData.skillTree[y][x].character_skill_key);
+        selectedSkills.push(localCharacterData.skillTree[y][x].key);
 
-        if (characterData.skillTree[y][x].points_on_creation > 0) {
-          startingSkillPoints += characterData.skillTree[y][x].points_on_creation;
+        if (localCharacterData.skillTree[y][x].points_on_creation > 0) {
+          startingSkillPoints += localCharacterData.skillTree[y][x].points_on_creation;
         }
 
-        characterData.skillTree[y][x].levels?.forEach((level, index) => {
+        localCharacterData.skillTree[y][x].levels?.forEach((level, index) => {
           if (index + 1 <= skill) {
             if (level.blocks_skill_node_keys !== undefined) {
               blockedSkills.push(...level.blocks_skill_node_keys);
@@ -87,8 +104,8 @@ const createCharacterBuildFromArray = (
   });
   const newCharacterBuild: BuildInterface = {
     game,
-    faction,
-    character,
+    faction: factionKey,
+    character: cleanCharacter,
     buildData: arrayBuild,
     rank,
     startingSkillPoints,
@@ -265,6 +282,25 @@ const getUnitStatSets = (characterData: CharacterInterface | null) => {
   return unitStatSets;
 };
 
+const addFactionVariantNodes = (factionNodes: Array<SkillInterface>, characterData: CharacterInterface) => {
+  const derefCharacterData: CharacterInterface = JSON.parse(JSON.stringify(characterData));
+  const sortIndents = new Set<number>();
+  factionNodes.forEach((node) => {
+    const replaceIndex = derefCharacterData.skillTree[node.indent].findIndex(
+      (genericNode) => genericNode.tier === node.tier
+    );
+    if (replaceIndex === -1) {
+      derefCharacterData.skillTree[node.indent].push(node);
+      sortIndents.add(node.indent);
+    } else {
+      derefCharacterData.skillTree[node.indent][replaceIndex] = node;
+    }
+  });
+
+  sortIndents.forEach((indent) => derefCharacterData.skillTree[indent].sort((a, b) => a.tier - b.tier));
+  return derefCharacterData;
+};
+
 const setFontSize = (string: string) => {
   let fontSize;
   if (string.length > 52) {
@@ -355,4 +391,5 @@ export {
   getUnitStatSets,
   setFontSize,
   getBgUrl,
+  addFactionVariantNodes,
 };

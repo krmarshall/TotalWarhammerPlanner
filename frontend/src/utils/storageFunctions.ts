@@ -27,7 +27,9 @@ const saveBuildToStorage = (
   storageBuilds[buildName] = state.characterBuild.buildData;
 
   localStorage.setItem(
-    `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}`,
+    `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}${
+      state.selectedAltFactionNodeSet !== '' ? `$${state.selectedAltFactionNodeSet}` : ''
+    }`,
     JSON.stringify(storageBuilds)
   );
   dispatch({ type: AppContextActions.changeLocalStorageBuildKeys, payload: { localStorageBuildKeys: newBuildKeys } });
@@ -48,7 +50,9 @@ const deleteBuildFromStorage = (
   delete storageBuilds[buildName];
 
   localStorage.setItem(
-    `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}`,
+    `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}${
+      state.selectedAltFactionNodeSet !== '' ? `$${state.selectedAltFactionNodeSet}` : ''
+    }`,
     JSON.stringify(storageBuilds)
   );
   dispatch({ type: AppContextActions.changeLocalStorageBuildKeys, payload: { localStorageBuildKeys: newBuildKeys } });
@@ -84,7 +88,9 @@ const setActiveBuildFromStorage = (
 
 const loadBuildsFromStorage = (state: ContextStateInterface) => {
   const storageBuilds = localStorage.getItem(
-    `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}`
+    `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}${
+      state.selectedAltFactionNodeSet !== '' ? `$${state.selectedAltFactionNodeSet}` : ''
+    }`
   );
   if (storageBuilds === null) {
     return {};

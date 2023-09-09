@@ -28,6 +28,31 @@ const About = () => {
 
         <div className="flex flex-row place-content-center mt-12">
           <hr className="grow mt-[1.6rem] opacity-50" />
+          <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">RPFM</h1>
+          <hr className="grow mt-[1.6rem] opacity-50" />
+        </div>
+        <p className="text-center text-gray-200 text-2xl">
+          Consider supporting Frodo, the developer of RPFM, without which this site and countless mods wouldn&apos;t be
+          possible.
+        </p>
+        <a
+          href="https://www.patreon.com/RPFM"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto mt-2 px-2 flex flex-row border rounded-3xl bg-gray-500"
+        >
+          <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m108.8135992 26.06720125c-26.468266 0-48.00213212 21.53066613-48.00213212 47.99733213 0 26.38653268 21.53386613 47.85426547 48.00213213 47.85426547 26.38639937 0 47.8530655-21.4677328 47.8530655-47.85426547 0-26.466666-21.46666613-47.99733213-47.85306547-47.99733213"
+              fill="#f96753"
+            />
+            <path d="m23.333335 153.93333178v-127.86666388h23.46666576v127.8666639z" fill="#052a49" />
+          </svg>
+          <p className="text-gray-50 text-center pt-1">Frodo&apos;s Patreon</p>
+        </a>
+
+        <div className="flex flex-row place-content-center mt-12">
+          <hr className="grow mt-[1.6rem] opacity-50" />
           <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">Ko-Fi</h1>
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
@@ -44,32 +69,6 @@ const About = () => {
             src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3"
             alt="Buy Me a Coffee at ko-fi.com"
           />
-        </a>
-
-        <div className="flex flex-row place-content-center mt-12">
-          <hr className="grow mt-[1.6rem] opacity-50" />
-          <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">RPFM</h1>
-          <hr className="grow mt-[1.6rem] opacity-50" />
-        </div>
-        <p className="text-center text-gray-200 text-2xl">
-          Also consider supporting Frodo the developer of RPFM, without which this site and countless mods wouldn&apos;t
-          be possible.
-        </p>
-
-        <a
-          href="https://www.patreon.com/RPFM"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mx-auto mt-2 px-2 flex flex-row border rounded-3xl bg-gray-500"
-        >
-          <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m108.8135992 26.06720125c-26.468266 0-48.00213212 21.53066613-48.00213212 47.99733213 0 26.38653268 21.53386613 47.85426547 48.00213213 47.85426547 26.38639937 0 47.8530655-21.4677328 47.8530655-47.85426547 0-26.466666-21.46666613-47.99733213-47.85306547-47.99733213"
-              fill="#f96753"
-            />
-            <path d="m23.333335 153.93333178v-127.86666388h23.46666576v127.8666639z" fill="#052a49" />
-          </svg>
-          <p className="text-gray-50 text-center pt-1">Frodo&apos;s Patreon</p>
         </a>
 
         <div className="flex flex-row place-content-center mt-12">

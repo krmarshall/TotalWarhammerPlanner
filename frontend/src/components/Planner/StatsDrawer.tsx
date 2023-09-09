@@ -3,6 +3,7 @@ import FactionVariantSelect from './FactionVariantSelect';
 import UnitStats from './UnitStats';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
+import StartPosTraits from './StartPosTraits';
 
 const StatsDrawer = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -30,6 +31,7 @@ const StatsDrawer = () => {
 
   return (
     <div className={isShort ? drawerClassShort : drawerClass}>
+      {characterData?.startPosTraits !== undefined && <StartPosTraits />}
       {characterData?.altFactionNodeSets !== undefined && <FactionVariantSelect />}
       <UnitStats />
     </div>

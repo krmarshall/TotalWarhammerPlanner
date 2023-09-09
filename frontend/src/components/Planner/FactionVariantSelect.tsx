@@ -2,13 +2,15 @@ import { useContext, useEffect } from 'react';
 import { AltFactionNodeSetsInterface, CharacterInterface } from '../../types/interfaces/CharacterInterface';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
 import { useParams } from 'react-router-dom';
-import { createEmptyCharacterBuild } from '../../utils/sharedFunctions';
-import { toast } from 'react-hot-toast';
+import { addFactionVariantNodes, createEmptyCharacterBuild } from '../../utils/sharedFunctions';
+import { splitCharacterKey } from '../../utils/urlFunctions';
 
 const FactionVariantSelect = () => {
   const { state, dispatch } = useContext(AppContext);
   const { characterData, cleanCharacterData } = state;
   const { mod, faction, character } = useParams();
+
+  const { cleanCharacter, cleanFaction } = splitCharacterKey(character as string);
 
   useEffect(() => {
     if (characterData?.altFactionNodeSets !== undefined && cleanCharacterData === null) {
@@ -23,61 +25,33 @@ const FactionVariantSelect = () => {
     if (characterData === null) {
       return;
     }
-    if (factionKey === 'none') {
-      const emptyCleanCharacterBuild = createEmptyCharacterBuild(
-        cleanCharacterData as CharacterInterface,
-        mod as string,
-        faction as string,
-        character as string
+
+    let localCharacterData;
+    if (factionKey !== '' && characterData.altFactionNodeSets?.[factionKey] !== undefined) {
+      localCharacterData = addFactionVariantNodes(
+        characterData.altFactionNodeSets[factionKey].nodes,
+        cleanCharacterData as CharacterInterface
       );
-      dispatch({
-        type: AppContextActions.changeSelectedAltFactionNodeSet,
-        payload: {
-          selectedAltFactionNodeSet: '',
-          characterBuild: emptyCleanCharacterBuild,
-          characterData: cleanCharacterData as CharacterInterface,
-        },
-      });
-      return;
+    } else {
+      localCharacterData = cleanCharacterData;
     }
 
-    const factionNodes = characterData.altFactionNodeSets?.[factionKey].nodes;
-    if (factionNodes === undefined) {
-      toast.error('Invalid Faction Key...', { id: 'error faction change key' });
-      return;
-    }
-
-    const newCharacterData: CharacterInterface = JSON.parse(JSON.stringify(cleanCharacterData));
-    const sortIndents = new Set<number>();
-    factionNodes.forEach((node) => {
-      const replaceIndex = newCharacterData.skillTree[node.indent].findIndex(
-        (genericNode) => genericNode.tier === node.tier
-      );
-      if (replaceIndex === -1) {
-        newCharacterData.skillTree[node.indent].push(node);
-        sortIndents.add(node.indent);
-      } else {
-        newCharacterData.skillTree[node.indent][replaceIndex] = node;
-      }
-    });
-
-    sortIndents.forEach((indent) => newCharacterData.skillTree[indent].sort((a, b) => a.tier - b.tier));
-
-    const emptyCharacterBuild = createEmptyCharacterBuild(
-      newCharacterData,
+    const emptyCleanCharacterBuild = createEmptyCharacterBuild(
+      localCharacterData as CharacterInterface,
       mod as string,
       faction as string,
-      character as string
+      `${cleanCharacter}${factionKey !== '' ? `$${factionKey}` : ''}`
     );
     dispatch({
       type: AppContextActions.changeSelectedAltFactionNodeSet,
       payload: {
         selectedAltFactionNodeSet: factionKey,
-        characterBuild: emptyCharacterBuild,
-        characterData: newCharacterData,
+        characterBuild: emptyCleanCharacterBuild,
+        characterData: localCharacterData,
       },
     });
   };
+
   return (
     <div className="text-center">
       <h3 className="text-3xl text-gray-50">Faction Variants</h3>
@@ -86,8 +60,9 @@ const FactionVariantSelect = () => {
         onChange={(event) => {
           altFactionChangeHandler(event.target.value);
         }}
+        defaultValue={cleanFaction}
       >
-        <option key="none" value="none" className="text-base font-CaslonAntique">
+        <option key="" value="" className="text-base font-CaslonAntique">
           Generic Faction
         </option>
         {Object.entries(characterData?.altFactionNodeSets as AltFactionNodeSetsInterface).map((entry) => {

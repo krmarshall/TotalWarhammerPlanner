@@ -55,9 +55,12 @@ const Home = () => {
 
   useEffect(() => {
     if (state.characterData !== null) {
-      dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: null } });
-      dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: null } });
       dispatch({ type: AppContextActions.changeCleanCharacterData, payload: { cleanCharacterData: null } });
+      dispatch({ type: AppContextActions.changeSelectedStartPosTrait, payload: { selectedStartPosTrait: '' } });
+      dispatch({
+        type: AppContextActions.changeSelectedAltFactionNodeSet,
+        payload: { selectedAltFactionNodeSet: '', characterBuild: null, characterData: null },
+      });
     }
   }, []);
 

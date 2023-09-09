@@ -7,32 +7,26 @@ import {
   saveBuildToStorage,
   setActiveBuildFromStorage,
 } from '../../utils/storageFunctions';
+import { splitCharacterKey } from '../../utils/urlFunctions';
 
 import deleteIcon from '../../imgs/other/icon_delete.webp';
 import saveIcon from '../../imgs/other/icon_quick_save.webp';
-import { toast } from 'react-hot-toast';
 
 const BuildStorage = () => {
   const [buildNameInput, setBuildNameInput] = useState('');
   const { state, dispatch } = useContext(AppContext);
-  const { characterData, characterBuild } = state;
+  const { characterBuild, selectedAltFactionNodeSet } = state;
   const { mod, faction, character } = useParams();
+  const { cleanCharacter } = splitCharacterKey(character as string);
 
   useEffect(() => {
     if (!characterBuild?.character) {
       return;
     }
     initializeBuildsFromStorage(state, dispatch);
-  }, [state.characterBuild?.character]);
+  }, [state.characterBuild?.character, selectedAltFactionNodeSet]);
 
   const saveClickHandler = () => {
-    if (characterData?.altFactionNodeSets !== undefined) {
-      toast.error(`Builds for characters with faction variants are not currently supported. Sorry!`, {
-        id: 'save build for faction variant',
-        duration: 10000,
-      });
-      return;
-    }
     saveBuildToStorage(state, dispatch, buildNameInput);
     setBuildNameInput('');
   };
@@ -44,14 +38,7 @@ const BuildStorage = () => {
   };
 
   const setBuildHandler = (buildName: string) => {
-    if (characterData?.altFactionNodeSets !== undefined) {
-      toast.error(`Builds for characters with faction variants are not currently supported. Sorry!`, {
-        id: 'load build for faction variant',
-        duration: 10000,
-      });
-      return;
-    }
-    setActiveBuildFromStorage(state, dispatch, buildName, mod as string, faction as string, character as string);
+    setActiveBuildFromStorage(state, dispatch, buildName, mod as string, faction as string, cleanCharacter);
   };
 
   return (

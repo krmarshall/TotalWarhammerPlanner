@@ -22,6 +22,7 @@ interface ContextStateInterface {
   showedTechToast: boolean;
   cleanCharacterData: CharacterInterface | null;
   selectedAltFactionNodeSet: string;
+  selectedStartPosTrait: string;
   extrasDrawerOpen: boolean;
   statsDrawerOpen: boolean;
 }
@@ -39,6 +40,7 @@ const initialState: ContextStateInterface = {
   showedTechToast: false,
   cleanCharacterData: null,
   selectedAltFactionNodeSet: '',
+  selectedStartPosTrait: '',
   extrasDrawerOpen: loadExtrasDrawerOpenFromStorage(),
   statsDrawerOpen: loadStatsDrawerOpenFromStorage(),
 };
@@ -58,6 +60,7 @@ interface ActionInterface {
     showedTechToast?: boolean;
     cleanCharacterData?: CharacterInterface | null;
     selectedAltFactionNodeSet?: string;
+    selectedStartPosTrait?: string;
     extrasDrawerOpen?: boolean;
     statsDrawerOpen?: boolean;
   };
@@ -78,6 +81,7 @@ enum AppContextActions {
   changeShowedTechToast = 'changeShowedTechToast',
   changeCleanCharacterData = 'changeCleanCharacterData',
   changeSelectedAltFactionNodeSet = 'changeSelectedAltFactionNodeSet',
+  changeSelectedStartPosTrait = 'changeSelectedStartPosTrait',
   changeExtrasDrawerOpen = 'changeExtrasDrawerOpen',
   changeStatsDrawerOpen = 'changeStatsDrawerOpen',
 }
@@ -212,6 +216,15 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
       newState.selectedAltFactionNodeSet = action.payload.selectedAltFactionNodeSet;
       newState.characterBuild = action.payload.characterBuild;
       newState.characterData = action.payload.characterData;
+      return newState;
+    }
+
+    case AppContextActions.changeSelectedStartPosTrait: {
+      const newState = { ...state };
+      if (action.payload.selectedStartPosTrait === undefined) {
+        return state;
+      }
+      newState.selectedStartPosTrait = action.payload.selectedStartPosTrait;
       return newState;
     }
 

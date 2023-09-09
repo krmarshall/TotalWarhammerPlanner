@@ -262,6 +262,10 @@ interface AltFactionNodeSetsInterface {
   [key: string]: { factionName: string; nodes: Array<SkillInterface> };
 }
 
+interface StartPosTraitInterface {
+  [key: string]: { name: string; campaign: string; faction: string; trait: SkillInterface };
+}
+
 interface CharacterInterface {
   key: string;
   skillTree: Array<Array<SkillInterface>>;
@@ -270,6 +274,7 @@ interface CharacterInterface {
   backgroundSkills?: Array<SkillInterface>;
   factionEffects?: FactionEffectInterface;
   altFactionNodeSets?: AltFactionNodeSetsInterface;
+  startPosTraits?: StartPosTraitInterface;
 }
 
 export type {
@@ -289,4 +294,5 @@ export type {
   PhaseInterface,
   AttributeInterface,
   StatEffectInterface,
+  StartPosTraitInterface,
 };

@@ -3,8 +3,12 @@ import { toast } from 'react-hot-toast';
 import { useNavigate, useParams } from 'react-router-dom';
 import api from '../api/api';
 import { AppContext, AppContextActions } from '../contexts/AppContext';
-import { createCharacterBuildFromArray, createEmptyCharacterBuild } from '../utils/sharedFunctions';
-import { convertCodeToBuild } from '../utils/urlFunctions';
+import {
+  addFactionVariantNodes,
+  createCharacterBuildFromArray,
+  createEmptyCharacterBuild,
+} from '../utils/sharedFunctions';
+import { convertCodeToBuild, splitCharacterKey } from '../utils/urlFunctions';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ExtrasDrawer from '../components/Planner/ExtrasDrawer';
 import TopBar from '../components/Planner/TopBar';
@@ -12,9 +16,8 @@ import CharacterPortrait from '../components/Planner/CharacterPortrait';
 import SkillTable from '../components/Planner/SkillTable';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import gameData from '../data/gameData';
-import UnitStats from '../components/Planner/UnitStats';
-import FactionVariantSelect from '../components/Planner/FactionVariantSelect';
 import StatsDrawer from '../components/Planner/StatsDrawer';
+import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
 const Planner = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -30,10 +33,13 @@ const Planner = () => {
 
   const navigate = useNavigate();
 
-  const lordName = gameData[mod as string].characters[faction as string]?.lords?.[character as string]?.name;
-  const heroName = gameData[mod as string].characters[faction as string]?.heroes?.[character as string]?.name;
+  const { cleanCharacter, cleanFaction } = splitCharacterKey(character as string);
+
+  const lordName = gameData[mod as string].characters[faction as string]?.lords?.[cleanCharacter]?.name;
+  const heroName = gameData[mod as string].characters[faction as string]?.heroes?.[cleanCharacter]?.name;
   const characterName = lordName === undefined ? heroName : lordName;
 
+  // Fetch character data from api if null
   useEffect(() => {
     if (characterData === null) {
       dispatch({
@@ -43,20 +49,50 @@ const Planner = () => {
 
       const hasBuild = code !== undefined ? true : false;
       api
-        .getCharacterSkillTree(mod as string, faction as string, character as string, hasBuild)
+        .getCharacterSkillTree(mod as string, faction as string, cleanCharacter, hasBuild)
         .then((response) => {
-          dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
-          const emptyCharacterBuild = createEmptyCharacterBuild(
-            response,
-            mod as string,
-            faction as string,
-            character as string
-          );
-          if (!code) {
-            dispatch({
-              type: AppContextActions.changeCharacterBuild,
-              payload: { characterBuild: emptyCharacterBuild },
-            });
+          if (code) {
+            dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
+          } else {
+            if (cleanFaction !== '' && response.altFactionNodeSets?.[cleanFaction] !== undefined) {
+              dispatch({
+                type: AppContextActions.changeCleanCharacterData,
+                payload: { cleanCharacterData: JSON.parse(JSON.stringify(response)) },
+              });
+              const localCharacterData = addFactionVariantNodes(
+                response.altFactionNodeSets[cleanFaction].nodes,
+                response as CharacterInterface
+              );
+
+              const emptyCleanCharacterBuild = createEmptyCharacterBuild(
+                localCharacterData as CharacterInterface,
+                mod as string,
+                faction as string,
+                `${cleanCharacter}${cleanFaction !== '' ? `$${cleanFaction}` : ''}`
+              );
+              dispatch({
+                type: AppContextActions.changeSelectedAltFactionNodeSet,
+                payload: {
+                  selectedAltFactionNodeSet: cleanFaction,
+                  characterBuild: emptyCleanCharacterBuild,
+                  characterData: localCharacterData,
+                },
+              });
+            } else {
+              const emptyCharacterBuild = createEmptyCharacterBuild(
+                response,
+                mod as string,
+                faction as string,
+                character as string
+              );
+
+              dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
+              dispatch({
+                type: AppContextActions.changeCharacterBuild,
+                payload: { characterBuild: emptyCharacterBuild },
+              });
+            }
+            setUrlLoaded(true);
           }
         })
         .catch((err) => {
@@ -67,36 +103,33 @@ const Planner = () => {
     }
   }, [characterData]);
 
+  // Generate build from code if available
   useEffect(() => {
     if (!code || !characterData || urlLoaded) {
       return;
     }
-    if (characterData.altFactionNodeSets !== undefined) {
-      const emptyCharacterBuild = createEmptyCharacterBuild(
-        characterData,
-        mod as string,
-        faction as string,
-        character as string
-      );
-      dispatch({
-        type: AppContextActions.changeCharacterBuild,
-        payload: { characterBuild: emptyCharacterBuild },
-      });
-      toast.error(`Build codes for characters with faction variants are not currently supported. Sorry!`, {
-        id: 'load build code for faction variant',
-        duration: 10000,
-      });
-      return;
-    }
     const importBuild = convertCodeToBuild(code);
+    let localCharacterData;
+    if (characterData.altFactionNodeSets?.[cleanFaction] !== undefined) {
+      localCharacterData = addFactionVariantNodes(characterData.altFactionNodeSets[cleanFaction].nodes, characterData);
+    } else {
+      localCharacterData = characterData;
+    }
     const newCharacterBuild = createCharacterBuildFromArray(
       importBuild,
-      characterData,
+      localCharacterData,
       mod as string,
       faction as string,
       character as string
     );
-    dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: newCharacterBuild } });
+    dispatch({
+      type: AppContextActions.changeSelectedAltFactionNodeSet,
+      payload: {
+        selectedAltFactionNodeSet: cleanFaction,
+        characterBuild: newCharacterBuild,
+        characterData: localCharacterData,
+      },
+    });
     setUrlLoaded(true);
   }, [code, characterData]);
 
@@ -114,16 +147,6 @@ const Planner = () => {
         <LoadingSpinner loadingText="Loading Character Data..." />
       ) : (
         <>
-          {/* {!isShort && <TopBar isMobile={isMobile} />}
-
-          {!isMobile && <CharacterPortrait />}
-
-          <div className={tableStatsContainer}>
-            <SkillTable faction={faction} />
-          </div>
-
-          {!isThin && <ExtrasDrawer shortViewToggle={shortViewToggle} setShortViewToggle={setShortViewToggle} />} */}
-
           {!isShort ? (
             <>
               <TopBar isMobile={isMobile} />
