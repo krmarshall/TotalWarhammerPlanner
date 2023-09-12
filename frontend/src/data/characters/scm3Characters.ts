@@ -36,6 +36,7 @@ const scm3Characters = {
     lords: {
       hkrul_mack: { name: 'Reinhardt von Mackensen' },
 
+      hkrul_artur: { name: 'Artur von Pretzen' },
       emp_helborg: { name: 'Kurt Helborg' },
 
       hun_cha_huntsmarshal_0: { name: 'Huntsman General' },
@@ -50,6 +51,7 @@ const scm3Characters = {
       emp_sec_hans: { name: 'Hans Frankenwurter' },
 
       emp_sister_bertha: { name: 'Bertha Bestraufrung' },
+      hkrul_egil: { name: 'Egil Durchwald' },
       emp_zintler: { name: 'Hans Zintler' },
       emp_schwartzhelm: { name: 'Ludwig Schwarzhelm' },
       emp_gold_wizard: { name: 'Alchemist (Gold Wizard)', spellLore: SpellLores.metal },
@@ -79,8 +81,16 @@ const scm3Characters = {
     },
   },
 
+  hef_high_elves: {
+    lords: {
+      jbv2_hef_magister: { name: 'Magister Astrologer', spellLore: SpellLores.mixed },
+    },
+    heroes: {},
+  },
+
   jbv_jade_vampires: {
     lords: {
+      jbv2_xu_yaoji: { name: 'Xu Yaoji' },
       jbv_hei_lianhua: { name: 'Maiden of the Black Lotus', spellLore: SpellLores.mixed },
       jbv_witch_lord: { name: 'Ancestor Witch', spellLore: SpellLores.mixed },
       jbv_jade_blooded: { name: 'Jade-Blooded Master Warlock', spellLore: SpellLores.mixed },

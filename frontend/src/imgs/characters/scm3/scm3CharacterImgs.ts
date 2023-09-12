@@ -82,6 +82,10 @@ import hkrul_harb from './hkrul_harb.webp';
 import hkrul_lector_manann from './hkrul_lector_manann_1.webp';
 import hkrul_mack from './hkrul_mack.webp';
 import hkrul_slaver from './hkrul_slaver_1.webp';
+import hkrul_artur from './hkrul_artur.webp';
+import hkrul_egil from './emp_egil.webp';
+import jbv2_xu_yaoji from './jbv_xu_yaoji.webp';
+import jbv2_hef_magister from './hef_magister.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -182,6 +186,10 @@ const scm3CharacterImgs = {
   hkrul_lector_manann: hkrul_lector_manann,
   hkrul_mack: hkrul_mack,
   hkrul_slaver: hkrul_slaver,
+  hkrul_artur: hkrul_artur,
+  hkrul_egil: hkrul_egil,
+  jbv2_xu_yaoji: jbv2_xu_yaoji,
+  jbv2_hef_magister: jbv2_hef_magister,
 };
 
 export default scm3CharacterImgs;

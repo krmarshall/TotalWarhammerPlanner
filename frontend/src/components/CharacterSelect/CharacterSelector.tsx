@@ -72,7 +72,9 @@ const CharacterSelector = () => {
       const invertedMap: { [key: string]: string } = {};
       Object.keys(compGroups).forEach((groupKey) => {
         Object.keys(compGroups[groupKey]).forEach((charKey) => {
-          invertedMap[charKey] = groupKey;
+          if (invertedMap[charKey] === undefined) {
+            invertedMap[charKey] = groupKey;
+          }
         });
       });
       return invertedMap;
