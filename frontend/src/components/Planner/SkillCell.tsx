@@ -28,7 +28,7 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
   const [previewSkillPoints, setPreviewSkillPoints] = useState(0);
   const [blocked, setBlocked] = useState(false);
   const [thisSkillsCurrentPoints, setThisSkillsCurrentPoints] = useState(
-    characterBuild?.buildData?.[yIndex]?.[xIndex] as number
+    characterBuild?.buildData?.[yIndex]?.[xIndex] as number,
   );
   const [ctrCounter, setCtrCounter] = useState(0);
   const [tooltipScrollable, setTooltipScrollable] = useState(false);
@@ -224,14 +224,14 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
         `This skill is automatically leveled up/down at rank ${skill.levels?.[thisSkillsCurrentPoints]?.auto_unlock_at_rank}`,
         {
           id: `${skillKey} autorank`,
-        }
+        },
       );
     } else if (skill.levels?.[thisSkillsCurrentPoints - 1]?.auto_unlock_at_rank !== undefined && event.button === 2) {
       toast.error(
         `This skill is automatically leveled up/down at rank ${skill.levels?.[thisSkillsCurrentPoints]?.auto_unlock_at_rank}`,
         {
           id: `${skillKey} autorank`,
-        }
+        },
       );
       // Normal skill rank up
     } else if (event.button === 0) {

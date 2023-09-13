@@ -36,7 +36,7 @@ app.use(
   express.static('public', {
     maxAge: '1y',
     setHeaders: setCustomCacheControl,
-  })
+  }),
 );
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../public', 'index.html'));

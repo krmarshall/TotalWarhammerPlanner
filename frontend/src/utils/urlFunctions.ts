@@ -31,7 +31,7 @@ const convertBuildToCode = (
   characterBuild: BuildInterface,
   characterData: CharacterInterface,
   altFactionKey: string,
-  startPosId: string
+  startPosId: string,
 ) => {
   const buildData = [...characterBuild.buildData];
   const stringBase = generateCharacterURL(characterBuild, altFactionKey, startPosId);
@@ -40,7 +40,7 @@ const convertBuildToCode = (
     characterData,
     characterBuild.game,
     characterBuild.faction,
-    characterBuild.character
+    characterBuild.character,
   );
   // Scuffed object equality check
   if (JSON.stringify(characterBuild) === JSON.stringify(emptyCharacterBuild)) {

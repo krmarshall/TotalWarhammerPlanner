@@ -29,7 +29,7 @@ const TechSelector = () => {
           success: 'Success',
           error: (err) => `${err}`,
         },
-        { loading: { duration: 5000 } }
+        { loading: { duration: 5000 } },
       );
     }
   };

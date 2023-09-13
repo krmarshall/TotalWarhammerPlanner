@@ -30,7 +30,7 @@ const FactionVariantSelect = () => {
     if (factionKey !== '' && characterData.altFactionNodeSets?.[factionKey] !== undefined) {
       localCharacterData = addFactionVariantNodes(
         characterData.altFactionNodeSets[factionKey].nodes,
-        cleanCharacterData as CharacterInterface
+        cleanCharacterData as CharacterInterface,
       );
     } else {
       localCharacterData = cleanCharacterData;
@@ -40,7 +40,7 @@ const FactionVariantSelect = () => {
       localCharacterData as CharacterInterface,
       mod as string,
       faction as string,
-      `${cleanCharacter}${factionKey !== '' ? `$${factionKey}` : ''}`
+      `${cleanCharacter}${factionKey !== '' ? `$${factionKey}` : ''}`,
     );
     dispatch({
       type: AppContextActions.changeSelectedAltFactionNodeSet,

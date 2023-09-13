@@ -42,7 +42,7 @@ const TopBar = ({ isMobile }: PropInterface) => {
       typeof characterBuild?.autoUnlockSkillPoints === 'number'
     ) {
       setEffectiveRank(
-        characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints
+        characterBuild?.rank - characterBuild?.startingSkillPoints - characterBuild?.autoUnlockSkillPoints,
       );
     }
   }, [characterBuild?.rank, characterBuild?.startingSkillPoints, characterBuild?.autoUnlockSkillPoints]);
@@ -55,7 +55,7 @@ const TopBar = ({ isMobile }: PropInterface) => {
       characterData,
       mod as string,
       faction as string,
-      character as string
+      character as string,
     );
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
   };
@@ -69,7 +69,7 @@ const TopBar = ({ isMobile }: PropInterface) => {
       characterBuild,
       characterData,
       selectedAltFactionNodeSet,
-      selectedStartPosTrait
+      selectedStartPosTrait,
     );
     navigator.clipboard
       .writeText(buildLink)

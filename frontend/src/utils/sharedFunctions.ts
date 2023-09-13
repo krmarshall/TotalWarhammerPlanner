@@ -14,10 +14,10 @@ const createEmptyCharacterBuild = (
   characterData: CharacterInterface,
   gameKey: string,
   factionKey: string,
-  characterKey: string
+  characterKey: string,
 ) => {
   let localCharacterData: CharacterInterface;
-  const { cleanCharacter, cleanFaction, startPos } = splitCharacterKey(characterKey);
+  const { cleanCharacter, cleanFaction } = splitCharacterKey(characterKey);
   if (cleanFaction !== '' && characterData.altFactionNodeSets !== undefined) {
     localCharacterData = addFactionVariantNodes(characterData.altFactionNodeSets[cleanFaction].nodes, characterData);
   } else {
@@ -60,10 +60,10 @@ const createCharacterBuildFromArray = (
   characterData: CharacterInterface,
   game: string,
   factionKey: string,
-  characterKey: string
+  characterKey: string,
 ) => {
   let localCharacterData: CharacterInterface;
-  const { cleanCharacter, cleanFaction, startPos } = splitCharacterKey(characterKey);
+  const { cleanCharacter, cleanFaction } = splitCharacterKey(characterKey);
   if (cleanFaction !== '' && characterData.altFactionNodeSets?.[cleanFaction] !== undefined) {
     localCharacterData = addFactionVariantNodes(characterData.altFactionNodeSets[cleanFaction].nodes, characterData);
   } else {
@@ -151,13 +151,14 @@ const getRelatedContactPhases = (ability: AbilityInterface | undefined, effects?
   const relatedPhases: Array<PhaseInterface> = [];
   const relatedPhaseKeys: Array<string> = [];
 
-  effects?.forEach((effect) =>
-    effect.related_phases?.forEach((phase) => {
-      if (!relatedPhaseKeys.includes(phase.icon)) {
-        relatedPhases.push(phase);
-        relatedPhaseKeys.push(phase.icon);
-      }
-    })
+  effects?.forEach(
+    (effect) =>
+      effect.related_phases?.forEach((phase) => {
+        if (!relatedPhaseKeys.includes(phase.icon)) {
+          relatedPhases.push(phase);
+          relatedPhaseKeys.push(phase.icon);
+        }
+      }),
   );
 
   if (ability === undefined) {
@@ -230,22 +231,22 @@ const getRelatedAttributes = (ability: AbilityInterface | undefined, effects?: A
 
   ability.unit_ability?.phases?.forEach((phase) => phase.attributes?.forEach((attribute) => addAttribute(attribute)));
   ability.unit_ability?.activated_projectile?.contact_stat_effect?.attributes?.forEach((attribute) =>
-    addAttribute(attribute)
+    addAttribute(attribute),
   );
   ability.unit_ability?.activated_projectile?.explosion_type?.contact_phase_effect?.attributes?.forEach((attribute) =>
-    addAttribute(attribute)
+    addAttribute(attribute),
   );
   ability.unit_ability?.activated_projectile?.spawned_vortex?.contact_effect?.attributes?.forEach((attribute) =>
-    addAttribute(attribute)
+    addAttribute(attribute),
   );
   ability.unit_ability?.bombardment?.projectile_type?.contact_stat_effect?.attributes?.forEach((attribute) =>
-    addAttribute(attribute)
+    addAttribute(attribute),
   );
   ability.unit_ability?.bombardment?.projectile_type?.explosion_type?.contact_phase_effect?.attributes?.forEach(
-    (attribute) => addAttribute(attribute)
+    (attribute) => addAttribute(attribute),
   );
   ability.unit_ability?.bombardment?.projectile_type?.spawned_vortex?.contact_effect?.attributes?.forEach((attribute) =>
-    addAttribute(attribute)
+    addAttribute(attribute),
   );
   ability.unit_ability?.vortex?.contact_effect?.attributes?.forEach((attribute) => addAttribute(attribute));
 
@@ -260,23 +261,25 @@ const getUnitStatSets = (characterData: CharacterInterface | null) => {
     unitStatSets.push({ name: 'Base', stats: characterData?.unitStats });
   }
   characterData?.skillTree.forEach((skillLine) =>
-    skillLine.forEach((skill) =>
-      skill.levels?.forEach((skillLevel) => {
-        if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(skill.localised_name)) {
-          unitStatNames.push(skill.localised_name);
-          unitStatSets.push({ name: skill.localised_name, stats: skillLevel.mount_unit_stats });
-        }
-      })
-    )
+    skillLine.forEach(
+      (skill) =>
+        skill.levels?.forEach((skillLevel) => {
+          if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(skill.localised_name)) {
+            unitStatNames.push(skill.localised_name);
+            unitStatSets.push({ name: skill.localised_name, stats: skillLevel.mount_unit_stats });
+          }
+        }),
+    ),
   );
 
-  characterData?.backgroundSkills?.forEach((bgSkill) =>
-    bgSkill.levels?.forEach((skillLevel) => {
-      if (skillLevel?.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
-        unitStatNames.push(bgSkill.localised_name);
-        unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
-      }
-    })
+  characterData?.backgroundSkills?.forEach(
+    (bgSkill) =>
+      bgSkill.levels?.forEach((skillLevel) => {
+        if (skillLevel?.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
+          unitStatNames.push(bgSkill.localised_name);
+          unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
+        }
+      }),
   );
 
   return unitStatSets;
@@ -287,7 +290,7 @@ const addFactionVariantNodes = (factionNodes: Array<SkillInterface>, characterDa
   const sortIndents = new Set<number>();
   factionNodes.forEach((node) => {
     const replaceIndex = derefCharacterData.skillTree[node.indent].findIndex(
-      (genericNode) => genericNode.tier === node.tier
+      (genericNode) => genericNode.tier === node.tier,
     );
     if (replaceIndex === -1) {
       derefCharacterData.skillTree[node.indent].push(node);

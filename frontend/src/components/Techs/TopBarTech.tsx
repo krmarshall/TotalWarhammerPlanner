@@ -14,9 +14,9 @@ interface PropInterface {
 }
 
 const TopBarTech = ({ isMobile }: PropInterface) => {
-  const { state, dispatch } = useContext(AppContext);
-  const { techData, selectedModTech } = state;
-  const { mod, techTree } = useParams();
+  const { state } = useContext(AppContext);
+  const { selectedModTech } = state;
+  const { techTree } = useParams();
 
   const navigate = useNavigate();
 

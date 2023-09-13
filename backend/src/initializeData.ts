@@ -5,7 +5,7 @@ interface skillDataInterface {
   [key: string]: {
     [key: string]: {
       [key: string]: {
-        skillTree: any;
+        skillTree: unknown;
       };
     };
   };
@@ -37,7 +37,7 @@ const initializeSkillData = () => {
 interface techDataInterface {
   [key: string]: {
     [key: string]: {
-      techTree: any;
+      techTree: unknown;
     };
   };
 }

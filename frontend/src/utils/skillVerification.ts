@@ -5,7 +5,7 @@ import { CharacterInterface, SkillInterface } from '../types/interfaces/Characte
 const isRequiredLevel = (
   characterBuild: BuildInterface | null,
   thisSkillsCurrentPoints: number,
-  skill: SkillInterface
+  skill: SkillInterface,
 ) => {
   const skillCheckRank = skill?.levels?.[thisSkillsCurrentPoints];
   if (!skillCheckRank?.unlocked_at_rank) {
@@ -62,7 +62,7 @@ const skillIsBlocked = (skillNodeKey: string, characterBuild: BuildInterface | n
 const missingRequiredPoints = (
   characterData: CharacterInterface | null,
   characterBuild: BuildInterface | null,
-  skill: SkillInterface
+  skill: SkillInterface,
 ) => {
   if (skill.required_num_parents === 0) {
     return false;
@@ -120,7 +120,7 @@ const missingRequiredPoints = (
 const findSkill = (
   characterData: CharacterInterface | null,
   characterBuild: BuildInterface | null,
-  skillKey: string
+  skillKey: string,
 ) => {
   let returnValue: undefined | { xIndex: number; yIndex: number; points: number };
   characterData?.skillTree.forEach((row, yIndex) => {
@@ -142,7 +142,7 @@ const skillIsValid = (
   skill: SkillInterface,
   thisSkillsCurrentPoints: number,
   skillKey: string,
-  characterData: CharacterInterface | null
+  characterData: CharacterInterface | null,
 ) => {
   // Check Required Level
   if (!isRequiredLevel(characterBuild, thisSkillsCurrentPoints - 1, skill)) {
@@ -169,7 +169,7 @@ const skillIncreaseIsValid = (
   skill: SkillInterface,
   thisSkillsCurrentPoints: number,
   skillKey: string,
-  printError: boolean
+  printError: boolean,
 ) => {
   // Check if skill has higher rank than already selected
   if (!skill.levels?.[thisSkillsCurrentPoints]) {

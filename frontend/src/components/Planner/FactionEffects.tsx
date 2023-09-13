@@ -1,5 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
-import { AppContext } from '../../contexts/AppContext';
+import { useEffect, useRef, useState } from 'react';
 import { FactionEffectInterface } from '../../types/interfaces/CharacterInterface';
 import ReactImage from '../ReactImage';
 import SkillEffect from './SkillEffect';
@@ -20,9 +19,6 @@ interface PropInterface {
 }
 
 const FactionEffects = ({ factionEffect }: PropInterface) => {
-  const { state } = useContext(AppContext);
-  const { selectedMod } = state;
-
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
 
   const isMobile = isMobileWidth || isMobileHeight ? true : false;

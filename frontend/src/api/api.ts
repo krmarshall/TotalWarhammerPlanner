@@ -27,7 +27,7 @@ const api = {
     gameKey: string,
     factionKey: string,
     characterKey: string,
-    hasBuild: boolean
+    hasBuild: boolean,
   ): Promise<CharacterInterface> => {
     return fetch(`${path}/skills/${gameKey}.${factionKey}.${characterKey}.${hasBuild}`, {
       method: 'GET',

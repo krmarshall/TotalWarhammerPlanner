@@ -1,5 +1,4 @@
-import { useContext, useEffect } from 'react';
-import { AppContext } from '../../contexts/AppContext';
+import { useEffect } from 'react';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
 import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../utils/sharedFunctions';
@@ -16,9 +15,6 @@ interface PropInterface {
 }
 
 const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, tooltipRef }: PropInterface) => {
-  const { state } = useContext(AppContext);
-  const { techData } = state;
-
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
 
   const isMobile = isMobileWidth || isMobileHeight ? true : false;

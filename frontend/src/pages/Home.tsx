@@ -8,11 +8,10 @@ import { useMediaQuery } from 'react-responsive';
 import gameData from '../data/gameData';
 import CompilationFilter from '../components/CharacterSelect/CompilationFilter';
 import { CompGroupsInterface } from '../types/interfaces/GameInterface';
-import { toast } from 'react-hot-toast';
 
 const Home = () => {
   const { state, dispatch } = useContext(AppContext);
-  const { selectedMod, showedHomeToast } = state;
+  const { selectedMod } = state;
   const { mod, faction } = useParams();
 
   const isTabletOrMobileWidth = useMediaQuery({ maxWidth: 1365 });

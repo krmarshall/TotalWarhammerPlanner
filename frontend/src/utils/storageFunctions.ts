@@ -13,7 +13,7 @@ const initializeBuildsFromStorage = (state: ContextStateInterface, dispatch: (ac
 const saveBuildToStorage = (
   state: ContextStateInterface,
   dispatch: (action: ActionInterface) => void,
-  buildName: string
+  buildName: string,
 ) => {
   const storageBuilds: StorageInterface = loadBuildsFromStorage(state);
   const newBuildKeys = [...state.localStorageBuildKeys];
@@ -30,7 +30,7 @@ const saveBuildToStorage = (
     `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}${
       state.selectedAltFactionNodeSet !== '' ? `$${state.selectedAltFactionNodeSet}` : ''
     }`,
-    JSON.stringify(storageBuilds)
+    JSON.stringify(storageBuilds),
   );
   dispatch({ type: AppContextActions.changeLocalStorageBuildKeys, payload: { localStorageBuildKeys: newBuildKeys } });
 };
@@ -38,7 +38,7 @@ const saveBuildToStorage = (
 const deleteBuildFromStorage = (
   state: ContextStateInterface,
   dispatch: (action: ActionInterface) => void,
-  buildName: string
+  buildName: string,
 ) => {
   const storageBuilds: StorageInterface = loadBuildsFromStorage(state);
   const newBuildKeys = [...state.localStorageBuildKeys];
@@ -53,7 +53,7 @@ const deleteBuildFromStorage = (
     `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}${
       state.selectedAltFactionNodeSet !== '' ? `$${state.selectedAltFactionNodeSet}` : ''
     }`,
-    JSON.stringify(storageBuilds)
+    JSON.stringify(storageBuilds),
   );
   dispatch({ type: AppContextActions.changeLocalStorageBuildKeys, payload: { localStorageBuildKeys: newBuildKeys } });
 };
@@ -64,7 +64,7 @@ const setActiveBuildFromStorage = (
   buildName: string,
   game: string,
   faction: string,
-  character: string
+  character: string,
 ) => {
   const storageBuilds: StorageInterface = loadBuildsFromStorage(state);
   const loadBuild = storageBuilds[buildName];
@@ -79,7 +79,7 @@ const setActiveBuildFromStorage = (
   } else {
     toast.error(
       'The build you are trying to load is invalid, this may have been caused by an update or bugfix to the character tree. Sorry!',
-      { id: `${buildName} set storage build`, duration: 6000 }
+      { id: `${buildName} set storage build`, duration: 6000 },
     );
     const emptyCharacterBuild = createEmptyCharacterBuild(state.characterData, game, faction, character);
     dispatch({ type: AppContextActions.changeCharacterBuild, payload: { characterBuild: emptyCharacterBuild } });
@@ -90,7 +90,7 @@ const loadBuildsFromStorage = (state: ContextStateInterface) => {
   const storageBuilds = localStorage.getItem(
     `${state.characterBuild?.game}/${state.characterBuild?.faction}/${state.characterBuild?.character}${
       state.selectedAltFactionNodeSet !== '' ? `$${state.selectedAltFactionNodeSet}` : ''
-    }`
+    }`,
   );
   if (storageBuilds === null) {
     return {};

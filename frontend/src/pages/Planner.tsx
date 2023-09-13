@@ -61,14 +61,14 @@ const Planner = () => {
               });
               const localCharacterData = addFactionVariantNodes(
                 response.altFactionNodeSets[cleanFaction].nodes,
-                response as CharacterInterface
+                response as CharacterInterface,
               );
 
               const emptyCleanCharacterBuild = createEmptyCharacterBuild(
                 localCharacterData as CharacterInterface,
                 mod as string,
                 faction as string,
-                `${cleanCharacter}${cleanFaction !== '' ? `$${cleanFaction}` : ''}`
+                `${cleanCharacter}${cleanFaction !== '' ? `$${cleanFaction}` : ''}`,
               );
               dispatch({
                 type: AppContextActions.changeSelectedAltFactionNodeSet,
@@ -83,7 +83,7 @@ const Planner = () => {
                 response,
                 mod as string,
                 faction as string,
-                character as string
+                character as string,
               );
 
               dispatch({ type: AppContextActions.changeCharacterData, payload: { characterData: response } });
@@ -120,7 +120,7 @@ const Planner = () => {
       localCharacterData,
       mod as string,
       faction as string,
-      character as string
+      character as string,
     );
     dispatch({
       type: AppContextActions.changeSelectedAltFactionNodeSet,
