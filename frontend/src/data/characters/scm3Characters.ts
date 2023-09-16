@@ -113,12 +113,13 @@ const scm3Characters = {
   },
 
   ksl_kislev: {
-    lords: {},
+    lords: {
+      ksl_shaman_amber: { name: 'Shaman (Beasts)', spellLore: SpellLores.beasts },
+      ksl_shaman_jade: { name: 'Shaman (Life)', spellLore: SpellLores.life },
+    },
     heroes: {
       ksl_ivan: { name: 'Ivan Radinov' },
       blade_master: { name: 'Blade Master' },
-      ksl_shaman_amber: { name: 'Shaman (Beasts)', spellLore: SpellLores.beasts },
-      ksl_shaman_jade: { name: 'Shaman (Life)', spellLore: SpellLores.life },
     },
   },
 
