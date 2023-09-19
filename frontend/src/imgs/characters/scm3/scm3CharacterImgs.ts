@@ -86,6 +86,8 @@ import hkrul_artur from './hkrul_artur.webp';
 import hkrul_egil from './emp_egil.webp';
 import jbv2_xu_yaoji from './jbv_xu_yaoji.webp';
 import jbv2_hef_magister from './hef_magister.webp';
+import hkrul_dauphine from './hkrul_dauphine.webp';
+import mar_sea_wizard from './ovn_mar_ch_sea_wizard.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -190,6 +192,10 @@ const scm3CharacterImgs = {
   hkrul_egil: hkrul_egil,
   jbv2_xu_yaoji: jbv2_xu_yaoji,
   jbv2_hef_magister: jbv2_hef_magister,
+  hkrul_dauphine: hkrul_dauphine,
+  mar_sea_wizard: mar_sea_wizard,
+  hkrul_fooger: placeholder,
+  hkrul_fooger_caravan_master: placeholder,
 };
 
 export default scm3CharacterImgs;

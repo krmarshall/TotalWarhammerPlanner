@@ -41,6 +41,9 @@ const scm3Characters = {
 
       hun_cha_huntsmarshal_0: { name: 'Huntsman General' },
 
+      // hkrul_fooger: { name: 'Arkat Fooger' },
+      // hkrul_fooger_caravan_master: { name: '???' },
+      // hkrul_dauphine: { name: 'Camille Dauphina' },
       hkrul_egmond: { name: 'Egmond den Euwe', spellLore: SpellLores.mixed },
       hkrul_jk: { name: 'Jaan van de Kuypers' },
       hkrul_hendrik: { name: 'Simon Goudenkruin' },
@@ -64,6 +67,7 @@ const scm3Characters = {
       hkrul_harb: { name: 'Odvaal van den Huister' },
       hkrul_pg: { name: 'Pieter de Groot' },
       hkrul_solkan: { name: 'Sword of Solkan' },
+      // mar_sea_wizard: { name: 'Sea Magicker', spellLore: SpellLores.mixed },
     },
   },
 
