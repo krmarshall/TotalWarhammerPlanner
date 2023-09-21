@@ -85,6 +85,7 @@ const Issues = () => {
             Certain skill nodes that require x number of points in the last y skills will be missing a right arrow
             indicating such. Most prevalent on the last skill in characters blue lines.
           </li>
+          <li>Certain effects only have their first 3 abilities linked (eg. Vanilla 2 -CD to all Spells)</li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
             <li>Belakor has duplicate Lord of Torment and Whispers in the Darkness skills in his tree</li>
             <li>Some poorly scaled skill icons depending on file path, mostly affects mods</li>
