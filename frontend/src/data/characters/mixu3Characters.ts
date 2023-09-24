@@ -74,6 +74,7 @@ const mixu3Characters = {
     heroes: {
       emp_alberich_von_korden_hero: { name: 'Alberich von Korden (Hero)' },
       emp_luthor_huss: { name: 'Luthor Huss' },
+      emp_oleg_von_raukov: { name: 'Oleg von Raukov' },
       emp_theodore_bruckner: { name: 'Theodore Bruckner' },
       emp_vorn_thugenheim: { name: 'Vorn Thugenheim' }, // Unknown
       emp_warrior_priest_of_taal: { name: 'Warrior Priest of Taal' },
