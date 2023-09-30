@@ -575,12 +575,14 @@ const UnitStats = () => {
               <TooltipWrapper
                 key={ability.unit_ability.key}
                 tooltip={
-                  <TooltipAbilityMap
-                    relatedAbilities={[ability]}
-                    relatedPhases={relatedPhases}
-                    relatedAttributes={relatedAttributes}
-                    ctrCounter={0}
-                  />
+                  <div className="max-h-[98vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700">
+                    <TooltipAbilityMap
+                      relatedAbilities={[ability]}
+                      relatedPhases={relatedPhases}
+                      relatedAttributes={relatedAttributes}
+                      ctrCounter={0}
+                    />
+                  </div>
                 }
               >
                 <img

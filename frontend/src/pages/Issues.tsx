@@ -76,14 +76,15 @@ const Issues = () => {
         </div>
 
         <ul className="list-disc list-inside text-gray-200 text-2xl">
-          <li>Skill nodes that overlap indent and tier with another node have inconsistent behavior.</li>
+          <li>Skill nodes that overlap indent and tier with another node have inconsistent behavior</li>
           <li>
             Tooltips that cant find horizontal space to fit in the viewport without conflicting with the cursor
             aren&apos;t visible
           </li>
+          <li>Tooltips for Stat Drawer Abilities that vertically overflow the viewport are not scrollable</li>
           <li>
             Certain skill nodes that require x number of points in the last y skills will be missing a right arrow
-            indicating such. Most prevalent on the last skill in characters blue lines.
+            indicating such. Most prevalent on the last skill in characters blue lines
           </li>
           <li>Certain effects only have their first 3 abilities linked (eg. Vanilla 2 -CD to all Spells)</li>
           <IssuesSlider title="Warhammer 3" bg="bg-gray-600">
