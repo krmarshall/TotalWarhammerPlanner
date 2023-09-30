@@ -112,7 +112,7 @@ const sfo3Characters = {
   ksl_kislev: {
     lords: {
       ...vanilla3Characters.ksl_kislev.lords,
-      ksl_cha_hag_lord: { name: 'Hag Mother' },
+      ksl_cha_hag_lord: { name: 'Hag Mother', spellLore: SpellLores.mixed },
     },
     heroes: {
       ...vanilla3Characters.ksl_kislev.heroes,
