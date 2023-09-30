@@ -16,6 +16,8 @@ import tmb_cha_setep from './tmb_cha_setep.webp';
 import tmb_cha_thutep from './tmb_cha_thutep.webp';
 import tmb_cha_wakhaf from './tmb_cha_wakhaf.webp';
 import dwf_cha_engineer_lord from './dwf_cha_engineer_lord_1.webp';
+import ksl_cha_hag_lord from './ksl_cha_hag_lord_1.webp';
+import cth_cha_gate_master from './cth_cha_gate_master_1.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -34,6 +36,8 @@ const sfo3CharacterImgs = {
   skv_cha_bloodtail: sfoSkvBloodtail,
   skv_cha_rik: sfoSkvRik,
   wef_cha_shadowdancer: sfoWefShadowdancer,
+  ksl_cha_hag_lord: ksl_cha_hag_lord,
+  cth_cha_gate_master: cth_cha_gate_master,
 
   tmb_tomb_king_alkhazzar_ii: tmb_cha_alkhazaar,
   tmb_tomb_king_lahmizzash: tmb_cha_lahmizzash,

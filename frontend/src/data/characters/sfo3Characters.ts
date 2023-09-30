@@ -108,6 +108,26 @@ const sfo3Characters = {
     },
     heroes: { ...vanilla3Characters.grn_greenskins.heroes },
   },
+
+  ksl_kislev: {
+    lords: {
+      ...vanilla3Characters.ksl_kislev.lords,
+      ksl_cha_hag_lord: { name: 'Hag Mother' },
+    },
+    heroes: {
+      ...vanilla3Characters.ksl_kislev.heroes,
+    },
+  },
+
+  cth_cathay: {
+    lords: {
+      ...vanilla3Characters.cth_cathay.lords,
+    },
+    heroes: {
+      ...vanilla3Characters.cth_cathay.heroes,
+      cth_cha_gate_master: { name: 'Gate Master' },
+    },
+  },
 };
 
 export default sfo3Characters;
