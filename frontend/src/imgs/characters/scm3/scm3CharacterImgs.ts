@@ -88,6 +88,8 @@ import jbv2_xu_yaoji from './jbv_xu_yaoji.webp';
 import jbv2_hef_magister from './hef_magister.webp';
 import hkrul_dauphine from './hkrul_dauphine.webp';
 import mar_sea_wizard from './ovn_mar_ch_sea_wizard.webp';
+import nathan_rat from './nathan_rat.webp';
+import str_grudge_sybarite from './str_grudge_sybarite.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -194,6 +196,10 @@ const scm3CharacterImgs = {
   jbv2_hef_magister: jbv2_hef_magister,
   hkrul_dauphine: hkrul_dauphine,
   mar_sea_wizard: mar_sea_wizard,
+  nathan_rat: nathan_rat,
+  str_grudge_sybarite_shadows: str_grudge_sybarite,
+  str_grudge_sybarite_slaanesh: str_grudge_sybarite,
+
   hkrul_fooger: placeholder,
   hkrul_fooger_caravan_master: placeholder,
 };

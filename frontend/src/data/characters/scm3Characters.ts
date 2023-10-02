@@ -138,18 +138,22 @@ const scm3Characters = {
 
   skv_skaven: {
     lords: {
-      str_skarrik: { name: 'Skarrik Spinemanglr' },
+      str_crooktail_viciss: { name: 'Wastelord Viciss Baukis' }, // Crooktail
 
-      str_crooktail_viciss: { name: 'Wastelord Viciss Baukis' },
+      str_skarrik: { name: 'Skarrik Spinemanglr' }, // Fester
 
-      str_treecherik_gristl: { name: 'Gristl Twitchslice' },
+      nathan_rat: { name: 'Rathan', spellLore: SpellLores.slaanesh }, // Grudge
+      str_grudge_sybarite_shadows: { name: 'Sybarite (Shadows)', spellLore: SpellLores.shadows },
+      str_grudge_sybarite_slaanesh: { name: 'Sybarite (Slaanesh)', spellLore: SpellLores.slaanesh },
 
-      str_tenscratch: { name: 'Blight Tenscratch' },
+      str_treecherik_gristl: { name: 'Gristl Twitchslice' }, // Treecherik
+
+      str_tenscratch: { name: 'Blight Tenscratch' }, // Verms
       str_verms_swarmleader: { name: 'Swarmleader' },
 
-      clan_vrrtkin_lord_trikstab: { name: 'Trikstab Gribnode' },
+      clan_vrrtkin_lord_trikstab: { name: 'Trikstab Gribnode' }, // Vrrtkin
 
-      bc_nurglitch: { name: 'Arch Plague Lord Nurglitch', spellLore: SpellLores.skvPlague },
+      bc_nurglitch: { name: 'Arch Plague Lord Nurglitch', spellLore: SpellLores.skvPlague }, // Pestilent Brotherhood
       str_skittice: { name: 'Grrzk Roteye' },
       str_pontifex_sitch: { name: 'Arch-Pontifex Sitch', spellLore: SpellLores.skvPlague },
       str_poxtooth: { name: 'Poxtooth, Befouler of Sotek', spellLore: SpellLores.skvPlague },
@@ -157,7 +161,6 @@ const scm3Characters = {
       bc_the_hidden: { name: 'The Hidden', spellLore: SpellLores.skvPlague },
       bc_plague_lord: { name: 'Plague Lord' },
       bc_plague_pontifex: { name: 'Plague Pontifex', spellLore: SpellLores.skvPlague },
-
       bc_skrimanx: { name: 'Archdeacon of Disease Lord Skrimanx' },
       bc_gritch: { name: 'Great Potentate of Pustules Lord Gritch' },
       bc_kreegrix: { name: 'The Ravener Lord Kreegrix' },
@@ -165,11 +168,11 @@ const scm3Characters = {
       bc_grilok: { name: 'Pontifex of Plagues Lord Grilok', spellLore: SpellLores.skvPlague },
     },
     heroes: {
-      str_verms_swarmcaller: { name: 'Swarmcaller' },
+      str_verms_swarmcaller: { name: 'Swarmcaller' }, // Verms
 
-      clan_vrrtkin_masterglobe: { name: 'Vrrtkin Master Globadier', spellLore: SpellLores.mixed },
+      clan_vrrtkin_masterglobe: { name: 'Vrrtkin Master Globadier', spellLore: SpellLores.mixed }, // Vrrtkin
 
-      bc_festering_chantor: { name: 'Festering Chantor' },
+      bc_festering_chantor: { name: 'Festering Chantor' }, // Pestilent Brotherhood
       bc_stinking_thing: { name: 'Stinking Thing' },
     },
   },
