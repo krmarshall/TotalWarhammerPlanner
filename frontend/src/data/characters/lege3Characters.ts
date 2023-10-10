@@ -165,11 +165,13 @@ const lege3Characters = {
 
   skv_skaven: {
     lords: {
+      str_gnawdwell: { name: 'Lord Gnawdwell' },
       kd_kratch_doomclaw: { name: 'Kratch Doomclaw' },
       hcs_morskittar: { name: 'Lord Morskittar' },
     },
     heroes: {
       hcm_hackflay: { name: 'Ikk Hackflay' },
+      str_natty: { name: 'Natty Buboe' },
       skv_ska_bloodtail: { name: 'Ska Bloodtail' },
       str_fylch: { name: 'Fylch Sharptail' },
     },

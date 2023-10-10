@@ -65,6 +65,8 @@ import str_targog from './str_targog.webp';
 import str_sssel from './str_sssel.webp';
 import str_gothard from './str_gothard.webp';
 import str_obadiah from './str_obadiah.webp';
+import str_gnawdwell from './str_gnawdwell.webp';
+import str_natty from './str_natty.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -136,6 +138,8 @@ const lege3CharacterImgs = {
   str_sssel: str_sssel,
   str_gothard: str_gothard,
   str_obadiah: str_obadiah,
+  str_gnawdwell: str_gnawdwell,
+  str_natty: str_natty,
 };
 
 export default lege3CharacterImgs;
