@@ -67,6 +67,13 @@ import str_gothard from './str_gothard.webp';
 import str_obadiah from './str_obadiah.webp';
 import str_gnawdwell from './str_gnawdwell.webp';
 import str_natty from './str_natty.webp';
+import str_hag_queen_malida from './nom_hag_queen_malida.webp';
+import frob_gorbad_ironclaw from './str_gorbad.webp';
+import str_alrik_ranulfsson from './nom_alrik_ranulfsson.webp';
+import str_brokk_ironpick from './nom_brokk_ironpick.webp';
+import str_byrrnoth_grundadrakk from './nom_byrrnoth_grundadrakk.webp';
+import str_rorek_granitehand from './nom_rorek_granitehand.webp';
+import str_sven_hasselfriesian from './nom_sven_hasselfriesian.webp';
 
 import placeholder from './0placeholder.webp';
 
@@ -140,6 +147,13 @@ const lege3CharacterImgs = {
   str_obadiah: str_obadiah,
   str_gnawdwell: str_gnawdwell,
   str_natty: str_natty,
+  str_hag_queen_malida: str_hag_queen_malida,
+  frob_gorbad_ironclaw: frob_gorbad_ironclaw,
+  str_alrik_ranulfsson: str_alrik_ranulfsson,
+  str_brokk_ironpick: str_brokk_ironpick,
+  str_byrrnoth_grundadrakk: str_byrrnoth_grundadrakk,
+  str_rorek_granitehand: str_rorek_granitehand,
+  str_sven_hasselfriesian: str_sven_hasselfriesian,
 };
 
 export default lege3CharacterImgs;

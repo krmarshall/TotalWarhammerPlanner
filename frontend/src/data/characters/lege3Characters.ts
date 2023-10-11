@@ -54,7 +54,12 @@ const lege3Characters = {
 
   dwf_dwarfs: {
     lords: {
+      str_alrik_ranulfsson: { name: 'Alrik Ranulfsson' },
+      str_brokk_ironpick: { name: 'Brokk Ironpick' },
+      str_byrrnoth_grundadrakk: { name: 'Byrrnoth Grundadrakk' },
       Helgar_longplaits: { name: 'Helgar Longplaits' },
+      str_rorek_granitehand: { name: 'Rorek Granitehand' },
+      str_sven_hasselfriesian: { name: 'Sven Hasselfriesian' },
     },
     heroes: {
       ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
@@ -64,6 +69,7 @@ const lege3Characters = {
   def_dark_elves: {
     lords: {
       str_fellheart: { name: 'Laithikar Fellheart' },
+      str_hag_queen_malida: { name: 'Hag Queen Malida' },
     },
     heroes: {
       str_shadowblade: { name: 'Shadowblade' },
@@ -90,6 +96,7 @@ const lege3Characters = {
 
   grn_greenskins: {
     lords: {
+      frob_gorbad_ironclaw: { name: 'Gorbad Ironclaw' },
       kou_frob_nobber: { name: 'Nobber Fangadoom', spellLore: SpellLores.lilWagh },
     },
     heroes: {},
