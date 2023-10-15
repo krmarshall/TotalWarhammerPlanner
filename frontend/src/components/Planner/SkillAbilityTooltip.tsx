@@ -123,13 +123,25 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
       )}
       {unitAbility.num_effected_friendly_units !== undefined && unitAbility.num_effected_friendly_units > 0 && (
         <div className="flex flex-row">
-          <h5 className="text-left w-24">Target Cap:</h5>
+          <h5 className="text-left w-24">
+            Target Cap
+            {unitAbility.num_effected_enemy_units !== undefined &&
+              unitAbility.num_effected_enemy_units > 0 &&
+              ' (Friendly)'}
+            :
+          </h5>
           <p className="my-auto ml-1">{unitAbility.num_effected_friendly_units}</p>
         </div>
       )}
       {unitAbility.num_effected_enemy_units !== undefined && unitAbility.num_effected_enemy_units > 0 && (
         <div className="flex flex-row">
-          <h5 className="text-left w-24">Target Cap:</h5>
+          <h5 className="text-left w-24">
+            Target Cap
+            {unitAbility.num_effected_friendly_units !== undefined &&
+              unitAbility.num_effected_friendly_units > 0 &&
+              ' (Enemy)'}
+            :
+          </h5>
           <p className="my-auto ml-1">{unitAbility.num_effected_enemy_units}</p>
         </div>
       )}
