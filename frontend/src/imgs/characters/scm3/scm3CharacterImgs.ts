@@ -90,6 +90,9 @@ import hkrul_dauphine from './hkrul_dauphine.webp';
 import mar_sea_wizard from './ovn_mar_ch_sea_wizard.webp';
 import nathan_rat from './nathan_rat.webp';
 import str_grudge_sybarite from './str_grudge_sybarite.webp';
+import hkrul_fooger from './hkrul_fooger.webp';
+import hkrul_fooger_caravan_master from './hkrul_fooger_caravan_master_01.webp';
+import hkrul_arbatt from './hkrul_arbatt.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -194,14 +197,14 @@ const scm3CharacterImgs = {
   hkrul_egil: hkrul_egil,
   jbv2_xu_yaoji: jbv2_xu_yaoji,
   jbv2_hef_magister: jbv2_hef_magister,
-  hkrul_dauphine: hkrul_dauphine,
-  mar_sea_wizard: mar_sea_wizard,
   nathan_rat: nathan_rat,
   str_grudge_sybarite_shadows: str_grudge_sybarite,
   str_grudge_sybarite_slaanesh: str_grudge_sybarite,
-
-  hkrul_fooger: placeholder,
-  hkrul_fooger_caravan_master: placeholder,
+  hkrul_fooger: hkrul_fooger,
+  hkrul_fooger_caravan_master: hkrul_fooger_caravan_master,
+  hkrul_arbatt: hkrul_arbatt,
+  hkrul_dauphine: hkrul_dauphine,
+  mar_sea_wizard: mar_sea_wizard,
 };
 
 export default scm3CharacterImgs;

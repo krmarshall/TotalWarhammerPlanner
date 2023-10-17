@@ -41,14 +41,14 @@ const scm3Characters = {
 
       hun_cha_huntsmarshal_0: { name: 'Huntsman General' },
 
-      // hkrul_fooger: { name: 'Arkat Fooger' },
-      // hkrul_fooger_caravan_master: { name: '???' },
-      // hkrul_dauphine: { name: 'Camille Dauphina' },
+      hkrul_fooger: { name: 'Arkat Fooger' },
+      hkrul_dauphine: { name: 'Camille Dauphina', spellLore: SpellLores.mixed },
       hkrul_egmond: { name: 'Egmond den Euwe', spellLore: SpellLores.mixed },
       hkrul_jk: { name: 'Jaan van de Kuypers' },
       hkrul_hendrik: { name: 'Simon Goudenkruin' },
       hkrul_lector_manann: { name: 'High Priest of Manann' },
       mar_caravan_master: { name: 'Merchant Lord' },
+      hkrul_fooger_caravan_master: { name: 'Dwarf Merchant Lord' },
     },
     heroes: {
       emp_sec_hans: { name: 'Hans Frankenwurter' },
@@ -60,6 +60,7 @@ const scm3Characters = {
       emp_gold_wizard: { name: 'Alchemist (Gold Wizard)', spellLore: SpellLores.metal },
       emp_huntsmaster: { name: 'Hunt Master' },
 
+      hkrul_arbatt: { name: 'Captain Aber Walblatt' },
       hkrul_crispijn: { name: 'Crispijn van Haagen' },
       hkrul_cross: { name: 'Captain Daefvid Maicross' },
       hkrul_guzunda: { name: 'Guzunda Wallrattler' },
@@ -67,7 +68,7 @@ const scm3Characters = {
       hkrul_harb: { name: 'Odvaal van den Huister' },
       hkrul_pg: { name: 'Pieter de Groot' },
       hkrul_solkan: { name: 'Sword of Solkan' },
-      // mar_sea_wizard: { name: 'Sea Magicker', spellLore: SpellLores.mixed },
+      mar_sea_wizard: { name: 'Sea Magicker', spellLore: SpellLores.mixed },
     },
   },
 
