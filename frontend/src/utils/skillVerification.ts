@@ -28,20 +28,40 @@ const isRequiredLevel = (
   return false;
 };
 
-const hasRequiredSkill = (skill: SkillInterface, characterBuild: BuildInterface | null) => {
+const hasRequiredSkill = (
+  skill: SkillInterface,
+  characterBuild: BuildInterface | null,
+  backgroundSkills: Array<SkillInterface> | undefined,
+) => {
   if (skill.parent_required === undefined) {
     return true;
   }
+
+  let includesParentRequired = false;
   if (characterBuild?.selectedSkills && characterBuild?.selectedSkills.length > 0) {
-    let includesParentRequired = false;
     skill.parent_required?.forEach((parent) => {
       if (characterBuild?.selectedSkills.includes(parent)) {
         includesParentRequired = true;
       }
     });
-
-    return includesParentRequired;
+    if (includesParentRequired) {
+      return includesParentRequired;
+    }
   }
+
+  if (backgroundSkills !== undefined && backgroundSkills.length > 0) {
+    skill.parent_required?.forEach((parent) => {
+      backgroundSkills.forEach((bgSkill) => {
+        if (bgSkill.key === parent || bgSkill.character_skill_key === parent) {
+          includesParentRequired = true;
+        }
+      });
+    });
+    if (includesParentRequired) {
+      return includesParentRequired;
+    }
+  }
+
   return false;
 };
 
@@ -149,7 +169,7 @@ const skillIsValid = (
     return false;
   }
   // Check Required Skills
-  if (!hasRequiredSkill(skill, characterBuild)) {
+  if (!hasRequiredSkill(skill, characterBuild, characterData?.backgroundSkills)) {
     return false;
   }
   // Check Blocked skills
@@ -188,7 +208,7 @@ const skillIncreaseIsValid = (
     return false;
   }
   // Check Required Skills
-  if (!hasRequiredSkill(skill, characterBuild)) {
+  if (!hasRequiredSkill(skill, characterBuild, characterData?.backgroundSkills)) {
     if (printError) {
       const skillLocation = findSkill(characterData, characterBuild, skill?.parent_required?.[0] as string);
       const skillName =

@@ -67,6 +67,13 @@ const SkillTooltip = ({
     const parentLocation = findSkill(characterData, characterBuild, skill?.parent_required[0]);
     parentName = characterData?.skillTree[parentLocation?.yIndex as number]?.[parentLocation?.xIndex as number]
       ?.localised_name as string;
+    if (parentLocation === undefined) {
+      characterData?.backgroundSkills?.forEach((bgSkill) => {
+        if (bgSkill.key === skill?.parent_required?.[0]) {
+          parentName = bgSkill.localised_name;
+        }
+      });
+    }
   }
 
   const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
