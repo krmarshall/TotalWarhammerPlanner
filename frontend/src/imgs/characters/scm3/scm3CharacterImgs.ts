@@ -92,6 +92,7 @@ import nathan_rat from './nathan_rat.webp';
 import str_grudge_sybarite from './str_grudge_sybarite.webp';
 import hkrul_fooger from './hkrul_fooger.webp';
 import hkrul_fooger_caravan_master from './hkrul_fooger_caravan_master_01.webp';
+import hkrul_fooger_dwarf_lord from './hkrul_fooger_caravan_master_02.webp';
 import hkrul_arbatt from './hkrul_arbatt.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
@@ -202,6 +203,7 @@ const scm3CharacterImgs = {
   str_grudge_sybarite_slaanesh: str_grudge_sybarite,
   hkrul_fooger: hkrul_fooger,
   hkrul_fooger_caravan_master: hkrul_fooger_caravan_master,
+  hkrul_fooger_dwarf_lord: hkrul_fooger_dwarf_lord,
   hkrul_arbatt: hkrul_arbatt,
   hkrul_dauphine: hkrul_dauphine,
   mar_sea_wizard: mar_sea_wizard,

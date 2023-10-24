@@ -84,7 +84,6 @@ const About = () => {
           <li>Character stats mount comparison</li>
           <li>Character stats skill integration</li>
           <li>Banner ancillary details</li>
-          <li>Brettonia vow details</li>
           <li>Mobile UI</li>
         </ul>
       </div>

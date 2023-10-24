@@ -46,9 +46,10 @@ const scm3Characters = {
       hkrul_egmond: { name: 'Egmond den Euwe', spellLore: SpellLores.mixed },
       hkrul_jk: { name: 'Jaan van de Kuypers' },
       hkrul_hendrik: { name: 'Simon Goudenkruin' },
-      hkrul_lector_manann: { name: 'High Priest of Manann' },
-      mar_caravan_master: { name: 'Merchant Lord' },
       hkrul_fooger_caravan_master: { name: 'Dwarf Merchant Lord' },
+      hkrul_lector_manann: { name: 'High Priest of Manann' },
+      hkrul_fooger_dwarf_lord: { name: 'House Elder' },
+      mar_caravan_master: { name: 'Merchant Lord' },
     },
     heroes: {
       emp_sec_hans: { name: 'Hans Frankenwurter' },
