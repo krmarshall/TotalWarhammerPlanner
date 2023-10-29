@@ -97,6 +97,7 @@ import hkrul_arbatt from './hkrul_arbatt.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
+import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
 
 const scm3CharacterImgs = {
   kho_karnak: kho_karnak,
@@ -207,6 +208,18 @@ const scm3CharacterImgs = {
   hkrul_arbatt: hkrul_arbatt,
   hkrul_dauphine: hkrul_dauphine,
   mar_sea_wizard: mar_sea_wizard,
+  tmb_arkhan: vanilla3CharacterImgs.tmb_arkhan,
+  tmb_khalida: vanilla3CharacterImgs.tmb_khalida,
+  tmb_khatep: vanilla3CharacterImgs.tmb_khatep,
+  tmb_settra: vanilla3CharacterImgs.tmb_settra,
+  tmb_tomb_king: vanilla3CharacterImgs.tmb_tomb_king,
+  tmb_tomb_king_alkhazzar_ii: vanilla3CharacterImgs.tmb_tomb_king_alkhazzar_ii,
+  tmb_tomb_king_lahmizzash: vanilla3CharacterImgs.tmb_tomb_king_lahmizzash,
+  tmb_tomb_king_rakhash: vanilla3CharacterImgs.tmb_tomb_king_rakhash,
+  tmb_tomb_king_setep: vanilla3CharacterImgs.tmb_tomb_king_setep,
+  tmb_tomb_king_thutep: vanilla3CharacterImgs.tmb_tomb_king_thutep,
+  tmb_tomb_king_wakhaf: vanilla3CharacterImgs.tmb_tomb_king_wakhaf,
+  tmb_necrotect: vanilla3CharacterImgs.tmb_necrotect,
 };
 
 export default scm3CharacterImgs;
