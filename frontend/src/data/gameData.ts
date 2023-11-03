@@ -137,7 +137,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
     compilationGroups: scm3CompGroups,
-    updated: '1 nov 2023',
+    updated: '1 Nov 2023',
     category: 'Character Mod Compilation',
     includes: [
       'Marienburg (31 Oct 2023)',
