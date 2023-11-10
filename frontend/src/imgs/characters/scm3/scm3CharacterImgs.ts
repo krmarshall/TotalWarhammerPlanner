@@ -94,6 +94,8 @@ import hkrul_fooger from './hkrul_fooger.webp';
 import hkrul_fooger_caravan_master from './hkrul_fooger_caravan_master_01.webp';
 import hkrul_fooger_dwarf_lord from './hkrul_fooger_caravan_master_02.webp';
 import hkrul_arbatt from './hkrul_arbatt.webp';
+import str_feesik_plague_lord from './str_feesik_plague_lord.webp';
+import str_nelrich from './str_nelrich.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -220,6 +222,9 @@ const scm3CharacterImgs = {
   tmb_tomb_king_thutep: vanilla3CharacterImgs.tmb_tomb_king_thutep,
   tmb_tomb_king_wakhaf: vanilla3CharacterImgs.tmb_tomb_king_wakhaf,
   tmb_necrotect: vanilla3CharacterImgs.tmb_necrotect,
+  str_nelrich: str_nelrich,
+  str_feesik_plague_lord: str_feesik_plague_lord,
+  str_feesik_plague_lord_sling: str_feesik_plague_lord,
 };
 
 export default scm3CharacterImgs;

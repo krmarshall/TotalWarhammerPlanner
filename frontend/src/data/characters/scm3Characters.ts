@@ -144,6 +144,10 @@ const scm3Characters = {
 
       str_skarrik: { name: 'Skarrik Spinemanglr' }, // Fester
 
+      str_nelrich: { name: 'Nelrich the Suppurater' }, // Feesik
+      str_feesik_plague_lord: { name: 'Lesser Plague Lord' },
+      str_feesik_plague_lord_sling: { name: 'Lesser Plague Lord (Sling)' },
+
       nathan_rat: { name: 'Rathan', spellLore: SpellLores.slaanesh }, // Grudge
       str_grudge_sybarite_shadows: { name: 'Sybarite (Shadows)', spellLore: SpellLores.shadows },
       str_grudge_sybarite_slaanesh: { name: 'Sybarite (Slaanesh)', spellLore: SpellLores.slaanesh },
