@@ -96,6 +96,32 @@ import hkrul_fooger_dwarf_lord from './hkrul_fooger_caravan_master_02.webp';
 import hkrul_arbatt from './hkrul_arbatt.webp';
 import str_feesik_plague_lord from './str_feesik_plague_lord.webp';
 import str_nelrich from './str_nelrich.webp';
+import bm_abhorash_com from './abhorash_01_0.webp';
+import wallach_harkon from './walach_harkon_01_0.webp';
+import anark_von_carstein from './anark_von_carstein_01_0.webp';
+import soggy_duke from './soggy_duke_01_0.webp';
+import soggy_duke_prince from './soggy_prince_01_0.webp';
+import rabe_bkc from './bkc_rabe_von_stahl_01_0.webp';
+import ovn_khaled from './kahled_01_0.webp';
+import blood_dragon_kastellan from './blood_dragon_kastellan_01_0.webp';
+import albrecht_rictus from './albrecht_nictus_01_0.webp';
+import black_grail_knight from './black_grail_knight_01_0.webp';
+import xxaggon_xugndhri from './xxaggon_xugndhri_01_0.webp';
+import tiberius_kael from './tiberius_kael_01_0.webp';
+import jade_blooded_vmp_dragon from './the_jade_daimyo_01_0.webp';
+import bloodkin_squire from './bloodkin_aspirant_campaign_01_0.webp';
+import bm_bd_lord from './blood_dragon_lord_01_0.webp';
+import blood_knight_champion from './blood_knight_champion_01_0.webp';
+import bm_dt_lord from './drakenhof_templar_lord_01_0.webp';
+import drakenhof_templar_champion from './drakenhof_templar_champion_01_0.webp';
+import bm_dg_lord from './depth_guard_lord_01_0.webp';
+import depth_guard_champion from './depth_guard_champion_01_0.webp';
+import shaggoth_wight from './shaggoth_wight_hero_01_0.webp';
+import vlad_simp_agent from './vlad_simps_rejoice_01_0.webp';
+import bm_db_witch_hunter_general from './bm_db_witch_hunter_general_campaign_01.webp';
+import vmp_teb_commandant from './vmp_teb_commandant_01_0.webp';
+import vmp_teb_captain from './vmp_teb_captain_01_0.webp';
+import grackul_scar_veteran_wight from './skeleton_scar_vet_01_0.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -225,6 +251,40 @@ const scm3CharacterImgs = {
   str_nelrich: str_nelrich,
   str_feesik_plague_lord: str_feesik_plague_lord,
   str_feesik_plague_lord_sling: str_feesik_plague_lord,
+  vlad_bm_dt_lord: bm_dt_lord,
+  anark_von_carstein: anark_von_carstein,
+  bm_abhorash_com: bm_abhorash_com,
+  wallach_harkon: wallach_harkon,
+  bm_bd_lord: bm_bd_lord,
+  soggy_duke: soggy_duke,
+  soggy_duke_prince: soggy_duke_prince,
+  bm_dg_lord: bm_dg_lord,
+  bm_dt_lord: bm_dt_lord,
+  shaggoth_wight: shaggoth_wight,
+  vlad_simp_agent: vlad_simp_agent,
+  vlad_drakenhof_templar_champion: drakenhof_templar_champion,
+  vlad_bloodkin_squire: bloodkin_squire,
+  bm_abhorash_sh: bm_abhorash_com,
+  bm_abhorash_dms: bm_abhorash_com,
+  bm_abhorash_2hs: bm_abhorash_com,
+  bm_abhorash_2ha: bm_abhorash_com,
+  bm_abhorash_2hp: bm_abhorash_com,
+  rabe_bkc: rabe_bkc,
+  black_grail_knight: black_grail_knight,
+  tiberius_kael: tiberius_kael,
+  blood_dragon_kastellan: blood_dragon_kastellan,
+  blood_knight_champion: blood_knight_champion,
+  bloodkin_squire: bloodkin_squire,
+  xxaggon_xugndhri: xxaggon_xugndhri,
+  depth_guard_champion: depth_guard_champion,
+  albrecht_rictus: albrecht_rictus,
+  drakenhof_templar_champion: drakenhof_templar_champion,
+  ovn_khaled: ovn_khaled,
+  jade_blooded_vmp_dragon: jade_blooded_vmp_dragon,
+  bm_db_witch_hunter_general: bm_db_witch_hunter_general,
+  vmp_teb_commandant: vmp_teb_commandant,
+  vmp_teb_captain: vmp_teb_captain,
+  grackul_scar_veteran_wight: grackul_scar_veteran_wight,
 };
 
 export default scm3CharacterImgs;

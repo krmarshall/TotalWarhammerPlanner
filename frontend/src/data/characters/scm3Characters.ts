@@ -18,6 +18,16 @@ const scm3Characters = {
     },
   },
 
+  cst_vampire_coast: {
+    lords: {
+      vmp_teb_commandant: { name: 'Dusk Reaver Commandant', spellLore: SpellLores.mixed },
+    },
+    heroes: {
+      vmp_teb_captain: { name: 'Dusk Reaver Mercenary Captain', spellLore: SpellLores.mixed },
+      grackul_scar_veteran_wight: { name: 'Saurus Scar Wight', spellLore: SpellLores.mixed },
+    },
+  },
+
   cth_cathay: {
     lords: { cth_yinyin: { name: 'Yin-Yin, the Sea Dragon', spellLore: SpellLores.mixed } },
     heroes: {
@@ -34,13 +44,18 @@ const scm3Characters = {
 
   emp_empire: {
     lords: {
+      // Champions of Undeath
+      bm_db_witch_hunter_general: { name: 'Witch Hunter Inquisitor General' },
+
+      // Empire Seccesssionists
       hkrul_mack: { name: 'Reinhardt von Mackensen' },
 
+      // Sigmars Heirs
       hkrul_artur: { name: 'Artur von Pretzen' },
       emp_helborg: { name: 'Kurt Helborg' },
-
       hun_cha_huntsmarshal_0: { name: 'Huntsman General' },
 
+      // Marienburg
       hkrul_fooger: { name: 'Arkat Fooger' },
       hkrul_dauphine: { name: 'Camille Dauphina', spellLore: SpellLores.mixed },
       hkrul_egmond: { name: 'Egmond den Euwe', spellLore: SpellLores.mixed },
@@ -52,8 +67,10 @@ const scm3Characters = {
       mar_caravan_master: { name: 'Merchant Lord' },
     },
     heroes: {
+      // Empire Seccesssionists
       emp_sec_hans: { name: 'Hans Frankenwurter' },
 
+      // Sigmars Heirs
       emp_sister_bertha: { name: 'Bertha Bestraufrung' },
       hkrul_egil: { name: 'Egil Durchwald' },
       emp_zintler: { name: 'Hans Zintler' },
@@ -61,6 +78,7 @@ const scm3Characters = {
       emp_gold_wizard: { name: 'Alchemist (Gold Wizard)', spellLore: SpellLores.metal },
       emp_huntsmaster: { name: 'Hunt Master' },
 
+      // Marienburg
       hkrul_arbatt: { name: 'Captain Aber Walblatt' },
       hkrul_crispijn: { name: 'Crispijn van Haagen' },
       hkrul_cross: { name: 'Captain Daefvid Maicross' },
@@ -216,14 +234,50 @@ const scm3Characters = {
 
   vmp_vampire_counts: {
     lords: {
+      // Marienburg
       hkrul_mundvard: { name: 'Mundvard the Cruel', spellLore: SpellLores.mixed },
       hkrul_slaver: { name: 'Master Slavetrader', spellLore: SpellLores.vampires },
       jian_xiu_necro: { name: 'Yuwei Ha Feng', spellLore: SpellLores.mixed },
       jade_shugegnan: { name: 'Jade-Blooded Shugengan', spellLore: SpellLores.yin },
+
+      // Champions of Undeath
+      bm_abhorash_com: { name: 'Abhorash', spellLore: SpellLores.mixed },
+      soggy_duke: { name: 'The Abyssal Revenant', spellLore: SpellLores.mixed },
+      soggy_duke_prince: { name: 'The Abyssal Revenant: Ascended', spellLore: SpellLores.mixed },
+      anark_von_carstein: { name: 'Anark von Carstein', spellLore: SpellLores.mixed },
+      wallach_harkon: { name: 'Walach Harkon', spellLore: SpellLores.mixed },
+      bm_bd_lord: { name: 'Blood Dragon Lord', spellLore: SpellLores.mixed },
+      bm_dg_lord: { name: 'Depth Guard Lord', spellLore: SpellLores.mixed },
+      bm_dt_lord: { name: 'Drakenhof Templar Lord', spellLore: SpellLores.mixed },
+      vlad_bm_dt_lord: { name: 'Drakenhof Templar Lord (Vlad)', spellLore: SpellLores.mixed },
     },
     heroes: {
+      // Marienburg
       hkrul_alicia: { name: 'Alicia von Unterwald', spellLore: SpellLores.shadows },
       astrolicher_theak: { name: 'Dusk Wight', spellLore: SpellLores.mixed },
+
+      // Champions of Undeath
+      bm_abhorash_sh: { name: 'Abhorash: Sword and Shield', spellLore: SpellLores.mixed },
+      bm_abhorash_dms: { name: 'Abhorash: Spear and Mace', spellLore: SpellLores.mixed },
+      bm_abhorash_2hs: { name: 'Abhorash: Two Handed Sword', spellLore: SpellLores.mixed },
+      bm_abhorash_2ha: { name: 'Abhorash: Two Handed Axe', spellLore: SpellLores.mixed },
+      // bm_abhorash_2hp: { name: 'Abhorash: Pole Arm', spellLore: SpellLores.mixed },
+      albrecht_rictus: { name: 'Albrecht Nictus' },
+      black_grail_knight: { name: 'Black Grail Knights' },
+      jade_blooded_vmp_dragon: { name: 'The Jade Daimyo', spellLore: SpellLores.mixed },
+      ovn_khaled: { name: 'Khaled al Muntasir', spellLore: SpellLores.mixed },
+      blood_dragon_kastellan: { name: 'Mikael Harkon', spellLore: SpellLores.mixed },
+      rabe_bkc: { name: 'Rabe von Stahl', spellLore: SpellLores.mixed },
+      tiberius_kael: { name: 'Tiberius Kael', spellLore: SpellLores.mixed },
+      xxaggon_xugndhri: { name: 'Xxaggon Xugndhri', spellLore: SpellLores.mixed },
+      bloodkin_squire: { name: 'Bloodkin Aspirant', spellLore: SpellLores.vampires },
+      vlad_bloodkin_squire: { name: 'Von Carstein Aspirant', spellLore: SpellLores.vampires },
+      blood_knight_champion: { name: 'Blood Dragon Champion', spellLore: SpellLores.mixed },
+      depth_guard_champion: { name: 'Depth Guard Champion', spellLore: SpellLores.mixed },
+      drakenhof_templar_champion: { name: 'Drakenhof Templar Champion', spellLore: SpellLores.mixed },
+      vlad_drakenhof_templar_champion: { name: 'Drakenhof Templar Champion (Vlad)', spellLore: SpellLores.mixed },
+      shaggoth_wight: { name: 'Skeleton Shaggoth Wight' },
+      vlad_simp_agent: { name: 'Von Carstein Noble', spellLore: SpellLores.mixed },
     },
   },
 
