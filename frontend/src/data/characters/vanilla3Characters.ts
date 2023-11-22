@@ -236,6 +236,104 @@ const vanilla3Characters = {
     },
   },
 
+  // More Slann variants added
+  lzd_lizardmen: {
+    lords: {
+      gor_rok: {
+        name: 'Gor-Rok',
+      },
+      lzd_kroq_gar: {
+        name: 'Kroq-Gar',
+      },
+      lzd_lord_mazdamundi: {
+        name: 'Lord Mazdamundi',
+        spellLore: SpellLores.mixed,
+      },
+      nakai: {
+        name: 'Nakai the Wanderer',
+      },
+      lzd_oxyotl: {
+        name: 'Oxyotl',
+      },
+      lzd_tehenhauin: {
+        name: 'Tehenhauin',
+        spellLore: SpellLores.beasts,
+      },
+      lzd_tiktaqto: {
+        name: "Tiktaq'to",
+      },
+      ancient_kroxigor: {
+        name: 'Kroxigor Ancient',
+      },
+      lzd_red_crested_skink_chief: {
+        name: 'Red Crested Skink Chief',
+      },
+      lzd_saurus_old_blood: {
+        name: 'Saurus Oldblood',
+      },
+      lzd_slann_mage_priest_beasts: {
+        name: 'Slann Mage-Priest (Beasts)',
+        spellLore: SpellLores.beasts,
+      },
+      lzd_slann_mage_priest_death: {
+        name: 'Slann Mage-Priest (Death)',
+        spellLore: SpellLores.death,
+      },
+      lzd_slann_mage_priest_fire: {
+        name: 'Slann Mage-Priest (Fire)',
+        spellLore: SpellLores.fire,
+      },
+      lzd_slann_mage_priest_heavens: {
+        name: 'Slann Mage-Priest (Heavens)',
+        spellLore: SpellLores.heavens,
+      },
+      lzd_slann_mage_priest_high: {
+        name: 'Slann Mage-Priest (High)',
+        spellLore: SpellLores.high,
+      },
+      lzd_slann_mage_priest_life: {
+        name: 'Slann Mage-Priest (Life)',
+        spellLore: SpellLores.life,
+      },
+      lzd_slann_mage_priest: {
+        name: 'Slann Mage-Priest (Light)',
+        spellLore: SpellLores.light,
+      },
+      lzd_slann_mage_priest_metal: {
+        name: 'Slann Mage-Priest (Metal)',
+        spellLore: SpellLores.metal,
+      },
+      lzd_slann_mage_priest_shadows: {
+        name: 'Slann Mage-Priest (Shadows)',
+        spellLore: SpellLores.shadows,
+      },
+    },
+    heroes: {
+      lzd_lord_kroak: {
+        name: 'Lord Kroak',
+        spellLore: SpellLores.mixed,
+      },
+      lzd_saurus_scar_veteran: {
+        name: 'Saurus Scar-Veteran',
+      },
+      lzd_skink_chief: {
+        name: 'Skink Chief',
+      },
+      lzd_skink_oracle: {
+        name: 'Skink Oracle',
+        spellLore: SpellLores.mixed,
+      },
+      lzd_skink_priest_beasts: {
+        name: 'Skink Priest (Beasts)',
+        spellLore: SpellLores.beasts,
+      },
+      lzd_skink_priest_heavens: {
+        name: 'Skink Priest (Heavens)',
+        spellLore: SpellLores.heavens,
+      },
+    },
+  },
+
   // // No Black Ark Blessed Dread
   // def_dark_elves_lords: {
   //   def_crone: {

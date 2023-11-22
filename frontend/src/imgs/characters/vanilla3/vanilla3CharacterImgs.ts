@@ -125,6 +125,12 @@ const vanilla3CharacterImgs = {
   nor_killgore_slaymaim: norKillmaim,
   nor_burplesmirk_spewpit: norBurplesmirk,
 
+  lzd_slann_mage_priest_beasts: vanilla2CharacterImgs.lzd_slann_mage_priest,
+  lzd_slann_mage_priest_death: vanilla2CharacterImgs.lzd_slann_mage_priest,
+  lzd_slann_mage_priest_heavens: vanilla2CharacterImgs.lzd_slann_mage_priest,
+  lzd_slann_mage_priest_metal: vanilla2CharacterImgs.lzd_slann_mage_priest,
+  lzd_slann_mage_priest_shadows: vanilla2CharacterImgs.lzd_slann_mage_priest,
+
   chs_archaon: chsArchaon,
   chs_sigvald: chsSigvald,
   chs_kholek: chsKholek,

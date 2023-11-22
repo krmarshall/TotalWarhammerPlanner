@@ -466,6 +466,7 @@ const vanilla2Characters = {
       },
     },
   },
+
   hef_high_elves: {
     lords: {
       hef_alarielle: {
