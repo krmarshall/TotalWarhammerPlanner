@@ -175,10 +175,10 @@ const scm3Characters = {
       str_grudge_sybarite_shadows: { name: 'Sybarite (Shadows)', spellLore: SpellLores.shadows },
       str_grudge_sybarite_slaanesh: { name: 'Sybarite (Slaanesh)', spellLore: SpellLores.slaanesh },
 
-      str_kreepus_misericorde: { name: 'Misericorde of Mordheim' }, //Kreepus
-      str_kreepus_tsinge: { name: 'Shen Tsinge' },
+      str_kreepus_misericorde: { name: 'Misericorde of Mordheim', spellLore: SpellLores.mixed }, //Kreepus
+      str_kreepus_tsinge: { name: 'Shen Tsinge', spellLore: SpellLores.stealth },
       str_kreepus_stalkscent: { name: 'Shiwan Stalkscent' },
-      str_kreepus_eshin_sorcerer_lord: { name: 'Eshin Sorcerer Lord' },
+      str_kreepus_eshin_sorcerer_lord: { name: 'Eshin Sorcerer Lord', spellLore: SpellLores.stealth },
 
       str_treecherik_gristl: { name: 'Gristl Twitchslice' }, // Treecherik
 
@@ -201,9 +201,9 @@ const scm3Characters = {
       bc_grilok: { name: 'Pontifex of Plagues Lord Grilok', spellLore: SpellLores.skvPlague },
     },
     heroes: {
-      str_kreepus_gnawlitch: { name: 'Gnawlitch Shun' }, // Kreepus
+      str_kreepus_gnawlitch: { name: 'Gnawlitch Shun', spellLore: SpellLores.ruin }, // Kreepus
       str_kreepus_fellpaw: { name: 'Skulk Fellpaw' },
-      str_kreepus_eshin_sorcerer: { name: 'Eshin Sorcerer (Warplock Pistol)' },
+      str_kreepus_eshin_sorcerer: { name: 'Eshin Sorcerer (Warplock Pistol)', spellLore: SpellLores.mixed },
 
       str_verms_swarmcaller: { name: 'Swarmcaller' }, // Verms
 
