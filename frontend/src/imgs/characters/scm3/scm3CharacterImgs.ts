@@ -122,7 +122,14 @@ import bm_db_witch_hunter_general from './bm_db_witch_hunter_general_campaign_01
 import vmp_teb_commandant from './vmp_teb_commandant_01_0.webp';
 import vmp_teb_captain from './vmp_teb_captain_01_0.webp';
 import grackul_scar_veteran_wight from './skeleton_scar_vet_01_0.webp';
-import str_bileflesh from './str_bileflesh.webp';
+import str_gangrous_plague_lord from './str_gangrous_plague_lord.webp';
+import str_kreepus_eshin_sorcerer from './str_kreepus_eshin_sorcerer.webp';
+import str_kreepus_eshin_sorcerer_lord from './str_kreepus_eshin_sorcerer_lord.webp';
+import str_kreepus_fellpaw from './str_kreepus_fellpaw.webp';
+import str_kreepus_gnawlitch from './str_kreepus_gnawlitch.webp';
+import str_kreepus_misericorde from './str_kreepus_misericorde.webp';
+import str_kreepus_stalkscent from './str_kreepus_stalkscent.webp';
+import str_kreepus_tsinge from './str_kreepus_tsinge.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -286,7 +293,14 @@ const scm3CharacterImgs = {
   vmp_teb_commandant: vmp_teb_commandant,
   vmp_teb_captain: vmp_teb_captain,
   grackul_scar_veteran_wight: grackul_scar_veteran_wight,
-  str_bileflesh: str_bileflesh,
+  str_gangrous_plague_lord: str_gangrous_plague_lord,
+  str_kreepus_eshin_sorcerer: str_kreepus_eshin_sorcerer,
+  str_kreepus_eshin_sorcerer_lord: str_kreepus_eshin_sorcerer_lord,
+  str_kreepus_fellpaw: str_kreepus_fellpaw,
+  str_kreepus_gnawlitch: str_kreepus_gnawlitch,
+  str_kreepus_misericorde: str_kreepus_misericorde,
+  str_kreepus_stalkscent: str_kreepus_stalkscent,
+  str_kreepus_tsinge: str_kreepus_tsinge,
 };
 
 export default scm3CharacterImgs;

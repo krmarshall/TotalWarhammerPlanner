@@ -166,11 +166,19 @@ const scm3Characters = {
       str_feesik_plague_lord: { name: 'Lesser Plague Lord' },
       str_feesik_plague_lord_sling: { name: 'Lesser Plague Lord (Sling)' },
 
-      str_bileflesh: { name: 'Puskab Bileflesh' }, // Flem
+      // str_bileflesh: { name: 'Puskab Bileflesh' }, // Flem
+
+      str_gangrous_szik: { name: 'Szik Vilepot' }, // Gangrous
+      str_gangrous_plague_lord: { name: 'Imperator' },
 
       nathan_rat: { name: 'Rathan', spellLore: SpellLores.slaanesh }, // Grudge
       str_grudge_sybarite_shadows: { name: 'Sybarite (Shadows)', spellLore: SpellLores.shadows },
       str_grudge_sybarite_slaanesh: { name: 'Sybarite (Slaanesh)', spellLore: SpellLores.slaanesh },
+
+      str_kreepus_misericorde: { name: 'Misericorde of Mordheim' }, //Kreepus
+      str_kreepus_tsinge: { name: 'Shen Tsinge' },
+      str_kreepus_stalkscent: { name: 'Shiwan Stalkscent' },
+      str_kreepus_eshin_sorcerer_lord: { name: 'Eshin Sorcerer Lord' },
 
       str_treecherik_gristl: { name: 'Gristl Twitchslice' }, // Treecherik
 
@@ -183,7 +191,6 @@ const scm3Characters = {
       str_skittice: { name: 'Grrzk Roteye' },
       str_pontifex_sitch: { name: 'Arch-Pontifex Sitch', spellLore: SpellLores.skvPlague },
       str_poxtooth: { name: 'Poxtooth, Befouler of Sotek', spellLore: SpellLores.skvPlague },
-      str_gangrous_szik: { name: 'Szik Vilepot' },
       bc_the_hidden: { name: 'The Hidden', spellLore: SpellLores.skvPlague },
       bc_plague_lord: { name: 'Plague Lord' },
       bc_plague_pontifex: { name: 'Plague Pontifex', spellLore: SpellLores.skvPlague },
@@ -194,6 +201,10 @@ const scm3Characters = {
       bc_grilok: { name: 'Pontifex of Plagues Lord Grilok', spellLore: SpellLores.skvPlague },
     },
     heroes: {
+      str_kreepus_gnawlitch: { name: 'Gnawlitch Shun' }, // Kreepus
+      str_kreepus_fellpaw: { name: 'Skulk Fellpaw' },
+      str_kreepus_eshin_sorcerer: { name: 'Eshin Sorcerer (Warplock Pistol)' },
+
       str_verms_swarmcaller: { name: 'Swarmcaller' }, // Verms
 
       clan_vrrtkin_masterglobe: { name: 'Vrrtkin Master Globadier', spellLore: SpellLores.mixed }, // Vrrtkin
