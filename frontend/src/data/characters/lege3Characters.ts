@@ -9,7 +9,9 @@ const lege3Characters = {
   },
 
   brt_bretonnia: {
-    lords: {},
+    lords: {
+      hkrul_dolmance: { name: 'Alphonse Dolmancé' },
+    },
     heroes: {
       ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
     },
@@ -30,6 +32,9 @@ const lege3Characters = {
       str_styrkaar: { name: 'Styrkaar of the Sortsvinaer' },
       str_crom: { name: 'Vardek Crom' },
       str_vandred: { name: 'Vandred the Majestic' },
+
+      hkrul_aelfric: { name: 'Aelfric' },
+      hkrul_engra: { name: 'Engra Deathsword' },
     },
     heroes: {
       str_scyla: { name: 'Scyla Anfingrimm' },
@@ -63,6 +68,10 @@ const lege3Characters = {
     },
     heroes: {
       ludwig_von_uberdorf: { name: 'Ludwig von Uberdorf' },
+
+      hkrul_rhobb: { name: 'Rhobb Grimly' },
+      hkrul_shaz: { name: 'Shaz Ensun' },
+      hkrul_thulgrim: { name: 'Thulgrim the Thief' },
     },
   },
 
@@ -103,7 +112,10 @@ const lege3Characters = {
   },
 
   hef_high_elves: {
-    lords: {},
+    lords: {
+      hef_calith_torinubar: { name: 'High Mage Torinubar', spellLore: SpellLores.high },
+      hef_convoy: { name: 'Prince (Convoy)' },
+    },
     heroes: {
       kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
     },
@@ -113,6 +125,8 @@ const lege3Characters = {
     lords: {
       str_abrax: { name: 'Abrax the Bloody' },
       str_kaarn: { name: 'Kaarn the Vanquisher' },
+
+      hkrul_slaurith: { name: 'Lord Slaurith' },
     },
     heroes: {
       str_scyla: { name: 'Scyla Anfingrimm' },
@@ -141,9 +155,22 @@ const lege3Characters = {
   },
 
   nor_norsca: {
-    lords: {},
+    lords: {
+      hkrul_vroth: { name: 'Surtha Lenk' },
+      hkrul_thorgar: { name: 'Thorgar the Blooded one' },
+      hkrul_thorgar_daemon_prince: { name: 'Thorgar the Daemon Prince', spellLore: SpellLores.fire },
+      hkrul_valbrand: { name: 'Valbrand Fireblade' },
+      hkrul_volrik: { name: 'Volrik Clawhand' },
+      rhox_volrik_chs_sorcerer_lord_tzeentch_mtze: {
+        name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
+        spellLore: SpellLores.tzeentch,
+      },
+      rhox_valbrand_nor_marauder_chieftain_horde: { name: 'Marauder Chieftain' },
+    },
     heroes: {
       str_dazharr: { name: 'Dazharr Doomaxe', spellLore: SpellLores.hashut },
+
+      hkrul_oerl: { name: 'Oerl the Young' },
     },
   },
 
@@ -215,6 +242,8 @@ const lege3Characters = {
   vmp_vampire_counts: {
     lords: {
       str_rahtep: { name: 'Waldakir Rahtep', spellLore: SpellLores.mixed },
+
+      hkrul_zach: { name: 'Zacharias the Everliving', spellLore: SpellLores.mixed },
     },
     heroes: {
       str_gothard: { name: 'Gothard the Undying Knight' },
@@ -226,7 +255,9 @@ const lege3Characters = {
   wef_wood_elves: {
     lords: {
       queen_marrisith: { name: 'Queen Marrisith' },
-      oreon_ll: { name: 'Oreon' },
+      oreon_ll: { name: 'Prince Oreon' },
+
+      hkrul_sceolan: { name: 'Sceolan' },
     },
     heroes: {
       kou_skaw_lh: { name: 'Skaw the Falconer' },

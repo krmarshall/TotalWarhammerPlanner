@@ -28,6 +28,7 @@ import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
 import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
 import cat3CompGroups from '../../../TWPData/compGroups/cat3.json';
 import ovn3CompGroups from '../../../TWPData/compGroups/ovn3.json';
+import lege3CompGroups from '../../../TWPData/compGroups/lege3.json';
 
 const gameData: { [key: string]: GameDataInterface } = {
   vanilla2: {
@@ -54,7 +55,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: sfo3Characters,
     characterImages: sfo3CharacterImgs,
-    updated: '13 Dec 2023',
+    updated: '20 Dec 2023',
     category: 'Overhaul',
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2792731173',
   },
@@ -87,14 +88,15 @@ const gameData: { [key: string]: GameDataInterface } = {
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920114265',
   },
   lege3: {
-    text: 'Legendary Characters 3',
+    text: 'Legendary Compilation 3',
     image: gameImages['lege3'],
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
+    compilationGroups: lege3CompGroups,
     updated: '6 Dec 2023',
-    category: 'Character Mod',
-    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
+    category: 'Character Mod Compilation',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3119805694',
   },
   cat3: {
     text: "Cataph's Compilation 3",
@@ -119,14 +121,14 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: ovn3Characters,
     characterImages: ovn3CharacterImgs,
     compilationGroups: ovn3CompGroups,
-    updated: '15 Dec 2023',
+    updated: '20 Dec 2023',
     category: 'Character Mod Compilation',
     includes: [
-      'Albion (25 Nov Sep 2023)',
-      'Citadel of Dusk (21 Nov 2023)',
-      'Dread King Legions (15 Dec 2023)',
-      'Fimir (4 Dec 2023)',
-      'Grudgebringers (5 Dec 2023)',
+      'Albion (20 Dec 2023)',
+      'Citadel of Dusk (18 Dec 2023)',
+      'Dread King Legions (18 Dec 2023)',
+      'Fimir (18 Dec 2023)',
+      'Grudgebringers (18 Dec 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2993203389',
   },
@@ -137,16 +139,16 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
     compilationGroups: scm3CompGroups,
-    updated: '17 Dec 2023',
+    updated: '19 Dec 2023',
     category: 'Character Mod Compilation',
     includes: [
-      'Skaven Clans (8 Dec 2023)',
-      'Marienburg (14 Dec 2023)',
-      'Champions of Undeath (26 Nov 2023)',
+      'Skaven Clans (19 Dec 2023)',
+      'Marienburg (18 Dec 2023)',
+      'Champions of Undeath (19 Dec 2023)',
       'JBV: Curse of Nongchang (24 Oct 2023)',
       'JBV: Islanders of the Moon (23 Nov 2023)',
       'Dynasty of the Damned (30 Oct 2023)',
-      'Tomb Kings Extended (21 Nov 2023)',
+      'Tomb Kings Extended (19 Dec 2023)',
       'Rotblood Tribe (1 Dec 2023)',
       "Sigmar's Heirs (29 Nov 2023)",
       'Empire Secessionists (17 Dec 2023)',

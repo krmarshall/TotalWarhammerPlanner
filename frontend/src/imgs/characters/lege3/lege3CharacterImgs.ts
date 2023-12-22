@@ -74,8 +74,25 @@ import str_brokk_ironpick from './nom_brokk_ironpick.webp';
 import str_byrrnoth_grundadrakk from './nom_byrrnoth_grundadrakk.webp';
 import str_rorek_granitehand from './nom_rorek_granitehand.webp';
 import str_sven_hasselfriesian from './nom_sven_hasselfriesian.webp';
+import hkrul_dolmance from './hkrul_dolmance.webp';
+import hkrul_aelfric from './hkrul_aelfric.webp';
+import hkrul_engra from './hkrul_engra.webp';
+import hkrul_rhobb from './hkrul_rhobb.webp';
+import hkrul_thulgrim from './hkrul_thulgrim.webp';
+import hkrul_shaz from './hkrul_shaz.webp';
+import hef_calith_torinubar from './hef_calith_torinubar.webp';
+import hkrul_vroth from './hkrul_vroth.webp';
+import hkrul_valbrand from './hkrul_valbrand.webp';
+import hkrul_volrik from './hkrul_volrik.webp';
+import hkrul_thorgar from './hkrul_thorgar.webp';
+import hkrul_thorgar_daemon_prince from './hkrul_thorgar_daemon_prince.webp';
+import hkrul_oerl from './hkrul_oerl.webp';
+import hkrul_zach from './hkrul_zach.webp';
+import hkrul_sceolan from './hkrul_sceolan.webp';
+import hkrul_slaurith from './hkrul_slaurith.webp';
 
 import placeholder from './0placeholder.webp';
+import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
 
 const lege3CharacterImgs = {
   str_slambo: str_slambo,
@@ -154,6 +171,25 @@ const lege3CharacterImgs = {
   str_byrrnoth_grundadrakk: str_byrrnoth_grundadrakk,
   str_rorek_granitehand: str_rorek_granitehand,
   str_sven_hasselfriesian: str_sven_hasselfriesian,
+  hkrul_dolmance: hkrul_dolmance,
+  hkrul_aelfric: hkrul_aelfric,
+  hkrul_engra: hkrul_engra,
+  hkrul_rhobb: hkrul_rhobb,
+  hkrul_thulgrim: hkrul_thulgrim,
+  hkrul_shaz: hkrul_shaz,
+  hef_calith_torinubar: hef_calith_torinubar,
+  hef_convoy: vanilla3CharacterImgs.hef_prince,
+  hkrul_vroth: hkrul_vroth,
+  hkrul_valbrand: hkrul_valbrand,
+  rhox_valbrand_nor_marauder_chieftain_horde: vanilla3CharacterImgs.nor_marauder_chieftain,
+  hkrul_volrik: hkrul_volrik,
+  rhox_volrik_chs_sorcerer_lord_tzeentch_mtze: vanilla3CharacterImgs.chs_sorcerer_lord_tzeentch_mtze,
+  hkrul_thorgar: hkrul_thorgar,
+  hkrul_thorgar_daemon_prince: hkrul_thorgar_daemon_prince,
+  hkrul_oerl: hkrul_oerl,
+  hkrul_zach: hkrul_zach,
+  hkrul_sceolan: hkrul_sceolan,
+  hkrul_slaurith: hkrul_slaurith,
 };
 
 export default lege3CharacterImgs;
