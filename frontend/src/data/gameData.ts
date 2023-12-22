@@ -94,8 +94,9 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
     compilationGroups: lege3CompGroups,
-    updated: '6 Dec 2023',
+    updated: '21 Dec 2023',
     category: 'Character Mod Compilation',
+    includes: ['Legendary Characters (6 Dec 2023)', "SCM's LCCP (21 Dec 2023)"],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3119805694',
   },
   cat3: {
