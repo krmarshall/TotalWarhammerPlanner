@@ -156,6 +156,7 @@ const lege3Characters = {
 
   nor_norsca: {
     lords: {
+      hkrul_beorg: { name: 'Beorg Bearstruck' },
       hkrul_vroth: { name: 'Surtha Lenk' },
       hkrul_thorgar: { name: 'Thorgar the Blooded one' },
       hkrul_thorgar_daemon_prince: { name: 'Thorgar the Daemon Prince', spellLore: SpellLores.fire },
@@ -258,9 +259,11 @@ const lege3Characters = {
       oreon_ll: { name: 'Prince Oreon' },
 
       hkrul_sceolan: { name: 'Sceolan' },
+      sceolan_wef_spellweaver_ice: { name: 'Spellweaver (Ice)', spellLore: SpellLores.ice },
     },
     heroes: {
       kou_skaw_lh: { name: 'Skaw the Falconer' },
+      sceolan_wef_spellsinger_ice: { name: 'Spellsinger (Ice)', spellLore: SpellLores.ice },
     },
   },
 };

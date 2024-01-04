@@ -90,6 +90,9 @@ import hkrul_oerl from './hkrul_oerl.webp';
 import hkrul_zach from './hkrul_zach.webp';
 import hkrul_sceolan from './hkrul_sceolan.webp';
 import hkrul_slaurith from './hkrul_slaurith.webp';
+import hkrul_beorg from './hkrul_beorg.webp';
+import sceolan_wef_spellweaver_ice from './wef_spellweaver_campaign_05.webp';
+import sceolan_wef_spellsinger_ice from './wef_spellsinger_campaign_05_0.webp';
 
 import placeholder from './0placeholder.webp';
 import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
@@ -190,6 +193,9 @@ const lege3CharacterImgs = {
   hkrul_zach: hkrul_zach,
   hkrul_sceolan: hkrul_sceolan,
   hkrul_slaurith: hkrul_slaurith,
+  hkrul_beorg: hkrul_beorg,
+  sceolan_wef_spellweaver_ice: sceolan_wef_spellweaver_ice,
+  sceolan_wef_spellsinger_ice: sceolan_wef_spellsinger_ice,
 };
 
 export default lege3CharacterImgs;
