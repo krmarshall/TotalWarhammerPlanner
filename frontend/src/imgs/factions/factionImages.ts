@@ -31,6 +31,7 @@ import rotbloodTribe from './rotbloodTribe.webp';
 import southernRealms from './southernRealms.webp';
 import mousillon from './mousillon.webp';
 import albion from './albion.webp';
+import araby from './araby.webp';
 import fimir from './fimir.webp';
 import bloodyGrail from './bloodyGrail.webp';
 import mallobaude from './mallobaude.webp';
@@ -80,6 +81,7 @@ const factionImages = {
   teb_southern_realms: southernRealms,
   msl_mousillon: mousillon,
   alb_albion: albion,
+  arb_araby: araby,
   fim_fimir: fimir,
   msl_bloodyGrail: bloodyGrail,
   msl_mallobaude: mallobaude,

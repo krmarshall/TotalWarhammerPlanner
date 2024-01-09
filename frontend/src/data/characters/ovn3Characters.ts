@@ -60,7 +60,29 @@ const ovn3Characters = {
       albion_chief: { name: 'Petty Chieftain' },
     },
   },
-
+  arb_araby: {
+    lords: {
+      arb_fatandira: { name: 'Fatandira' },
+      arb_golden_magus: { name: 'The Golden Magus', spellLore: SpellLores.mixed },
+      sultan_jaffar: { name: 'Sultan Jaffar', spellLore: SpellLores.mixed },
+      arb_sheikh_mehmed: { name: 'Mehmed the Butcher' },
+      arb_vizier_desert: { name: 'Grand Vizier (Djinn)', spellLore: SpellLores.mixed },
+      arb_vizier_fire: { name: 'Grand Vizier (Fire)', spellLore: SpellLores.fire },
+      arb_vizier_heavens: { name: 'Grand Vizier (Heavens)', spellLore: SpellLores.heavens },
+      arb_vizier_life: { name: 'Grand Vizier (Life)', spellLore: SpellLores.life },
+      ovn_araby_ll: { name: 'Sheikh' },
+      arb_caravan_master: { name: 'Sheikh (Caravan)' },
+    },
+    heroes: {
+      arb_roy_champion_wazar: { name: 'Wazar the Cruel' },
+      arb_roy_champion: { name: 'Emir' },
+      arb_roy_nomad: { name: 'Hashishin' },
+      arb_magician_desert: { name: 'Magician (Djinn)', spellLore: SpellLores.mixed },
+      arb_magician_fire: { name: 'Magician (Fire)', spellLore: SpellLores.fire },
+      arb_magician_heavens: { name: 'Magician (Heavens)', spellLore: SpellLores.heavens },
+      arb_magician_life: { name: 'Magician (Life)', spellLore: SpellLores.life },
+    },
+  },
   fim_fimir: {
     lords: {
       fimir_daemon_octopus_kroll: { name: 'Kroll', spellLore: SpellLores.mixed },

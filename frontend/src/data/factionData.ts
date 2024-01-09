@@ -33,6 +33,7 @@ const factions = {
   teb_southern_realms: 'Southern Realms',
 
   alb_albion: 'Albion',
+  arb_araby: 'Araby',
   fim_fimir: 'Fimir',
 };
 

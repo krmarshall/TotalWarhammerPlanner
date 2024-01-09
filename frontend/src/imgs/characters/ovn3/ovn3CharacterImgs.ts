@@ -37,6 +37,23 @@ import elo_dread_larenscheld from './elo_larenscheld.webp';
 import elo_hand_of_nagash from './elo_hand_of_nagash.webp';
 import elo_liche_general from './elo_liche_general_01.webp';
 import allor from './allor.webp';
+import sultan_jaffar from './arb_sultan_jaffar.webp';
+import ovn_araby_ll from './arb_sheikh_01.webp';
+import arb_sheikh_mehmed from './arb_sheikh_mehmed.webp';
+import arb_vizier_fire from './ovn_arb_magician_fire_vizier_01.webp';
+import arb_vizier_life from './ovn_arb_magician_life_vizier_01.webp';
+import arb_vizier_heavens from './ovn_arb_magician_tempest_vizier_01.webp';
+import arb_vizier_desert from './ovn_arb_magician_desert_vizier_01.webp';
+import arb_caravan_master from './ovn_arb_cha_caravan_master_01.webp';
+import arb_fatandira from './arb_fatandira.webp';
+import arb_golden_magus from './arb_golden_magus.webp';
+import arb_magician_life from './ovn_arb_magician_life_01.webp';
+import arb_magician_desert from './ovn_arb_magician_desert_01.webp';
+import arb_magician_fire from './ovn_arb_magician_fire_01.webp';
+import arb_magician_heavens from './ovn_arb_magician_tempest_01.webp';
+import arb_roy_nomad from './ovn_arb_cha_hashashin_01.webp';
+import arb_roy_champion from './ovn_arb_cha_champion_01.webp';
+import arb_roy_champion_wazar from './ovn_arb_cha_champion_wazar.webp';
 
 const ovn3CharacterImgs = {
   albion_chief: albion_chief,
@@ -83,6 +100,23 @@ const ovn3CharacterImgs = {
   elo_liche_general_vampires: elo_liche_general,
   tmb_Dread_King: tmb_Dread_King,
   allor: allor,
+  sultan_jaffar: sultan_jaffar,
+  ovn_araby_ll: ovn_araby_ll,
+  arb_sheikh_mehmed: arb_sheikh_mehmed,
+  arb_vizier_fire: arb_vizier_fire,
+  arb_vizier_life: arb_vizier_life,
+  arb_vizier_heavens: arb_vizier_heavens,
+  arb_vizier_desert: arb_vizier_desert,
+  arb_caravan_master: arb_caravan_master,
+  arb_fatandira: arb_fatandira,
+  arb_golden_magus: arb_golden_magus,
+  arb_magician_life: arb_magician_life,
+  arb_magician_desert: arb_magician_desert,
+  arb_magician_fire: arb_magician_fire,
+  arb_magician_heavens: arb_magician_heavens,
+  arb_roy_nomad: arb_roy_nomad,
+  arb_roy_champion: arb_roy_champion,
+  arb_roy_champion_wazar: arb_roy_champion_wazar,
 };
 
 export default ovn3CharacterImgs;
