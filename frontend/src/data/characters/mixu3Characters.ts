@@ -70,6 +70,8 @@ const mixu3Characters = {
       emp_theoderic_gausser: { name: 'Theoderic Gausser' },
       emp_valmir_von_raukov: { name: 'Valmir von Raukov' },
       emp_wolfram_hertwig: { name: 'Wolfram Hertwig' },
+      emp_fleet_admiral_male: { name: 'Fleet Admiral' },
+      emp_fleet_admiral_female: { name: 'Fleet Admiral' },
     },
     heroes: {
       emp_alberich_von_korden_hero: { name: 'Alberich von Korden (Hero)' },
@@ -78,6 +80,10 @@ const mixu3Characters = {
       emp_theodore_bruckner: { name: 'Theodore Bruckner' },
       emp_vorn_thugenheim: { name: 'Vorn Thugenheim' }, // Unknown
       emp_warrior_priest_of_taal: { name: 'Warrior Priest of Taal' },
+      emp_witch_doctor_beasts: { name: 'Witch Doctor (Beasts)', spellLore: SpellLores.beasts },
+      emp_witch_doctor_death: { name: 'Witch Doctor (Death)', spellLore: SpellLores.death },
+      emp_witch_doctor_deep: { name: 'Witch Doctor (Deep)', spellLore: SpellLores.deeps },
+      emp_witch_doctor_fire: { name: 'Witch Doctor (Fire)', spellLore: SpellLores.fire },
     },
   },
 

@@ -12,6 +12,7 @@ import scm3Characters from './characters/scm3Characters';
 import sfo3Characters from './characters/sfo3Characters';
 import cat3Characters from './characters/cat3Characters';
 import ovn3Characters from './characters/ovn3Characters';
+import hol3Characters from './characters/hol3Characters';
 
 import vanilla2CharacterImgs from '../imgs/characters/vanilla2/vanilla2CharacterImgs';
 import vanilla3CharacterImgs from '../imgs/characters/vanilla3/vanilla3CharacterImgs';
@@ -23,6 +24,7 @@ import scm3CharacterImgs from '../imgs/characters/scm3/scm3CharacterImgs';
 import sfo3CharacterImgs from '../imgs/characters/sfo3/sfo3CharacterImgs';
 import cat3CharacterImgs from '../imgs/characters/cat3/cat3CharacterImgs';
 import ovn3CharacterImgs from '../imgs/characters/ovn3/ovn3CharacterImgs';
+import hol3CharacterImgs from '../imgs/characters/hol3/hol3CharacterImgs';
 
 import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
 import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
@@ -76,10 +78,10 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: mixu3Characters,
     characterImages: mixu3CharacterImgs,
     compilationGroups: mixu3CompGroups,
-    updated: '31 Dec 2023',
+    updated: '14 Jan 2024',
     category: 'Character Mod Compilation',
     includes: [
-      "Mixu's Legendary Lords (23 Nov 2023)",
+      "Mixu's Legendary Lords (14 Jan 2024)",
       "Mixu's Mousillon (31 Dec 2023)",
       'Gnoblar Hordes - The Unwashed Masses (22 Nov 2023)',
       "Mixu's Slayer (23 Nov 2023)",
@@ -94,9 +96,9 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
     compilationGroups: lege3CompGroups,
-    updated: '9 Jan 2024',
+    updated: '16 Jan 2024',
     category: 'Character Mod Compilation',
-    includes: ['Legendary Characters (4 Jan 2024)', "SCM's LCCP (9 Jan 2024)"],
+    includes: ['Legendary Characters (16 Jan 2024)', "SCM's LCCP (16 Jan 2024)"],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3119805694',
   },
   cat3: {
@@ -122,15 +124,15 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: ovn3Characters,
     characterImages: ovn3CharacterImgs,
     compilationGroups: ovn3CompGroups,
-    updated: '9 Jan 2024',
+    updated: '18 Jan 2024',
     category: 'Character Mod Compilation',
     includes: [
-      'Albion (8 Jan 2024)',
-      'Araby (9 Jan 2024)',
+      'Albion (18 Jan 2024)',
+      'Araby (17 Jan 2024)',
       'Citadel of Dusk (6 Jan 2024)',
       'Dread King Legions (7 Jan 2024)',
-      'Fimir (29 Dec 2023)',
-      'Grudgebringers (18 Dec 2023)',
+      'Fimir (18 Jan 2024)',
+      'Grudgebringers (17 Jan 2024)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2993203389',
   },
@@ -141,16 +143,16 @@ const gameData: { [key: string]: GameDataInterface } = {
     characters: scm3Characters,
     characterImages: scm3CharacterImgs,
     compilationGroups: scm3CompGroups,
-    updated: '7 Jan 2024',
+    updated: '18 Jan 2024',
     category: 'Character Mod Compilation',
     includes: [
-      'Skaven Clans (6 Jan 2024)',
-      'Marienburg (1 Jan 2024)',
-      'Champions of Undeath (6 Jan 2024)',
+      'Skaven Clans (15 Jan 2024)',
+      'Marienburg (18 Jan 2024)',
+      'Champions of Undeath (18 Jan 2024)',
       'JBV: Curse of Nongchang (24 Oct 2023)',
-      'JBV: Islanders of the Moon (7 Jan 2024)',
-      'Dynasty of the Damned (29 Dec 2023)',
-      'Tomb Kings Extended (19 Dec 2023)',
+      'JBV: Islanders of the Moon (10 Jan 2024)',
+      'Dynasty of the Damned (18 Jan 2024)',
+      'Tomb Kings Extended (15 Jan 2024)',
       'Rotblood Tribe (1 Jan 2024)',
       "Sigmar's Heirs (29 Nov 2023)",
       'Empire Secessionists (4 Jan 2024)',
@@ -166,6 +168,16 @@ const gameData: { [key: string]: GameDataInterface } = {
       'The Gnoblar Horde (21 Nov 2023)',
     ],
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920115664',
+  },
+  hol3: {
+    text: 'Heroes of Legend 3',
+    image: gameImages['hol3'],
+    factions: factions,
+    characters: hol3Characters,
+    characterImages: hol3CharacterImgs,
+    updated: '16 Jan 2024',
+    category: 'Character Mod',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2931087074',
   },
   crys3: {
     text: 'Leaders of Legend 3',

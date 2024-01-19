@@ -23,7 +23,7 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 ## Adding A Mod
 
 - Copy over json data to TWPData repo
-- Copy over auto extracted and manually extracted images to respective frontend ./src/imgs or ./public/imgs, using respective vanilla game images as a base to overwrite.
+- Copy over auto extracted and manually extracted images to respective frontend ./src/imgs or ./public/imgs
 - Make sure to set up characterImgs export in ./src/imgs/characters/<mod>
 - Create appropriate mod character list in frontend ./src/data, may have to look around rpfm for actual character names
 - Find/create an icon for the mod, put into ./src/imgs/games and link with gameImage.ts

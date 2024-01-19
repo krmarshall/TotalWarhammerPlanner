@@ -54,6 +54,9 @@ import wef_wychwethyl from './wef_wychwethyl.webp';
 import tze_exalted_hero from './tze_exalted_hero_01.webp';
 import bst_little_morella from './bst_little_morella.webp';
 import emp_oleg_von_raukov from './emp_oleg_von_raukov.webp';
+import emp_fleet_admiral_female from './emp_fleet_admiral_female_01.webp';
+import emp_fleet_admiral_male from './emp_fleet_admiral_male_01.webp';
+import emp_witch_doctor from './emp_witch_doctor_01.webp';
 
 import msl_aucassin_de_hane from './msl_aucassin_de_hane.webp';
 import msl_bougars_the_butcher from './msl_bougars_the_butcher.webp';
@@ -143,6 +146,12 @@ const mixu3CharacterImgs = {
   tze_exalted_hero: tze_exalted_hero,
   bst_little_morella: bst_little_morella,
   emp_oleg_von_raukov: emp_oleg_von_raukov,
+  emp_fleet_admiral_male: emp_fleet_admiral_male,
+  emp_fleet_admiral_female: emp_fleet_admiral_female,
+  emp_witch_doctor_beasts: emp_witch_doctor,
+  emp_witch_doctor_death: emp_witch_doctor,
+  emp_witch_doctor_deep: emp_witch_doctor,
+  emp_witch_doctor_fire: emp_witch_doctor,
 
   // Mousillon
   msl_aucassin_de_hane: msl_aucassin_de_hane,
