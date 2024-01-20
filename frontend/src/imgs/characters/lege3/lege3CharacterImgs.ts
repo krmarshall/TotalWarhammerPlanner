@@ -93,6 +93,13 @@ import hkrul_slaurith from './hkrul_slaurith.webp';
 import hkrul_beorg from './hkrul_beorg.webp';
 import sceolan_wef_spellweaver_ice from './wef_spellweaver_campaign_05.webp';
 import sceolan_wef_spellsinger_ice from './wef_spellsinger_campaign_05_0.webp';
+import dust_gutrot_plaguefleet_captain from './dust_gutrot_plague_captain_cha_plaguefleet_01.webp';
+import kho_mardagg from './kho_cha_mardagg.webp';
+import str_eogric from './str_eogric.webp';
+import str_gutrot from './str_gutrot.webp';
+import eldyra from './nom_eldyra.webp';
+import galifreius from './nom_galifreius.webp';
+import kou_talarian from './kou_talarian.webp';
 
 import placeholder from './0placeholder.webp';
 import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
@@ -196,6 +203,13 @@ const lege3CharacterImgs = {
   hkrul_beorg: hkrul_beorg,
   sceolan_wef_spellweaver_ice: sceolan_wef_spellweaver_ice,
   sceolan_wef_spellsinger_ice: sceolan_wef_spellsinger_ice,
+  dust_gutrot_plaguefleet_captain: dust_gutrot_plaguefleet_captain,
+  kho_mardagg: kho_mardagg,
+  str_eogric: str_eogric,
+  str_gutrot: str_gutrot,
+  eldyra: eldyra,
+  galifreius: galifreius,
+  kou_talarian: kou_talarian,
 };
 
 export default lege3CharacterImgs;

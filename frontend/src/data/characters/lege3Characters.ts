@@ -27,16 +27,20 @@ const lege3Characters = {
   chs_chaos: {
     lords: {
       str_feytor: { name: 'Feytor the Tainted' },
+      str_gutrot: { name: 'Gutrot Spume' },
       str_haargroth: { name: 'Haargroth the Blooded' },
       str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
       str_styrkaar: { name: 'Styrkaar of the Sortsvinaer' },
       str_crom: { name: 'Vardek Crom' },
       str_vandred: { name: 'Vandred the Majestic' },
+      dust_gutrot_plaguefleet_captain: { name: 'Plaguefleet Captain', spellLore: SpellLores.mixed },
 
       hkrul_aelfric: { name: 'Aelfric' },
       hkrul_engra: { name: 'Engra Deathsword' },
     },
     heroes: {
+      str_eogric: { name: 'Eogric the Vile' },
+      kho_mardagg: { name: 'The Mardagg' },
       str_scyla: { name: 'Scyla Anfingrimm' },
       str_slambo: { name: 'SLAMBO' },
     },
@@ -54,7 +58,7 @@ const lege3Characters = {
     lords: {
       str_slavin: { name: 'Slavin Kurnz' },
     },
-    heroes: {},
+    heroes: { kho_mardagg: { name: 'The Mardagg' } },
   },
 
   dwf_dwarfs: {
@@ -113,11 +117,14 @@ const lege3Characters = {
 
   hef_high_elves: {
     lords: {
+      eldyra: { name: 'Eldyra' },
+      galifreius: { name: 'Galifreius' },
       hef_calith_torinubar: { name: 'High Mage Torinubar', spellLore: SpellLores.high },
       hef_convoy: { name: 'Prince (Convoy)' },
     },
     heroes: {
       kou_aurelion_ll: { name: 'Aurelion', spellLore: SpellLores.mixed },
+      kou_talarian: { name: 'Loremaster Talarian', spellLore: SpellLores.mixed },
     },
   },
 
@@ -129,6 +136,7 @@ const lege3Characters = {
       hkrul_slaurith: { name: 'Lord Slaurith' },
     },
     heroes: {
+      kho_mardagg: { name: 'The Mardagg' },
       str_scyla: { name: 'Scyla Anfingrimm' },
       str_skulltaker: { name: 'Skulltaker' },
     },
@@ -177,6 +185,7 @@ const lege3Characters = {
 
   nur_nurgle: {
     lords: {
+      str_gutrot: { name: 'Gutrot Spume' },
       str_valnir: { name: 'Valnir the Reaper' },
     },
     heroes: {
