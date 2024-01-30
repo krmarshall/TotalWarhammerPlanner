@@ -30,7 +30,6 @@ import mixu3CompGroups from '../../../TWPData/compGroups/mixu3.json';
 import scm3CompGroups from '../../../TWPData/compGroups/scm3.json';
 import cat3CompGroups from '../../../TWPData/compGroups/cat3.json';
 import ovn3CompGroups from '../../../TWPData/compGroups/ovn3.json';
-import lege3CompGroups from '../../../TWPData/compGroups/lege3.json';
 
 import modTimestamps from '../../../TWPData/modTimestamps.json';
 import { mostRecentDateString, toParsedDateString } from '../utils/dateFunctions';
@@ -51,7 +50,7 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: vanilla3CharactersMemes,
     characterImages: vanilla3CharacterImgs,
-    updated: 'Dec 12 2023 (4.1.3)',
+    updated: 'Jan 23 2024 (4.1.4)',
     category: 'Base',
   },
   sfo3: {
@@ -98,13 +97,8 @@ const gameData: { [key: string]: GameDataInterface } = {
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
-    compilationGroups: lege3CompGroups,
-    updated: mostRecentDateString(Object.values(modTimestamps.lege3)),
-    category: 'Character Mod Compilation',
-    includes: [
-      `Legendary Characters (${toParsedDateString(modTimestamps.lege3['!str_legendary'])})`,
-      `SCM's LCCP (${toParsedDateString(modTimestamps.lege3.scm_lccp)})`,
-    ],
+    updated: toParsedDateString(modTimestamps.lege3['!str_legendary']),
+    category: 'Character Mod',
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3119805694',
   },
   cat3: {

@@ -1,6 +1,13 @@
 import { SpellLores } from '../../types/interfaces/GameInterface';
 
 const scm3Characters = {
+  brt_bretonnia: {
+    lords: {
+      hkrul_dolmance: { name: 'Alphonse Dolmancé' },
+    },
+    heroes: {},
+  },
+
   dae_daemons: {
     lords: {},
     heroes: {
@@ -10,6 +17,9 @@ const scm3Characters = {
 
   chs_chaos: {
     lords: {
+      hkrul_aelfric: { name: 'Aelfric' },
+      hkrul_engra: { name: 'Engra Deathsword' },
+
       merga: { name: 'Merga Ottweiler', spellLore: SpellLores.tzeentch },
     },
     heroes: {
@@ -38,6 +48,11 @@ const scm3Characters = {
   dwf_dwarfs: {
     lords: {},
     heroes: {
+      // LCCP
+      hkrul_rhobb: { name: 'Rhobb Grimly' },
+      hkrul_shaz: { name: 'Shaz Ensun' },
+      hkrul_thulgrim: { name: 'Thulgrim the Thief' },
+
       hkrul_guzunda: { name: 'Guzunda Wallrattler' },
     },
   },
@@ -107,6 +122,10 @@ const scm3Characters = {
 
   hef_high_elves: {
     lords: {
+      // LCCP
+      hef_calith_torinubar: { name: 'High Mage Torinubar', spellLore: SpellLores.high },
+      hef_convoy: { name: 'Prince (Convoy)' },
+
       jbv2_hef_magister: { name: 'Magister Astrologer', spellLore: SpellLores.mixed },
     },
     heroes: {},
@@ -130,7 +149,9 @@ const scm3Characters = {
   },
 
   kho_khorne: {
-    lords: {},
+    lords: {
+      hkrul_slaurith: { name: 'Lord Slaurith' },
+    },
     heroes: {
       kho_karnak: { name: 'Karanak' },
     },
@@ -144,6 +165,25 @@ const scm3Characters = {
     heroes: {
       ksl_ivan: { name: 'Ivan Radinov' },
       blade_master: { name: 'Blade Master' },
+    },
+  },
+
+  nor_norsca: {
+    lords: {
+      hkrul_beorg: { name: 'Beorg Bearstruck' },
+      hkrul_vroth: { name: 'Surtha Lenk' },
+      hkrul_thorgar: { name: 'Thorgar the Blooded one' },
+      hkrul_thorgar_daemon_prince: { name: 'Thorgar the Daemon Prince', spellLore: SpellLores.fire },
+      hkrul_valbrand: { name: 'Valbrand Fireblade' },
+      hkrul_volrik: { name: 'Volrik Clawhand' },
+      rhox_volrik_chs_sorcerer_lord_tzeentch_mtze: {
+        name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
+        spellLore: SpellLores.tzeentch,
+      },
+      rhox_valbrand_nor_marauder_chieftain_horde: { name: 'Marauder Chieftain' },
+    },
+    heroes: {
+      hkrul_oerl: { name: 'Oerl the Young' },
     },
   },
 
@@ -263,6 +303,9 @@ const scm3Characters = {
       bm_dg_lord: { name: 'Depth Guard Lord', spellLore: SpellLores.mixed },
       bm_dt_lord: { name: 'Drakenhof Templar Lord', spellLore: SpellLores.mixed },
       vlad_bm_dt_lord: { name: 'Drakenhof Templar Lord (Vlad)', spellLore: SpellLores.mixed },
+
+      // LCCP
+      hkrul_zach: { name: 'Zacharias the Everliving', spellLore: SpellLores.mixed },
     },
     heroes: {
       // Marienburg
@@ -291,6 +334,16 @@ const scm3Characters = {
       vlad_drakenhof_templar_champion: { name: 'Drakenhof Templar Champion (Vlad)', spellLore: SpellLores.mixed },
       shaggoth_wight: { name: 'Skeleton Shaggoth Wight' },
       vlad_simp_agent: { name: 'Von Carstein Noble', spellLore: SpellLores.mixed },
+    },
+  },
+
+  wef_wood_elves: {
+    lords: {
+      hkrul_sceolan: { name: 'Sceolan' },
+      sceolan_wef_spellweaver_ice: { name: 'Spellweaver (Ice)', spellLore: SpellLores.ice },
+    },
+    heroes: {
+      sceolan_wef_spellsinger_ice: { name: 'Spellsinger (Ice)', spellLore: SpellLores.ice },
     },
   },
 
