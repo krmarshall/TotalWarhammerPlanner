@@ -92,14 +92,14 @@ const gameData: { [key: string]: GameDataInterface } = {
     workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2920114265',
   },
   lege3: {
-    text: 'Legendary Compilation 3',
+    text: 'Legendary Characters 3',
     image: gameImages['lege3'],
     factions: factions,
     characters: lege3Characters,
     characterImages: lege3CharacterImgs,
     updated: toParsedDateString(modTimestamps.lege3['!str_legendary']),
     category: 'Character Mod',
-    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3119805694',
+    workshopLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2826930183',
   },
   cat3: {
     text: `Cataph's Compilation 3`,
