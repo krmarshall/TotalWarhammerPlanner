@@ -121,6 +121,7 @@ const lege3Characters = {
     lords: {
       str_abrax: { name: 'Abrax the Bloody' },
       str_kaarn: { name: 'Kaarn the Vanquisher' },
+      str_skarr: { name: 'Skarr Bloodwrath' },
     },
     heroes: {
       kho_mardagg: { name: 'The Mardagg' },

@@ -81,6 +81,7 @@ import str_gutrot from './str_gutrot.webp';
 import eldyra from './nom_eldyra.webp';
 import galifreius from './nom_galifreius.webp';
 import kou_talarian from './kou_talarian.webp';
+import str_skarr from './str_skarr.webp';
 
 import placeholder from './0placeholder.webp';
 import vanilla3CharacterImgs from '../vanilla3/vanilla3CharacterImgs';
@@ -169,6 +170,7 @@ const lege3CharacterImgs = {
   eldyra: eldyra,
   galifreius: galifreius,
   kou_talarian: kou_talarian,
+  str_skarr: str_skarr,
 };
 
 export default lege3CharacterImgs;
