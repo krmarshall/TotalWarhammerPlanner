@@ -22,6 +22,7 @@ const usageData: LogInterface = {
     scm3: 0,
     cat3: 0,
     ovn3: 0,
+    hol3: 0,
 
     other: 0,
   },
@@ -60,6 +61,7 @@ const outputLog = () => {
     scm3: 0,
     cat3: 0,
     ovn3: 0,
+    hol3: 0,
 
     other: 0,
   };
