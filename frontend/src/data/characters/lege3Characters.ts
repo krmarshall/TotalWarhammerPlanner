@@ -27,7 +27,6 @@ const lege3Characters = {
       str_feytor: { name: 'Feytor the Tainted' },
       str_gutrot: { name: 'Gutrot Spume' },
       str_haargroth: { name: 'Haargroth the Blooded' },
-      str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
       str_styrkaar: { name: 'Styrkaar of the Sortsvinaer' },
       str_crom: { name: 'Vardek Crom' },
       str_vandred: { name: 'Vandred the Majestic' },
@@ -197,6 +196,7 @@ const lege3Characters = {
 
   sla_slaanesh: {
     lords: {
+      str_nastasya: { name: 'Nastasya Roskolnikov', spellLore: SpellLores.mixed },
       str_sssel: { name: 'Sss’el’ari the Golden, Lord of Paramountcy', spellLore: SpellLores.slaanesh },
     },
     heroes: {
