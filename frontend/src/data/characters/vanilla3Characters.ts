@@ -956,6 +956,7 @@ const vanilla3Characters = {
       chs_lord_msla: {
         name: 'Chaos Lord of Slaanesh',
       },
+      chs_lord_mtze: { name: 'Chaos Lord of Tzeentch' },
       chs_sorcerer_lord_death: {
         name: 'Chaos Sorcerer Lord (Death)',
         spellLore: SpellLores.death,
