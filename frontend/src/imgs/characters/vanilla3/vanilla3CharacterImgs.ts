@@ -101,6 +101,12 @@ import blue_scribes from './dae_blue_scribes_0.webp';
 import changeling from './dae_changeling_0.webp';
 import hag_witch from './ksl_hag_witch_campaign_01_0.webp';
 import ostankya from './ksl_ostankya_0.webp';
+import chs_lord_mtze from './dae_tze_chaos_lord_campaign_01_0.webp';
+import cth_gate_master from './cth_gate_master_campaign_01_0.webp';
+import cth_saytang_the_watcher from './cth_saytang_the_watcher_0.webp';
+import chs_exalted_hero_mtze from './dae_tze_exalted_hero_campaign_01_0.webp';
+import ksl_druzhina from './ksl_druzhina_campaign_01_0.webp';
+import ksl_the_golden_knight from './ksl_golden_knight_0.webp';
 import placeholder from './0placeholder.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
@@ -269,10 +275,17 @@ const vanilla3CharacterImgs = {
   ksl_mother_ostankya: ostankya,
   ksl_hag_witch_beasts: hag_witch,
   ksl_hag_witch_death: hag_witch,
+  ksl_hag_witch_hag: hag_witch,
   ksl_hag_witch_shadows: hag_witch,
   tze_the_changeling: changeling,
   tze_aekold_helbrass: aekold_hellbrass,
   tze_blue_scribes: blue_scribes,
+  chs_lord_mtze: chs_lord_mtze,
+  cth_gate_master: cth_gate_master,
+  cth_saytang_the_watcher: cth_saytang_the_watcher,
+  chs_exalted_hero_mtze: chs_exalted_hero_mtze,
+  ksl_druzhina: ksl_druzhina,
+  ksl_the_golden_knight: ksl_the_golden_knight,
 };
 
 export default vanilla3CharacterImgs;

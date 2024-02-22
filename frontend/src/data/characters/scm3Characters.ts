@@ -52,6 +52,9 @@ const scm3Characters = {
       hkrul_rhobb: { name: 'Rhobb Grimly' },
       hkrul_shaz: { name: 'Shaz Ensun' },
       hkrul_thulgrim: { name: 'Thulgrim the Thief' },
+      // hkrul_gargul: { name: 'Gargul the Gunner' },
+      // hkrul_wundal: { name: 'Wundal the Wizard' },
+      // hkrul_skargel: { name: 'Skargel the Miner' },
 
       hkrul_guzunda: { name: 'Guzunda Wallrattler' },
     },
@@ -78,7 +81,7 @@ const scm3Characters = {
       hkrul_hendrik: { name: 'Simon Goudenkruin' },
       hkrul_fooger_caravan_master: { name: 'Dwarf Merchant Lord' },
       hkrul_lector_manann: { name: 'High Priest of Manann' },
-      hkrul_fooger_dwarf_lord: { name: 'House Elder' },
+      // hkrul_fooger_dwarf_lord: { name: 'House Elder' },
       mar_caravan_master: { name: 'Merchant Lord' },
     },
     heroes: {
@@ -304,6 +307,9 @@ const scm3Characters = {
       bm_dt_lord: { name: 'Drakenhof Templar Lord', spellLore: SpellLores.mixed },
       vlad_bm_dt_lord: { name: 'Drakenhof Templar Lord (Vlad)', spellLore: SpellLores.mixed },
 
+      // DotD
+      dotd_master_necromancer: { name: 'Master Necromancer', spellLore: SpellLores.vampires },
+
       // LCCP
       hkrul_zach: { name: 'Zacharias the Everliving', spellLore: SpellLores.mixed },
     },
@@ -334,6 +340,10 @@ const scm3Characters = {
       vlad_drakenhof_templar_champion: { name: 'Drakenhof Templar Champion (Vlad)', spellLore: SpellLores.mixed },
       shaggoth_wight: { name: 'Skeleton Shaggoth Wight' },
       vlad_simp_agent: { name: 'Von Carstein Noble', spellLore: SpellLores.mixed },
+
+      // DotD
+      dotd_vmp_necromancer: { name: 'Necromancer', spellLore: SpellLores.vampires },
+      dotd_wight_king: { name: 'Wight King' },
     },
   },
 

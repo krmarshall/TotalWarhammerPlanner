@@ -57,6 +57,7 @@ import emp_oleg_von_raukov from './emp_oleg_von_raukov.webp';
 import emp_fleet_admiral_female from './emp_fleet_admiral_female_01.webp';
 import emp_fleet_admiral_male from './emp_fleet_admiral_male_01.webp';
 import emp_witch_doctor from './emp_witch_doctor_01.webp';
+import emp_fleet_captain from './emp_fleet_captain_01.webp';
 
 import msl_aucassin_de_hane from './msl_aucassin_de_hane.webp';
 import msl_bougars_the_butcher from './msl_bougars_the_butcher.webp';
@@ -152,6 +153,7 @@ const mixu3CharacterImgs = {
   emp_witch_doctor_death: emp_witch_doctor,
   emp_witch_doctor_deep: emp_witch_doctor,
   emp_witch_doctor_fire: emp_witch_doctor,
+  emp_fleet_captain: emp_fleet_captain,
 
   // Mousillon
   msl_aucassin_de_hane: msl_aucassin_de_hane,

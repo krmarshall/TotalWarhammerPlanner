@@ -30,6 +30,7 @@ enum SpellLores {
   'slaanesh' = 'slaanesh',
   'greatMaw' = 'greatMaw',
   'hashut' = 'hashut',
+  'hag' = 'hag',
 }
 
 interface CompGroupsInterface {

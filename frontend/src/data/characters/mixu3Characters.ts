@@ -79,6 +79,7 @@ const mixu3Characters = {
       emp_oleg_von_raukov: { name: 'Oleg von Raukov' },
       emp_theodore_bruckner: { name: 'Theodore Bruckner' },
       emp_vorn_thugenheim: { name: 'Vorn Thugenheim' }, // Unknown
+      emp_fleet_captain: { name: 'Fleet Captain' },
       emp_warrior_priest_of_taal: { name: 'Warrior Priest of Taal' },
       emp_witch_doctor_beasts: { name: 'Witch Doctor (Beasts)', spellLore: SpellLores.beasts },
       emp_witch_doctor_death: { name: 'Witch Doctor (Death)', spellLore: SpellLores.death },
@@ -118,7 +119,7 @@ const mixu3Characters = {
   nor_norsca: {
     lords: {
       nor_egil_styrbjorn: { name: 'Egil Styrbjorn' }, // Unknown
-      nor_sea_raider: { name: 'Chieftain of the Sea' }, // Unknown
+      // nor_sea_raider: { name: 'Chieftain of the Sea' }, // Unknown
     },
     heroes: {
       nor_fraygerd_styrbjorn: { name: 'Fraygerd Styrbjorn' }, // Unknown
@@ -129,7 +130,7 @@ const mixu3Characters = {
   skv_skaven: {
     lords: {
       skv_feskit: { name: 'Warlord Feskit' },
-      skv_grey_seer_death: { name: 'Grey Seer (Death)', spellLore: SpellLores.death },
+      // skv_grey_seer_death: { name: 'Grey Seer (Death)', spellLore: SpellLores.death },
     },
     heroes: {},
   },

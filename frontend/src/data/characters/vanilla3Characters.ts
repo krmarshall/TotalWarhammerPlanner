@@ -492,6 +492,7 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      cth_saytang_the_watcher: { name: 'Saytang the Watcher' },
       cth_alchemist: {
         name: 'Alchemist',
         spellLore: SpellLores.metal,
@@ -500,6 +501,7 @@ const vanilla3Characters = {
         name: 'Astromancer',
         spellLore: SpellLores.heavens,
       },
+      cth_gate_master: { name: 'Gate Master' },
     },
   },
 
@@ -604,17 +606,17 @@ const vanilla3Characters = {
       kho_skarbrand: {
         name: 'Skarbrand the Exiled',
       },
-      kho_herald_of_khorne: {
-        name: 'Herald of Khorne',
-      },
-      kho_exalted_bloodthirster: {
-        name: 'Exalted Bloodthirster',
-      },
       chs_lord_mkho: {
         name: 'Chaos Lord of Khorne',
       },
       chs_daemon_prince_khorne: {
         name: 'Daemon Prince of Khorne',
+      },
+      kho_herald_of_khorne: {
+        name: 'Herald of Khorne',
+      },
+      kho_exalted_bloodthirster: {
+        name: 'Exalted Bloodthirster',
       },
     },
     heroes: {
@@ -644,7 +646,7 @@ const vanilla3Characters = {
       },
       ksl_mother_ostankya: {
         name: 'Mother Ostankya',
-        spellLore: SpellLores.mixed,
+        spellLore: SpellLores.hag,
       },
       ksl_ataman: {
         name: 'Ataman',
@@ -652,6 +654,7 @@ const vanilla3Characters = {
       ksl_boyar: {
         name: 'Boyar',
       },
+      ksl_druzhina: { name: 'Druzhina' },
       ksl_ice_witch_ice: {
         name: 'Ice Witch (Ice)',
         spellLore: SpellLores.ice,
@@ -662,6 +665,7 @@ const vanilla3Characters = {
       },
     },
     heroes: {
+      ksl_the_golden_knight: { name: 'The Golden Knight Naryska Leysa' },
       ksl_ulrika: {
         name: 'Ulrika Magdova',
         spellLore: SpellLores.shadows,
@@ -682,6 +686,10 @@ const vanilla3Characters = {
         name: 'Hag Witch (Death)',
         spellLore: SpellLores.death,
       },
+      ksl_hag_witch_hag: {
+        name: 'Hag Witch (Hag)',
+        spellLore: SpellLores.hag,
+      },
       ksl_hag_witch_shadows: {
         name: 'Hag Witch (Shadow)',
         spellLore: SpellLores.shadows,
@@ -698,6 +706,18 @@ const vanilla3Characters = {
         name: "Ku'gath Plaguefather",
         spellLore: SpellLores.nurgle,
       },
+      chs_sorcerer_lord_death_mnur: {
+        name: 'Chaos Sorcerer Lord of Nurgle (Death)',
+        spellLore: SpellLores.death,
+      },
+      chs_sorcerer_lord_nurgle_mnur: {
+        name: 'Chaos Sorcerer Lord of Nurgle (Nurgle)',
+        spellLore: SpellLores.nurgle,
+      },
+      chs_daemon_prince_nurgle: {
+        name: 'Daemon Prince of Nurgle',
+        spellLore: SpellLores.mixed,
+      },
       nur_herald_of_nurgle_death: {
         name: 'Herald of Nurgle (Death)',
         spellLore: SpellLores.death,
@@ -713,18 +733,6 @@ const vanilla3Characters = {
       nur_exalted_great_unclean_one_nurgle: {
         name: 'Exalted Great Unclean One (Nurgle)',
         spellLore: SpellLores.nurgle,
-      },
-      chs_sorcerer_lord_death_mnur: {
-        name: 'Chaos Sorcerer Lord of Nurgle (Death)',
-        spellLore: SpellLores.death,
-      },
-      chs_sorcerer_lord_nurgle_mnur: {
-        name: 'Chaos Sorcerer Lord of Nurgle (Nurgle)',
-        spellLore: SpellLores.nurgle,
-      },
-      chs_daemon_prince_nurgle: {
-        name: 'Daemon Prince of Nurgle',
-        spellLore: SpellLores.mixed,
       },
     },
     heroes: {
@@ -791,6 +799,13 @@ const vanilla3Characters = {
         name: "N'Kari",
         spellLore: SpellLores.slaanesh,
       },
+      chs_lord_msla: {
+        name: 'Chaos Lord of Slaanesh',
+      },
+      chs_daemon_prince_slaanesh: {
+        name: 'Daemon Prince of Slaanesh',
+        spellLore: SpellLores.mixed,
+      },
       sla_herald_of_slaanesh_shadow: {
         name: 'Herald of Slaanesh (Shadows)',
         spellLore: SpellLores.shadows,
@@ -806,13 +821,6 @@ const vanilla3Characters = {
       sla_exalted_keeper_of_secrets_slaanesh: {
         name: 'Exalted Keeper of Secrets (Slaanesh)',
         spellLore: SpellLores.slaanesh,
-      },
-      chs_lord_msla: {
-        name: 'Chaos Lord of Slaanesh',
-      },
-      chs_daemon_prince_slaanesh: {
-        name: 'Daemon Prince of Slaanesh',
-        spellLore: SpellLores.mixed,
       },
     },
     heroes: {
@@ -848,6 +856,19 @@ const vanilla3Characters = {
         name: 'Kairos Fateweaver',
         spellLore: SpellLores.mixed,
       },
+      chs_lord_mtze: { name: 'Chaos Lord of Tzeentch' },
+      chs_sorcerer_lord_metal_mtze: {
+        name: 'Chaos Sorcerer Lord of Tzeentch (Metal)',
+        spellLore: SpellLores.metal,
+      },
+      chs_sorcerer_lord_tzeentch_mtze: {
+        name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
+        spellLore: SpellLores.tzeentch,
+      },
+      chs_daemon_prince_tzeentch: {
+        name: 'Daemon Prince of Tzeentch',
+        spellLore: SpellLores.mixed,
+      },
       tze_herald_of_tzeentch_metal: {
         name: 'Herald of Tzeentch (Metal)',
         spellLore: SpellLores.metal,
@@ -864,18 +885,6 @@ const vanilla3Characters = {
         name: 'Exalted Lord of Change (Tzeentch)',
         spellLore: SpellLores.tzeentch,
       },
-      chs_sorcerer_lord_metal_mtze: {
-        name: 'Chaos Sorcerer Lord of Tzeentch (Metal)',
-        spellLore: SpellLores.metal,
-      },
-      chs_sorcerer_lord_tzeentch_mtze: {
-        name: 'Chaos Sorcerer Lord of Tzeentch (Tzeentch)',
-        spellLore: SpellLores.tzeentch,
-      },
-      chs_daemon_prince_tzeentch: {
-        name: 'Daemon Prince of Tzeentch',
-        spellLore: SpellLores.mixed,
-      },
     },
     heroes: {
       tze_aekold_helbrass: { name: 'Aekold Helbrass' },
@@ -883,24 +892,25 @@ const vanilla3Characters = {
         name: 'The Blue Scribes',
         spellLore: SpellLores.mixed,
       },
-      tze_cultist: {
-        name: 'Cultist of Tzeentch',
-        spellLore: SpellLores.fire,
-      },
-      tze_iridescent_horror_metal: {
-        name: 'Iridescent Horror (Metal)',
-        spellLore: SpellLores.metal,
-      },
-      tze_iridescent_horror_tzeentch: {
-        name: 'Iridescent Horror (Tzeentch)',
-        spellLore: SpellLores.tzeentch,
-      },
       chs_sorcerer_metal_mtze: {
         name: 'Chaos Sorcerer of Tzeentch (Metal)',
         spellLore: SpellLores.metal,
       },
       chs_sorcerer_tzeentch_mtze: {
         name: 'Chaos Sorcerer of Tzeentch (Tzeentch)',
+        spellLore: SpellLores.tzeentch,
+      },
+      tze_cultist: {
+        name: 'Cultist of Tzeentch',
+        spellLore: SpellLores.fire,
+      },
+      chs_exalted_hero_mtze: { name: 'Exalted Hero of Tzeentch' },
+      tze_iridescent_horror_metal: {
+        name: 'Iridescent Horror (Metal)',
+        spellLore: SpellLores.metal,
+      },
+      tze_iridescent_horror_tzeentch: {
+        name: 'Iridescent Horror (Tzeentch)',
         spellLore: SpellLores.tzeentch,
       },
     },
@@ -1003,15 +1013,6 @@ const vanilla3Characters = {
       chs_cha_harald_hammerstorm: {
         name: 'Harald Hammerstorm',
       },
-      chs_exalted_hero: {
-        name: 'Exalted Hero',
-      },
-      chs_exalted_hero_mkho: {
-        name: 'Exalted Hero of Khorne',
-      },
-      chs_exalted_hero_mnur: {
-        name: 'Exalted Hero of Nurgle',
-      },
       chs_chaos_sorcerer_death: {
         name: 'Chaos Sorcerer (Death)',
         spellLore: SpellLores.death,
@@ -1044,6 +1045,16 @@ const vanilla3Characters = {
         name: 'Chaos Sorcerer of Tzeentch (Tzeentch)',
         spellLore: SpellLores.tzeentch,
       },
+      chs_exalted_hero: {
+        name: 'Exalted Hero',
+      },
+      chs_exalted_hero_mkho: {
+        name: 'Exalted Hero of Khorne',
+      },
+      chs_exalted_hero_mnur: {
+        name: 'Exalted Hero of Nurgle',
+      },
+      chs_exalted_hero_mtze: { name: 'Exalted Hero of Tzeentch' },
     },
   },
 };

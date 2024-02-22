@@ -149,6 +149,11 @@ import hkrul_slaurith from './hkrul_slaurith.webp';
 import hkrul_beorg from './hkrul_beorg.webp';
 import sceolan_wef_spellweaver_ice from './wef_spellweaver_campaign_05.webp';
 import sceolan_wef_spellsinger_ice from './wef_spellsinger_campaign_05_0.webp';
+import hkrul_gargul from './hkrul_gargul.webp';
+import hkrul_wundal from './hkrul_wundal.webp';
+import hkrul_skargel from './hkrul_skargel.webp';
+import dotd_master_necromancer from './jiang_master_necromancer_campaign_02.webp';
+import dotd_vmp_necromancer from './jiang_art_set_vmp_necromancer_01.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -342,6 +347,12 @@ const scm3CharacterImgs = {
   hkrul_beorg: hkrul_beorg,
   sceolan_wef_spellweaver_ice: sceolan_wef_spellweaver_ice,
   sceolan_wef_spellsinger_ice: sceolan_wef_spellsinger_ice,
+  hkrul_gargul: hkrul_gargul,
+  hkrul_wundal: hkrul_wundal,
+  hkrul_skargel: hkrul_skargel,
+  dotd_master_necromancer: dotd_master_necromancer,
+  dotd_vmp_necromancer: dotd_vmp_necromancer,
+  dotd_wight_king: vanilla3CharacterImgs.vmp_wight_king,
 };
 
 export default scm3CharacterImgs;

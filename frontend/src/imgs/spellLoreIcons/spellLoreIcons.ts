@@ -28,6 +28,7 @@ import nurgle from './wh3_main_lore_passive_children_of_nurgle.webp';
 import slaanesh from './wh3_main_lore_passive_blissful_rapture.webp';
 import greatMaw from './wh3_main_lore_passive_bloodgruel.webp';
 import hashut from './wh3_dlc23_lore_passive_killing_fire.webp';
+import hag from './wh3_dlc24_lore_passive_fate_of_interlopers.webp';
 import mixed from './mixedBG.webp';
 
 const spellLoreIcons = {
@@ -79,6 +80,7 @@ const spellLoreIcons = {
     image: stealth,
     shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #516022) drop-shadow(0.1rem 0.1rem 0.25rem #516022)',
   },
+  hag: { image: hag, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #1e637d) drop-shadow(0.1rem 0.1rem 0.25rem #1e637d)' },
   high: { image: high, shadow: 'drop-shadow(0.1rem 0.1rem 0.4rem #1d5a76) drop-shadow(0.1rem 0.1rem 0.25rem #1d5a76)' },
   wefHigh: {
     image: wefHigh,
