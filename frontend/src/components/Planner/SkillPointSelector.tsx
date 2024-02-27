@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SkillInterface } from '../../types/interfaces/CharacterInterface';
-import SkillTooltip from './SkillTooltip';
+import SkillTooltip from './Tooltips/SkillTooltip';
 import TooltipWrapper from '../TooltipWrapper';
 
 interface SkillPointSelectorPropInterface {

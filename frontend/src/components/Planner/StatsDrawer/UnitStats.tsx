@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../../contexts/AppContext';
-import TooltipWrapper from '../TooltipWrapper';
-import smallEntityIcon from '../../imgs/other/icon_entity_small.webp';
-import largeEntityIcon from '../../imgs/other/icon_entity_large.webp';
-import { loadAdvancedToggleFromStorage, saveAdvancedToggleToStorage } from '../../utils/storageFunctions';
-import SkillPhase from './SkillPhase';
+import { AppContext } from '../../../contexts/AppContext';
+import TooltipWrapper from '../../TooltipWrapper';
+import smallEntityIcon from '../../../imgs/other/icon_entity_small.webp';
+import largeEntityIcon from '../../../imgs/other/icon_entity_large.webp';
+import { loadAdvancedToggleFromStorage, saveAdvancedToggleToStorage } from '../../../utils/storageFunctions';
+import SkillPhase from '../Tooltips/SkillPhase';
 import UnitStatLine from './UnitStatLine';
-import { getRelatedAttributes, getRelatedContactPhases, getUnitStatSets } from '../../utils/sharedFunctions';
-import AttributeTooltip from './AttributeTooltip';
-import TooltipAbilityMap from '../TooltipAbilityMap';
+import { getRelatedAttributes, getRelatedContactPhases, getUnitStatSets } from '../../../utils/sharedFunctions';
+import AttributeTooltip from '../Tooltips/AttributeTooltip';
+import TooltipAbilityMap from '../../TooltipAbilityMap';
 
 const UnitStats = () => {
   const { state } = useContext(AppContext);

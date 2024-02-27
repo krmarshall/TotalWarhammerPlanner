@@ -22,6 +22,7 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 - Search
 - Affected unit cards
 - Boons of Chaos System
+- Radial Selector for Agent Variants?
 
 ## Adding A Mod
 

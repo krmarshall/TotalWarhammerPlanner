@@ -1,5 +1,5 @@
-import { StatEffectInterface } from '../../types/interfaces/CharacterInterface';
-import ReactImage from '../ReactImage';
+import { StatEffectInterface } from '../../../types/interfaces/CharacterInterface';
+import ReactImage from '../../ReactImage';
 
 interface PropInterface {
   effect: StatEffectInterface;

@@ -1,7 +1,7 @@
 import { AbilityInterface, AttributeInterface, PhaseInterface } from '../types/interfaces/CharacterInterface';
-import AttributeTooltip from './Planner/AttributeTooltip';
-import SkillAbilityTooltip from './Planner/SkillAbilityTooltip';
-import SkillPhase from './Planner/SkillPhase';
+import AttributeTooltip from './Planner/Tooltips/AttributeTooltip';
+import SkillAbilityTooltip from './Planner/Tooltips/SkillAbilityTooltip';
+import SkillPhase from './Planner/Tooltips/SkillPhase';
 
 interface PropInterface {
   relatedAbilities: Array<AbilityInterface>;

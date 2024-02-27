@@ -1,5 +1,5 @@
-import { EffectInterface } from '../../types/interfaces/CharacterInterface';
-import ReactImage from '../ReactImage';
+import { EffectInterface } from '../../../types/interfaces/CharacterInterface';
+import ReactImage from '../../ReactImage';
 
 interface SkillEffectPropsInterface {
   skillEffect: EffectInterface;

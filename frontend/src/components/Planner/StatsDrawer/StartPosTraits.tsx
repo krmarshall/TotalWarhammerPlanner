@@ -1,10 +1,10 @@
 import { useContext, useEffect } from 'react';
-import { AppContext, AppContextActions } from '../../contexts/AppContext';
-import { SkillInterface, StartPosTraitInterface } from '../../types/interfaces/CharacterInterface';
-import BackgroundSkillCell from './BackgroundSkillCell';
+import { AppContext, AppContextActions } from '../../../contexts/AppContext';
+import { StartPosTraitInterface } from '../../../types/interfaces/CharacterInterface';
 import { useParams } from 'react-router-dom';
-import { splitCharacterKey } from '../../utils/urlFunctions';
-import TooltipWrapper from '../TooltipWrapper';
+import { splitCharacterKey } from '../../../utils/urlFunctions';
+import TooltipWrapper from '../../TooltipWrapper';
+import BaseCell from '../BaseCell';
 
 const StartPosTraits = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -12,6 +12,8 @@ const StartPosTraits = () => {
   const { character } = useParams();
 
   const { startPos } = splitCharacterKey(character as string);
+
+  const skill = characterData?.startPosTraits?.[selectedStartPosTrait]?.trait;
 
   useEffect(() => {
     const { startPos } = splitCharacterKey(character as string);
@@ -65,7 +67,12 @@ const StartPosTraits = () => {
       </select>
       {selectedStartPosTrait !== '' && (
         <div className="w-fit mx-auto">
-          <BackgroundSkillCell skill={characterData?.startPosTraits?.[selectedStartPosTrait].trait as SkillInterface} />
+          <BaseCell
+            skill={skill}
+            thisSkillsCurrentPoints={0}
+            previewSkillPoints={0}
+            srcList={[`/imgs/${skill?.image_path}.webp`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`]}
+          />
         </div>
       )}
 

@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react';
-import { AltFactionNodeSetsInterface, CharacterInterface } from '../../types/interfaces/CharacterInterface';
-import { AppContext, AppContextActions } from '../../contexts/AppContext';
+import { AltFactionNodeSetsInterface, CharacterInterface } from '../../../types/interfaces/CharacterInterface';
+import { AppContext, AppContextActions } from '../../../contexts/AppContext';
 import { useParams } from 'react-router-dom';
-import { addFactionVariantNodes, createEmptyCharacterBuild } from '../../utils/sharedFunctions';
-import { splitCharacterKey } from '../../utils/urlFunctions';
+import { addFactionVariantNodes, createEmptyCharacterBuild } from '../../../utils/sharedFunctions';
+import { splitCharacterKey } from '../../../utils/urlFunctions';
 
 const FactionVariantSelect = () => {
   const { state, dispatch } = useContext(AppContext);

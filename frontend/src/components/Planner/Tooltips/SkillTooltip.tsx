@@ -1,15 +1,17 @@
-import { findSkill } from '../../utils/skillVerification';
-import { SkillInterface } from '../../types/interfaces/CharacterInterface';
+import { findSkill } from '../../../utils/skillVerification';
+import { FactionEffectInterface, ItemInterface, SkillInterface } from '../../../types/interfaces/CharacterInterface';
 import SkillEffect from './SkillEffect';
 import { useContext, useEffect } from 'react';
-import { AppContext } from '../../contexts/AppContext';
-import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
-import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../utils/sharedFunctions';
-import TooltipAbilityCycler from '../TooltipAbiltyCycler';
-import TooltipAbilityMap from '../TooltipAbilityMap';
+import { AppContext } from '../../../contexts/AppContext';
+import useBulkMediaQueries from '../../../hooks/useBulkMediaQueries';
+import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../../utils/sharedFunctions';
+import TooltipAbilityCycler from '../../TooltipAbiltyCycler';
+import TooltipAbilityMap from '../../TooltipAbilityMap';
 
 interface SkillTooltipPropInterface {
-  skill: SkillInterface | undefined;
+  skill?: SkillInterface;
+  item?: ItemInterface;
+  factionEffect?: FactionEffectInterface;
   skillPoints: number;
   blocked: boolean;
   ctrCounter: number;
@@ -20,6 +22,8 @@ interface SkillTooltipPropInterface {
 
 const SkillTooltip = ({
   skill,
+  item,
+  factionEffect,
   skillPoints,
   blocked,
   ctrCounter,
@@ -31,8 +35,14 @@ const SkillTooltip = ({
   const { characterData, characterBuild } = state;
 
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
-
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
+
+  const tooltipTitle = skill?.localised_name ?? item?.onscreen_name ?? factionEffect?.localised_title ?? '';
+  const tooltipDescription =
+    skill?.localised_description.trim() ??
+    item?.colour_text.trim() ??
+    factionEffect?.localised_description.trim() ??
+    '';
 
   useEffect(() => {
     const ctrKeyDownHandler = (event: KeyboardEvent) => {
@@ -76,9 +86,17 @@ const SkillTooltip = ({
     }
   }
 
-  const relatedAbilities = getRelatedAbilities(skill?.levels?.[skillPoints]?.effects);
-  const relatedPhases = getRelatedContactPhases(relatedAbilities[ctrCounter], skill?.levels?.[skillPoints]?.effects);
-  const relatedAttributes = getRelatedAttributes(relatedAbilities[ctrCounter], skill?.levels?.[skillPoints]?.effects);
+  const relatedAbilities = getRelatedAbilities(
+    skill?.levels?.[skillPoints]?.effects ?? item?.effects ?? factionEffect?.effects,
+  );
+  const relatedPhases = getRelatedContactPhases(
+    relatedAbilities[ctrCounter],
+    skill?.levels?.[skillPoints]?.effects ?? item?.effects ?? factionEffect?.effects,
+  );
+  const relatedAttributes = getRelatedAttributes(
+    relatedAbilities[ctrCounter],
+    skill?.levels?.[skillPoints]?.effects ?? item?.effects ?? factionEffect?.effects,
+  );
   return (
     <span
       ref={tooltipRef}
@@ -86,12 +104,11 @@ const SkillTooltip = ({
     >
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          <h3 className="text-gray-50 text-2xl">{skill?.localised_name}</h3>
-          {skill?.localised_description.trim() && !isMobile && (
-            <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
-              {skill?.localised_description.trim()}
-            </h4>
-          )}
+          <h3 className="text-gray-50 text-2xl">{tooltipTitle}</h3>
+          {(skill?.localised_description.trim() ||
+            item?.colour_text.trim() ||
+            factionEffect?.localised_description.trim()) &&
+            !isMobile && <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">{tooltipDescription}</h4>}
           {skill?.levels?.[skillPoints]?.auto_unlock_at_rank !== undefined &&
             skill?.levels?.[skillPoints]?.auto_unlock_at_rank !== 0 && (
               <p className="text-yellow-300 text-lg">
@@ -103,7 +120,7 @@ const SkillTooltip = ({
               Available at rank {skill?.levels?.[skillPoints]?.unlocked_at_rank}
             </p>
           )}
-          {skill?.required_num_parents !== 0 && (
+          {skill && skill?.required_num_parents !== 0 && (
             <p className="text-yellow-300 text-lg">
               Available after spending {skill?.required_num_parents} skill points in the previous group
             </p>
@@ -112,9 +129,18 @@ const SkillTooltip = ({
             <p className="text-yellow-300 text-lg">Available after unlocking &quot;{parentName?.trim()}&quot;</p>
           )}
           {blocked && <p className="text-red-500 text-lg">Skill has been blocked by another skill.</p>}
+          {item?.unlocked_at_rank && (
+            <p className="text-yellow-300 text-lg">Available at rank {item?.unlocked_at_rank}</p>
+          )}
           <div>
             {skill?.levels?.[skillPoints]?.effects?.map((skillEffect, index) => {
               return <SkillEffect key={index} skillEffect={skillEffect} />;
+            })}
+            {item?.effects?.map((itemEffect, index) => {
+              return <SkillEffect key={index} skillEffect={itemEffect} />;
+            })}
+            {factionEffect?.effects?.map((factionEffect, index) => {
+              return <SkillEffect key={index} skillEffect={factionEffect} />;
             })}
           </div>
         </div>

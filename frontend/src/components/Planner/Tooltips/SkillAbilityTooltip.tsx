@@ -1,9 +1,9 @@
-import { AbilityInterface } from '../../types/interfaces/CharacterInterface';
-import cooldownImg from '../../imgs/other/icon_cooldown_26.webp';
-import windsImg from '../../imgs/other/winds_ui_replenish_battle_ph.webp';
-import chargesImg from '../../imgs/other/icon_uses.webp';
+import { AbilityInterface } from '../../../types/interfaces/CharacterInterface';
+import cooldownImg from '../../../imgs/other/icon_cooldown_26.webp';
+import windsImg from '../../../imgs/other/winds_ui_replenish_battle_ph.webp';
+import chargesImg from '../../../imgs/other/icon_uses.webp';
 import SkillPhase from './SkillPhase';
-import ReactImage from '../ReactImage';
+import ReactImage from '../../ReactImage';
 import SkillAbilityVortex from './SkillAbilityVortex';
 import SkillAbilityProjectile from './SkillAbilityProjectile';
 import SkillAbilityBombardment from './SkillAbilityBombardment';

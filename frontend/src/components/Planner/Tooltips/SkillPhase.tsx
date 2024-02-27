@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import { AppContext } from '../../contexts/AppContext';
-import { PhaseInterface } from '../../types/interfaces/CharacterInterface';
+import { AppContext } from '../../../contexts/AppContext';
+import { PhaseInterface } from '../../../types/interfaces/CharacterInterface';
 import SkillPhaseAttribute from './SkillPhaseAttribute';
 import SkillPhaseEffect from './SkillPhaseEffect';
-import randomPhase0 from '../../imgs/other/random_phase_0.webp';
-import randomPhase1 from '../../imgs/other/random_phase_1.webp';
-import randomPhase2 from '../../imgs/other/random_phase_2.webp';
+import randomPhase0 from '../../../imgs/other/random_phase_0.webp';
+import randomPhase1 from '../../../imgs/other/random_phase_1.webp';
+import randomPhase2 from '../../../imgs/other/random_phase_2.webp';
 
 interface SkillPhaseProps {
   index: number;

@@ -1,5 +1,5 @@
-import { AttributeInterface } from '../../types/interfaces/CharacterInterface';
-import ReactImage from '../ReactImage';
+import { AttributeInterface } from '../../../types/interfaces/CharacterInterface';
+import ReactImage from '../../ReactImage';
 
 interface PropInterface {
   attribute: AttributeInterface;

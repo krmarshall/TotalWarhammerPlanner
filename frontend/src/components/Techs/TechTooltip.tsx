@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
 import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../utils/sharedFunctions';
-import SkillEffect from '../Planner/SkillEffect';
+import SkillEffect from '../Planner/Tooltips/SkillEffect';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../TooltipAbilityMap';
 

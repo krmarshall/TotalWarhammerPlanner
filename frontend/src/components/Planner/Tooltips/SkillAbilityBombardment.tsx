@@ -1,4 +1,4 @@
-import { ProjectileBombardmentInterface } from '../../types/interfaces/CharacterInterface';
+import { ProjectileBombardmentInterface } from '../../../types/interfaces/CharacterInterface';
 import SkillAbilityProjectile from './SkillAbilityProjectile';
 
 interface PropsInterface {

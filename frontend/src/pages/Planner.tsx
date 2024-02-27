@@ -10,13 +10,13 @@ import {
 } from '../utils/sharedFunctions';
 import { convertCodeToBuild, splitCharacterKey } from '../utils/urlFunctions';
 import LoadingSpinner from '../components/LoadingSpinner';
-import ExtrasDrawer from '../components/Planner/ExtrasDrawer';
+import ExtrasDrawer from '../components/Planner/ExtrasDrawer/ExtrasDrawer';
 import TopBar from '../components/Planner/TopBar';
 import CharacterPortrait from '../components/Planner/CharacterPortrait';
 import SkillTable from '../components/Planner/SkillTable';
 import useBulkMediaQueries from '../hooks/useBulkMediaQueries';
 import gameData from '../data/gameData';
-import StatsDrawer from '../components/Planner/StatsDrawer';
+import StatsDrawer from '../components/Planner/StatsDrawer/StatsDrawer';
 import { CharacterInterface } from '../types/interfaces/CharacterInterface';
 
 const Planner = () => {

@@ -1,4 +1,4 @@
-import { AttributeInterface } from '../../types/interfaces/CharacterInterface';
+import { AttributeInterface } from '../../../types/interfaces/CharacterInterface';
 
 interface PropInterface {
   attribute: AttributeInterface;

@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react';
-import { AppContext, AppContextActions } from '../../contexts/AppContext';
+import { AppContext, AppContextActions } from '../../../contexts/AppContext';
 import BuildStorage from './BuildStorage';
 import CharacterItems from './CharacterItems';
 import BackgroundSkills from './BackgroundSkills';
-import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
+import useBulkMediaQueries from '../../../hooks/useBulkMediaQueries';
 import FactionEffects from './FactionEffects';
 
 const ExtrasDrawer = () => {
