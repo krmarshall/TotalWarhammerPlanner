@@ -18,6 +18,7 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 
 ## To Do
 
+- Transition to eslint flat config (or biome at some point)
 - Work on overall page style
 - Search
 - Affected unit cards
