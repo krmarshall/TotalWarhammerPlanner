@@ -161,7 +161,6 @@ const gameData: { [key: string]: GameDataInterface } = {
       `Dead's Cult of the Possessed (${toParsedDateString(modTimestamps.scm3.dead_cult_possessed_unit_V2)})`,
       `Karanak (${toParsedDateString(modTimestamps.scm3['!xou_khorne_karanak'])})`,
       `RotJS : Yin-Yin, the Sea Dragon (${toParsedDateString(modTimestamps.scm3.cth_yinyin_pol)})`,
-      `Cathay Gate Master (${toParsedDateString(modTimestamps.scm3.dead_gate_master)})`,
       `Ivan Radinov (${toParsedDateString(modTimestamps.scm3['!xou_kislev_ivan'])})`,
       `Dead's Kislev Shaman (${toParsedDateString(modTimestamps.scm3.dead_kislev_lord_shaman)})`,
       `Dead's Kislev Droyashka (${toParsedDateString(modTimestamps.scm3.dead_kislev_hero_blademaster)})`,

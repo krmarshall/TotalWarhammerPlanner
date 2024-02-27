@@ -40,22 +40,21 @@ const scm3Characters = {
 
   cth_cathay: {
     lords: { cth_yinyin: { name: 'Yin-Yin, the Sea Dragon', spellLore: SpellLores.mixed } },
-    heroes: {
-      gate_master: { name: 'Gate Master' },
-    },
+    heroes: {},
   },
 
   dwf_dwarfs: {
     lords: {},
     heroes: {
       // LCCP
+      hkrul_gargul: { name: 'Gargul the Gunner' },
       hkrul_rhobb: { name: 'Rhobb Grimly' },
       hkrul_shaz: { name: 'Shaz Ensun' },
+      hkrul_skargel: { name: 'Skargel the Miner' },
       hkrul_thulgrim: { name: 'Thulgrim the Thief' },
-      // hkrul_gargul: { name: 'Gargul the Gunner' },
-      // hkrul_wundal: { name: 'Wundal the Wizard' },
-      // hkrul_skargel: { name: 'Skargel the Miner' },
+      hkrul_wundal: { name: 'Wundal the Wizard' },
 
+      // Marienburg
       hkrul_guzunda: { name: 'Guzunda Wallrattler' },
     },
   },
@@ -81,7 +80,7 @@ const scm3Characters = {
       hkrul_hendrik: { name: 'Simon Goudenkruin' },
       hkrul_fooger_caravan_master: { name: 'Dwarf Merchant Lord' },
       hkrul_lector_manann: { name: 'High Priest of Manann' },
-      // hkrul_fooger_dwarf_lord: { name: 'House Elder' },
+      hkrul_fooger_dwarf_lord: { name: 'House Elder' },
       mar_caravan_master: { name: 'Merchant Lord' },
     },
     heroes: {
@@ -103,7 +102,10 @@ const scm3Characters = {
       hkrul_guzunda: { name: 'Guzunda Wallrattler' },
       hkrul_lisette: { name: 'Lisette Leerer' },
       hkrul_harb: { name: 'Odvaal van den Huister' },
+      hkrul_ogg: { name: 'Ogg the Expatriate' },
+      hkrul_paldee: { name: 'Palldee Hammerbearer' },
       hkrul_pg: { name: 'Pieter de Groot' },
+      hkrul_rasha: { name: 'Rashasawa' },
       hkrul_solkan: { name: 'Sword of Solkan' },
       mar_sea_wizard: { name: 'Sea Magicker', spellLore: SpellLores.mixed },
     },
@@ -328,7 +330,8 @@ const scm3Characters = {
       black_grail_knight: { name: 'Black Grail Knights' },
       jade_blooded_vmp_dragon: { name: 'The Jade Daimyo', spellLore: SpellLores.mixed },
       ovn_khaled: { name: 'Khaled al Muntasir', spellLore: SpellLores.mixed },
-      blood_dragon_kastellan: { name: 'Mikael Harkon', spellLore: SpellLores.mixed },
+      blood_dragon_kastellan: { name: 'The Last Kastellan', spellLore: SpellLores.mixed },
+      cou_mikael_harkon: { name: 'Mikael Harkon', spellLore: SpellLores.mixed },
       rabe_bkc: { name: 'Rabe von Stahl', spellLore: SpellLores.mixed },
       tiberius_kael: { name: 'Tiberius Kael', spellLore: SpellLores.mixed },
       xxaggon_xugndhri: { name: 'Xxaggon Xugndhri', spellLore: SpellLores.mixed },

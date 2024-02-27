@@ -154,6 +154,10 @@ import hkrul_wundal from './hkrul_wundal.webp';
 import hkrul_skargel from './hkrul_skargel.webp';
 import dotd_master_necromancer from './jiang_master_necromancer_campaign_02.webp';
 import dotd_vmp_necromancer from './jiang_art_set_vmp_necromancer_01.webp';
+import hkrul_ogg from './hkrul_ogg.webp';
+import hkrul_paldee from './hkrul_paldee.webp';
+import hkrul_rasha from './hkrul_rasha.webp';
+import cou_mikael_harkon from './mikael_harkon_01_0.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -353,6 +357,10 @@ const scm3CharacterImgs = {
   dotd_master_necromancer: dotd_master_necromancer,
   dotd_vmp_necromancer: dotd_vmp_necromancer,
   dotd_wight_king: vanilla3CharacterImgs.vmp_wight_king,
+  hkrul_ogg: hkrul_ogg,
+  hkrul_paldee: hkrul_paldee,
+  hkrul_rasha: hkrul_rasha,
+  cou_mikael_harkon: cou_mikael_harkon,
 };
 
 export default scm3CharacterImgs;

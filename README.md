@@ -19,6 +19,9 @@ npm run start - Installs and builds the frontend into the backend ./public/ fold
 ## To Do
 
 - Work on overall page style
+- Search
+- Affected unit cards
+- Boons of Chaos System
 
 ## Adding A Mod
 
