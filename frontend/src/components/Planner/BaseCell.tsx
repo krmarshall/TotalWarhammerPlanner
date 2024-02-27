@@ -83,7 +83,7 @@ const BaseCell = ({
 
   const fontSize = setFontSize(cellTitle);
   return (
-    <div className={divClassName}>
+    <div className={divClassName} ref={cellRef}>
       <TooltipWrapper
         tooltip={
           <SkillTooltip
@@ -99,7 +99,7 @@ const BaseCell = ({
           />
         }
       >
-        <div className="flex flex-row" ref={cellRef}>
+        <div className="flex flex-row">
           {blocked && (
             <img
               src={blockedSkillOverlay}
