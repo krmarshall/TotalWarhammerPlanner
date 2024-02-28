@@ -4,9 +4,15 @@ import SkillEffect from './SkillEffect';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../../contexts/AppContext';
 import useBulkMediaQueries from '../../../hooks/useBulkMediaQueries';
-import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../../utils/sharedFunctions';
+import {
+  getRelatedAbilities,
+  getRelatedAttributes,
+  getRelatedContactPhases,
+  replaceKeepCaps,
+} from '../../../utils/sharedFunctions';
 import TooltipAbilityCycler from '../../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../../TooltipAbilityMap';
+import DOMPurify from 'dompurify';
 
 interface SkillTooltipPropInterface {
   skill?: SkillInterface;
@@ -32,7 +38,7 @@ const SkillTooltip = ({
   tooltipRef,
 }: SkillTooltipPropInterface) => {
   const { state } = useContext(AppContext);
-  const { characterData, characterBuild } = state;
+  const { characterData, characterBuild, searchString } = state;
 
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
@@ -108,7 +114,14 @@ const SkillTooltip = ({
           {(skill?.localised_description.trim() ||
             item?.colour_text.trim() ||
             factionEffect?.localised_description.trim()) &&
-            !isMobile && <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">{tooltipDescription}</h4>}
+            !isMobile && (
+              <h4
+                className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(replaceKeepCaps(tooltipDescription, searchString)),
+                }}
+              ></h4>
+            )}
           {skill?.levels?.[skillPoints]?.auto_unlock_at_rank !== undefined &&
             skill?.levels?.[skillPoints]?.auto_unlock_at_rank !== 0 && (
               <p className="text-yellow-300 text-lg">

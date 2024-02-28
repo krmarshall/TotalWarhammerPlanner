@@ -19,7 +19,7 @@ interface SkillCellPropsInterface {
 
 const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellPropsInterface) => {
   const { state, dispatch } = useContext(AppContext);
-  const { characterBuild, characterData } = state;
+  const { characterBuild, characterData, highlightArray, searchString } = state;
   const [selectable, setSelectable] = useState(false);
   const [previewSkillPoints, setPreviewSkillPoints] = useState(0);
   const [blocked, setBlocked] = useState(false);
@@ -237,6 +237,10 @@ const SkillCell = ({ skill, skillKey, yIndex, xIndex, boxedType }: SkillCellProp
     default: {
       break;
     }
+  }
+
+  if (highlightArray?.skillTree?.[skill?.indent as number]?.[skill?.tier as number]) {
+    tdClassName += ' searchOutline';
   }
 
   const findAbilityImage = (includePassives: boolean) => {

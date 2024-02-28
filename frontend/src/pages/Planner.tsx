@@ -151,7 +151,7 @@ const Planner = () => {
             <>
               <TopBar isMobile={isMobile} />
               {!isMobile && <CharacterPortrait />}
-              <div className="flex flex-row flex-nowrap grow max-h-[88vh] min-h-[50vh]">
+              <div className="relative flex flex-row flex-nowrap grow max-h-[88vh] min-h-[50vh]">
                 <StatsDrawer />
 
                 <SkillTable faction={faction} />

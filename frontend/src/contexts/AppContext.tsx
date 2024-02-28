@@ -8,6 +8,7 @@ import {
   saveExtrasDrawerOpenToStorage,
   saveStatsDrawerOpenToStorage,
 } from '../utils/storageFunctions';
+import { HighlightArrayInterface } from '../utils/searchFunctions';
 
 interface ContextStateInterface {
   selectedMod: string;
@@ -25,6 +26,8 @@ interface ContextStateInterface {
   selectedStartPosTrait: string;
   extrasDrawerOpen: boolean;
   statsDrawerOpen: boolean;
+  highlightArray: HighlightArrayInterface | null;
+  searchString: string | null;
 }
 
 const initialState: ContextStateInterface = {
@@ -43,6 +46,8 @@ const initialState: ContextStateInterface = {
   selectedStartPosTrait: '',
   extrasDrawerOpen: loadExtrasDrawerOpenFromStorage(),
   statsDrawerOpen: loadStatsDrawerOpenFromStorage(),
+  highlightArray: null,
+  searchString: null,
 };
 
 interface ActionInterface {
@@ -63,6 +68,8 @@ interface ActionInterface {
     selectedStartPosTrait?: string;
     extrasDrawerOpen?: boolean;
     statsDrawerOpen?: boolean;
+    highlightArray?: HighlightArrayInterface | null;
+    searchString?: string | null;
   };
 }
 
@@ -84,6 +91,7 @@ enum AppContextActions {
   changeSelectedStartPosTrait = 'changeSelectedStartPosTrait',
   changeExtrasDrawerOpen = 'changeExtrasDrawerOpen',
   changeStatsDrawerOpen = 'changeStatsDrawerOpen',
+  changeSearchString = 'changeSearchString',
 }
 
 const reducer = (state: ContextStateInterface, action: ActionInterface) => {
@@ -245,6 +253,16 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
       }
       saveStatsDrawerOpenToStorage(action.payload.statsDrawerOpen);
       newState.statsDrawerOpen = action.payload.statsDrawerOpen;
+      return newState;
+    }
+
+    case AppContextActions.changeSearchString: {
+      const newState = { ...state };
+      if (action.payload.searchString === undefined || action.payload.highlightArray === undefined) {
+        return state;
+      }
+      newState.searchString = action.payload.searchString;
+      newState.highlightArray = action.payload.highlightArray;
       return newState;
     }
 

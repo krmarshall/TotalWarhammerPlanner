@@ -151,14 +151,13 @@ const getRelatedContactPhases = (ability: AbilityInterface | undefined, effects?
   const relatedPhases: Array<PhaseInterface> = [];
   const relatedPhaseKeys: Array<string> = [];
 
-  effects?.forEach(
-    (effect) =>
-      effect.related_phases?.forEach((phase) => {
-        if (!relatedPhaseKeys.includes(phase.icon)) {
-          relatedPhases.push(phase);
-          relatedPhaseKeys.push(phase.icon);
-        }
-      }),
+  effects?.forEach((effect) =>
+    effect.related_phases?.forEach((phase) => {
+      if (!relatedPhaseKeys.includes(phase.icon)) {
+        relatedPhases.push(phase);
+        relatedPhaseKeys.push(phase.icon);
+      }
+    }),
   );
 
   if (ability === undefined) {
@@ -261,25 +260,23 @@ const getUnitStatSets = (characterData: CharacterInterface | null) => {
     unitStatSets.push({ name: 'Base', stats: characterData?.unitStats });
   }
   characterData?.skillTree.forEach((skillLine) =>
-    skillLine.forEach(
-      (skill) =>
-        skill.levels?.forEach((skillLevel) => {
-          if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(skill.localised_name)) {
-            unitStatNames.push(skill.localised_name);
-            unitStatSets.push({ name: skill.localised_name, stats: skillLevel.mount_unit_stats });
-          }
-        }),
+    skillLine.forEach((skill) =>
+      skill.levels?.forEach((skillLevel) => {
+        if (skillLevel.mount_unit_stats !== undefined && !unitStatNames.includes(skill.localised_name)) {
+          unitStatNames.push(skill.localised_name);
+          unitStatSets.push({ name: skill.localised_name, stats: skillLevel.mount_unit_stats });
+        }
+      }),
     ),
   );
 
-  characterData?.backgroundSkills?.forEach(
-    (bgSkill) =>
-      bgSkill.levels?.forEach((skillLevel) => {
-        if (skillLevel?.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
-          unitStatNames.push(bgSkill.localised_name);
-          unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
-        }
-      }),
+  characterData?.backgroundSkills?.forEach((bgSkill) =>
+    bgSkill.levels?.forEach((skillLevel) => {
+      if (skillLevel?.mount_unit_stats !== undefined && !unitStatNames.includes(bgSkill.localised_name)) {
+        unitStatNames.push(bgSkill.localised_name);
+        unitStatSets.push({ name: bgSkill.localised_name, stats: skillLevel.mount_unit_stats });
+      }
+    }),
   );
 
   return unitStatSets;
@@ -317,6 +314,10 @@ const setFontSize = (string: string) => {
   }
 
   return fontSize;
+};
+
+const replaceKeepCaps = (string: string, search: string | null = '') => {
+  return string.replace(new RegExp('(' + search + ')', 'ig'), '<span class="searchHighlight">$1</span>');
 };
 
 // Really verbose way of doing this, but tailwind needs the whole class present to generate it
@@ -395,4 +396,5 @@ export {
   setFontSize,
   getBgUrl,
   addFactionVariantNodes,
+  replaceKeepCaps,
 };

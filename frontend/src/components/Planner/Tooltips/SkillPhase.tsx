@@ -6,6 +6,8 @@ import SkillPhaseEffect from './SkillPhaseEffect';
 import randomPhase0 from '../../../imgs/other/random_phase_0.webp';
 import randomPhase1 from '../../../imgs/other/random_phase_1.webp';
 import randomPhase2 from '../../../imgs/other/random_phase_2.webp';
+import DOMPurify from 'dompurify';
+import { replaceKeepCaps } from '../../../utils/sharedFunctions';
 
 interface SkillPhaseProps {
   index: number;
@@ -16,7 +18,7 @@ interface SkillPhaseProps {
 
 const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) => {
   const { state } = useContext(AppContext);
-  const { selectedMod } = state;
+  const { selectedMod, searchString } = state;
   const type = phase.effect_type === 'positive' ? 'Buff' : 'Debuff';
   const imbueBoth = phase.imbue_magical && phase.imbue_ignition ? true : false;
   let targets = '';
@@ -56,7 +58,12 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
         {header && (
           <div className="flex flex-row flex-nowrap">
             <img src={`/imgs/${phase.icon}.webp`} alt="phase" width="22" height="22" className="my-auto mx-1 h-8 w-8" />
-            <h4 className="text-2xl ml-1">{phase.onscreen_name}</h4>
+            <h4
+              className="text-2xl ml-1"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(replaceKeepCaps(phase.onscreen_name ?? '', searchString)),
+              }}
+            ></h4>
           </div>
         )}
 
@@ -218,7 +225,12 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
               height="22"
               className="my-auto mx-1 h-6 w-6"
             />
-            <h4 className="text-lg ml-1">{phase.imbue_contact.onscreen_name}</h4>
+            <h4
+              className="text-lg ml-1"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(replaceKeepCaps(phase.imbue_contact.onscreen_name ?? '', searchString)),
+              }}
+            ></h4>
           </div>
         )}
         {phase.replenish_ammo !== undefined && (

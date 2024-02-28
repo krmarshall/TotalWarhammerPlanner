@@ -1,5 +1,9 @@
+import { useContext } from 'react';
 import { AttributeInterface } from '../../../types/interfaces/CharacterInterface';
 import ReactImage from '../../ReactImage';
+import { AppContext } from '../../../contexts/AppContext';
+import DOMPurify from 'dompurify';
+import { replaceKeepCaps } from '../../../utils/sharedFunctions';
 
 interface PropInterface {
   attribute: AttributeInterface;
@@ -7,6 +11,8 @@ interface PropInterface {
 }
 
 const SkillPhaseAttribute = ({ attribute, index }: PropInterface) => {
+  const { state } = useContext(AppContext);
+  const { searchString } = state;
   return (
     <div key={index} className="flex flex-row flex-nowrap">
       <ReactImage
@@ -17,7 +23,12 @@ const SkillPhaseAttribute = ({ attribute, index }: PropInterface) => {
         h="24"
       />
 
-      <p className="text-lg whitespace-pre-wrap ml-6">{attribute.description}</p>
+      <p
+        className="text-lg whitespace-pre-wrap ml-6"
+        dangerouslySetInnerHTML={{
+          __html: DOMPurify.sanitize(replaceKeepCaps(attribute.description, searchString)),
+        }}
+      ></p>
     </div>
   );
 };

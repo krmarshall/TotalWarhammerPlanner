@@ -7,12 +7,18 @@ import ReactImage from '../../ReactImage';
 import SkillAbilityVortex from './SkillAbilityVortex';
 import SkillAbilityProjectile from './SkillAbilityProjectile';
 import SkillAbilityBombardment from './SkillAbilityBombardment';
+import { useContext } from 'react';
+import { AppContext } from '../../../contexts/AppContext';
+import DOMPurify from 'dompurify';
+import { replaceKeepCaps } from '../../../utils/sharedFunctions';
 
 interface SkillAbilityTooltipPropInterface {
   ability: AbilityInterface;
 }
 
 const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
+  const { state } = useContext(AppContext);
+  const { searchString } = state;
   const unitAbility = ability.unit_ability;
 
   let target = '';
@@ -41,7 +47,12 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           w="48"
           h="48"
         />
-        <h3 className="text-left whitespace-nowrap text-2xl pr-6 mr-auto">{unitAbility.onscreen_name}</h3>
+        <h3
+          className="text-left whitespace-nowrap text-2xl pr-6 mr-auto"
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(replaceKeepCaps(unitAbility.onscreen_name, searchString)),
+          }}
+        ></h3>
         {unitAbility.num_uses !== undefined && unitAbility.num_uses > 0 && (
           <div className="flex flex-row mr-3">
             <img className="w-6 h-6" src={chargesImg} alt="charges icon" width="24" height="24" />
@@ -65,7 +76,12 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
         <div className="flex flex-row">
           <h5 className="text-left w-24">Type:</h5>
           <ReactImage srcList={typeSrcList} alt="type icon" w="24" h="24" className="w-5 h-5 my-auto mr-1" />
-          <p className="my-auto ml-1">{unitAbility.type.onscreen_name}</p>
+          <p
+            className="my-auto ml-1"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(replaceKeepCaps(unitAbility.type.onscreen_name, searchString)),
+            }}
+          ></p>
         </div>
       )}
       {unitAbility.active_time !== undefined && unitAbility.active_time > 0 && (
@@ -168,9 +184,13 @@ const SkillAbilityTooltip = ({ ability }: SkillAbilityTooltipPropInterface) => {
           <h5 className="w-24">Effects:</h5>
           {unitAbility.ui_effects.map((skillEffect, index) => {
             return (
-              <p key={index} className="text-lg whitespace-pre-wrap ml-6 text-yellow-200">
-                {skillEffect.localised_text}
-              </p>
+              <p
+                key={index}
+                className="text-lg whitespace-pre-wrap ml-6 text-yellow-200"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(replaceKeepCaps(skillEffect.localised_text, searchString)),
+                }}
+              ></p>
             );
           })}
         </div>

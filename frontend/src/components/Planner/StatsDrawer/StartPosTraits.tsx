@@ -69,8 +69,6 @@ const StartPosTraits = () => {
         <div className="w-fit mx-auto">
           <BaseCell
             skill={skill}
-            thisSkillsCurrentPoints={0}
-            previewSkillPoints={0}
             srcList={[`/imgs/${skill?.image_path}.webp`, `/imgs/vanilla3/campaign_ui/skills/0_placeholder_skill.webp`]}
           />
         </div>

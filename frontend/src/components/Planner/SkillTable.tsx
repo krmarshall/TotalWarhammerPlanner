@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { getBgUrl } from '../../utils/sharedFunctions';
 import SkillRow from './SkillRow';
+import SearchBox from './SearchBox';
 
 interface PropInterface {
   faction: string | undefined;
@@ -54,6 +55,7 @@ const SkillTable = ({ faction }: PropInterface) => {
         horizontalScroll(event);
       }}
     >
+      <SearchBox />
       <table className="table-fixed">
         <thead></thead>
         <tbody className="flex flex-col flex-nowrap">

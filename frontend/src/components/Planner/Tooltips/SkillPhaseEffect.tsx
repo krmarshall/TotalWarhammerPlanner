@@ -1,11 +1,17 @@
+import DOMPurify from 'dompurify';
 import { StatEffectInterface } from '../../../types/interfaces/CharacterInterface';
+import { replaceKeepCaps } from '../../../utils/sharedFunctions';
 import ReactImage from '../../ReactImage';
+import { useContext } from 'react';
+import { AppContext } from '../../../contexts/AppContext';
 
 interface PropInterface {
   effect: StatEffectInterface;
 }
 
 const SkillPhaseEffect = ({ effect }: PropInterface) => {
+  const { state } = useContext(AppContext);
+  const { searchString } = state;
   return (
     <div className="flex flex-row flex-nowrap">
       <ReactImage
@@ -16,7 +22,12 @@ const SkillPhaseEffect = ({ effect }: PropInterface) => {
         h="24"
       />
 
-      <p className="text-lg whitespace-pre-wrap ml-6">{effect.description}</p>
+      <p
+        className="text-lg whitespace-pre-wrap ml-6"
+        dangerouslySetInnerHTML={{
+          __html: DOMPurify.sanitize(replaceKeepCaps(effect.description, searchString)),
+        }}
+      ></p>
     </div>
   );
 };

@@ -1,11 +1,17 @@
+import { useContext } from 'react';
 import { EffectInterface } from '../../../types/interfaces/CharacterInterface';
 import ReactImage from '../../ReactImage';
+import { AppContext } from '../../../contexts/AppContext';
+import { replaceKeepCaps } from '../../../utils/sharedFunctions';
+import DOMPurify from 'dompurify';
 
 interface SkillEffectPropsInterface {
   skillEffect: EffectInterface;
 }
 
 const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
+  const { state } = useContext(AppContext);
+  const { searchString } = state;
   const goodBadEffectClassName = 'text-lg whitespace-pre-wrap';
   // if (skillEffect.goodEffect) {
   //   goodBadEffectClassName += ' text-green-400';
@@ -31,7 +37,12 @@ const SkillEffect = ({ skillEffect }: SkillEffectPropsInterface) => {
       <ReactImage srcList={srcList} className="w-6 h-6" alt={`${skillEffect.key} icon`} w="24" h="24" />
 
       <div className="flex flex-col justify-center ml-1 text-left max-w-[25vw]">
-        <p className={goodBadEffectClassName}>{skillEffect.description}</p>
+        <p
+          className={goodBadEffectClassName}
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(replaceKeepCaps(skillEffect.description, searchString)),
+          }}
+        ></p>
       </div>
     </div>
   );

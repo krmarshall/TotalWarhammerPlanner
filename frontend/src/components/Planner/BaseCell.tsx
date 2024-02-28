@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react';
-import { setFontSize, trimString } from '../../utils/sharedFunctions';
+import { replaceKeepCaps, setFontSize, trimString } from '../../utils/sharedFunctions';
 import ReactImage from '../ReactImage';
 import TooltipWrapper from '../TooltipWrapper';
 import SkillPointSelector from './SkillPointSelector';
@@ -7,14 +7,15 @@ import SkillTooltip from './Tooltips/SkillTooltip';
 import { FactionEffectInterface, ItemInterface, SkillInterface } from '../../types/interfaces/CharacterInterface';
 import blockedSkillOverlay from '../../imgs/other/skill_locked_rank.webp';
 import { AppContext } from '../../contexts/AppContext';
+import DOMPurify from 'dompurify';
 
 interface PropInterface {
   skill?: SkillInterface;
   item?: ItemInterface;
   factionEffect?: FactionEffectInterface;
-  thisSkillsCurrentPoints: number;
+  thisSkillsCurrentPoints?: number;
   selectable?: boolean;
-  previewSkillPoints: number;
+  previewSkillPoints?: number;
   blocked?: boolean;
   srcList: Array<string>;
   showRanks?: boolean;
@@ -24,15 +25,15 @@ const BaseCell = ({
   skill,
   item,
   factionEffect,
-  thisSkillsCurrentPoints,
+  thisSkillsCurrentPoints = 0,
   selectable = true,
-  previewSkillPoints,
+  previewSkillPoints = 0,
   blocked = false,
   srcList,
   showRanks = false,
 }: PropInterface) => {
   const { state } = useContext(AppContext);
-  const { characterBuild } = state;
+  const { characterBuild, searchString } = state;
 
   const [tooltipScrollable, setTooltipScrollable] = useState(false);
   const [ctrCounter, setCtrCounter] = useState(0);
@@ -119,9 +120,12 @@ const BaseCell = ({
           />
 
           <div className="flex flex-col justify-center">
-            <h2 className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}>
-              {trimString(cellTitle)}
-            </h2>
+            <h2
+              className={`w-[8.5rem] text-center text-gray-200 text-shadow z-10 break-words ${fontSize}`}
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(replaceKeepCaps(trimString(cellTitle), searchString)),
+              }}
+            ></h2>
           </div>
         </div>
       </TooltipWrapper>

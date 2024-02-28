@@ -12,7 +12,7 @@ import TooltipAbilityMap from '../../TooltipAbilityMap';
 
 const UnitStats = () => {
   const { state } = useContext(AppContext);
-  const { characterData } = state;
+  const { characterData, highlightArray } = state;
   const unitStatSets = getUnitStatSets(characterData);
   const [stats, setStats] = useState(unitStatSets[0].stats);
 
@@ -555,7 +555,11 @@ const UnitStats = () => {
                 />
               </TooltipWrapper>
             )}
-          {stats.attributes?.map((attribute) => {
+          {stats.attributes?.map((attribute, index) => {
+            let imgClassName = 'my-auto ml-1 h-8 w-8 mt-1.5';
+            if (highlightArray?.unitStats.attributes?.[index]) {
+              imgClassName += ' searchOutline rounded';
+            }
             return (
               <TooltipWrapper key={attribute.key} tooltip={<AttributeTooltip attribute={attribute} />}>
                 <img
@@ -563,14 +567,18 @@ const UnitStats = () => {
                   alt="ability"
                   width="22"
                   height="22"
-                  className="my-auto ml-1 h-8 w-8 mt-1.5"
+                  className={imgClassName}
                 />
               </TooltipWrapper>
             );
           })}
-          {stats.abilities?.map((ability) => {
+          {stats.abilities?.map((ability, index) => {
             const relatedPhases = getRelatedContactPhases(ability);
             const relatedAttributes = getRelatedAttributes(ability);
+            let imgClassName = 'my-auto ml-1 h-8 w-8 mt-1.5 p-0.5';
+            if (highlightArray?.unitStats.abilities?.[index]) {
+              imgClassName += ' searchOutline rounded ';
+            }
             return (
               <TooltipWrapper
                 key={ability.unit_ability.key}
@@ -590,7 +598,7 @@ const UnitStats = () => {
                   alt="ability"
                   width="22"
                   height="22"
-                  className="my-auto ml-1 h-8 w-8 mt-1.5"
+                  className={imgClassName}
                 />
               </TooltipWrapper>
             );
