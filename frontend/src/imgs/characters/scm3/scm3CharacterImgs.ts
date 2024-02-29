@@ -158,6 +158,12 @@ import hkrul_ogg from './hkrul_ogg.webp';
 import hkrul_paldee from './hkrul_paldee.webp';
 import hkrul_rasha from './hkrul_rasha.webp';
 import cou_mikael_harkon from './mikael_harkon_01_0.webp';
+import hkrul_arbaal from './hkrul_arbaal.webp';
+import hkrul_burlok from './hkrul_burlok.webp';
+import hkrul_duriath from './hkrul_duriath.webp';
+import hkrul_hroth from './hkrul_hrothyogg.webp';
+import hkrul_karitamen from './hkrul_karitamen.webp';
+import hkrul_spew from './hkrul_orghotts.webp';
 
 import vanilla2CharacterImgs from '../vanilla2/vanilla2CharacterImgs';
 import placeholder from './0placeholder.webp';
@@ -361,6 +367,12 @@ const scm3CharacterImgs = {
   hkrul_paldee: hkrul_paldee,
   hkrul_rasha: hkrul_rasha,
   cou_mikael_harkon: cou_mikael_harkon,
+  hkrul_arbaal: hkrul_arbaal,
+  hkrul_burlok: hkrul_burlok,
+  hkrul_duriath: hkrul_duriath,
+  hkrul_hroth: hkrul_hroth,
+  hkrul_karitamen: hkrul_karitamen,
+  hkrul_spew: hkrul_spew,
 };
 
 export default scm3CharacterImgs;

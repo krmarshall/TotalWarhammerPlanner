@@ -43,8 +43,17 @@ const scm3Characters = {
     heroes: {},
   },
 
+  def_dark_elves: {
+    lords: {
+      hkrul_duriath: { name: 'Duriath Helbane' },
+    },
+    heroes: {},
+  },
+
   dwf_dwarfs: {
-    lords: {},
+    lords: {
+      hkrul_burlok: { name: 'Burlok Damminsson' },
+    },
     heroes: {
       // LCCP
       hkrul_gargul: { name: 'Gargul the Gunner' },
@@ -155,6 +164,7 @@ const scm3Characters = {
 
   kho_khorne: {
     lords: {
+      hkrul_arbaal: { name: 'Arbaal the Undefeated' },
       hkrul_slaurith: { name: 'Lord Slaurith' },
     },
     heroes: {
@@ -192,8 +202,17 @@ const scm3Characters = {
     },
   },
 
+  nur_nurgle: {
+    lords: {
+      hkrul_spew: { name: 'Orghotts Daemonspew' },
+    },
+    heroes: {},
+  },
+
   ogr_ogre_kingdoms: {
     lords: {
+      hkrul_hroth: { name: 'Hrothyogg' },
+
       str_gnoblar_head: { name: 'Head Honcho' },
     },
     heroes: {
@@ -261,6 +280,10 @@ const scm3Characters = {
 
   tmb_tomb_kings: {
     lords: {
+      // LCCP
+      hkrul_karitamen: { name: 'Lord Karitamen', spellLore: SpellLores.nehekhara },
+
+      // TKE
       tmb_sea: { name: 'King Amenemhetum', spellLore: SpellLores.deeps },
       tmb_crim: { name: 'King Imrathepis' },
       tmb_scarab: { name: 'King Nekhenaten' },
@@ -284,6 +307,7 @@ const scm3Characters = {
       tmb_tomb_king_alkhazzar_ii: { name: 'Alkhazzar II of the Sixth Dynasty' },
     },
     heroes: {
+      // TKE
       loki_apophas: { name: 'Prince Apophas' },
       loki_nekaph: { name: 'Herald Nekaph' },
       tmb_necrotect: { name: 'Necrotect' },
