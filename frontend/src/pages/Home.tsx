@@ -60,6 +60,10 @@ const Home = () => {
         type: AppContextActions.changeSelectedAltFactionNodeSet,
         payload: { selectedAltFactionNodeSet: '', characterBuild: null, characterData: null },
       });
+      dispatch({
+        type: AppContextActions.changeSearchString,
+        payload: { searchString: null, highlightArray: null, highlightArrayTech: null },
+      });
     }
   }, []);
 

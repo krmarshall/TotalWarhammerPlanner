@@ -1,10 +1,26 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import TechModSelector from '../components/Techs/TechModSelector';
 import TechSelector from '../components/Techs/TechSelector';
+import { AppContext, AppContextActions } from '../contexts/AppContext';
 
 const TechHome = () => {
+  const { state, dispatch } = useContext(AppContext);
+  const { techData } = state;
   useEffect(() => {
     document.title = 'Total Warhammer Planner';
+  }, []);
+
+  useEffect(() => {
+    if (techData !== null) {
+      dispatch({
+        type: AppContextActions.changeTechData,
+        payload: { techData: null },
+      });
+      dispatch({
+        type: AppContextActions.changeSearchString,
+        payload: { searchString: null, highlightArray: null, highlightArrayTech: null },
+      });
+    }
   }, []);
 
   return (
