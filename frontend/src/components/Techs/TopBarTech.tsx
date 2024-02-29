@@ -8,6 +8,7 @@ import resetIcon from '../../imgs/other/icon_reset.webp';
 import backIcon from '../../imgs/other/icon_home.webp';
 import scrollWheel from '../../imgs/other/help_page_middle_mouse.webp';
 import shift from '../../imgs/other/help_page_camera_speed_controls.webp';
+import SearchBox from '../Planner/SearchBox';
 
 interface PropInterface {
   isMobile: boolean;
@@ -48,6 +49,7 @@ const TopBarTech = ({ isMobile }: PropInterface) => {
       <h1 className={headerClass}>{techGameData[selectedModTech].techTrees[techTree as string].name}</h1>
 
       <div className="w-[30vw] flex place-content-end">
+        <SearchBox skill={false} />
         <TooltipWrapper
           tooltip={
             <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 text-xl bg-gray-600">

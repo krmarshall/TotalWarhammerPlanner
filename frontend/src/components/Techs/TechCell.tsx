@@ -19,7 +19,7 @@ interface PropInterface {
 
 const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
   const { state } = useContext(AppContext);
-  const { selectedModTech } = state;
+  const { selectedModTech, highlightArrayTech } = state;
   const [ctrCounter, setCtrCounter] = useState(0);
   const [tooltipScrollable, setTooltipScrollable] = useState(false);
   const tooltipRef = useRef<HTMLSpanElement>(null);
@@ -51,13 +51,18 @@ const TechCell = ({ tech, yIndex, xIndex, borderClass }: PropInterface) => {
 
   const fontSize = setFontSize(tech.technology.onscreen_name);
 
+  let tdClassName = 'flex flex-row w-max h-auto py-2 pr-6' + borderClass;
+  if (highlightArrayTech?.[tech.indent]?.[tech.tier]) {
+    tdClassName += ' searchOutline';
+  }
+
   const imgPadding = selectedModTech.includes('2') ? ' p-0 scale-110' : ' p-1.5';
 
   const imgPath = tech.technology.icon_name + '.webp';
   return (
     <td
       ref={cellRef}
-      className={'flex flex-row w-max h-auto py-2 pr-6' + borderClass}
+      className={tdClassName}
       style={{ backgroundColor: `#${tech.ui_group_colour}50` }}
       onContextMenu={(event) => {
         event.preventDefault();

@@ -55,7 +55,7 @@ const SkillTable = ({ faction }: PropInterface) => {
         horizontalScroll(event);
       }}
     >
-      <SearchBox />
+      <SearchBox skill={true} />
       <table className="table-fixed">
         <thead></thead>
         <tbody className="flex flex-col flex-nowrap">

@@ -1,10 +1,17 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import useBulkMediaQueries from '../../hooks/useBulkMediaQueries';
 import { TechNodeInterface } from '../../types/interfaces/TechInterface';
-import { getRelatedAbilities, getRelatedAttributes, getRelatedContactPhases } from '../../utils/sharedFunctions';
+import {
+  getRelatedAbilities,
+  getRelatedAttributes,
+  getRelatedContactPhases,
+  replaceKeepCaps,
+} from '../../utils/sharedFunctions';
 import SkillEffect from '../Planner/Tooltips/SkillEffect';
 import TooltipAbilityCycler from '../TooltipAbiltyCycler';
 import TooltipAbilityMap from '../TooltipAbilityMap';
+import { AppContext } from '../../contexts/AppContext';
+import DOMPurify from 'dompurify';
 
 interface PropInterface {
   tech: TechNodeInterface | undefined;
@@ -15,6 +22,8 @@ interface PropInterface {
 }
 
 const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, tooltipRef }: PropInterface) => {
+  const { state } = useContext(AppContext);
+  const { searchString } = state;
   const { isMobileWidth, isMobileHeight } = useBulkMediaQueries();
 
   const isMobile = isMobileWidth || isMobileHeight ? true : false;
@@ -57,16 +66,29 @@ const TechTooltip = ({ tech, ctrCounter, setCtrCounter, setTooltipScrollable, to
     >
       <div className="flex flex-col">
         <div className="h-fit p-2 rounded border border-gray-400 shadow-lg text-gray-50 bg-gray-600">
-          <h3 className="text-gray-50 text-2xl">{tech?.technology.onscreen_name}</h3>
+          <h3
+            className="text-gray-50 text-2xl"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(replaceKeepCaps(tech?.technology.onscreen_name ?? '', searchString)),
+            }}
+          ></h3>
           {tech?.technology?.short_description?.trim() && !isMobile && (
-            <h4 className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg">
-              {tech?.technology?.short_description?.trim()}
-            </h4>
+            <h4
+              className="max-w-[20vw] mx-auto text-gray-50 opacity-70 text-lg"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(replaceKeepCaps(tech?.technology.short_description, searchString)),
+              }}
+            ></h4>
           )}
           {tech?.technology?.required_buildings !== undefined && tech?.technology?.required_buildings?.length > 0 && (
-            <p className="text-yellow-300 text-lg">
-              Requires Building: {tech.technology.required_buildings.join(', ')}
-            </p>
+            <p
+              className="text-yellow-300 text-lg"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(
+                  replaceKeepCaps(`Requires Building: ${tech.technology.required_buildings.join(', ')}`, searchString),
+                ),
+              }}
+            ></p>
           )}
           {/* {skill?.required_num_parents !== 0 && (
             <p className="text-yellow-300 text-lg">

@@ -26,7 +26,8 @@ interface ContextStateInterface {
   selectedStartPosTrait: string;
   extrasDrawerOpen: boolean;
   statsDrawerOpen: boolean;
-  highlightArray: HighlightArrayInterface | null;
+  highlightArray?: HighlightArrayInterface | null;
+  highlightArrayTech?: Array<Array<boolean>> | null;
   searchString: string | null;
 }
 
@@ -47,6 +48,7 @@ const initialState: ContextStateInterface = {
   extrasDrawerOpen: loadExtrasDrawerOpenFromStorage(),
   statsDrawerOpen: loadStatsDrawerOpenFromStorage(),
   highlightArray: null,
+  highlightArrayTech: null,
   searchString: null,
 };
 
@@ -69,6 +71,7 @@ interface ActionInterface {
     extrasDrawerOpen?: boolean;
     statsDrawerOpen?: boolean;
     highlightArray?: HighlightArrayInterface | null;
+    highlightArrayTech?: Array<Array<boolean>> | null;
     searchString?: string | null;
   };
 }
@@ -258,11 +261,12 @@ const reducer = (state: ContextStateInterface, action: ActionInterface) => {
 
     case AppContextActions.changeSearchString: {
       const newState = { ...state };
-      if (action.payload.searchString === undefined || action.payload.highlightArray === undefined) {
+      if (action.payload.searchString === undefined) {
         return state;
       }
       newState.searchString = action.payload.searchString;
       newState.highlightArray = action.payload.highlightArray;
+      newState.highlightArrayTech = action.payload.highlightArrayTech;
       return newState;
     }
 

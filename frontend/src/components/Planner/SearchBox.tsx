@@ -1,25 +1,39 @@
 import { useContext, useEffect, useState } from 'react';
 import { AppContext, AppContextActions } from '../../contexts/AppContext';
-import { searchDataForKeyword } from '../../utils/searchFunctions';
+import { searchDataForKeyword, searchTechDataForKeyword } from '../../utils/searchFunctions';
 
-const SearchBox = () => {
+const SearchBox = ({ skill }: { skill: boolean }) => {
   const { state, dispatch } = useContext(AppContext);
   const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     const cleanedText = searchText.trim();
     const debounceInputTimeoutId = setTimeout(() => {
-      if (state.characterData !== null) {
-        if (cleanedText === '') {
-          dispatch({
-            type: AppContextActions.changeSearchString,
-            payload: { searchString: null, highlightArray: null },
-          });
+      if (cleanedText === '') {
+        dispatch({
+          type: AppContextActions.changeSearchString,
+          payload: { searchString: null, highlightArray: null, highlightArrayTech: null },
+        });
+      } else {
+        let highlightArray = null;
+        let highlightArrayTech = null;
+        if (skill) {
+          if (state.characterData !== null) {
+            highlightArray = searchDataForKeyword(state.characterData, searchText);
+          }
         } else {
-          const highlightArray = searchDataForKeyword(state.characterData, searchText);
+          if (state.techData !== null) {
+            highlightArrayTech = searchTechDataForKeyword(state.techData, searchText);
+          }
+        }
+        if (highlightArray !== null || highlightArrayTech !== null) {
           dispatch({
             type: AppContextActions.changeSearchString,
-            payload: { searchString: cleanedText, highlightArray: highlightArray },
+            payload: {
+              searchString: cleanedText,
+              highlightArray,
+              highlightArrayTech,
+            },
           });
         }
       }
@@ -27,8 +41,16 @@ const SearchBox = () => {
     return () => clearTimeout(debounceInputTimeoutId);
   }, [searchText]);
 
+  let divClassName = 'p-2 bg-slate-500 rounded-xl';
+
+  if (skill) {
+    divClassName += ' absolute top-2 right-2 z-20';
+  } else {
+    divClassName += ' my-auto mr-4';
+  }
+
   return (
-    <div className="absolute top-2 right-2 z-20 p-2 bg-slate-500 rounded-xl">
+    <div className={divClassName}>
       <input
         type="text"
         placeholder="Search"

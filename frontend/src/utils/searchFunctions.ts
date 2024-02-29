@@ -9,6 +9,7 @@ import {
   SkillInterface,
   UnitStatsInterface,
 } from '../types/interfaces/CharacterInterface';
+import { TechNodeInterface, TechSetInterface } from '../types/interfaces/TechInterface';
 
 interface HighlightArrayInterface {
   skillTree: Array<Array<boolean>>;
@@ -25,7 +26,7 @@ const searchDataForKeyword = (characterData: CharacterInterface, searchStringArg
   characterData.skillTree.forEach((skillRow, yIndex) => {
     if (highlightArray.skillTree[yIndex] === undefined) highlightArray.skillTree[yIndex] = [];
 
-    skillRow.forEach((skill) => {
+    skillRow?.forEach((skill) => {
       highlightArray.skillTree[yIndex][skill.tier] = searchSkillForKeyword(skill, searchString);
     });
   });
@@ -47,6 +48,48 @@ const searchDataForKeyword = (characterData: CharacterInterface, searchStringArg
   highlightArray.unitStats = searchUnitStatsForKeyword(characterData.unitStats, searchString);
 
   return highlightArray;
+};
+
+const searchTechDataForKeyword = (techData: TechSetInterface, searchStringArg: string) => {
+  const searchString = searchStringArg.toLowerCase();
+  const highlightArray: Array<Array<boolean>> = [];
+
+  techData.tree.forEach((techRow, yIndex) => {
+    if (highlightArray[yIndex] === undefined) highlightArray[yIndex] = [];
+    techRow?.forEach((techUnion) => {
+      const tech = techUnion as TechNodeInterface;
+      if (tech?.key !== undefined) {
+        highlightArray[yIndex][tech.tier] = searchTechNodeForKeyword(tech, searchString);
+      }
+    });
+  });
+  return highlightArray;
+};
+
+const searchTechNodeForKeyword = (techNode: TechNodeInterface, searchString: string): boolean => {
+  const tech = techNode.technology;
+  if (tech.onscreen_name.toLowerCase().includes(searchString)) {
+    return true;
+  }
+  if (tech.short_description.toLowerCase().includes(searchString)) {
+    return true;
+  }
+  for (const building of tech.required_buildings ?? []) {
+    if (building.toLowerCase().includes(searchString)) {
+      return true;
+    }
+  }
+  for (const effect of tech.effects) {
+    if (searchEffectForKeyword(effect, searchString)) {
+      return true;
+    }
+  }
+  // for (const item of techNode.items ?? []) {
+  //   if (searchItemForKeyword(item, searchString)) {
+  //     return true;
+  //   }
+  // }
+  return false;
 };
 
 const searchSkillForKeyword = (skill: SkillInterface, searchString: string): boolean => {
@@ -221,5 +264,5 @@ const searchPhaseForKeyword = (phase: PhaseInterface | undefined, searchString: 
   return false;
 };
 
-export { searchDataForKeyword };
+export { searchDataForKeyword, searchTechDataForKeyword };
 export type { HighlightArrayInterface };
