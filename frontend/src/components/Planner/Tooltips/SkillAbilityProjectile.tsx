@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { ProjectileInterface } from '../../../types/interfaces/CharacterInterface';
 import SkillAbilityVortex from './SkillAbilityVortex';
+import ReactImage from '../../ReactImage';
 
 interface PropsInterface {
   projectile: ProjectileInterface;
@@ -148,12 +149,15 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
       {projectile.contact_stat_effect !== undefined && (
         <div className="text-left flex flex-row flex-nowrap">
           <h5 className="w-24">Contact:</h5>
-          <img
-            src={`/imgs/${projectile.contact_stat_effect.icon}.webp`}
-            alt="contact"
-            width="22"
-            height="22"
+          <ReactImage
+            srcList={[
+              `/imgs/${projectile.contact_stat_effect.icon}.webp`,
+              `/imgs/vanilla3/battle_ui/ability_icons/0_placeholder_passive_ability_icon.webp`,
+            ]}
             className="my-auto mx-1 h-6 w-6"
+            alt="contact"
+            w="22"
+            h="22"
           />
           <h4 className="text-lg ml-1">{projectile.contact_stat_effect.onscreen_name}</h4>
         </div>
@@ -161,12 +165,15 @@ const SkillAbilityProjectile = ({ projectile }: PropsInterface) => {
       {projectile.explosion_type?.contact_phase_effect !== undefined && (
         <div className="text-left flex flex-row flex-nowrap">
           <h5 className="w-24">Expl. Contact:</h5>
-          <img
-            src={`/imgs/${projectile.explosion_type?.contact_phase_effect.icon}.webp`}
-            alt="contact"
-            width="22"
-            height="22"
+          <ReactImage
+            srcList={[
+              `/imgs/${projectile.explosion_type.contact_phase_effect}.webp`,
+              `/imgs/vanilla3/battle_ui/ability_icons/0_placeholder_passive_ability_icon.webp`,
+            ]}
             className="my-auto mx-1 h-6 w-6"
+            alt="contact"
+            w="22"
+            h="22"
           />
           <h4 className="text-lg ml-1">{projectile.explosion_type?.contact_phase_effect.onscreen_name}</h4>
         </div>

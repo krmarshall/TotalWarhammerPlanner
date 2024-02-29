@@ -8,6 +8,7 @@ import randomPhase1 from '../../../imgs/other/random_phase_1.webp';
 import randomPhase2 from '../../../imgs/other/random_phase_2.webp';
 import DOMPurify from 'dompurify';
 import { replaceKeepCaps } from '../../../utils/sharedFunctions';
+import ReactImage from '../../ReactImage';
 
 interface SkillPhaseProps {
   index: number;
@@ -57,7 +58,16 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
       <div className={'w-full rounded-lg border p-2 shadow-lg bg-gray-600' + borderColor}>
         {header && (
           <div className="flex flex-row flex-nowrap">
-            <img src={`/imgs/${phase.icon}.webp`} alt="phase" width="22" height="22" className="my-auto mx-1 h-8 w-8" />
+            <ReactImage
+              srcList={[
+                `/imgs/${phase.icon}.webp`,
+                `/imgs/vanilla3/battle_ui/ability_icons/0_placeholder_passive_ability_icon.webp`,
+              ]}
+              className="my-auto mx-1 h-8 w-8"
+              alt="phase"
+              w="22"
+              h="22"
+            />
             <h4
               className="text-2xl ml-1"
               dangerouslySetInnerHTML={{
@@ -218,12 +228,15 @@ const SkillPhase = ({ index, phase, random, header = false }: SkillPhaseProps) =
         {phase.imbue_contact !== undefined && (
           <div className="text-left flex flex-row flex-nowrap">
             <h5 className="w-24">Imbue Contact:</h5>
-            <img
-              src={`/imgs/${phase.imbue_contact.icon}.webp`}
-              alt="imbue contact"
-              width="22"
-              height="22"
+            <ReactImage
+              srcList={[
+                `/imgs/${phase.imbue_contact.icon}.webp`,
+                `/imgs/vanilla3/battle_ui/ability_icons/0_placeholder_passive_ability_icon.webp`,
+              ]}
               className="my-auto mx-1 h-6 w-6"
+              alt="imbue contact"
+              w="22"
+              h="22"
             />
             <h4
               className="text-lg ml-1"
