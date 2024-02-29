@@ -9,6 +9,7 @@ import UnitStatLine from './UnitStatLine';
 import { getRelatedAttributes, getRelatedContactPhases, getUnitStatSets } from '../../../utils/sharedFunctions';
 import AttributeTooltip from '../Tooltips/AttributeTooltip';
 import TooltipAbilityMap from '../../TooltipAbilityMap';
+import ReactImage from '../../ReactImage';
 
 const UnitStats = () => {
   const { state } = useContext(AppContext);
@@ -562,13 +563,18 @@ const UnitStats = () => {
             }
             return (
               <TooltipWrapper key={attribute.key} tooltip={<AttributeTooltip attribute={attribute} />}>
-                <img
-                  src={`/imgs/${attribute.icon}.webp`}
-                  alt="ability"
-                  width="22"
-                  height="22"
-                  className={imgClassName}
-                />
+                <div>
+                  <ReactImage
+                    srcList={[
+                      `/imgs/${attribute.icon}.webp`,
+                      '/imgs/vanilla3/battle_ui/ability_icons/0_placeholder_passive_ability_icon.webp',
+                    ]}
+                    alt="attribute"
+                    className={imgClassName}
+                    w="22"
+                    h="22"
+                  />
+                </div>
               </TooltipWrapper>
             );
           })}
@@ -593,13 +599,18 @@ const UnitStats = () => {
                   </div>
                 }
               >
-                <img
-                  src={`/imgs/${ability.unit_ability.icon_name}.webp`}
-                  alt="ability"
-                  width="22"
-                  height="22"
-                  className={imgClassName}
-                />
+                <div>
+                  <ReactImage
+                    srcList={[
+                      `/imgs/${ability.unit_ability.icon_name}.webp`,
+                      '/imgs/vanilla3/battle_ui/ability_icons/0_placeholder_passive_ability_icon.webp',
+                    ]}
+                    alt="ability"
+                    className={imgClassName}
+                    w="22"
+                    h="22"
+                  />
+                </div>
               </TooltipWrapper>
             );
           })}
