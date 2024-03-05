@@ -5,6 +5,7 @@ import {
   EffectInterface,
   FactionEffectInterface,
   ItemInterface,
+  ItemSetInterface,
   PhaseInterface,
   SkillInterface,
   UnitStatsInterface,
@@ -13,7 +14,7 @@ import { TechNodeInterface, TechSetInterface } from '../types/interfaces/TechInt
 
 interface HighlightArrayInterface {
   skillTree: Array<Array<boolean>>;
-  items?: Array<boolean>;
+  items?: Array<{ item: boolean; set: boolean }>;
   backgroundSkills?: Array<boolean>;
   factionEffects?: boolean;
   unitStats: { attributes?: Array<boolean>; abilities?: Array<boolean> };
@@ -109,14 +110,38 @@ const searchSkillForKeyword = (skill: SkillInterface, searchString: string): boo
   return false;
 };
 
-const searchItemForKeyword = (item: ItemInterface, searchString: string): boolean => {
+const searchItemForKeyword = (item: ItemInterface, searchString: string): { item: boolean; set: boolean } => {
+  const returnObj = { item: true, set: false };
+  if (searchItemSetForKeyword(item.item_set, searchString)) {
+    returnObj.set = true;
+  }
   if (item.onscreen_name.toLowerCase().includes(searchString)) {
-    return true;
+    return returnObj;
   }
   if (item.colour_text.toLowerCase().includes(searchString)) {
-    return true;
+    return returnObj;
   }
   for (const effect of item.effects ?? []) {
+    if (searchEffectForKeyword(effect, searchString)) {
+      return returnObj;
+    }
+  }
+
+  returnObj.item = false;
+  return returnObj;
+};
+
+const searchItemSetForKeyword = (itemSet: ItemSetInterface | undefined, searchString: string): boolean => {
+  if (itemSet === undefined) {
+    return false;
+  }
+  if (itemSet.name.toLowerCase().includes(searchString)) {
+    return true;
+  }
+  if (itemSet.description.toLowerCase().includes(searchString)) {
+    return true;
+  }
+  for (const effect of itemSet.effects ?? []) {
     if (searchEffectForKeyword(effect, searchString)) {
       return true;
     }

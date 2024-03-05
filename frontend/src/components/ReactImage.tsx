@@ -29,7 +29,9 @@ const ReactImage = ({ srcList, className, alt, w, h }: PropsInterface) => {
 
   useEffect(() => {
     if (
-      (srcState.src?.includes('/battle_ui/ability_icons/') || srcState.src?.includes('/campaign_ui/ancillaries/')) &&
+      (srcState.src?.includes('/battle_ui/ability_icons/') ||
+        srcState.src?.includes('/campaign_ui/ancillaries/') ||
+        srcState.src?.includes('/campaign_ui/mounts/')) &&
       parseInt(w) > 48
     ) {
       setImgClass(`${className} p-3`);
