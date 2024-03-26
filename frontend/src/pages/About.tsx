@@ -28,6 +28,24 @@ const About = () => {
 
         <div className="flex flex-row place-content-center mt-12">
           <hr className="grow mt-[1.6rem] opacity-50" />
+          <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">Contact Me</h1>
+          <hr className="grow mt-[1.6rem] opacity-50" />
+        </div>
+        <p className="text-center text-gray-200 text-2xl">
+          You can message me on{' '}
+          <a
+            href="https://www.reddit.com/message/compose?to=Fearhorn&subject=&message="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500"
+          >
+            Reddit
+          </a>{' '}
+          or whitehelm on Discord for any questions or comments.
+        </p>
+
+        <div className="flex flex-row place-content-center mt-12">
+          <hr className="grow mt-[1.6rem] opacity-50" />
           <h1 className="w-max text-center text-5xl mx-2 mb-2 text-gray-200 text-shadow">RPFM</h1>
           <hr className="grow mt-[1.6rem] opacity-50" />
         </div>
