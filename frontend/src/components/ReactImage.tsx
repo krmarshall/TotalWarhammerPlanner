@@ -20,10 +20,16 @@ const ReactImage = ({ srcList, className, alt, w, h }: PropsInterface) => {
       if (srcState.fallbackIndex > srcList.length - 1) {
         return;
       }
-      setSrcState({
-        src: srcList[srcState.fallbackIndex],
-        fallbackIndex: srcState.fallbackIndex + 1,
-      });
+      if (srcState.src.includes('.webp')) {
+        const checkPng = srcState;
+        checkPng.src = checkPng.src.replace('.webp', '.png');
+        setSrcState(checkPng);
+      } else {
+        setSrcState({
+          src: srcList[srcState.fallbackIndex],
+          fallbackIndex: srcState.fallbackIndex + 1,
+        });
+      }
     });
   };
 
